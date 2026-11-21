@@ -1,0 +1,21 @@
+# Repository-wide ignores (Unity client rules live in Client/.gitignore,
+# Visual Studio / .NET server rules live in Server/.gitignore)
+#
+# NOTE: Unity *.meta files must stay tracked. They hold the GUIDs that scenes,
+# prefabs and animations use to reference assets; ignoring them breaks those
+# references for everyone else.
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE / editor
+.vs/
+.idea/
+.vscode/
+*.user
+*.suo
+
+# Local scratch / logs
+*.log
