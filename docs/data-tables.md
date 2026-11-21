@@ -38,6 +38,7 @@
 - **캐릭터·성장**: `characterInfos`(PC·몬스터·보스 공용), `characterLevel`, `items`, `itemEnchants`, `dropGroups`
 - **원혼(직업) 시스템**: `spirits`, `spiritSkills`, `statusEffects`
 - **몬스터·던전**: `monsterTypes`, `drops`, `spawnGroups`, `bossPhases`, `bossSkills`, `dungeons`, `dungeonSections`
+- **삼천도**: `lobbySpots` — Notion 기준 신설(시설 5곳, ID `88xx`)이지만 **저장소의 xlsx(2026-11-21 커밋본)에는 아직 없다.** 최신 xlsx를 반영해야 한다.
 - **UI**: `hudElements`
 - **레거시 (정리 대상, 2026-11-21 확정)**: `weapons`, `weaponCombos`, `skills`, `skillNodes` — 이전 핵앤슬래쉬 방향(무기 중심)의 산물. 원혼 기준으로 재설계되었으므로 **새 코드에서 쓰지 않으며 변환 대상에서도 제외**한다. xlsx에서의 실제 삭제와 참조 정리(`#장비 설계` 등 설계 시트 포함)는 변환기가 완성되어 로더 교체가 끝난 뒤 한 번에 한다. 그 전에는 건드리지 않는다.
 
@@ -79,5 +80,7 @@
 
 ## 열린 질문
 
-- 적 분류 `원혼`(`monsterTypes` 9002)과 직업 `원혼`(`spirits`)의 용어 충돌 — '망령' 개명 확정 시 `strings`·시트 갱신
+- `[폐기]` 표시가 붙은 컬럼(`staggerResist`, `staggerMax` 등 경직 관련)은 시트에 남아 있다. 변환기가 제외하도록 규칙(예: 라벨의 `[폐기]` 표기 또는 `tables.json`의 제외 목록)을 정한다.
+- `configs`의 ID 대역: 전투 `20xxx`, 저승 던전 `60001~`, 파티·매칭 `60011~`, 삼천도 `70001~`. 폐기 상수는 A열 `//`. 새 상수는 해당 대역을 이어 쓴다.
+- 용어 충돌은 해소됐다(적 분류 '원혼' → '망령'). 표시 이름(`strings`)만 바뀌었고 `monsterTypes` 9002·`characterID` 키와 `#원혼 설계` 시트명은 그대로다.
 - 접미사 없는 컬럼의 타입 추정 규칙을 그대로 둘지, 타입 행을 별도로 추가할지
