@@ -1,0 +1,36 @@
+{
+  "group_id": "0ea276a5-40f4-4caf-ad27-bb3cd73b2249",
+  "states": [
+    {
+      "character": {
+        "id": "d08b8efa-ee49-477d-8db1-fbe0512ccdda",
+        "name": "Idle",
+        "prompt": "A stern bearded Joseon general, ornate navy and black lamellar armour with bold warm GOLD embroidery and sculpted beast shoulder plates, blue headband and tied topknot, dark-blue trailing headband tails, crimson waist sash and layered battle skirt, heavy boots. A large round DARK NAVY SHIELD WITH A CLEAR GOLDEN LION FACE BOSS and gilded rim in one hand, short curved Korean saber in the other. Dark blue, warm gold and red. Match the supplied general reference's actual rich costume and lion shield, not a plain wooden shield. EXACTLY preserve this supplied V2 sprite's appearance, head/body proportions, palette and asymmetric equipment. Rotate this same person, with the same held weapons, hairstyle and clothing, without mirroring or redesigning. Crisp native pixel art, warm upper-left lighting, no ground shadow, no effects.",
+        "size": {
+          "width": 64,
+          "height": 64
+        },
+        "template_id": "mannequin",
+        "directions": 8,
+        "view": "low top-down",
+        "created_at": "2026-11-22T00:55:39.997129+00:00"
+      },
+      "folder": "Idle",
+      "frames": {
+        "rotations": {
+          "south": "Idle/rotations/south.png",
+          "south-east": "Idle/rotations/south-east.png",
+          "east": "Idle/rotations/east.png",
+          "north-east": "Idle/rotations/north-east.png",
+          "north": "Idle/rotations/north.png",
+          "north-west": "Idle/rotations/north-west.png",
+          "west": "Idle/rotations/west.png",
+          "south-west": "Idle/rotations/south-west.png"
+        },
+        "animations": {}
+      }
+    }
+  ],
+  "export_version": "3.1",
+  "export_date": "2026-11-22T00:58:07.333944"
+}

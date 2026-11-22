@@ -1,0 +1,202 @@
+{
+  "name": "ProjectY_Hero_Mudang_v01",
+  "service": "PixelLab",
+  "characterId": "ab302165-227c-4777-9d0b-86713dde774d",
+  "sourcePrompt": "A young adult Korean mudang shaman protagonist from Joseon Korea, an androgynous youthful face with a calm determined expression, black hair neatly tied in a small low bun with a short crimson ribbon. Authentic Korean hanbok: warm ivory jeogori with clear crossed collar, short dark indigo sleeveless outer vest, deep navy loose baji trousers gathered at the ankles, ivory socks and simple dark cloth shoes. Muted crimson waist sash with a small ochre paper talisman pouch on the hip. Empty hands held relaxed at the sides, no weapon. Practical travelling outfit, both legs and shoes clearly separated, modest sleeve width suitable for a running animation, no long cape, no floor-length robe, no hat. Compact classic Korean online RPG pixel sprite proportions about three heads tall, recognizable readable silhouette, hand-placed crisp pixel clusters, restrained ivory indigo and crimson colours, single dark selective outline, two-tone shading, no anti-aliasing, no glow or particles, no ground or background, full body centered. Neutral standing pose, orthographic low top-down RPG camera, consistent design across all eight directions.",
+  "canvas": {
+    "width": 64,
+    "height": 64
+  },
+  "view": "low top-down",
+  "pixelsPerUnit": 32,
+  "filterMode": "Point",
+  "textureCompression": "None",
+  "pivot": "Custom foot anchor",
+  "rotations": {
+    "south": "Sprites/Rotations/south.png",
+    "south-east": "Sprites/Rotations/south-east.png",
+    "east": "Sprites/Rotations/east.png",
+    "north-east": "Sprites/Rotations/north-east.png",
+    "north": "Sprites/Rotations/north.png",
+    "north-west": "Sprites/Rotations/north-west.png",
+    "west": "Sprites/Rotations/west.png",
+    "south-west": "Sprites/Rotations/south-west.png"
+  },
+  "clips": [
+    {
+      "name": "RUN_WEST",
+      "animation": "RUN",
+      "direction": "west",
+      "frames": 8,
+      "framesPerSecond": 10,
+      "duration": 0.8,
+      "loop": true,
+      "path": "Animations/RUN_WEST.anim"
+    },
+    {
+      "name": "RUN_EAST",
+      "animation": "RUN",
+      "direction": "east",
+      "frames": 8,
+      "framesPerSecond": 10,
+      "duration": 0.8,
+      "loop": true,
+      "path": "Animations/RUN_EAST.anim"
+    },
+    {
+      "name": "RUN_NORTH",
+      "animation": "RUN",
+      "direction": "north",
+      "frames": 8,
+      "framesPerSecond": 10,
+      "duration": 0.8,
+      "loop": true,
+      "path": "Animations/RUN_NORTH.anim"
+    },
+    {
+      "name": "RUN_SOUTH",
+      "animation": "RUN",
+      "direction": "south",
+      "frames": 8,
+      "framesPerSecond": 10,
+      "duration": 0.8,
+      "loop": true,
+      "path": "Animations/RUN_SOUTH.anim"
+    },
+    {
+      "name": "RUN_SOUTH_WEST",
+      "animation": "RUN",
+      "direction": "south-west",
+      "frames": 8,
+      "framesPerSecond": 10,
+      "duration": 0.8,
+      "loop": true,
+      "path": "Animations/RUN_SOUTH_WEST.anim"
+    },
+    {
+      "name": "RUN_SOUTH_EAST",
+      "animation": "RUN",
+      "direction": "south-east",
+      "frames": 8,
+      "framesPerSecond": 10,
+      "duration": 0.8,
+      "loop": true,
+      "path": "Animations/RUN_SOUTH_EAST.anim"
+    },
+    {
+      "name": "RUN_NORTH_EAST",
+      "animation": "RUN",
+      "direction": "north-east",
+      "frames": 8,
+      "framesPerSecond": 10,
+      "duration": 0.8,
+      "loop": true,
+      "path": "Animations/RUN_NORTH_EAST.anim"
+    },
+    {
+      "name": "RUN_NORTH_WEST",
+      "animation": "RUN",
+      "direction": "north-west",
+      "frames": 8,
+      "framesPerSecond": 10,
+      "duration": 0.8,
+      "loop": true,
+      "path": "Animations/RUN_NORTH_WEST.anim"
+    },
+    {
+      "name": "IDLE_SOUTH",
+      "animation": "IDLE",
+      "direction": "south",
+      "frames": 4,
+      "framesPerSecond": 10,
+      "duration": 0.4,
+      "loop": true,
+      "path": "Animations/IDLE_SOUTH.anim"
+    },
+    {
+      "name": "IDLE_WEST",
+      "animation": "IDLE",
+      "direction": "west",
+      "frames": 4,
+      "framesPerSecond": 10,
+      "duration": 0.4,
+      "loop": true,
+      "path": "Animations/IDLE_WEST.anim"
+    },
+    {
+      "name": "IDLE_SOUTH_WEST",
+      "animation": "IDLE",
+      "direction": "south-west",
+      "frames": 4,
+      "framesPerSecond": 10,
+      "duration": 0.4,
+      "loop": true,
+      "path": "Animations/IDLE_SOUTH_WEST.anim"
+    },
+    {
+      "name": "IDLE_EAST",
+      "animation": "IDLE",
+      "direction": "east",
+      "frames": 4,
+      "framesPerSecond": 10,
+      "duration": 0.4,
+      "loop": true,
+      "path": "Animations/IDLE_EAST.anim"
+    },
+    {
+      "name": "IDLE_NORTH_WEST",
+      "animation": "IDLE",
+      "direction": "north-west",
+      "frames": 4,
+      "framesPerSecond": 10,
+      "duration": 0.4,
+      "loop": true,
+      "path": "Animations/IDLE_NORTH_WEST.anim"
+    },
+    {
+      "name": "IDLE_NORTH",
+      "animation": "IDLE",
+      "direction": "north",
+      "frames": 4,
+      "framesPerSecond": 10,
+      "duration": 0.4,
+      "loop": true,
+      "path": "Animations/IDLE_NORTH.anim"
+    },
+    {
+      "name": "IDLE_NORTH_EAST",
+      "animation": "IDLE",
+      "direction": "north-east",
+      "frames": 4,
+      "framesPerSecond": 10,
+      "duration": 0.4,
+      "loop": true,
+      "path": "Animations/IDLE_NORTH_EAST.anim"
+    },
+    {
+      "name": "IDLE_SOUTH_EAST",
+      "animation": "IDLE",
+      "direction": "south-east",
+      "frames": 4,
+      "framesPerSecond": 10,
+      "duration": 0.4,
+      "loop": true,
+      "path": "Animations/IDLE_SOUTH_EAST.anim"
+    }
+  ],
+  "pivotPixels": {
+    "x": 32,
+    "y": 3
+  },
+  "pivotNormalized": {
+    "x": 0.5,
+    "y": 0.046875
+  },
+  "importStudy": {
+    "date": "2026-11-22",
+    "previousPixelsPerUnit": 64,
+    "previousPivot": "Center",
+    "scene": "Assets/Scenes/ArtTests/GamcheonArtStudy.unity",
+    "imagePixelsUnchanged": true
+  }
+}

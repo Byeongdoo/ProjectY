@@ -1,0 +1,36 @@
+{
+  "group_id": "85cc6765-21c1-40af-b2d6-596996db40d1",
+  "states": [
+    {
+      "character": {
+        "id": "628b3449-3ba4-4a7b-9131-9f815afb3443",
+        "name": "Idle",
+        "prompt": "A beautiful young FEMALE Joseon tiger hunter archer, large expressive dark eyes, long black high ponytail with red and gold hair ornaments, ivory fur collar, dark forest-green hunter armour and layered green coat with gold Korean tiger-pattern embroidery, leather bracers, sturdy brown boots. Holds an elegant recurved golden Korean gakgung bow at the side; a visible long decorated golden quiver of white-fletched arrows on her back. Black hair, dark forest green, rich warm gold and ivory fur. Match the feminine high-ponytail green hunter in the reference, not the old male green soldier. EXACTLY preserve this supplied V2 sprite's appearance, head/body proportions, palette and asymmetric equipment. Rotate this same person, with the same held weapons, hairstyle and clothing, without mirroring or redesigning. Crisp native pixel art, warm upper-left lighting, no ground shadow, no effects.",
+        "size": {
+          "width": 64,
+          "height": 64
+        },
+        "template_id": "mannequin",
+        "directions": 8,
+        "view": "low top-down",
+        "created_at": "2026-11-22T00:55:40.853499+00:00"
+      },
+      "folder": "Idle",
+      "frames": {
+        "rotations": {
+          "south": "Idle/rotations/south.png",
+          "south-east": "Idle/rotations/south-east.png",
+          "east": "Idle/rotations/east.png",
+          "north-east": "Idle/rotations/north-east.png",
+          "north": "Idle/rotations/north.png",
+          "north-west": "Idle/rotations/north-west.png",
+          "west": "Idle/rotations/west.png",
+          "south-west": "Idle/rotations/south-west.png"
+        },
+        "animations": {}
+      }
+    }
+  ],
+  "export_version": "3.1",
+  "export_date": "2026-11-22T00:58:11.456032"
+}

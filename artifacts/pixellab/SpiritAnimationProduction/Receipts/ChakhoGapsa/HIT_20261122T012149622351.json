@@ -1,0 +1,25 @@
+{
+  "request": {
+    "character_id": "628b3449-3ba4-4a7b-9131-9f815afb3443",
+    "animation_name": "HIT",
+    "mode": "v3",
+    "action_description": "React to a short impact with arms jolting around the bow and body dipping, then recover the ready stance without changing equipment. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.",
+    "frame_count": 4,
+    "keep_first_frame": false,
+    "directions": [
+      "north-west",
+      "west",
+      "south-west"
+    ],
+    "animation_group_id": "a0544a33-c360-44cc-9d50-897e8fced43c"
+  },
+  "response": {
+    "content": [
+      {
+        "type": "text",
+        "text": "character: 628b3449-3ba4-4a7b-9131-9f815afb3443\nanimation: v3 custom (React to a short impact with arms jolting around the bow and body dipping, then recover the ready stance without changing equipment. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.)\ndirections: north-west, west, south-west (3 jobs)\njob_ids: north-west=348fe214-b2b1-4782-bd1f-78bedd893a8c, west=d2cdca7c-2308-42ff-967a-e279d5f4b8bc, south-west=5cc3ec1c-3e0c-41e0-912e-0e1f0be1ff0c\ngroup: a0544a33-c360-44cc-9d50-897e8fced43c\nframes: 4 (reference stripped, keep_first_frame=false)\ncanvas: north-west 88x88, west 88x88, south-west 88x88 (frames are stored at this size: the character plus room to move)\ncost: 3 generations (1/dir x 3)\neta: ~2-4 min/direction\n\nhint: get_character(character_id=\"628b3449-3ba4-4a7b-9131-9f815afb3443\")\nadd more directions to this group: animate_character(character_id=\"628b3449-3ba4-4a7b-9131-9f815afb3443\", action_description=\"React to a short impact with arms jolting around the bow and body dipping, then recover the ready stance without changing equipment. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.\", animation_group_id=\"a0544a33-c360-44cc-9d50-897e8fced43c\", directions=[...])"
+      }
+    ],
+    "isError": false
+  }
+}

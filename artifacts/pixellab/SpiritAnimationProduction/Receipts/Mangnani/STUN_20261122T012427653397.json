@@ -1,0 +1,27 @@
+{
+  "request": {
+    "character_id": "478ad62f-9651-46ca-a174-7b869382d4fd",
+    "animation_name": "STUN",
+    "mode": "v3",
+    "action_description": "Rest the cleaver tip against the ground and sway unsteadily with the head lowered. Seamless stunned hold; keep the blade connected to the hands. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.",
+    "frame_count": 4,
+    "keep_first_frame": false,
+    "directions": [
+      "south",
+      "south-east",
+      "east",
+      "north-east",
+      "north",
+      "north-west"
+    ]
+  },
+  "response": {
+    "content": [
+      {
+        "type": "text",
+        "text": "character: 478ad62f-9651-46ca-a174-7b869382d4fd\nanimation: v3 custom (Rest the cleaver tip against the ground and sway unsteadily with the head lowered. Seamless stunned hold; keep the blade connected to the hands. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.)\ndirections: south, south-east, east, north-east, north, north-west (6 jobs)\njob_ids: south=f5330f1d-c28f-434e-8a41-141765a52364, south-east=aa2ff236-ef44-4b9d-a1fc-dc72cba98ec5, east=075974e8-e14a-44ff-bf61-08aa7f231649, north-east=f2a47b0b-2bd0-405d-a6c7-5a08aff78cfe, north=8015d7ed-75e6-458c-8640-f62f844a0664, north-west=6b2043a9-7f83-4179-8d71-6ca57ced8d76\ngroup: b00111e6-95f5-404c-822f-b9f10647e3ac\nframes: 4 (reference stripped, keep_first_frame=false)\ncanvas: south 92x92, south-east 92x92, east 92x92, north-east 92x92, north 92x92, north-west 92x92 (frames are stored at this size: the character plus room to move)\ncost: 6 generations (1/dir x 6)\neta: ~2-4 min/direction\n\nhint: get_character(character_id=\"478ad62f-9651-46ca-a174-7b869382d4fd\")\nadd more directions to this group: animate_character(character_id=\"478ad62f-9651-46ca-a174-7b869382d4fd\", action_description=\"Rest the cleaver tip against the ground and sway unsteadily with the head lowered. Seamless stunned hold; keep the blade connected to the hands. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.\", animation_group_id=\"b00111e6-95f5-404c-822f-b9f10647e3ac\", directions=[...])"
+      }
+    ],
+    "isError": false
+  }
+}

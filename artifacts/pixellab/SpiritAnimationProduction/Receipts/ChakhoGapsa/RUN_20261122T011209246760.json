@@ -1,0 +1,24 @@
+{
+  "request": {
+    "character_id": "628b3449-3ba4-4a7b-9131-9f815afb3443",
+    "animation_name": "RUN",
+    "mode": "v3",
+    "action_description": "Run lightly in place with the bow lowered safely at the side, alternating quick steps. High ponytail, fur collar and the attached quiver bounce subtly. Seamless cycle. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.",
+    "frame_count": 8,
+    "keep_first_frame": false,
+    "directions": [
+      "south",
+      "south-east",
+      "east"
+    ]
+  },
+  "response": {
+    "content": [
+      {
+        "type": "text",
+        "text": "character: 628b3449-3ba4-4a7b-9131-9f815afb3443\nanimation: v3 custom (Run lightly in place with the bow lowered safely at the side, alternating quick steps. High ponytail, fur collar and the attached quiver bounce subtly. Seamless cycle. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.)\ndirections: south, south-east, east (3 jobs)\njob_ids: south=cc554042-a87a-48cd-b695-de56634e375a, south-east=ecbaf83f-c70e-4dd2-83e6-f48583c550e1, east=33c7f616-5d3b-48a1-bb7d-b0275d7193b8\ngroup: 3f04c379-3571-48c6-ad07-997730b97130\nframes: 8 (reference stripped, keep_first_frame=false)\ncanvas: south 88x88, south-east 88x88, east 88x88 (frames are stored at this size: the character plus room to move)\ncost: 3 generations (1/dir x 3)\neta: ~2-4 min/direction\n\nhint: get_character(character_id=\"628b3449-3ba4-4a7b-9131-9f815afb3443\")\nadd more directions to this group: animate_character(character_id=\"628b3449-3ba4-4a7b-9131-9f815afb3443\", action_description=\"Run lightly in place with the bow lowered safely at the side, alternating quick steps. High ponytail, fur collar and the attached quiver bounce subtly. Seamless cycle. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.\", animation_group_id=\"3f04c379-3571-48c6-ad07-997730b97130\", directions=[...])"
+      }
+    ],
+    "isError": false
+  }
+}

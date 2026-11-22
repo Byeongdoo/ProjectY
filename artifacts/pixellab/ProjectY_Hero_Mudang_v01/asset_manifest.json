@@ -1,0 +1,69 @@
+{
+  "name": "ProjectY_Hero_Mudang_v01",
+  "createdDate": "2026-11-21",
+  "service": "PixelLab",
+  "characterId": "ab302165-227c-4777-9d0b-86713dde774d",
+  "characterGroupId": "165c995d-3cdc-48e3-9b17-d5c46a9e67fe",
+  "canvas": {
+    "width": 64,
+    "height": 64
+  },
+  "view": "low top-down",
+  "background": "transparent",
+  "directionOrder": [
+    "south",
+    "south-west",
+    "west",
+    "north-west",
+    "north",
+    "north-east",
+    "east",
+    "south-east"
+  ],
+  "animations": [
+    {
+      "name": "IDLE",
+      "template": "breathing-idle",
+      "groupId": "54712327-acd3-4e56-a413-75766fb0bfb0",
+      "loop": true,
+      "directions": 8,
+      "framesPerDirection": 4
+    },
+    {
+      "name": "RUN",
+      "template": "running-8-frames",
+      "groupId": "33aa6678-9b27-416c-9584-01ce9204e3b9",
+      "loop": true,
+      "directions": 8,
+      "framesPerDirection": 8
+    }
+  ],
+  "validation": {
+    "clipCount": 16,
+    "allAnimationFrames64x64": true,
+    "allClipsHaveMotion": true,
+    "animationFrames": 96,
+    "rotationImages": 8,
+    "transparentCornerVerified": true
+  },
+  "files": {
+    "framesZip": "ProjectY_Hero_Mudang_v01_frames.zip",
+    "sourceMetadata": "frames/metadata.json",
+    "idleOverview": "IDLE_8directions.png",
+    "sheetLayout": "spritesheet/ProjectY_Hero_Mudang_v01-Idle.json",
+    "runOverview": "RUN_8directions.png",
+    "spritesheetZip": "ProjectY_Hero_Mudang_v01_spritesheet.zip"
+  },
+  "unityImportSuggestions": {
+    "compression": "None",
+    "loopTime": true,
+    "textureType": "Sprite (2D and UI)",
+    "spritePivot": "Custom foot anchor (32,3) px on 64x64 canvas",
+    "sliceCellSize": "64 x 64",
+    "note": "Updated after Unity Gamcheon scale study on 2026-11-22. Source pixels are unchanged; existing Unity sprite GUIDs are preserved.",
+    "filterMode": "Point (no filter)",
+    "meshType": "Full Rect",
+    "pixelsPerUnit": 32
+  },
+  "designNotes": "First visual proposal based on the shaman premise: ivory jeogori, indigo vest and baji, crimson sash, tied black hair, talisman pouch; empty hands."
+}

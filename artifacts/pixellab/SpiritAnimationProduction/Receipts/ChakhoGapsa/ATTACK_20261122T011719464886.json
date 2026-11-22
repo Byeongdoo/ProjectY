@@ -1,0 +1,29 @@
+{
+  "request": {
+    "character_id": "628b3449-3ba4-4a7b-9131-9f815afb3443",
+    "animation_name": "ATTACK",
+    "mode": "v3",
+    "action_description": "Reach to the quiver, nock a single arrow, raise the golden bow toward the facing direction, pull the string to the cheek, release once and lower the bow. Clear aiming and release poses; no flying projectile effect. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.",
+    "frame_count": 8,
+    "keep_first_frame": false,
+    "directions": [
+      "south-east",
+      "east",
+      "north-east",
+      "north",
+      "north-west",
+      "west",
+      "south-west"
+    ],
+    "animation_group_id": "0d581b47-76f7-485a-9c02-5d0d0f1c435e"
+  },
+  "response": {
+    "content": [
+      {
+        "type": "text",
+        "text": "character: 628b3449-3ba4-4a7b-9131-9f815afb3443\nanimation: v3 custom (Reach to the quiver, nock a single arrow, raise the golden bow toward the facing direction, pull the string to the cheek, release once and lower the bow. Clear aiming and release poses; no flying projectile effect. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.)\ndirections: south-east, east, north-east, north, north-west, west, south-west (7 jobs)\njob_ids: south-east=c2730d90-2a4f-4a10-acf3-f7aa3dd3960b, east=507bae42-4006-49cc-9700-e05c9ce24d50, north-east=e0199011-2663-4ae2-8507-4fc2028a571b, north=3d5add44-f71b-4e3c-8b8b-1ac76b40dec6, north-west=21a02ca1-e078-4869-9dd8-46d46eef4abe, west=72adb3c1-c660-41b5-a372-5f37c3983d10, south-west=a4d25069-a882-4bd0-bdc6-0a1d1958d1ed\ngroup: 0d581b47-76f7-485a-9c02-5d0d0f1c435e\nframes: 8 (reference stripped, keep_first_frame=false)\ncanvas: south-east 88x88, east 88x88, north-east 84x84, north 84x84, north-west 88x88, west 88x88, south-west 88x88 (frames are stored at this size: the character plus room to move)\ncost: 7 generations (1/dir x 7)\neta: ~2-4 min/direction\n\nhint: get_character(character_id=\"628b3449-3ba4-4a7b-9131-9f815afb3443\")\nadd more directions to this group: animate_character(character_id=\"628b3449-3ba4-4a7b-9131-9f815afb3443\", action_description=\"Reach to the quiver, nock a single arrow, raise the golden bow toward the facing direction, pull the string to the cheek, release once and lower the bow. Clear aiming and release poses; no flying projectile effect. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.\", animation_group_id=\"0d581b47-76f7-485a-9c02-5d0d0f1c435e\", directions=[...])"
+      }
+    ],
+    "isError": false
+  }
+}

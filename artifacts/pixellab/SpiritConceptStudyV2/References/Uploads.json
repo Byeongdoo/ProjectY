@@ -1,0 +1,77 @@
+[
+  {
+    "key": "MumyeongJangsu",
+    "kind": "Design",
+    "ref": "upload:15222462-4cde-4ea7-8a5d-170f8a01a48d"
+  },
+  {
+    "key": "MumyeongJangsu",
+    "kind": "Sprite",
+    "ref": "upload:4763eedb-7e4f-46d8-b050-411a48eaf897"
+  },
+  {
+    "key": "MumyeongJangsu",
+    "kind": "Weapon",
+    "ref": "upload:f43bad79-93e7-4d1f-98fa-856629d45788"
+  },
+  {
+    "key": "Mangnani",
+    "kind": "Design",
+    "ref": "upload:c6e1f910-eddf-4d89-b1df-244b6e39dec9"
+  },
+  {
+    "key": "Mangnani",
+    "kind": "Sprite",
+    "ref": "upload:ff1c02ed-bbcf-4e5a-9afc-f6a11bc2acad"
+  },
+  {
+    "key": "Mangnani",
+    "kind": "Weapon",
+    "ref": "upload:596de88d-8da2-4c82-affb-16cf396eef6f"
+  },
+  {
+    "key": "ChakhoGapsa",
+    "kind": "Design",
+    "ref": "upload:8393263c-38dc-4826-b847-7ee9c2c40590"
+  },
+  {
+    "key": "ChakhoGapsa",
+    "kind": "Sprite",
+    "ref": "upload:2420647c-279a-46d6-b6c2-cea72d2cecb9"
+  },
+  {
+    "key": "ChakhoGapsa",
+    "kind": "Weapon",
+    "ref": "upload:b59175ba-7906-4ee1-9ea6-84741806403f"
+  },
+  {
+    "key": "Kkokdusoe",
+    "kind": "Design",
+    "ref": "upload:c64c678a-26ca-437e-af3f-7454ca2bfb64"
+  },
+  {
+    "key": "Kkokdusoe",
+    "kind": "Sprite",
+    "ref": "upload:d3968e7a-2ec0-43bd-a194-f5d6cbbf8821"
+  },
+  {
+    "key": "Kkokdusoe",
+    "kind": "Weapon",
+    "ref": "upload:7bb68432-9368-453f-875c-6aaaef12d76c"
+  },
+  {
+    "key": "Uinyeo",
+    "kind": "Design",
+    "ref": "upload:392b7bdf-3c0f-4f5c-a3df-22f339a0ceab"
+  },
+  {
+    "key": "Uinyeo",
+    "kind": "Sprite",
+    "ref": "upload:9e79c740-a506-456a-b3da-197661d10464"
+  },
+  {
+    "key": "Uinyeo",
+    "kind": "Weapon",
+    "ref": "upload:6671dd8a-137c-4eea-bd96-bb13ea56ecfa"
+  }
+]

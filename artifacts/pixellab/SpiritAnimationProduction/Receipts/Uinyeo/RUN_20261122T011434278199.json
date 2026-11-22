@@ -1,0 +1,25 @@
+{
+  "request": {
+    "character_id": "20edb5b5-8698-424e-be5e-99b63c356064",
+    "animation_name": "RUN",
+    "mode": "v3",
+    "action_description": "Run in place with small quick modest steps, keeping the medicine case close to the body and needle safely controlled. Lavender skirt, long hair and ribbons sway naturally. Seamless run cycle. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.",
+    "frame_count": 8,
+    "keep_first_frame": false,
+    "directions": [
+      "north-west",
+      "west",
+      "south-west"
+    ],
+    "animation_group_id": "14928c02-a025-47e0-9b4f-1fa7b45fe0cc"
+  },
+  "response": {
+    "content": [
+      {
+        "type": "text",
+        "text": "character: 20edb5b5-8698-424e-be5e-99b63c356064\nanimation: v3 custom (Run in place with small quick modest steps, keeping the medicine case close to the body and needle safely controlled. Lavender skirt, long hair and ribbons sway naturally. Seamless run cycle. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.)\ndirections: north-west, west, south-west (3 jobs)\njob_ids: north-west=dc4d86b2-f2e0-41ea-bbdf-f7281cef1dbc, west=be0199ef-bdeb-47ed-96c7-d95eee58742d, south-west=cd3c8fd1-9591-44e9-8935-e7c4114804a4\ngroup: 14928c02-a025-47e0-9b4f-1fa7b45fe0cc\nframes: 8 (reference stripped, keep_first_frame=false)\ncanvas: north-west 88x88, west 88x88, south-west 88x88 (frames are stored at this size: the character plus room to move)\ncost: 3 generations (1/dir x 3)\neta: ~2-4 min/direction\n\nhint: get_character(character_id=\"20edb5b5-8698-424e-be5e-99b63c356064\")\nadd more directions to this group: animate_character(character_id=\"20edb5b5-8698-424e-be5e-99b63c356064\", action_description=\"Run in place with small quick modest steps, keeping the medicine case close to the body and needle safely controlled. Lavender skirt, long hair and ribbons sway naturally. Seamless run cycle. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.\", animation_group_id=\"14928c02-a025-47e0-9b4f-1fa7b45fe0cc\", directions=[...])"
+      }
+    ],
+    "isError": false
+  }
+}

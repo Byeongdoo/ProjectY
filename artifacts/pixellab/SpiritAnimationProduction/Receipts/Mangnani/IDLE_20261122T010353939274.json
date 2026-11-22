@@ -1,0 +1,29 @@
+{
+  "request": {
+    "character_id": "478ad62f-9651-46ca-a174-7b869382d4fd",
+    "animation_name": "IDLE",
+    "mode": "v3",
+    "action_description": "Stand menacingly with the enormous execution cleaver near the shoulder and chin slightly lowered, breathing subtly. Keep the cleaver and red tassel stable. Seamless idle cycle. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.",
+    "frame_count": 4,
+    "keep_first_frame": false,
+    "directions": [
+      "south",
+      "south-east",
+      "east",
+      "north-east",
+      "north",
+      "north-west",
+      "west",
+      "south-west"
+    ]
+  },
+  "response": {
+    "content": [
+      {
+        "type": "text",
+        "text": "character: 478ad62f-9651-46ca-a174-7b869382d4fd\nanimation: v3 custom (Stand menacingly with the enormous execution cleaver near the shoulder and chin slightly lowered, breathing subtly. Keep the cleaver and red tassel stable. Seamless idle cycle. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.)\ndirections: south, south-east, east, north-east, north, north-west, west, south-west (8 jobs)\njob_ids: south=56c0288c-6091-4527-99a3-f18938b04018, south-east=143740fd-2685-4b35-a054-ccad98f631bc, east=1d15b901-7cbe-4c58-9093-f65b4f8c010b, north-east=22f1f859-c3c3-4362-a4b8-0b5918a90763, north=51627810-0236-446e-bd0a-3ea803215ebb, north-west=5412adb1-faab-4169-be64-5b9db913b825, west=00826326-d223-47f2-883c-7b8e755db03e, south-west=5ba26a39-9618-44aa-a3c6-3acbf7a74678\ngroup: 6de64068-8fa4-4ffc-b7c0-bec98e0ea05d\nframes: 4 (reference stripped, keep_first_frame=false)\ncanvas: south 92x92, south-east 92x92, east 92x92, north-east 92x92, north 92x92, north-west 92x92, west 92x92, south-west 92x92 (frames are stored at this size: the character plus room to move)\ncost: 8 generations (1/dir x 8)\neta: ~2-4 min/direction\n\nhint: get_character(character_id=\"478ad62f-9651-46ca-a174-7b869382d4fd\")\nadd more directions to this group: animate_character(character_id=\"478ad62f-9651-46ca-a174-7b869382d4fd\", action_description=\"Stand menacingly with the enormous execution cleaver near the shoulder and chin slightly lowered, breathing subtly. Keep the cleaver and red tassel stable. Seamless idle cycle. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.\", animation_group_id=\"6de64068-8fa4-4ffc-b7c0-bec98e0ea05d\", directions=[...])"
+      }
+    ],
+    "isError": false
+  }
+}

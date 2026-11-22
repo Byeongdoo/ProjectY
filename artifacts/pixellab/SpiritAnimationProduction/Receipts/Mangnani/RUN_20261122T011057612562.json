@@ -1,0 +1,23 @@
+{
+  "request": {
+    "character_id": "478ad62f-9651-46ca-a174-7b869382d4fd",
+    "animation_name": "RUN",
+    "mode": "v3",
+    "action_description": "Run in place aggressively with torso leaning forward, carrying the heavy cleaver low behind the body. Alternate strong strides; wild tied hair and torn cloth bounce. Seamless running cycle. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.",
+    "frame_count": 8,
+    "keep_first_frame": false,
+    "directions": [
+      "south",
+      "south-east"
+    ]
+  },
+  "response": {
+    "content": [
+      {
+        "type": "text",
+        "text": "character: 478ad62f-9651-46ca-a174-7b869382d4fd\nanimation: v3 custom (Run in place aggressively with torso leaning forward, carrying the heavy cleaver low behind the body. Alternate strong strides; wild tied hair and torn cloth bounce. Seamless running cycle. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.)\ndirections: south, south-east (2 jobs)\njob_ids: south=c70cee1d-c5dc-49bd-8409-5400d9c6096f, south-east=d0035769-6bda-48f3-bcbc-549e7d37092f\ngroup: 92666267-d6cc-4b65-b722-111495cbd4b0\nframes: 8 (reference stripped, keep_first_frame=false)\ncanvas: south 92x92, south-east 92x92 (frames are stored at this size: the character plus room to move)\ncost: 4 generations (2/dir x 2)\neta: ~2-4 min/direction\n\nhint: get_character(character_id=\"478ad62f-9651-46ca-a174-7b869382d4fd\")\nadd more directions to this group: animate_character(character_id=\"478ad62f-9651-46ca-a174-7b869382d4fd\", action_description=\"Run in place aggressively with torso leaning forward, carrying the heavy cleaver low behind the body. Alternate strong strides; wild tied hair and torn cloth bounce. Seamless running cycle. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.\", animation_group_id=\"92666267-d6cc-4b65-b722-111495cbd4b0\", directions=[...])"
+      }
+    ],
+    "isError": false
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "request": {
+    "character_id": "d08b8efa-ee49-477d-8db1-fbe0512ccdda",
+    "animation_name": "ATTACK",
+    "mode": "v3",
+    "action_description": "From guard, draw the short saber back at the waist, make one quick forward diagonal cut, then recover behind the shield into guard. Distinct anticipation, contact and recovery. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.",
+    "frame_count": 8,
+    "keep_first_frame": false,
+    "directions": [
+      "north",
+      "north-west",
+      "west"
+    ],
+    "animation_group_id": "f09771f5-2505-42d2-8619-fc3baa9ac9ec"
+  },
+  "response": {
+    "content": [
+      {
+        "type": "text",
+        "text": "character: d08b8efa-ee49-477d-8db1-fbe0512ccdda\nanimation: v3 custom (From guard, draw the short saber back at the waist, make one quick forward diagonal cut, then recover behind the shield into guard. Distinct anticipation, contact and recovery. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.)\ndirections: north, north-west, west (3 jobs)\njob_ids: north=b250ba69-6aba-45d2-9355-165a5475cc78, north-west=07ccd90c-9431-4351-b875-d4f88de87b17, west=28195c6f-9cb6-4805-868b-279e5f686ee5\ngroup: f09771f5-2505-42d2-8619-fc3baa9ac9ec\nframes: 8 (reference stripped, keep_first_frame=false)\ncanvas: north 84x84, north-west 84x84, west 84x84 (frames are stored at this size: the character plus room to move)\ncost: 3 generations (1/dir x 3)\neta: ~2-4 min/direction\n\nhint: get_character(character_id=\"d08b8efa-ee49-477d-8db1-fbe0512ccdda\")\nadd more directions to this group: animate_character(character_id=\"d08b8efa-ee49-477d-8db1-fbe0512ccdda\", action_description=\"From guard, draw the short saber back at the waist, make one quick forward diagonal cut, then recover behind the shield into guard. Distinct anticipation, contact and recovery. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.\", animation_group_id=\"f09771f5-2505-42d2-8619-fc3baa9ac9ec\", directions=[...])"
+      }
+    ],
+    "isError": false
+  }
+}

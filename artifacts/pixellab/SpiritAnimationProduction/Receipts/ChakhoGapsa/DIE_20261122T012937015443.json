@@ -1,0 +1,25 @@
+{
+  "request": {
+    "character_id": "628b3449-3ba4-4a7b-9131-9f815afb3443",
+    "animation_name": "DIE",
+    "mode": "v3",
+    "action_description": "Lose grip and lower the bow, knees buckle, fall backwards with the attached quiver moving with the torso, then remain down. No fade or disappearing. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.",
+    "frame_count": 12,
+    "keep_first_frame": false,
+    "directions": [
+      "south-east",
+      "east",
+      "north-east"
+    ],
+    "animation_group_id": "390550aa-7538-49f0-a6c3-f433872273f1"
+  },
+  "response": {
+    "content": [
+      {
+        "type": "text",
+        "text": "character: 628b3449-3ba4-4a7b-9131-9f815afb3443\nanimation: v3 custom (Lose grip and lower the bow, knees buckle, fall backwards with the attached quiver moving with the torso, then remain down. No fade or disappearing. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.)\ndirections: south-east, east, north-east (3 jobs)\njob_ids: south-east=46f93f7e-d3fe-463b-8996-aa7422a2f7d4, east=0a93e983-d1a3-42c8-ab2d-b1f087700a36, north-east=06a44cbb-01c7-4e18-a9e3-9552ba73a339\ngroup: 390550aa-7538-49f0-a6c3-f433872273f1\nframes: 12 (reference stripped, keep_first_frame=false)\ncanvas: south-east 88x88, east 88x88, north-east 84x84 (frames are stored at this size: the character plus room to move)\ncost: 6 generations (2/dir x 3)\neta: ~2-4 min/direction\n\nhint: get_character(character_id=\"628b3449-3ba4-4a7b-9131-9f815afb3443\")\nadd more directions to this group: animate_character(character_id=\"628b3449-3ba4-4a7b-9131-9f815afb3443\", action_description=\"Lose grip and lower the bow, knees buckle, fall backwards with the attached quiver moving with the torso, then remain down. No fade or disappearing. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.\", animation_group_id=\"390550aa-7538-49f0-a6c3-f433872273f1\", directions=[...])"
+      }
+    ],
+    "isError": false
+  }
+}

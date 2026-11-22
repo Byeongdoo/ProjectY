@@ -1,0 +1,21 @@
+{
+  "animation": "IDLE",
+  "directions": [
+    "south",
+    "south-east",
+    "east",
+    "north-east",
+    "north",
+    "north-west",
+    "west",
+    "south-west"
+  ],
+  "frameCount": 4,
+  "framesPerSecond": 8,
+  "loop": true,
+  "cellWidth": 92,
+  "cellHeight": 92,
+  "sourcePixelsResized": false,
+  "alignment": "PixelLab canvas centres; no per-frame trimming",
+  "groupId": "5fdaee8c-be9e-4484-8914-321e911ce9c5"
+}

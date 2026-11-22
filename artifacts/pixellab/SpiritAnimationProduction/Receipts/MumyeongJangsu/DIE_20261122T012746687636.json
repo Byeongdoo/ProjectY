@@ -1,0 +1,29 @@
+{
+  "request": {
+    "character_id": "d08b8efa-ee49-477d-8db1-fbe0512ccdda",
+    "animation_name": "DIE",
+    "mode": "v3",
+    "action_description": "Lose strength, plant the shield on the ground, kneel on one knee, then collapse sideways and remain down. One-way downed motion, no return to standing, no disappearing or fade. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.",
+    "frame_count": 12,
+    "keep_first_frame": false,
+    "directions": [
+      "south-east",
+      "east",
+      "north-east",
+      "north",
+      "north-west",
+      "west",
+      "south-west"
+    ],
+    "animation_group_id": "c8de3e63-8ed4-48f8-87fe-263d974f6f86"
+  },
+  "response": {
+    "content": [
+      {
+        "type": "text",
+        "text": "character: d08b8efa-ee49-477d-8db1-fbe0512ccdda\nanimation: v3 custom (Lose strength, plant the shield on the ground, kneel on one knee, then collapse sideways and remain down. One-way downed motion, no return to standing, no disappearing or fade. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.)\ndirections: south-east, east, north-east, north, north-west, west, south-west (7 jobs)\njob_ids: south-east=ec8f9c4d-7037-4aa6-a255-3b2e9614cb7e, east=0860eae8-6d5e-462d-ae95-fa9248113fca, north-east=107b72a4-d8d4-4042-bc02-4d8e424f1487, north=b57f7440-e684-48c2-8bad-b75d33c8489a, north-west=84aa352a-e9cc-4740-9e06-bcca82600524, west=5631db01-6220-4c2f-a9bd-279b86c9250c, south-west=9004361d-8fcd-497f-a97a-e33b1f5b4b78\ngroup: c8de3e63-8ed4-48f8-87fe-263d974f6f86\nframes: 12 (reference stripped, keep_first_frame=false)\ncanvas: south-east 84x84, east 84x84, north-east 84x84, north 84x84, north-west 84x84, west 84x84, south-west 92x92 (frames are stored at this size: the character plus room to move)\ncost: 14 generations (2/dir x 7)\neta: ~2-4 min/direction\n\nhint: get_character(character_id=\"d08b8efa-ee49-477d-8db1-fbe0512ccdda\")\nadd more directions to this group: animate_character(character_id=\"d08b8efa-ee49-477d-8db1-fbe0512ccdda\", action_description=\"Lose strength, plant the shield on the ground, kneel on one knee, then collapse sideways and remain down. One-way downed motion, no return to standing, no disappearing or fade. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.\", animation_group_id=\"c8de3e63-8ed4-48f8-87fe-263d974f6f86\", directions=[...])"
+      }
+    ],
+    "isError": false
+  }
+}

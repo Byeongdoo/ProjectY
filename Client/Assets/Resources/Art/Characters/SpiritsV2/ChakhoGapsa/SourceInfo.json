@@ -1,0 +1,33 @@
+{
+  "key": "ChakhoGapsa",
+  "name": "착호갑사",
+  "revision": "UserReferenceV2",
+  "phase": "Front concept only, pending visual approval",
+  "model": "PixelLab create_image_pro",
+  "date": "2026-11-22",
+  "jobId": "0cc20ebd-9f99-4828-8446-9d757987dcd7",
+  "galleryAssetId": "9bd777ee-d57d-5bea-b4c0-dff458436a9d",
+  "candidateIndex": 0,
+  "candidateCount": 16,
+  "downloadUrl": "https://api.pixellab.ai/mcp/images/0cc20ebd-9f99-4828-8446-9d757987dcd7/download?index=0",
+  "designDescription": "A beautiful young FEMALE Joseon tiger hunter archer, large expressive dark eyes, long black high ponytail with red and gold hair ornaments, ivory fur collar, dark forest-green hunter armour and layered green coat with gold Korean tiger-pattern embroidery, leather bracers, sturdy brown boots. Holds an elegant recurved golden Korean gakgung bow at the side; a visible long decorated golden quiver of white-fletched arrows on her back. Black hair, dark forest green, rich warm gold and ivory fur. Match the feminine high-ponytail green hunter in the reference, not the old male green soldier.",
+  "selectionReason": "여성 사냥꾼·털깃·녹색 금장 복식·각궁·화살통이 함께 보이는 후보",
+  "referenceManifest": "artifacts/pixellab/SpiritConceptStudyV2/SourceManifest.json",
+  "userReference": "artifacts/pixellab/SpiritConceptStudyV2/References/UserReference.png",
+  "metrics": {
+    "key": "ChakhoGapsa",
+    "spritePath": "Assets/Resources/Art/Characters/SpiritsV2/ChakhoGapsa/ChakhoGapsa_Front.png",
+    "canvasWidth": 64,
+    "canvasHeight": 64,
+    "visibleWidth": 51,
+    "visibleHeight": 60,
+    "alphaX": 6,
+    "alphaY": 1,
+    "pivotPixels": {
+      "x": 32.0,
+      "y": 1.0
+    },
+    "pixelsPerUnit": 32
+  },
+  "referencePolicy": "This exact selected PNG, including candidate index and actual equipment placement, defines this revision. Preserve asymmetric equipment; do not substitute another candidate or mirror it."
+}

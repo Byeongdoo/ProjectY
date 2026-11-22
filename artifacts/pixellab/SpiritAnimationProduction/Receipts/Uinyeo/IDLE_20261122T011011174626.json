@@ -1,0 +1,24 @@
+{
+  "request": {
+    "character_id": "20edb5b5-8698-424e-be5e-99b63c356064",
+    "animation_name": "IDLE",
+    "mode": "v3",
+    "action_description": "Stand calmly with the black lacquered medicine case close to the hip and the silver acupuncture needle hand relaxed, breathing softly. Long hair and lavender ribbons move only slightly. Seamless idle. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.",
+    "frame_count": 4,
+    "keep_first_frame": false,
+    "directions": [
+      "west",
+      "south-west"
+    ],
+    "animation_group_id": "9ea31f9a-df57-4c6f-a6b7-90cc1c74831c"
+  },
+  "response": {
+    "content": [
+      {
+        "type": "text",
+        "text": "character: 20edb5b5-8698-424e-be5e-99b63c356064\nanimation: v3 custom (Stand calmly with the black lacquered medicine case close to the hip and the silver acupuncture needle hand relaxed, breathing softly. Long hair and lavender ribbons move only slightly. Seamless idle. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.)\ndirections: west, south-west (2 jobs)\njob_ids: west=0325895f-7f6b-4535-9417-d2a30cbcd178, south-west=1dabda35-90b1-4076-a4a2-744b6a1eee74\ngroup: 9ea31f9a-df57-4c6f-a6b7-90cc1c74831c\nframes: 4 (reference stripped, keep_first_frame=false)\ncanvas: west 88x88, south-west 88x88 (frames are stored at this size: the character plus room to move)\ncost: 2 generations (1/dir x 2)\neta: ~2-4 min/direction\n\nhint: get_character(character_id=\"20edb5b5-8698-424e-be5e-99b63c356064\")\nadd more directions to this group: animate_character(character_id=\"20edb5b5-8698-424e-be5e-99b63c356064\", action_description=\"Stand calmly with the black lacquered medicine case close to the hip and the silver acupuncture needle hand relaxed, breathing softly. Long hair and lavender ribbons move only slightly. Seamless idle. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.\", animation_group_id=\"9ea31f9a-df57-4c6f-a6b7-90cc1c74831c\", directions=[...])"
+      }
+    ],
+    "isError": false
+  }
+}

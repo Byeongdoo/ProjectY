@@ -1,0 +1,25 @@
+{
+  "request": {
+    "character_id": "628b3449-3ba4-4a7b-9131-9f815afb3443",
+    "animation_name": "STUN",
+    "mode": "v3",
+    "action_description": "Lower the bow, hang the head and lose balance in a subtle standing sway. Seamless stunned hold cycle. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.",
+    "frame_count": 4,
+    "keep_first_frame": false,
+    "directions": [
+      "north-west",
+      "west",
+      "south-west"
+    ],
+    "animation_group_id": "63c7aaef-4309-40ef-aa29-3b97a98c27d8"
+  },
+  "response": {
+    "content": [
+      {
+        "type": "text",
+        "text": "character: 628b3449-3ba4-4a7b-9131-9f815afb3443\nanimation: v3 custom (Lower the bow, hang the head and lose balance in a subtle standing sway. Seamless stunned hold cycle. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.)\ndirections: north-west, west, south-west (3 jobs)\njob_ids: north-west=a5b8319b-2ff4-4f77-ba2a-b14648d575ca, west=f618278b-0f2e-44bc-b3c5-8eca79d58e81, south-west=64903c8b-2532-437e-b4a1-4ec6843f926e\ngroup: 63c7aaef-4309-40ef-aa29-3b97a98c27d8\nframes: 4 (reference stripped, keep_first_frame=false)\ncanvas: north-west 88x88, west 88x88, south-west 88x88 (frames are stored at this size: the character plus room to move)\ncost: 3 generations (1/dir x 3)\neta: ~2-4 min/direction\n\nhint: get_character(character_id=\"628b3449-3ba4-4a7b-9131-9f815afb3443\")\nadd more directions to this group: animate_character(character_id=\"628b3449-3ba4-4a7b-9131-9f815afb3443\", action_description=\"Lower the bow, hang the head and lose balance in a subtle standing sway. Seamless stunned hold cycle. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.\", animation_group_id=\"63c7aaef-4309-40ef-aa29-3b97a98c27d8\", directions=[...])"
+      }
+    ],
+    "isError": false
+  }
+}

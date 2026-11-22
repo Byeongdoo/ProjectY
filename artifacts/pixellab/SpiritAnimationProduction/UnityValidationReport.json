@@ -1,0 +1,47 @@
+{
+    "unityVersion": "6000.3.5f2",
+    "generatedAtUtc": "2026-11-22T01:09:54.1212029Z",
+    "status": "Partial production: available assets verified, remaining clips still queued",
+    "expectedClips": 440,
+    "expectedFrames": 3136,
+    "availableClips": 24,
+    "frameReferences": 96,
+    "classes": [
+        {
+            "key": "MumyeongJangsu",
+            "animations": 1,
+            "clips": 8,
+            "frameReferences": 32
+        },
+        {
+            "key": "Mangnani",
+            "animations": 1,
+            "clips": 8,
+            "frameReferences": 32
+        },
+        {
+            "key": "ChakhoGapsa",
+            "animations": 1,
+            "clips": 8,
+            "frameReferences": 32
+        },
+        {
+            "key": "Kkokdusoe",
+            "animations": 0,
+            "clips": 0,
+            "frameReferences": 0
+        },
+        {
+            "key": "Uinyeo",
+            "animations": 0,
+            "clips": 0,
+            "frameReferences": 0
+        }
+    ],
+    "checks": [
+        "Every available clip loads in Unity and resolves every sprite",
+        "Eight directions per completed motion; expected frame count, timestamps, fps and loop settings",
+        "32 PPU, Point, uncompressed, no mipmaps; source canvas centre offset preserves per-character foot origin",
+        "Only sprite curves, no root-motion curves; existing user scenes untouched"
+    ]
+}

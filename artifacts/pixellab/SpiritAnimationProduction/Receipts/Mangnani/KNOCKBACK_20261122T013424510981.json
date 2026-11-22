@@ -1,0 +1,25 @@
+{
+  "request": {
+    "character_id": "478ad62f-9651-46ca-a174-7b869382d4fd",
+    "animation_name": "KNOCKBACK",
+    "mode": "v3",
+    "action_description": "Brace with the cleaver in front of the body, lean back under an impact and make two large stagger steps in place, then regain balance. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.",
+    "frame_count": 4,
+    "keep_first_frame": false,
+    "directions": [
+      "south",
+      "south-east",
+      "east",
+      "north-east"
+    ]
+  },
+  "response": {
+    "content": [
+      {
+        "type": "text",
+        "text": "character: 478ad62f-9651-46ca-a174-7b869382d4fd\nanimation: v3 custom (Brace with the cleaver in front of the body, lean back under an impact and make two large stagger steps in place, then regain balance. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.)\ndirections: south, south-east, east, north-east (4 jobs)\njob_ids: south=3da3af77-3cbb-4894-b659-6244668a66c1, south-east=1a620815-e303-40ad-87e5-fad30b7719b9, east=b9145baf-d61c-4f7e-b7e2-ffb1c16d4274, north-east=ff9d2afb-7c52-47ab-bbea-ad7cdd80c706\ngroup: 310952a8-2833-486b-a393-1cff5d5a323e\nframes: 4 (reference stripped, keep_first_frame=false)\ncanvas: south 92x92, south-east 92x92, east 92x92, north-east 92x92 (frames are stored at this size: the character plus room to move)\ncost: 4 generations (1/dir x 4)\neta: ~2-4 min/direction\n\nhint: get_character(character_id=\"478ad62f-9651-46ca-a174-7b869382d4fd\")\nadd more directions to this group: animate_character(character_id=\"478ad62f-9651-46ca-a174-7b869382d4fd\", action_description=\"Brace with the cleaver in front of the body, lean back under an impact and make two large stagger steps in place, then regain balance. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.\", animation_group_id=\"310952a8-2833-486b-a393-1cff5d5a323e\", directions=[...])"
+      }
+    ],
+    "isError": false
+  }
+}

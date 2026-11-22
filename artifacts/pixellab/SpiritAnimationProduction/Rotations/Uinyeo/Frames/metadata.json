@@ -1,0 +1,36 @@
+{
+  "group_id": "a2d36123-7bf6-4b30-b1a9-b7cfe2ac19a1",
+  "states": [
+    {
+      "character": {
+        "id": "20edb5b5-8698-424e-be5e-99b63c356064",
+        "name": "Idle",
+        "prompt": "An elegant young female Korean Joseon healer with large gentle eyes, LONG flowing dark hair, PINK BLOSSOM hair ornaments and lavender ribbons. Graceful pale LAVENDER AND IVORY hanbok with muted dark-jade trim and delicate gold floral embroidery, layered full skirt and small light shoes. Holds a small BLACK LACQUERED MEDICINE CASE with GOLD edging and a PINK LOTUS emblem at waist level, and a fine silver acupuncture needle in the other hand; small embroidered herb pouch. Match the flower-adorned lavender healer reference, not a plain teal nurse or a short-bun civilian. The medical case is a small case or basket, not a wand. EXACTLY preserve this supplied V2 sprite's appearance, head/body proportions, palette and asymmetric equipment. Rotate this same person, with the same held weapons, hairstyle and clothing, without mirroring or redesigning. Crisp native pixel art, warm upper-left lighting, no ground shadow, no effects.",
+        "size": {
+          "width": 64,
+          "height": 64
+        },
+        "template_id": "mannequin",
+        "directions": 8,
+        "view": "low top-down",
+        "created_at": "2026-11-22T00:55:42.539089+00:00"
+      },
+      "folder": "Idle",
+      "frames": {
+        "rotations": {
+          "south": "Idle/rotations/south.png",
+          "south-east": "Idle/rotations/south-east.png",
+          "east": "Idle/rotations/east.png",
+          "north-east": "Idle/rotations/north-east.png",
+          "north": "Idle/rotations/north.png",
+          "north-west": "Idle/rotations/north-west.png",
+          "west": "Idle/rotations/west.png",
+          "south-west": "Idle/rotations/south-west.png"
+        },
+        "animations": {}
+      }
+    }
+  ],
+  "export_version": "3.1",
+  "export_date": "2026-11-22T00:58:15.017702"
+}

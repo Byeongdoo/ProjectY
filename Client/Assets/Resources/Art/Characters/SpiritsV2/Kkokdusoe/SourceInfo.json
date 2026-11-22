@@ -1,0 +1,33 @@
+{
+  "key": "Kkokdusoe",
+  "name": "꼭두쇠",
+  "revision": "UserReferenceV2",
+  "phase": "Front concept only, pending visual approval",
+  "model": "PixelLab create_image_pro",
+  "date": "2026-11-22",
+  "jobId": "9a0a67d6-95be-4132-9ae9-5cc3098a98e0",
+  "galleryAssetId": "98961ffb-94ed-5c96-a4e5-e3c47f9b7716",
+  "candidateIndex": 7,
+  "candidateCount": 16,
+  "downloadUrl": "https://api.pixellab.ai/mcp/images/9a0a67d6-95be-4132-9ae9-5cc3098a98e0/download?index=7",
+  "designDescription": "A cheerful charismatic male Joseon folk performer with a broad welcoming grin, a WIDE ROUND NAVY BRIMMED HAT decorated with GOLD trim and small bright ornaments, red and teal hat ribbons. Rich cobalt and navy long performance robes with GOLD Korean geometric embroidery, broad ivory sleeves, crimson waist sash and long red yellow teal cloth ribbons, brown shoes. Holds a SMALL golden LOTUS-ENGRAVED HAND GONG in one hand and a short rounded wooden gong mallet in the other, clearly separate and visible. The hat, wide sleeves and flowing cloth make a playful silhouette. Match the richly dressed smiling performer reference, not the plain white headband civilian.",
+  "selectionReason": "넓은 갓·밝은 표정·꽹과리·별도의 채가 함께 보이는 후보",
+  "referenceManifest": "artifacts/pixellab/SpiritConceptStudyV2/SourceManifest.json",
+  "userReference": "artifacts/pixellab/SpiritConceptStudyV2/References/UserReference.png",
+  "metrics": {
+    "key": "Kkokdusoe",
+    "spritePath": "Assets/Resources/Art/Characters/SpiritsV2/Kkokdusoe/Kkokdusoe_Front.png",
+    "canvasWidth": 64,
+    "canvasHeight": 64,
+    "visibleWidth": 53,
+    "visibleHeight": 63,
+    "alphaX": 8,
+    "alphaY": 1,
+    "pivotPixels": {
+      "x": 32.0,
+      "y": 1.0
+    },
+    "pixelsPerUnit": 32
+  },
+  "referencePolicy": "This exact selected PNG, including candidate index and actual equipment placement, defines this revision. Preserve asymmetric equipment; do not substitute another candidate or mirror it."
+}

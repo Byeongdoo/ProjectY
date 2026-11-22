@@ -1,0 +1,37 @@
+{
+  "key": "Mangnani",
+  "name": "망나니",
+  "role": "Melee",
+  "weapon": "Oversized Korean Joseon execution sword, very broad heavy SINGLE EDGED steel blade with a slightly curved rounded point, dark forged steel spine and bright sharpened edge, long two-handed oxblood leather handle, small rectangular iron guard, one subtle dark-red spiritual crack. It is an executioner's blade, not an axe, not a European crossguard greatsword.",
+  "body": "A muscular Korean male executioner in his thirties or forties, bare strong forearms, messy dark topknot, rough charcoal and oxblood red-brown hemp work clothes, wide-legged navy black baji trousers and dark cloth shoes. Holds one very broad Korean single-edged execution sword in both hands, angled upright beside his right shoulder (viewer left), so his face, torso and both feet remain visible. A long oxblood grip, small rectangular iron guard, dark iron blade spine with a bright silver cutting edge; no huge fantasy crossguard. The blade should make a broad aggressive silhouette but stay wholly inside the frame.",
+  "color": "charcoal, dark red brown, muted vermilion, cold steel",
+  "notionURL": "https://app.notion.com/p/41fd34105d5481e190eecc6ffed2a554",
+  "weaponSource": {
+    "jobId": "9320a736-b35b-4633-9c10-fd9922756f43",
+    "sourceImageId": "010042f4-6460-5b6c-a948-abecf12285a1",
+    "previousJobId": "d0feb01b-5200-48b5-8570-586bd1a5718c"
+  },
+  "frontSource": {
+    "jobId": "f5a21845-1ce5-4ade-8473-449bf577a109",
+    "sourceImageId": "850ac7ac-eed2-5463-abe1-7cae9f8a30d4",
+    "previousJobId": "501747da-2155-4ec0-b0fc-e6684787150f"
+  },
+  "frontPath": "Assets/Resources/Art/Characters/Spirits/Mangnani/Mangnani_Front.png",
+  "weaponPath": "Assets/Resources/Art/Characters/Spirits/Mangnani/Mangnani_WeaponConcept.png",
+  "refinement": "Broadened single-edged execution blade in both concept plate and held sprite.",
+  "pixelsPerUnit": 32,
+  "pivotPixels": {
+    "x": 32,
+    "y": 2
+  },
+  "visibleBounds": {
+    "width": 36,
+    "height": 61
+  },
+  "canvas": {
+    "width": 64,
+    "height": 64
+  },
+  "phase": "Front concept only",
+  "frontReferencePolicy": "The final front PNG defines identity and actual equipment placement; preserve it for future south-reference rotations. Do not mirror asymmetric equipment."
+}

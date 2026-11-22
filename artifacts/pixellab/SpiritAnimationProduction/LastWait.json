@@ -1,0 +1,9 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "1 job(s) finished after 12s, 7 still running:\n518da983-cc2f-418e-b7cf-6095e8902aac completed (generation, took 20s) -> get_character(character_id=\"d08b8efa-ee49-477d-8db1-fbe0512ccdda\")\naac4441f-dc32-4dfb-b173-d00a2ab8d17e still running (generation, eta ~300s) -> get_character(character_id=\"d08b8efa-ee49-477d-8db1-fbe0512ccdda\")\naa1157a3-be95-4256-99c9-19a4af078983 still running (generation, eta ~457s) -> get_character(character_id=\"d08b8efa-ee49-477d-8db1-fbe0512ccdda\")\n0e7e4bae-ee4d-4b5f-8a66-354bcf9a021a still running (generation, eta ~459s) -> get_character(character_id=\"d08b8efa-ee49-477d-8db1-fbe0512ccdda\")\n3da3af77-3cbb-4894-b659-6244668a66c1 still running (generation, eta ~462s) -> get_character(character_id=\"478ad62f-9651-46ca-a174-7b869382d4fd\")\n1a620815-e303-40ad-87e5-fad30b7719b9 still running (generation, eta ~464s) -> get_character(character_id=\"478ad62f-9651-46ca-a174-7b869382d4fd\")\nb9145baf-d61c-4f7e-b7e2-ffb1c16d4274 still running (generation, eta ~464s) -> get_character(character_id=\"478ad62f-9651-46ca-a174-7b869382d4fd\")\nff9d2afb-7c52-47ab-bbea-ad7cdd80c706 still running (generation, eta ~464s) -> get_character(character_id=\"478ad62f-9651-46ca-a174-7b869382d4fd\")\nhint: wait_for_jobs() again for the jobs still running"
+    }
+  ],
+  "isError": false
+}

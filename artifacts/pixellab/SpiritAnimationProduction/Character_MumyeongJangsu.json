@@ -1,0 +1,22 @@
+{
+  "request": {
+    "name": "ProjectY_MumyeongJangsu_V2",
+    "description": "A stern bearded Joseon general, ornate navy and black lamellar armour with bold warm GOLD embroidery and sculpted beast shoulder plates, blue headband and tied topknot, dark-blue trailing headband tails, crimson waist sash and layered battle skirt, heavy boots. A large round DARK NAVY SHIELD WITH A CLEAR GOLDEN LION FACE BOSS and gilded rim in one hand, short curved Korean saber in the other. Dark blue, warm gold and red. Match the supplied general reference's actual rich costume and lion shield, not a plain wooden shield. EXACTLY preserve this supplied V2 sprite's appearance, head/body proportions, palette and asymmetric equipment. Rotate this same person, with the same held weapons, hairstyle and clothing, without mirroring or redesigning. Crisp native pixel art, warm upper-left lighting, no ground shadow, no effects.",
+    "reference_image_url": "https://api.pixellab.ai/mcp/images/b2d1c421-85f9-49da-97b2-3b3dd9c2523e/download?index=0",
+    "mode": "v3",
+    "n_directions": 8,
+    "size": 64,
+    "view": "low top-down",
+    "outline": "selective outline",
+    "detail": "high detail"
+  },
+  "response": {
+    "content": [
+      {
+        "type": "text",
+        "text": "id: d08b8efa-ee49-477d-8db1-fbe0512ccdda\nname: ProjectY_MumyeongJangsu_V2\nmode: v3 reference (1 generations, 8 directions)\nbody: humanoid\nsize: 64x64px\nview: low top-down\nstyle: from reference image (outline/detail hints ignored)\nstatus: processing (~3-5 min)\n\nhint: get_character(character_id=\"d08b8efa-ee49-477d-8db1-fbe0512ccdda\")"
+      }
+    ],
+    "isError": false
+  }
+}

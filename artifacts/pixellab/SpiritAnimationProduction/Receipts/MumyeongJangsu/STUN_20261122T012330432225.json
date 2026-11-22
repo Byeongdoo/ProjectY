@@ -1,0 +1,25 @@
+{
+  "request": {
+    "character_id": "d08b8efa-ee49-477d-8db1-fbe0512ccdda",
+    "animation_name": "STUN",
+    "mode": "v3",
+    "action_description": "Lower the shield slightly, bend knees and hang the head, swaying weakly while still standing. Seamless dazed hold cycle with equipment retained. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.",
+    "frame_count": 4,
+    "keep_first_frame": false,
+    "directions": [
+      "south",
+      "south-east",
+      "east",
+      "north-east"
+    ]
+  },
+  "response": {
+    "content": [
+      {
+        "type": "text",
+        "text": "character: d08b8efa-ee49-477d-8db1-fbe0512ccdda\nanimation: v3 custom (Lower the shield slightly, bend knees and hang the head, swaying weakly while still standing. Seamless dazed hold cycle with equipment retained. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.)\ndirections: south, south-east, east, north-east (4 jobs)\njob_ids: south=a961b638-1119-47c2-b2de-4850769d1d7d, south-east=146354bc-a16d-4d43-80b3-210c3a0e3ecf, east=c40aad2c-ec8e-400c-8b89-12e6a8efd81a, north-east=c8a28957-51df-4939-bea2-da9ba1b22161\ngroup: e0b3d19f-85d8-42b1-b7ed-881c185d6110\nframes: 4 (reference stripped, keep_first_frame=false)\ncanvas: south 84x84, south-east 84x84, east 84x84, north-east 84x84 (frames are stored at this size: the character plus room to move)\ncost: 4 generations (1/dir x 4)\neta: ~2-4 min/direction\n\nhint: get_character(character_id=\"d08b8efa-ee49-477d-8db1-fbe0512ccdda\")\nadd more directions to this group: animate_character(character_id=\"d08b8efa-ee49-477d-8db1-fbe0512ccdda\", action_description=\"Lower the shield slightly, bend knees and hang the head, swaying weakly while still standing. Seamless dazed hold cycle with equipment retained. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.\", animation_group_id=\"e0b3d19f-85d8-42b1-b7ed-881c185d6110\", directions=[...])"
+      }
+    ],
+    "isError": false
+  }
+}

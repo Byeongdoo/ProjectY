@@ -1,0 +1,25 @@
+{
+  "request": {
+    "character_id": "d08b8efa-ee49-477d-8db1-fbe0512ccdda",
+    "animation_name": "RUN",
+    "mode": "v3",
+    "action_description": "Run in place with heavy low strides, alternating planted feet. Hold the lion shield forward protectively and keep the saber low behind it; headband tails and crimson sash bounce subtly. Complete one seamless running cycle. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.",
+    "frame_count": 8,
+    "keep_first_frame": false,
+    "directions": [
+      "south",
+      "south-east",
+      "east",
+      "north-east"
+    ]
+  },
+  "response": {
+    "content": [
+      {
+        "type": "text",
+        "text": "character: d08b8efa-ee49-477d-8db1-fbe0512ccdda\nanimation: v3 custom (Run in place with heavy low strides, alternating planted feet. Hold the lion shield forward protectively and keep the saber low behind it; headband tails and crimson sash bounce subtly. Complete one seamless running cycle. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.)\ndirections: south, south-east, east, north-east (4 jobs)\njob_ids: south=501be13c-d6b2-4c66-9294-4e7110ccbdc8, south-east=108d1260-8a0f-432b-af8f-f7aca1455cbb, east=4b70f443-51a0-4aea-ad2e-8ce9eda2a475, north-east=c45d159d-fc77-49ad-853f-ab7ffc036d68\ngroup: 91fff35d-7367-4c13-b31d-83c00ec4e05e\nframes: 8 (reference stripped, keep_first_frame=false)\ncanvas: south 84x84, south-east 84x84, east 84x84, north-east 84x84 (frames are stored at this size: the character plus room to move)\ncost: 4 generations (1/dir x 4)\neta: ~2-4 min/direction\n\nhint: get_character(character_id=\"d08b8efa-ee49-477d-8db1-fbe0512ccdda\")\nadd more directions to this group: animate_character(character_id=\"d08b8efa-ee49-477d-8db1-fbe0512ccdda\", action_description=\"Run in place with heavy low strides, alternating planted feet. Hold the lion shield forward protectively and keep the saber low behind it; headband tails and crimson sash bounce subtly. Complete one seamless running cycle. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.\", animation_group_id=\"91fff35d-7367-4c13-b31d-83c00ec4e05e\", directions=[...])"
+      }
+    ],
+    "isError": false
+  }
+}

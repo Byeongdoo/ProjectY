@@ -1,0 +1,34 @@
+{
+  "key": "ChakhoGapsa",
+  "name": "착호갑사",
+  "role": "Ranged",
+  "weapon": "Korean Joseon gakgung SHORT strongly recurved horn composite bow, amber wood and dark horn laminate, tiny ivory bindings and black wrapped grip, tiny vermilion tips, a subtle tiger-claw motif; bamboo arrows with black and faded yellow fletching, striped leather quiver. Include the bow's C/S curve clearly, not a longbow or crossbow.",
+  "body": "A lean Korean male tiger hunter soldier in his thirties, dark tied hair with a simple ochre headband, light forest green Joseon combat jeogori, tan leather forearm guards, ochre-brown waist ties, slim practical dark baji and cloth shoes. Holds a clearly visible SHORT strongly recurved amber horn gakgung bow upright in his LEFT hand (viewer right), right hand relaxed near a bamboo arrow. A small striped leather quiver with black and dull yellow arrow fletching behind the waist. His light narrow silhouette and curved bow must differ from the heavy sword fighter. No elf ears, no European cloak, no giant longbow.",
+  "color": "pine green, ochre tan, black horn and amber wood",
+  "notionURL": "https://app.notion.com/p/41fd34105d54816ab63de0a036027ac8",
+  "weaponSource": {
+    "jobId": "dbb7a5c6-e155-4436-8d2b-14ff29a5d5d8",
+    "sourceImageId": "30f441e4-80b9-5666-9d12-c96babd938a4"
+  },
+  "frontSource": {
+    "jobId": "26ec7258-005a-4044-b00a-bc36b3701ed6",
+    "sourceImageId": "4ed4f70a-06a8-50ac-9095-56e1dd8f851c"
+  },
+  "frontPath": "Assets/Resources/Art/Characters/Spirits/ChakhoGapsa/ChakhoGapsa_Front.png",
+  "weaponPath": "Assets/Resources/Art/Characters/Spirits/ChakhoGapsa/ChakhoGapsa_WeaponConcept.png",
+  "pixelsPerUnit": 32,
+  "pivotPixels": {
+    "x": 32,
+    "y": 3
+  },
+  "visibleBounds": {
+    "width": 33,
+    "height": 59
+  },
+  "canvas": {
+    "width": 64,
+    "height": 64
+  },
+  "phase": "Front concept only",
+  "frontReferencePolicy": "The final front PNG defines identity and actual equipment placement; preserve it for future south-reference rotations. Do not mirror asymmetric equipment."
+}

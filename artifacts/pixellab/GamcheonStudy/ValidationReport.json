@@ -1,0 +1,81 @@
+{
+    "unityVersion": "6000.3.5f2",
+    "tilesetId": "db0f26a0-d2f5-4ae4-9a82-8e6a992190d4",
+    "lowerBaseTileId": "ba00427d-a4e7-4b8c-acb5-2d5637f5fa6a",
+    "upperBaseTileId": "0f5c159f-51b4-4b36-8c33-81ea00762333",
+    "treeId": "44b93379-51ff-4895-9956-9350933ebdde",
+    "rockId": "fd27ee9f-7e04-457f-b0dc-3beda9197f37",
+    "tilePixels": 32,
+    "pixelsPerUnit": 32,
+    "sourceTileCount": 16,
+    "uniqueCornerPatterns": 16,
+    "heroSpriteCount": 104,
+    "heroAnimationCount": 16,
+    "verifiedAnimationFrames": 96,
+    "heroPivotPixels": {
+        "x": 32.0,
+        "y": 3.0
+    },
+    "treePivotPixels": {
+        "x": 46.0,
+        "y": 26.0
+    },
+    "rockPivotPixels": {
+        "x": 34.0,
+        "y": 11.0
+    },
+    "measurements": [
+        {
+            "file": "Assets/Resources/Art/Characters/Protagonist/Sprites/Rotations/south.png",
+            "width": 64,
+            "height": 64,
+            "alphaX": 17,
+            "alphaY": 3,
+            "alphaWidth": 29,
+            "alphaHeight": 59,
+            "visibleWidthUnits": 0.90625,
+            "visibleHeightUnits": 1.84375
+        },
+        {
+            "file": "Assets/Resources/Art/Tiles/Iseung/Gamcheon/Props/Gamcheon_PineTree.png",
+            "width": 96,
+            "height": 128,
+            "alphaX": 16,
+            "alphaY": 26,
+            "alphaWidth": 62,
+            "alphaHeight": 75,
+            "visibleWidthUnits": 1.9375,
+            "visibleHeightUnits": 2.34375
+        },
+        {
+            "file": "Assets/Resources/Art/Tiles/Iseung/Gamcheon/Props/Gamcheon_Rock.png",
+            "width": 64,
+            "height": 64,
+            "alphaX": 14,
+            "alphaY": 11,
+            "alphaWidth": 35,
+            "alphaHeight": 27,
+            "visibleWidthUnits": 1.09375,
+            "visibleHeightUnits": 0.84375
+        }
+    ],
+    "checks": [
+        "16 unique Wang corner masks, source bounding boxes used (not wang_N positions)",
+        "32px tiles at 32 PPU = one Unity grid cell; all study transforms use scale 1",
+        "104 hero sprites imported at 32 PPU with identical fixed (32,3) pixel foot pivot",
+        "Point, uncompressed RGBA, no mipmaps, full-rectangle sprite mesh",
+        "Front/behind tree sorting rendered and pixel-verified in Unity",
+        "Tree canopy and trunk preserve original pixels in one foot-anchored SortingGroup",
+        "Game.unity and multiplayer controllers are not required by the study scenes"
+    ],
+    "scenes": [
+        "Assets/Scenes/ArtTests/GamcheonArtStudy.unity",
+        "Assets/Scenes/ArtTests/GamcheonScaleComparison.unity",
+        "Assets/Scenes/ArtTests/GamcheonOcclusionComparison.unity"
+    ],
+    "screenshots": [
+        "Gamcheon_Overview.png",
+        "Gamcheon_ScaleComparison.png",
+        "Gamcheon_OcclusionComparison.png"
+    ]
+}

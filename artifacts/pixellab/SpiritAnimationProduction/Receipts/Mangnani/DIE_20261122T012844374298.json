@@ -1,0 +1,25 @@
+{
+  "request": {
+    "character_id": "478ad62f-9651-46ca-a174-7b869382d4fd",
+    "animation_name": "DIE",
+    "mode": "v3",
+    "action_description": "Knees buckle, lose the strong grip on the cleaver and collapse forward into a downed pose; remain fallen. One-way motion, no stand-up and no fading away. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.",
+    "frame_count": 12,
+    "keep_first_frame": false,
+    "directions": [
+      "north-east",
+      "north",
+      "north-west"
+    ],
+    "animation_group_id": "878735b0-5bff-417b-b9ac-241588f87f97"
+  },
+  "response": {
+    "content": [
+      {
+        "type": "text",
+        "text": "character: 478ad62f-9651-46ca-a174-7b869382d4fd\nanimation: v3 custom (Knees buckle, lose the strong grip on the cleaver and collapse forward into a downed pose; remain fallen. One-way motion, no stand-up and no fading away. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.)\ndirections: north-east, north, north-west (3 jobs)\njob_ids: north-east=d3a16b84-2b93-45a4-9fda-b40fe559db4b, north=3726fa20-7363-44c6-8df6-e7ca7839e4cb, north-west=196ea4c9-7dc8-455b-bf09-eae1e1fb0204\ngroup: 878735b0-5bff-417b-b9ac-241588f87f97\nframes: 12 (reference stripped, keep_first_frame=false)\ncanvas: north-east 92x92, north 92x92, north-west 92x92 (frames are stored at this size: the character plus room to move)\ncost: 6 generations (2/dir x 3)\neta: ~2-4 min/direction\n\nhint: get_character(character_id=\"478ad62f-9651-46ca-a174-7b869382d4fd\")\nadd more directions to this group: animate_character(character_id=\"478ad62f-9651-46ca-a174-7b869382d4fd\", action_description=\"Knees buckle, lose the strong grip on the cleaver and collapse forward into a downed pose; remain fallen. One-way motion, no stand-up and no fading away. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.\", animation_group_id=\"878735b0-5bff-417b-b9ac-241588f87f97\", directions=[...])"
+      }
+    ],
+    "isError": false
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "request": {
+    "character_id": "20edb5b5-8698-424e-be5e-99b63c356064",
+    "animation_name": "HIT",
+    "mode": "v3",
+    "action_description": "Flinch through the shoulders, clutch the medicine case protectively and lean back briefly, then recover the calm ready stance. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.",
+    "frame_count": 4,
+    "keep_first_frame": false,
+    "directions": [
+      "south-west"
+    ],
+    "animation_group_id": "96c8ad29-0fcc-4808-a11d-6fefcc764cb7"
+  },
+  "response": {
+    "content": [
+      {
+        "type": "text",
+        "text": "character: 20edb5b5-8698-424e-be5e-99b63c356064\nanimation: v3 custom (Flinch through the shoulders, clutch the medicine case protectively and lean back briefly, then recover the calm ready stance. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.)\ndirections: south-west (1 jobs)\njob_ids: south-west=4daae08a-cc19-48d6-8614-aa9f436b084a\ngroup: 96c8ad29-0fcc-4808-a11d-6fefcc764cb7\nframes: 4 (reference stripped, keep_first_frame=false)\ncanvas: south-west 88x88 (frames are stored at this size: the character plus room to move)\ncost: 1 generation (1/dir x 1)\neta: ~2-4 min/direction\n\nhint: get_character(character_id=\"20edb5b5-8698-424e-be5e-99b63c356064\")\nadd more directions to this group: animate_character(character_id=\"20edb5b5-8698-424e-be5e-99b63c356064\", action_description=\"Flinch through the shoulders, clutch the medicine case protectively and lean back briefly, then recover the calm ready stance. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.\", animation_group_id=\"96c8ad29-0fcc-4808-a11d-6fefcc764cb7\", directions=[...])"
+      }
+    ],
+    "isError": false
+  }
+}

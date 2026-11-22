@@ -1,0 +1,29 @@
+{
+  "request": {
+    "character_id": "20edb5b5-8698-424e-be5e-99b63c356064",
+    "animation_name": "DIE",
+    "mode": "v3",
+    "action_description": "Sink to the knees, place the free hand on the ground and slowly slump into a downed resting pose with the medicine case close by. Remain down; no fading, particles or disappearance. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.",
+    "frame_count": 12,
+    "keep_first_frame": false,
+    "directions": [
+      "south-east",
+      "east",
+      "north-east",
+      "north",
+      "north-west",
+      "west",
+      "south-west"
+    ],
+    "animation_group_id": "2d34144f-f27e-4946-a60a-9452d837e8fd"
+  },
+  "response": {
+    "content": [
+      {
+        "type": "text",
+        "text": "character: 20edb5b5-8698-424e-be5e-99b63c356064\nanimation: v3 custom (Sink to the knees, place the free hand on the ground and slowly slump into a downed resting pose with the medicine case close by. Remain down; no fading, particles or disappearance. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.)\ndirections: south-east, east, north-east, north, north-west, west, south-west (7 jobs)\njob_ids: south-east=89ae27f2-eb80-42f1-b584-9c997d8be496, east=4c4fb1c2-efdd-4018-a7bc-bb9c4520dc9b, north-east=31e41a3f-6898-4be2-9e41-75de59774cd9, north=5e63f0b3-aa0d-4f88-9e98-48bd4b50d909, north-west=e8b1db80-5c96-4eb4-b453-81f7b3c32752, west=c7610c33-77eb-42e8-9c35-ebb2ea9da1a6, south-west=8b6e6d13-f736-47f3-9fbc-1698858a7214\ngroup: 2d34144f-f27e-4946-a60a-9452d837e8fd\nframes: 12 (reference stripped, keep_first_frame=false)\ncanvas: south-east 88x88, east 88x88, north-east 84x84, north 84x84, north-west 88x88, west 88x88, south-west 88x88 (frames are stored at this size: the character plus room to move)\ncost: 14 generations (2/dir x 7)\neta: ~2-4 min/direction\n\nhint: get_character(character_id=\"20edb5b5-8698-424e-be5e-99b63c356064\")\nadd more directions to this group: animate_character(character_id=\"20edb5b5-8698-424e-be5e-99b63c356064\", action_description=\"Sink to the knees, place the free hand on the ground and slowly slump into a downed resting pose with the medicine case close by. Remain down; no fading, particles or disappearance. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.\", animation_group_id=\"2d34144f-f27e-4946-a60a-9452d837e8fd\", directions=[...])"
+      }
+    ],
+    "isError": false
+  }
+}

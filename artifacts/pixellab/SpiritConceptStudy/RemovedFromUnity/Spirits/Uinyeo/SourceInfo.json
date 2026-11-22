@@ -1,0 +1,34 @@
+{
+  "key": "Uinyeo",
+  "name": "의녀",
+  "role": "Healer",
+  "weapon": "Refined Joseon medical needle case: small slender dark ebony octagonal cylindrical acupuncture case, bronze cap with thin silver end bands, subtle plum blossom and one faint turquoise vein line; opened cap with neatly arranged silver acupuncture needles, small jade green herb pouch. No syringe, wand or staff.",
+  "body": "A calm young adult Korean female Joseon uinyeo healer, black hair neatly tied into a low bun, modest pale teal jeogori and a dark indigo chima skirt with clear feet visible, ivory collar, jade herb pouch at the waist. Holds a SMALL slim dark ebony octagonal acupuncture needle case with a bronze cap and thin silver bands in her LEFT hand (viewer right) at waist height, while the RIGHT hand (viewer left) presents one thin silver acupuncture needle at chest height. The case is palm sized, not a long staff or wand. Restrained plum-blossom mark, one small turquoise line, no supernatural glow. Slender calm silhouette, no modern nurse cap, no white coat, no western magic staff.",
+  "color": "muted teal, dark indigo, warm ivory, ebony and silver",
+  "notionURL": "https://app.notion.com/p/41fd34105d5481fb9219e87486939f43",
+  "weaponSource": {
+    "jobId": "18789dc9-c95d-4d1c-a60a-68567c100117",
+    "sourceImageId": "4b6f2adc-aabd-52a4-9d4a-570bf8aee1ec"
+  },
+  "frontSource": {
+    "jobId": "f43cd02a-2fab-40b8-8934-a206db4e3a92",
+    "sourceImageId": "83f90150-f3c2-5b15-b3cd-6b1bb9b892fe"
+  },
+  "frontPath": "Assets/Resources/Art/Characters/Spirits/Uinyeo/Uinyeo_Front.png",
+  "weaponPath": "Assets/Resources/Art/Characters/Spirits/Uinyeo/Uinyeo_WeaponConcept.png",
+  "pixelsPerUnit": 32,
+  "pivotPixels": {
+    "x": 32,
+    "y": 3
+  },
+  "visibleBounds": {
+    "width": 24,
+    "height": 57
+  },
+  "canvas": {
+    "width": 64,
+    "height": 64
+  },
+  "phase": "Front concept only",
+  "frontReferencePolicy": "The final front PNG defines identity and actual equipment placement; preserve it for future south-reference rotations. Do not mirror asymmetric equipment."
+}

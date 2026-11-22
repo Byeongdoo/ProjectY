@@ -1,0 +1,36 @@
+{
+  "key": "Kkokdusoe",
+  "name": "꼭두쇠",
+  "role": "Buffer",
+  "weapon": "Traditional Korean kkwaenggwari SMALL one-handed shallow hammered brass gong, rolled rim, warm aged gold face with darker patina, dark red handle cord and a short teal tassel; paired short wooden mallet with rounded striking head and faded vermilion wrap. It must be a small hand gong, not a shield, bell or giant temple gong.",
+  "body": "A charismatic middle-aged Korean male namsadang folk performer leader, weathered warm face, dark hair with a small plain white performance headband, short sleeved worn ivory folk performance clothes with faded yellow, vermilion and teal cloth waist ribbons, roomy indigo trousers and dark shoes. Holds a SMALL round warm brass kkwaenggwari hand gong at chest level in his LEFT hand (viewer right), and its short wooden striking mallet in his RIGHT hand (viewer left). The gong is only about 10 to 14 pixels across in this 64px sprite, much smaller than the general's shield. A few short ribbons spread sideways for a lively distinctive silhouette. No large hat and no long white spinning hat ribbon.",
+  "color": "faded ochre gold, vermilion, teal ribbons, indigo",
+  "notionURL": "https://app.notion.com/p/41fd34105d5481558afef93bd8d4ebe9",
+  "weaponSource": {
+    "jobId": "47ec1c73-8d6d-45c5-9e61-e7fda577e45a",
+    "sourceImageId": "c37198ea-e936-5cfa-87a7-2886767b31d7"
+  },
+  "frontSource": {
+    "jobId": "cc9fb7e9-1f8b-4d60-8311-67d486a34ce6",
+    "sourceImageId": "6be6ee7f-143e-58f4-a6fb-98a107e70743",
+    "previousJobId": "2ffd2d8f-22f0-4ff2-b10d-adf2c4091378"
+  },
+  "frontPath": "Assets/Resources/Art/Characters/Spirits/Kkokdusoe/Kkokdusoe_Front.png",
+  "weaponPath": "Assets/Resources/Art/Characters/Spirits/Kkokdusoe/Kkokdusoe_WeaponConcept.png",
+  "refinement": "Gong and mallet separated from the torso for role readability.",
+  "pixelsPerUnit": 32,
+  "pivotPixels": {
+    "x": 32,
+    "y": 2
+  },
+  "visibleBounds": {
+    "width": 39,
+    "height": 59
+  },
+  "canvas": {
+    "width": 64,
+    "height": 64
+  },
+  "phase": "Front concept only",
+  "frontReferencePolicy": "The final front PNG defines identity and actual equipment placement; preserve it for future south-reference rotations. Do not mirror asymmetric equipment."
+}

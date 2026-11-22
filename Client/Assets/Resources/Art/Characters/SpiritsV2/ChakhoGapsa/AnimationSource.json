@@ -1,0 +1,195 @@
+{
+  "key": "ChakhoGapsa",
+  "characterId": "628b3449-3ba4-4a7b-9131-9f815afb3443",
+  "pixelsPerUnit": 32,
+  "rootMotion": false,
+  "visualApproval": "Generated assets require visual review",
+  "clips": [
+    {
+      "animation": "IDLE",
+      "directions": [
+        "south",
+        "south-east",
+        "east",
+        "north-east",
+        "north",
+        "north-west",
+        "west",
+        "south-west"
+      ],
+      "frameCount": 4,
+      "framesPerSecond": 8,
+      "loop": true,
+      "cellWidth": 88,
+      "cellHeight": 88,
+      "sourcePixelsResized": false,
+      "alignment": "PixelLab canvas centres; no per-frame trimming",
+      "groupId": "a8680db5-453e-423f-8243-f4eefea35d34",
+      "animationClips": [
+        "Animations/IDLE_SOUTH.anim",
+        "Animations/IDLE_SOUTH_EAST.anim",
+        "Animations/IDLE_EAST.anim",
+        "Animations/IDLE_NORTH_EAST.anim",
+        "Animations/IDLE_NORTH.anim",
+        "Animations/IDLE_NORTH_WEST.anim",
+        "Animations/IDLE_WEST.anim",
+        "Animations/IDLE_SOUTH_WEST.anim"
+      ]
+    },
+    {
+      "animation": "RUN",
+      "directions": [
+        "south",
+        "south-east",
+        "east",
+        "north-east",
+        "north",
+        "north-west",
+        "west",
+        "south-west"
+      ],
+      "frameCount": 8,
+      "framesPerSecond": 10,
+      "loop": true,
+      "cellWidth": 88,
+      "cellHeight": 88,
+      "sourcePixelsResized": false,
+      "alignment": "PixelLab canvas centres; no per-frame trimming",
+      "groupId": "3f04c379-3571-48c6-ad07-997730b97130",
+      "animationClips": [
+        "Animations/RUN_SOUTH.anim",
+        "Animations/RUN_SOUTH_EAST.anim",
+        "Animations/RUN_EAST.anim",
+        "Animations/RUN_NORTH_EAST.anim",
+        "Animations/RUN_NORTH.anim",
+        "Animations/RUN_NORTH_WEST.anim",
+        "Animations/RUN_WEST.anim",
+        "Animations/RUN_SOUTH_WEST.anim"
+      ]
+    },
+    {
+      "animation": "ATTACK",
+      "directions": [
+        "south",
+        "south-east",
+        "east",
+        "north-east",
+        "north",
+        "north-west",
+        "west",
+        "south-west"
+      ],
+      "frameCount": 8,
+      "framesPerSecond": 12,
+      "loop": false,
+      "cellWidth": 88,
+      "cellHeight": 88,
+      "sourcePixelsResized": false,
+      "alignment": "PixelLab canvas centres; no per-frame trimming",
+      "groupId": "0d581b47-76f7-485a-9c02-5d0d0f1c435e",
+      "animationClips": [
+        "Animations/ATTACK_SOUTH.anim",
+        "Animations/ATTACK_SOUTH_EAST.anim",
+        "Animations/ATTACK_EAST.anim",
+        "Animations/ATTACK_NORTH_EAST.anim",
+        "Animations/ATTACK_NORTH.anim",
+        "Animations/ATTACK_NORTH_WEST.anim",
+        "Animations/ATTACK_WEST.anim",
+        "Animations/ATTACK_SOUTH_WEST.anim"
+      ]
+    },
+    {
+      "animation": "HIT",
+      "directions": [
+        "south",
+        "south-east",
+        "east",
+        "north-east",
+        "north",
+        "north-west",
+        "west",
+        "south-west"
+      ],
+      "frameCount": 4,
+      "framesPerSecond": 12,
+      "loop": false,
+      "cellWidth": 88,
+      "cellHeight": 88,
+      "sourcePixelsResized": false,
+      "alignment": "PixelLab canvas centres; no per-frame trimming",
+      "groupId": "a0544a33-c360-44cc-9d50-897e8fced43c",
+      "animationClips": [
+        "Animations/HIT_SOUTH.anim",
+        "Animations/HIT_SOUTH_EAST.anim",
+        "Animations/HIT_EAST.anim",
+        "Animations/HIT_NORTH_EAST.anim",
+        "Animations/HIT_NORTH.anim",
+        "Animations/HIT_NORTH_WEST.anim",
+        "Animations/HIT_WEST.anim",
+        "Animations/HIT_SOUTH_WEST.anim"
+      ]
+    },
+    {
+      "animation": "STUN",
+      "directions": [
+        "south",
+        "south-east",
+        "east",
+        "north-east",
+        "north",
+        "north-west",
+        "west",
+        "south-west"
+      ],
+      "frameCount": 4,
+      "framesPerSecond": 6,
+      "loop": true,
+      "cellWidth": 88,
+      "cellHeight": 88,
+      "sourcePixelsResized": false,
+      "alignment": "PixelLab canvas centres; no per-frame trimming",
+      "groupId": "63c7aaef-4309-40ef-aa29-3b97a98c27d8",
+      "animationClips": [
+        "Animations/STUN_SOUTH.anim",
+        "Animations/STUN_SOUTH_EAST.anim",
+        "Animations/STUN_EAST.anim",
+        "Animations/STUN_NORTH_EAST.anim",
+        "Animations/STUN_NORTH.anim",
+        "Animations/STUN_NORTH_WEST.anim",
+        "Animations/STUN_WEST.anim",
+        "Animations/STUN_SOUTH_WEST.anim"
+      ]
+    },
+    {
+      "animation": "DIE",
+      "directions": [
+        "south",
+        "south-east",
+        "east",
+        "north-east",
+        "north",
+        "north-west",
+        "west",
+        "south-west"
+      ],
+      "frameCount": 12,
+      "framesPerSecond": 10,
+      "loop": false,
+      "cellWidth": 88,
+      "cellHeight": 88,
+      "sourcePixelsResized": false,
+      "alignment": "PixelLab canvas centres; no per-frame trimming",
+      "groupId": "390550aa-7538-49f0-a6c3-f433872273f1",
+      "animationClips": [
+        "Animations/DIE_SOUTH.anim",
+        "Animations/DIE_SOUTH_EAST.anim",
+        "Animations/DIE_EAST.anim",
+        "Animations/DIE_NORTH_EAST.anim",
+        "Animations/DIE_NORTH.anim",
+        "Animations/DIE_NORTH_WEST.anim",
+        "Animations/DIE_WEST.anim",
+        "Animations/DIE_SOUTH_WEST.anim"
+      ]
+    }
+  ]
+}

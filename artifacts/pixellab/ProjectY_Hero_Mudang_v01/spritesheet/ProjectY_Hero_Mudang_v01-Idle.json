@@ -1,0 +1,173 @@
+{
+  "character": {
+    "id": "ab302165-227c-4777-9d0b-86713dde774d",
+    "name": "Idle",
+    "prompt": "A young adult Korean mudang shaman protagonist from Joseon Korea, an androgynous youthful face with a calm determined expression, black hair neatly tied in a small low bun with a short crimson ribbon. Authentic Korean hanbok: warm ivory jeogori with clear crossed collar, short dark indigo sleeveless outer vest, deep navy loose baji trousers gathered at the ankles, ivory socks and simple dark cloth shoes. Muted crimson waist sash with a small ochre paper talisman pouch on the hip. Empty hands held relaxed at the sides, no weapon. Practical travelling outfit, both legs and shoes clearly separated, modest sleeve width suitable for a running animation, no long cape, no floor-length robe, no hat. Compact classic Korean online RPG pixel sprite proportions about three heads tall, recognizable readable silhouette, hand-placed crisp pixel clusters, restrained ivory indigo and crimson colours, single dark selective outline, two-tone shading, no anti-aliasing, no glow or particles, no ground or background, full body centered. Neutral standing pose, orthographic low top-down RPG camera, consistent design across all eight directions.",
+    "size": {
+      "width": 64,
+      "height": 64
+    },
+    "directions": 8,
+    "view": "low top-down"
+  },
+  "spritesheet": {
+    "path": "ProjectY_Hero_Mudang_v01-Idle.png",
+    "cell_size": {
+      "width": 64,
+      "height": 64
+    },
+    "sheet_size": {
+      "width": 512,
+      "height": 1088
+    },
+    "columns": 8,
+    "pivot": "cell-center",
+    "rows": [
+      {
+        "row": 0,
+        "type": "rotations",
+        "frame_count": 8,
+        "directions": [
+          "south",
+          "south-east",
+          "east",
+          "north-east",
+          "north",
+          "north-west",
+          "west",
+          "south-west"
+        ]
+      },
+      {
+        "row": 1,
+        "type": "animation",
+        "frame_count": 8,
+        "animation": "RUN",
+        "animation_group_id": "33aa6678-9b27-416c-9584-01ce9204e3b9",
+        "direction": "south"
+      },
+      {
+        "row": 2,
+        "type": "animation",
+        "frame_count": 8,
+        "animation": "RUN",
+        "animation_group_id": "33aa6678-9b27-416c-9584-01ce9204e3b9",
+        "direction": "south-east"
+      },
+      {
+        "row": 3,
+        "type": "animation",
+        "frame_count": 8,
+        "animation": "RUN",
+        "animation_group_id": "33aa6678-9b27-416c-9584-01ce9204e3b9",
+        "direction": "east"
+      },
+      {
+        "row": 4,
+        "type": "animation",
+        "frame_count": 8,
+        "animation": "RUN",
+        "animation_group_id": "33aa6678-9b27-416c-9584-01ce9204e3b9",
+        "direction": "north-east"
+      },
+      {
+        "row": 5,
+        "type": "animation",
+        "frame_count": 8,
+        "animation": "RUN",
+        "animation_group_id": "33aa6678-9b27-416c-9584-01ce9204e3b9",
+        "direction": "north"
+      },
+      {
+        "row": 6,
+        "type": "animation",
+        "frame_count": 8,
+        "animation": "RUN",
+        "animation_group_id": "33aa6678-9b27-416c-9584-01ce9204e3b9",
+        "direction": "north-west"
+      },
+      {
+        "row": 7,
+        "type": "animation",
+        "frame_count": 8,
+        "animation": "RUN",
+        "animation_group_id": "33aa6678-9b27-416c-9584-01ce9204e3b9",
+        "direction": "west"
+      },
+      {
+        "row": 8,
+        "type": "animation",
+        "frame_count": 8,
+        "animation": "RUN",
+        "animation_group_id": "33aa6678-9b27-416c-9584-01ce9204e3b9",
+        "direction": "south-west"
+      },
+      {
+        "row": 9,
+        "type": "animation",
+        "frame_count": 4,
+        "animation": "IDLE",
+        "animation_group_id": "54712327-acd3-4e56-a413-75766fb0bfb0",
+        "direction": "south"
+      },
+      {
+        "row": 10,
+        "type": "animation",
+        "frame_count": 4,
+        "animation": "IDLE",
+        "animation_group_id": "54712327-acd3-4e56-a413-75766fb0bfb0",
+        "direction": "south-east"
+      },
+      {
+        "row": 11,
+        "type": "animation",
+        "frame_count": 4,
+        "animation": "IDLE",
+        "animation_group_id": "54712327-acd3-4e56-a413-75766fb0bfb0",
+        "direction": "east"
+      },
+      {
+        "row": 12,
+        "type": "animation",
+        "frame_count": 4,
+        "animation": "IDLE",
+        "animation_group_id": "54712327-acd3-4e56-a413-75766fb0bfb0",
+        "direction": "north-east"
+      },
+      {
+        "row": 13,
+        "type": "animation",
+        "frame_count": 4,
+        "animation": "IDLE",
+        "animation_group_id": "54712327-acd3-4e56-a413-75766fb0bfb0",
+        "direction": "north"
+      },
+      {
+        "row": 14,
+        "type": "animation",
+        "frame_count": 4,
+        "animation": "IDLE",
+        "animation_group_id": "54712327-acd3-4e56-a413-75766fb0bfb0",
+        "direction": "north-west"
+      },
+      {
+        "row": 15,
+        "type": "animation",
+        "frame_count": 4,
+        "animation": "IDLE",
+        "animation_group_id": "54712327-acd3-4e56-a413-75766fb0bfb0",
+        "direction": "west"
+      },
+      {
+        "row": 16,
+        "type": "animation",
+        "frame_count": 4,
+        "animation": "IDLE",
+        "animation_group_id": "54712327-acd3-4e56-a413-75766fb0bfb0",
+        "direction": "south-west"
+      }
+    ]
+  },
+  "export_version": "1.0",
+  "export_date": "2026-11-21T14:41:12.253315+00:00"
+}

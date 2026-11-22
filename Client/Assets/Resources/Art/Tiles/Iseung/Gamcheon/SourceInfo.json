@@ -1,0 +1,71 @@
+{
+  "name": "Gamcheon_Study_v01",
+  "service": "PixelLab",
+  "createdDate": "2026-11-22",
+  "tilesetId": "db0f26a0-d2f5-4ae4-9a82-8e6a992190d4",
+  "lowerBaseTileId": "ba00427d-a4e7-4b8c-acb5-2d5637f5fa6a",
+  "upperBaseTileId": "0f5c159f-51b4-4b36-8c33-81ea00762333",
+  "treeId": "44b93379-51ff-4895-9956-9350933ebdde",
+  "rockId": "fd27ee9f-7e04-457f-b0dc-3beda9197f37",
+  "tileSize": 32,
+  "pixelsPerUnit": 32,
+  "tileCount": 16,
+  "textureSettings": {
+    "filter": "Point",
+    "compression": "None",
+    "mipmaps": false,
+    "wrap": "Clamp",
+    "mesh": "FullRect"
+  },
+  "treePivotPixels": {
+    "x": 46,
+    "y": 26
+  },
+  "rockPivotPixels": {
+    "x": 34,
+    "y": 11
+  },
+  "measurements": [
+    {
+      "file": "Assets/Resources/Art/Characters/Protagonist/Sprites/Rotations/south.png",
+      "width": 64,
+      "height": 64,
+      "alphaX": 17,
+      "alphaY": 3,
+      "alphaWidth": 29,
+      "alphaHeight": 59,
+      "visibleWidthUnits": 0.90625,
+      "visibleHeightUnits": 1.84375
+    },
+    {
+      "file": "Assets/Resources/Art/Tiles/Iseung/Gamcheon/Props/Gamcheon_PineTree.png",
+      "width": 96,
+      "height": 128,
+      "alphaX": 16,
+      "alphaY": 26,
+      "alphaWidth": 62,
+      "alphaHeight": 75,
+      "visibleWidthUnits": 1.9375,
+      "visibleHeightUnits": 2.34375
+    },
+    {
+      "file": "Assets/Resources/Art/Tiles/Iseung/Gamcheon/Props/Gamcheon_Rock.png",
+      "width": 64,
+      "height": 64,
+      "alphaX": 14,
+      "alphaY": 11,
+      "alphaWidth": 35,
+      "alphaHeight": 27,
+      "visibleWidthUnits": 1.09375,
+      "visibleHeightUnits": 0.84375
+    }
+  ],
+  "usage": {
+    "terrainSource": "Gamcheon_Terrain_Source.json",
+    "nativeTiles": "TileAssets",
+    "tilePngs": "Ground",
+    "props": "Props",
+    "studyScene": "Assets/Scenes/ArtTests/GamcheonArtStudy.unity",
+    "colliders": "Art-study examples; authoritative blocked cells remain a separate game implementation."
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "animation": "RUN",
+  "directions": [
+    "south",
+    "south-east",
+    "east",
+    "north-east",
+    "north",
+    "north-west",
+    "west",
+    "south-west"
+  ],
+  "frameCount": 8,
+  "framesPerSecond": 10,
+  "loop": true,
+  "cellWidth": 92,
+  "cellHeight": 92,
+  "sourcePixelsResized": false,
+  "alignment": "PixelLab canvas centres; no per-frame trimming",
+  "groupId": "0c479260-9b11-4a00-a7c6-783be671b0d6"
+}

@@ -1,0 +1,22 @@
+{
+  "request": {
+    "name": "ProjectY_Mangnani_V2",
+    "description": "A wild rugged male Korean executioner, flowing messy dark hair tied high with crimson ties, fierce expressive face, exposed muscular arms, ragged ivory fur-edged cloth and dark crimson sleeveless vest, torn layered red-black battle wrap and rope belt, ankle bindings and rough sandals. Holds an enormous broad straight single-edged Korean EXECUTION CLEAVER, wide silver blade with dark-red patina markings, black and gold guard and red tassel. Strong angular wild silhouette. Match the rugged red-and-ivory reference, not a neat small sword fighter. EXACTLY preserve this supplied V2 sprite's appearance, head/body proportions, palette and asymmetric equipment. Rotate this same person, with the same held weapons, hairstyle and clothing, without mirroring or redesigning. Crisp native pixel art, warm upper-left lighting, no ground shadow, no effects.",
+    "reference_image_url": "https://api.pixellab.ai/mcp/images/3c2a6489-973b-4713-bad3-ffe168791bc3/download?index=0",
+    "mode": "v3",
+    "n_directions": 8,
+    "size": 64,
+    "view": "low top-down",
+    "outline": "selective outline",
+    "detail": "high detail"
+  },
+  "response": {
+    "content": [
+      {
+        "type": "text",
+        "text": "id: 478ad62f-9651-46ca-a174-7b869382d4fd\nname: ProjectY_Mangnani_V2\nmode: v3 reference (1 generations, 8 directions)\nbody: humanoid\nsize: 64x64px\nview: low top-down\nstyle: from reference image (outline/detail hints ignored)\nstatus: processing (~3-5 min)\n\nhint: get_character(character_id=\"478ad62f-9651-46ca-a174-7b869382d4fd\")"
+      }
+    ],
+    "isError": false
+  }
+}

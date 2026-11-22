@@ -1,0 +1,21 @@
+{
+  "animation": "DIE",
+  "directions": [
+    "south",
+    "south-east",
+    "east",
+    "north-east",
+    "north",
+    "north-west",
+    "west",
+    "south-west"
+  ],
+  "frameCount": 12,
+  "framesPerSecond": 10,
+  "loop": false,
+  "cellWidth": 88,
+  "cellHeight": 88,
+  "sourcePixelsResized": false,
+  "alignment": "PixelLab canvas centres; no per-frame trimming",
+  "groupId": "390550aa-7538-49f0-a6c3-f433872273f1"
+}

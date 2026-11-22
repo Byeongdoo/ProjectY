@@ -1,0 +1,22 @@
+{
+  "request": {
+    "name": "ProjectY_Uinyeo_V2",
+    "description": "An elegant young female Korean Joseon healer with large gentle eyes, LONG flowing dark hair, PINK BLOSSOM hair ornaments and lavender ribbons. Graceful pale LAVENDER AND IVORY hanbok with muted dark-jade trim and delicate gold floral embroidery, layered full skirt and small light shoes. Holds a small BLACK LACQUERED MEDICINE CASE with GOLD edging and a PINK LOTUS emblem at waist level, and a fine silver acupuncture needle in the other hand; small embroidered herb pouch. Match the flower-adorned lavender healer reference, not a plain teal nurse or a short-bun civilian. The medical case is a small case or basket, not a wand. EXACTLY preserve this supplied V2 sprite's appearance, head/body proportions, palette and asymmetric equipment. Rotate this same person, with the same held weapons, hairstyle and clothing, without mirroring or redesigning. Crisp native pixel art, warm upper-left lighting, no ground shadow, no effects.",
+    "reference_image_url": "https://api.pixellab.ai/mcp/images/03df817d-f9a5-4689-bb19-18503ea48f39/download?index=5",
+    "mode": "v3",
+    "n_directions": 8,
+    "size": 64,
+    "view": "low top-down",
+    "outline": "selective outline",
+    "detail": "high detail"
+  },
+  "response": {
+    "content": [
+      {
+        "type": "text",
+        "text": "id: 20edb5b5-8698-424e-be5e-99b63c356064\nname: ProjectY_Uinyeo_V2\nmode: v3 reference (1 generations, 8 directions)\nbody: humanoid\nsize: 64x64px\nview: low top-down\nstyle: from reference image (outline/detail hints ignored)\nstatus: processing (~3-5 min)\n\nhint: get_character(character_id=\"20edb5b5-8698-424e-be5e-99b63c356064\")"
+      }
+    ],
+    "isError": false
+  }
+}

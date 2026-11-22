@@ -1,0 +1,24 @@
+{
+  "request": {
+    "character_id": "d08b8efa-ee49-477d-8db1-fbe0512ccdda",
+    "animation_name": "KNOCKBACK",
+    "mode": "v3",
+    "action_description": "Brace behind the shield as an impact leans the torso backwards and drags the feet into a stagger; regain footing. In-place reaction only. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.",
+    "frame_count": 4,
+    "keep_first_frame": false,
+    "directions": [
+      "north-east",
+      "north"
+    ],
+    "animation_group_id": "246da6f2-9e99-4bf4-af26-2cf951b023ec"
+  },
+  "response": {
+    "content": [
+      {
+        "type": "text",
+        "text": "character: d08b8efa-ee49-477d-8db1-fbe0512ccdda\nanimation: v3 custom (Brace behind the shield as an impact leans the torso backwards and drags the feet into a stagger; regain footing. In-place reaction only. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.)\ndirections: north-east, north (2 jobs)\njob_ids: north-east=e2e86adb-d27d-4560-865d-401f24a4c965, north=aac4441f-dc32-4dfb-b173-d00a2ab8d17e\ngroup: 246da6f2-9e99-4bf4-af26-2cf951b023ec\nframes: 4 (reference stripped, keep_first_frame=false)\ncanvas: north-east 84x84, north 84x84 (frames are stored at this size: the character plus room to move)\ncost: 2 generations (1/dir x 2)\neta: ~2-4 min/direction\n\nhint: get_character(character_id=\"d08b8efa-ee49-477d-8db1-fbe0512ccdda\")\nadd more directions to this group: animate_character(character_id=\"d08b8efa-ee49-477d-8db1-fbe0512ccdda\", action_description=\"Brace behind the shield as an impact leans the torso backwards and drags the feet into a stagger; regain footing. In-place reaction only. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.\", animation_group_id=\"246da6f2-9e99-4bf4-af26-2cf951b023ec\", directions=[...])"
+      }
+    ],
+    "isError": false
+  }
+}

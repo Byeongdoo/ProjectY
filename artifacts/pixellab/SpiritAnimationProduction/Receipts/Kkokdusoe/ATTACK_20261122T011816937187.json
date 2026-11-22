@@ -1,0 +1,27 @@
+{
+  "request": {
+    "character_id": "5e2b8e1c-c556-4568-9002-2b1c25507dfc",
+    "animation_name": "ATTACK",
+    "mode": "v3",
+    "action_description": "Raise the wooden mallet, strike the centre of the small hand gong once clearly, show a small physical vibration in the gong arm, then recover to ready stance. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.",
+    "frame_count": 8,
+    "keep_first_frame": false,
+    "directions": [
+      "north-east",
+      "north",
+      "north-west",
+      "west",
+      "south-west"
+    ],
+    "animation_group_id": "fd4094b8-77a8-46d9-be15-9bd5195a67a6"
+  },
+  "response": {
+    "content": [
+      {
+        "type": "text",
+        "text": "character: 5e2b8e1c-c556-4568-9002-2b1c25507dfc\nanimation: v3 custom (Raise the wooden mallet, strike the centre of the small hand gong once clearly, show a small physical vibration in the gong arm, then recover to ready stance. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.)\ndirections: north-east, north, north-west, west, south-west (5 jobs)\njob_ids: north-east=5261a8dd-5bbf-4502-9911-a9e79a07aaf7, north=8cba9bce-6af9-45bd-9829-19943bce703a, north-west=eb619244-0fbd-4eae-a46f-7d4827e5a844, west=eb04dd5a-48c6-4f76-8b73-c0dba422e48f, south-west=5d34160b-d4a5-4fb7-bad7-c44d82a8a1c4\ngroup: fd4094b8-77a8-46d9-be15-9bd5195a67a6\nframes: 8 (reference stripped, keep_first_frame=false)\ncanvas: north-east 88x88, north 88x88, north-west 88x88, west 88x88, south-west 88x88 (frames are stored at this size: the character plus room to move)\ncost: 5 generations (1/dir x 5)\neta: ~2-4 min/direction\n\nhint: get_character(character_id=\"5e2b8e1c-c556-4568-9002-2b1c25507dfc\")\nadd more directions to this group: animate_character(character_id=\"5e2b8e1c-c556-4568-9002-2b1c25507dfc\", action_description=\"Raise the wooden mallet, strike the centre of the small hand gong once clearly, show a small physical vibration in the gong arm, then recover to ready stance. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.\", animation_group_id=\"fd4094b8-77a8-46d9-be15-9bd5195a67a6\", directions=[...])"
+      }
+    ],
+    "isError": false
+  }
+}

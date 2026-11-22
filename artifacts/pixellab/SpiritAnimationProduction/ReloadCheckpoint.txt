@@ -1,0 +1,1 @@
+Reload worker after verified update; preserve all queued service jobs.

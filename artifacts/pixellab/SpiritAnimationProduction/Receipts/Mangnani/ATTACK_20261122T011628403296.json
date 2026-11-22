@@ -1,0 +1,29 @@
+{
+  "request": {
+    "character_id": "478ad62f-9651-46ca-a174-7b869382d4fd",
+    "animation_name": "ATTACK",
+    "mode": "v3",
+    "action_description": "Wind up with the hips, swing the broad execution cleaver in a powerful diagonal cut toward the facing direction, and recover the blade to the ready stance. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.",
+    "frame_count": 8,
+    "keep_first_frame": false,
+    "directions": [
+      "south-east",
+      "east",
+      "north-east",
+      "north",
+      "north-west",
+      "west",
+      "south-west"
+    ],
+    "animation_group_id": "73e77318-5fcf-4c5f-9be6-c98cef647309"
+  },
+  "response": {
+    "content": [
+      {
+        "type": "text",
+        "text": "character: 478ad62f-9651-46ca-a174-7b869382d4fd\nanimation: v3 custom (Wind up with the hips, swing the broad execution cleaver in a powerful diagonal cut toward the facing direction, and recover the blade to the ready stance. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.)\ndirections: south-east, east, north-east, north, north-west, west, south-west (7 jobs)\njob_ids: south-east=69e1d9ce-6a4a-4bc6-895d-afb716f430f3, east=0c99e66e-6eee-4791-8272-d3e3d84498d5, north-east=ad874785-7b30-4532-a32e-779d85b186d8, north=9d49c983-820c-472d-930d-2d79c33d052e, north-west=2c883970-be6a-4816-ab24-c84a40518a53, west=79922b8f-8d10-4983-bf51-4787ef4c669c, south-west=83209e1b-69a4-4d0b-b9ac-d33d69366977\ngroup: 73e77318-5fcf-4c5f-9be6-c98cef647309\nframes: 8 (reference stripped, keep_first_frame=false)\ncanvas: south-east 92x92, east 92x92, north-east 92x92, north 92x92, north-west 92x92, west 92x92, south-west 92x92 (frames are stored at this size: the character plus room to move)\ncost: 14 generations (2/dir x 7)\neta: ~2-4 min/direction\n\nhint: get_character(character_id=\"478ad62f-9651-46ca-a174-7b869382d4fd\")\nadd more directions to this group: animate_character(character_id=\"478ad62f-9651-46ca-a174-7b869382d4fd\", action_description=\"Wind up with the hips, swing the broad execution cleaver in a powerful diagonal cut toward the facing direction, and recover the blade to the ready stance. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.\", animation_group_id=\"73e77318-5fcf-4c5f-9be6-c98cef647309\", directions=[...])"
+      }
+    ],
+    "isError": false
+  }
+}

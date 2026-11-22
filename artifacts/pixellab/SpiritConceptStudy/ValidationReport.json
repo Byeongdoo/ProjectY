@@ -1,0 +1,127 @@
+{
+    "unityVersion": "6000.3.5f2",
+    "frontCount": 5,
+    "weaponConceptCount": 5,
+    "pixelsPerUnit": 32,
+    "imagesResized": false,
+    "classes": [
+        {
+            "key": "MumyeongJangsu",
+            "role": "TANK",
+            "spritePath": "Assets/Resources/Art/Characters/Spirits/MumyeongJangsu/MumyeongJangsu_Front.png",
+            "weaponPath": "Assets/Resources/Art/Characters/Spirits/MumyeongJangsu/MumyeongJangsu_WeaponConcept.png",
+            "canvasWidth": 64,
+            "canvasHeight": 64,
+            "alphaX": 10,
+            "alphaY": 2,
+            "visibleWidth": 44,
+            "visibleHeight": 61,
+            "pixelsPerUnit": 32,
+            "worldWidth": 1.375,
+            "worldHeight": 1.90625,
+            "heightRelativeToHero": 1.0338983535766602,
+            "pivotPixels": {
+                "x": 32.0,
+                "y": 2.0
+            }
+        },
+        {
+            "key": "Mangnani",
+            "role": "MELEE",
+            "spritePath": "Assets/Resources/Art/Characters/Spirits/Mangnani/Mangnani_Front.png",
+            "weaponPath": "Assets/Resources/Art/Characters/Spirits/Mangnani/Mangnani_WeaponConcept.png",
+            "canvasWidth": 64,
+            "canvasHeight": 64,
+            "alphaX": 8,
+            "alphaY": 2,
+            "visibleWidth": 36,
+            "visibleHeight": 61,
+            "pixelsPerUnit": 32,
+            "worldWidth": 1.125,
+            "worldHeight": 1.90625,
+            "heightRelativeToHero": 1.0338983535766602,
+            "pivotPixels": {
+                "x": 32.0,
+                "y": 2.0
+            }
+        },
+        {
+            "key": "ChakhoGapsa",
+            "role": "RANGED",
+            "spritePath": "Assets/Resources/Art/Characters/Spirits/ChakhoGapsa/ChakhoGapsa_Front.png",
+            "weaponPath": "Assets/Resources/Art/Characters/Spirits/ChakhoGapsa/ChakhoGapsa_WeaponConcept.png",
+            "canvasWidth": 64,
+            "canvasHeight": 64,
+            "alphaX": 15,
+            "alphaY": 3,
+            "visibleWidth": 33,
+            "visibleHeight": 59,
+            "pixelsPerUnit": 32,
+            "worldWidth": 1.03125,
+            "worldHeight": 1.84375,
+            "heightRelativeToHero": 1.0,
+            "pivotPixels": {
+                "x": 32.0,
+                "y": 3.0
+            }
+        },
+        {
+            "key": "Kkokdusoe",
+            "role": "BUFFER",
+            "spritePath": "Assets/Resources/Art/Characters/Spirits/Kkokdusoe/Kkokdusoe_Front.png",
+            "weaponPath": "Assets/Resources/Art/Characters/Spirits/Kkokdusoe/Kkokdusoe_WeaponConcept.png",
+            "canvasWidth": 64,
+            "canvasHeight": 64,
+            "alphaX": 13,
+            "alphaY": 2,
+            "visibleWidth": 39,
+            "visibleHeight": 59,
+            "pixelsPerUnit": 32,
+            "worldWidth": 1.21875,
+            "worldHeight": 1.84375,
+            "heightRelativeToHero": 1.0,
+            "pivotPixels": {
+                "x": 32.0,
+                "y": 2.0
+            }
+        },
+        {
+            "key": "Uinyeo",
+            "role": "HEALER",
+            "spritePath": "Assets/Resources/Art/Characters/Spirits/Uinyeo/Uinyeo_Front.png",
+            "weaponPath": "Assets/Resources/Art/Characters/Spirits/Uinyeo/Uinyeo_WeaponConcept.png",
+            "canvasWidth": 64,
+            "canvasHeight": 64,
+            "alphaX": 19,
+            "alphaY": 3,
+            "visibleWidth": 24,
+            "visibleHeight": 57,
+            "pixelsPerUnit": 32,
+            "worldWidth": 0.75,
+            "worldHeight": 1.78125,
+            "heightRelativeToHero": 0.9661017060279846,
+            "pivotPixels": {
+                "x": 32.0,
+                "y": 3.0
+            }
+        }
+    ],
+    "scenes": [
+        "Assets/Scenes/ArtTests/SpiritFrontLineup.unity",
+        "Assets/Scenes/ArtTests/SpiritSilhouetteComparison.unity",
+        "Assets/Scenes/ArtTests/SpiritWeaponConcepts.unity"
+    ],
+    "screenshots": [
+        "Spirit_FrontLineup.png",
+        "Spirit_SilhouetteComparison.png",
+        "Spirit_WeaponConcepts.png"
+    ],
+    "checks": [
+        "Five front sprites are native 64x64 RGBA PNGs with transparent corners",
+        "All front sprites and concepts use Point, no mipmaps, uncompressed, 32 PPU",
+        "Foot anchors use a shared x=32 and each unchanged PNG's measured lowest visible row",
+        "Hero and all five classes use transform scale 1 with a common foot baseline",
+        "Source pixels are not resized or repainted in Unity",
+        "Native saved scenes and five prefabs reloaded with all sprite references resolved"
+    ]
+}

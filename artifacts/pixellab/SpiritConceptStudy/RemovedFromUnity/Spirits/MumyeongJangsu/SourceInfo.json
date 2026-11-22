@@ -1,0 +1,34 @@
+{
+  "key": "MumyeongJangsu",
+  "name": "무명장수",
+  "role": "Tank",
+  "weapon": "Korean deungpae large convex dark rattan round shield, blackened iron rim, octagonal iron central boss engraved with a faint turquoise circle, three worn red knots; paired short broad single edged Korean yodo saber with black grip. The shield is the dominant item and the saber secondary.",
+  "body": "A scarred middle-aged Korean male general, broad sturdy shoulders and heavy legs, black hair tied in a short topknot, short stern facial hair. Worn charcoal iron Joseon lamellar armour with dark brown bindings and a restrained muted turquoise sash. Holds a large convex round rattan deungpae shield in his LEFT hand (viewer right) covering his chest to upper thighs, with a short single-edged yodo saber held lowered in his RIGHT hand (viewer left), blade not crossing his face. The shield must read as dark woven wood with a black iron rim and a small turquoise octagonal boss, not a European heraldic shield.",
+  "color": "iron grey, dark rattan brown, muted turquoise",
+  "notionURL": "https://app.notion.com/p/41fd34105d548193a099c9c0c0dc1ee5",
+  "weaponSource": {
+    "jobId": "9dac4f61-f85a-4cf7-baf6-1d66ab923959",
+    "sourceImageId": "0b938427-8fc3-58f1-8394-41c80d08cf0c"
+  },
+  "frontSource": {
+    "jobId": "2204b694-ee4d-4f6d-aeaa-0a2d4e83ed38",
+    "sourceImageId": "d84323da-5aad-519a-b358-e8c3acccc151"
+  },
+  "frontPath": "Assets/Resources/Art/Characters/Spirits/MumyeongJangsu/MumyeongJangsu_Front.png",
+  "weaponPath": "Assets/Resources/Art/Characters/Spirits/MumyeongJangsu/MumyeongJangsu_WeaponConcept.png",
+  "pixelsPerUnit": 32,
+  "pivotPixels": {
+    "x": 32,
+    "y": 2
+  },
+  "visibleBounds": {
+    "width": 44,
+    "height": 61
+  },
+  "canvas": {
+    "width": 64,
+    "height": 64
+  },
+  "phase": "Front concept only",
+  "frontReferencePolicy": "The final front PNG defines identity and actual equipment placement; preserve it for future south-reference rotations. Do not mirror asymmetric equipment."
+}

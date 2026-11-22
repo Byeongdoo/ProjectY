@@ -1,0 +1,34 @@
+{
+  "task": {
+    "key": "MumyeongJangsu",
+    "characterId": "d08b8efa-ee49-477d-8db1-fbe0512ccdda",
+    "animation": "IDLE",
+    "mode": "v3",
+    "frameCount": 4,
+    "fps": 8,
+    "loop": true,
+    "directions": [
+      "south",
+      "south-east",
+      "east",
+      "north-east",
+      "north",
+      "north-west",
+      "west",
+      "south-west"
+    ],
+    "action": "Stand braced with the round lion shield in front of the chest and saber lowered; subtle slow breathing raises the armoured shoulders. Seamless calm idle cycle, same start and end stance. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.",
+    "notionURL": "https://app.notion.com/p/41fd34105d548193a099c9c0c0dc1ee5?pvs=204"
+  },
+  "receipts": [
+    {
+      "content": [
+        {
+          "type": "text",
+          "text": "character: d08b8efa-ee49-477d-8db1-fbe0512ccdda\nanimation: v3 custom (Stand braced with the round lion shield in front of the chest and saber lowered; subtle slow breathing raises the armoured shoulders. Seamless calm idle cycle, same start and end stance. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.)\ndirections: south, south-east, east, north-east, north, north-west, west, south-west (8 jobs)\njob_ids: south=1783227b-8b78-48e7-add3-7b26a09a2433, south-east=5dde3ce5-8d6d-4765-a65a-3376c8e8d133, east=4f6c3d67-c873-44ea-8629-b8b2d995cd7e, north-east=e5a67829-1ecf-48c2-ac19-288450f9026c, north=c1c76073-af53-48c9-a0fb-0c18ef727668, north-west=f1dec719-f148-464b-b990-35d58b1e86e9, west=fea62fb4-2931-4c64-9d1b-726d3bd9a0c7, south-west=f52f97a5-f840-4657-b541-def95bc3bf9b\ngroup: 5fdaee8c-be9e-4484-8914-321e911ce9c5\nframes: 4 (reference stripped, keep_first_frame=false)\ncanvas: south 84x84, south-east 84x84, east 84x84, north-east 84x84, north 84x84, north-west 84x84, west 84x84, south-west 92x92 (frames are stored at this size: the character plus room to move)\ncost: 8 generations (1/dir x 8)\neta: ~2-4 min/direction\n\nhint: get_character(character_id=\"d08b8efa-ee49-477d-8db1-fbe0512ccdda\")\nadd more directions to this group: animate_character(character_id=\"d08b8efa-ee49-477d-8db1-fbe0512ccdda\", action_description=\"Stand braced with the round lion shield in front of the chest and saber lowered; subtle slow breathing raises the armoured shoulders. Seamless calm idle cycle, same start and end stance. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.\", animation_group_id=\"5fdaee8c-be9e-4484-8914-321e911ce9c5\", directions=[...])"
+        }
+      ],
+      "isError": false
+    }
+  ]
+}

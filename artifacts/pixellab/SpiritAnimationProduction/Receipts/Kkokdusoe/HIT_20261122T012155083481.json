@@ -1,0 +1,25 @@
+{
+  "request": {
+    "character_id": "5e2b8e1c-c556-4568-9002-2b1c25507dfc",
+    "animation_name": "HIT",
+    "mode": "v3",
+    "action_description": "Shoulders flinch and the gong arm shakes from an impact, then quickly recover the original rhythm and stance. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.",
+    "frame_count": 4,
+    "keep_first_frame": false,
+    "directions": [
+      "south",
+      "south-east",
+      "east",
+      "north-east"
+    ]
+  },
+  "response": {
+    "content": [
+      {
+        "type": "text",
+        "text": "character: 5e2b8e1c-c556-4568-9002-2b1c25507dfc\nanimation: v3 custom (Shoulders flinch and the gong arm shakes from an impact, then quickly recover the original rhythm and stance. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.)\ndirections: south, south-east, east, north-east (4 jobs)\njob_ids: south=5557cf60-e37f-4ef4-b261-6c0a2c8324db, south-east=79f26da0-ce14-4b78-a31d-d3b8b5c0f85f, east=f1dfd6b6-a340-40ad-8f9e-a804437272a1, north-east=aadbe4e0-33ca-45ed-bda4-ed4222f95e7e\ngroup: e02da9dc-4d94-4190-b695-3b6df030fd65\nframes: 4 (reference stripped, keep_first_frame=false)\ncanvas: south 92x92, south-east 88x88, east 88x88, north-east 88x88 (frames are stored at this size: the character plus room to move)\ncost: 4 generations (1/dir x 4)\neta: ~2-4 min/direction\n\nhint: get_character(character_id=\"5e2b8e1c-c556-4568-9002-2b1c25507dfc\")\nadd more directions to this group: animate_character(character_id=\"5e2b8e1c-c556-4568-9002-2b1c25507dfc\", action_description=\"Shoulders flinch and the gong arm shakes from an impact, then quickly recover the original rhythm and stance. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.\", animation_group_id=\"e02da9dc-4d94-4190-b695-3b6df030fd65\", directions=[...])"
+      }
+    ],
+    "isError": false
+  }
+}

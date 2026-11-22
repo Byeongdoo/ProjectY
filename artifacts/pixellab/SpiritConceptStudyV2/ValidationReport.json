@@ -1,0 +1,95 @@
+{
+    "unityVersion": "6000.3.5f2",
+    "revision": "UserReferenceV2",
+    "frontCount": 5,
+    "pixelsPerUnit": 32,
+    "sourcePixelsResized": false,
+    "classes": [
+        {
+            "key": "MumyeongJangsu",
+            "spritePath": "Assets/Resources/Art/Characters/SpiritsV2/MumyeongJangsu/MumyeongJangsu_Front.png",
+            "canvasWidth": 64,
+            "canvasHeight": 64,
+            "visibleWidth": 56,
+            "visibleHeight": 60,
+            "alphaX": 2,
+            "alphaY": 2,
+            "pivotPixels": {
+                "x": 32.0,
+                "y": 2.0
+            },
+            "pixelsPerUnit": 32
+        },
+        {
+            "key": "Mangnani",
+            "spritePath": "Assets/Resources/Art/Characters/SpiritsV2/Mangnani/Mangnani_Front.png",
+            "canvasWidth": 64,
+            "canvasHeight": 64,
+            "visibleWidth": 44,
+            "visibleHeight": 63,
+            "alphaX": 9,
+            "alphaY": 0,
+            "pivotPixels": {
+                "x": 32.0,
+                "y": 0.0
+            },
+            "pixelsPerUnit": 32
+        },
+        {
+            "key": "ChakhoGapsa",
+            "spritePath": "Assets/Resources/Art/Characters/SpiritsV2/ChakhoGapsa/ChakhoGapsa_Front.png",
+            "canvasWidth": 64,
+            "canvasHeight": 64,
+            "visibleWidth": 51,
+            "visibleHeight": 60,
+            "alphaX": 6,
+            "alphaY": 1,
+            "pivotPixels": {
+                "x": 32.0,
+                "y": 1.0
+            },
+            "pixelsPerUnit": 32
+        },
+        {
+            "key": "Kkokdusoe",
+            "spritePath": "Assets/Resources/Art/Characters/SpiritsV2/Kkokdusoe/Kkokdusoe_Front.png",
+            "canvasWidth": 64,
+            "canvasHeight": 64,
+            "visibleWidth": 53,
+            "visibleHeight": 63,
+            "alphaX": 8,
+            "alphaY": 1,
+            "pivotPixels": {
+                "x": 32.0,
+                "y": 1.0
+            },
+            "pixelsPerUnit": 32
+        },
+        {
+            "key": "Uinyeo",
+            "spritePath": "Assets/Resources/Art/Characters/SpiritsV2/Uinyeo/Uinyeo_Front.png",
+            "canvasWidth": 64,
+            "canvasHeight": 64,
+            "visibleWidth": 47,
+            "visibleHeight": 62,
+            "alphaX": 13,
+            "alphaY": 1,
+            "pivotPixels": {
+                "x": 32.0,
+                "y": 1.0
+            },
+            "pixelsPerUnit": 32
+        }
+    ],
+    "scenes": [
+        "Assets/Scenes/ArtTests/SpiritFrontLineupV2.unity",
+        "Assets/Scenes/ArtTests/SpiritSilhouetteComparisonV2.unity"
+    ],
+    "checks": [
+        "Five native 64x64 transparent fronts; original pixels unchanged",
+        "Point, uncompressed, no mipmaps, FullRect, 32 PPU",
+        "Shared foot baseline, scale 1, Y sorting at pivot",
+        "Two saved scenes and five prefabs reloaded with sprite references resolved",
+        "Original v1 assets and dependent scenes removed from Unity; no animations generated"
+    ]
+}

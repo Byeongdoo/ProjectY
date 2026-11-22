@@ -1,0 +1,29 @@
+{
+  "request": {
+    "character_id": "d08b8efa-ee49-477d-8db1-fbe0512ccdda",
+    "animation_name": "HIT",
+    "mode": "v3",
+    "action_description": "Take a short impact through the shield and shoulder, recoil briefly away from the facing direction, then recover the original guard. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.",
+    "frame_count": 4,
+    "keep_first_frame": false,
+    "directions": [
+      "south-east",
+      "east",
+      "north-east",
+      "north",
+      "north-west",
+      "west",
+      "south-west"
+    ],
+    "animation_group_id": "363d4fc3-3af0-47ee-8050-d4ebf2553262"
+  },
+  "response": {
+    "content": [
+      {
+        "type": "text",
+        "text": "character: d08b8efa-ee49-477d-8db1-fbe0512ccdda\nanimation: v3 custom (Take a short impact through the shield and shoulder, recoil briefly away from the facing direction, then recover the original guard. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.)\ndirections: south-east, east, north-east, north, north-west, west, south-west (7 jobs)\njob_ids: south-east=10efdaac-44e4-4782-8170-aaa3cc0bae3a, east=4b2fb339-cc62-484d-a4b9-9cd0cc870cbd, north-east=b7cc195b-c47a-40bb-a9f9-e141b771d7d0, north=ec5d800a-b686-4f95-99c7-c9a810d3b11d, north-west=79bef637-8561-4b2a-a698-b0cb3c0bb3e2, west=79e38ae5-0db6-4269-952d-2637994e0758, south-west=ed9338cf-4e4a-47fa-ae5f-81894fa17503\ngroup: 363d4fc3-3af0-47ee-8050-d4ebf2553262\nframes: 4 (reference stripped, keep_first_frame=false)\ncanvas: south-east 84x84, east 84x84, north-east 84x84, north 84x84, north-west 84x84, west 84x84, south-west 92x92 (frames are stored at this size: the character plus room to move)\ncost: 7 generations (1/dir x 7)\neta: ~2-4 min/direction\n\nhint: get_character(character_id=\"d08b8efa-ee49-477d-8db1-fbe0512ccdda\")\nadd more directions to this group: animate_character(character_id=\"d08b8efa-ee49-477d-8db1-fbe0512ccdda\", action_description=\"Take a short impact through the shield and shoulder, recoil briefly away from the facing direction, then recover the original guard. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.\", animation_group_id=\"363d4fc3-3af0-47ee-8050-d4ebf2553262\", directions=[...])"
+      }
+    ],
+    "isError": false
+  }
+}

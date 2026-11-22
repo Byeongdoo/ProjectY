@@ -1,0 +1,238 @@
+{
+  "name": "ProjectY_SpiritConcepts_v01",
+  "date": "2026-11-22",
+  "pixelsPerUnit": 32,
+  "frontCanvas": 64,
+  "weaponConceptCanvas": 96,
+  "heroReference": "https://backblaze.pixellab.ai/file/pixellab-characters/919d49c5-eb88-4372-9345-f4f64e9ea083/ab302165-227c-4777-9d0b-86713dde774d/rotations/south.png?t=1795271270",
+  "classes": [
+    {
+      "key": "MumyeongJangsu",
+      "name": "무명장수",
+      "role": "Tank",
+      "weapon": "Korean deungpae large convex dark rattan round shield, blackened iron rim, octagonal iron central boss engraved with a faint turquoise circle, three worn red knots; paired short broad single edged Korean yodo saber with black grip. The shield is the dominant item and the saber secondary.",
+      "body": "A scarred middle-aged Korean male general, broad sturdy shoulders and heavy legs, black hair tied in a short topknot, short stern facial hair. Worn charcoal iron Joseon lamellar armour with dark brown bindings and a restrained muted turquoise sash. Holds a large convex round rattan deungpae shield in his LEFT hand (viewer right) covering his chest to upper thighs, with a short single-edged yodo saber held lowered in his RIGHT hand (viewer left), blade not crossing his face. The shield must read as dark woven wood with a black iron rim and a small turquoise octagonal boss, not a European heraldic shield.",
+      "color": "iron grey, dark rattan brown, muted turquoise",
+      "notionURL": "https://app.notion.com/p/41fd34105d548193a099c9c0c0dc1ee5",
+      "weaponSource": {
+        "jobId": "9dac4f61-f85a-4cf7-baf6-1d66ab923959",
+        "sourceImageId": "0b938427-8fc3-58f1-8394-41c80d08cf0c"
+      },
+      "frontSource": {
+        "jobId": "2204b694-ee4d-4f6d-aeaa-0a2d4e83ed38",
+        "sourceImageId": "d84323da-5aad-519a-b358-e8c3acccc151"
+      },
+      "frontPath": "Assets/Resources/Art/Characters/Spirits/MumyeongJangsu/MumyeongJangsu_Front.png",
+      "weaponPath": "Assets/Resources/Art/Characters/Spirits/MumyeongJangsu/MumyeongJangsu_WeaponConcept.png"
+    },
+    {
+      "key": "Mangnani",
+      "name": "망나니",
+      "role": "Melee",
+      "weapon": "Oversized Korean Joseon execution sword, very broad heavy SINGLE EDGED steel blade with a slightly curved rounded point, dark forged steel spine and bright sharpened edge, long two-handed oxblood leather handle, small rectangular iron guard, one subtle dark-red spiritual crack. It is an executioner's blade, not an axe, not a European crossguard greatsword.",
+      "body": "A muscular Korean male executioner in his thirties or forties, bare strong forearms, messy dark topknot, rough charcoal and oxblood red-brown hemp work clothes, wide-legged navy black baji trousers and dark cloth shoes. Holds one very broad Korean single-edged execution sword in both hands, angled upright beside his right shoulder (viewer left), so his face, torso and both feet remain visible. A long oxblood grip, small rectangular iron guard, dark iron blade spine with a bright silver cutting edge; no huge fantasy crossguard. The blade should make a broad aggressive silhouette but stay wholly inside the frame.",
+      "color": "charcoal, dark red brown, muted vermilion, cold steel",
+      "notionURL": "https://app.notion.com/p/41fd34105d5481e190eecc6ffed2a554",
+      "weaponSource": {
+        "jobId": "9320a736-b35b-4633-9c10-fd9922756f43",
+        "sourceImageId": "010042f4-6460-5b6c-a948-abecf12285a1",
+        "previousJobId": "d0feb01b-5200-48b5-8570-586bd1a5718c"
+      },
+      "frontSource": {
+        "jobId": "f5a21845-1ce5-4ade-8473-449bf577a109",
+        "sourceImageId": "850ac7ac-eed2-5463-abe1-7cae9f8a30d4",
+        "previousJobId": "501747da-2155-4ec0-b0fc-e6684787150f"
+      },
+      "frontPath": "Assets/Resources/Art/Characters/Spirits/Mangnani/Mangnani_Front.png",
+      "weaponPath": "Assets/Resources/Art/Characters/Spirits/Mangnani/Mangnani_WeaponConcept.png",
+      "refinement": "Broadened single-edged execution blade in both concept plate and held sprite."
+    },
+    {
+      "key": "ChakhoGapsa",
+      "name": "착호갑사",
+      "role": "Ranged",
+      "weapon": "Korean Joseon gakgung SHORT strongly recurved horn composite bow, amber wood and dark horn laminate, tiny ivory bindings and black wrapped grip, tiny vermilion tips, a subtle tiger-claw motif; bamboo arrows with black and faded yellow fletching, striped leather quiver. Include the bow's C/S curve clearly, not a longbow or crossbow.",
+      "body": "A lean Korean male tiger hunter soldier in his thirties, dark tied hair with a simple ochre headband, light forest green Joseon combat jeogori, tan leather forearm guards, ochre-brown waist ties, slim practical dark baji and cloth shoes. Holds a clearly visible SHORT strongly recurved amber horn gakgung bow upright in his LEFT hand (viewer right), right hand relaxed near a bamboo arrow. A small striped leather quiver with black and dull yellow arrow fletching behind the waist. His light narrow silhouette and curved bow must differ from the heavy sword fighter. No elf ears, no European cloak, no giant longbow.",
+      "color": "pine green, ochre tan, black horn and amber wood",
+      "notionURL": "https://app.notion.com/p/41fd34105d54816ab63de0a036027ac8",
+      "weaponSource": {
+        "jobId": "dbb7a5c6-e155-4436-8d2b-14ff29a5d5d8",
+        "sourceImageId": "30f441e4-80b9-5666-9d12-c96babd938a4"
+      },
+      "frontSource": {
+        "jobId": "26ec7258-005a-4044-b00a-bc36b3701ed6",
+        "sourceImageId": "4ed4f70a-06a8-50ac-9095-56e1dd8f851c"
+      },
+      "frontPath": "Assets/Resources/Art/Characters/Spirits/ChakhoGapsa/ChakhoGapsa_Front.png",
+      "weaponPath": "Assets/Resources/Art/Characters/Spirits/ChakhoGapsa/ChakhoGapsa_WeaponConcept.png"
+    },
+    {
+      "key": "Kkokdusoe",
+      "name": "꼭두쇠",
+      "role": "Buffer",
+      "weapon": "Traditional Korean kkwaenggwari SMALL one-handed shallow hammered brass gong, rolled rim, warm aged gold face with darker patina, dark red handle cord and a short teal tassel; paired short wooden mallet with rounded striking head and faded vermilion wrap. It must be a small hand gong, not a shield, bell or giant temple gong.",
+      "body": "A charismatic middle-aged Korean male namsadang folk performer leader, weathered warm face, dark hair with a small plain white performance headband, short sleeved worn ivory folk performance clothes with faded yellow, vermilion and teal cloth waist ribbons, roomy indigo trousers and dark shoes. Holds a SMALL round warm brass kkwaenggwari hand gong at chest level in his LEFT hand (viewer right), and its short wooden striking mallet in his RIGHT hand (viewer left). The gong is only about 10 to 14 pixels across in this 64px sprite, much smaller than the general's shield. A few short ribbons spread sideways for a lively distinctive silhouette. No large hat and no long white spinning hat ribbon.",
+      "color": "faded ochre gold, vermilion, teal ribbons, indigo",
+      "notionURL": "https://app.notion.com/p/41fd34105d5481558afef93bd8d4ebe9",
+      "weaponSource": {
+        "jobId": "47ec1c73-8d6d-45c5-9e61-e7fda577e45a",
+        "sourceImageId": "c37198ea-e936-5cfa-87a7-2886767b31d7"
+      },
+      "frontSource": {
+        "jobId": "cc9fb7e9-1f8b-4d60-8311-67d486a34ce6",
+        "sourceImageId": "6be6ee7f-143e-58f4-a6fb-98a107e70743",
+        "previousJobId": "2ffd2d8f-22f0-4ff2-b10d-adf2c4091378"
+      },
+      "frontPath": "Assets/Resources/Art/Characters/Spirits/Kkokdusoe/Kkokdusoe_Front.png",
+      "weaponPath": "Assets/Resources/Art/Characters/Spirits/Kkokdusoe/Kkokdusoe_WeaponConcept.png",
+      "refinement": "Gong and mallet separated from the torso for role readability."
+    },
+    {
+      "key": "Uinyeo",
+      "name": "의녀",
+      "role": "Healer",
+      "weapon": "Refined Joseon medical needle case: small slender dark ebony octagonal cylindrical acupuncture case, bronze cap with thin silver end bands, subtle plum blossom and one faint turquoise vein line; opened cap with neatly arranged silver acupuncture needles, small jade green herb pouch. No syringe, wand or staff.",
+      "body": "A calm young adult Korean female Joseon uinyeo healer, black hair neatly tied into a low bun, modest pale teal jeogori and a dark indigo chima skirt with clear feet visible, ivory collar, jade herb pouch at the waist. Holds a SMALL slim dark ebony octagonal acupuncture needle case with a bronze cap and thin silver bands in her LEFT hand (viewer right) at waist height, while the RIGHT hand (viewer left) presents one thin silver acupuncture needle at chest height. The case is palm sized, not a long staff or wand. Restrained plum-blossom mark, one small turquoise line, no supernatural glow. Slender calm silhouette, no modern nurse cap, no white coat, no western magic staff.",
+      "color": "muted teal, dark indigo, warm ivory, ebony and silver",
+      "notionURL": "https://app.notion.com/p/41fd34105d5481fb9219e87486939f43",
+      "weaponSource": {
+        "jobId": "18789dc9-c95d-4d1c-a60a-68567c100117",
+        "sourceImageId": "4b6f2adc-aabd-52a4-9d4a-570bf8aee1ec"
+      },
+      "frontSource": {
+        "jobId": "f43cd02a-2fab-40b8-8934-a206db4e3a92",
+        "sourceImageId": "83f90150-f3c2-5b15-b3cd-6b1bb9b892fe"
+      },
+      "frontPath": "Assets/Resources/Art/Characters/Spirits/Uinyeo/Uinyeo_Front.png",
+      "weaponPath": "Assets/Resources/Art/Characters/Spirits/Uinyeo/Uinyeo_WeaponConcept.png"
+    }
+  ],
+  "validation": {
+    "unityVersion": "6000.3.5f2",
+    "frontCount": 5,
+    "weaponConceptCount": 5,
+    "pixelsPerUnit": 32,
+    "imagesResized": false,
+    "classes": [
+      {
+        "key": "MumyeongJangsu",
+        "role": "TANK",
+        "spritePath": "Assets/Resources/Art/Characters/Spirits/MumyeongJangsu/MumyeongJangsu_Front.png",
+        "weaponPath": "Assets/Resources/Art/Characters/Spirits/MumyeongJangsu/MumyeongJangsu_WeaponConcept.png",
+        "canvasWidth": 64,
+        "canvasHeight": 64,
+        "alphaX": 10,
+        "alphaY": 2,
+        "visibleWidth": 44,
+        "visibleHeight": 61,
+        "pixelsPerUnit": 32,
+        "worldWidth": 1.375,
+        "worldHeight": 1.90625,
+        "heightRelativeToHero": 1.0338983535766602,
+        "pivotPixels": {
+          "x": 32,
+          "y": 2
+        }
+      },
+      {
+        "key": "Mangnani",
+        "role": "MELEE",
+        "spritePath": "Assets/Resources/Art/Characters/Spirits/Mangnani/Mangnani_Front.png",
+        "weaponPath": "Assets/Resources/Art/Characters/Spirits/Mangnani/Mangnani_WeaponConcept.png",
+        "canvasWidth": 64,
+        "canvasHeight": 64,
+        "alphaX": 8,
+        "alphaY": 2,
+        "visibleWidth": 36,
+        "visibleHeight": 61,
+        "pixelsPerUnit": 32,
+        "worldWidth": 1.125,
+        "worldHeight": 1.90625,
+        "heightRelativeToHero": 1.0338983535766602,
+        "pivotPixels": {
+          "x": 32,
+          "y": 2
+        }
+      },
+      {
+        "key": "ChakhoGapsa",
+        "role": "RANGED",
+        "spritePath": "Assets/Resources/Art/Characters/Spirits/ChakhoGapsa/ChakhoGapsa_Front.png",
+        "weaponPath": "Assets/Resources/Art/Characters/Spirits/ChakhoGapsa/ChakhoGapsa_WeaponConcept.png",
+        "canvasWidth": 64,
+        "canvasHeight": 64,
+        "alphaX": 15,
+        "alphaY": 3,
+        "visibleWidth": 33,
+        "visibleHeight": 59,
+        "pixelsPerUnit": 32,
+        "worldWidth": 1.03125,
+        "worldHeight": 1.84375,
+        "heightRelativeToHero": 1,
+        "pivotPixels": {
+          "x": 32,
+          "y": 3
+        }
+      },
+      {
+        "key": "Kkokdusoe",
+        "role": "BUFFER",
+        "spritePath": "Assets/Resources/Art/Characters/Spirits/Kkokdusoe/Kkokdusoe_Front.png",
+        "weaponPath": "Assets/Resources/Art/Characters/Spirits/Kkokdusoe/Kkokdusoe_WeaponConcept.png",
+        "canvasWidth": 64,
+        "canvasHeight": 64,
+        "alphaX": 13,
+        "alphaY": 2,
+        "visibleWidth": 39,
+        "visibleHeight": 59,
+        "pixelsPerUnit": 32,
+        "worldWidth": 1.21875,
+        "worldHeight": 1.84375,
+        "heightRelativeToHero": 1,
+        "pivotPixels": {
+          "x": 32,
+          "y": 2
+        }
+      },
+      {
+        "key": "Uinyeo",
+        "role": "HEALER",
+        "spritePath": "Assets/Resources/Art/Characters/Spirits/Uinyeo/Uinyeo_Front.png",
+        "weaponPath": "Assets/Resources/Art/Characters/Spirits/Uinyeo/Uinyeo_WeaponConcept.png",
+        "canvasWidth": 64,
+        "canvasHeight": 64,
+        "alphaX": 19,
+        "alphaY": 3,
+        "visibleWidth": 24,
+        "visibleHeight": 57,
+        "pixelsPerUnit": 32,
+        "worldWidth": 0.75,
+        "worldHeight": 1.78125,
+        "heightRelativeToHero": 0.9661017060279846,
+        "pivotPixels": {
+          "x": 32,
+          "y": 3
+        }
+      }
+    ],
+    "scenes": [
+      "Assets/Scenes/ArtTests/SpiritFrontLineup.unity",
+      "Assets/Scenes/ArtTests/SpiritSilhouetteComparison.unity",
+      "Assets/Scenes/ArtTests/SpiritWeaponConcepts.unity"
+    ],
+    "screenshots": [
+      "Spirit_FrontLineup.png",
+      "Spirit_SilhouetteComparison.png",
+      "Spirit_WeaponConcepts.png"
+    ],
+    "checks": [
+      "Five front sprites are native 64x64 RGBA PNGs with transparent corners",
+      "All front sprites and concepts use Point, no mipmaps, uncompressed, 32 PPU",
+      "Foot anchors use a shared x=32 and each unchanged PNG's measured lowest visible row",
+      "Hero and all five classes use transform scale 1 with a common foot baseline",
+      "Source pixels are not resized or repainted in Unity",
+      "Native saved scenes and five prefabs reloaded with all sprite references resolved"
+    ]
+  },
+  "frontReferencePolicy": "The final front PNG defines identity and actual equipment placement; preserve it for future south-reference rotations. Do not mirror asymmetric equipment."
+}

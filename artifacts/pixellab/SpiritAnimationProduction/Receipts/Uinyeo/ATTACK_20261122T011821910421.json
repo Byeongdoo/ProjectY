@@ -1,0 +1,23 @@
+{
+  "request": {
+    "character_id": "20edb5b5-8698-424e-be5e-99b63c356064",
+    "animation_name": "ATTACK",
+    "mode": "v3",
+    "action_description": "Take a thin needle from the medicine case, raise the wrist and flick it toward the facing direction once, then withdraw the hand and return to ready stance. No flying needle projectile. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.",
+    "frame_count": 8,
+    "keep_first_frame": false,
+    "directions": [
+      "south",
+      "south-east"
+    ]
+  },
+  "response": {
+    "content": [
+      {
+        "type": "text",
+        "text": "character: 20edb5b5-8698-424e-be5e-99b63c356064\nanimation: v3 custom (Take a thin needle from the medicine case, raise the wrist and flick it toward the facing direction once, then withdraw the hand and return to ready stance. No flying needle projectile. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.)\ndirections: south, south-east (2 jobs)\njob_ids: south=d7daa93b-3a2f-4872-adaa-4d38d8fcdac9, south-east=2ecd3391-47bd-400d-bb56-ba960024cfbf\ngroup: da750c1a-9b92-4dab-8b41-65612b174b39\nframes: 8 (reference stripped, keep_first_frame=false)\ncanvas: south 88x88, south-east 88x88 (frames are stored at this size: the character plus room to move)\ncost: 2 generations (1/dir x 2)\neta: ~2-4 min/direction\n\nhint: get_character(character_id=\"20edb5b5-8698-424e-be5e-99b63c356064\")\nadd more directions to this group: animate_character(character_id=\"20edb5b5-8698-424e-be5e-99b63c356064\", action_description=\"Take a thin needle from the medicine case, raise the wrist and flick it toward the facing direction once, then withdraw the hand and return to ready stance. No flying needle projectile. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.\", animation_group_id=\"da750c1a-9b92-4dab-8b41-65612b174b39\", directions=[...])"
+      }
+    ],
+    "isError": false
+  }
+}

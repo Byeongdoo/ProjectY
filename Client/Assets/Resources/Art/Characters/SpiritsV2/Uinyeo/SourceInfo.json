@@ -1,0 +1,33 @@
+{
+  "key": "Uinyeo",
+  "name": "의녀",
+  "revision": "UserReferenceV2",
+  "phase": "Front concept only, pending visual approval",
+  "model": "PixelLab create_image_pro",
+  "date": "2026-11-22",
+  "jobId": "03df817d-f9a5-4689-bb19-18503ea48f39",
+  "galleryAssetId": "2e5f0c3f-af24-5426-ae68-b7573313bacf",
+  "candidateIndex": 5,
+  "candidateCount": 16,
+  "downloadUrl": "https://api.pixellab.ai/mcp/images/03df817d-f9a5-4689-bb19-18503ea48f39/download?index=5",
+  "designDescription": "An elegant young female Korean Joseon healer with large gentle eyes, LONG flowing dark hair, PINK BLOSSOM hair ornaments and lavender ribbons. Graceful pale LAVENDER AND IVORY hanbok with muted dark-jade trim and delicate gold floral embroidery, layered full skirt and small light shoes. Holds a small BLACK LACQUERED MEDICINE CASE with GOLD edging and a PINK LOTUS emblem at waist level, and a fine silver acupuncture needle in the other hand; small embroidered herb pouch. Match the flower-adorned lavender healer reference, not a plain teal nurse or a short-bun civilian. The medical case is a small case or basket, not a wand.",
+  "selectionReason": "꽃장식·연보라 한복·약함·은침이 함께 보이는 후보",
+  "referenceManifest": "artifacts/pixellab/SpiritConceptStudyV2/SourceManifest.json",
+  "userReference": "artifacts/pixellab/SpiritConceptStudyV2/References/UserReference.png",
+  "metrics": {
+    "key": "Uinyeo",
+    "spritePath": "Assets/Resources/Art/Characters/SpiritsV2/Uinyeo/Uinyeo_Front.png",
+    "canvasWidth": 64,
+    "canvasHeight": 64,
+    "visibleWidth": 47,
+    "visibleHeight": 62,
+    "alphaX": 13,
+    "alphaY": 1,
+    "pivotPixels": {
+      "x": 32.0,
+      "y": 1.0
+    },
+    "pixelsPerUnit": 32
+  },
+  "referencePolicy": "This exact selected PNG, including candidate index and actual equipment placement, defines this revision. Preserve asymmetric equipment; do not substitute another candidate or mirror it."
+}

@@ -1,0 +1,70 @@
+{
+  "revision": "UserReferenceV2",
+  "date": "2026-11-22",
+  "model": "PixelLab create_image_pro",
+  "canvas": [
+    64,
+    64
+  ],
+  "pixelsPerUnit": 32,
+  "phase": "Five front concepts only; not approved animation identities",
+  "userReference": "References/UserReference.png",
+  "preservedPreviousRevision": "../SpiritConceptStudy",
+  "classes": [
+    {
+      "key": "MumyeongJangsu",
+      "design": "upload:15222462-4cde-4ea7-8a5d-170f8a01a48d",
+      "sprite": "upload:4763eedb-7e4f-46d8-b050-411a48eaf897",
+      "weapon": "upload:f43bad79-93e7-4d1f-98fa-856629d45788",
+      "description": "A stern bearded Joseon general, ornate navy and black lamellar armour with bold warm GOLD embroidery and sculpted beast shoulder plates, blue headband and tied topknot, dark-blue trailing headband tails, crimson waist sash and layered battle skirt, heavy boots. A large round DARK NAVY SHIELD WITH A CLEAR GOLDEN LION FACE BOSS and gilded rim in one hand, short curved Korean saber in the other. Dark blue, warm gold and red. Match the supplied general reference's actual rich costume and lion shield, not a plain wooden shield.",
+      "job": "b2d1c421-85f9-49da-97b2-3b3dd9c2523e",
+      "asset": "060a2ed5-c10e-5b64-a195-9af8e93b4d71",
+      "selectedCandidateIndex": 0,
+      "selectionReason": "정면 갑옷과 사자 장식 방패, 요도가 함께 보이는 후보"
+    },
+    {
+      "key": "Mangnani",
+      "design": "upload:c6e1f910-eddf-4d89-b1df-244b6e39dec9",
+      "sprite": "upload:ff1c02ed-bbcf-4e5a-9afc-f6a11bc2acad",
+      "weapon": "upload:596de88d-8da2-4c82-affb-16cf396eef6f",
+      "description": "A wild rugged male Korean executioner, flowing messy dark hair tied high with crimson ties, fierce expressive face, exposed muscular arms, ragged ivory fur-edged cloth and dark crimson sleeveless vest, torn layered red-black battle wrap and rope belt, ankle bindings and rough sandals. Holds an enormous broad straight single-edged Korean EXECUTION CLEAVER, wide silver blade with dark-red patina markings, black and gold guard and red tassel. Strong angular wild silhouette. Match the rugged red-and-ivory reference, not a neat small sword fighter.",
+      "job": "3c2a6489-973b-4713-bad3-ffe168791bc3",
+      "asset": "8ce25a11-8916-56c4-965a-54324f7b380d",
+      "selectedCandidateIndex": 0,
+      "selectionReason": "거친 머리·드러난 팔·붉은 넓은 칼이 함께 보이는 후보"
+    },
+    {
+      "key": "ChakhoGapsa",
+      "design": "upload:8393263c-38dc-4826-b847-7ee9c2c40590",
+      "sprite": "upload:2420647c-279a-46d6-b6c2-cea72d2cecb9",
+      "weapon": "upload:b59175ba-7906-4ee1-9ea6-84741806403f",
+      "description": "A beautiful young FEMALE Joseon tiger hunter archer, large expressive dark eyes, long black high ponytail with red and gold hair ornaments, ivory fur collar, dark forest-green hunter armour and layered green coat with gold Korean tiger-pattern embroidery, leather bracers, sturdy brown boots. Holds an elegant recurved golden Korean gakgung bow at the side; a visible long decorated golden quiver of white-fletched arrows on her back. Black hair, dark forest green, rich warm gold and ivory fur. Match the feminine high-ponytail green hunter in the reference, not the old male green soldier.",
+      "job": "0cc20ebd-9f99-4828-8446-9d757987dcd7",
+      "asset": "9bd777ee-d57d-5bea-b4c0-dff458436a9d",
+      "selectedCandidateIndex": 0,
+      "selectionReason": "여성 사냥꾼·털깃·녹색 금장 복식·각궁·화살통이 함께 보이는 후보"
+    },
+    {
+      "key": "Kkokdusoe",
+      "design": "upload:c64c678a-26ca-437e-af3f-7454ca2bfb64",
+      "sprite": "upload:d3968e7a-2ec0-43bd-a194-f5d6cbbf8821",
+      "weapon": "upload:7bb68432-9368-453f-875c-6aaaef12d76c",
+      "description": "A cheerful charismatic male Joseon folk performer with a broad welcoming grin, a WIDE ROUND NAVY BRIMMED HAT decorated with GOLD trim and small bright ornaments, red and teal hat ribbons. Rich cobalt and navy long performance robes with GOLD Korean geometric embroidery, broad ivory sleeves, crimson waist sash and long red yellow teal cloth ribbons, brown shoes. Holds a SMALL golden LOTUS-ENGRAVED HAND GONG in one hand and a short rounded wooden gong mallet in the other, clearly separate and visible. The hat, wide sleeves and flowing cloth make a playful silhouette. Match the richly dressed smiling performer reference, not the plain white headband civilian.",
+      "job": "9a0a67d6-95be-4132-9ae9-5cc3098a98e0",
+      "asset": "98961ffb-94ed-5c96-a4e5-e3c47f9b7716",
+      "selectedCandidateIndex": 7,
+      "selectionReason": "넓은 갓·밝은 표정·꽹과리·별도의 채가 함께 보이는 후보"
+    },
+    {
+      "key": "Uinyeo",
+      "design": "upload:392b7bdf-3c0f-4f5c-a3df-22f339a0ceab",
+      "sprite": "upload:9e79c740-a506-456a-b3da-197661d10464",
+      "weapon": "upload:6671dd8a-137c-4eea-bd96-bb13ea56ecfa",
+      "description": "An elegant young female Korean Joseon healer with large gentle eyes, LONG flowing dark hair, PINK BLOSSOM hair ornaments and lavender ribbons. Graceful pale LAVENDER AND IVORY hanbok with muted dark-jade trim and delicate gold floral embroidery, layered full skirt and small light shoes. Holds a small BLACK LACQUERED MEDICINE CASE with GOLD edging and a PINK LOTUS emblem at waist level, and a fine silver acupuncture needle in the other hand; small embroidered herb pouch. Match the flower-adorned lavender healer reference, not a plain teal nurse or a short-bun civilian. The medical case is a small case or basket, not a wand.",
+      "job": "03df817d-f9a5-4689-bb19-18503ea48f39",
+      "asset": "2e5f0c3f-af24-5426-ae68-b7573313bacf",
+      "selectedCandidateIndex": 5,
+      "selectionReason": "꽃장식·연보라 한복·약함·은침이 함께 보이는 후보"
+    }
+  ]
+}

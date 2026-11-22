@@ -1,0 +1,5 @@
+*.log
+*Process.json
+worker.lock
+*.tmp
+Staging/
