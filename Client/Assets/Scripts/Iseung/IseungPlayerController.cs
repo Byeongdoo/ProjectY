@@ -28,6 +28,7 @@ public class IseungPlayerController : MonoBehaviour
 	Vector3Int _fromCell;        // 진행 중인 한 칸의 출발 칸
 	float _stepElapsed;          // 진행 중인 한 칸을 시작한 뒤 지난 시간
 	bool _stepAdjusted;          // 이번 칸에서 이미 대각선 전환·되돌아가기를 했는가
+	StepInputBuffer _inputBuffer; // 이동 중에 눌렀다 뗀 방향키(칸 도착 때 반영)
 	int _inputX, _inputY;
 	bool _turnOnly;
 	string _playingClip;
@@ -62,10 +63,15 @@ public class IseungPlayerController : MonoBehaviour
 		if (InputLocked)
 		{
 			_inputX = 0; _inputY = 0; _turnOnly = false;
+			_inputBuffer.Clear();
 		}
 		else if (_state == State.Idle && Input.GetKeyDown(KeyCode.F) && TryInteract())
 		{
 			_inputX = 0; _inputY = 0;
+		}
+		else if (_state == State.Moving && _turnOnly == false)
+		{
+			_inputBuffer.Record(_inputX, _inputY);
 		}
 
 		if (_state == State.Idle)
@@ -146,6 +152,7 @@ public class IseungPlayerController : MonoBehaviour
 		_cellPos = dest;
 		_dir = IseungDirUtil.FromVec(dest.x - from.x, dest.y - from.y);
 		_stepAdjusted = true;
+		_inputBuffer.Clear(); // 이번 칸을 바꾼 키는 이미 반영했다(되돌아가기가 두 칸이 되지 않게)
 		PlayAnimation();
 	}
 
@@ -176,6 +183,10 @@ public class IseungPlayerController : MonoBehaviour
 		transform.position = dest;
 		float leftoverTime = (step - dist) / speed;
 		_state = State.Idle;
+		if (_turnOnly == false)
+			_inputBuffer.Resolve(_cellPos - _fromCell, ref _inputX, ref _inputY);
+		else
+			_inputBuffer.Clear();
 		TryStartStep();
 		// 남은 시간을 다음 칸에 이어 써서 연속 이동 중 프레임마다 멈칫하지 않게 한다.
 		if (_state == State.Moving && leftoverTime > 0)

@@ -9,7 +9,9 @@ public class MyPlayerController : PlayerController
 	const int ConfigDiagonalUpgradeWindow = 20048; // 이동 중 대각선 전환 허용 시간(초)
 
 	bool _moveKeyPressed = false;
+	bool _turnOnly = false;
 	int _inputX, _inputY;
+	StepInputBuffer _inputBuffer; // 이동 중에 눌렀다 뗀 방향키(칸 도착 때 반영, 이승과 공용 규칙)
 
 	// 진행 중인 한 칸. 이동 중 입력 보정(StepInputAssist, 이승과 공용)에 쓴다.
 	Vector3Int _fromCell;
@@ -32,6 +34,8 @@ public class MyPlayerController : PlayerController
 				break;
 			case CreatureState.Moving:
 				GetDirInput();
+				if (_moveKeyPressed)
+					_inputBuffer.Record(_inputX, _inputY);
 				_stepElapsed += Time.deltaTime;
 				TryAdjustStep();
 				break;
@@ -54,6 +58,7 @@ public class MyPlayerController : PlayerController
 
 		_fromCell = from;
 		_stepAdjusted = true;
+		_inputBuffer.Clear(); // 이번 칸을 바꾼 키는 이미 반영했다(되돌아가기가 두 칸이 되지 않게)
 		Dir = GetDirFromVec(dest - from);
 		CellPos = dest;
 		CheckUpdatedFlag();
@@ -69,6 +74,7 @@ public class MyPlayerController : PlayerController
 
 		CellPos = server;
 		_fromCell = server;
+		_inputBuffer.Clear();
 		State = CreatureState.Idle;
 		SyncPos();
 		_updated = false;
@@ -143,6 +149,7 @@ public class MyPlayerController : PlayerController
 
 		_inputX = x;
 		_inputY = y;
+		_turnOnly = Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift);
 		if (x == 0 && y == 0)
 		{
 			_moveKeyPressed = false;
@@ -154,12 +161,29 @@ public class MyPlayerController : PlayerController
 			Dir = GetDirFromVec(new Vector3Int(x, y, 0));
 
 		// Shift+방향키는 이동 없이 방향만 바꾼다 (평타가 바라보는 방향으로만 나가므로)
-		bool turnOnly = Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift);
-		_moveKeyPressed = !turnOnly;
+		_moveKeyPressed = !_turnOnly;
 	}
 
 	protected override void MoveToNextPos()
 	{
+		if (_turnOnly || SpiritSelectPanel.IsOpen)
+		{
+			_inputBuffer.Clear();
+		}
+		else
+		{
+			// 손을 뗐어도 이동 중에 누른 방향이 있으면 그 칸으로 이어 간다
+			int x = _moveKeyPressed ? _inputX : 0;
+			int y = _moveKeyPressed ? _inputY : 0;
+			_inputBuffer.Resolve(CellPos - _fromCell, ref x, ref y);
+			if (x != 0 || y != 0)
+			{
+				_inputX = x;
+				_inputY = y;
+				_moveKeyPressed = true;
+			}
+		}
+
 		if (_moveKeyPressed == false)
 		{
 			State = CreatureState.Idle;

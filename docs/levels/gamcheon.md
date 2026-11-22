@@ -25,9 +25,9 @@
 
 ## 조작 (이승 단독, 서버 없음)
 
-- `Player`(스폰 칸) + [IseungPlayerController](../../Client/Assets/Scripts/Iseung/IseungPlayerController.cs): 방향키 8방향 칸 이동, 두 키 = 대각선 1칸, Shift+방향키 = 제자리 방향 전환. 속도는 `characterLevel`(1000001, 레벨 1)의 `moveSpeed`(4칸/초). 레벨은 로컬 세이브가 생기면 거기서 읽는다.
+- `Player`(스폰 칸) + [IseungPlayerController](../../Client/Assets/Scripts/Iseung/IseungPlayerController.cs): 방향키 8방향 칸 이동, 두 키 = 대각선 1칸, Shift+방향키 = 제자리 방향 전환. 속도는 `characterLevel`(1000001, 레벨 1)의 `moveSpeed`(5.2칸/초). 레벨은 로컬 세이브가 생기면 거기서 읽는다.
 - 대각선 1칸 소요 시간은 `configs` 20030 배율(1.414 = √2, 2026-11-22 사용자 결정)을 따른다. 화면상 이동 속도가 직선과 같다. 멀티 클라 보간·서버 몬스터 이동 간격도 같은 값을 쓴다.
-- 이동 중 입력 보정: 직선 한 칸을 시작하고 `configs` 20048(0.1초, 가정값) 안에 두 번째 방향키가 들어오면 그 칸을 대각선으로 바꾼다. 진행 방향의 정반대를 누르면 출발 칸으로 바로 돌아간다. 둘 다 한 칸에 한 번만 적용된다. 그 밖의 방향 전환은 칸 도착 때 반영된다.
+- 이동 중 입력 보정: 직선 한 칸을 시작하고 `configs` 20048(0.15초, 가정값) 안에 두 번째 방향키가 들어오면 그 칸을 대각선으로 바꾼다. 진행 방향의 정반대를 누르면 출발 칸으로 바로 돌아간다. 둘 다 한 칸에 한 번만 적용된다. 그 밖의 방향 전환은 칸 도착 때 반영되고, 이동 중에 눌렀다 뗀 방향키도 기억해 두었다가 칸 도착 때 한 칸 반영한다(`StepInputBuffer`, 키를 뗀 순간은 기억하지 않음).
 - 칸 판정은 씬 루트의 [IseungMap](../../Client/Assets/Scripts/Iseung/IseungMap.cs)(Ground 범위 + Collision 마스크). 대각선은 서버 `Map.CanMove`와 같이 직선 두 칸이 모두 막혔을 때만 막는다.
 - 카메라는 [IseungCameraFollow](../../Client/Assets/Scripts/Iseung/IseungCameraFollow.cs): 주인공 추적, 맵 밖 비추지 않음, 1픽셀 격자 스냅.
 - 애니메이터: `Resources/Art/Characters/Protagonist/Protagonist.controller`(빌더가 IDLE/RUN 8방향 클립으로 생성).

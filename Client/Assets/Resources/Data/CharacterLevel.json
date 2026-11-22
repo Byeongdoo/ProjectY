@@ -10,7 +10,7 @@
       "critical": 0.1,
       "criticalAttack": 1.5,
       "attackSpeed": 1,
-      "moveSpeed": 4,
+      "moveSpeed": 5.2,
       "expReward": 0,
       "expToNext": 140,
       "expTotal": 0
@@ -25,7 +25,7 @@
       "critical": 0.102,
       "criticalAttack": 1.5,
       "attackSpeed": 1,
-      "moveSpeed": 4,
+      "moveSpeed": 5.2,
       "expReward": 0,
       "expToNext": 152,
       "expTotal": 140
@@ -40,7 +40,7 @@
       "critical": 0.104,
       "criticalAttack": 1.5,
       "attackSpeed": 1,
-      "moveSpeed": 4,
+      "moveSpeed": 5.2,
       "expReward": 0,
       "expToNext": 165,
       "expTotal": 292
@@ -55,7 +55,7 @@
       "critical": 0.106,
       "criticalAttack": 1.5,
       "attackSpeed": 1,
-      "moveSpeed": 4,
+      "moveSpeed": 5.2,
       "expReward": 0,
       "expToNext": 179,
       "expTotal": 457
@@ -70,7 +70,7 @@
       "critical": 0.108,
       "criticalAttack": 1.5,
       "attackSpeed": 1,
-      "moveSpeed": 4,
+      "moveSpeed": 5.2,
       "expReward": 0,
       "expToNext": 194,
       "expTotal": 636
@@ -85,7 +85,7 @@
       "critical": 0.11,
       "criticalAttack": 1.5,
       "attackSpeed": 1,
-      "moveSpeed": 4,
+      "moveSpeed": 5.2,
       "expReward": 0,
       "expToNext": 211,
       "expTotal": 830
@@ -100,7 +100,7 @@
       "critical": 0.112,
       "criticalAttack": 1.5,
       "attackSpeed": 1,
-      "moveSpeed": 4,
+      "moveSpeed": 5.2,
       "expReward": 0,
       "expToNext": 228,
       "expTotal": 1041
@@ -115,7 +115,7 @@
       "critical": 0.114,
       "criticalAttack": 1.5,
       "attackSpeed": 1,
-      "moveSpeed": 4,
+      "moveSpeed": 5.2,
       "expReward": 0,
       "expToNext": 248,
       "expTotal": 1269
@@ -130,7 +130,7 @@
       "critical": 0.116,
       "criticalAttack": 1.5,
       "attackSpeed": 1,
-      "moveSpeed": 4,
+      "moveSpeed": 5.2,
       "expReward": 0,
       "expToNext": 269,
       "expTotal": 1517
@@ -145,7 +145,7 @@
       "critical": 0.118,
       "criticalAttack": 1.5,
       "attackSpeed": 1,
-      "moveSpeed": 4,
+      "moveSpeed": 5.2,
       "expReward": 0,
       "expToNext": 292,
       "expTotal": 1786
@@ -160,7 +160,7 @@
       "critical": 0.12,
       "criticalAttack": 1.5,
       "attackSpeed": 1,
-      "moveSpeed": 4,
+      "moveSpeed": 5.2,
       "expReward": 0,
       "expToNext": 317,
       "expTotal": 2078
@@ -175,7 +175,7 @@
       "critical": 0.122,
       "criticalAttack": 1.5,
       "attackSpeed": 1,
-      "moveSpeed": 4,
+      "moveSpeed": 5.2,
       "expReward": 0,
       "expToNext": 343,
       "expTotal": 2395
@@ -190,7 +190,7 @@
       "critical": 0.124,
       "criticalAttack": 1.5,
       "attackSpeed": 1,
-      "moveSpeed": 4,
+      "moveSpeed": 5.2,
       "expReward": 0,
       "expToNext": 373,
       "expTotal": 2738
@@ -205,7 +205,7 @@
       "critical": 0.126,
       "criticalAttack": 1.5,
       "attackSpeed": 1,
-      "moveSpeed": 4,
+      "moveSpeed": 5.2,
       "expReward": 0,
       "expToNext": 404,
       "expTotal": 3111
@@ -220,7 +220,7 @@
       "critical": 0.128,
       "criticalAttack": 1.5,
       "attackSpeed": 1,
-      "moveSpeed": 4,
+      "moveSpeed": 5.2,
       "expReward": 0,
       "expToNext": 439,
       "expTotal": 3515
@@ -235,7 +235,7 @@
       "critical": 0.13,
       "criticalAttack": 1.5,
       "attackSpeed": 1,
-      "moveSpeed": 4,
+      "moveSpeed": 5.2,
       "expReward": 0,
       "expToNext": 476,
       "expTotal": 3954
@@ -250,7 +250,7 @@
       "critical": 0.132,
       "criticalAttack": 1.5,
       "attackSpeed": 1,
-      "moveSpeed": 4,
+      "moveSpeed": 5.2,
       "expReward": 0,
       "expToNext": 516,
       "expTotal": 4430
@@ -265,7 +265,7 @@
       "critical": 0.134,
       "criticalAttack": 1.5,
       "attackSpeed": 1,
-      "moveSpeed": 4,
+      "moveSpeed": 5.2,
       "expReward": 0,
       "expToNext": 560,
       "expTotal": 4946
@@ -280,7 +280,7 @@
       "critical": 0.136,
       "criticalAttack": 1.5,
       "attackSpeed": 1,
-      "moveSpeed": 4,
+      "moveSpeed": 5.2,
       "expReward": 0,
       "expToNext": 608,
       "expTotal": 5506
@@ -295,7 +295,7 @@
       "critical": 0.138,
       "criticalAttack": 1.5,
       "attackSpeed": 1,
-      "moveSpeed": 4,
+      "moveSpeed": 5.2,
       "expReward": 0,
       "expToNext": 660,
       "expTotal": 6114
@@ -310,7 +310,7 @@
       "critical": 0.14,
       "criticalAttack": 1.5,
       "attackSpeed": 1,
-      "moveSpeed": 4,
+      "moveSpeed": 5.2,
       "expReward": 0,
       "expToNext": 716,
       "expTotal": 6774
@@ -325,7 +325,7 @@
       "critical": 0.142,
       "criticalAttack": 1.5,
       "attackSpeed": 1,
-      "moveSpeed": 4,
+      "moveSpeed": 5.2,
       "expReward": 0,
       "expToNext": 777,
       "expTotal": 7490
@@ -340,7 +340,7 @@
       "critical": 0.144,
       "criticalAttack": 1.5,
       "attackSpeed": 1,
-      "moveSpeed": 4,
+      "moveSpeed": 5.2,
       "expReward": 0,
       "expToNext": 843,
       "expTotal": 8267
@@ -355,7 +355,7 @@
       "critical": 0.146,
       "criticalAttack": 1.5,
       "attackSpeed": 1,
-      "moveSpeed": 4,
+      "moveSpeed": 5.2,
       "expReward": 0,
       "expToNext": 914,
       "expTotal": 9110
@@ -370,7 +370,7 @@
       "critical": 0.148,
       "criticalAttack": 1.5,
       "attackSpeed": 1,
-      "moveSpeed": 4,
+      "moveSpeed": 5.2,
       "expReward": 0,
       "expToNext": 992,
       "expTotal": 10024
@@ -385,7 +385,7 @@
       "critical": 0.15,
       "criticalAttack": 1.5,
       "attackSpeed": 1,
-      "moveSpeed": 4,
+      "moveSpeed": 5.2,
       "expReward": 0,
       "expToNext": 1076,
       "expTotal": 11016
@@ -400,7 +400,7 @@
       "critical": 0.152,
       "criticalAttack": 1.5,
       "attackSpeed": 1,
-      "moveSpeed": 4,
+      "moveSpeed": 5.2,
       "expReward": 0,
       "expToNext": 1168,
       "expTotal": 12092
@@ -415,7 +415,7 @@
       "critical": 0.154,
       "criticalAttack": 1.5,
       "attackSpeed": 1,
-      "moveSpeed": 4,
+      "moveSpeed": 5.2,
       "expReward": 0,
       "expToNext": 1267,
       "expTotal": 13260
@@ -430,7 +430,7 @@
       "critical": 0.156,
       "criticalAttack": 1.5,
       "attackSpeed": 1,
-      "moveSpeed": 4,
+      "moveSpeed": 5.2,
       "expReward": 0,
       "expToNext": 1375,
       "expTotal": 14527
@@ -445,7 +445,7 @@
       "critical": 0.158,
       "criticalAttack": 1.5,
       "attackSpeed": 1,
-      "moveSpeed": 4,
+      "moveSpeed": 5.2,
       "expReward": 0,
       "expToNext": 1491,
       "expTotal": 15902
@@ -460,7 +460,7 @@
       "critical": 0.16,
       "criticalAttack": 1.5,
       "attackSpeed": 1,
-      "moveSpeed": 4,
+      "moveSpeed": 5.2,
       "expReward": 0,
       "expToNext": 1618,
       "expTotal": 17393
@@ -475,7 +475,7 @@
       "critical": 0.162,
       "criticalAttack": 1.5,
       "attackSpeed": 1,
-      "moveSpeed": 4,
+      "moveSpeed": 5.2,
       "expReward": 0,
       "expToNext": 1756,
       "expTotal": 19011
@@ -490,7 +490,7 @@
       "critical": 0.164,
       "criticalAttack": 1.5,
       "attackSpeed": 1,
-      "moveSpeed": 4,
+      "moveSpeed": 5.2,
       "expReward": 0,
       "expToNext": 1905,
       "expTotal": 20767
@@ -505,7 +505,7 @@
       "critical": 0.166,
       "criticalAttack": 1.5,
       "attackSpeed": 1,
-      "moveSpeed": 4,
+      "moveSpeed": 5.2,
       "expReward": 0,
       "expToNext": 2067,
       "expTotal": 22672
@@ -520,7 +520,7 @@
       "critical": 0.168,
       "criticalAttack": 1.5,
       "attackSpeed": 1,
-      "moveSpeed": 4,
+      "moveSpeed": 5.2,
       "expReward": 0,
       "expToNext": 2243,
       "expTotal": 24739
@@ -535,7 +535,7 @@
       "critical": 0.17,
       "criticalAttack": 1.5,
       "attackSpeed": 1,
-      "moveSpeed": 4,
+      "moveSpeed": 5.2,
       "expReward": 0,
       "expToNext": 2433,
       "expTotal": 26982
@@ -550,7 +550,7 @@
       "critical": 0.172,
       "criticalAttack": 1.5,
       "attackSpeed": 1,
-      "moveSpeed": 4,
+      "moveSpeed": 5.2,
       "expReward": 0,
       "expToNext": 2640,
       "expTotal": 29415
@@ -565,7 +565,7 @@
       "critical": 0.174,
       "criticalAttack": 1.5,
       "attackSpeed": 1,
-      "moveSpeed": 4,
+      "moveSpeed": 5.2,
       "expReward": 0,
       "expToNext": 2864,
       "expTotal": 32055
@@ -580,7 +580,7 @@
       "critical": 0.176,
       "criticalAttack": 1.5,
       "attackSpeed": 1,
-      "moveSpeed": 4,
+      "moveSpeed": 5.2,
       "expReward": 0,
       "expToNext": 3108,
       "expTotal": 34919
@@ -595,7 +595,7 @@
       "critical": 0.178,
       "criticalAttack": 1.5,
       "attackSpeed": 1,
-      "moveSpeed": 4,
+      "moveSpeed": 5.2,
       "expReward": 0,
       "expToNext": 0,
       "expTotal": 38027
