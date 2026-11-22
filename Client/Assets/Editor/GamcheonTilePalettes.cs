@@ -14,7 +14,7 @@ using UnityEngine.Tilemaps;
 public static class GamcheonTilePalettes
 {
     const string SheetRoot = "Assets/Resources/Art/Tiles/Iseung/Gamcheon";
-    const string PaletteRoot = "Assets/Art/Palettes/Gamcheon";
+    const string PaletteRoot = "Assets/Editor/Art/Palettes/Gamcheon";
     // 떨어진 조각이 이 거리(px) 안이면 한 그림으로 묶는다(풀잎·자갈처럼 조각난 소품용).
     const int MergeGapPx = 6;
     // 어느 그림에도 붙지 않은 이 크기 이하의 점은 버린다.
@@ -47,6 +47,8 @@ public static class GamcheonTilePalettes
         int cell = Mathf.RoundToInt(TableManager.Configs.Get(90001).value[0]); // 타일 px = PPU
         foreach (var s in Sheets)
             Build(s.folder, s.sheet, s.slice, cell);
+        // Collision 레이어에 칠할 빨간 충돌 타일 팔레트(없을 때만 만든다).
+        GamcheonVillageBuilder.EnsureCollisionPalette(GamcheonVillageBuilder.EnsureCollisionTile(cell));
         AssetDatabase.SaveAssets();
     }
 
@@ -293,7 +295,7 @@ public static class GamcheonTilePalettes
         }
     }
 
-    static string EnsureFolder(string path)
+    internal static string EnsureFolder(string path)
     {
         if (AssetDatabase.IsValidFolder(path)) return path;
         string parent = Path.GetDirectoryName(path).Replace('\\', '/');

@@ -9,9 +9,9 @@
 
 ## 칠하는 법
 
-- **팔레트:** `Tools > ProjectY > Levels > Gamcheon > Build Tile Palettes`가 `Tile_Gamcheon_Ground/Deco/Struct.png`를 잘라(32 PPU, Point) 시트별 `Tiles/` 타일 에셋과 `Assets/Art/Palettes/Gamcheon/Palette_Gamcheon_{Ground,Deco,Struct}`를 만든다. 모든 타일은 한 칸(32px)이다. Ground는 시트 격자 그대로, Deco·Struct는 그림마다 그 그림을 덮는 칸 묶음으로 잘라(가로 가운데, 바닥 맞춤) 팔레트에 묶음별로 늘어놓는다. 큰 그림은 팔레트에서 묶음을 드래그로 골라 한 번에 칠한다. 시트를 다시 그리면 다시 실행한다(같은 이름은 GUID 유지).
+- **팔레트:** `Tools > ProjectY > Levels > Gamcheon > Build Tile Palettes`가 `Tile_Gamcheon_Ground/Deco/Struct.png`를 잘라(32 PPU, Point) 시트별 `Tiles/` 타일 에셋과 `Assets/Editor/Art/Palettes/Gamcheon/Palette_Gamcheon_{Ground,Deco,Struct}`를 만든다. 모든 타일은 한 칸(32px)이다. Ground는 시트 격자 그대로, Deco·Struct는 그림마다 그 그림을 덮는 칸 묶음으로 잘라(가로 가운데, 바닥 맞춤) 팔레트에 묶음별로 늘어놓는다. 큰 그림은 팔레트에서 묶음을 드래그로 골라 한 번에 칠한다. 시트를 다시 그리면 다시 실행한다(같은 이름은 GUID 유지).
 - **레이어:** Ground(지면, 없는 칸은 맵 밖으로 막힘) / Details / Structures / Props / Animated / Foreground(캐릭터 위를 덮는 것). 정렬 순서는 Setup이 `tileLayers`에서 맞춘다.
-- **충돌:** `Collision` Tilemap에 `Placeholders/Gamcheon/Palette_Collision` 팔레트의 빨간 타일을 칠한다. 타일이 있는 칸은 못 지나간다. 에디터에서는 반투명으로 보이고 플레이 중에는 `IseungMap`이 숨긴다.
+- **충돌:** `Collision` Tilemap에 `Palette_Collision` 팔레트(`Assets/Editor/Art/Palettes/Gamcheon`, Build Tile Palettes·Setup Scene이 없으면 만든다)의 빨간 타일을 칠한다. 타일이 있는 칸은 못 지나간다. 에디터에서는 반투명으로 보이고 플레이 중에는 `IseungMap`이 숨긴다.
 - **Y 정렬 프리팹:** 건물·나무 등 캐릭터가 뒤로 돌아가는 것은 Tilemap 대신 프리팹으로 `YSortedObjects`에 둔다. 카메라는 Y축 정렬이고 정렬 순서는 Props(30)다. 프리팹이 놓인 칸의 충돌은 따로 칠한다.
 - **마커(`Markers/*`):** 칸 안에 놓으면 그 칸이 위치다. `PlayerSpawn`, `NpcSpot_<npcID>`, `Clue_<clueID>`(Observe 단서), `Altar_61101`(IseungAltar), `Passage_62101`(BoxCollider2D 트리거, 크기가 출구 범위). 시각 표시는 `EditorOnly`라 빌드에서 빠진다.
 

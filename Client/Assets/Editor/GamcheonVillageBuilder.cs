@@ -22,7 +22,8 @@ public static class GamcheonVillageBuilder
     const string ScenePath = "Assets/Scenes/Single/Village_Gamcheon.unity";
     const string PlaceholderRoot = "Assets/Placeholders/Gamcheon";
     const string CollisionTilePath = PlaceholderRoot + "/PH_Collision.asset";
-    const string CollisionPalettePath = PlaceholderRoot + "/Palette_Collision.prefab";
+    // 다른 감천 팔레트(GamcheonTilePalettes)와 같은 폴더에 둔다.
+    internal const string CollisionPalettePath = "Assets/Editor/Art/Palettes/Gamcheon/Palette_Collision.prefab";
     const string ProtagonistRoot = "Assets/Resources/Art/Characters/Protagonist";
     const string HeroSprite = ProtagonistRoot + "/Sprites/Rotations/south.png";
 
@@ -353,7 +354,7 @@ public static class GamcheonVillageBuilder
 
     // ================= 충돌 타일·팔레트·마커 표시 =================
 
-    static Tile EnsureCollisionTile(int px)
+    internal static Tile EnsureCollisionTile(int px)
     {
         var tile = AssetDatabase.LoadAssetAtPath<Tile>(CollisionTilePath);
         if (tile && tile.sprite) return tile;
@@ -366,9 +367,10 @@ public static class GamcheonVillageBuilder
     }
 
     // 충돌 칸 전용 팔레트(타일 1개). Tile Palette 창에서 골라 Collision 타일맵에 칠한다.
-    static void EnsureCollisionPalette(Tile tile)
+    internal static void EnsureCollisionPalette(Tile tile)
     {
         if (AssetDatabase.LoadAssetAtPath<GameObject>(CollisionPalettePath)) return;
+        GamcheonTilePalettes.EnsureFolder(Path.GetDirectoryName(CollisionPalettePath).Replace('\\', '/'));
         var go = new GameObject("Palette_Collision", typeof(Grid));
         var layer = new GameObject("Layer1", typeof(Tilemap), typeof(TilemapRenderer));
         layer.transform.SetParent(go.transform, false);
