@@ -4,16 +4,18 @@ using ClosedXML.Excel;
 namespace TableConverter;
 
 /// <summary>
-/// MasterTable.xlsx → JSON 변환기 (1단계: 시트 읽기 + 타입 판정 + JSON 출력).
+/// MasterTable.xlsx → JSON + C# 변환기.
 /// 규약은 docs/data-tables.md, 설계는 docs/table-converter.md 참고.
 /// </summary>
 internal static class Program
 {
-    // 1단계 대상 시트. --sheet 로 덮어쓸 수 있다.
-    static readonly string[] DefaultSheets = { "spirits", "spiritSkills", "characterLevel" };
+    const string StringsSheet = "strings";
 
     static int Main(string[] args)
     {
+        // 출력이 파이프로 넘어가는 경우(Unity 에디터 메뉴, CI)에는 한글이 깨지지 않게 UTF-8로 쓴다.
+        if (Console.IsOutputRedirected || Console.IsErrorRedirected) Console.OutputEncoding = new UTF8Encoding(false);
+
         string? repoRoot = FindRepoRoot();
         if (repoRoot == null)
         {
@@ -30,23 +32,25 @@ internal static class Program
             Path.Combine(repoRoot, "Server", "Server", "Data", "Generated", "Tables.g.cs"),
             Path.Combine(repoRoot, "Client", "Assets", "Scripts", "Data", "Generated", "Tables.g.cs"),
         };
-        var sheets = new List<string>();
-        bool sheetsGiven = false;
+        var onlySheets = new List<string>();
+        bool customOut = false;
+        bool check = false;   // true면 파일을 쓰지 않고, 현재 출력과 다르면 종료 코드 1
+        int stale = 0;
 
         for (int i = 0; i < args.Length; i++)
         {
             switch (args[i])
             {
                 case "--xlsx" when i + 1 < args.Length: xlsxPath = Path.GetFullPath(args[++i]); break;
-                case "--out" when i + 1 < args.Length: outDir = Path.GetFullPath(args[++i]); break;
-                case "--sheet" when i + 1 < args.Length: sheets.Add(args[++i]); sheetsGiven = true; break;
+                case "--out" when i + 1 < args.Length: outDir = Path.GetFullPath(args[++i]); customOut = true; break;
+                case "--sheet" when i + 1 < args.Length: onlySheets.Add(args[++i]); break;
+                case "--check": check = true; break;
                 default:
                     Console.Error.WriteLine($"알 수 없는 인자: {args[i]}");
-                    Console.Error.WriteLine("사용법: TableConverter [--xlsx <경로>] [--out <폴더>] [--sheet <이름>]...");
+                    Console.Error.WriteLine("사용법: TableConverter [--check] [--xlsx <경로>] [--out <폴더>] [--sheet <이름>]...");
                     return 2;
             }
         }
-        if (sheets.Count == 0) sheets.AddRange(DefaultSheets);
 
         if (!File.Exists(xlsxPath))
         {
@@ -55,21 +59,21 @@ internal static class Program
         }
 
         var errors = new List<string>();
-        var results = new List<(string File, byte[] Bytes)>();
-        var entries = new List<CodeGenerator.Entry>();
         Dictionary<string, TableRule> rules = TablesConfig.Load(rulesPath, errors);
+        var entries = new List<CodeGenerator.Entry>();
+        HashSet<string>? stringIds = null;
 
         // Excel/LibreOffice가 열어 둔 상태에서도 읽도록 공유 모드로 연다.
         using (var fs = new FileStream(xlsxPath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
         using (var wb = new XLWorkbook(fs))
         {
-            foreach (string name in sheets)
+            // 변환 대상: '#' 시트·skip 규칙 시트를 뺀 모든 시트 (strings 포함).
+            // 검증(참조)을 위해 --sheet가 있어도 전부 읽고, 출력만 골라서 한다.
+            foreach (IXLWorksheet ws in wb.Worksheets)
             {
-                if (!wb.TryGetWorksheet(name, out IXLWorksheet? ws))
-                {
-                    errors.Add($"{name} — 시트를 찾을 수 없음");
-                    continue;
-                }
+                string name = ws.Name;
+                if (name.StartsWith('#')) continue;
+                if (rules.TryGetValue(name, out TableRule? rule) && rule.Skip) continue;
 
                 SheetTable? table = SheetReader.Read(ws, errors);
                 if (table == null) continue;
@@ -77,11 +81,24 @@ internal static class Program
                 List<Column>? keyCols = TablesConfig.ResolveKey(table, rules, errors);
                 if (keyCols == null) continue;
                 TablesConfig.CheckDuplicateKeys(table, keyCols, errors);
-
                 entries.Add(new CodeGenerator.Entry(table, keyCols));
-                results.Add((FileNameOf(name), JsonExporter.Export(table)));
             }
+
         }
+
+        // stringKeys 검증용 stringID 집합 (strings 시트의 키)
+        CodeGenerator.Entry? strings = entries.Find(e => e.Table.Name == StringsSheet);
+        if (strings != null)
+        {
+            int ki = strings.Table.Columns.IndexOf(strings.KeyCols[0]);
+            stringIds = new HashSet<string>(strings.Table.Rows.Select(r => r[ki].Text));
+        }
+
+        foreach (string sheet in onlySheets)
+            if (!entries.Any(e => e.Table.Name == sheet))
+                errors.Add($"{sheet} — 변환 대상 시트가 아님 (없거나 skip/#/strings)");
+
+        TablesConfig.CheckReferences(entries, stringIds, rules, errors);
 
         // 오류가 하나라도 있으면 아무 파일도 쓰지 않는다.
         if (errors.Count > 0)
@@ -91,36 +108,50 @@ internal static class Program
             return 1;
         }
 
-        Directory.CreateDirectory(outDir);
-        foreach (var (file, bytes) in results)
+        // 파일 하나를 쓰거나(기본) 비교만 한다(--check). 내용이 같으면 쓰지 않는다
+        // (mtime 유지 → Unity가 불필요하게 다시 임포트하지 않음).
+        string Emit(string path, byte[] bytes)
         {
-            string path = Path.Combine(outDir, file);
-            // 내용이 같으면 쓰지 않는다 (mtime 유지 → Unity 불필요한 재임포트 방지).
             bool same = File.Exists(path) && File.ReadAllBytes(path).AsSpan().SequenceEqual(bytes);
-            if (!same) File.WriteAllBytes(path, bytes);
-            Console.WriteLine($"{(same ? "변경 없음" : "기록")}: {file} ({bytes.Length:N0} bytes)");
+            if (same) return "변경 없음";
+            if (check)
+            {
+                stale++;
+                return File.Exists(path) ? "오래됨" : "없음";
+            }
+            Directory.CreateDirectory(Path.GetDirectoryName(path)!);
+            File.WriteAllBytes(path, bytes);
+            return "기록";
+        }
+
+        foreach (CodeGenerator.Entry e in entries)
+        {
+            if (onlySheets.Count > 0 && !onlySheets.Contains(e.Table.Name)) continue;
+            string file = CodeGenerator.Pascal(e.Table.Name) + ".json";
+            byte[] bytes = JsonExporter.Export(e.Table);
+            Console.WriteLine($"{Emit(Path.Combine(outDir, file), bytes)}: {file} ({bytes.Length:N0} bytes)");
         }
 
         // --sheet로 일부만 변환할 때 생성 C#을 만들면 다른 시트의 클래스가 사라지므로 건너뛴다.
-        if (sheetsGiven)
+        if (onlySheets.Count > 0 || customOut)
         {
-            Console.WriteLine("참고: --sheet 지정 시 C# 생성은 건너뜁니다 (전체 변환 때만 생성).");
-            return 0;
+            Console.WriteLine("참고: --sheet 또는 --out 지정 시 C# 생성은 건너뜁니다 (기본 출력의 전체 변환 때만 생성).");
+        }
+        else
+        {
+            byte[] cs = new UTF8Encoding(false).GetBytes(CodeGenerator.Generate(entries));
+            foreach (string path in csPaths)
+                Console.WriteLine($"{Emit(path, cs)}: {Path.GetRelativePath(repoRoot, path)} ({cs.Length:N0} bytes)");
         }
 
-        byte[] cs = new UTF8Encoding(false).GetBytes(CodeGenerator.Generate(entries));
-        foreach (string path in csPaths)
+        if (check && stale > 0)
         {
-            Directory.CreateDirectory(Path.GetDirectoryName(path)!);
-            bool same = File.Exists(path) && File.ReadAllBytes(path).AsSpan().SequenceEqual(cs);
-            if (!same) File.WriteAllBytes(path, cs);
-            Console.WriteLine($"{(same ? "변경 없음" : "기록")}: {Path.GetRelativePath(repoRoot, path)} ({cs.Length:N0} bytes)");
+            Console.Error.WriteLine($"검사 실패 — 최신이 아닌 파일 {stale}개. `dotnet run --project Tools/TableConverter`로 다시 변환하세요.");
+            return 1;
         }
+        if (check) Console.WriteLine("검사 통과 — 모든 출력이 xlsx와 일치합니다.");
         return 0;
     }
-
-    // spiritSkills → SpiritSkills.json
-    static string FileNameOf(string sheet) => char.ToUpperInvariant(sheet[0]) + sheet[1..] + ".json";
 
     static string? FindRepoRoot()
     {

@@ -84,7 +84,7 @@ internal static class CodeGenerator
                 L($"        /// <summary>{Escape(c.Label)}</summary>");
             string type = CsType(c);
             string init = c.IsList ? $" = new {type}()" : c.Type == ColType.String ? " = \"\"" : "";
-            L($"        public {type} {c.Key}{init};");
+            L($"        public {type} {Id(c.Key)}{init};");
         }
         L("    }");
         L();
@@ -99,12 +99,12 @@ internal static class CodeGenerator
         if (e.KeyCols.Count == 1)
         {
             keyType = CsType(e.KeyCols[0]);
-            keyOf = $"r.{e.KeyCols[0].Key}";
+            keyOf = $"r.{Id(e.KeyCols[0].Key)}";
         }
         else
         {
-            keyType = "(" + string.Join(", ", e.KeyCols.Select(k => $"{CsType(k)} {k.Key}")) + ")";
-            keyOf = "(" + string.Join(", ", e.KeyCols.Select(k => $"r.{k.Key}")) + ")";
+            keyType = "(" + string.Join(", ", e.KeyCols.Select(k => $"{CsType(k)} {Id(k.Key)}")) + ")";
+            keyOf = "(" + string.Join(", ", e.KeyCols.Select(k => $"r.{Id(k.Key)}")) + ")";
         }
 
         L($"    public sealed class {pascal}Table : RowTable<{keyType}, {pascal}Row>");
@@ -160,6 +160,20 @@ internal static class CodeGenerator
         };
         return c.IsList ? $"List<{t}>" : t;
     }
+
+    // C# 예약어와 겹치는 컬럼명은 @접두사로 쓴다 (예: clues.case → @case). JSON 키는 그대로.
+    static readonly HashSet<string> Keywords = new()
+    {
+        "abstract","as","base","bool","break","byte","case","catch","char","checked","class","const","continue",
+        "decimal","default","delegate","do","double","else","enum","event","explicit","extern","false","finally",
+        "fixed","float","for","foreach","goto","if","implicit","in","int","interface","internal","is","lock","long",
+        "namespace","new","null","object","operator","out","override","params","private","protected","public",
+        "readonly","ref","return","sbyte","sealed","short","sizeof","stackalloc","static","string","struct","switch",
+        "this","throw","true","try","typeof","uint","ulong","unchecked","unsafe","ushort","using","virtual","void",
+        "volatile","while",
+    };
+
+    static string Id(string name) => Keywords.Contains(name) ? "@" + name : name;
 
     public static string Pascal(string sheet) => char.ToUpperInvariant(sheet[0]) + sheet[1..];
 

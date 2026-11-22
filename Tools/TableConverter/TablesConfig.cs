@@ -2,10 +2,23 @@ using System.Text.Json;
 
 namespace TableConverter;
 
-/// <summary>시트별 추가 규칙 (tables.json). 2단계: key. 3단계에서 refs·stringKeys 추가 예정.</summary>
+/// <summary>시트별 추가 규칙 (tables.json).</summary>
 internal sealed class TableRule
 {
+    /// <summary>키 컬럼(복합 가능). 생략하면 첫 데이터 컬럼.</summary>
     public List<string>? Key { get; set; }
+
+    /// <summary>true면 변환하지 않는다 (레거시 시트 등).</summary>
+    public bool Skip { get; set; }
+
+    /// <summary>컬럼 → 대상 시트. 값(리스트면 각 요소)이 대상 시트의 키여야 한다. 0은 '없음'으로 허용.</summary>
+    public Dictionary<string, string>? Refs { get; set; }
+
+    /// <summary>값이 strings 시트의 stringID여야 하는 컬럼.</summary>
+    public List<string>? StringKeys { get; set; }
+
+    /// <summary>stringKeys와 같지만 누락을 오류가 아니라 경고로만 알린다 (문안이 아직 작성 중인 컬럼).</summary>
+    public List<string>? SoftStringKeys { get; set; }
 }
 
 internal static class TablesConfig
@@ -53,6 +66,79 @@ internal static class TablesConfig
             }
         }
         return result;
+    }
+
+    /// <summary>refs·stringKeys 검증. 오류 위치는 문제가 된 셀 주소.</summary>
+    public static void CheckReferences(List<CodeGenerator.Entry> entries, HashSet<string>? stringIds,
+        Dictionary<string, TableRule> rules, List<string> errors)
+    {
+        // 대상 시트별 키 집합 (단일 키만 참조 대상이 될 수 있다)
+        var keySets = new Dictionary<string, HashSet<string>>();
+        foreach (var e in entries)
+        {
+            if (e.KeyCols.Count != 1) continue;
+            int ki = e.Table.Columns.IndexOf(e.KeyCols[0]);
+            keySets[e.Table.Name] = new HashSet<string>(e.Table.Rows.Select(r => r[ki].Text));
+        }
+
+        foreach (var e in entries)
+        {
+            if (!rules.TryGetValue(e.Table.Name, out TableRule? rule)) continue;
+            SheetTable t = e.Table;
+
+            if (rule.Refs != null)
+            {
+                foreach (var (colName, target) in rule.Refs)
+                {
+                    int ci = t.Columns.FindIndex(c => c.Key == colName);
+                    if (ci < 0) { errors.Add($"{t.Name} — tables.json refs의 컬럼 '{colName}'이 시트에 없음"); continue; }
+                    if (!keySets.TryGetValue(target, out HashSet<string>? set))
+                    {
+                        errors.Add($"{t.Name} — refs '{colName}' → '{target}': 대상 시트가 없거나 단일 키가 아님");
+                        continue;
+                    }
+                    foreach (Raw[] row in t.Rows)
+                        foreach (string v in SheetReader.Elements(t.Columns[ci], row[ci]))
+                            if (v != "0" && !set.Contains(v))
+                                errors.Add($"{t.Name}!{row[ci].Address} — {colName} {v}가 {target}에 없음");
+                }
+            }
+
+            CheckStringKeys(t, rule.StringKeys, soft: false, stringIds, errors);
+            CheckStringKeys(t, rule.SoftStringKeys, soft: true, stringIds, errors);
+        }
+    }
+
+    static void CheckStringKeys(SheetTable t, List<string>? cols, bool soft, HashSet<string>? stringIds, List<string> errors)
+    {
+        if (cols == null) return;
+        if (stringIds == null)
+        {
+            errors.Add($"{t.Name} — stringKeys를 검증하려면 strings 시트가 필요함");
+            return;
+        }
+        foreach (string colName in cols)
+        {
+            int ci = t.Columns.FindIndex(c => c.Key == colName);
+            if (ci < 0) { errors.Add($"{t.Name} — tables.json의 stringKeys 컬럼 '{colName}'이 시트에 없음"); continue; }
+
+            var missing = new List<(string Addr, string Id)>();
+            foreach (Raw[] row in t.Rows)
+                foreach (string v in SheetReader.Elements(t.Columns[ci], row[ci]))
+                    if (!stringIds.Contains(v))
+                        missing.Add((row[ci].Address, v));
+
+            if (soft)
+            {
+                if (missing.Count > 0)
+                    Console.WriteLine($"경고: {t.Name}.{colName} — stringID {missing.Count}개가 strings에 없음 (예: {t.Name}!{missing[0].Addr} '{missing[0].Id}')");
+            }
+            else
+            {
+                foreach (var (addr, id) in missing)
+                    errors.Add($"{t.Name}!{addr} — stringID '{id}'가 strings에 없음");
+            }
+        }
     }
 
     /// <summary>키 중복 검사. 오류 위치는 중복된 행의 키 셀 주소.</summary>

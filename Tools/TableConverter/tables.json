@@ -1,4 +1,109 @@
 {
-  // 시트별 추가 규칙. key를 생략하면 첫 데이터 컬럼이 키.
-  "characterLevel": { "key": ["group", "level"] }
+  // 시트별 추가 규칙.
+  //   key         : 키 컬럼(복합 가능). 생략하면 첫 데이터 컬럼
+  //   skip        : true면 변환하지 않음 (레거시 시트)
+  //   refs        : { 컬럼: 대상 시트 } — 값(리스트면 각 요소)이 대상 시트의 키여야 함 (0 = 없음)
+  //   stringKeys  : 값이 strings 시트의 stringID여야 하는 컬럼
+  // 값의 의미가 다른 컬럼 값에 따라 달라지는 컬럼(triggerValue, conditionValue 등)은 검증하지 않는다.
+
+  // 레거시: 이전 핵앤슬래쉬(무기 중심) 방향의 시트. 원혼 시스템으로 대체됨.
+  "weapons":      { "skip": true },
+  "weaponCombos": { "skip": true },
+  "skills":       { "skip": true },
+  "skillNodes":   { "skip": true },
+
+  // ---- 월드·스토리 ----
+  "regions": {
+    "refs": { "chapter": "chapters", "conRegion": "regions" },
+    "stringKeys": ["name"]
+  },
+  "passages": {
+    "refs": { "region": "regions", "linkRegion": "regions" }
+  },
+  "worldEffects": {
+    "refs": { "region": "regions" }
+  },
+  "cases": {
+    "refs": { "chapter": "chapters" },
+    "stringKeys": ["name"]
+  },
+  "clues": {
+    "refs": { "case": "cases", "chapter": "chapters", "region": "regions", "enableBy": "worldEffects" },
+    "stringKeys": ["name"]
+  },
+  "npcs": {
+    "refs": { "chapter": "chapters", "region": "regions" },
+    "stringKeys": ["name"]
+  },
+  "dialogues": {
+    "refs": { "npc": "npcs", "giveClue": "clues" },
+    // 대사 문안(Dlg_*)이 strings에 아직 작성되지 않아 경고로만 둔다. 작성이 끝나면 stringKeys로 올린다.
+    "softStringKeys": ["textKey"]
+  },
+  "quests": {
+    // rewardItem 컬럼의 값(96101·96102)은 아이템이 아니라 dropGroups의 ID다.
+    "refs": { "chapter": "chapters", "region": "regions", "giverNpc": "npcs", "rewardItem": "dropGroups" },
+    "stringKeys": ["name"]
+  },
+  "beliefChoices": {
+    "refs": { "dialogue": "dialogues", "chapter": "chapters" },
+    "stringKeys": ["textKey"]
+  },
+  "chapters": {
+    "refs": { "conChapter": "chapters", "startRegion": "regions", "bossRegion": "regions", "boss": "characterInfos", "clearStep": "chapterSteps" },
+    "stringKeys": ["name", "subtitle"]
+  },
+  "chapterSteps": {
+    "refs": { "chapter": "chapters", "region": "regions" }
+  },
+
+  // ---- 캐릭터·성장 ----
+  "characterInfos": {
+    "refs": { "monsterType": "monsterTypes", "chapter": "chapters", "region": "regions", "dropID": "drops" },
+    "stringKeys": ["name"]
+  },
+  "characterLevel": {
+    "key": ["group", "level"],
+    "refs": { "group": "characterInfos" }
+  },
+  "items": {
+    "stringKeys": ["name"]
+  },
+
+  // ---- 원혼(직업) ----
+  "spirits": {
+    "refs": { "skillIDs": "spiritSkills" },
+    "stringKeys": ["name", "weaponName"]
+  },
+  "spiritSkills": {
+    "refs": { "spiritID": "spirits", "statusIDs": "statusEffects" },
+    "stringKeys": ["name"]
+  },
+  "statusEffects": {
+    "stringKeys": ["name"]
+  },
+
+  // ---- 몬스터·던전 ----
+  "monsterTypes": {
+    "stringKeys": ["name"]
+  },
+  "drops": {
+    "refs": { "monsterType": "monsterTypes", "dropGroup": "dropGroups" }
+  },
+  "spawnGroups": {
+    "refs": { "chapter": "chapters", "composition": "characterInfos" }
+  },
+  "bossPhases": {
+    "refs": { "boss": "characterInfos" }
+  },
+  "bossSkills": {
+    "refs": { "boss": "characterInfos", "status": "statusEffects" }
+  },
+  "dungeons": {
+    "refs": { "chapter": "chapters", "boss": "characterInfos", "regions": "regions", "unlockStep": "chapterSteps", "clearStep": "chapterSteps", "clueIDs": "clues", "dropGroup": "dropGroups" },
+    "stringKeys": ["name"]
+  },
+  "dungeonSections": {
+    "refs": { "dungeonID": "dungeons", "region": "regions", "spawnGroup": "spawnGroups", "eliteID": "characterInfos", "stepID": "chapterSteps" }
+  }
 }

@@ -32,7 +32,7 @@ internal static class SheetReader
     static readonly Regex FloatHintRe = new(@"\|\s*float\s*$", RegexOptions.IgnoreCase | RegexOptions.Compiled);
     const string ListSuffix = "<List>";
 
-    public static SheetTable? Read(IXLWorksheet ws, List<string> errors)
+    public static SheetTable? Read(IXLWorksheet ws, List<string> errors, bool quiet = false)
     {
         int errorsBefore = errors.Count;
         var table = new SheetTable { Name = ws.Name };
@@ -97,7 +97,7 @@ internal static class SheetReader
 
         // --- 타입 판정
         for (int i = 0; i < table.Columns.Count; i++)
-            InferType(table, i, errors);
+            InferType(table, i, errors, quiet);
 
         return errors.Count == errorsBefore ? table : null;
     }
@@ -127,7 +127,7 @@ internal static class SheetReader
             yield return part;
     }
 
-    static void InferType(SheetTable table, int ci, List<string> errors)
+    static void InferType(SheetTable table, int ci, List<string> errors, bool quiet)
     {
         Column col = table.Columns[ci];
         bool allInt = true, anyValue = false, wide = false;
@@ -162,7 +162,8 @@ internal static class SheetReader
         {
             // 데이터가 전혀 없는 컬럼은 판정 근거가 없다. 문자열로 두고 경고만 한다.
             col.Type = ColType.String;
-            Console.WriteLine($"경고: {table.Name}.{col.Key} — 데이터가 없어 string으로 처리");
+            // strings의 언어 컬럼(CN·TW·JP 등)은 번역 전에는 비어 있는 것이 정상이라 알리지 않는다.
+            if (!quiet && table.Name != "strings") Console.WriteLine($"경고: {table.Name}.{col.Key} — 데이터가 없어 string으로 처리");
             return;
         }
 

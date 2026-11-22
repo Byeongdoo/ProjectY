@@ -70,7 +70,7 @@
 
 ### strings
 
-- 출력 `Strings.json`: `{ "rows": [ { "id": "Region_61101", "kr": "...", "en": "...", "cn": "...", "tw": "...", "jp": "..." } ] }`
+- 출력 `Strings.json`: `{ "rows": [ { "stringID": "Region_61101", "KR": "...", "EN": "...", "CN": "...", "TW": "...", "JP": "..." } ] }` (필드명은 시트 2행 키 그대로)
 - `#`로 시작하는 언어 컬럼(DEU 등), `//` 행은 제외. 클라는 설정된 언어 컬럼을 조회하고, 비어 있으면 KR로 대체.
 - 언어가 늘어 파일이 커지면 언어별 파일(`Strings.KR.json` …)로 쪼갠다(지금은 하지 않는다).
 
@@ -99,15 +99,42 @@
 - **2단계 구현 완료, 클라 Unity 컴파일은 미확인**: 변환기가 C# 데이터 클래스·테이블·`TableManager`를 생성한다 (`Server/Server/Data/Generated/Tables.g.cs`, `Client/Assets/Scripts/Data/Generated/Tables.g.cs`, 내용 동일). 시트당 `<Sheet>Row`(필드 = JSON 키), `<Sheet>File`(`rows`), `<Sheet>Table`(키 조회). 키는 기본 첫 컬럼, 예외는 `Tools/TableConverter/tables.json`의 `key`(예: `characterLevel` = `(group, level)`). 키 중복은 변환 단계에서도 오류로 잡는다. `--sheet`로 일부만 변환할 때는 C# 생성을 건너뛴다.
   - 서버: `FileTableReader`(Newtonsoft) + `Program.Main`에서 `TableManager.LoadAll` 호출, 실패 시 메시지 출력 후 종료. 빌드 성공, 기동 확인, 별도 테스트로 조회 값(`spirits` 5 / `spiritSkills` 20 / `characterLevel` 65, 복합 키, 없는 경로 오류 메시지) 확인.
   - 클라: `ResourcesTableReader`(Resources + `JsonUtility`) + `DataManager.Init`에서 `TableManager.LoadAll` 호출. C# 9 + Unity 스텁으로 별도 컴파일은 통과했지만, **실제 Unity에서의 컴파일·`.meta` 생성·`JsonUtility` 역직렬화는 아직 확인하지 못했다**(Pipeline 패키지가 없어 CLI로 Editor를 구동할 수 없음). Unity를 열어 컴파일 오류가 없는지, Play 시 로딩 로그가 정상인지 확인해야 한다.
-- 미구현: 아래 3~5단계.
+- **3단계 완료 (2026-11-22)**: 변환 대상을 전 시트로 확대(28개). `#` 시트·`strings`(4단계)·`skip` 시트는 제외. `tables.json`에 시트별 규칙을 둔다.
+  - `skip`: 레거시 무기 계열 4개(`weapons`·`weaponCombos`·`skills`·`skillNodes`) 변환 제외.
+  - `refs`: 컬럼 값(리스트면 각 요소)이 대상 시트의 키여야 한다. **0은 '없음'으로 허용.** 어긋나면 `시트!셀 — …` 오류로 중단.
+  - `stringKeys`: 값이 `strings`의 stringID여야 한다. `softStringKeys`는 같은 검사를 경고로만 한다(문안 작성 중인 컬럼, 현재 `dialogues.textKey`).
+  - 값의 의미가 다른 컬럼 값에 따라 달라지는 컬럼(`worldEffects.triggerValue`, `quests.conditionValue` 등)은 검증하지 않는다.
+  - C# 예약어와 겹치는 컬럼명은 `@`를 붙여 생성한다(`clues.case` → `@case`, JSON 키는 그대로).
+  - `--sheet`/`--out`을 주면 C# 생성은 건너뛴다(기본 출력의 전체 변환일 때만 생성).
+  - 검증 중 확인된 데이터 사실: `clues.enableBy`는 단서가 아니라 `worldEffects` ID, `quests.rewardItem`은 아이템이 아니라 `dropGroups` ID(컬럼명과 의미가 다름).
+- **4단계 완료 (2026-11-22)**: `strings`도 일반 시트처럼 변환한다(`Strings.json`, `StringsRow`/`StringsTable`, 키 `stringID`). 필드명은 시트 2행 키 그대로(`stringID`, `KR`, `EN`, `CN`, `TW`, `JP`). `#` 언어 컬럼(DEU 등)과 `//` 구분 행은 제외, 현재 206행. 비어 있는 언어 컬럼(CN·TW·JP)은 경고 없이 빈 문자열.
+  - 클라: `Client/Assets/Scripts/Data/Localization.cs`의 `Localization.Get(stringID)`가 현재 언어(`Localization.Current`)의 문자열을 돌려준다. 번역이 비어 있으면 KR로 대체, stringID 자체가 없으면 `[stringID]`를 돌려줘 누락이 화면에서 보이게 한다.
+  - 다른 시트의 `name`·`textKey` 값은 표시 문자열이 아니라 stringID다. 화면 출력 때 반드시 `Localization.Get`을 거친다.
+- **5단계 일부 완료 (2026-11-22)**:
+  - `--check`: 파일을 쓰지 않고 현재 JSON·생성 C#이 xlsx와 일치하는지 검사한다. 다르거나 없으면 종료 코드 1. 오류(검증 실패)도 종료 코드 1. 변환 전 커밋·CI 검증용.
+  - 에디터 메뉴: `Client/Assets/Editor/TableExporter.cs` — `Tools > ProjectY > Table > Export JSON` / `Check`. 변환기를 `dotnet run`으로 호출하고 결과를 Console에 보여준 뒤 `AssetDatabase.Refresh()`한다. dotnet SDK가 PATH에 있어야 한다. 출력이 파이프로 넘어가면 변환기는 UTF-8로 출력한다.
+  - **미완료: 레거시 로더 교체·삭제.** 아래 "레거시 정리" 참고.
+
+## 레거시 정리 (미완료 — 결정 필요)
+
+기존 `StatData.json`/`SkillData.json`은 단순 로더가 아니라 **현재 동작하는 프로토타입 전투**가 쓰고 있어서, 새 테이블로 바꾸면 동작이 달라진다.
+
+| 사용처 | 쓰는 것 | 새 테이블과의 차이 |
+|---|---|---|
+| `ClientSession.cs` — 플레이어 생성 | `StatDict[1]` (체력 200, 공격 20, 속도 10.0) | `characterLevel` 주인공은 체력 500·공격 100·이동 4칸/초 — 수치와 단위가 다름 |
+| `Monster.cs` — 몬스터 공격 | `SkillDict[1]` (평타: 피해 10, 쿨타임 0.5) | 새 체계의 평타는 스킬이 아니라 원혼 스탯(`basicCoef` 등) |
+| `GameRoom.cs` — `HandleSkill` | `SkillDict[SkillId]`의 `skillType`(SkillAuto/SkillProjectile)·피해·쿨타임·투사체 | `spiritSkills`에는 투사체·고정 피해 개념이 없고 계수·대상 타입 기반 |
+
+즉 로더만 바꿀 수 없고 전투 로직(원혼·대상 선택·계수 피해)을 새로 만들 때 함께 교체해야 한다. 그때 `DataManager`·`Data.Contents.cs`(서버·클라)와 두 JSON, 레거시 시트 4개를 삭제한다.
+- 미구현: 위 레거시 교체·삭제.
 
 ## 구현 순서
 
 1. ✅ 시트 읽기 + 타입 판정 + JSON 출력 (`spirits`, `spiritSkills`, `characterLevel` 3개로 시작). 출력 결정성 확인.
 2. C# 클래스 생성 + `TableManager`(서버 먼저, 클라는 Unity 컴파일 확인).
-3. `tables.json` 기반 검증(키·참조·stringID). 전 시트로 확대.
-4. `strings`.
-5. `--check` 모드, 레거시 로더 교체·삭제, 에디터 메뉴 래퍼.
+3. ✅ `tables.json` 기반 검증(키·참조·stringID). 전 시트로 확대.
+4. ✅ `strings`.
+5. ✅ `--check` 모드, ✅ 에디터 메뉴 래퍼, ⏳ 레거시 로더 교체·삭제(전투 로직 재작성 시 함께 — 위 "레거시 정리").
 
 ## 열린 결정
 
