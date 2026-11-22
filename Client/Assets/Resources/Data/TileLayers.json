@@ -43,13 +43,6 @@
       "worldSwap": 1
     },
     {
-      "layerID": 8607,
-      "name": "GameplayMarkers",
-      "sortOrder": 50,
-      "collision": 0,
-      "worldSwap": 0
-    },
-    {
       "layerID": 8608,
       "name": "Foreground",
       "sortOrder": 100,
