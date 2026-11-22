@@ -221,6 +221,37 @@ namespace Table
         public CluesTable(IEnumerable<CluesRow> rows) : base("clues", rows, r => r.clueID) { }
     }
 
+    // ===== puzzles =====
+    [Serializable]
+    public class PuzzlesRow
+    {
+        /// <summary>고유 아이디</summary>
+        public int puzzleID;
+        /// <summary>단서</summary>
+        public int clueID;
+        /// <summary>조작 형식</summary>
+        public int form;
+        /// <summary>여는 곳</summary>
+        public int place;
+        /// <summary>이승 쪽 근거</summary>
+        public List<int> sources = new List<int>();
+        /// <summary>조각 수</summary>
+        public int pieceCount;
+        /// <summary>정답</summary>
+        public string answer = "";
+    }
+
+    [Serializable]
+    public class PuzzlesFile
+    {
+        public List<PuzzlesRow> rows = new List<PuzzlesRow>();
+    }
+
+    public sealed class PuzzlesTable : RowTable<int, PuzzlesRow>
+    {
+        public PuzzlesTable(IEnumerable<PuzzlesRow> rows) : base("puzzles", rows, r => r.puzzleID) { }
+    }
+
     // ===== npcs =====
     [Serializable]
     public class NpcsRow
@@ -476,10 +507,6 @@ namespace Table
         public float attackSpeed;
         /// <summary>이동 속도(칸/초)</summary>
         public float moveSpeed;
-        /// <summary>[폐기] 경직 저항</summary>
-        public int staggerResist;
-        /// <summary>[폐기] 경직 한계치</summary>
-        public int staggerMax;
         /// <summary>경험치 보상</summary>
         public int expReward;
         /// <summary>다음 레벨 필요 경험치</summary>
@@ -613,8 +640,6 @@ namespace Table
         public float defMul;
         /// <summary>이동속도 배율</summary>
         public float moveMul;
-        /// <summary>[폐기] 경직 한계치</summary>
-        public int staggerMax;
         /// <summary>보상 배율</summary>
         public float rewardMul;
     }
@@ -884,6 +909,8 @@ namespace Table
         public float statusTime;
         /// <summary>탈진 시간</summary>
         public float exhaustTime;
+        /// <summary>이름 표시</summary>
+        public int showName;
     }
 
     [Serializable]
@@ -1050,6 +1077,122 @@ namespace Table
         public ObjectSwapsTable(IEnumerable<ObjectSwapsRow> rows) : base("objectSwaps", rows, r => r.swapID) { }
     }
 
+    // ===== levelMaps =====
+    [Serializable]
+    public class LevelMapsRow
+    {
+        /// <summary>고유 아이디</summary>
+        public int mapID;
+        /// <summary>종류</summary>
+        public int kind;
+        /// <summary>대상</summary>
+        public int refID;
+        /// <summary>가로(칸)</summary>
+        public int width;
+        /// <summary>세로(칸)</summary>
+        public int height;
+        /// <summary>카메라</summary>
+        public int camera;
+    }
+
+    [Serializable]
+    public class LevelMapsFile
+    {
+        public List<LevelMapsRow> rows = new List<LevelMapsRow>();
+    }
+
+    public sealed class LevelMapsTable : RowTable<int, LevelMapsRow>
+    {
+        public LevelMapsTable(IEnumerable<LevelMapsRow> rows) : base("levelMaps", rows, r => r.mapID) { }
+    }
+
+    // ===== levelObjects =====
+    [Serializable]
+    public class LevelObjectsRow
+    {
+        /// <summary>고유 아이디</summary>
+        public int objID;
+        /// <summary>맵</summary>
+        public int mapID;
+        /// <summary>타입</summary>
+        public int objType;
+        /// <summary>참조</summary>
+        public int refID;
+        /// <summary>X(칸)</summary>
+        public int x;
+        /// <summary>Y(칸)</summary>
+        public int y;
+        /// <summary>가로</summary>
+        public int w;
+        /// <summary>세로</summary>
+        public int h;
+        /// <summary>팩 크기</summary>
+        public int size;
+    }
+
+    [Serializable]
+    public class LevelObjectsFile
+    {
+        public List<LevelObjectsRow> rows = new List<LevelObjectsRow>();
+    }
+
+    public sealed class LevelObjectsTable : RowTable<int, LevelObjectsRow>
+    {
+        public LevelObjectsTable(IEnumerable<LevelObjectsRow> rows) : base("levelObjects", rows, r => r.objID) { }
+    }
+
+    // ===== menuScreens =====
+    [Serializable]
+    public class MenuScreensRow
+    {
+        /// <summary>고유 아이디</summary>
+        public int screenID;
+        /// <summary>여는 키</summary>
+        public string key = "";
+        /// <summary>이승</summary>
+        public int openLiving;
+        /// <summary>삼천도</summary>
+        public int openLobby;
+        /// <summary>던전</summary>
+        public int openDungeon;
+    }
+
+    [Serializable]
+    public class MenuScreensFile
+    {
+        public List<MenuScreensRow> rows = new List<MenuScreensRow>();
+    }
+
+    public sealed class MenuScreensTable : RowTable<int, MenuScreensRow>
+    {
+        public MenuScreensTable(IEnumerable<MenuScreensRow> rows) : base("menuScreens", rows, r => r.screenID) { }
+    }
+
+    // ===== menuElements =====
+    [Serializable]
+    public class MenuElementsRow
+    {
+        /// <summary>고유 아이디</summary>
+        public int elementID;
+        /// <summary>화면</summary>
+        public int screen;
+        /// <summary>요소 이름</summary>
+        public string name = "";
+        /// <summary>요구 문서 번호</summary>
+        public int sourceDoc;
+    }
+
+    [Serializable]
+    public class MenuElementsFile
+    {
+        public List<MenuElementsRow> rows = new List<MenuElementsRow>();
+    }
+
+    public sealed class MenuElementsTable : RowTable<int, MenuElementsRow>
+    {
+        public MenuElementsTable(IEnumerable<MenuElementsRow> rows) : base("menuElements", rows, r => r.elementID) { }
+    }
+
     // ===== strings =====
     [Serializable]
     public class StringsRow
@@ -1088,6 +1231,7 @@ namespace Table
         public static WorldEffectsTable WorldEffects { get; private set; }
         public static CasesTable Cases { get; private set; }
         public static CluesTable Clues { get; private set; }
+        public static PuzzlesTable Puzzles { get; private set; }
         public static NpcsTable Npcs { get; private set; }
         public static DialoguesTable Dialogues { get; private set; }
         public static QuestsTable Quests { get; private set; }
@@ -1113,6 +1257,10 @@ namespace Table
         public static LobbySpotsTable LobbySpots { get; private set; }
         public static TileLayersTable TileLayers { get; private set; }
         public static ObjectSwapsTable ObjectSwaps { get; private set; }
+        public static LevelMapsTable LevelMaps { get; private set; }
+        public static LevelObjectsTable LevelObjects { get; private set; }
+        public static MenuScreensTable MenuScreens { get; private set; }
+        public static MenuElementsTable MenuElements { get; private set; }
         public static StringsTable Strings { get; private set; }
 
         /// <summary>하나라도 실패하면 어느 파일인지 담은 예외를 던진다. 호출 쪽은 즉시 종료해야 한다.</summary>
@@ -1124,6 +1272,7 @@ namespace Table
             WorldEffects = Load<WorldEffectsFile, WorldEffectsTable>(reader, "WorldEffects", f => new WorldEffectsTable(f.rows));
             Cases = Load<CasesFile, CasesTable>(reader, "Cases", f => new CasesTable(f.rows));
             Clues = Load<CluesFile, CluesTable>(reader, "Clues", f => new CluesTable(f.rows));
+            Puzzles = Load<PuzzlesFile, PuzzlesTable>(reader, "Puzzles", f => new PuzzlesTable(f.rows));
             Npcs = Load<NpcsFile, NpcsTable>(reader, "Npcs", f => new NpcsTable(f.rows));
             Dialogues = Load<DialoguesFile, DialoguesTable>(reader, "Dialogues", f => new DialoguesTable(f.rows));
             Quests = Load<QuestsFile, QuestsTable>(reader, "Quests", f => new QuestsTable(f.rows));
@@ -1149,6 +1298,10 @@ namespace Table
             LobbySpots = Load<LobbySpotsFile, LobbySpotsTable>(reader, "LobbySpots", f => new LobbySpotsTable(f.rows));
             TileLayers = Load<TileLayersFile, TileLayersTable>(reader, "TileLayers", f => new TileLayersTable(f.rows));
             ObjectSwaps = Load<ObjectSwapsFile, ObjectSwapsTable>(reader, "ObjectSwaps", f => new ObjectSwapsTable(f.rows));
+            LevelMaps = Load<LevelMapsFile, LevelMapsTable>(reader, "LevelMaps", f => new LevelMapsTable(f.rows));
+            LevelObjects = Load<LevelObjectsFile, LevelObjectsTable>(reader, "LevelObjects", f => new LevelObjectsTable(f.rows));
+            MenuScreens = Load<MenuScreensFile, MenuScreensTable>(reader, "MenuScreens", f => new MenuScreensTable(f.rows));
+            MenuElements = Load<MenuElementsFile, MenuElementsTable>(reader, "MenuElements", f => new MenuElementsTable(f.rows));
             Strings = Load<StringsFile, StringsTable>(reader, "Strings", f => new StringsTable(f.rows));
         }
 

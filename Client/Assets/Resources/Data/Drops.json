@@ -36,8 +36,8 @@
       "dropID": 9105,
       "monsterType": 9005,
       "itemRate": 1,
-      "countMin": 2,
-      "countMax": 3,
+      "countMin": 1,
+      "countMax": 1,
       "dropGroup": 96005
     }
   ]

@@ -11,7 +11,7 @@
       "conditionValue": 64105,
       "conditionCount": 1,
       "rewardExp": 600,
-      "rewardItem": 96101
+      "rewardItem": 96111
     },
     {
       "questID": 83102,
@@ -24,7 +24,7 @@
       "conditionValue": 51102,
       "conditionCount": 1,
       "rewardExp": 180,
-      "rewardItem": 96102
+      "rewardItem": 96121
     },
     {
       "questID": 83103,
@@ -37,7 +37,7 @@
       "conditionValue": 2000101,
       "conditionCount": 10,
       "rewardExp": 180,
-      "rewardItem": 96102
+      "rewardItem": 96121
     },
     {
       "questID": 83201,
@@ -50,7 +50,7 @@
       "conditionValue": 64205,
       "conditionCount": 1,
       "rewardExp": 920,
-      "rewardItem": 96101
+      "rewardItem": 96112
     },
     {
       "questID": 83202,
@@ -63,7 +63,7 @@
       "conditionValue": 812033,
       "conditionCount": 1,
       "rewardExp": 276,
-      "rewardItem": 96102
+      "rewardItem": 96122
     },
     {
       "questID": 83203,
@@ -76,7 +76,7 @@
       "conditionValue": 2000202,
       "conditionCount": 8,
       "rewardExp": 276,
-      "rewardItem": 96102
+      "rewardItem": 96122
     },
     {
       "questID": 83301,
@@ -89,7 +89,7 @@
       "conditionValue": 64305,
       "conditionCount": 1,
       "rewardExp": 1440,
-      "rewardItem": 96101
+      "rewardItem": 96113
     },
     {
       "questID": 83302,
@@ -102,7 +102,7 @@
       "conditionValue": 51302,
       "conditionCount": 1,
       "rewardExp": 432,
-      "rewardItem": 96102
+      "rewardItem": 96123
     },
     {
       "questID": 83303,
@@ -115,7 +115,7 @@
       "conditionValue": 2000301,
       "conditionCount": 12,
       "rewardExp": 432,
-      "rewardItem": 96102
+      "rewardItem": 96123
     },
     {
       "questID": 83401,
@@ -128,7 +128,7 @@
       "conditionValue": 64405,
       "conditionCount": 1,
       "rewardExp": 2600,
-      "rewardItem": 96101
+      "rewardItem": 96114
     },
     {
       "questID": 83402,
@@ -141,7 +141,7 @@
       "conditionValue": 2000401,
       "conditionCount": 10,
       "rewardExp": 780,
-      "rewardItem": 96102
+      "rewardItem": 96124
     },
     {
       "questID": 83403,
@@ -154,7 +154,7 @@
       "conditionValue": 51401,
       "conditionCount": 1,
       "rewardExp": 780,
-      "rewardItem": 96102
+      "rewardItem": 96124
     },
     {
       "questID": 83501,
@@ -167,7 +167,7 @@
       "conditionValue": 64505,
       "conditionCount": 1,
       "rewardExp": 4640,
-      "rewardItem": 96101
+      "rewardItem": 96115
     },
     {
       "questID": 83502,
@@ -180,7 +180,7 @@
       "conditionValue": 51501,
       "conditionCount": 1,
       "rewardExp": 1392,
-      "rewardItem": 96102
+      "rewardItem": 96125
     }
   ]
 }

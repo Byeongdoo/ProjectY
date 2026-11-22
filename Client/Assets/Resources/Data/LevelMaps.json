@@ -1,0 +1,132 @@
+{
+  "rows": [
+    {
+      "mapID": 65101,
+      "kind": 1,
+      "refID": 61101,
+      "width": 48,
+      "height": 32,
+      "camera": 1
+    },
+    {
+      "mapID": 65102,
+      "kind": 1,
+      "refID": 61102,
+      "width": 72,
+      "height": 40,
+      "camera": 1
+    },
+    {
+      "mapID": 65103,
+      "kind": 1,
+      "refID": 61103,
+      "width": 32,
+      "height": 24,
+      "camera": 1
+    },
+    {
+      "mapID": 65104,
+      "kind": 2,
+      "refID": 87101,
+      "width": 106,
+      "height": 58,
+      "camera": 2
+    },
+    {
+      "mapID": 65201,
+      "kind": 1,
+      "refID": 61201,
+      "width": 56,
+      "height": 36,
+      "camera": 1
+    },
+    {
+      "mapID": 65202,
+      "kind": 1,
+      "refID": 61202,
+      "width": 80,
+      "height": 40,
+      "camera": 1
+    },
+    {
+      "mapID": 65203,
+      "kind": 2,
+      "refID": 87201,
+      "width": 108,
+      "height": 58,
+      "camera": 2
+    },
+    {
+      "mapID": 65301,
+      "kind": 1,
+      "refID": 61301,
+      "width": 60,
+      "height": 40,
+      "camera": 1
+    },
+    {
+      "mapID": 65302,
+      "kind": 1,
+      "refID": 61302,
+      "width": 40,
+      "height": 30,
+      "camera": 1
+    },
+    {
+      "mapID": 65303,
+      "kind": 2,
+      "refID": 87301,
+      "width": 108,
+      "height": 58,
+      "camera": 2
+    },
+    {
+      "mapID": 65401,
+      "kind": 1,
+      "refID": 61401,
+      "width": 64,
+      "height": 40,
+      "camera": 1
+    },
+    {
+      "mapID": 65402,
+      "kind": 1,
+      "refID": 61402,
+      "width": 56,
+      "height": 40,
+      "camera": 1
+    },
+    {
+      "mapID": 65403,
+      "kind": 2,
+      "refID": 87401,
+      "width": 110,
+      "height": 34,
+      "camera": 2
+    },
+    {
+      "mapID": 65404,
+      "kind": 2,
+      "refID": 87402,
+      "width": 108,
+      "height": 58,
+      "camera": 2
+    },
+    {
+      "mapID": 65501,
+      "kind": 1,
+      "refID": 61501,
+      "width": 64,
+      "height": 40,
+      "camera": 1
+    },
+    {
+      "mapID": 65502,
+      "kind": 2,
+      "refID": 87501,
+      "width": 108,
+      "height": 58,
+      "camera": 2
+    }
+  ]
+}

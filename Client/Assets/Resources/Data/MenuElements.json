@@ -1,0 +1,154 @@
+{
+  "rows": [
+    {
+      "elementID": 930101,
+      "screen": 9301,
+      "name": "장착 5부위",
+      "sourceDoc": 14
+    },
+    {
+      "elementID": 930102,
+      "screen": 9301,
+      "name": "보따리 40칸",
+      "sourceDoc": 14
+    },
+    {
+      "elementID": 930103,
+      "screen": 9301,
+      "name": "비교",
+      "sourceDoc": 14
+    },
+    {
+      "elementID": 930104,
+      "screen": 9301,
+      "name": "무당 능력치",
+      "sourceDoc": 12
+    },
+    {
+      "elementID": 930105,
+      "screen": 9301,
+      "name": "원혼별 적용 값",
+      "sourceDoc": 20
+    },
+    {
+      "elementID": 930106,
+      "screen": 9301,
+      "name": "동기화 표시",
+      "sourceDoc": 21
+    },
+    {
+      "elementID": 930107,
+      "screen": 9301,
+      "name": "혼백",
+      "sourceDoc": 14
+    },
+    {
+      "elementID": 930108,
+      "screen": 9307,
+      "name": "강화(U)·분해(X)",
+      "sourceDoc": 14
+    },
+    {
+      "elementID": 930109,
+      "screen": 9307,
+      "name": "보관함 100칸",
+      "sourceDoc": 23
+    },
+    {
+      "elementID": 930201,
+      "screen": 9302,
+      "name": "원혼 탭 1~5",
+      "sourceDoc": 13
+    },
+    {
+      "elementID": 930202,
+      "screen": 9302,
+      "name": "스킬 4줄 × 노드 3칸",
+      "sourceDoc": 13
+    },
+    {
+      "elementID": 930203,
+      "screen": 9302,
+      "name": "남은 포인트",
+      "sourceDoc": 13
+    },
+    {
+      "elementID": 930204,
+      "screen": 9302,
+      "name": "빌드 예시 적용",
+      "sourceDoc": 13
+    },
+    {
+      "elementID": 930205,
+      "screen": 9302,
+      "name": "리스펙(R)",
+      "sourceDoc": 13
+    },
+    {
+      "elementID": 930301,
+      "screen": 9303,
+      "name": "사건 목록",
+      "sourceDoc": 9
+    },
+    {
+      "elementID": 930302,
+      "screen": 9303,
+      "name": "단서 목록",
+      "sourceDoc": 9
+    },
+    {
+      "elementID": 930303,
+      "screen": 9303,
+      "name": "목격한 퍼즐",
+      "sourceDoc": 9
+    },
+    {
+      "elementID": 930401,
+      "screen": 9304,
+      "name": "챕터 진행 25단계",
+      "sourceDoc": 3
+    },
+    {
+      "elementID": 930402,
+      "screen": 9304,
+      "name": "퀘스트 목록",
+      "sourceDoc": 11
+    },
+    {
+      "elementID": 930403,
+      "screen": 9304,
+      "name": "보상 대기",
+      "sourceDoc": 11
+    },
+    {
+      "elementID": 930501,
+      "screen": 9305,
+      "name": "처음 클리어 이야기",
+      "sourceDoc": 21
+    },
+    {
+      "elementID": 930502,
+      "screen": 9305,
+      "name": "얻은 것",
+      "sourceDoc": 21
+    },
+    {
+      "elementID": 930503,
+      "screen": 9305,
+      "name": "목격한 퍼즐",
+      "sourceDoc": 9
+    },
+    {
+      "elementID": 930601,
+      "screen": 9306,
+      "name": "이승에 남은 일",
+      "sourceDoc": 1
+    },
+    {
+      "elementID": 930602,
+      "screen": 9306,
+      "name": "누르고 있기 확인",
+      "sourceDoc": 1
+    }
+  ]
+}

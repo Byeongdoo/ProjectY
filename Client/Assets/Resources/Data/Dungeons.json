@@ -17,7 +17,7 @@
       "clueIDs": [
         51103
       ],
-      "dropGroup": 96005
+      "dropGroup": 96011
     },
     {
       "dungeonID": 87201,
@@ -37,7 +37,7 @@
         51203,
         51204
       ],
-      "dropGroup": 96005
+      "dropGroup": 96012
     },
     {
       "dungeonID": 87301,
@@ -53,7 +53,7 @@
       "mobHpRate": 13,
       "sectionCount": 4,
       "clueIDs": [],
-      "dropGroup": 96005
+      "dropGroup": 96013
     },
     {
       "dungeonID": 87401,
@@ -71,7 +71,7 @@
       "clueIDs": [
         51402
       ],
-      "dropGroup": 96005
+      "dropGroup": 96014
     },
     {
       "dungeonID": 87402,
@@ -89,7 +89,7 @@
       "clueIDs": [
         51403
       ],
-      "dropGroup": 96005
+      "dropGroup": 96014
     },
     {
       "dungeonID": 87501,
@@ -108,7 +108,7 @@
       "clueIDs": [
         51502
       ],
-      "dropGroup": 96005
+      "dropGroup": 96015
     }
   ]
 }

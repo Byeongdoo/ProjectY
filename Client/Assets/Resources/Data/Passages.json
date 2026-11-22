@@ -25,6 +25,14 @@
       "openBy": 63101
     },
     {
+      "passageID": 62104,
+      "region": 61101,
+      "linkRegion": 0,
+      "livingPass": 1,
+      "dungeon": 0,
+      "openBy": 0
+    },
+    {
       "passageID": 62201,
       "region": 61201,
       "linkRegion": 61202,
@@ -57,6 +65,14 @@
       "openBy": 63301
     },
     {
+      "passageID": 62302,
+      "region": 61301,
+      "linkRegion": 0,
+      "livingPass": 1,
+      "dungeon": 0,
+      "openBy": 0
+    },
+    {
       "passageID": 62401,
       "region": 61401,
       "linkRegion": 61402,
@@ -73,11 +89,27 @@
       "openBy": 0
     },
     {
+      "passageID": 62403,
+      "region": 61401,
+      "linkRegion": 0,
+      "livingPass": 1,
+      "dungeon": 0,
+      "openBy": 0
+    },
+    {
       "passageID": 62501,
       "region": 61501,
       "linkRegion": 61502,
       "livingPass": 0,
       "dungeon": 87501,
+      "openBy": 0
+    },
+    {
+      "passageID": 62502,
+      "region": 61501,
+      "linkRegion": 0,
+      "livingPass": 1,
+      "dungeon": 0,
       "openBy": 0
     }
   ]

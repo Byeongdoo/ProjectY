@@ -1,0 +1,50 @@
+{
+  "rows": [
+    {
+      "puzzleID": 52201,
+      "clueID": 51204,
+      "form": 1,
+      "place": 2,
+      "sources": [
+        51202
+      ],
+      "pieceCount": 3,
+      "answer": "eye-0|chain-1|wave-2"
+    },
+    {
+      "puzzleID": 52301,
+      "clueID": 51303,
+      "form": 2,
+      "place": 1,
+      "sources": [
+        51302
+      ],
+      "pieceCount": 3,
+      "answer": "rot=90|dx=1|dy=-1"
+    },
+    {
+      "puzzleID": 52401,
+      "clueID": 51403,
+      "form": 3,
+      "place": 2,
+      "sources": [
+        51101
+      ],
+      "pieceCount": 6,
+      "answer": "부정거리|청배|오신|공수|축원|뒷전"
+    },
+    {
+      "puzzleID": 52501,
+      "clueID": 51502,
+      "form": 4,
+      "place": 2,
+      "sources": [
+        51204,
+        51303,
+        51403
+      ],
+      "pieceCount": 4,
+      "answer": "2|3|4"
+    }
+  ]
+}

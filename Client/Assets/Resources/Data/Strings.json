@@ -193,38 +193,6 @@
       "JP": ""
     },
     {
-      "stringID": "Weapon_7001",
-      "KR": "신장대·부적",
-      "EN": "Spirit Staff & Talismans",
-      "CN": "",
-      "TW": "",
-      "JP": ""
-    },
-    {
-      "stringID": "Weapon_7002",
-      "KR": "작두",
-      "EN": "Ritual Blade",
-      "CN": "",
-      "TW": "",
-      "JP": ""
-    },
-    {
-      "stringID": "Weapon_7003",
-      "KR": "쌍신칼",
-      "EN": "Twin Spirit Knives",
-      "CN": "",
-      "TW": "",
-      "JP": ""
-    },
-    {
-      "stringID": "Weapon_7004",
-      "KR": "삼지창",
-      "EN": "Trident",
-      "CN": "",
-      "TW": "",
-      "JP": ""
-    },
-    {
       "stringID": "Status_8001",
       "KR": "결박",
       "EN": "Bind",
@@ -252,166 +220,6 @@
       "stringID": "Status_8004",
       "KR": "둔화",
       "EN": "Slow",
-      "CN": "",
-      "TW": "",
-      "JP": ""
-    },
-    {
-      "stringID": "Skill_700100",
-      "KR": "소지(燒紙)",
-      "EN": "Talisman Burst",
-      "CN": "",
-      "TW": "",
-      "JP": ""
-    },
-    {
-      "stringID": "Skill_700101",
-      "KR": "결진(結陣)",
-      "EN": "Binding Circle",
-      "CN": "",
-      "TW": "",
-      "JP": ""
-    },
-    {
-      "stringID": "Skill_700102",
-      "KR": "신장 강림",
-      "EN": "Divine General",
-      "CN": "",
-      "TW": "",
-      "JP": ""
-    },
-    {
-      "stringID": "Skill_700103",
-      "KR": "초혼(招魂)",
-      "EN": "Soul Call",
-      "CN": "",
-      "TW": "",
-      "JP": ""
-    },
-    {
-      "stringID": "Skill_700104",
-      "KR": "만장(輓章)",
-      "EN": "Funeral Banner",
-      "CN": "",
-      "TW": "",
-      "JP": ""
-    },
-    {
-      "stringID": "Skill_700200",
-      "KR": "작두질",
-      "EN": "Whirling Blade",
-      "CN": "",
-      "TW": "",
-      "JP": ""
-    },
-    {
-      "stringID": "Skill_700201",
-      "KR": "내림",
-      "EN": "Descent",
-      "CN": "",
-      "TW": "",
-      "JP": ""
-    },
-    {
-      "stringID": "Skill_700202",
-      "KR": "날세우기",
-      "EN": "Whetting",
-      "CN": "",
-      "TW": "",
-      "JP": ""
-    },
-    {
-      "stringID": "Skill_700203",
-      "KR": "쓸어내기",
-      "EN": "Sweep",
-      "CN": "",
-      "TW": "",
-      "JP": ""
-    },
-    {
-      "stringID": "Skill_700204",
-      "KR": "작두 타기",
-      "EN": "Blade Dance",
-      "CN": "",
-      "TW": "",
-      "JP": ""
-    },
-    {
-      "stringID": "Skill_700300",
-      "KR": "난도(亂刀)",
-      "EN": "Flurry",
-      "CN": "",
-      "TW": "",
-      "JP": ""
-    },
-    {
-      "stringID": "Skill_700301",
-      "KR": "베고 지나기",
-      "EN": "Cleave Through",
-      "CN": "",
-      "TW": "",
-      "JP": ""
-    },
-    {
-      "stringID": "Skill_700302",
-      "KR": "살 새김",
-      "EN": "Death Mark",
-      "CN": "",
-      "TW": "",
-      "JP": ""
-    },
-    {
-      "stringID": "Skill_700303",
-      "KR": "연참",
-      "EN": "Rending Chain",
-      "CN": "",
-      "TW": "",
-      "JP": ""
-    },
-    {
-      "stringID": "Skill_700304",
-      "KR": "신칼 굿",
-      "EN": "Knife Rite",
-      "CN": "",
-      "TW": "",
-      "JP": ""
-    },
-    {
-      "stringID": "Skill_700400",
-      "KR": "걸어 비틀기",
-      "EN": "Twist Lock",
-      "CN": "",
-      "TW": "",
-      "JP": ""
-    },
-    {
-      "stringID": "Skill_700401",
-      "KR": "밀쳐내기",
-      "EN": "Shove",
-      "CN": "",
-      "TW": "",
-      "JP": ""
-    },
-    {
-      "stringID": "Skill_700402",
-      "KR": "버팀",
-      "EN": "Bulwark",
-      "CN": "",
-      "TW": "",
-      "JP": ""
-    },
-    {
-      "stringID": "Skill_700403",
-      "KR": "꿰뚫기",
-      "EN": "Impale",
-      "CN": "",
-      "TW": "",
-      "JP": ""
-    },
-    {
-      "stringID": "Skill_700404",
-      "KR": "진혼(鎭魂)",
-      "EN": "Requiem",
       "CN": "",
       "TW": "",
       "JP": ""
@@ -1708,6 +1516,70 @@
       "stringID": "LobbyNpc_8804",
       "KR": "주모",
       "EN": "Innkeeper",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "BossSkill_300010122",
+      "KR": "실그물",
+      "EN": "Thread Net",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "BossSkill_300020122",
+      "KR": "익사의 손",
+      "EN": "Drowning Hands",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "BossSkill_300030112",
+      "KR": "진법 파편",
+      "EN": "Array Shards",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "BossSkill_300040213",
+      "KR": "쇠사슬 묶기",
+      "EN": "Chain Bind",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "BossSkill_300040223",
+      "KR": "최후의 일격",
+      "EN": "Final Blow",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "BossSkill_300050122",
+      "KR": "혼 창 세례",
+      "EN": "Soul Spear Volley",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "BossSkill_300050132",
+      "KR": "세계 뒤집기",
+      "EN": "World Inversion",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "BossSkill_300050134",
+      "KR": "만령의 파도",
+      "EN": "Tide of Myriad Souls",
       "CN": "",
       "TW": "",
       "JP": ""

@@ -61,42 +61,6 @@
       ]
     },
     {
-      "configID": 20016,
-      "value": [
-        3
-      ]
-    },
-    {
-      "configID": 20017,
-      "value": [
-        0.07
-      ]
-    },
-    {
-      "configID": 20018,
-      "value": [
-        3
-      ]
-    },
-    {
-      "configID": 20019,
-      "value": [
-        0.35
-      ]
-    },
-    {
-      "configID": 20020,
-      "value": [
-        0.4
-      ]
-    },
-    {
-      "configID": 20021,
-      "value": [
-        6
-      ]
-    },
-    {
       "configID": 20022,
       "value": [
         0.5
@@ -147,7 +111,7 @@
     {
       "configID": 20030,
       "value": [
-        1
+        1.414
       ]
     },
     {
@@ -253,6 +217,18 @@
       ]
     },
     {
+      "configID": 20048,
+      "value": [
+        0.1
+      ]
+    },
+    {
+      "configID": 20049,
+      "value": [
+        2
+      ]
+    },
+    {
       "configID": 30001,
       "value": [
         20
@@ -292,6 +268,18 @@
       "configID": 30007,
       "value": [
         3
+      ]
+    },
+    {
+      "configID": 30008,
+      "value": [
+        3
+      ]
+    },
+    {
+      "configID": 30009,
+      "value": [
+        5
       ]
     },
     {
@@ -345,7 +333,7 @@
     {
       "configID": 40011,
       "value": [
-        0.25
+        0.17
       ]
     },
     {
@@ -400,6 +388,24 @@
       "configID": 50006,
       "value": [
         4
+      ]
+    },
+    {
+      "configID": 50007,
+      "value": [
+        40
+      ]
+    },
+    {
+      "configID": 50008,
+      "value": [
+        100
+      ]
+    },
+    {
+      "configID": 50009,
+      "value": [
+        2
       ]
     },
     {

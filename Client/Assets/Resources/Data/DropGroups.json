@@ -26,34 +26,138 @@
     },
     {
       "dropGroupID": 96004,
-      "rateNormal": 0,
-      "rateHigh": 0.4,
-      "rateRare": 0.4,
-      "rateEpic": 0.2,
+      "rateNormal": 0.2,
+      "rateHigh": 0.45,
+      "rateRare": 0.3,
+      "rateEpic": 0.05,
       "rateLegendary": 0
     },
     {
       "dropGroupID": 96005,
       "rateNormal": 0,
-      "rateHigh": 0,
-      "rateRare": 0.4,
-      "rateEpic": 0.4,
-      "rateLegendary": 0.2
+      "rateHigh": 0.2,
+      "rateRare": 0.45,
+      "rateEpic": 0.3,
+      "rateLegendary": 0.05
     },
     {
-      "dropGroupID": 96101,
+      "dropGroupID": 96011,
+      "rateNormal": 0.5,
+      "rateHigh": 0.5,
+      "rateRare": 0,
+      "rateEpic": 0,
+      "rateLegendary": 0
+    },
+    {
+      "dropGroupID": 96012,
+      "rateNormal": 0,
+      "rateHigh": 0.4,
+      "rateRare": 0.6,
+      "rateEpic": 0,
+      "rateLegendary": 0
+    },
+    {
+      "dropGroupID": 96013,
       "rateNormal": 0,
       "rateHigh": 0,
       "rateRare": 0.3,
-      "rateEpic": 0.5,
-      "rateLegendary": 0.2
+      "rateEpic": 0.7,
+      "rateLegendary": 0
     },
     {
-      "dropGroupID": 96102,
+      "dropGroupID": 96014,
       "rateNormal": 0,
-      "rateHigh": 0.4,
-      "rateRare": 0.45,
-      "rateEpic": 0.15,
+      "rateHigh": 0,
+      "rateRare": 0.2,
+      "rateEpic": 0.7,
+      "rateLegendary": 0.1
+    },
+    {
+      "dropGroupID": 96015,
+      "rateNormal": 0,
+      "rateHigh": 0,
+      "rateRare": 0,
+      "rateEpic": 0.7,
+      "rateLegendary": 0.3
+    },
+    {
+      "dropGroupID": 96111,
+      "rateNormal": 0,
+      "rateHigh": 1,
+      "rateRare": 0,
+      "rateEpic": 0,
+      "rateLegendary": 0
+    },
+    {
+      "dropGroupID": 96112,
+      "rateNormal": 0,
+      "rateHigh": 0,
+      "rateRare": 1,
+      "rateEpic": 0,
+      "rateLegendary": 0
+    },
+    {
+      "dropGroupID": 96113,
+      "rateNormal": 0,
+      "rateHigh": 0,
+      "rateRare": 0,
+      "rateEpic": 1,
+      "rateLegendary": 0
+    },
+    {
+      "dropGroupID": 96114,
+      "rateNormal": 0,
+      "rateHigh": 0,
+      "rateRare": 0,
+      "rateEpic": 1,
+      "rateLegendary": 0
+    },
+    {
+      "dropGroupID": 96115,
+      "rateNormal": 0,
+      "rateHigh": 0,
+      "rateRare": 0,
+      "rateEpic": 0,
+      "rateLegendary": 1
+    },
+    {
+      "dropGroupID": 96121,
+      "rateNormal": 0.7,
+      "rateHigh": 0.3,
+      "rateRare": 0,
+      "rateEpic": 0,
+      "rateLegendary": 0
+    },
+    {
+      "dropGroupID": 96122,
+      "rateNormal": 0,
+      "rateHigh": 0.7,
+      "rateRare": 0.3,
+      "rateEpic": 0,
+      "rateLegendary": 0
+    },
+    {
+      "dropGroupID": 96123,
+      "rateNormal": 0,
+      "rateHigh": 0.1,
+      "rateRare": 0.7,
+      "rateEpic": 0.2,
+      "rateLegendary": 0
+    },
+    {
+      "dropGroupID": 96124,
+      "rateNormal": 0,
+      "rateHigh": 0,
+      "rateRare": 0.2,
+      "rateEpic": 0.8,
+      "rateLegendary": 0
+    },
+    {
+      "dropGroupID": 96125,
+      "rateNormal": 0,
+      "rateHigh": 0,
+      "rateRare": 0.2,
+      "rateEpic": 0.8,
       "rateLegendary": 0
     }
   ]

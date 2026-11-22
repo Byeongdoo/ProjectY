@@ -11,8 +11,6 @@
       "criticalAttack": 1.5,
       "attackSpeed": 1,
       "moveSpeed": 4,
-      "staggerResist": 0,
-      "staggerMax": 0,
       "expReward": 0,
       "expToNext": 140,
       "expTotal": 0
@@ -28,8 +26,6 @@
       "criticalAttack": 1.5,
       "attackSpeed": 1,
       "moveSpeed": 4,
-      "staggerResist": 1,
-      "staggerMax": 0,
       "expReward": 0,
       "expToNext": 152,
       "expTotal": 140
@@ -45,8 +41,6 @@
       "criticalAttack": 1.5,
       "attackSpeed": 1,
       "moveSpeed": 4,
-      "staggerResist": 1,
-      "staggerMax": 0,
       "expReward": 0,
       "expToNext": 165,
       "expTotal": 292
@@ -62,8 +56,6 @@
       "criticalAttack": 1.5,
       "attackSpeed": 1,
       "moveSpeed": 4,
-      "staggerResist": 2,
-      "staggerMax": 0,
       "expReward": 0,
       "expToNext": 179,
       "expTotal": 457
@@ -79,8 +71,6 @@
       "criticalAttack": 1.5,
       "attackSpeed": 1,
       "moveSpeed": 4,
-      "staggerResist": 2,
-      "staggerMax": 0,
       "expReward": 0,
       "expToNext": 194,
       "expTotal": 636
@@ -96,8 +86,6 @@
       "criticalAttack": 1.5,
       "attackSpeed": 1,
       "moveSpeed": 4,
-      "staggerResist": 3,
-      "staggerMax": 0,
       "expReward": 0,
       "expToNext": 211,
       "expTotal": 830
@@ -113,8 +101,6 @@
       "criticalAttack": 1.5,
       "attackSpeed": 1,
       "moveSpeed": 4,
-      "staggerResist": 3,
-      "staggerMax": 0,
       "expReward": 0,
       "expToNext": 228,
       "expTotal": 1041
@@ -130,8 +116,6 @@
       "criticalAttack": 1.5,
       "attackSpeed": 1,
       "moveSpeed": 4,
-      "staggerResist": 4,
-      "staggerMax": 0,
       "expReward": 0,
       "expToNext": 248,
       "expTotal": 1269
@@ -147,8 +131,6 @@
       "criticalAttack": 1.5,
       "attackSpeed": 1,
       "moveSpeed": 4,
-      "staggerResist": 4,
-      "staggerMax": 0,
       "expReward": 0,
       "expToNext": 269,
       "expTotal": 1517
@@ -164,8 +146,6 @@
       "criticalAttack": 1.5,
       "attackSpeed": 1,
       "moveSpeed": 4,
-      "staggerResist": 5,
-      "staggerMax": 0,
       "expReward": 0,
       "expToNext": 292,
       "expTotal": 1786
@@ -181,8 +161,6 @@
       "criticalAttack": 1.5,
       "attackSpeed": 1,
       "moveSpeed": 4,
-      "staggerResist": 5,
-      "staggerMax": 0,
       "expReward": 0,
       "expToNext": 317,
       "expTotal": 2078
@@ -198,8 +176,6 @@
       "criticalAttack": 1.5,
       "attackSpeed": 1,
       "moveSpeed": 4,
-      "staggerResist": 6,
-      "staggerMax": 0,
       "expReward": 0,
       "expToNext": 343,
       "expTotal": 2395
@@ -215,8 +191,6 @@
       "criticalAttack": 1.5,
       "attackSpeed": 1,
       "moveSpeed": 4,
-      "staggerResist": 6,
-      "staggerMax": 0,
       "expReward": 0,
       "expToNext": 373,
       "expTotal": 2738
@@ -232,8 +206,6 @@
       "criticalAttack": 1.5,
       "attackSpeed": 1,
       "moveSpeed": 4,
-      "staggerResist": 7,
-      "staggerMax": 0,
       "expReward": 0,
       "expToNext": 404,
       "expTotal": 3111
@@ -249,8 +221,6 @@
       "criticalAttack": 1.5,
       "attackSpeed": 1,
       "moveSpeed": 4,
-      "staggerResist": 7,
-      "staggerMax": 0,
       "expReward": 0,
       "expToNext": 439,
       "expTotal": 3515
@@ -266,8 +236,6 @@
       "criticalAttack": 1.5,
       "attackSpeed": 1,
       "moveSpeed": 4,
-      "staggerResist": 8,
-      "staggerMax": 0,
       "expReward": 0,
       "expToNext": 476,
       "expTotal": 3954
@@ -283,8 +251,6 @@
       "criticalAttack": 1.5,
       "attackSpeed": 1,
       "moveSpeed": 4,
-      "staggerResist": 8,
-      "staggerMax": 0,
       "expReward": 0,
       "expToNext": 516,
       "expTotal": 4430
@@ -300,8 +266,6 @@
       "criticalAttack": 1.5,
       "attackSpeed": 1,
       "moveSpeed": 4,
-      "staggerResist": 9,
-      "staggerMax": 0,
       "expReward": 0,
       "expToNext": 560,
       "expTotal": 4946
@@ -317,8 +281,6 @@
       "criticalAttack": 1.5,
       "attackSpeed": 1,
       "moveSpeed": 4,
-      "staggerResist": 9,
-      "staggerMax": 0,
       "expReward": 0,
       "expToNext": 608,
       "expTotal": 5506
@@ -334,8 +296,6 @@
       "criticalAttack": 1.5,
       "attackSpeed": 1,
       "moveSpeed": 4,
-      "staggerResist": 10,
-      "staggerMax": 0,
       "expReward": 0,
       "expToNext": 660,
       "expTotal": 6114
@@ -351,8 +311,6 @@
       "criticalAttack": 1.5,
       "attackSpeed": 1,
       "moveSpeed": 4,
-      "staggerResist": 10,
-      "staggerMax": 0,
       "expReward": 0,
       "expToNext": 716,
       "expTotal": 6774
@@ -368,8 +326,6 @@
       "criticalAttack": 1.5,
       "attackSpeed": 1,
       "moveSpeed": 4,
-      "staggerResist": 11,
-      "staggerMax": 0,
       "expReward": 0,
       "expToNext": 777,
       "expTotal": 7490
@@ -385,8 +341,6 @@
       "criticalAttack": 1.5,
       "attackSpeed": 1,
       "moveSpeed": 4,
-      "staggerResist": 11,
-      "staggerMax": 0,
       "expReward": 0,
       "expToNext": 843,
       "expTotal": 8267
@@ -402,8 +356,6 @@
       "criticalAttack": 1.5,
       "attackSpeed": 1,
       "moveSpeed": 4,
-      "staggerResist": 12,
-      "staggerMax": 0,
       "expReward": 0,
       "expToNext": 914,
       "expTotal": 9110
@@ -419,8 +371,6 @@
       "criticalAttack": 1.5,
       "attackSpeed": 1,
       "moveSpeed": 4,
-      "staggerResist": 12,
-      "staggerMax": 0,
       "expReward": 0,
       "expToNext": 992,
       "expTotal": 10024
@@ -436,8 +386,6 @@
       "criticalAttack": 1.5,
       "attackSpeed": 1,
       "moveSpeed": 4,
-      "staggerResist": 13,
-      "staggerMax": 0,
       "expReward": 0,
       "expToNext": 1076,
       "expTotal": 11016
@@ -453,8 +401,6 @@
       "criticalAttack": 1.5,
       "attackSpeed": 1,
       "moveSpeed": 4,
-      "staggerResist": 13,
-      "staggerMax": 0,
       "expReward": 0,
       "expToNext": 1168,
       "expTotal": 12092
@@ -470,8 +416,6 @@
       "criticalAttack": 1.5,
       "attackSpeed": 1,
       "moveSpeed": 4,
-      "staggerResist": 14,
-      "staggerMax": 0,
       "expReward": 0,
       "expToNext": 1267,
       "expTotal": 13260
@@ -487,8 +431,6 @@
       "criticalAttack": 1.5,
       "attackSpeed": 1,
       "moveSpeed": 4,
-      "staggerResist": 14,
-      "staggerMax": 0,
       "expReward": 0,
       "expToNext": 1375,
       "expTotal": 14527
@@ -504,8 +446,6 @@
       "criticalAttack": 1.5,
       "attackSpeed": 1,
       "moveSpeed": 4,
-      "staggerResist": 15,
-      "staggerMax": 0,
       "expReward": 0,
       "expToNext": 1491,
       "expTotal": 15902
@@ -521,8 +461,6 @@
       "criticalAttack": 1.5,
       "attackSpeed": 1,
       "moveSpeed": 4,
-      "staggerResist": 15,
-      "staggerMax": 0,
       "expReward": 0,
       "expToNext": 1618,
       "expTotal": 17393
@@ -538,8 +476,6 @@
       "criticalAttack": 1.5,
       "attackSpeed": 1,
       "moveSpeed": 4,
-      "staggerResist": 16,
-      "staggerMax": 0,
       "expReward": 0,
       "expToNext": 1756,
       "expTotal": 19011
@@ -555,8 +491,6 @@
       "criticalAttack": 1.5,
       "attackSpeed": 1,
       "moveSpeed": 4,
-      "staggerResist": 16,
-      "staggerMax": 0,
       "expReward": 0,
       "expToNext": 1905,
       "expTotal": 20767
@@ -572,8 +506,6 @@
       "criticalAttack": 1.5,
       "attackSpeed": 1,
       "moveSpeed": 4,
-      "staggerResist": 17,
-      "staggerMax": 0,
       "expReward": 0,
       "expToNext": 2067,
       "expTotal": 22672
@@ -589,8 +521,6 @@
       "criticalAttack": 1.5,
       "attackSpeed": 1,
       "moveSpeed": 4,
-      "staggerResist": 17,
-      "staggerMax": 0,
       "expReward": 0,
       "expToNext": 2243,
       "expTotal": 24739
@@ -606,8 +536,6 @@
       "criticalAttack": 1.5,
       "attackSpeed": 1,
       "moveSpeed": 4,
-      "staggerResist": 18,
-      "staggerMax": 0,
       "expReward": 0,
       "expToNext": 2433,
       "expTotal": 26982
@@ -623,8 +551,6 @@
       "criticalAttack": 1.5,
       "attackSpeed": 1,
       "moveSpeed": 4,
-      "staggerResist": 18,
-      "staggerMax": 0,
       "expReward": 0,
       "expToNext": 2640,
       "expTotal": 29415
@@ -640,8 +566,6 @@
       "criticalAttack": 1.5,
       "attackSpeed": 1,
       "moveSpeed": 4,
-      "staggerResist": 19,
-      "staggerMax": 0,
       "expReward": 0,
       "expToNext": 2864,
       "expTotal": 32055
@@ -657,8 +581,6 @@
       "criticalAttack": 1.5,
       "attackSpeed": 1,
       "moveSpeed": 4,
-      "staggerResist": 19,
-      "staggerMax": 0,
       "expReward": 0,
       "expToNext": 3108,
       "expTotal": 34919
@@ -674,8 +596,6 @@
       "criticalAttack": 1.5,
       "attackSpeed": 1,
       "moveSpeed": 4,
-      "staggerResist": 20,
-      "staggerMax": 0,
       "expReward": 0,
       "expToNext": 0,
       "expTotal": 38027
@@ -691,8 +611,6 @@
       "criticalAttack": 1.5,
       "attackSpeed": 1,
       "moveSpeed": 3.96,
-      "staggerResist": 0,
-      "staggerMax": 30,
       "expReward": 15,
       "expToNext": 0,
       "expTotal": 0
@@ -708,8 +626,6 @@
       "criticalAttack": 1.5,
       "attackSpeed": 1,
       "moveSpeed": 3.3,
-      "staggerResist": 0,
-      "staggerMax": 50,
       "expReward": 15,
       "expToNext": 0,
       "expTotal": 0
@@ -725,8 +641,6 @@
       "criticalAttack": 1.5,
       "attackSpeed": 1,
       "moveSpeed": 2.97,
-      "staggerResist": 0,
-      "staggerMax": 40,
       "expReward": 18,
       "expToNext": 0,
       "expTotal": 0
@@ -742,8 +656,6 @@
       "criticalAttack": 1.5,
       "attackSpeed": 1,
       "moveSpeed": 3.96,
-      "staggerResist": 0,
-      "staggerMax": 30,
       "expReward": 23,
       "expToNext": 0,
       "expTotal": 0
@@ -759,8 +671,6 @@
       "criticalAttack": 1.5,
       "attackSpeed": 1,
       "moveSpeed": 3.3,
-      "staggerResist": 0,
-      "staggerMax": 50,
       "expReward": 23,
       "expToNext": 0,
       "expTotal": 0
@@ -776,8 +686,6 @@
       "criticalAttack": 1.5,
       "attackSpeed": 1,
       "moveSpeed": 2.97,
-      "staggerResist": 0,
-      "staggerMax": 40,
       "expReward": 28,
       "expToNext": 0,
       "expTotal": 0
@@ -793,8 +701,6 @@
       "criticalAttack": 1.5,
       "attackSpeed": 1,
       "moveSpeed": 3.14,
-      "staggerResist": 0,
-      "staggerMax": 80,
       "expReward": 58,
       "expToNext": 0,
       "expTotal": 0
@@ -810,8 +716,6 @@
       "criticalAttack": 1.5,
       "attackSpeed": 1,
       "moveSpeed": 3.96,
-      "staggerResist": 0,
-      "staggerMax": 30,
       "expReward": 36,
       "expToNext": 0,
       "expTotal": 0
@@ -827,8 +731,6 @@
       "criticalAttack": 1.5,
       "attackSpeed": 1,
       "moveSpeed": 3.3,
-      "staggerResist": 0,
-      "staggerMax": 50,
       "expReward": 36,
       "expToNext": 0,
       "expTotal": 0
@@ -844,8 +746,6 @@
       "criticalAttack": 1.5,
       "attackSpeed": 1,
       "moveSpeed": 3.14,
-      "staggerResist": 0,
-      "staggerMax": 80,
       "expReward": 90,
       "expToNext": 0,
       "expTotal": 0
@@ -861,8 +761,6 @@
       "criticalAttack": 1.5,
       "attackSpeed": 1,
       "moveSpeed": 2.81,
-      "staggerResist": 0,
-      "staggerMax": 150,
       "expReward": 144,
       "expToNext": 0,
       "expTotal": 0
@@ -878,8 +776,6 @@
       "criticalAttack": 1.5,
       "attackSpeed": 1,
       "moveSpeed": 3.3,
-      "staggerResist": 0,
-      "staggerMax": 50,
       "expReward": 65,
       "expToNext": 0,
       "expTotal": 0
@@ -895,8 +791,6 @@
       "criticalAttack": 1.5,
       "attackSpeed": 1,
       "moveSpeed": 2.97,
-      "staggerResist": 0,
-      "staggerMax": 40,
       "expReward": 78,
       "expToNext": 0,
       "expTotal": 0
@@ -912,8 +806,6 @@
       "criticalAttack": 1.5,
       "attackSpeed": 1,
       "moveSpeed": 3.14,
-      "staggerResist": 0,
-      "staggerMax": 80,
       "expReward": 163,
       "expToNext": 0,
       "expTotal": 0
@@ -929,8 +821,6 @@
       "criticalAttack": 1.5,
       "attackSpeed": 1,
       "moveSpeed": 2.81,
-      "staggerResist": 0,
-      "staggerMax": 150,
       "expReward": 260,
       "expToNext": 0,
       "expTotal": 0
@@ -946,8 +836,6 @@
       "criticalAttack": 1.5,
       "attackSpeed": 1,
       "moveSpeed": 3.3,
-      "staggerResist": 0,
-      "staggerMax": 50,
       "expReward": 116,
       "expToNext": 0,
       "expTotal": 0
@@ -963,8 +851,6 @@
       "criticalAttack": 1.5,
       "attackSpeed": 1,
       "moveSpeed": 2.97,
-      "staggerResist": 0,
-      "staggerMax": 40,
       "expReward": 139,
       "expToNext": 0,
       "expTotal": 0
@@ -980,8 +866,6 @@
       "criticalAttack": 1.5,
       "attackSpeed": 1,
       "moveSpeed": 3.14,
-      "staggerResist": 0,
-      "staggerMax": 80,
       "expReward": 290,
       "expToNext": 0,
       "expTotal": 0
@@ -997,8 +881,6 @@
       "criticalAttack": 1.5,
       "attackSpeed": 1,
       "moveSpeed": 2.81,
-      "staggerResist": 0,
-      "staggerMax": 150,
       "expReward": 464,
       "expToNext": 0,
       "expTotal": 0
@@ -1014,8 +896,6 @@
       "criticalAttack": 1.5,
       "attackSpeed": 1,
       "moveSpeed": 4.3,
-      "staggerResist": 0,
-      "staggerMax": 300,
       "expReward": 180,
       "expToNext": 0,
       "expTotal": 0
@@ -1031,8 +911,6 @@
       "criticalAttack": 1.5,
       "attackSpeed": 1,
       "moveSpeed": 4.3,
-      "staggerResist": 0,
-      "staggerMax": 320,
       "expReward": 276,
       "expToNext": 0,
       "expTotal": 0
@@ -1048,8 +926,6 @@
       "criticalAttack": 1.5,
       "attackSpeed": 1,
       "moveSpeed": 4.3,
-      "staggerResist": 0,
-      "staggerMax": 350,
       "expReward": 432,
       "expToNext": 0,
       "expTotal": 0
@@ -1065,8 +941,6 @@
       "criticalAttack": 1.5,
       "attackSpeed": 1,
       "moveSpeed": 4.3,
-      "staggerResist": 0,
-      "staggerMax": 300,
       "expReward": 780,
       "expToNext": 0,
       "expTotal": 0
@@ -1082,8 +956,6 @@
       "criticalAttack": 1.5,
       "attackSpeed": 1,
       "moveSpeed": 4.3,
-      "staggerResist": 0,
-      "staggerMax": 340,
       "expReward": 780,
       "expToNext": 0,
       "expTotal": 0
@@ -1099,8 +971,6 @@
       "criticalAttack": 1.5,
       "attackSpeed": 1,
       "moveSpeed": 4.3,
-      "staggerResist": 0,
-      "staggerMax": 400,
       "expReward": 1392,
       "expToNext": 0,
       "expTotal": 0

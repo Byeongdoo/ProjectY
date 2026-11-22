@@ -1,0 +1,53 @@
+{
+  "rows": [
+    {
+      "screenID": 9301,
+      "key": "I",
+      "openLiving": 1,
+      "openLobby": 1,
+      "openDungeon": 1
+    },
+    {
+      "screenID": 9302,
+      "key": "K",
+      "openLiving": 1,
+      "openLobby": 1,
+      "openDungeon": 1
+    },
+    {
+      "screenID": 9303,
+      "key": "J",
+      "openLiving": 1,
+      "openLobby": 1,
+      "openDungeon": 1
+    },
+    {
+      "screenID": 9304,
+      "key": "L",
+      "openLiving": 1,
+      "openLobby": 1,
+      "openDungeon": 1
+    },
+    {
+      "screenID": 9305,
+      "key": "자동",
+      "openLiving": 0,
+      "openLobby": 1,
+      "openDungeon": 0
+    },
+    {
+      "screenID": 9306,
+      "key": "자동",
+      "openLiving": 0,
+      "openLobby": 0,
+      "openDungeon": 1
+    },
+    {
+      "screenID": 9307,
+      "key": "F(주모)",
+      "openLiving": 0,
+      "openLobby": 1,
+      "openDungeon": 0
+    }
+  ]
+}

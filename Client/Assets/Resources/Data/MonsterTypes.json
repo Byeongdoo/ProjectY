@@ -7,7 +7,6 @@
       "hpMul": 0.4,
       "defMul": 0.5,
       "moveMul": 1.2,
-      "staggerMax": 30,
       "rewardMul": 1
     },
     {
@@ -17,7 +16,6 @@
       "hpMul": 1,
       "defMul": 1,
       "moveMul": 1,
-      "staggerMax": 50,
       "rewardMul": 1
     },
     {
@@ -27,7 +25,6 @@
       "hpMul": 0.7,
       "defMul": 0.8,
       "moveMul": 0.9,
-      "staggerMax": 40,
       "rewardMul": 1.2
     },
     {
@@ -37,7 +34,6 @@
       "hpMul": 2.8,
       "defMul": 1.5,
       "moveMul": 0.95,
-      "staggerMax": 80,
       "rewardMul": 2.5
     },
     {
@@ -47,7 +43,6 @@
       "hpMul": 5,
       "defMul": 1.8,
       "moveMul": 0.85,
-      "staggerMax": 150,
       "rewardMul": 4
     }
   ]
