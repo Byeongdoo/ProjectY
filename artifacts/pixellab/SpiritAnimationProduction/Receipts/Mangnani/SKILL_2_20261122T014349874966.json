@@ -1,0 +1,26 @@
+{
+  "request": {
+    "character_id": "478ad62f-9651-46ca-a174-7b869382d4fd",
+    "animation_name": "SKILL_2",
+    "mode": "v3",
+    "action_description": "CHAMSU execution chop: lift the broad cleaver high above the head with both hands, hold a short charged anticipation, then deliver a single heavy vertical downward chop and recover. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.",
+    "frame_count": 12,
+    "keep_first_frame": false,
+    "directions": [
+      "east",
+      "north-east",
+      "north",
+      "north-west"
+    ],
+    "animation_group_id": "8ed8c385-bab1-4ccc-955c-766e49652bc7"
+  },
+  "response": {
+    "content": [
+      {
+        "type": "text",
+        "text": "character: 478ad62f-9651-46ca-a174-7b869382d4fd\nanimation: v3 custom (CHAMSU execution chop: lift the broad cleaver high above the head with both hands, hold a short charged anticipation, then deliver a single heavy vertical downward chop and recover. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.)\ndirections: east, north-east, north, north-west (4 jobs)\njob_ids: east=be3f8405-e23b-4eca-80a3-977e9a2ca576, north-east=02c63677-0fae-44f7-9493-800254119b6a, north=1df5bf7d-9651-4f92-8d90-218d67f49869, north-west=5dc17936-36a8-4cc1-999e-1caad1e65cc8\ngroup: 8ed8c385-bab1-4ccc-955c-766e49652bc7\nframes: 12 (reference stripped, keep_first_frame=false)\ncanvas: east 92x92, north-east 92x92, north 92x92, north-west 92x92 (frames are stored at this size: the character plus room to move)\ncost: 8 generations (2/dir x 4)\neta: ~2-4 min/direction\n\nhint: get_character(character_id=\"478ad62f-9651-46ca-a174-7b869382d4fd\")\nadd more directions to this group: animate_character(character_id=\"478ad62f-9651-46ca-a174-7b869382d4fd\", action_description=\"CHAMSU execution chop: lift the broad cleaver high above the head with both hands, hold a short charged anticipation, then deliver a single heavy vertical downward chop and recover. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.\", animation_group_id=\"8ed8c385-bab1-4ccc-955c-766e49652bc7\", directions=[...])"
+      }
+    ],
+    "isError": false
+  }
+}

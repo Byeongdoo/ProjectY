@@ -1,0 +1,23 @@
+{
+  "request": {
+    "character_id": "20edb5b5-8698-424e-be5e-99b63c356064",
+    "animation_name": "KNOCKBACK",
+    "mode": "v3",
+    "action_description": "Protect the medicine case with both arms, lean backwards under an impact and stagger with small feet movements in place, then regain balance. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.",
+    "frame_count": 4,
+    "keep_first_frame": false,
+    "directions": [
+      "south-west"
+    ],
+    "animation_group_id": "42ecfbe2-8441-45c8-80b1-9242807a750b"
+  },
+  "response": {
+    "content": [
+      {
+        "type": "text",
+        "text": "character: 20edb5b5-8698-424e-be5e-99b63c356064\nanimation: v3 custom (Protect the medicine case with both arms, lean backwards under an impact and stagger with small feet movements in place, then regain balance. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.)\ndirections: south-west (1 jobs)\njob_ids: south-west=376817fd-68ee-45b8-a99d-ee098a3430f2\ngroup: 42ecfbe2-8441-45c8-80b1-9242807a750b\nframes: 4 (reference stripped, keep_first_frame=false)\ncanvas: south-west 88x88 (frames are stored at this size: the character plus room to move)\ncost: 1 generation (1/dir x 1)\neta: ~2-4 min/direction\n\nhint: get_character(character_id=\"20edb5b5-8698-424e-be5e-99b63c356064\")\nadd more directions to this group: animate_character(character_id=\"20edb5b5-8698-424e-be5e-99b63c356064\", action_description=\"Protect the medicine case with both arms, lean backwards under an impact and stagger with small feet movements in place, then regain balance. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.\", animation_group_id=\"42ecfbe2-8441-45c8-80b1-9242807a750b\", directions=[...])"
+      }
+    ],
+    "isError": false
+  }
+}

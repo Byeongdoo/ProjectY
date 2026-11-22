@@ -1,0 +1,26 @@
+{
+  "request": {
+    "character_id": "20edb5b5-8698-424e-be5e-99b63c356064",
+    "animation_name": "SKILL_1",
+    "mode": "v3",
+    "action_description": "CHIM NOTGI healing needle: open the medicine case, delicately take one silver acupuncture needle between the fingertips, extend a precise short needle placement gesture toward an ally in the facing direction, then recover. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.",
+    "frame_count": 8,
+    "keep_first_frame": false,
+    "directions": [
+      "north",
+      "north-west",
+      "west",
+      "south-west"
+    ],
+    "animation_group_id": "63454d9c-701f-4112-8f39-e83e8879904f"
+  },
+  "response": {
+    "content": [
+      {
+        "type": "text",
+        "text": "character: 20edb5b5-8698-424e-be5e-99b63c356064\nanimation: v3 custom (CHIM NOTGI healing needle: open the medicine case, delicately take one silver acupuncture needle between the fingertips, extend a precise short needle placement gesture toward an ally in the facing direction, then recover. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.)\ndirections: north, north-west, west, south-west (4 jobs)\njob_ids: north=2bb87bcd-638a-456d-b302-af529b2817ed, north-west=c968a810-f573-40c2-83dd-184b4fc39c3a, west=0f833436-585b-46bd-b1f9-ed121a7312f6, south-west=fee8e146-96de-49d7-8bbc-47ab8eb4a9c4\ngroup: 63454d9c-701f-4112-8f39-e83e8879904f\nframes: 8 (reference stripped, keep_first_frame=false)\ncanvas: north 84x84, north-west 88x88, west 88x88, south-west 88x88 (frames are stored at this size: the character plus room to move)\ncost: 4 generations (1/dir x 4)\neta: ~2-4 min/direction\n\nhint: get_character(character_id=\"20edb5b5-8698-424e-be5e-99b63c356064\")\nadd more directions to this group: animate_character(character_id=\"20edb5b5-8698-424e-be5e-99b63c356064\", action_description=\"CHIM NOTGI healing needle: open the medicine case, delicately take one silver acupuncture needle between the fingertips, extend a precise short needle placement gesture toward an ally in the facing direction, then recover. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.\", animation_group_id=\"63454d9c-701f-4112-8f39-e83e8879904f\", directions=[...])"
+      }
+    ],
+    "isError": false
+  }
+}

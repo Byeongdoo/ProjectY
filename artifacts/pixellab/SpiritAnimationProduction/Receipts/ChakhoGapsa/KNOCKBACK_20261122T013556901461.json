@@ -1,0 +1,26 @@
+{
+  "request": {
+    "character_id": "628b3449-3ba4-4a7b-9131-9f815afb3443",
+    "animation_name": "KNOCKBACK",
+    "mode": "v3",
+    "action_description": "Cross the feet in a backward stagger, bring the bow in front of the torso for balance, and regain footing. Reaction in place. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.",
+    "frame_count": 4,
+    "keep_first_frame": false,
+    "directions": [
+      "north",
+      "north-west",
+      "west",
+      "south-west"
+    ],
+    "animation_group_id": "6b5bd8d7-3d61-400b-9409-a39082dc2e47"
+  },
+  "response": {
+    "content": [
+      {
+        "type": "text",
+        "text": "character: 628b3449-3ba4-4a7b-9131-9f815afb3443\nanimation: v3 custom (Cross the feet in a backward stagger, bring the bow in front of the torso for balance, and regain footing. Reaction in place. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.)\ndirections: north, north-west, west, south-west (4 jobs)\njob_ids: north=3870b397-bcfa-4300-aad1-6d09b8472350, north-west=1e13f5c0-98c7-492d-8af2-319f8f412edf, west=63ef5c02-7b08-4e75-8eed-8b589c3f3288, south-west=0cb3e645-8ecc-4412-9938-bb6909d6433b\ngroup: 6b5bd8d7-3d61-400b-9409-a39082dc2e47\nframes: 4 (reference stripped, keep_first_frame=false)\ncanvas: north 84x84, north-west 88x88, west 88x88, south-west 88x88 (frames are stored at this size: the character plus room to move)\ncost: 4 generations (1/dir x 4)\neta: ~2-4 min/direction\n\nhint: get_character(character_id=\"628b3449-3ba4-4a7b-9131-9f815afb3443\")\nadd more directions to this group: animate_character(character_id=\"628b3449-3ba4-4a7b-9131-9f815afb3443\", action_description=\"Cross the feet in a backward stagger, bring the bow in front of the torso for balance, and regain footing. Reaction in place. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.\", animation_group_id=\"6b5bd8d7-3d61-400b-9409-a39082dc2e47\", directions=[...])"
+      }
+    ],
+    "isError": false
+  }
+}

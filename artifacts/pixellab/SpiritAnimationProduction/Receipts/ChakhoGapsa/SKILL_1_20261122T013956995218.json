@@ -1,0 +1,29 @@
+{
+  "request": {
+    "character_id": "628b3449-3ba4-4a7b-9131-9f815afb3443",
+    "animation_name": "SKILL_1",
+    "mode": "v3",
+    "action_description": "GWANTONG HWASAL piercing shot: plant the feet, raise the bow, draw the string farther and more powerfully than a basic attack, release a strong shot along the facing direction, then recover. No projectile or glow. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.",
+    "frame_count": 8,
+    "keep_first_frame": false,
+    "directions": [
+      "south",
+      "south-east",
+      "east",
+      "north-east",
+      "north",
+      "north-west",
+      "west",
+      "south-west"
+    ]
+  },
+  "response": {
+    "content": [
+      {
+        "type": "text",
+        "text": "character: 628b3449-3ba4-4a7b-9131-9f815afb3443\nanimation: v3 custom (GWANTONG HWASAL piercing shot: plant the feet, raise the bow, draw the string farther and more powerfully than a basic attack, release a strong shot along the facing direction, then recover. No projectile or glow. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.)\ndirections: south, south-east, east, north-east, north, north-west, west, south-west (8 jobs)\njob_ids: south=17196980-f655-454e-b3a6-6fc7c8f33aa2, south-east=ea7a0dd4-6805-448f-b419-e37a04f1d2f6, east=3e257496-aefb-4c1d-a2c6-ea93c99cf6e8, north-east=8a7fa788-d6ee-4e35-8a2c-13314068f366, north=4953f570-5ccf-4694-a172-3fcc536cc3cd, north-west=402567e1-25cd-4f92-b916-4d39e1fe240b, west=a25d0ac3-299d-4ab0-84bf-ff242d64cdb0, south-west=0a014e3d-06d0-488a-8b80-4886c0e33023\ngroup: 4f55eeab-96b4-48ac-aea1-3764d0731539\nframes: 8 (reference stripped, keep_first_frame=false)\ncanvas: south 88x88, south-east 88x88, east 88x88, north-east 84x84, north 84x84, north-west 88x88, west 88x88, south-west 88x88 (frames are stored at this size: the character plus room to move)\ncost: 8 generations (1/dir x 8)\neta: ~2-4 min/direction\n\nhint: get_character(character_id=\"628b3449-3ba4-4a7b-9131-9f815afb3443\")\nadd more directions to this group: animate_character(character_id=\"628b3449-3ba4-4a7b-9131-9f815afb3443\", action_description=\"GWANTONG HWASAL piercing shot: plant the feet, raise the bow, draw the string farther and more powerfully than a basic attack, release a strong shot along the facing direction, then recover. No projectile or glow. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.\", animation_group_id=\"4f55eeab-96b4-48ac-aea1-3764d0731539\", directions=[...])"
+      }
+    ],
+    "isError": false
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "request": {
+    "character_id": "478ad62f-9651-46ca-a174-7b869382d4fd",
+    "animation_name": "SKILL_1",
+    "mode": "v3",
+    "action_description": "KALCHUM blade dance: wind up, turn through one full powerful spinning sweep with the broad cleaver held around the body, then recover facing the original direction. Clear broad blade poses, one revolution, no motion trails. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.",
+    "frame_count": 8,
+    "keep_first_frame": false,
+    "directions": [
+      "south",
+      "south-east",
+      "east",
+      "north-east",
+      "north",
+      "north-west",
+      "west"
+    ]
+  },
+  "response": {
+    "content": [
+      {
+        "type": "text",
+        "text": "character: 478ad62f-9651-46ca-a174-7b869382d4fd\nanimation: v3 custom (KALCHUM blade dance: wind up, turn through one full powerful spinning sweep with the broad cleaver held around the body, then recover facing the original direction. Clear broad blade poses, one revolution, no motion trails. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.)\ndirections: south, south-east, east, north-east, north, north-west, west (7 jobs)\njob_ids: south=edee619e-4690-412f-a56e-c5cbfb144b16, south-east=7a5c7737-5e4a-4bea-9984-7c396d344095, east=37ed2604-196f-4c48-b461-58226f1c6811, north-east=5e2b9b90-10d8-4744-ad7a-0be951f3bb81, north=74053878-cf4d-4bbb-918b-94aa002ad24e, north-west=52a1aac7-c2e4-4d3d-ad2a-2d94d2446f2c, west=eafd696c-5c20-4353-9f9f-4da54ef5dc7b\ngroup: bc71f9a8-fd4d-44e0-a650-9d91ae3e7b30\nframes: 8 (reference stripped, keep_first_frame=false)\ncanvas: south 92x92, south-east 92x92, east 92x92, north-east 92x92, north 92x92, north-west 92x92, west 92x92 (frames are stored at this size: the character plus room to move)\ncost: 14 generations (2/dir x 7)\neta: ~2-4 min/direction\n\nhint: get_character(character_id=\"478ad62f-9651-46ca-a174-7b869382d4fd\")\nadd more directions to this group: animate_character(character_id=\"478ad62f-9651-46ca-a174-7b869382d4fd\", action_description=\"KALCHUM blade dance: wind up, turn through one full powerful spinning sweep with the broad cleaver held around the body, then recover facing the original direction. Clear broad blade poses, one revolution, no motion trails. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.\", animation_group_id=\"bc71f9a8-fd4d-44e0-a650-9d91ae3e7b30\", directions=[...])"
+      }
+    ],
+    "isError": false
+  }
+}

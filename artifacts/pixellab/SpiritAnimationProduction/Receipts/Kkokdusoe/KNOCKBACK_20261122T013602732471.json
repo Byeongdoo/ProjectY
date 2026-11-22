@@ -1,0 +1,27 @@
+{
+  "request": {
+    "character_id": "5e2b8e1c-c556-4568-9002-2b1c25507dfc",
+    "animation_name": "KNOCKBACK",
+    "mode": "v3",
+    "action_description": "Pull the gong close to the chest, balance on one foot briefly as the torso leans backwards under an impact, then regain both feet. In-place stagger. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.",
+    "frame_count": 4,
+    "keep_first_frame": false,
+    "directions": [
+      "south",
+      "south-east",
+      "east",
+      "north-east",
+      "north",
+      "north-west"
+    ]
+  },
+  "response": {
+    "content": [
+      {
+        "type": "text",
+        "text": "character: 5e2b8e1c-c556-4568-9002-2b1c25507dfc\nanimation: v3 custom (Pull the gong close to the chest, balance on one foot briefly as the torso leans backwards under an impact, then regain both feet. In-place stagger. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.)\ndirections: south, south-east, east, north-east, north, north-west (6 jobs)\njob_ids: south=18a5bded-c88a-44c6-9ae8-73d24eeaf28e, south-east=329f31e5-817f-48ee-9ee9-e7a70455e6eb, east=094a64d5-0b47-4d72-8158-282dcac59d84, north-east=52e2e64e-a3a1-4ae0-9b5d-5edf94588f86, north=e1939486-6922-4aaa-b22b-336b5d08d87b, north-west=cde6e775-73ad-4537-9499-7d8b64b740ca\ngroup: 8c3fbaf4-307d-4de3-a6a4-dacb526272d8\nframes: 4 (reference stripped, keep_first_frame=false)\ncanvas: south 92x92, south-east 88x88, east 88x88, north-east 88x88, north 88x88, north-west 88x88 (frames are stored at this size: the character plus room to move)\ncost: 6 generations (1/dir x 6)\neta: ~2-4 min/direction\n\nhint: get_character(character_id=\"5e2b8e1c-c556-4568-9002-2b1c25507dfc\")\nadd more directions to this group: animate_character(character_id=\"5e2b8e1c-c556-4568-9002-2b1c25507dfc\", action_description=\"Pull the gong close to the chest, balance on one foot briefly as the torso leans backwards under an impact, then regain both feet. In-place stagger. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.\", animation_group_id=\"8c3fbaf4-307d-4de3-a6a4-dacb526272d8\", directions=[...])"
+      }
+    ],
+    "isError": false
+  }
+}

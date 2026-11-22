@@ -1,0 +1,23 @@
+{
+  "request": {
+    "character_id": "d08b8efa-ee49-477d-8db1-fbe0512ccdda",
+    "animation_name": "SKILL_1",
+    "mode": "v3",
+    "action_description": "HORYEONG battle shout: raise the shield and saber boldly, expand the chest and shout once, then recover to guard. Strong readable raised-shield peak pose. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.",
+    "frame_count": 8,
+    "keep_first_frame": false,
+    "directions": [
+      "south-west"
+    ],
+    "animation_group_id": "baac2080-0d55-463d-a4c6-84946156ca0f"
+  },
+  "response": {
+    "content": [
+      {
+        "type": "text",
+        "text": "character: d08b8efa-ee49-477d-8db1-fbe0512ccdda\nanimation: v3 custom (HORYEONG battle shout: raise the shield and saber boldly, expand the chest and shout once, then recover to guard. Strong readable raised-shield peak pose. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.)\ndirections: south-west (1 jobs)\njob_ids: south-west=fc9957f0-9a20-4e44-ba0f-d225cf7c7e85\ngroup: baac2080-0d55-463d-a4c6-84946156ca0f\nframes: 8 (reference stripped, keep_first_frame=false)\ncanvas: south-west 92x92 (frames are stored at this size: the character plus room to move)\ncost: 2 generations (2/dir x 1)\neta: ~2-4 min/direction\n\nhint: get_character(character_id=\"d08b8efa-ee49-477d-8db1-fbe0512ccdda\")\nadd more directions to this group: animate_character(character_id=\"d08b8efa-ee49-477d-8db1-fbe0512ccdda\", action_description=\"HORYEONG battle shout: raise the shield and saber boldly, expand the chest and shout once, then recover to guard. Strong readable raised-shield peak pose. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.\", animation_group_id=\"baac2080-0d55-463d-a4c6-84946156ca0f\", directions=[...])"
+      }
+    ],
+    "isError": false
+  }
+}

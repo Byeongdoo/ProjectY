@@ -1,0 +1,23 @@
+{
+  "request": {
+    "character_id": "d08b8efa-ee49-477d-8db1-fbe0512ccdda",
+    "animation_name": "SKILL_2",
+    "mode": "v3",
+    "action_description": "DEUNGPAE SEUGI defensive stance: spread and plant both feet, raise the round shield vertically to cover the body and brace firmly behind it, then maintain a small breathing cycle in this shield-wall hold. Seamless defensive hold, no timed travel. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.",
+    "frame_count": 8,
+    "keep_first_frame": false,
+    "directions": [
+      "south",
+      "south-east"
+    ]
+  },
+  "response": {
+    "content": [
+      {
+        "type": "text",
+        "text": "character: d08b8efa-ee49-477d-8db1-fbe0512ccdda\nanimation: v3 custom (DEUNGPAE SEUGI defensive stance: spread and plant both feet, raise the round shield vertically to cover the body and brace firmly behind it, then maintain a small breathing cycle in this shield-wall hold. Seamless defensive hold, no timed travel. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.)\ndirections: south, south-east (2 jobs)\njob_ids: south=36634146-8a28-413d-9037-59bc0aaba367, south-east=c2a46115-269a-4d5d-8e83-b0e914b49730\ngroup: cb493a40-775d-4d3b-96ca-24c862524137\nframes: 8 (reference stripped, keep_first_frame=false)\ncanvas: south 84x84, south-east 84x84 (frames are stored at this size: the character plus room to move)\ncost: 2 generations (1/dir x 2)\neta: ~2-4 min/direction\n\nhint: get_character(character_id=\"d08b8efa-ee49-477d-8db1-fbe0512ccdda\")\nadd more directions to this group: animate_character(character_id=\"d08b8efa-ee49-477d-8db1-fbe0512ccdda\", action_description=\"DEUNGPAE SEUGI defensive stance: spread and plant both feet, raise the round shield vertically to cover the body and brace firmly behind it, then maintain a small breathing cycle in this shield-wall hold. Seamless defensive hold, no timed travel. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.\", animation_group_id=\"cb493a40-775d-4d3b-96ca-24c862524137\", directions=[...])"
+      }
+    ],
+    "isError": false
+  }
+}
