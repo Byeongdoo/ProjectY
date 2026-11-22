@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>무당: 조선의 낮과 밤 — 원혼 선택 시안</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#14161c;color:#d8d3c8;font-family:'Malgun Gothic','맑은 고딕',sans-serif;padding:18px;display:flex;flex-direction:column;align-items:center;gap:14px}
+h1{font-size:15px;font-weight:700;letter-spacing:.02em;color:#b9b2a3}
+h1 small{font-weight:400;color:#6d6759;margin-left:8px;font-size:12px}
+
+/* ===== 게임 화면 (삼천도 나루터) ===== */
+.stage{position:relative;width:1120px;height:630px;border:1px solid #2c2f38;overflow:hidden;font-size:13px;
+  --accent:#a9bccb; --dim:#5e6873;
+  background:linear-gradient(175deg,#56606a 0%,#39424b 45%,#1c2228 100%)}
+.mist{position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(ellipse at 30% 95%,rgba(200,210,220,.18),transparent 55%),
+             radial-gradient(ellipse at 80% 100%,rgba(200,210,220,.14),transparent 50%);
+  box-shadow:inset 0 0 180px 50px rgba(0,0,0,.55)}
+.river{position:absolute;left:0;right:0;bottom:0;height:120px;
+  background:repeating-linear-gradient(180deg,rgba(150,170,185,.10) 0 3px,transparent 3px 9px),linear-gradient(180deg,#26303a,#141a20)}
+
+/* 상단 */
+.top{position:absolute;left:24px;right:24px;top:18px;display:flex;justify-content:space-between;align-items:flex-start}
+.ttl .kind{font-size:10px;letter-spacing:.2em;color:var(--accent)}
+.ttl .main{font-size:20px;letter-spacing:.08em;margin-top:2px}
+.ttl .sub{font-size:11.5px;color:#a19c90;margin-top:4px}
+.timer{text-align:right}
+.timer .sec{font-size:30px;font-variant-numeric:tabular-nums;letter-spacing:.04em}
+.timer .sec.warn{color:#e3a25b}
+.timer .lbl{font-size:10.5px;color:#a19c90;letter-spacing:.12em}
+.timer .bar{width:180px;height:4px;background:rgba(0,0,0,.45);margin-top:5px;margin-left:auto}
+.timer .bar i{display:block;height:100%;background:var(--accent);width:100%;transition:width 1s linear}
+
+/* 파티 슬롯 */
+.party{position:absolute;left:24px;top:96px;display:flex;gap:10px}
+.slot{width:200px;height:46px;white-space:nowrap;background:rgba(10,12,16,.5);border:1px solid rgba(169,188,203,.25);display:flex;align-items:center;gap:8px;padding:0 8px}
+.slot.me{border-color:var(--accent)}
+.slot canvas{width:30px;height:36px;image-rendering:pixelated}
+.slot .nm{font-size:11px;color:#a19c90}
+.slot .sp{font-size:12.5px}
+.slot .sp.wait{color:#6f7780}
+.slot .key{margin-left:auto;font-size:10px;color:#6f7780}
+
+/* 카드 */
+.cards{position:absolute;left:24px;right:24px;top:166px;display:flex;gap:12px}
+.card{flex:1;height:196px;background:rgba(12,14,18,.55);border:1px solid rgba(169,188,203,.22);position:relative;
+  display:flex;flex-direction:column;align-items:center;padding-top:12px;transition:transform .15s,border-color .15s}
+.card canvas{width:72px;height:86px;image-rendering:pixelated}
+.card .role{font-size:10.5px;letter-spacing:.16em;color:var(--accent);margin-top:8px}
+.card .name{font-size:16px;letter-spacing:.06em;margin-top:2px}
+.card .wpn{font-size:11px;color:#a19c90;margin-top:2px}
+.card.focus{border-color:#e9e2cf;transform:translateY(-6px);box-shadow:0 0 0 1px #e9e2cf,0 8px 22px rgba(0,0,0,.5)}
+.card.taken{opacity:.38}
+.card.taken::after{content:attr(data-by);position:absolute;left:0;right:0;bottom:8px;text-align:center;font-size:11px;color:#e3a25b}
+.card.mine{border-color:#d9c27a;box-shadow:0 0 0 1px #d9c27a}
+.card.mine::after{content:'받음';position:absolute;top:8px;right:9px;font-size:10.5px;color:#d9c27a;letter-spacing:.1em}
+.card.out .role::after{content:' · 빠짐';color:#e3a25b}
+
+/* 상세 */
+.detail{position:absolute;left:24px;right:24px;top:382px;height:150px;background:rgba(8,10,14,.62);border-left:2px solid var(--accent);
+  display:grid;grid-template-columns:270px 1fr;gap:18px;padding:12px 16px}
+.detail .trait .t1{font-size:11px;color:var(--accent);letter-spacing:.14em}
+.detail .trait .t2{font-size:13px;margin-top:3px}
+.detail .trait .t3{font-size:11.5px;color:#a19c90;margin-top:5px;line-height:1.5}
+.stats{margin-top:8px;display:grid;grid-template-columns:52px 1fr 34px;gap:3px 6px;font-size:11px;align-items:center}
+.stats .tr{height:5px;background:rgba(0,0,0,.5)}
+.stats .tr i{display:block;height:100%;background:#c9c1ad}
+.stats .v{color:#a19c90;text-align:right;font-variant-numeric:tabular-nums}
+.skills{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.sk{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);padding:7px 8px}
+.sk .h{display:flex;align-items:center;gap:6px}
+.sk .no{width:18px;height:18px;border:1px solid #6f7780;font-size:11px;display:flex;align-items:center;justify-content:center}
+.sk .n{font-size:12.5px}
+.sk .tg{margin-left:auto;font-size:10px;padding:1px 5px;border-radius:2px}
+.tg.t0{background:#3b4a3a;color:#b9d4ae}.tg.t1{background:#4e2b30;color:#f0b3b8}.tg.t2{background:#26414e;color:#a9d6ea}.tg.t3{background:#4a4126;color:#e8d49b}
+.sk .d{font-size:11px;color:#a19c90;margin-top:5px;line-height:1.45}
+
+/* 하단 안내 */
+.foot{position:absolute;left:24px;right:24px;bottom:16px;display:flex;justify-content:space-between;align-items:center;font-size:11.5px;color:#b9b2a3}
+.foot .keys span{display:inline-block;border:1px solid #6f7780;padding:0 5px;margin:0 3px 0 10px;font-size:10.5px;color:#d8d3c8}
+.foot .out{color:#e3a25b}
+.toast{position:absolute;left:50%;top:136px;transform:translateX(-50%);background:rgba(0,0,0,.7);padding:6px 14px;font-size:12px;opacity:0;transition:opacity .25s;pointer-events:none}
+.toast.on{opacity:1}
+
+/* 데모 패널 */
+.demo{width:1120px;display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:12px}
+.demo b{color:#8a8476;font-weight:400;margin:0 4px 0 10px}
+.demo button{background:#22252e;color:#d8d3c8;border:1px solid #3a3e4a;padding:5px 10px;font:inherit;cursor:pointer}
+.demo button:hover{border-color:#a9bccb}
+.note{width:1120px;font-size:11.5px;color:#7f7a6c;line-height:1.6}
+</style>
+</head>
+<body>
+<h1>원혼 선택 — 삼천도 나루터 <small>← → 원혼 이동 · Enter 받기 · Esc 확정 취소 (시안 클릭 후 키보드 사용)</small></h1>
+
+<div class="stage" id="stage" tabindex="0">
+  <div class="river"></div><div class="mist"></div>
+
+  <div class="top">
+    <div class="ttl">
+      <div class="kind">삼천도 · 나루터</div>
+      <div class="main">받을 원혼을 고르시오</div>
+      <div class="sub">한 배에 같은 원혼은 둘이 탈 수 없다. 다섯 중 하나는 이 나루에 남는다.</div>
+    </div>
+    <div class="timer"><div class="lbl">남은 시간</div><div class="sec" id="sec">30</div><div class="bar"><i id="tbar"></i></div></div>
+  </div>
+
+  <div class="party" id="party"></div>
+  <div class="toast" id="toast"></div>
+  <div class="cards" id="cards"></div>
+
+  <div class="detail">
+    <div class="trait">
+      <div class="t1" id="dRole"></div>
+      <div class="t2" id="dTrait"></div>
+      <div class="t3" id="dStory"></div>
+      <div class="stats" id="dStats"></div>
+    </div>
+    <div class="skills" id="dSkills"></div>
+  </div>
+
+  <div class="foot">
+    <div class="out" id="outTxt">남는 원혼: 아직 정해지지 않음</div>
+    <div class="keys"><span>← →</span>고르기<span>Enter</span>받기<span>Esc</span>취소</div>
+  </div>
+</div>
+
+<div class="demo">
+  <b>파티원</b>
+  <button onclick="botPick()">파티원 1명 선택</button>
+  <button onclick="botSnipe()">파티원이 내 포커스 원혼을 먼저 받음</button>
+  <b>시간</b>
+  <button onclick="timeout()">시간 초과</button>
+  <b>상태</b>
+  <button onclick="reset()">처음부터</button>
+</div>
+<div class="note">
+  · 수치는 <code>Table/MasterTable.xlsx</code>의 <code>spirits</code>·<code>spiritSkills</code>·<code>#직업 설계</code>(Lv40 기준)에서 옮긴 값이다. 막대는 5종 중 최대값 대비 비율.<br>
+  · 대상 태그 색: 즉시(초록) / 단일 적(붉음) / 단일 아군(파랑) / 방향(노랑) — <code>#타입 정의</code> TargetType.<br>
+  · 시간 초과 시: 마지막으로 쓴 원혼, 그것이 이미 선택됐으면 남은 원혼 중 무작위(configs 20042).
+</div>
+
+<script>
+const SP=[
+ {id:8501,name:'무명장수',role:'탱커',wpn:'등패·요도',trait:'버팀 — 받는 피해 ×0.75, 위협 ×3',
+  story:'이름 없이 전장에서 죽은 장수. 지키지 못한 자들을 이번엔 지킨다.',atk:728,hp:7763,ehp:13036,rng:1,mv:4,
+  col:['#3a3f47','#8c8f96','#c9c1ad','#6b4a2e'],
+  sk:[['호령',0,'주변 3칸 적이 4초간 나만 노린다'],['등패 세우기',0,'6초간 받는 피해 −50%, 이동 불가'],['방패 밀치기',3,'앞 1칸 적 2칸 밀침 + 1초 기절'],['대신 맞기',2,'8초간 아군 피해 30%를 대신 받음']]},
+ {id:8502,name:'망나니',role:'딜러',wpn:'망나니칼',trait:'처형 — 치명타 +10%, 낮은 체력의 적에게 강함',
+  story:'평생 남의 목을 벤 망나니. 죄 없는 목을 벤 한을 악귀에게 갚는다.',atk:1310,hp:4852,ehp:6111,rng:1,mv:4,
+  col:['#4a2a2c','#a3373d','#d8cfc0','#9aa0a8'],
+  sk:[['칼춤',0,'주변 1칸 모든 적에게 피해'],['참수',1,'단일 큰 피해, 체력 30% 이하 ×2'],['돌진베기',1,'대상 옆으로 순간 이동하며 벤다'],['피바람',0,'8초 공속 +30%, 받는 피해 +20%']]},
+ {id:8503,name:'착호갑사',role:'원거리 딜러',wpn:'각궁',trait:'명사수 — 평타 사거리 5칸, 체력 최저',
+  story:'범을 잡던 군사. 마지막 범을 놓치고 물려 죽었다.',atk:1164,hp:3882,ehp:4889,rng:5,mv:4,
+  col:['#3b3a2a','#7a6a3e','#d0c39e','#4d3a22'],
+  sk:[['관통 화살',3,'바라보는 직선 6칸 관통'],['조준 사격',1,'시전 1초 후 단일 큰 피해'],['덫 놓기',0,'발밑 덫, 밟은 적 3초 결박'],['물러서기',3,'반대 방향으로 2칸 물러섬']]},
+ {id:8504,name:'꼭두쇠',role:'버퍼',wpn:'꽹과리',trait:'판놀음 — 이동 +15%, 신력 회복 ×1.5',
+  story:'남사당패 우두머리. 판을 다 벌이지 못하고 길 위에서 죽었다.',atk:776,hp:4852,ehp:6111,rng:1,mv:4.6,
+  col:['#2f3a4a','#c48a2c','#e6dcc6','#b3403a'],
+  sk:[['길놀이',0,'주변 3칸 아군 공격력 +15%, 10초'],['잡귀 쫓기',1,'대상 적 취약(받는 피해 +20%) 8초'],['줄타기',0,'주변 3칸 아군 이동 +30%, 6초'],['판 벌이기',0,'6초간 주변 아군 신력 소모 −50%']]},
+ {id:8505,name:'의녀',role:'힐러',wpn:'침통',trait:'구완 — 신력 회복 ×2, 평타 계수 0.6',
+  story:'역병 때 사람을 살리다 옮아 죽은 의녀.',atk:970,hp:4367,ehp:5500,rng:3,mv:4,
+  col:['#2c3f3a','#5f8f80','#efe7d6','#7a4f6a'],
+  sk:[['침 놓기',2,'단일 아군 회복'],['탕약',0,'주변 3칸 아군 전체 회복'],['해독',2,'상태이상 해제 + 소량 회복'],['회혼술',2,'혼절한 아군 1초 만에 일으킴']]}
+];
+const TG=['즉시','단일 적','단일 아군','방향'];
+const MATES=['나','솔바람','청운','달무리'];
+const LAST_USED=8502; // 마지막 사용 원혼(시간 초과 규칙 데모)
+
+// 8방향 도트 캐릭터를 흉내낸 10x12 실루엣. 0=투명 1=외곽 2=몸 3=얼굴 4=무구
+const PIX=[
+"..1111....",
+".122221...",
+".133331...",
+".133331...",
+"..1331....",
+".12222144.",
+"1222222144",
+"1222222114",
+".122221.4.",
+".12..21...",
+".12..21...",
+".11..11..."];
+function draw(cv,col,dim){
+  cv.width=10;cv.height=12;const g=cv.getContext('2d');g.clearRect(0,0,10,12);
+  PIX.forEach((row,y)=>[...row].forEach((ch,x)=>{
+    if(ch==='.')return;g.fillStyle=ch==='1'?'#0d0f12':ch==='2'?col[1]:ch==='3'?col[2]:col[3];g.fillRect(x,y,1,1)}));
+  if(dim){g.globalCompositeOperation='source-atop';g.fillStyle='rgba(20,22,26,.55)';g.fillRect(0,0,10,12);g.globalCompositeOperation='source-over'}
+}
+
+let focus=0, picks=[null,null,null,null], left=30, tick=null;
+const $=id=>document.getElementById(id);
+const MAX={atk:Math.max(...SP.map(s=>s.atk)),ehp:Math.max(...SP.map(s=>s.ehp)),rng:5,mv:4.6};
+
+function takenBy(i){return picks.findIndex(p=>p===i)}
+function render(){
+  // 파티
+  $('party').innerHTML='';
+  MATES.forEach((m,k)=>{
+    const d=document.createElement('div');d.className='slot'+(k===0?' me':'');
+    const cv=document.createElement('canvas');d.appendChild(cv);
+    const p=picks[k];
+    if(p!=null)draw(cv,SP[p].col);else draw(cv,['#000','#3a3f47','#4b5058','#3a3f47'],true);
+    d.insertAdjacentHTML('beforeend',`<div><div class="nm">${m}${k===0?' (나)':''}</div><div class="sp ${p==null?'wait':''}">${p==null?'고르는 중…':SP[p].name+' · '+SP[p].role}</div></div><div class="key">F${k+1}</div>`);
+    $('party').appendChild(d);
+  });
+  // 카드
+  $('cards').innerHTML='';
+  const done=picks.every(p=>p!=null);
+  SP.forEach((s,i)=>{
+    const by=takenBy(i);
+    const c=document.createElement('div');
+    c.className='card'+(i===focus?' focus':'')+(by===0?' mine':'')+(by>0?' taken':'')+(done&&by<0?' out':'');
+    if(by>0)c.dataset.by=MATES[by]+' 님이 받음';
+    const cv=document.createElement('canvas');c.appendChild(cv);draw(cv,s.col,by>0);
+    c.insertAdjacentHTML('beforeend',`<div class="role">${s.role}</div><div class="name">${s.name}</div><div class="wpn">${s.wpn}</div>`);
+    c.onclick=()=>{focus=i;render()};
+    $('cards').appendChild(c);
+  });
+  // 상세
+  const s=SP[focus];
+  $('dRole').textContent=s.role+' · '+s.wpn;
+  $('dTrait').textContent=s.trait;
+  $('dStory').textContent=s.story;
+  const st=[['공격력',s.atk,MAX.atk],['유효 체력',s.ehp,MAX.ehp],['평타 사거리',s.rng+'칸',MAX.rng,s.rng],['이동',s.mv+'칸/초',MAX.mv,s.mv]];
+  $('dStats').innerHTML=st.map(([k,v,m,n])=>`<div>${k}</div><div class="tr"><i style="width:${Math.round((n??v)/m*100)}%"></i></div><div class="v">${v}</div>`).join('');
+  $('dSkills').innerHTML=s.sk.map(([n,t,d],k)=>`<div class="sk"><div class="h"><div class="no">${k+1}</div><div class="n">${n}</div><div class="tg t${t}">${TG[t]}</div></div><div class="d">${d}</div></div>`).join('');
+  // 남는 원혼
+  if(done){const o=SP.findIndex((_,i)=>takenBy(i)<0);$('outTxt').textContent=`남는 원혼: ${SP[o].name}(${SP[o].role}) — 이번 저승길은 ${SP[o].role} 없이 간다`;}
+  else{const n=picks.filter(p=>p==null).length;$('outTxt').textContent=`남는 원혼: 아직 정해지지 않음 (${n}명 고르는 중)`;}
+}
+function toast(t){$('toast').textContent=t;$('toast').classList.add('on');clearTimeout(toast.h);toast.h=setTimeout(()=>$('toast').classList.remove('on'),1600)}
+function confirmMine(){
+  if(picks[0]!=null){toast('이미 원혼을 받았다. Esc로 취소할 수 있다');return}
+  if(takenBy(focus)>0){toast(`${SP[focus].name}은(는) ${MATES[takenBy(focus)]} 님이 먼저 받았다`);return}
+  picks[0]=focus;toast(`${SP[focus].name}을(를) 받았다`);render();checkDone();
+}
+function cancelMine(){if(picks[0]==null)return;picks[0]=null;toast('받은 원혼을 내려놓았다');render()}
+function freeIdx(){return SP.map((_,i)=>i).filter(i=>takenBy(i)<0)}
+function botPick(){
+  const k=picks.findIndex((p,j)=>j>0&&p==null);if(k<0){toast('파티원은 모두 골랐다');return}
+  let f=freeIdx().filter(i=>i!==focus||picks[0]!=null);if(!f.length)f=freeIdx();
+  picks[k]=f[Math.floor(Math.random()*f.length)];render();checkDone();
+}
+function botSnipe(){
+  const k=picks.findIndex((p,j)=>j>0&&p==null);if(k<0){toast('파티원은 모두 골랐다');return}
+  if(takenBy(focus)>=0){toast('포커스한 원혼이 이미 선택됨');return}
+  picks[k]=focus;toast(`${MATES[k]} 님이 ${SP[focus].name}을(를) 먼저 받았다`);render();checkDone();
+}
+function timeout(){
+  for(let k=0;k<4;k++){if(picks[k]!=null)continue;
+    const li=SP.findIndex(s=>s.id===LAST_USED);
+    if(k===0&&takenBy(li)<0)picks[0]=li;else{const f=freeIdx();picks[k]=f[Math.floor(Math.random()*f.length)]}}
+  left=0;updTimer();toast('시간 초과 — 남은 원혼이 자동으로 배정됐다');render();checkDone();
+}
+function checkDone(){if(picks.every(p=>p!=null)){clearInterval(tick);setTimeout(()=>toast('저승으로 건너간다'),1700)}}
+function updTimer(){$('sec').textContent=left;$('sec').classList.toggle('warn',left<=10);$('tbar').style.width=(left/30*100)+'%'}
+function reset(){picks=[null,null,null,null];focus=0;left=30;updTimer();clearInterval(tick);
+  tick=setInterval(()=>{left--;updTimer();if(left<=0){clearInterval(tick);timeout()}},1000);render()}
+document.addEventListener('keydown',e=>{
+  if(e.key==='ArrowLeft'){focus=(focus+4)%5;render();e.preventDefault()}
+  else if(e.key==='ArrowRight'){focus=(focus+1)%5;render();e.preventDefault()}
+  else if(e.key==='Enter'){confirmMine();e.preventDefault()}
+  else if(e.key==='Escape'){cancelMine()}
+});
+reset();
+</script>
+</body>
+</html>

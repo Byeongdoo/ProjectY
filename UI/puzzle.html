@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>무당: 조선의 낮과 밤 — 퍼즐 시안</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#14161c;color:#d8d3c8;font-family:'Malgun Gothic','맑은 고딕',sans-serif;padding:18px;display:flex;flex-direction:column;align-items:flex-start;gap:12px}
+h1{font-size:15px;color:#b9b2a3}h1 small{font-weight:400;color:#6d6759;margin-left:8px;font-size:12px}
+.tabs{display:flex;gap:6px;flex-wrap:wrap}.tabs button{background:#1d2028;border:1px solid #2c2f38;color:#a19c90;padding:6px 12px;font:inherit;font-size:12.5px;cursor:pointer}
+.tabs button.on{background:#2a2f3a;color:#e9e2d2;border-color:#5e6873}.tabs button.ok:after{content:' ✓';color:#8fcf7a}
+.stage{width:1000px;max-width:100%;background:#17181e;border:1px solid #3a3326;padding:16px}
+.head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:10px}
+.head .t{font-size:17px;color:#f0e8d6}.head .s{font-size:12px;color:#a19c90;margin-top:3px}
+.head .meta{font-size:11.5px;color:#8d887c;text-align:right}
+.panes{display:flex;gap:14px}
+.pane{flex:1;background:#1c1e25;border:1px solid #2c2f38;padding:10px;min-height:330px;position:relative}
+.pane h3{font-size:11.5px;letter-spacing:.14em;margin-bottom:8px;font-weight:400}
+.pane.l h3{color:#c8b273}.pane.u h3{color:#8fb8d4}
+.foot{display:flex;justify-content:space-between;align-items:center;margin-top:10px;font-size:12px;color:#a19c90;min-height:34px}
+.keys b{color:#e9e2d2;border:1px solid #4a505c;padding:0 5px;margin:0 2px;font-weight:400}
+.msg{color:#e3a25b}.msg.ok{color:#8fcf7a}
+.lock{height:4px;background:#2a2d35;margin-top:6px}.lock i{display:block;height:100%;width:0;background:#c34a4a;transition:width linear}
+.hint{background:#26221a;border:1px solid #6b5a3a;color:#e4cf8a;padding:6px 10px;font-size:12px;margin-top:8px;display:none}
+/* match */
+.row{display:flex;align-items:center;gap:10px;padding:8px;border:1px solid #2c2f38;margin-bottom:6px;cursor:pointer;position:relative}
+.row.sel{outline:2px solid #f0e8d6}.row.done{border-color:#6d8f55;background:#222a1e}
+.glyph{width:46px;height:46px;flex:none;position:relative}
+.glyph svg{width:100%;height:100%}
+.ghost{position:absolute;inset:0;opacity:0;transition:opacity .15s}
+.peek .ghost{opacity:.55}
+.sym{display:flex;gap:12px;justify-content:center;margin-top:30px}
+.sym .glyph{width:80px;height:80px;border:1px solid #2c2f38;padding:6px;cursor:pointer}
+.sym .glyph.sel{outline:2px solid #8fb8d4}.sym .glyph.used{opacity:.35}
+/* grid */
+svg.grid{width:100%;height:330px}
+.cards{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+.card{width:110px;height:64px;border:1px solid #4a4335;background:#221f19;padding:6px;cursor:pointer;font-size:12px;line-height:1.35}
+.card b{display:block;color:#f0e8d6;font-size:13px}
+.card.sel{outline:2px solid #f0e8d6}.card.used{opacity:.3;cursor:default}
+.slots{display:flex;gap:8px;margin-top:6px}
+.slot{width:110px;height:64px;border:1px dashed #4a505c;display:flex;align-items:center;justify-content:center;font-size:12px;color:#6d6759;text-align:center}
+.slot.f{border-style:solid;color:#f0e8d6;background:#262a33}.slot.fix{border-color:#e4cf8a}
+.piece{display:inline-flex;flex-direction:column;align-items:center;margin:4px;cursor:pointer;font-size:11px;color:#a19c90}
+.piece svg{width:86px;height:86px;border:1px solid #2c2f38;background:#16171c}
+.piece.on svg{border-color:#8fb8d4;box-shadow:0 0 6px #8fb8d4}.piece.x{opacity:.35}
+.done-art{text-align:center;color:#8fcf7a;font-size:13px;margin-top:8px}
+</style>
+</head>
+<body>
+<h1>퍼즐 시안 <small>사건 수첩·귀항 결과에서 여는 혼자 푸는 화면 · 실패 페널티 없음(재시도 1.5초) · 3회 실패 → 힌트 1, 5회 → 힌트 2</small></h1>
+<div class="tabs" id="tabs"></div>
+<div class="stage" id="stage"></div>
+<script>
+const LOCK=1.5,H1=3,H2=5;
+const P=[
+ {id:52201,clue:51204,ch:2,name:'배 밑의 진법 문양',form:'짝 맞추기',type:'대조',where:'귀항 결과 / 사건 수첩',
+  desc:'저승의 배 밑에 새겨진 문양 셋. 이승 관아 장부(51202)의 닳은 표식과 맞추면 문양의 뜻이 읽힌다.',
+  hint1:'장부의 날짜가 아니라 닳은 표식의 남은 획을 본다. Space로 고른 문양을 장부 위에 겹쳐 본다.',hint2:'하나는 맞춰 두었다 — 눈 문양은 첫 항목이다.'},
+ {id:52301,clue:51303,ch:3,name:'겹쳐 보이는 지형',form:'정렬해 겹치기',type:'대조',where:'이승 재벌 유민촌 경계 구역(현장)',
+  desc:'이승 유민촌 지도 위에 저승판 지형을 겹친다. 세 랜드마크가 같은 자리에 오면 진법의 선이 한 점에 모인다.',
+  hint1:'랜드마크 하나를 먼저 맞춘다 — 우물부터.',hint2:'저승판은 한 번(시계 방향 90°) 돌아가 있다.'},
+ {id:52401,clue:51403,ch:4,name:'만령진의 설계도',form:'순서 재현',type:'순서',where:'귀항 결과 / 사건 수첩',
+  desc:'만령진은 굿의 절차를 거꾸로 쓴 진법이다. 굿의 절차를 바른 순서로 되풀이하면 진법도가 드러난다.',
+  hint1:'굿은 부정을 씻는 것으로 시작해, 잡귀를 풀어먹이는 것으로 끝난다(1챕터 노파의 굿).',hint2:'처음과 끝을 놓아 두었다.'},
+ {id:52501,clue:51502,ch:5,name:'황천문의 봉인',form:'조각 겹치기',type:'대조',where:'귀항 결과 / 사건 수첩',
+  desc:'황천문의 봉인은 지나온 진법 조각들을 겹친 것이다. 수첩에 모은 조각 중 봉인을 이루는 것만 골라 겹친다.',
+  hint1:'봉인은 진법으로만 이루어져 있다. 진법이 아닌 조각이 하나 섞여 있다.',hint2:'붉은 실 매듭은 진법이 아니다 — 빼 두었다.'},
+];
+let cur=0,S={},solved=new Set();
+const $=id=>document.getElementById(id);
+function tabs(){$('tabs').innerHTML=P.map((p,i)=>`<button class="${i===cur?'on':''} ${solved.has(p.id)?'ok':''}" data-i="${i}">${p.ch}챕터 · ${p.name}</button>`).join('');
+  document.querySelectorAll('#tabs button').forEach(b=>b.onclick=()=>{cur=+b.dataset.i;start()})}
+function shell(inner,keys){const p=P[cur];
+  $('stage').innerHTML=`<div class="head"><div><div class="t">${p.name}</div><div class="s">${p.desc}</div></div>
+   <div class="meta">${p.type} · ${p.form}<br>단서 ${p.clue} · 퍼즐 ${p.id}<br>${p.where}</div></div>${inner}
+   <div class="hint" id="hint"></div><div class="foot"><span class="keys">${keys} · <b>Esc</b> 나중에(사건 수첩)</span><span><span class="msg" id="msg"></span> <span id="fails"></span></span></div><div class="lock"><i id="lock"></i></div>`;
+  hint()}
+function hint(){const p=P[cur],h=$('hint');if(!h)return;const f=S.fails||0;
+  if(solved.has(p.id)){h.style.display='none';return}
+  if(f>=H2){h.style.display='block';h.textContent='힌트 2 — '+p.hint2}else if(f>=H1){h.style.display='block';h.textContent='힌트 1 — '+p.hint1}else h.style.display='none';
+  $('fails').textContent=f?`실패 ${f}`:''}
+function fail(text){S.fails=(S.fails||0)+1;S.locked=true;$('msg').className='msg';$('msg').textContent=text+' — 잠시 뒤 다시';
+  const l=$('lock');l.style.transition='none';l.style.width='100%';requestAnimationFrame(()=>{l.style.transition=`width ${LOCK}s linear`;l.style.width='0'});
+  setTimeout(()=>{S.locked=false;S.onRetry&&S.onRetry();$('msg').textContent='';hint();draw()},LOCK*1000);hint()}
+function win(){solved.add(P[cur].id);S.done=true;tabs();draw();$('msg').className='msg ok';$('msg').textContent='풀었다 — 단서 획득';hint()}
+/* ---------- 1. 짝 맞추기 ---------- */
+const G={eye:'<circle cx="25" cy="25" r="16" fill="none" stroke="#cfe" stroke-width="3"/><circle cx="25" cy="25" r="5" fill="#cfe"/>',
+ wave:'<path d="M6 20 Q14 10 22 20 T38 20 M6 32 Q14 22 22 32 T38 32" fill="none" stroke="#cfe" stroke-width="3"/>',
+ chain:'<ellipse cx="17" cy="25" rx="10" ry="7" fill="none" stroke="#cfe" stroke-width="3"/><ellipse cx="33" cy="25" rx="10" ry="7" fill="none" stroke="#cfe" stroke-width="3"/>'};
+const WORN={eye:'<path d="M9 25 A16 16 0 0 0 25 41" fill="none" stroke="#c8b273" stroke-width="3"/><circle cx="25" cy="25" r="5" fill="#c8b273"/>',
+ wave:'<path d="M6 32 Q14 22 22 32" fill="none" stroke="#c8b273" stroke-width="3"/>',
+ chain:'<path d="M27 25 A10 7 0 0 1 43 25" fill="none" stroke="#c8b273" stroke-width="3"/><path d="M7 25 A10 7 0 0 0 17 32" fill="none" stroke="#c8b273" stroke-width="3"/>'};
+const LEDGER=[{k:'eye',t:'을사년 사월 열이틀 · 조운선 세 척 · "어염(魚鹽)"'},{k:'chain',t:'을사년 사월 스무날 · 조운선 두 척 · "공물(貢物)"'},{k:'wave',t:'을사년 오월 초사흘 · 조운선 한 척 · 기록 지워짐'}];
+const SYMS=['wave','eye','chain'];
+function startMatch(){S={sym:0,row:0,pairs:{},fails:0};S.onRetry=()=>{S.pairs={};if(S.fails>=H2)S.pairs.eye=0};draw=drawMatch;drawMatch()}
+function drawMatch(){const peek=S.peek?'peek':'';
+  const rows=LEDGER.map((e,i)=>{const pk=Object.keys(S.pairs).find(k=>S.pairs[k]===i);
+    return `<div class="row ${S.row===i&&!S.done?'sel':''} ${pk?'done':''} ${peek}" data-r="${i}"><div class="glyph"><svg viewBox="0 0 50 50">${WORN[e.k]}</svg><svg class="ghost" viewBox="0 0 50 50" style="position:absolute;inset:0">${G[SYMS[S.sym]]}</svg></div><div>${e.t}${pk?' ← <span style="color:#8fb8d4">문양 '+(SYMS.indexOf(pk)+1)+'</span>':''}</div></div>`}).join('');
+  const syms=SYMS.map((k,i)=>`<div class="glyph ${S.sym===i?'sel':''} ${S.pairs[k]!==undefined?'used':''}" data-s="${i}"><svg viewBox="0 0 50 50">${G[k]}</svg></div>`).join('');
+  shell(`<div class="panes"><div class="pane l"><h3>이승 — 관아 장부(닳은 표식)</h3>${rows}</div>
+   <div class="pane u"><h3>저승 — 배 밑의 문양</h3><div class="sym">${syms}</div>
+   ${S.done?`<div class="done-art">문양이 가리키는 날: 을사년 오월 초사흘.<br>장부에서 지워진 그 배의 짐은 "혼(魂) 삼백" — 만령진으로.</div>`:'<p style="color:#8d887c;font-size:12px;margin-top:24px;text-align:center">←→ 문양 고르기 · Space 누르는 동안 장부 위에 겹쳐 보기</p>'}</div></div>`,
+   '<b>←→</b> 문양 <b>↑↓</b> 장부 항목 <b>Space</b> 겹쳐 보기 <b>Enter</b> 짝짓기 <b>Backspace</b> 되돌리기');
+  document.querySelectorAll('[data-s]').forEach(e=>e.onclick=()=>{S.sym=+e.dataset.s;drawMatch()});
+  document.querySelectorAll('[data-r]').forEach(e=>e.onclick=()=>{S.row=+e.dataset.r;pair()})}
+function pair(){if(S.locked||S.done)return;const k=SYMS[S.sym];
+  Object.keys(S.pairs).forEach(x=>{if(S.pairs[x]===S.row)delete S.pairs[x]});S.pairs[k]=S.row;
+  if(Object.keys(S.pairs).length===3){const ok=LEDGER.every((e,i)=>S.pairs[e.k]===i);if(ok)return win();fail('짝이 맞지 않는다')}
+  S.sym=SYMS.findIndex(x=>S.pairs[x]===undefined);if(S.sym<0)S.sym=0;drawMatch()}
+/* ---------- 2. 정렬해 겹치기 ---------- */
+const N=9,LM=[{n:'우물',p:[6,6]},{n:'천막',p:[1,7]},{n:'초소',p:[2,1]}],CEN=[4,3],SOL={r:1,dx:1,dy:-1};
+function rot(p,r){let[x,y]=p;for(let i=0;i<r;i++){[x,y]=[8-y,x]}return[x,y]}
+function inv(p,r){let[x,y]=p;for(let i=0;i<r;i++){[x,y]=[y,8-x]}return[x,y]}
+const UB=LM.map(l=>inv([l.p[0]-SOL.dx,l.p[1]-SOL.dy],SOL.r)), UC=inv([CEN[0]-SOL.dx,CEN[1]-SOL.dy],SOL.r);
+function T(p){const q=rot(p,S.r);return[q[0]+S.dx,q[1]+S.dy]}
+function startAlign(){S={r:0,dx:0,dy:2,fails:0};S.onRetry=()=>{if(S.fails>=H2)S.r=SOL.r};draw=drawAlign;drawAlign()}
+function aligned(){return S.r===SOL.r&&S.dx===SOL.dx&&S.dy===SOL.dy}
+function drawAlign(){const c=36,o=12,sx=p=>o+p[0]*c+c/2,sy=p=>o+p[1]*c+c/2;
+  let g='';for(let i=0;i<=N;i++){g+=`<line x1="${o}" y1="${o+i*c}" x2="${o+N*c}" y2="${o+i*c}" stroke="#2a2d35"/><line x1="${o+i*c}" y1="${o}" x2="${o+i*c}" y2="${o+N*c}" stroke="#2a2d35"/>`}
+  const liv=LM.map(l=>`<rect x="${sx(l.p)-12}" y="${sy(l.p)-12}" width="24" height="24" fill="none" stroke="#c8b273" stroke-width="2"/><text x="${sx(l.p)}" y="${sy(l.p)+26}" fill="#c8b273" font-size="10" text-anchor="middle">${l.n}</text>`).join('');
+  const ok=aligned(),uc=T(UC);
+  const und=UB.map((b,i)=>{const p=T(b);return `<circle cx="${sx(p)}" cy="${sy(p)}" r="9" fill="rgba(143,184,212,.35)" stroke="#8fb8d4"/><line x1="${sx(p)}" y1="${sy(p)}" x2="${sx(uc)}" y2="${sy(uc)}" stroke="${ok?'#e05a6a':'rgba(143,184,212,.6)'}" stroke-width="${ok?3:2}"/>`}).join('');
+  const core=ok?`<circle cx="${sx(uc)}" cy="${sy(uc)}" r="14" fill="rgba(224,90,106,.35)" stroke="#e05a6a" stroke-width="2"/>`:'';
+  shell(`<div class="panes"><div class="pane l" style="flex:1.3"><h3>이승 지도 위에 저승판을 겹친다</h3><svg class="grid" viewBox="0 0 348 348">${g}${liv}${S.hideU?'':und}${core}</svg></div>
+   <div class="pane u"><h3>상태</h3><p style="font-size:12.5px;line-height:1.8">저승판 회전 ${S.r*90}° · 이동 (${S.dx}, ${S.dy})<br>${ok?'<span style="color:#e05a6a">세 선이 한 점에 모였다 — Enter</span>':'랜드마크(□ 이승, ○ 저승)를 겹쳐라'}</p>
+   ${S.done?'<div class="done-art">진법의 중심은 유민촌이 아니라 그 북쪽 — 무너진 진법터.<br>결계 너머가 폭주의 한가운데였다.</div>':''}</div></div>`,
+   '<b>방향키</b> 저승판 이동 <b>Q/E</b> 회전 <b>Space</b> 저승판 끄고 보기 <b>Enter</b> 확정')}
+function confirmAlign(){if(S.locked||S.done)return;if(aligned())return win();fail('선이 한 점에 모이지 않는다')}
+/* ---------- 3. 순서 재현 ---------- */
+const RITE=[{k:'부정거리',t:'부정을 씻어 굿판을 깨끗이 한다'},{k:'청배',t:'신을 굿판으로 청해 모신다'},{k:'오신',t:'노래와 춤으로 신을 즐겁게 한다'},{k:'공수',t:'신의 말을 무당의 입으로 전한다'},{k:'축원',t:'산 자와 죽은 자의 복을 빈다'},{k:'뒷전',t:'따라온 잡귀를 풀어먹여 보낸다'}];
+const SHUF=[3,0,5,2,4,1];
+function startOrder(){S={sel:0,slots:[],fails:0,fix:{}};S.onRetry=()=>{S.slots=[];if(S.fails>=H2){S.fix={0:0,5:5}}fillFix()};draw=drawOrder;drawOrder()}
+function fillFix(){Object.entries(S.fix).forEach(([pos,id])=>S.slots[+pos]=id)}
+function drawOrder(){const used=new Set(S.slots.filter(x=>x!==undefined));
+  const cards=SHUF.map((id,i)=>`<div class="card ${S.sel===i?'sel':''} ${used.has(id)?'used':''}" data-c="${i}"><b>${RITE[id].k}</b>${RITE[id].t}</div>`).join('');
+  const slots=Array.from({length:6},(_,i)=>{const id=S.slots[i];return `<div class="slot ${id!==undefined?'f':''} ${S.fix[i]!==undefined?'fix':''}">${id!==undefined?RITE[id].k:(i+1)+'째'}</div>`}).join('');
+  shell(`<div class="pane l" style="min-height:0"><h3>굿의 절차 — 바른 순서로 놓는다</h3><div class="cards">${cards}</div><h3 style="margin-top:14px">순서</h3><div class="slots">${slots}</div>
+   <p style="font-size:12px;color:#8d887c;margin-top:8px">${S.last!==undefined?'지난 시도: 제자리 '+S.last+' / 6':'여섯 칸을 채우면 맞춰 본다. 틀리면 제자리에 놓인 수만 알려 준다.'}</p>
+   ${S.done?'<div class="done-art">절차를 따라 진법도가 드러난다 — 만령진은 뒷전에서 시작해 부정거리로 끝나는, 굿을 거꾸로 쓴 진이다.</div>':''}</div>`,
+   '<b>←→</b> 카드 <b>Enter</b> 놓기 <b>Backspace</b> 빼기')
+  document.querySelectorAll('[data-c]').forEach(e=>e.onclick=()=>{S.sel=+e.dataset.c;place()})}
+function place(){if(S.locked||S.done)return;const id=SHUF[S.sel];if(S.slots.includes(id))return;
+  let i=0;while(S.slots[i]!==undefined)i++;if(i>5)return;S.slots[i]=id;
+  if(S.slots.filter(x=>x!==undefined).length===6){const n=S.slots.filter((x,j)=>x===j).length;S.last=n;if(n===6)return win();fail('순서가 어긋났다')}drawOrder()}
+function unplace(){if(S.locked||S.done)return;for(let i=5;i>=0;i--){if(S.slots[i]!==undefined&&S.fix[i]===undefined){S.slots[i]=undefined;break}}drawOrder()}
+/* ---------- 4. 조각 겹치기 ---------- */
+const PC=[{n:'붉은 실 매듭(1장)',l:[[1,1,5,5],[5,1,1,5]],bad:1},{n:'배 밑 문양(2장)',l:[[3,0,3,6],[0,3,6,3]]},{n:'진법터 고리(3장)',l:[[1,1,5,1],[5,1,5,5],[5,5,1,5],[1,5,1,1]]},{n:'만령진 설계도(4장)',l:[[0,0,1,1],[6,0,5,1],[6,6,5,5],[0,6,1,5]]}];
+const TARGET=[1,2,3];
+function startLayer(){S={on:new Set(),sel:0,fails:0,x:new Set()};S.onRetry=()=>{if(S.fails>=H2)S.x.add(0)};draw=drawLayer;drawLayer()}
+function lines(ls,col,w){return ls.map(l=>`<line x1="${10+l[0]*20}" y1="${10+l[1]*20}" x2="${10+l[2]*20}" y2="${10+l[3]*20}" stroke="${col}" stroke-width="${w}" stroke-linecap="round"/>`).join('')}
+function drawLayer(){const tgt=TARGET.flatMap(i=>PC[i].l);
+  const pieces=PC.map((p,i)=>`<div class="piece ${S.on.has(i)?'on':''} ${S.x.has(i)?'x':''} ${S.sel===i?'sel':''}" data-p="${i}"><svg viewBox="0 0 140 140">${lines(p.l,'#c8b273',4)}</svg>${i+1}. ${p.n}</div>`).join('');
+  const over=[...S.on].flatMap(i=>PC[i].l);
+  shell(`<div class="panes"><div class="pane l"><h3>이승 — 사건 수첩에 모은 진법 조각</h3>${pieces}</div>
+   <div class="pane u"><h3>저승 — 황천문의 봉인</h3><svg class="grid" viewBox="0 0 140 140" style="height:300px">${lines(tgt,'rgba(143,184,212,.25)',7)}${lines(over,'#e9e2d2',3)}</svg>
+   ${S.done?'<div class="done-art">봉인은 지나온 진법 셋을 겹친 것 — 한월은 팔도의 진을 하나로 묶어 문을 잠갔다.</div>':''}</div></div>`,
+   '<b>1~4</b> 조각 겹치기/빼기 <b>Enter</b> 확정')
+  document.querySelectorAll('[data-p]').forEach(e=>e.onclick=()=>toggle(+e.dataset.p))}
+function toggle(i){if(S.locked||S.done||S.x.has(i))return;S.on.has(i)?S.on.delete(i):S.on.add(i);drawLayer()}
+function confirmLayer(){if(S.locked||S.done)return;const a=[...S.on].sort().join(),b=TARGET.join();if(a===b)return win();fail(S.on.size<3?'봉인에 빈 획이 남았다':'봉인에 없는 획이 겹쳤다');S.on=new Set()}
+/* ---------- 공통 ---------- */
+let draw=()=>{};
+function start(){[startMatch,startAlign,startOrder,startLayer][cur]();tabs()}
+document.addEventListener('keydown',e=>{const k=e.key;
+  if(k==='Escape'){$('msg').textContent='나중에 — 사건 수첩에서 다시 연다';return}
+  if(cur===0){if(k==='ArrowLeft'){S.sym=(S.sym+2)%3;draw()}if(k==='ArrowRight'){S.sym=(S.sym+1)%3;draw()}if(k==='ArrowUp'){S.row=(S.row+2)%3;draw()}if(k==='ArrowDown'){S.row=(S.row+1)%3;draw()}
+    if(k===' '){S.peek=true;draw();e.preventDefault()}if(k==='Enter')pair();if(k==='Backspace'){delete S.pairs[SYMS[S.sym]];draw()}}
+  if(cur===1&&!S.done&&!S.locked){const m={ArrowLeft:[-1,0],ArrowRight:[1,0],ArrowUp:[0,-1],ArrowDown:[0,1]}[k];
+    if(m){S.dx=Math.max(-4,Math.min(4,S.dx+m[0]));S.dy=Math.max(-4,Math.min(4,S.dy+m[1]));draw();e.preventDefault()}
+    if(k==='q'||k==='Q'){S.r=(S.r+3)%4;draw()}if(k==='e'||k==='E'){S.r=(S.r+1)%4;draw()}if(k===' '){S.hideU=true;draw();e.preventDefault()}}
+  if(cur===1&&k==='Enter')confirmAlign();
+  if(cur===2){if(k==='ArrowLeft'){S.sel=(S.sel+5)%6;draw()}if(k==='ArrowRight'){S.sel=(S.sel+1)%6;draw()}if(k==='Enter')place();if(k==='Backspace')unplace()}
+  if(cur===3){if(/^[1-4]$/.test(k))toggle(+k-1);if(k==='Enter')confirmLayer()}
+});
+document.addEventListener('keyup',e=>{if(e.key===' '){S.peek=false;S.hideU=false;draw()}});
+start();
+</script>
+</body>
+</html>

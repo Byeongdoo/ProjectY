@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>무당: 조선의 낮과 밤 — 인게임 HUD 시안 v2</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#14161c;color:#d8d3c8;font-family:'Malgun Gothic','맑은 고딕',sans-serif;padding:18px;display:flex;flex-direction:column;align-items:center;gap:12px}
+h1{font-size:15px;color:#b9b2a3}h1 small{font-weight:400;color:#6d6759;margin-left:8px;font-size:12px}
+.stage{position:relative;width:1120px;height:630px;border:1px solid #2c2f38;overflow:hidden;font-size:12px;--accent:#8fb8d4;background:#1a1626}
+.stage.living{--accent:#c8b273;background:#3d4a3a}.stage.lobby{--accent:#a9bccb;background:#3a434c}
+/* 바닥 칸 */
+.grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:40px 40px}
+.stage.dungeon .grid{background-color:#1f1a2c}
+.stage.living .grid{background-color:#46553f}.stage.lobby .grid{background-color:#414b55}
+.vig{position:absolute;inset:0;pointer-events:none;box-shadow:inset 0 0 200px 60px rgba(10,0,20,.7)}
+.stage.living .vig{box-shadow:inset 0 0 160px 40px rgba(30,25,0,.45)}.stage.lobby .vig{box-shadow:inset 0 0 200px 60px rgba(200,210,220,.15),inset 0 0 120px 30px rgba(0,0,0,.5)}
+.stage.gray{filter:grayscale(.9) brightness(.8)}
+/* 개체 */
+.ent{position:absolute;width:40px;height:40px;display:flex;align-items:flex-end;justify-content:center}
+.ent .body{width:24px;height:32px;border-radius:5px 5px 3px 3px;border:2px solid #0d0f12}
+.ent .nm{position:absolute;top:-16px;white-space:nowrap;font-size:10px;text-shadow:0 1px 2px #000}
+.ent .hp{position:absolute;top:-5px;left:4px;right:4px;height:3px;background:#000}
+.ent .hp i{display:block;height:100%;background:#c34a4a}
+.ent.boss{width:80px;height:80px}.ent.boss .body{width:56px;height:70px;background:#6b2f45}
+.ent.ally .hp i{background:#5fbf6a}
+.mark{position:absolute;border-radius:50%;pointer-events:none}
+.mark.spread{border:2px dashed #e3a25b}.mark.spread.bad{border-color:#e05050;background:rgba(224,80,80,.12)}
+.mark.stack{border:2px solid #e8d49b;background:rgba(232,212,155,.12)}
+.mark .cnt{position:absolute;top:-18px;left:50%;transform:translateX(-50%);font-size:11px;color:#e8d49b}
+.tele{position:absolute;background:rgba(200,50,60,.18);border:1px solid rgba(230,80,90,.8);overflow:hidden}
+.tele i{position:absolute;inset:50%;background:rgba(220,60,70,.45);transition:inset linear}
+.cursor{position:absolute;width:40px;height:40px;border:2px solid #fff;box-shadow:0 0 8px #fff;pointer-events:none;display:none}
+.cursor.out{border-color:#777;box-shadow:none}
+.num{position:absolute;font-weight:700;text-shadow:0 1px 2px #000;pointer-events:none;animation:up .8s forwards}
+@keyframes up{to{transform:translateY(-30px);opacity:0}}
+/* HUD */
+.obj{position:absolute;left:16px;top:14px;border-left:2px solid var(--accent);padding:4px 10px;background:rgba(10,10,14,.45);max-width:280px}
+.obj .k{font-size:10px;color:var(--accent);letter-spacing:.12em}.obj .t{font-size:12.5px;margin-top:2px}
+.prog{position:absolute;right:16px;top:14px;background:rgba(10,10,14,.5);border:1px solid rgba(255,255,255,.1);padding:7px 10px;text-align:right;min-width:190px}
+.prog .d{font-size:12.5px}.prog .s{font-size:11px;color:#a19c90;margin-top:3px}
+.prog .lamps{margin-top:4px;font-size:11px}.lamp{display:inline-block;width:9px;height:12px;border-radius:5px 5px 2px 2px;background:#e8b35a;margin-left:3px;box-shadow:0 0 6px #e8b35a}.lamp.off{background:#3a3a3a;box-shadow:none}
+.bossbar{position:absolute;left:50%;top:14px;width:460px;margin-left:-230px;display:none}
+.bossbar.on{display:block}
+.bossbar .n{text-align:center;font-size:12.5px;letter-spacing:.12em;margin-bottom:4px}
+.bossbar .tr{position:relative;height:12px;background:rgba(0,0,0,.6);border:1px solid rgba(255,255,255,.25)}
+.bossbar .tr i{position:absolute;inset:0;width:72%;background:linear-gradient(#b8434f,#7e2530)}
+.bossbar .notch{position:absolute;top:-2px;bottom:-2px;width:2px;background:#fff}
+.bossbar .ex{text-align:center;font-size:11px;color:#ffd9a0;margin-top:4px;height:14px}
+.target{position:absolute;left:50%;top:70px;width:220px;margin-left:-110px;background:rgba(10,10,14,.5);padding:4px 8px;display:none;font-size:11px}
+.target.on{display:block}.target .tr{height:5px;background:#000;margin-top:3px}.target .tr i{display:block;height:100%;background:#c34a4a}
+.party{position:absolute;left:16px;top:120px;display:flex;flex-direction:column;gap:6px}
+.pf{width:178px;background:rgba(10,10,14,.55);border:1px solid rgba(255,255,255,.12);padding:5px 7px;position:relative}
+.pf .r1{display:flex;justify-content:space-between;font-size:11px}.pf .r1 b{font-weight:400;color:#a19c90}
+.pf .tr{height:6px;background:#000;margin-top:4px}.pf .tr i{display:block;height:100%;background:#5fbf6a;transition:width .3s}
+.pf .st{margin-top:3px;height:14px;display:flex;gap:3px}.pf .st span{font-size:9.5px;padding:0 3px;border:1px solid #e05050;color:#f0b3b8}
+.pf.sel{border-color:#fff;box-shadow:0 0 0 1px #fff}.pf.aggro{border-color:#e05050;box-shadow:0 0 8px #e05050}
+.pf.down{opacity:.6}.pf .down{position:absolute;right:6px;bottom:4px;font-size:10px;color:#e3a25b}
+.bottom{position:absolute;left:50%;bottom:14px;transform:translateX(-50%);display:flex;align-items:flex-end;gap:10px}
+.gauge{width:150px}.gauge .l{font-size:10.5px;color:#a19c90;display:flex;justify-content:space-between}
+.gauge .tr{height:10px;background:#000;border:1px solid rgba(255,255,255,.2)}.gauge .tr i{display:block;height:100%;transition:width .3s}
+.hp i{background:linear-gradient(#d0565a,#8a2c30)}.sp i{background:linear-gradient(#6aa8d8,#2f5f8a)}
+.slots{display:flex;gap:4px}
+.slot{width:46px;height:46px;background:rgba(10,10,14,.6);border:1px solid rgba(255,255,255,.18);position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:10px;text-align:center;line-height:1.15}
+.slot .k{position:absolute;top:1px;left:3px;font-size:9px;color:#a19c90}
+.slot .c{position:absolute;bottom:1px;right:3px;font-size:9px;color:#9cc7e6}
+.slot .c.cd{color:#e8d49b}
+.slot .sw{position:absolute;inset:0;background:rgba(0,0,0,.6);transform-origin:bottom;transform:scaleY(0)}
+.slot.dim{opacity:.4}.slot.active{border-color:#fff}
+.xp{position:absolute;left:0;right:0;bottom:0;height:3px;background:#000}.xp i{display:block;height:100%;width:38%;background:var(--accent)}
+.chat{position:absolute;left:16px;bottom:22px;width:250px;height:92px;background:rgba(10,10,14,.45);font-size:10.5px;padding:5px 7px;color:#b9b2a3;line-height:1.5}
+.chat.fold{height:20px;overflow:hidden}
+.chat .tabs{color:var(--accent);font-size:10px;margin-bottom:2px}
+.queue{position:absolute;right:16px;top:120px;background:rgba(10,10,14,.55);border-left:2px solid var(--accent);padding:6px 10px;font-size:11px;display:none}
+.emote .slot{font-size:10px}
+.down-screen{position:absolute;inset:0;display:none;align-items:center;justify-content:center;flex-direction:column;gap:6px;background:rgba(0,0,0,.35);pointer-events:none}
+.down-screen.on{display:flex}.down-screen .t{font-size:30px}.down-screen .s{font-size:12px;color:#ddd}
+.flip{position:absolute;inset:0;border:6px solid transparent;pointer-events:none}.flip.on{animation:fl .5s 4}
+@keyframes fl{50%{border-color:#e8d49b}}
+.toast{position:absolute;left:50%;top:100px;transform:translateX(-50%);background:rgba(0,0,0,.75);padding:5px 12px;opacity:0;transition:opacity .25s;pointer-events:none}.toast.on{opacity:1}
+.prompt{position:absolute;display:none;font-size:11px;background:rgba(0,0,0,.6);padding:2px 6px}
+.only-d,.only-l,.only-b{display:none}
+.stage.dungeon .only-d{display:block}.stage.living .only-l{display:block}.stage.lobby .only-b{display:block}
+.stage.dungeon .slots.only-d,.stage.lobby .slots.only-b{display:flex}
+.demo{width:1120px;display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:12px}
+.demo b{color:#8a8476;font-weight:400;margin:0 4px 0 10px}
+.demo button{background:#22252e;color:#d8d3c8;border:1px solid #3a3e4a;padding:5px 9px;font:inherit;cursor:pointer}.demo button:hover{border-color:#8fb8d4}
+.note{width:1120px;font-size:11.5px;color:#7f7a6c;line-height:1.6}
+</style>
+</head>
+<body>
+<h1>인게임 HUD v2 — 저승 던전 · 이승 · 삼천도 <small>시안 클릭 후: 1~4 스킬 · ←↑→↓ 대상 이동 · Enter/같은 키 확정 · Esc 취소 · F1~F4 파티원 지정 · Tab 적 순환</small></h1>
+<div class="stage dungeon" id="stage">
+  <div class="grid"></div>
+  <div id="world"></div>
+  <div class="cursor" id="cursor"></div>
+  <div class="vig"></div>
+  <div class="flip" id="flip"></div>
+
+  <div class="obj"><div class="k" id="objK">메인 · 3챕터</div><div class="t" id="objT">호법귀장을 쓰러뜨린다</div></div>
+  <div class="prog only-d"><div class="d">무너진 진법터</div><div class="s">구간 4/4 · 보스방</div><div class="lamps">혼백 등불 <i class="lamp"></i><i class="lamp"></i><i class="lamp" id="lamp3"></i> · 불씨 <span id="fire">2</span></div></div>
+  <div class="prog only-l"><div class="d">재벌 유민촌</div><div class="s">이승 · 신단 1</div></div>
+  <div class="prog only-b"><div class="d">삼천도 · 나루터</div><div class="s">채널 2 (38/60)</div></div>
+  <div class="queue only-b" id="queue">무너진 진법터 대기 중 · 0:42<br><span style="color:#a19c90">1·2순위 배정 단계</span></div>
+
+  <div class="bossbar only-d" id="bossbar"><div class="n">호법귀장</div><div class="tr"><i id="bossHp"></i><span class="notch" style="left:50%"></span></div><div class="ex" id="ex"></div></div>
+  <div class="target" id="target"><span id="tName"></span><div class="tr"><i id="tHp"></i></div></div>
+
+  <div class="party only-d" id="party"></div>
+
+  <div class="bottom">
+    <div class="gauge hp only-d"><div class="l"><span>체력</span><span id="hpT">4,367</span></div><div class="tr"><i style="width:100%" id="hpG"></i></div></div>
+    <div class="slots only-d" id="slots"></div>
+    <div class="slots only-b emote" id="emotes"></div>
+    <div class="gauge sp only-d"><div class="l"><span>신력</span><span id="spT">100</span></div><div class="tr"><i style="width:100%" id="spG"></i></div></div>
+  </div>
+  <div class="chat" id="chat"><div class="tabs">근처 · 파티 · 귓속말</div><div id="chatBody">[파티] 청운: 탱 먼저 들어갈게요<br>[파티] 솔바람: 판 벌이기 탈진 때 씁니다</div></div>
+  <div class="xp"><i></i></div>
+  <div class="prompt" id="prompt"></div>
+  <div class="down-screen" id="downS"><div class="t" id="downT">30</div><div class="s">혼절 — 혼 부르기를 기다리는 중 · 시간이 지나면 마지막 불씨에서 부활</div></div>
+  <div class="toast" id="toast"></div>
+</div>
+
+<div class="demo">
+  <b>공간</b><button onclick="setSpace('dungeon')">저승 던전</button><button onclick="setSpace('living')">이승</button><button onclick="setSpace('lobby')">삼천도</button>
+  <b>내 원혼</b><button onclick="setMe(1)">망나니</button><button onclick="setMe(4)">의녀</button>
+  <b>보스</b><button onclick="tele()">예고 칸</button><button onclick="spread()">산개 표식</button><button onclick="stack()">집결 표식</button><button onclick="exhaust()">탈진</button><button onclick="flipW()">세계 뒤집기 경고</button>
+  <b>파티</b><button onclick="aggro()">노림 경고</button><button onclick="debuff()">파티원 상태이상</button><button onclick="downMate()">파티원 혼절</button><button onclick="downMe()">내 혼절</button><button onclick="useFire()">불씨 사용</button>
+</div>
+<div class="note">
+  · 요소 목록·노출 조건은 <code>Table/MasterTable.xlsx</code>의 <code>hudElements</code>(30종, 공간별)를 따른다. 스킬 수치는 <code>spiritSkills</code>.<br>
+  · 대상 선택: 단일 대상 스킬(망나니 2·3 / 의녀 1·3·4)을 누르면 커서가 뜬다. 방향키로 그 방향의 가장 가까운 후보, 사거리 밖이면 회색. 같은 키 두 번이면 현재 대상에게 바로. 공용 재사용 대기 0.8초는 1~4 원혼 스킬 슬롯만 스윕(5~8 소모품은 제외).<br>
+  · 위협 수치 미터는 두지 않는다. 탱커가 아닌데 위협 1위가 되면 자기 파티 프레임만 붉어진다(노림 경고).
+</div>
+<script>
+const T=40,$=id=>document.getElementById(id);
+const SP={0:'무명장수',1:'망나니',2:'착호갑사',3:'꼭두쇠',4:'의녀'};
+const SK={1:[['칼춤',0,1,'40'],['참수',1,2,'50'],['돌진베기',1,4,'10초'],['피바람',0,0,'30초']],
+          4:[['침 놓기',2,6,'18'],['탕약',0,3,'28'],['해독',2,6,'15'],['회혼술',2,4,'60초']]};
+let me=1,space='dungeon';
+const mates=[{n:'청운',sp:0,x:15,y:6,hp:100},{n:'나',sp:1,x:14,y:4,hp:100},{n:'솔바람',sp:3,x:11,y:6,hp:100},{n:'달무리',sp:4,x:9,y:8,hp:100}];
+const foes=[{n:'호법귀장',x:17,y:5,hp:72,boss:1},{n:'재 잡귀',x:16,y:9,hp:100},{n:'진법 악귀',x:19,y:9,hp:80,elite:1},{n:'재 잡귀',x:21,y:3,hp:100}];
+let sel=null,selSkill=null,cur=null,curTarget=null,gcd=false,cds={},sp=100,fire=2;
+function meEnt(){return mates.find(m=>m.n==='나')}
+function draw(){
+  const w=$('world');w.innerHTML='';
+  if(space!=='dungeon'){
+    const n=space==='living'?[{n:'나',x:12,y:7,c:'#e8e2d4'},{n:'노파',x:15,y:7,c:'#b9a88a'}]:[{n:'나 · 3챕터',x:12,y:8,c:'#e8e2d4'},{n:'청운 · 5챕터',x:15,y:6,c:'#c9c1ad'},{n:'사공',x:18,y:9,c:'#8a9aa8'},{n:'솔바람 · 2챕터',x:9,y:5,c:'#c9c1ad'}];
+    n.forEach(e=>{w.insertAdjacentHTML('beforeend',`<div class="ent" style="left:${e.x*T}px;top:${e.y*T}px"><div class="nm">${e.n}</div><div class="body" style="background:${e.c}"></div></div>`)});
+    const p=$('prompt');p.style.display='block';p.style.left=(space==='living'?14.3*T:17.3*T)+'px';p.style.top=(space==='living'?8.2*T:10.2*T)+'px';p.textContent=space==='living'?'F 대화':'F 사공에게 말 걸기';
+    return;
+  }
+  $('prompt').style.display='none';
+  mates.forEach(m=>w.insertAdjacentHTML('beforeend',`<div class="ent ally" style="left:${m.x*T}px;top:${m.y*T}px;${m.down?'opacity:.35':''}"><div class="nm">${m.n==='나'?SP[me]:m.n}</div><div class="hp"><i style="width:${m.hp}%"></i></div><div class="body" style="background:${['#8c8f96','#a3373d','#7a6a3e','#c48a2c','#5f8f80'][m.n==='나'?me:m.sp]}"></div></div>`));
+  foes.forEach(f=>w.insertAdjacentHTML('beforeend',`<div class="ent ${f.boss?'boss':''}" style="left:${f.x*T}px;top:${f.y*T}px"><div class="nm" style="${f.elite?'color:#e8d49b':''}">${f.boss?'':f.n}</div>${f.boss?'':`<div class="hp" style="${f.elite?'height:5px':''}"><i style="width:${f.hp}%"></i></div>`}<div class="body" style="${f.boss?'':'background:'+(f.elite?'#5b3a6a':'#4a4458')}"></div></div>`));
+}
+function renderParty(){
+  $('party').innerHTML=[1,0,2,3].map((i,k)=>{const m=mates[i];const s=m.n==='나'?me:m.sp;
+    return `<div class="pf ${sel&&cur===m?'sel':''} ${m.aggro?'aggro':''} ${m.down?'down':''}"><div class="r1"><span>F${k+1} ${m.n==='나'?'나':m.n}</span><b>${SP[s]}</b></div><div class="tr"><i style="width:${m.down?0:m.hp}%"></i></div><div class="st">${(m.st||[]).map(x=>`<span>${x}</span>`).join('')}</div>${m.down?`<div class="down">혼절 ${m.down}s</div>`:''}</div>`}).join('');
+}
+function renderSlots(){
+  const s=SK[me];
+  $('slots').innerHTML=[0,1,2,3,4,5,6,7].map(i=>{
+    if(i<4){const [n,tt,rg,c]=s[i];const cd=cds[i];return `<div class="slot ${selSkill===i?'active':''} ${cd?'dim':''}" id="sl${i}"><span class="k">${i+1}</span>${n}<span class="c ${c.includes('초')?'cd':''}">${cd?cd+'s':c}</span><div class="sw"></div></div>`}
+    return `<div class="slot dim"><span class="k">${i+1}</span>${['약','','',''][i-4]||'·'}</div>`}).join('');
+  $('emotes').innerHTML=['인사','절','웃음','곡','손짓','앉기','춤','?'].map((n,i)=>`<div class="slot"><span class="k">${i+1}</span>${n}</div>`).join('');
+}
+function toast(t){$('toast').textContent=t;$('toast').classList.add('on');clearTimeout(toast.h);toast.h=setTimeout(()=>$('toast').classList.remove('on'),1500)}
+function setSpace(s){space=s;$('stage').className='stage '+s;$('chat').classList.toggle('fold',s==='living');
+  $('objK').textContent=s==='lobby'?'다음 행선지':'메인 · 3챕터';$('objT').textContent=s==='dungeon'?'호법귀장을 쓰러뜨린다':s==='living'?'유민들의 증언을 모은다':'나루터 — 무너진 진법터';cancelSel();draw();renderParty()}
+function setMe(s){me=s;cds={};cancelSel();draw();renderSlots();renderParty();toast(SP[s]+'로 보기')}
+function dist(a,b){return Math.max(Math.abs(a.x-b.x),Math.abs(a.y-b.y))}
+function cands(tt){return tt===1?foes:mates.filter(m=>tt!==2||true)}
+function startSkill(i){
+  if(space!=='dungeon')return;
+  const [n,tt,rg]=SK[me][i];
+  if(cds[i]){toast(n+' 쿨타임');return}
+  if(gcd){toast('공용 재사용 대기');return}
+  if(selSkill===i){confirm();return}
+  if(tt===0){fire_(i);return}
+  selSkill=i;sel=tt;const c=cands(tt);
+  cur=tt===1?(curTarget&&foes.includes(curTarget)?curTarget:c.slice().sort((a,b)=>dist(meEnt(),a)-dist(meEnt(),b))[0]):(meEnt());
+  showCursor();renderSlots();renderParty();
+}
+function showCursor(){
+  const c=$('cursor');if(!cur){c.style.display='none';return}
+  const off=cur.boss?20:0;c.style.display='block';c.style.left=(cur.x*T+off)+'px';c.style.top=(cur.y*T+off+(cur.boss?20:0))+'px';
+  const rg=SK[me][selSkill][2];c.classList.toggle('out',dist(meEnt(),cur)>rg);
+  $('target').classList.add('on');$('tName').textContent=(cur.n==='나'?'나 ('+SP[me]+')':cur.n)+(dist(meEnt(),cur)>rg?' — 사거리 밖':'')+' · '+dist(meEnt(),cur)+'칸';$('tHp').style.width=(cur.hp||0)+'%';
+}
+function move(dx,dy){
+  if(!sel)return;const c=cands(sel).filter(e=>e!==cur);
+  const best=c.map(e=>({e,dx:e.x-cur.x,dy:e.y-cur.y})).filter(o=>(dx?Math.sign(o.dx)===dx:true)&&(dy?Math.sign(o.dy)===dy:true)).sort((a,b)=>Math.max(Math.abs(a.dx),Math.abs(a.dy))-Math.max(Math.abs(b.dx),Math.abs(b.dy)))[0];
+  if(best){cur=best.e;showCursor();renderParty()}
+}
+function confirm(){
+  const rg=SK[me][selSkill][2];
+  if(dist(meEnt(),cur)>rg){toast('사거리 밖 — 다가가야 한다 (신력 소모 없음)');return}
+  curTarget=cur;fire_(selSkill,cur);
+}
+function fire_(i,t){
+  const [n,tt,rg,c]=SK[me][i];
+  if(!c.includes('초')){const cost=+c;if(sp<cost){toast('신력 부족');return}sp-=cost;$('spG').style.width=sp+'%';$('spT').textContent=sp}
+  else{cds[i]=+c.replace('초','');}
+  if(t){const heal=me===4;const x=t.x*T+10,y=t.y*T-10;$('world').insertAdjacentHTML('beforeend',`<div class="num" style="left:${x}px;top:${y}px;color:${heal?'#7fdc8a':'#fff'};font-size:${heal?14:16}px">${heal?'+2,134':'3,406'}</div>`);
+    if(heal&&t.down){t.down=0;t.hp=50;toast(t.n+' 일으킴')}if(heal&&n==='해독'){t.st=[];}}
+  toast(n+(t?' → '+(t.n==='나'?'나':t.n):''));
+  cancelSel(true);gcd=true;[...document.querySelectorAll('#slots .slot .sw')].slice(0,4).forEach(s=>{s.style.transition='none';s.style.transform='scaleY(1)';requestAnimationFrame(()=>{s.style.transition='transform .8s linear';s.style.transform='scaleY(0)'})});
+  setTimeout(()=>gcd=false,800);renderParty();
+}
+function cancelSel(keep){sel=null;selSkill=null;cur=null;$('cursor').style.display='none';if(!keep)$('target').classList.remove('on');renderSlots();renderParty()}
+setInterval(()=>{let ch=false;for(const k in cds){cds[k]--;if(cds[k]<=0)delete cds[k];ch=true}
+  if(sp<100){sp=Math.min(100,sp+(me===4?4:2));$('spG').style.width=sp+'%';$('spT').textContent=sp}
+  mates.forEach(m=>{if(m.down>0){m.down--;if(m.down===0){m.hp=50;toast(m.n+' 마지막 불씨에서 부활')}ch=true}});
+  if(ch&&!sel){renderSlots();renderParty()}},1000);
+document.addEventListener('keydown',e=>{
+  const k=e.key;if(['ArrowUp','ArrowDown','ArrowLeft','ArrowRight','Tab','F1','F2','F3','F4','Enter'].includes(k))e.preventDefault();
+  if(space==='lobby'&&/^[1-8]$/.test(k)){toast('감정표현: '+['인사','절','웃음','곡','손짓','앉기','춤','?'][k-1]);return}
+  if(/^[1-4]$/.test(k))startSkill(+k-1);
+  else if(k==='ArrowLeft')move(-1,0);else if(k==='ArrowRight')move(1,0);else if(k==='ArrowUp')move(0,-1);else if(k==='ArrowDown')move(0,1);
+  else if(k==='Enter'&&sel)confirm();else if(k==='Escape')cancelSel();
+  else if(/^F[1-4]$/.test(k)&&sel===2){const idx={F1:1,F2:0,F3:2,F4:3}[k];cur=mates[idx];showCursor();renderParty()}
+  else if(k==='Tab'&&space==='dungeon'){const i=(foes.indexOf(curTarget)+1)%foes.length;curTarget=foes[i];$('target').classList.add('on');$('tName').textContent=curTarget.n+' · '+dist(meEnt(),curTarget)+'칸';$('tHp').style.width=curTarget.hp+'%'}
+});
+function tele(){if(space!=='dungeon')return;const d=document.createElement('div');d.className='tele';const b=foes[0];d.style.left=(b.x-2)*T+'px';d.style.top=(b.y-2)*T+'px';d.style.width=d.style.height=(T*6)+'px';d.innerHTML='<i></i>';$('world').appendChild(d);
+  const i=d.querySelector('i');i.style.transition='inset 1.4s linear';requestAnimationFrame(()=>requestAnimationFrame(()=>i.style.inset='0'));$('ex').textContent='폭주 회전 — 예고 1.4초 · 탈출 3칸';setTimeout(()=>{d.remove();$('ex').textContent=''},1500)}
+function spread(){if(space!=='dungeon')return;[mates[1],mates[2]].forEach((m,k)=>{const r=document.createElement('div');r.className='mark spread'+(dist(mates[1],mates[2])<=2?' bad':'');const s=T*5;r.style.width=r.style.height=s+'px';r.style.left=(m.x*T+20-s/2)+'px';r.style.top=(m.y*T+20-s/2)+'px';$('world').appendChild(r);setTimeout(()=>r.remove(),2500)});toast(dist(mates[1],mates[2])<=2?'산개 표식 — 서로 2칸 이내, 겹침(붉게)':'산개 표식')}
+function stack(){if(space!=='dungeon')return;const m=mates[0];const r=document.createElement('div');r.className='mark stack';const s=T*3;r.style.width=r.style.height=s+'px';r.style.left=(m.x*T+20-s/2)+'px';r.style.top=(m.y*T+20-s/2)+'px';const n=mates.filter(x=>dist(x,m)<=1).length;r.innerHTML=`<span class="cnt">${n}/4</span>`;$('world').appendChild(r);setTimeout(()=>r.remove(),2500);toast('집결 표식 — 원 안 인원으로 나눠 맞는다')}
+function exhaust(){if(space!=='dungeon')return;let t=6;$('ex').textContent='탈진 6초 — 받는 피해 +30%';const h=setInterval(()=>{t--;$('ex').textContent=t>0?`탈진 ${t}초 — 받는 피해 +30%`:'';if(t<=0)clearInterval(h)},1000)}
+function flipW(){if(space!=='dungeon')return;$('flip').classList.remove('on');void $('flip').offsetWidth;$('flip').classList.add('on');toast('세계 뒤집기 2초 전 — 안전 칸으로')}
+function aggro(){const m=meEnt();m.aggro=!m.aggro;renderParty();toast(m.aggro?'노림 경고 — 내가 위협 1위':'노림 해제')}
+function debuff(){mates[0].st=['취약 6','결박 3'];mates[3].st=['둔화 4'];renderParty()}
+function downMate(){mates[2].down=30;mates[2].hp=0;renderParty();draw();toast('솔바람 혼절 — 30초 안에 일으킨다')}
+function downMe(){if(space!=='dungeon')return;$('stage').classList.add('gray');$('downS').classList.add('on');let t=30;$('downT').textContent=t;const h=setInterval(()=>{t--;$('downT').textContent=t;if(t<=25){clearInterval(h);$('stage').classList.remove('gray');$('downS').classList.remove('on');toast('청운이 혼 부르기 — 체력 50%로 일어남')}},1000)}
+function useFire(){if(fire<=0){toast('불씨를 다 썼다');return}fire--;$('fire').textContent=fire;mates.forEach(m=>{if(!m.down)m.hp=100});renderParty();draw();toast('불씨 — 파티 전원 체력 전량 회복')}
+draw();renderSlots();renderParty();
+</script>
+</body>
+</html>

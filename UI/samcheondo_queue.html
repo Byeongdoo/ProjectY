@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>무당: 조선의 낮과 밤 — 삼천도 나루터 큐 시안</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#14161c;color:#d8d3c8;font-family:'Malgun Gothic','맑은 고딕',sans-serif;padding:18px;display:flex;flex-direction:column;align-items:center;gap:14px}
+h1{font-size:15px;font-weight:700;color:#b9b2a3}
+h1 small{font-weight:400;color:#6d6759;margin-left:8px;font-size:12px}
+.stage{position:relative;width:1120px;height:630px;border:1px solid #2c2f38;overflow:hidden;font-size:13px;--accent:#a9bccb;
+  background:linear-gradient(175deg,#56606a 0%,#39424b 45%,#1c2228 100%)}
+.mist{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 30% 95%,rgba(200,210,220,.18),transparent 55%);box-shadow:inset 0 0 180px 50px rgba(0,0,0,.55)}
+.river{position:absolute;left:0;right:0;bottom:0;height:110px;background:repeating-linear-gradient(180deg,rgba(150,170,185,.10) 0 3px,transparent 3px 9px),linear-gradient(180deg,#26303a,#141a20)}
+.top{position:absolute;left:24px;right:24px;top:18px;display:flex;justify-content:space-between}
+.ttl .kind{font-size:10px;letter-spacing:.2em;color:var(--accent)}
+.ttl .main{font-size:20px;letter-spacing:.06em;margin-top:2px}
+.ttl .sub{font-size:11.5px;color:#a19c90;margin-top:4px}
+.me{font-size:11.5px;color:#a19c90;text-align:right;line-height:1.6}
+/* 던전 목록 */
+.list{position:absolute;left:24px;top:96px;width:440px}
+.list h3,.prefs h3{font-size:11px;letter-spacing:.16em;color:var(--accent);font-weight:400;margin-bottom:8px}
+.dg{display:flex;align-items:center;gap:10px;height:52px;padding:0 12px;margin-bottom:6px;background:rgba(10,12,16,.5);border:1px solid rgba(169,188,203,.2)}
+.dg .ch{width:34px;font-size:10.5px;color:#a19c90}
+.dg .nm{font-size:14px;flex:1}
+.dg .boss{font-size:11px;color:#a19c90}
+.dg .tag{font-size:10.5px;padding:2px 6px;border-radius:2px}
+.tag.first{background:#4a4126;color:#e8d49b}.tag.guide{background:#26414e;color:#a9d6ea}.tag.lock{background:#2a2d33;color:#6f7780}
+.dg.focus{border-color:#e9e2cf;box-shadow:0 0 0 1px #e9e2cf}
+.dg.locked .nm{color:#6f7780}
+/* 원혼 선호 */
+.prefs{position:absolute;left:490px;right:24px;top:96px}
+.sps{display:flex;gap:8px}
+.sp{flex:1;height:120px;background:rgba(10,12,16,.5);border:1px solid rgba(169,188,203,.2);position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px}
+.sp .r{font-size:10px;color:var(--accent);letter-spacing:.1em}
+.sp .n{font-size:14px}
+.sp .short{position:absolute;top:6px;left:6px;font-size:10px;color:#e3a25b}
+.sp .rank{position:absolute;top:6px;right:8px;font-size:11px;color:#d9c27a}
+.sp.focus{border-color:#e9e2cf;box-shadow:0 0 0 1px #e9e2cf}
+.sp.p1{border-color:#d9c27a}.sp.p2{border-color:#9c8a55}
+.any{margin-top:8px;font-size:11.5px;color:#a19c90}
+.any b{color:#d8d3c8}
+.hint{margin-top:10px;font-size:11px;color:#a19c90;line-height:1.6}
+/* 대기 */
+.wait{position:absolute;left:490px;right:24px;top:300px;height:190px;background:rgba(8,10,14,.62);border-left:2px solid var(--accent);padding:12px 16px;display:none}
+.wait.on{display:block}
+.wait .row{display:flex;justify-content:space-between;align-items:baseline}
+.wait .t{font-size:28px;font-variant-numeric:tabular-nums}
+.wait .lbl{font-size:11px;color:#a19c90}
+.phase{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;margin-top:10px}
+.phase div{font-size:10.5px;padding:5px 6px;background:rgba(255,255,255,.04);color:#6f7780;border-top:2px solid #3a3f47}
+.phase div.on{color:#e9e2cf;border-top-color:var(--accent)}
+.phase div.done{color:#a19c90;border-top-color:#5e6873}
+.found{margin-top:12px;display:flex;gap:6px;align-items:center;font-size:11.5px;color:#a19c90}
+.dot{width:14px;height:14px;border-radius:50%;border:1px solid #6f7780}
+.dot.f{background:var(--accent);border-color:var(--accent)}
+/* 팝업 */
+.modal{position:absolute;inset:0;background:rgba(0,0,0,.55);display:none;align-items:center;justify-content:center}
+.modal.on{display:flex}
+.box{width:470px;background:#1c2128;border:1px solid var(--accent);padding:18px 20px}
+.box .k{font-size:10.5px;letter-spacing:.18em;color:var(--accent)}
+.box .m{font-size:16px;margin-top:4px}
+.box .s{font-size:12px;color:#a19c90;margin-top:6px;line-height:1.6}
+.box table{width:100%;margin-top:10px;border-collapse:collapse;font-size:12px}
+.box td{padding:5px 4px;border-bottom:1px solid rgba(255,255,255,.06)}
+.box .bar{height:4px;background:rgba(0,0,0,.5);margin-top:12px}
+.box .bar i{display:block;height:100%;background:var(--accent);transition:width 1s linear}
+.box .btns{display:flex;gap:8px;margin-top:14px;justify-content:flex-end;font-size:11.5px;color:#a19c90}
+.box .btns span{border:1px solid #6f7780;padding:2px 7px;color:#d8d3c8}
+.foot{position:absolute;left:24px;right:24px;bottom:16px;display:flex;justify-content:space-between;font-size:11.5px;color:#b9b2a3}
+.foot span{display:inline-block;border:1px solid #6f7780;padding:0 5px;margin:0 3px 0 10px;font-size:10.5px;color:#d8d3c8}
+.toast{position:absolute;left:50%;top:70px;transform:translateX(-50%);background:rgba(0,0,0,.75);padding:6px 14px;font-size:12px;opacity:0;transition:opacity .25s;pointer-events:none}
+.toast.on{opacity:1}
+.demo{width:1120px;display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:12px}
+.demo b{color:#8a8476;font-weight:400;margin:0 4px 0 10px}
+.demo button{background:#22252e;color:#d8d3c8;border:1px solid #3a3e4a;padding:5px 10px;font:inherit;cursor:pointer}
+.demo button:hover{border-color:#a9bccb}
+.note{width:1120px;font-size:11.5px;color:#7f7a6c;line-height:1.6}
+</style>
+</head>
+<body>
+<h1>삼천도 나루터 — 던전 큐 <small>↑↓ 던전 · ←→ 원혼 · Enter 선호 지정/큐 등록/수락 · X 상관없음 · Backspace 선호 초기화 · Esc 취소/거절</small></h1>
+
+<div class="stage" id="stage">
+  <div class="river"></div><div class="mist"></div>
+  <div class="top">
+    <div class="ttl"><div class="kind">삼천도 · 나루터 · 사공</div><div class="main">"어디로 건너가시겠소?"</div><div class="sub">건너간 이들 가운데 처음 가는 자가 있으면, 길을 아는 자가 길잡이가 되어 주시오.</div></div>
+    <div class="me">나 · Lv 19 · 3챕터 진행 중<br>채널 2 (38/60)</div>
+  </div>
+
+  <div class="list"><h3>저승 던전</h3><div id="list"></div></div>
+
+  <div class="prefs">
+    <h3>받고 싶은 원혼 — 1순위 · 2순위</h3>
+    <div class="sps" id="sps"></div>
+    <div class="any" id="any"></div>
+    <div class="hint">부족 표시가 붙은 원혼을 고르면 대기가 짧아지고 클리어 혼백 +30%.<br>30초가 지나면 2순위까지, 60초부터 부족 원혼을 제안한다. 강제로 배정하지 않는다.</div>
+  </div>
+
+  <div class="wait" id="wait">
+    <div class="row"><div><div class="lbl" id="wDg"></div><div class="t" id="wT">0:00</div></div><div class="lbl" id="wPref"></div></div>
+    <div class="phase" id="phase">
+      <div>0–30초<br>1순위만</div><div>30–60초<br>1·2순위</div><div>60초~<br>부족 원혼 제안</div><div>180초~<br>3인 출발 제안</div>
+    </div>
+    <div class="found"><span>배정 가능 인원</span><i class="dot" id="d0"></i><i class="dot" id="d1"></i><i class="dot" id="d2"></i><i class="dot" id="d3"></i><span id="fTxt"></span></div>
+  </div>
+
+  <div class="modal" id="modal"><div class="box" id="box"></div></div>
+  <div class="toast" id="toast"></div>
+  <div class="foot"><div id="state">큐에 등록하지 않음 — 대기 중에도 삼천도를 돌아다닐 수 있다</div><div><span>↑↓</span>던전<span>←→</span>원혼<span>Enter</span>지정<span>Esc</span>취소</div></div>
+</div>
+
+<div class="demo">
+  <b>시간</b><button onclick="addT(30)">+30초</button>
+  <b>매칭</b><button onclick="addFound()">배정 가능 인원 +1</button><button onclick="matchNow()">4인 성사</button>
+  <b>수락 창</b><button onclick="acceptTimeout()">수락 시간 초과</button>
+  <b>상태</b><button onclick="reset()">처음부터</button>
+</div>
+<div class="note">
+  · 던전 상태는 3챕터 진행 중인 플레이어 기준 예시다: 1·2챕터 던전은 클리어(길잡이 +20%), 무너진 진법터는 첫 도전, 4·5챕터는 미해금(이름 ???).<br>
+  · 수치는 <code>Table/MasterTable.xlsx</code> configs 60012~60016·60023(수락 15초, 1단계 30초, 2단계 60초, 부족 원혼 +30%, 길잡이 +20%, 3인 출발 180초)에서 옮겼다.<br>
+  · 수락 후에는 원혼 선택 화면(<code>UI/spirit_select.html</code>)으로 넘어가며, 매칭이 배정한 원혼이 예약된 상태로 시작한다.
+</div>
+
+<script>
+const DG=[
+ {id:87101,ch:1,nm:'산신당 저승길',boss:'뒤틀린 목귀',st:'clear'},
+ {id:87201,ch:2,nm:'가라앉은 조운선',boss:'수귀 사공',st:'clear'},
+ {id:87301,ch:3,nm:'무너진 진법터',boss:'호법귀장',st:'first'},
+ {id:87401,ch:4,nm:'심판궁',boss:'',st:'lock'},
+ {id:87402,ch:4,nm:'만령진 지하',boss:'',st:'lock'},
+ {id:87501,ch:5,nm:'황천문',boss:'',st:'lock'}];
+const SP=[{n:'무명장수',r:'탱커'},{n:'망나니',r:'딜러'},{n:'착호갑사',r:'원거리 딜러'},{n:'꼭두쇠',r:'버퍼'},{n:'의녀',r:'힐러'}];
+const SHORT=[0,4];               // 지금 큐에서 부족한 원혼 (탱커·힐러)
+const MATES=['솔바람','청운','달무리'];
+let dFocus=2,sFocus=0,prefs=[],any=false,queued=false,t=0,found=1,tick=null,phaseShown={},modalMode=null,acc=15,accTick=null,assigned=null;
+const $=id=>document.getElementById(id);
+function toast(s){$('toast').textContent=s;$('toast').classList.add('on');clearTimeout(toast.h);toast.h=setTimeout(()=>$('toast').classList.remove('on'),1800)}
+function render(){
+  $('list').innerHTML=DG.map((d,i)=>{
+    const lock=d.st==='lock';
+    const tag=d.st==='clear'?'<span class="tag guide">클리어 · 길잡이 +20%</span>':d.st==='first'?'<span class="tag first">첫 도전 · 우선 매칭</span>':'<span class="tag lock">미해금</span>';
+    return `<div class="dg ${i===dFocus?'focus':''} ${lock?'locked':''}"><div class="ch">${d.ch}챕터</div><div class="nm">${lock?'???':d.nm}</div><div class="boss">${lock?'':d.boss}</div>${tag}</div>`}).join('');
+  $('sps').innerHTML=SP.map((s,i)=>{
+    const rk=prefs.indexOf(i);
+    return `<div class="sp ${i===sFocus?'focus':''} ${rk===0?'p1':rk===1?'p2':''}">${SHORT.includes(i)?'<div class="short">부족 +30%</div>':''}${rk>=0?`<div class="rank">${rk+1}순위</div>`:''}<div class="r">${s.r}</div><div class="n">${s.n}</div></div>`}).join('');
+  $('any').innerHTML=any?'<b>상관없음</b> — 어느 자리든 들어간다 (X로 해제)':`선호: <b>${prefs.length?prefs.map((p,k)=>`${k+1}순위 ${SP[p].n}`).join(' · '):'아직 없음'}</b> ${prefs.length===2||any?' — Enter로 큐 등록':''}`;
+  $('wait').classList.toggle('on',queued);
+  if(queued){
+    $('wDg').textContent=DG[dFocus].nm+' 대기 중';
+    $('wT').textContent=Math.floor(t/60)+':'+String(t%60).padStart(2,'0');
+    $('wPref').textContent=any?'상관없음':prefs.map((p,k)=>`${k+1}순위 ${SP[p].n}`).join(' · ');
+    const ph=t<30?0:t<60?1:t<180?2:3;
+    [...$('phase').children].forEach((el,k)=>{el.className=k===ph?'on':k<ph?'done':''});
+    for(let k=0;k<4;k++)$('d'+k).classList.toggle('f',k<found);
+    $('fTxt').textContent=`${found}/4`;
+    $('state').textContent='큐 대기 중 — 삼천도를 돌아다녀도 된다. 저승 신단으로 이승에 가면 큐가 취소된다';
+  }else $('state').textContent='큐에 등록하지 않음 — 대기 중에도 삼천도를 돌아다닐 수 있다';
+}
+function enqueue(){
+  const d=DG[dFocus];
+  if(d.st==='lock'){toast('아직 해금하지 않은 던전이다');return}
+  if(!any&&prefs.length<1){toast('원혼을 하나 이상 고르거나 X(상관없음)');return}
+  queued=true;t=0;found=1;phaseShown={};clearInterval(tick);tick=setInterval(()=>addT(1),1000);toast(`${d.nm} 큐에 올랐다`);render();
+}
+function addT(n){if(!queued||modalMode)return;t+=n;check();render()}
+function check(){
+  if(t>=60&&!phaseShown.short&&!any&&!prefs.some(p=>SHORT.includes(p))){phaseShown.short=1;openShort()}
+  else if(t>=180&&found===3&&!phaseShown.three){phaseShown.three=1;openThree()}
+}
+function addFound(){if(!queued)return;found=Math.min(4,found+1);if(found===4)matchNow();else{check();render()}}
+function openShort(){
+  modalMode='short';
+  $('box').innerHTML=`<div class="k">부족 원혼 제안</div><div class="m">무명장수 자리가 비었습니다. 들어가시겠습니까?</div>
+  <div class="s">들어가면 이번 판 클리어 혼백 +30%. 거절하면 지금 선호대로 계속 기다린다 — 강제로 배정하지 않는다.</div>
+  <div class="btns"><span>Enter</span>무명장수로 들어간다 <span>Esc</span>계속 기다린다</div>`;
+  $('modal').classList.add('on');
+}
+function openThree(){
+  modalMode='three';
+  $('box').innerHTML=`<div class="k">3인 출발 제안</div><div class="m">3명이 3분째 기다리고 있습니다. 3인으로 출발할까요?</div>
+  <div class="s">적·보스 체력 ×0.7, 보스방 불씨 3회. 3명 모두 수락해야 출발한다. 출발하면 충원으로 4인이 되지 않는다.</div>
+  <table><tr><td>나</td><td>${prefs.length?SP[prefs[0]].n:'—'}</td></tr><tr><td>${MATES[0]}</td><td>무명장수</td></tr><tr><td>${MATES[1]}</td><td>착호갑사</td></tr></table>
+  <div class="btns"><span>Enter</span>3인으로 출발 <span>Esc</span>4번째를 기다린다</div>`;
+  $('modal').classList.add('on');
+}
+function matchNow(){
+  if(!queued){toast('먼저 큐에 등록');return}
+  found=4;const mine=any?SHORT[0]:prefs[0];
+  const pool=[0,1,2,3,4].filter(i=>i!==mine);
+  assigned=[mine,pool[0],pool[1],pool[3]];
+  modalMode='accept';acc=15;
+  const left=[0,1,2,3,4].find(i=>!assigned.includes(i));
+  const draw=()=>{$('box').innerHTML=`<div class="k">매칭 성사 — ${DG[dFocus].nm}</div><div class="m">건너갈 사람이 모였습니다</div>
+   <table>${['나',...MATES].map((m,k)=>`<tr><td>${m}</td><td>${SP[assigned[k]].n}</td><td style="color:#a19c90">${k===0?'첫 도전':k===2?'길잡이':''}</td></tr>`).join('')}</table>
+   <div class="s">남는 원혼: ${SP[left].n}. 나루터에서는 배정된 원혼이 예약된 채로 시작하고, 남는 원혼으로만 바꿀 수 있다.</div>
+   <div class="bar"><i style="width:${acc/15*100}%"></i></div>
+   <div class="btns"><span>Enter</span>수락 (${acc}초) <span>Esc</span>거절</div>`};
+  draw();$('modal').classList.add('on');clearInterval(tick);clearInterval(accTick);
+  accTick=setInterval(()=>{acc--;if(acc<=0){acceptTimeout();return}draw()},1000);render();
+}
+function acceptTimeout(){if(modalMode!=='accept')return;clearInterval(accTick);closeModal();toast('수락하지 않아 큐에서 빠졌다. 나머지 3명은 대기 순서를 유지한 채 재매칭');queued=false;render()}
+function closeModal(){$('modal').classList.remove('on');modalMode=null}
+function modalKey(k){
+  if(modalMode==='short'){closeModal();if(k==='Enter'){prefs=[0];any=false;toast('무명장수로 들어간다 — 혼백 +30%');addFound()}else toast('계속 기다린다')}
+  else if(modalMode==='three'){closeModal();if(k==='Enter'){clearInterval(tick);queued=false;toast('3인으로 출발 — 원혼 선택으로 이동');}else toast('4번째를 기다린다')}
+  else if(modalMode==='accept'){clearInterval(accTick);closeModal();if(k==='Enter'){queued=false;toast('수락 — 나루터 원혼 선택(spirit_select.html)으로')}else{queued=false;toast('거절 — 큐에서 빠졌다')}}
+  render();
+}
+function reset(){clearInterval(tick);clearInterval(accTick);closeModal();dFocus=2;sFocus=0;prefs=[];any=false;queued=false;t=0;found=1;render()}
+document.addEventListener('keydown',e=>{
+  if(['ArrowUp','ArrowDown','ArrowLeft','ArrowRight','Enter','Backspace'].includes(e.key))e.preventDefault();
+  if(modalMode){if(e.key==='Enter'||e.key==='Escape')modalKey(e.key);return}
+  if(e.key==='Escape'){if(queued){queued=false;clearInterval(tick);toast('큐를 취소했다');render()}return}
+  if(queued)return;
+  if(e.key==='ArrowUp'){dFocus=(dFocus+5)%6}
+  else if(e.key==='ArrowDown'){dFocus=(dFocus+1)%6}
+  else if(e.key==='ArrowLeft'){sFocus=(sFocus+4)%5}
+  else if(e.key==='ArrowRight'){sFocus=(sFocus+1)%5}
+  else if(e.key==='x'||e.key==='X'){any=!any;if(any)prefs=[]}
+  else if(e.key==='Backspace'){prefs=[]}
+  else if(e.key==='Enter'){
+    if(any||prefs.length===2){enqueue();return}
+    if(prefs.includes(sFocus)){toast('이미 고른 원혼');return}
+    prefs.push(sFocus);any=false;
+  }
+  render();
+});
+render();
+</script>
+</body>
+</html>

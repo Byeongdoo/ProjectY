@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>무당: 조선의 낮과 밤 — 4챕터 레벨 배치도</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#14161c;color:#d8d3c8;font-family:'Malgun Gothic','맑은 고딕',sans-serif;padding:18px;display:flex;flex-direction:column;align-items:flex-start;gap:12px}
+h1{font-size:15px;font-weight:700;color:#b9b2a3}
+h1 small{font-weight:400;color:#6d6759;margin-left:8px;font-size:12px}
+.tabs{display:flex;gap:6px;flex-wrap:wrap}
+.tabs button{background:#1d2028;border:1px solid #2c2f38;color:#a19c90;padding:6px 14px;font:inherit;font-size:12.5px;cursor:pointer}
+.tabs button.on{background:#2a2f3a;color:#e9e2d2;border-color:#5e6873}
+.wrap{display:flex;gap:14px;align-items:flex-start;flex-wrap:wrap}
+.board{position:relative;border:1px solid #2c2f38;background:#0e1014}
+canvas{display:block}
+.side{width:300px;display:flex;flex-direction:column;gap:10px;font-size:12px}
+.card{background:#1a1d24;border:1px solid #2a2d36;padding:10px 12px}
+.card h2{font-size:12.5px;color:#e9e2d2;margin-bottom:6px}
+.card p{color:#a19c90;line-height:1.55}
+.legend{display:grid;grid-template-columns:1fr 1fr;gap:3px 8px}
+.legend label{display:flex;align-items:center;gap:6px;cursor:pointer;color:#bdb6a8}
+.sw{width:11px;height:11px;border:1px solid #000;flex:none}
+.opts label{display:flex;gap:6px;align-items:center;margin:3px 0;color:#bdb6a8;cursor:pointer}
+#tip{position:absolute;pointer-events:none;background:rgba(10,12,16,.94);border:1px solid #5e6873;padding:7px 9px;font-size:11.5px;max-width:320px;line-height:1.5;display:none;z-index:5}
+#tip b{color:#f0e6d0}
+.coord{color:#6d6759;font-variant-numeric:tabular-nums}
+.list{max-height:300px;overflow:auto}
+.list div{padding:3px 0;border-bottom:1px solid #22252d;cursor:pointer;color:#bdb6a8}
+.list div:hover{color:#fff}
+</style>
+</head>
+<body>
+<h1>4챕터 레벨 배치도 <small>1칸 = 32px · 화면 30×17칸 · 데이터: MasterTable levelMaps / levelObjects</small></h1>
+<div class="tabs" id="tabs"></div>
+<div class="wrap">
+  <div class="board" id="board"><canvas id="cv"></canvas><div id="tip"></div></div>
+  <div class="side">
+    <div class="card"><h2 id="mname"></h2><p id="mdesc"></p><p class="coord" id="msize"></p></div>
+    <div class="card opts">
+      <h2>보기</h2>
+      <label><input type="checkbox" id="oDetect" checked> 팩 탐지 범위(10칸 정사각형)</label>
+      <label><input type="checkbox" id="oScreen" checked> 화면 프레임 30×17(마우스 따라감)</label>
+      <label><input type="checkbox" id="oGrid" checked> 격자</label>
+      <label><input type="checkbox" id="oLabel" checked> 이름표</label>
+    </div>
+    <div class="card"><h2>범례 (눌러서 켜고 끄기)</h2><div class="legend" id="legend"></div></div>
+    <div class="card"><h2>오브젝트</h2><div class="list" id="list"></div></div>
+  </div>
+</div>
+<script>
+const D={"types": [{"id": 1, "name": "PlayerStart", "desc": "시작·입장 지점", "color": "#ffffff"}, {"id": 2, "name": "Altar", "desc": "이승 신단 — 강림·부활", "color": "#f5c542"}, {"id": 3, "name": "NPC", "desc": "NPC 서는 칸", "color": "#7ec8ff"}, {"id": 4, "name": "Clue", "desc": "단서 조사 지점", "color": "#c38bff"}, {"id": 5, "name": "Passage", "desc": "관문(passages)", "color": "#ff8c42"}, {"id": 6, "name": "Landmark", "desc": "랜드마크·연출 소품", "color": "#9fd38a"}, {"id": 7, "name": "Event", "desc": "연출 구역", "color": "#ffd1e8"}, {"id": 8, "name": "Path", "desc": "걸을 수 있는 길·구간 띠", "color": "#5b5346"}, {"id": 9, "name": "CombatSpace", "desc": "교전 공간", "color": "#7a3b3b"}, {"id": 10, "name": "Pack", "desc": "망령 팩(size=체 수)", "color": "#ff4d4d"}, {"id": 11, "name": "Elite", "desc": "정예", "color": "#ff00aa"}, {"id": 12, "name": "Bonfire", "desc": "구간 불씨", "color": "#ffb347"}, {"id": 13, "name": "BossArena", "desc": "보스 아레나", "color": "#3b2a4a"}, {"id": 14, "name": "BossStart", "desc": "보스 시작 위치", "color": "#d6336c"}, {"id": 15, "name": "ArenaBonfire", "desc": "보스방 불씨", "color": "#ffd27f"}, {"id": 16, "name": "SectionGate", "desc": "구간 문(정리하면 열림)·보스방 입구", "color": "#e64980"}, {"id": 17, "name": "Blocked", "desc": "통행 불가 지형", "color": "#1c1c1c"}, {"id": 18, "name": "Building", "desc": "건물", "color": "#8c7a5b"}], "maps": [{"id": 65401, "name": "폐도 시가", "kind": 1, "ref": 61401, "w": 64, "h": 40, "dir": "동→서(무너진 바깥 → 멀쩡한 안쪽)", "cam": 1, "desc": "바깥 성곽은 폐허인데 안쪽 도읍은 멀쩡하다. 저잣거리가 동서로 지나고, 북쪽 왕궁 대문, 서쪽 무너진 수문 샛길 너머 주민 골목"}, {"id": 65402, "name": "왕궁 잔해", "kind": 1, "ref": 61402, "w": 56, "h": 40, "dir": "남→북(대문에서 옥좌로)", "cam": 1, "desc": "무너진 왕궁. 북쪽 옥좌 전각(저승판 심판궁의 한월 자리), 동쪽 막힌 지하 계단(만령진 지하로만 간다)"}, {"id": 65403, "name": "심판궁", "kind": 2, "ref": 87401, "w": 110, "h": 34, "dir": "구간 서→동 / 보스 동→서", "cam": 2, "desc": "짧은 던전. 회랑 1구간(정예) → 옥좌 앞 불씨 → 한월 중간전(패배 이벤트)"}, {"id": 65404, "name": "만령진 지하", "kind": 2, "ref": 87402, "w": 108, "h": 58, "dir": "구간1 서→동 / 구간2 동→서 / 지맥 통로 서→동", "cam": 2, "desc": "지하 거점으로 내려간다. 두 구간 → 바닥 지맥 통로 → 불씨 → 왕궁의 수문장 악귀"}], "objs": [{"id": 6540101, "map": 65401, "t": 8, "ref": 0, "x": 8, "y": 18, "w": 56, "h": 4, "size": 0, "desc": "저잣거리(동서). 폭 4칸"}, {"id": 6540102, "map": 65401, "t": 8, "ref": 0, "x": 30, "y": 1, "w": 4, "h": 17, "size": 0, "desc": "왕궁 대문 길"}, {"id": 6540103, "map": 65401, "t": 2, "ref": 61401, "x": 57, "y": 23, "w": 1, "h": 1, "size": 0, "desc": "폐도 신단 — 4챕터 시작. 무너진 동문 안쪽"}, {"id": 6540104, "map": 65401, "t": 1, "ref": 0, "x": 59, "y": 20, "w": 1, "h": 1, "size": 0, "desc": "챕터 시작 — 무너진 동문으로 들어온다"}, {"id": 6540105, "map": 65401, "t": 6, "ref": 0, "x": 44, "y": 0, "w": 20, "h": 16, "size": 0, "desc": "무너진 바깥 성곽 — 폐허"}, {"id": 6540106, "map": 65401, "t": 6, "ref": 0, "x": 10, "y": 23, "w": 26, "h": 14, "size": 0, "desc": "멀쩡한 안쪽 도읍 — 연기 나는 굴뚝, 장이 선다(64401)"}, {"id": 6540107, "map": 65401, "t": 18, "ref": 0, "x": 18, "y": 6, "w": 10, "h": 6, "size": 0, "desc": "도읍 관청"}, {"id": 6540108, "map": 65401, "t": 3, "ref": 81401, "x": 23, "y": 12, "w": 1, "h": 1, "size": 0, "desc": "도읍을 지키는 관리 — 단서 51401(대화), 신념 선택 3. 서브 83403 의뢰"}, {"id": 6540109, "map": 65401, "t": 5, "ref": 62401, "x": 30, "y": 0, "w": 4, "h": 1, "size": 0, "desc": "왕궁 대문 → 왕궁 잔해(양쪽 통행)"}, {"id": 6540110, "map": 65401, "t": 5, "ref": 62403, "x": 7, "y": 18, "w": 1, "h": 4, "size": 0, "desc": "무너진 수문 샛길 — 이승만의 길. 저승판에선 죄인의 형틀이 막는다"}, {"id": 6540111, "map": 65401, "t": 8, "ref": 0, "x": 1, "y": 14, "w": 6, "h": 12, "size": 0, "desc": "수문 안쪽 골목"}, {"id": 6540112, "map": 65401, "t": 18, "ref": 0, "x": 0, "y": 8, "w": 7, "h": 5, "size": 0, "desc": "주민의 집 — 가족이 살아 있다"}, {"id": 6540113, "map": 65401, "t": 3, "ref": 81402, "x": 3, "y": 14, "w": 1, "h": 1, "size": 0, "desc": "만령진을 믿는 주민 — 서브 83402 의뢰. 심판궁에서 51402를 본 뒤(63401) 같은 말이 다르게 들린다"}, {"id": 6540114, "map": 65401, "t": 7, "ref": 81402, "x": 1, "y": 13, "w": 6, "h": 4, "size": 0, "desc": "주민 가족의 마당 — 이승에선 살아 있는 가족. 저승판 같은 자리엔 죄인의 저잣거리 형틀"}, {"id": 6540115, "map": 65401, "t": 17, "ref": 0, "x": 40, "y": 26, "w": 24, "h": 14, "size": 0, "desc": "무너진 성벽 잔해"}, {"id": 6540201, "map": 65402, "t": 5, "ref": 62401, "x": 26, "y": 39, "w": 4, "h": 1, "size": 0, "desc": "폐도 시가에서 대문을 지나 들어온다"}, {"id": 6540202, "map": 65402, "t": 8, "ref": 0, "x": 26, "y": 12, "w": 4, "h": 27, "size": 0, "desc": "어도(御道) — 대문에서 옥좌 전각까지"}, {"id": 6540203, "map": 65402, "t": 18, "ref": 0, "x": 18, "y": 2, "w": 20, "h": 9, "size": 0, "desc": "옥좌 전각"}, {"id": 6540204, "map": 65402, "t": 6, "ref": 0, "x": 27, "y": 6, "w": 2, "h": 2, "size": 0, "desc": "옥좌 — 저승판 심판궁 아레나의 한월 자리"}, {"id": 6540205, "map": 65402, "t": 8, "ref": 0, "x": 30, "y": 24, "w": 17, "h": 3, "size": 0, "desc": "동쪽 회랑"}, {"id": 6540206, "map": 65402, "t": 5, "ref": 62402, "x": 47, "y": 23, "w": 3, "h": 5, "size": 0, "desc": "심판궁 지하 계단 — 이승 막힘(무너져 메워졌다). 만령진 지하 던전으로만 간다"}, {"id": 6540207, "map": 65402, "t": 2, "ref": 61402, "x": 40, "y": 30, "w": 1, "h": 1, "size": 0, "desc": "왕궁 신단 — 강림(64403·64405). 지하 계단에서 7칸"}, {"id": 6540208, "map": 65402, "t": 6, "ref": 0, "x": 4, "y": 14, "w": 12, "h": 18, "size": 0, "desc": "무너진 전각들"}, {"id": 6540209, "map": 65402, "t": 7, "ref": 0, "x": 18, "y": 11, "w": 20, "h": 3, "size": 0, "desc": "옥좌 앞 마당 — 저승판에선 묶인 혼들이 줄지어 선 심판궁 회랑"}, {"id": 6540301, "map": 65403, "t": 8, "ref": 874011, "x": 2, "y": 4, "w": 105, "h": 11, "size": 0, "desc": "구간 — 심판궁 회랑. 서→동, 길이 104칸(입구 8 + 팩 6×16)"}, {"id": 6540302, "map": 65403, "t": 1, "ref": 0, "x": 4, "y": 9, "w": 1, "h": 1, "size": 0, "desc": "입장 지점"}, {"id": 6540303, "map": 65403, "t": 9, "ref": 874011, "x": 14, "y": 5, "w": 12, "h": 9, "size": 0, "desc": "교전 공간 1"}, {"id": 6540304, "map": 65403, "t": 10, "ref": 874011, "x": 22, "y": 9, "w": 1, "h": 1, "size": 5, "desc": "팩 1 — (5체), 92401. 묶인 혼들"}, {"id": 6540305, "map": 65403, "t": 9, "ref": 874011, "x": 30, "y": 5, "w": 12, "h": 9, "size": 0, "desc": "교전 공간 2"}, {"id": 6540306, "map": 65403, "t": 10, "ref": 874011, "x": 38, "y": 9, "w": 1, "h": 1, "size": 7, "desc": "팩 2 — (7체), 92401. 묶인 혼들"}, {"id": 6540307, "map": 65403, "t": 9, "ref": 874011, "x": 46, "y": 5, "w": 12, "h": 9, "size": 0, "desc": "교전 공간 3"}, {"id": 6540308, "map": 65403, "t": 10, "ref": 874011, "x": 54, "y": 9, "w": 1, "h": 1, "size": 9, "desc": "팩 3 — (9체), 92401. 묶인 혼들"}, {"id": 6540309, "map": 65403, "t": 9, "ref": 874011, "x": 62, "y": 5, "w": 12, "h": 9, "size": 0, "desc": "교전 공간 4"}, {"id": 6540310, "map": 65403, "t": 10, "ref": 874011, "x": 70, "y": 9, "w": 1, "h": 1, "size": 5, "desc": "팩 4 — (5체), 92401. 묶인 혼들"}, {"id": 6540311, "map": 65403, "t": 9, "ref": 874011, "x": 78, "y": 5, "w": 12, "h": 9, "size": 0, "desc": "교전 공간 5"}, {"id": 6540312, "map": 65403, "t": 10, "ref": 874011, "x": 86, "y": 9, "w": 1, "h": 1, "size": 7, "desc": "팩 5 — (7체), 92401. 묶인 혼들"}, {"id": 6540313, "map": 65403, "t": 9, "ref": 874011, "x": 90, "y": 4, "w": 16, "h": 11, "size": 0, "desc": "정예 교전 공간 16×11 — 심판궁 수문졸"}, {"id": 6540314, "map": 65403, "t": 10, "ref": 874011, "x": 102, "y": 9, "w": 1, "h": 1, "size": 9, "desc": "팩 6 — (9체), 92401. 묶인 혼들 + 정예"}, {"id": 6540315, "map": 65403, "t": 11, "ref": 2000404, "x": 103, "y": 8, "w": 1, "h": 1, "size": 0, "desc": "심판궁 수문졸(수호자급 정예)"}, {"id": 6540316, "map": 65403, "t": 16, "ref": 874012, "x": 103, "y": 15, "w": 3, "h": 1, "size": 0, "desc": "회랑 끝 문 — 팩을 모두 정리하면 열린다"}, {"id": 6540317, "map": 65403, "t": 8, "ref": 0, "x": 102, "y": 15, "w": 5, "h": 9, "size": 0, "desc": "연결로 — 옥좌 앞으로 내려가는 계단. 폭 5칸"}, {"id": 6540318, "map": 65403, "t": 4, "ref": 51402, "x": 104, "y": 19, "w": 1, "h": 1, "size": 0, "desc": "묶인 혼의 고통(저승 발견) — 만령진에 묶인 혼들. 63401로 폐도 주민 대화가 바뀐다"}, {"id": 6540319, "map": 65403, "t": 8, "ref": 874012, "x": 86, "y": 24, "w": 21, "h": 6, "size": 0, "desc": "옥좌 앞"}, {"id": 6540320, "map": 65403, "t": 12, "ref": 874012, "x": 91, "y": 26, "w": 1, "h": 1, "size": 0, "desc": "옥좌 앞 불씨 — 이승 왕궁 신단 자리"}, {"id": 6540321, "map": 65403, "t": 16, "ref": 874013, "x": 85, "y": 25, "w": 1, "h": 3, "size": 0, "desc": "심판정 입구 — 교전 시작 시 닫힌다"}, {"id": 6540322, "map": 65403, "t": 13, "ref": 874013, "x": 66, "y": 20, "w": 19, "h": 13, "size": 0, "desc": "한월 중간전 아레나 19×13 — 패배 이벤트(전환 후 30초)"}, {"id": 6540323, "map": 65403, "t": 14, "ref": 3000401, "x": 75, "y": 25, "w": 1, "h": 1, "size": 0, "desc": "국무 한월(1칸, 인간형) — 이승 옥좌 자리"}, {"id": 6540324, "map": 65403, "t": 15, "ref": 874013, "x": 67, "y": 31, "w": 1, "h": 1, "size": 0, "desc": "보스방 불씨(2회) — 한월에서 8칸. 중간전은 지는 싸움이지만 규칙은 같다"}, {"id": 6540401, "map": 65404, "t": 8, "ref": 874021, "x": 2, "y": 4, "w": 105, "h": 11, "size": 0, "desc": "구간 1 — 지하 거점 진입. 서→동, 104칸"}, {"id": 6540402, "map": 65404, "t": 1, "ref": 0, "x": 4, "y": 9, "w": 1, "h": 1, "size": 0, "desc": "입장 지점 — 무너진 지하 계단 아래"}, {"id": 6540403, "map": 65404, "t": 9, "ref": 874021, "x": 14, "y": 5, "w": 12, "h": 9, "size": 0, "desc": "구간 1 교전 공간 1"}, {"id": 6540404, "map": 65404, "t": 10, "ref": 874021, "x": 22, "y": 9, "w": 1, "h": 1, "size": 5, "desc": "구간 1 팩 1 — (5체), 92401"}, {"id": 6540405, "map": 65404, "t": 9, "ref": 874021, "x": 30, "y": 5, "w": 12, "h": 9, "size": 0, "desc": "구간 1 교전 공간 2"}, {"id": 6540406, "map": 65404, "t": 10, "ref": 874021, "x": 38, "y": 9, "w": 1, "h": 1, "size": 7, "desc": "구간 1 팩 2 — (7체), 92401"}, {"id": 6540407, "map": 65404, "t": 9, "ref": 874021, "x": 46, "y": 5, "w": 12, "h": 9, "size": 0, "desc": "구간 1 교전 공간 3"}, {"id": 6540408, "map": 65404, "t": 10, "ref": 874021, "x": 54, "y": 9, "w": 1, "h": 1, "size": 9, "desc": "구간 1 팩 3 — (9체), 92401"}, {"id": 6540409, "map": 65404, "t": 9, "ref": 874021, "x": 62, "y": 5, "w": 12, "h": 9, "size": 0, "desc": "구간 1 교전 공간 4"}, {"id": 6540410, "map": 65404, "t": 10, "ref": 874021, "x": 70, "y": 9, "w": 1, "h": 1, "size": 5, "desc": "구간 1 팩 4 — (5체), 92401"}, {"id": 6540411, "map": 65404, "t": 9, "ref": 874021, "x": 78, "y": 5, "w": 12, "h": 9, "size": 0, "desc": "구간 1 교전 공간 5"}, {"id": 6540412, "map": 65404, "t": 10, "ref": 874021, "x": 86, "y": 9, "w": 1, "h": 1, "size": 7, "desc": "구간 1 팩 5 — (7체), 92401"}, {"id": 6540413, "map": 65404, "t": 9, "ref": 874021, "x": 94, "y": 5, "w": 12, "h": 9, "size": 0, "desc": "구간 1 교전 공간 6"}, {"id": 6540414, "map": 65404, "t": 10, "ref": 874021, "x": 102, "y": 9, "w": 1, "h": 1, "size": 9, "desc": "구간 1 팩 6 — (9체), 92401"}, {"id": 6540415, "map": 65404, "t": 16, "ref": 874022, "x": 103, "y": 15, "w": 3, "h": 1, "size": 0, "desc": "지맥 문 — 구간 1 정리 후 열린다"}, {"id": 6540416, "map": 65404, "t": 8, "ref": 0, "x": 102, "y": 15, "w": 5, "h": 13, "size": 0, "desc": "연결로 1 — 더 깊이 내려간다"}, {"id": 6540417, "map": 65404, "t": 8, "ref": 874022, "x": 1, "y": 28, "w": 105, "h": 11, "size": 0, "desc": "구간 2 — 대문 앞. 동→서, 104칸"}, {"id": 6540418, "map": 65404, "t": 9, "ref": 874022, "x": 82, "y": 29, "w": 12, "h": 9, "size": 0, "desc": "구간 2 교전 공간 1"}, {"id": 6540419, "map": 65404, "t": 10, "ref": 874022, "x": 85, "y": 33, "w": 1, "h": 1, "size": 5, "desc": "구간 2 팩 1 — (5체), 92401"}, {"id": 6540420, "map": 65404, "t": 9, "ref": 874022, "x": 66, "y": 29, "w": 12, "h": 9, "size": 0, "desc": "구간 2 교전 공간 2"}, {"id": 6540421, "map": 65404, "t": 10, "ref": 874022, "x": 69, "y": 33, "w": 1, "h": 1, "size": 7, "desc": "구간 2 팩 2 — (7체), 92401"}, {"id": 6540422, "map": 65404, "t": 9, "ref": 874022, "x": 50, "y": 29, "w": 12, "h": 9, "size": 0, "desc": "구간 2 교전 공간 3"}, {"id": 6540423, "map": 65404, "t": 10, "ref": 874022, "x": 53, "y": 33, "w": 1, "h": 1, "size": 9, "desc": "구간 2 팩 3 — (9체), 92401"}, {"id": 6540424, "map": 65404, "t": 9, "ref": 874022, "x": 34, "y": 29, "w": 12, "h": 9, "size": 0, "desc": "구간 2 교전 공간 4"}, {"id": 6540425, "map": 65404, "t": 10, "ref": 874022, "x": 37, "y": 33, "w": 1, "h": 1, "size": 5, "desc": "구간 2 팩 4 — (5체), 92401"}, {"id": 6540426, "map": 65404, "t": 9, "ref": 874022, "x": 18, "y": 29, "w": 12, "h": 9, "size": 0, "desc": "구간 2 교전 공간 5"}, {"id": 6540427, "map": 65404, "t": 10, "ref": 874022, "x": 21, "y": 33, "w": 1, "h": 1, "size": 7, "desc": "구간 2 팩 5 — (7체), 92401"}, {"id": 6540428, "map": 65404, "t": 9, "ref": 874022, "x": 2, "y": 28, "w": 16, "h": 11, "size": 0, "desc": "구간 2 정예 교전 공간 16×11 — 심판궁 수문졸"}, {"id": 6540429, "map": 65404, "t": 10, "ref": 874022, "x": 5, "y": 33, "w": 1, "h": 1, "size": 9, "desc": "구간 2 팩 6 — (9체), 92401 + 정예"}, {"id": 6540430, "map": 65404, "t": 11, "ref": 2000404, "x": 4, "y": 32, "w": 1, "h": 1, "size": 0, "desc": "심판궁 수문졸(정예) — 대문 앞을 지킨다"}, {"id": 6540431, "map": 65404, "t": 16, "ref": 874023, "x": 2, "y": 39, "w": 3, "h": 1, "size": 0, "desc": "대문 — 구간 2 정리 후 열린다"}, {"id": 6540432, "map": 65404, "t": 8, "ref": 0, "x": 1, "y": 39, "w": 5, "h": 9, "size": 0, "desc": "연결로 2"}, {"id": 6540433, "map": 65404, "t": 8, "ref": 0, "x": 1, "y": 48, "w": 37, "h": 3, "size": 0, "desc": "지맥 통로 — 혼이 못 박힌 지맥을 따라 동쪽으로. 폭 3칸, 팩 없음"}, {"id": 6540434, "map": 65404, "t": 6, "ref": 0, "x": 6, "y": 51, "w": 30, "h": 1, "size": 0, "desc": "못 박힌 혼들 — 통로 바닥 연출"}, {"id": 6540435, "map": 65404, "t": 8, "ref": 874023, "x": 38, "y": 46, "w": 12, "h": 7, "size": 0, "desc": "만령진 핵심부 앞"}, {"id": 6540436, "map": 65404, "t": 12, "ref": 874023, "x": 44, "y": 50, "w": 1, "h": 1, "size": 0, "desc": "핵심부 불씨 — 주변 5×5 적 없음"}, {"id": 6540437, "map": 65404, "t": 4, "ref": 51403, "x": 40, "y": 47, "w": 1, "h": 1, "size": 0, "desc": "만령진의 설계도 — F로 목격만, 순서 재현 퍼즐은 귀항 직후 개인 화면"}, {"id": 6540438, "map": 65404, "t": 16, "ref": 874024, "x": 50, "y": 49, "w": 1, "h": 3, "size": 0, "desc": "핵심부 입구 — 교전 시작 시 닫힌다"}, {"id": 6540439, "map": 65404, "t": 13, "ref": 874024, "x": 51, "y": 44, "w": 19, "h": 13, "size": 0, "desc": "왕궁의 수문장 악귀 아레나 19×13 — 전장 절반 봉인 장판 패턴"}, {"id": 6540440, "map": 65404, "t": 14, "ref": 3000402, "x": 60, "y": 49, "w": 2, "h": 2, "size": 0, "desc": "왕궁의 수문장 악귀(2×2)"}, {"id": 6540441, "map": 65404, "t": 15, "ref": 874024, "x": 68, "y": 55, "w": 1, "h": 1, "size": 0, "desc": "보스방 불씨(2회) — 수문장에서 8칸"}]};
+const T={};D.types.forEach(t=>T[t.id]=t);
+const hidden=new Set();
+let cur=D.maps[0].id, mouse=null, focus=null;
+const cv=document.getElementById('cv'),cx=cv.getContext('2d'),tip=document.getElementById('tip');
+function cellSize(m){const avail=Math.min(1040,window.innerWidth-40-(window.innerWidth>1200?320:0));return Math.max(4,Math.min(16,Math.floor(Math.min(avail/m.w,640/m.h))))}
+function shortName(o){
+  const t=T[o.t].name;
+  if(t==='Pack')return o.size+'체';
+  if(t==='NPC'||t==='Clue'||t==='Passage'||t==='Altar')return String(o.ref||'');
+  if(t==='BossStart')return '보스';if(t==='Elite')return '정예';
+  if(t==='Bonfire'||t==='ArenaBonfire')return '불씨';
+  if(t==='PlayerStart')return '시작';
+  return '';
+}
+const ORDER=[17,8,13,9,7,18,6,5,16,2,3,4,12,15,10,11,14,1];
+function draw(){
+  const m=D.maps.find(x=>x.id===cur), s=cellSize(m);
+  cv.width=m.w*s; cv.height=m.h*s;
+  cx.fillStyle=m.kind===2?'#120d16':'#18201a';cx.fillRect(0,0,cv.width,cv.height);
+  const objs=D.objs.filter(o=>o.map===cur&&!hidden.has(o.t)).sort((a,b)=>ORDER.indexOf(a.t)-ORDER.indexOf(b.t));
+  for(const o of objs){
+    const t=T[o.t];cx.globalAlpha=[8,9,13,17,18,7].includes(o.t)?(o.t===9?.55:o.t===7?.35:.9):1;
+    cx.fillStyle=(o===focus)?'#ffffff':t.color;
+    cx.fillRect(o.x*s,o.y*s,o.w*s,o.h*s);
+    cx.globalAlpha=1;
+    if([10,14,2,4,3,12,15,1].includes(o.t)){cx.strokeStyle='#000';cx.lineWidth=1;cx.strokeRect(o.x*s+.5,o.y*s+.5,o.w*s-1,o.h*s-1)}
+  }
+  if(document.getElementById('oDetect').checked&&!hidden.has(10)){
+    cx.strokeStyle='rgba(255,90,90,.55)';cx.setLineDash([4,3]);
+    for(const o of objs.filter(o=>o.t===10)){const r=10;cx.strokeRect((o.x-r)*s,(o.y-r)*s,(2*r+1)*s,(2*r+1)*s)}
+    cx.setLineDash([]);
+  }
+  if(document.getElementById('oGrid').checked&&s>=8){
+    cx.strokeStyle='rgba(255,255,255,.05)';cx.beginPath();
+    for(let x=0;x<=m.w;x++){cx.moveTo(x*s+.5,0);cx.lineTo(x*s+.5,m.h*s)}
+    for(let y=0;y<=m.h;y++){cx.moveTo(0,y*s+.5);cx.lineTo(m.w*s,y*s+.5)}
+    cx.stroke();
+  }
+  if(document.getElementById('oLabel').checked){
+    cx.font='bold '+Math.max(9,s-3)+'px Malgun Gothic';cx.textBaseline='bottom';
+    for(const o of objs){const n=shortName(o);if(!n)continue;
+      cx.fillStyle='#000';cx.fillText(n,o.x*s+1,o.y*s);cx.fillStyle='#f4ecda';cx.fillText(n,o.x*s,o.y*s-1)}
+  }
+  if(mouse&&document.getElementById('oScreen').checked){
+    cx.strokeStyle='rgba(120,200,255,.8)';cx.lineWidth=2;
+    cx.strokeRect((mouse.x-14.5)*s,(mouse.y-7.94)*s,30*s,16.875*s);cx.lineWidth=1;
+    cx.fillStyle='rgba(120,200,255,.9)';cx.fillRect(mouse.x*s,mouse.y*s,s,s);
+  }
+  document.getElementById('mname').textContent=m.name+' ('+m.id+')';
+  document.getElementById('mdesc').textContent=m.desc;
+  document.getElementById('msize').textContent=m.w+'×'+m.h+'칸 · 진행 '+m.dir+' · 카메라 '+(m.cam===1?'플레이어 중심':'구간 플레이어 중심 / 보스방 고정');
+}
+function buildSide(){
+  const lg=document.getElementById('legend');lg.innerHTML='';
+  const used=new Set(D.objs.filter(o=>o.map===cur).map(o=>o.t));
+  D.types.filter(t=>used.has(t.id)).forEach(t=>{
+    const l=document.createElement('label');l.title=t.desc;
+    l.innerHTML='<input type="checkbox" '+(hidden.has(t.id)?'':'checked')+'><span class="sw" style="background:'+t.color+'"></span>'+t.name;
+    l.querySelector('input').onchange=e=>{e.target.checked?hidden.delete(t.id):hidden.add(t.id);draw()};
+    lg.appendChild(l)});
+  const li=document.getElementById('list');li.innerHTML='';
+  D.objs.filter(o=>o.map===cur&&![8,9].includes(o.t)).forEach(o=>{
+    const d=document.createElement('div');d.textContent=o.id+' · '+T[o.t].name+(o.ref?' '+o.ref:'')+' · ('+o.x+','+o.y+')';
+    d.title=o.desc;d.onmouseenter=()=>{focus=o;draw()};d.onmouseleave=()=>{focus=null;draw()};li.appendChild(d)});
+}
+function tabs(){
+  const tb=document.getElementById('tabs');tb.innerHTML='';
+  D.maps.forEach(m=>{const b=document.createElement('button');b.textContent=m.name;b.className=m.id===cur?'on':'';
+    b.onclick=()=>{cur=m.id;focus=null;tabs();buildSide();draw()};tb.appendChild(b)});
+}
+cv.addEventListener('mousemove',e=>{
+  const m=D.maps.find(x=>x.id===cur),s=cellSize(m),r=cv.getBoundingClientRect();
+  const x=Math.floor((e.clientX-r.left)/s),y=Math.floor((e.clientY-r.top)/s);mouse={x,y};
+  const hits=D.objs.filter(o=>o.map===cur&&!hidden.has(o.t)&&x>=o.x&&x<o.x+o.w&&y>=o.y&&y<o.y+o.h).sort((a,b)=>ORDER.indexOf(b.t)-ORDER.indexOf(a.t));
+  if(hits.length){const o=hits[0];tip.style.display='block';
+    tip.innerHTML='<b>'+T[o.t].name+(o.ref?' · '+o.ref:'')+'</b> <span class="coord">#'+o.id+' ('+o.x+','+o.y+') '+o.w+'×'+o.h+(o.size?' · '+o.size+'체':'')+'</span><br>'+o.desc;
+    tip.style.left=Math.min(e.clientX-r.left+14,cv.width-320)+'px';tip.style.top=(e.clientY-r.top+14)+'px';}
+  else tip.style.display='none';
+  draw();
+});
+cv.addEventListener('mouseleave',()=>{mouse=null;tip.style.display='none';draw()});
+['oDetect','oScreen','oGrid','oLabel'].forEach(id=>document.getElementById(id).onchange=draw);
+window.addEventListener('resize',draw);
+tabs();buildSide();draw();
+</script>
+</body>
+</html>

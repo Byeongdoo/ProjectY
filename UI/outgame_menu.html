@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>무당: 조선의 낮과 밤 — 아웃게임 메뉴 시안</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#14161c;color:#d8d3c8;font-family:'Malgun Gothic','맑은 고딕',sans-serif;padding:18px;display:flex;flex-direction:column;align-items:flex-start;gap:12px}
+h1{font-size:15px;color:#b9b2a3}h1 small{font-weight:400;color:#6d6759;margin-left:8px;font-size:12px}
+.stage{position:relative;width:1120px;max-width:100%;height:630px;border:1px solid #2c2f38;overflow:hidden;font-size:12.5px;background:#3d4a3a;--ac:#c8b273}
+.stage.lobby,.stage.inn{background:#3a434c;--ac:#a9bccb}.stage.dungeon{background:#1f1a2c;--ac:#8fb8d4}
+.stage:before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:37px 37px}
+.hint{position:absolute;left:16px;bottom:12px;color:#cfc8b8;font-size:12px;background:rgba(0,0,0,.4);padding:6px 10px}
+.hint b{color:var(--ac)}
+.menu{position:absolute;left:50%;top:24px;transform:translateX(-50%);width:1000px;max-width:96%;height:560px;background:rgba(16,17,22,.96);border:1px solid #444a56;display:none;flex-direction:column}
+.menu.on{display:flex}
+.tabs{display:flex;border-bottom:1px solid #333845}
+.tabs div{padding:10px 18px;cursor:pointer;color:#8d887c;font-size:13px}
+.tabs div.on{color:#f0e8d6;border-bottom:2px solid var(--ac)}
+.tabs .sp{flex:1}.tabs .money{color:#e4cf8a;padding:10px 16px}
+.body{flex:1;display:flex;gap:12px;padding:12px;overflow:hidden}
+.col{display:flex;flex-direction:column;gap:8px;min-width:0}
+.box{background:#1b1d24;border:1px solid #2c2f38;padding:10px}
+.box h3{font-size:12px;color:#a9a294;font-weight:400;letter-spacing:.08em;margin-bottom:6px}
+.slot,.cell{border:1px solid #3a3f4a;background:#20232b;cursor:pointer;position:relative}
+.slot{display:flex;gap:8px;align-items:center;padding:6px 8px;margin-bottom:5px}
+.slot .k{width:34px;color:#8d887c;font-size:11px}
+.g1{color:#c9c4b8}.g2{color:#7fc47a}.g3{color:#6aa8e0}.g4{color:#b98ae6}.g5{color:#f0b54a}
+.bag{display:grid;grid-template-columns:repeat(8,46px);gap:4px}
+.cell{width:46px;height:46px;font-size:10px;display:flex;align-items:center;justify-content:center;text-align:center;line-height:1.1}
+.cell.sel,.slot.sel,.node.sel,.li.sel{outline:2px solid #f0e8d6}
+.cell .e{position:absolute;right:2px;bottom:1px;font-size:9px;color:#e4cf8a}
+table{border-collapse:collapse;width:100%;font-size:11.5px}td,th{padding:3px 5px;border-bottom:1px solid #2a2d35;text-align:right}th{color:#8d887c;font-weight:400}td:first-child,th:first-child{text-align:left}
+.up{color:#7fc47a}.dn{color:#e07070}.dim{color:#6d6759}
+.btn{display:inline-block;border:1px solid #4a505c;background:#262a33;color:#d8d3c8;padding:4px 10px;cursor:pointer;font-size:12px;margin:2px 4px 2px 0}
+.btn.off{opacity:.45;cursor:not-allowed}
+.msg{min-height:18px;color:#e3a25b;font-size:12px}
+.sync{background:#2a2433;border:1px solid #5b4d73;color:#d4c6ee;padding:6px 10px;font-size:12px}
+.sp-tabs{display:flex;gap:4px;margin-bottom:8px}.sp-tabs div{padding:5px 10px;border:1px solid #3a3f4a;cursor:pointer;color:#a9a294}.sp-tabs div.on{color:#fff;border-color:var(--ac)}
+.row{display:grid;grid-template-columns:120px 1fr 1fr 1fr;gap:6px;margin-bottom:6px;align-items:stretch}
+.row .sk{padding:6px;color:#e9e2d2;background:#22252d;border:1px solid #2c2f38}
+.row .sk small{display:block;color:#8d887c;font-size:10.5px;margin-top:2px}
+.node{padding:6px;border:1px solid #3a3f4a;background:#1d2027;cursor:pointer;font-size:11px;line-height:1.35;color:#8d887c}
+.node b{display:block;font-size:11.5px;color:#a9a294}
+.node.got{background:#2a3324;border-color:#6d8f55;color:#cfe0c0}.node.got b{color:#e6f2d8}
+.node.can{border-color:#a99556}
+.li{padding:6px 8px;border-bottom:1px solid #262930;cursor:pointer}
+.li small{color:#8d887c;display:block;font-size:11px;margin-top:2px}
+.tag{display:inline-block;font-size:10px;padding:1px 5px;border:1px solid #555;margin-left:6px;color:#bdb6a8}
+.tag.ok{border-color:#6d8f55;color:#a8d08a}.tag.wait{border-color:#a99556;color:#e4cf8a}.tag.pz{border-color:#7a64a8;color:#c8b4f0}
+.steps{display:flex;gap:3px;flex-wrap:wrap}
+.st{width:34px;height:26px;border:1px solid #3a3f4a;font-size:10px;display:flex;align-items:center;justify-content:center;color:#6d6759}
+.st.l{border-radius:13px}.st.d{transform:skewX(-12deg)}
+.st.done{background:#2a3324;color:#cfe0c0}.st.cur{border-color:var(--ac);color:#fff;box-shadow:0 0 6px var(--ac)}
+.pop{position:absolute;inset:0;background:rgba(0,0,0,.6);display:none;align-items:center;justify-content:center}
+.pop.on{display:flex}
+.pop .card{width:520px;background:#17181e;border:1px solid #6b5a3a;padding:18px}
+.pop h2{font-size:16px;color:#f0e8d6;margin-bottom:8px}
+.pop p{color:#bdb6a8;line-height:1.6;margin-bottom:8px}
+.hold{height:8px;background:#2a2d35;margin:10px 0}.hold i{display:block;height:100%;width:0;background:#c34a4a}
+.demo{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:12px;max-width:1120px}
+.demo select,.demo button{background:#1d2028;border:1px solid #3a3f4a;color:#d8d3c8;padding:5px 9px;font:inherit;font-size:12px;cursor:pointer}
+.demo .lab{color:#8d887c}
+</style>
+</head>
+<body>
+<h1>아웃게임 메뉴 시안 <small>행장 I · 원혼 K · 사건 수첩 J · 여정 L · Q/E 탭 이동 · Esc 닫기 · 데이터: MasterTable</small></h1>
+<div class="stage" id="stage">
+  <div class="hint" id="hint"></div>
+  <div class="menu" id="menu">
+    <div class="tabs" id="tabs"></div>
+    <div class="body" id="body"></div>
+  </div>
+  <div class="pop" id="popEnd"><div class="card">
+    <h2>이승으로 돌아갈 수 없게 됩니다</h2>
+    <p>결말을 고르면 삼천도의 저승 신단이 닫힙니다. 이후 부활할 수 없고, 이승에 남은 일은 할 수 없습니다.</p>
+    <div class="box" style="margin-bottom:8px"><h3>이승에 남은 일</h3><div id="endList"></div></div>
+    <p class="dim">Enter를 <b id="holdSec"></b>초 누르고 있으면 선택으로 넘어갑니다. Esc — 돌아가기</p>
+    <div class="hold"><i id="holdBar"></i></div>
+  </div></div>
+  <div class="pop" id="popRet"><div class="card" id="retCard"></div></div>
+</div>
+<div class="demo">
+  <span class="lab">공간</span>
+  <select id="dSpace"><option value="living">이승</option><option value="lobby">삼천도</option><option value="inn">삼천도 · 주막</option><option value="dungeon">저승 던전</option></select>
+  <span class="lab">진행 챕터</span>
+  <select id="dCh"><option>1</option><option selected>3</option><option>4</option><option>5</option><option>2</option></select>
+  <span class="lab">레벨</span>
+  <select id="dLv"><option value="ch">챕터 기준</option><option value="40">Lv40 (엔딩 후 길잡이)</option></select>
+  <button id="dRet">귀항 결과 화면</button>
+  <button id="dEnd">결말 전 경고</button>
+  <button id="dReset">처음 상태로</button>
+</div>
+<script>
+const D={"items": [{"id": 9511, "slot": 1, "grade": 1, "name": "범(凡) 관(冠)", "ms": "Critical", "mv": 0.018, "ss": "Attack", "sv": 26.5}, {"id": 9512, "slot": 1, "grade": 2, "name": "상(上) 관(冠)", "ms": "Critical", "mv": 0.0288, "ss": "Attack", "sv": 42.4}, {"id": 9513, "slot": 1, "grade": 3, "name": "진(珍) 관(冠)", "ms": "Critical", "mv": 0.0468, "ss": "Attack", "sv": 68.9}, {"id": 9514, "slot": 1, "grade": 4, "name": "영(靈) 관(冠)", "ms": "Critical", "mv": 0.0756, "ss": "Attack", "sv": 111.3}, {"id": 9515, "slot": 1, "grade": 5, "name": "신(神) 관(冠)", "ms": "Critical", "mv": 0.1224, "ss": "Attack", "sv": 180.2}, {"id": 9521, "slot": 2, "grade": 1, "name": "범(凡) 무복(巫服)", "ms": "Defence", "mv": 0.0122, "ss": "MaxHP", "sv": 132}, {"id": 9522, "slot": 2, "grade": 2, "name": "상(上) 무복(巫服)", "ms": "Defence", "mv": 0.0195, "ss": "MaxHP", "sv": 211.2}, {"id": 9523, "slot": 2, "grade": 3, "name": "진(珍) 무복(巫服)", "ms": "Defence", "mv": 0.0317, "ss": "MaxHP", "sv": 343.2}, {"id": 9524, "slot": 2, "grade": 4, "name": "영(靈) 무복(巫服)", "ms": "Defence", "mv": 0.0512, "ss": "MaxHP", "sv": 554.4}, {"id": 9525, "slot": 2, "grade": 5, "name": "신(神) 무복(巫服)", "ms": "Defence", "mv": 0.083, "ss": "MaxHP", "sv": 897.6}, {"id": 9531, "slot": 3, "grade": 1, "name": "범(凡) 띠(帶)", "ms": "MaxHP", "mv": 114.4, "ss": "Defence", "sv": 0.0118}, {"id": 9532, "slot": 3, "grade": 2, "name": "상(上) 띠(帶)", "ms": "MaxHP", "mv": 183.04, "ss": "Defence", "sv": 0.0189}, {"id": 9533, "slot": 3, "grade": 3, "name": "진(珍) 띠(帶)", "ms": "MaxHP", "mv": 297.44, "ss": "Defence", "sv": 0.0307}, {"id": 9534, "slot": 3, "grade": 4, "name": "영(靈) 띠(帶)", "ms": "MaxHP", "mv": 480.48, "ss": "Defence", "sv": 0.0496}, {"id": 9535, "slot": 3, "grade": 5, "name": "신(神) 띠(帶)", "ms": "MaxHP", "mv": 777.92, "ss": "Defence", "sv": 0.0802}, {"id": 9541, "slot": 4, "grade": 1, "name": "범(凡) 신(靴)", "ms": "Defence", "mv": 0.0098, "ss": "MaxHP", "sv": 88}, {"id": 9542, "slot": 4, "grade": 2, "name": "상(上) 신(靴)", "ms": "Defence", "mv": 0.0157, "ss": "MaxHP", "sv": 140.8}, {"id": 9543, "slot": 4, "grade": 3, "name": "진(珍) 신(靴)", "ms": "Defence", "mv": 0.0255, "ss": "MaxHP", "sv": 228.8}, {"id": 9544, "slot": 4, "grade": 4, "name": "영(靈) 신(靴)", "ms": "Defence", "mv": 0.0412, "ss": "MaxHP", "sv": 369.6}, {"id": 9545, "slot": 4, "grade": 5, "name": "신(神) 신(靴)", "ms": "Defence", "mv": 0.0666, "ss": "MaxHP", "sv": 598.4}, {"id": 9551, "slot": 5, "grade": 1, "name": "범(凡) 방울(鈴)", "ms": "Attack", "mv": 32.7, "ss": "CriticalAttack", "sv": 0.118}, {"id": 9552, "slot": 5, "grade": 2, "name": "상(上) 방울(鈴)", "ms": "Attack", "mv": 52.32, "ss": "CriticalAttack", "sv": 0.1888}, {"id": 9553, "slot": 5, "grade": 3, "name": "진(珍) 방울(鈴)", "ms": "Attack", "mv": 85.02, "ss": "CriticalAttack", "sv": 0.3068}, {"id": 9554, "slot": 5, "grade": 4, "name": "영(靈) 방울(鈴)", "ms": "Attack", "mv": 137.34, "ss": "CriticalAttack", "sv": 0.4956}, {"id": 9555, "slot": 5, "grade": 5, "name": "신(神) 방울(鈴)", "ms": "Attack", "mv": 222.36, "ss": "CriticalAttack", "sv": 0.8024}], "ench": [{"lv": 1, "cost": 20, "bonus": 0.08}, {"lv": 2, "cost": 27, "bonus": 0.16}, {"lv": 3, "cost": 36, "bonus": 0.24}, {"lv": 4, "cost": 49, "bonus": 0.32}, {"lv": 5, "cost": 66, "bonus": 0.4}, {"lv": 6, "cost": 90, "bonus": 0.48}, {"lv": 7, "cost": 121, "bonus": 0.56}, {"lv": 8, "cost": 163, "bonus": 0.64}, {"lv": 9, "cost": 221, "bonus": 0.72}, {"lv": 10, "cost": 298, "bonus": 0.8}], "spirits": [{"id": 8501, "name": "무명장수", "role": "Tank", "weapon": "등패·요도", "atk": 0.75, "hp": 1.6, "crit": 0, "dmgTaken": 0.75}, {"id": 8502, "name": "망나니", "role": "Melee", "weapon": "망나니칼", "atk": 1.35, "hp": 1, "crit": 0.1, "dmgTaken": 1}, {"id": 8503, "name": "착호갑사", "role": "Ranged", "weapon": "각궁", "atk": 1.2, "hp": 0.8, "crit": 0.05, "dmgTaken": 1}, {"id": 8504, "name": "꼭두쇠", "role": "Buffer", "weapon": "꽹과리", "atk": 0.8, "hp": 1, "crit": 0, "dmgTaken": 1}, {"id": 8505, "name": "의녀", "role": "Healer", "weapon": "침통", "atk": 1, "hp": 0.9, "crit": 0, "dmgTaken": 1}], "skills": [{"id": 85011, "spirit": 8501, "slot": 1, "name": "호령", "res": "Spirit", "desc": "주변 3칸 적 모두에게 약한 피해 + 4초 도발. 놓친 위협을 되찾는 스킬"}, {"id": 85012, "spirit": 8501, "slot": 2, "name": "등패 세우기", "res": "Cooldown", "desc": "6초간 받는 피해 −50%, 이동 불가. 보스 강공격 예고를 보고 쓴다"}, {"id": 85013, "spirit": 8501, "slot": 3, "name": "방패 밀치기", "res": "Spirit", "desc": "앞 1칸 적을 2칸 밀치고 1초 기절. 힐러에게 붙은 적을 떼어낸다"}, {"id": 85014, "spirit": 8501, "slot": 4, "name": "대신 맞기", "res": "Cooldown", "desc": "8초간 대상 아군이 받는 피해의 30%를 대신 받는다"}, {"id": 85021, "spirit": 8502, "slot": 1, "name": "칼춤", "res": "Spirit", "desc": "주변 1칸(8방향) 모든 적에게 피해. 망나니의 군집 처리"}, {"id": 85022, "spirit": 8502, "slot": 2, "name": "참수", "res": "Spirit", "desc": "단일 큰 피해. 대상 체력 30% 이하면 피해 ×2"}, {"id": 85023, "spirit": 8502, "slot": 3, "name": "돌진베기", "res": "Cooldown", "desc": "대상 옆 칸으로 순간 이동하며 벤다. 진입·추격기"}, {"id": 85024, "spirit": 8502, "slot": 4, "name": "피바람", "res": "Cooldown", "desc": "자신에게 광기(공속 +30%)와 취약(받는 피해 +20%)을 함께 건다. 탱커가 위협을 잡았을 때만 안전"}, {"id": 85031, "spirit": 8503, "slot": 1, "name": "관통 화살", "res": "Spirit", "desc": "바라보는 직선 6칸의 모든 적 관통"}, {"id": 85032, "spirit": 8503, "slot": 2, "name": "조준 사격", "res": "Spirit", "desc": "시전 1초 후 단일 큰 피해. 시전 중 피격되어도 끊기지 않는다"}, {"id": 85033, "spirit": 8503, "slot": 3, "name": "덫 놓기", "res": "Cooldown", "desc": "발밑 칸에 덫(20초 유지). 처음 밟은 적 3초 결박"}, {"id": 85034, "spirit": 8503, "slot": 4, "name": "물러서기", "res": "Cooldown", "desc": "바라보는 반대 방향으로 2칸 물러선다. 원딜의 유일한 거리 벌리기"}, {"id": 85041, "spirit": 8504, "slot": 1, "name": "길놀이", "res": "Spirit", "desc": "주변 3칸 아군(자신 포함) 강화 — 공격력 +15%"}, {"id": 85042, "spirit": 8504, "slot": 2, "name": "잡귀 쫓기", "res": "Spirit", "desc": "대상 적에게 취약 — 받는 피해 +20%. 파티 전체 화력을 올리는 디버프"}, {"id": 85043, "spirit": 8504, "slot": 3, "name": "줄타기", "res": "Cooldown", "desc": "주변 3칸 아군 신속 — 이동 속도 +30%. 장판 회피·재집결용"}, {"id": 85044, "spirit": 8504, "slot": 4, "name": "판 벌이기", "res": "Cooldown", "desc": "주변 3칸 아군 신명 — 스킬 신력 소모 −50%. 보스 몰아치기 구간의 시작 신호"}, {"id": 85051, "spirit": 8505, "slot": 1, "name": "침 놓기", "res": "Spirit", "desc": "단일 아군 회복. 가장 자주 쓰는 스킬"}, {"id": 85052, "spirit": 8505, "slot": 2, "name": "탕약", "res": "Spirit", "desc": "주변 3칸 아군 전체 회복. 1인당은 적지만 4명이면 총량이 많다"}, {"id": 85053, "spirit": 8505, "slot": 3, "name": "해독", "res": "Spirit", "desc": "대상의 해로운 상태이상 전부 해제 + 소량 회복"}, {"id": 85054, "spirit": 8505, "slot": 4, "name": "회혼술", "res": "Cooldown", "desc": "혼절한 아군을 시전 1초 만에 일으킨다(체력 50%). 혼 부르기(3초)보다 빠르고 원거리"}], "nodes": [{"id": 850111, "skill": 85011, "type": 1, "prev": 0, "desc": "계수 +20%"}, {"id": 850112, "skill": 85011, "type": 2, "prev": 850111, "desc": "신력 소모 −15%"}, {"id": 850113, "skill": 85011, "type": 3, "prev": 850112, "desc": "도발한 적 전원에게 취약 3초 — 탱커가 파티 화력을 여는 시작 버튼이 된다"}, {"id": 850121, "skill": 85012, "type": 1, "prev": 0, "desc": "버팀 지속 +25%"}, {"id": 850122, "skill": 85012, "type": 2, "prev": 850121, "desc": "쿨타임 −15%"}, {"id": 850123, "skill": 85012, "type": 3, "prev": 850122, "desc": "버팀 중 받은 피해의 20%를 신력으로 회복"}, {"id": 850131, "skill": 85013, "type": 1, "prev": 0, "desc": "계수 +20%"}, {"id": 850132, "skill": 85013, "type": 2, "prev": 850131, "desc": "신력 소모 −15%"}, {"id": 850133, "skill": 85013, "type": 3, "prev": 850132, "desc": "최대 대상 1 → 3(정면 3칸 폭) — 기절은 1초 그대로. 힐러에게 몰린 적을 한 번에 떼어낸다"}, {"id": 850141, "skill": 85014, "type": 1, "prev": 0, "desc": "수호 지속 +25%"}, {"id": 850142, "skill": 85014, "type": 2, "prev": 850141, "desc": "쿨타임 −15%"}, {"id": 850143, "skill": 85014, "type": 3, "prev": 850142, "desc": "수호 대상 2명"}, {"id": 850211, "skill": 85021, "type": 1, "prev": 0, "desc": "계수 +20%"}, {"id": 850212, "skill": 85021, "type": 2, "prev": 850211, "desc": "신력 소모 −15%"}, {"id": 850213, "skill": 85021, "type": 3, "prev": 850212, "desc": "두 번 연속 회전. 두 번째는 계수 50%"}, {"id": 850221, "skill": 85022, "type": 1, "prev": 0, "desc": "계수 +20%"}, {"id": 850222, "skill": 85022, "type": 2, "prev": 850221, "desc": "신력 소모 −15%"}, {"id": 850223, "skill": 85022, "type": 3, "prev": 850222, "desc": "참수로 처치하면 소모 신력 50% 반환"}, {"id": 850231, "skill": 85023, "type": 1, "prev": 0, "desc": "계수 +20%"}, {"id": 850232, "skill": 85023, "type": 2, "prev": 850231, "desc": "쿨타임 −15%"}, {"id": 850233, "skill": 85023, "type": 3, "prev": 850232, "desc": "돌진베기로 처치하면 쿨타임 즉시 초기화"}, {"id": 850241, "skill": 85024, "type": 1, "prev": 0, "desc": "광기·취약 지속 +25%"}, {"id": 850242, "skill": 85024, "type": 2, "prev": 850241, "desc": "쿨타임 −15%"}, {"id": 850243, "skill": 85024, "type": 3, "prev": 850242, "desc": "지속 8초 → 12초"}, {"id": 850311, "skill": 85031, "type": 1, "prev": 0, "desc": "계수 +20%"}, {"id": 850312, "skill": 85031, "type": 2, "prev": 850311, "desc": "신력 소모 −15%"}, {"id": 850313, "skill": 85031, "type": 3, "prev": 850312, "desc": "사거리 6칸 → 9칸"}, {"id": 850321, "skill": 85032, "type": 1, "prev": 0, "desc": "계수 +20%"}, {"id": 850322, "skill": 85032, "type": 2, "prev": 850321, "desc": "신력 소모 −15%"}, {"id": 850323, "skill": 85032, "type": 3, "prev": 850322, "desc": "시전 1초 → 0.5초"}, {"id": 850331, "skill": 85033, "type": 1, "prev": 0, "desc": "결박 지속 +25%"}, {"id": 850332, "skill": 85033, "type": 2, "prev": 850331, "desc": "쿨타임 −15%"}, {"id": 850333, "skill": 85033, "type": 3, "prev": 850332, "desc": "덫을 2개까지 깔아 둘 수 있다"}, {"id": 850341, "skill": 85034, "type": 1, "prev": 0, "desc": "물러서는 거리 +1칸"}, {"id": 850342, "skill": 85034, "type": 2, "prev": 850341, "desc": "쿨타임 −15%"}, {"id": 850343, "skill": 85034, "type": 3, "prev": 850342, "desc": "물러선 뒤 다음 공격 확정 치명타"}, {"id": 850411, "skill": 85041, "type": 1, "prev": 0, "desc": "강화 지속 +25%"}, {"id": 850412, "skill": 85041, "type": 2, "prev": 850411, "desc": "신력 소모 −15%"}, {"id": 850413, "skill": 85041, "type": 3, "prev": 850412, "desc": "범위 3칸 → 5칸"}, {"id": 850421, "skill": 85042, "type": 1, "prev": 0, "desc": "취약 지속 +25%"}, {"id": 850422, "skill": 85042, "type": 2, "prev": 850421, "desc": "신력 소모 −15%"}, {"id": 850423, "skill": 85042, "type": 3, "prev": 850422, "desc": "취약 +20% → +30%"}, {"id": 850431, "skill": 85043, "type": 1, "prev": 0, "desc": "신속 지속 +25%"}, {"id": 850432, "skill": 85043, "type": 2, "prev": 850431, "desc": "쿨타임 −15%"}, {"id": 850433, "skill": 85043, "type": 3, "prev": 850432, "desc": "파티원의 결박·둔화를 해제"}, {"id": 850441, "skill": 85044, "type": 1, "prev": 0, "desc": "신명 지속 +25%"}, {"id": 850442, "skill": 85044, "type": 2, "prev": 850441, "desc": "쿨타임 −15%"}, {"id": 850443, "skill": 85044, "type": 3, "prev": 850442, "desc": "지속 6초 → 8초"}, {"id": 850511, "skill": 85051, "type": 1, "prev": 0, "desc": "회복 계수 +20%"}, {"id": 850512, "skill": 85051, "type": 2, "prev": 850511, "desc": "신력 소모 −15%"}, {"id": 850513, "skill": 85051, "type": 3, "prev": 850512, "desc": "대상 체력 30% 이하면 회복 ×1.5"}, {"id": 850521, "skill": 85052, "type": 1, "prev": 0, "desc": "회복 계수 +20%"}, {"id": 850522, "skill": 85052, "type": 2, "prev": 850521, "desc": "신력 소모 −15%"}, {"id": 850523, "skill": 85052, "type": 3, "prev": 850522, "desc": "회복 후 4초간 초당 계수 0.1 지속 회복"}, {"id": 850531, "skill": 85053, "type": 1, "prev": 0, "desc": "회복 계수 +20%"}, {"id": 850532, "skill": 85053, "type": 2, "prev": 850531, "desc": "신력 소모 −15%"}, {"id": 850533, "skill": 85053, "type": 3, "prev": 850532, "desc": "해제한 상태이상 1개당 신력 +5"}, {"id": 850541, "skill": 85054, "type": 1, "prev": 0, "desc": "시전 시간 −30%"}, {"id": 850542, "skill": 85054, "type": 2, "prev": 850541, "desc": "쿨타임 −15%"}, {"id": 850543, "skill": 85054, "type": 3, "prev": 850542, "desc": "일으킨 체력 50% → 80%"}], "lv": {"1": {"atk": 100, "def": 0.05, "hp": 500, "crit": 0.1, "critDmg": 1.5}, "2": {"atk": 106, "def": 0.054, "hp": 530, "crit": 0.102, "critDmg": 1.5}, "3": {"atk": 112, "def": 0.058, "hp": 562, "crit": 0.104, "critDmg": 1.5}, "4": {"atk": 119, "def": 0.062, "hp": 596, "crit": 0.106, "critDmg": 1.5}, "5": {"atk": 126, "def": 0.066, "hp": 631, "crit": 0.108, "critDmg": 1.5}, "6": {"atk": 134, "def": 0.07, "hp": 669, "crit": 0.11, "critDmg": 1.5}, "7": {"atk": 142, "def": 0.074, "hp": 709, "crit": 0.112, "critDmg": 1.5}, "8": {"atk": 150, "def": 0.078, "hp": 752, "crit": 0.114, "critDmg": 1.5}, "9": {"atk": 159, "def": 0.082, "hp": 797, "crit": 0.116, "critDmg": 1.5}, "10": {"atk": 169, "def": 0.086, "hp": 845, "crit": 0.118, "critDmg": 1.5}, "11": {"atk": 179, "def": 0.09, "hp": 895, "crit": 0.12, "critDmg": 1.5}, "12": {"atk": 190, "def": 0.094, "hp": 949, "crit": 0.122, "critDmg": 1.5}, "13": {"atk": 201, "def": 0.098, "hp": 1006, "crit": 0.124, "critDmg": 1.5}, "14": {"atk": 213, "def": 0.102, "hp": 1066, "crit": 0.126, "critDmg": 1.5}, "15": {"atk": 226, "def": 0.106, "hp": 1130, "crit": 0.128, "critDmg": 1.5}, "16": {"atk": 240, "def": 0.11, "hp": 1198, "crit": 0.13, "critDmg": 1.5}, "17": {"atk": 254, "def": 0.114, "hp": 1270, "crit": 0.132, "critDmg": 1.5}, "18": {"atk": 269, "def": 0.118, "hp": 1346, "crit": 0.134, "critDmg": 1.5}, "19": {"atk": 285, "def": 0.122, "hp": 1427, "crit": 0.136, "critDmg": 1.5}, "20": {"atk": 303, "def": 0.126, "hp": 1513, "crit": 0.138, "critDmg": 1.5}, "21": {"atk": 321, "def": 0.13, "hp": 1604, "crit": 0.14, "critDmg": 1.5}, "22": {"atk": 340, "def": 0.134, "hp": 1700, "crit": 0.142, "critDmg": 1.5}, "23": {"atk": 360, "def": 0.138, "hp": 1802, "crit": 0.144, "critDmg": 1.5}, "24": {"atk": 382, "def": 0.142, "hp": 1910, "crit": 0.146, "critDmg": 1.5}, "25": {"atk": 405, "def": 0.146, "hp": 2024, "crit": 0.148, "critDmg": 1.5}, "26": {"atk": 429, "def": 0.15, "hp": 2146, "crit": 0.15, "critDmg": 1.5}, "27": {"atk": 455, "def": 0.154, "hp": 2275, "crit": 0.152, "critDmg": 1.5}, "28": {"atk": 482, "def": 0.158, "hp": 2411, "crit": 0.154, "critDmg": 1.5}, "29": {"atk": 511, "def": 0.162, "hp": 2556, "crit": 0.156, "critDmg": 1.5}, "30": {"atk": 542, "def": 0.166, "hp": 2709, "crit": 0.158, "critDmg": 1.5}, "31": {"atk": 574, "def": 0.17, "hp": 2872, "crit": 0.16, "critDmg": 1.5}, "32": {"atk": 609, "def": 0.174, "hp": 3044, "crit": 0.162, "critDmg": 1.5}, "33": {"atk": 645, "def": 0.178, "hp": 3227, "crit": 0.164, "critDmg": 1.5}, "34": {"atk": 684, "def": 0.182, "hp": 3420, "crit": 0.166, "critDmg": 1.5}, "35": {"atk": 725, "def": 0.186, "hp": 3626, "crit": 0.168, "critDmg": 1.5}, "36": {"atk": 769, "def": 0.19, "hp": 3843, "crit": 0.17, "critDmg": 1.5}, "37": {"atk": 815, "def": 0.194, "hp": 4074, "crit": 0.172, "critDmg": 1.5}, "38": {"atk": 864, "def": 0.198, "hp": 4318, "crit": 0.174, "critDmg": 1.5}, "39": {"atk": 915, "def": 0.202, "hp": 4577, "crit": 0.176, "critDmg": 1.5}, "40": {"atk": 970, "def": 0.206, "hp": 4852, "crit": 0.178, "critDmg": 1.5}}, "expect": {"1": {"lv": 1, "grade": 1, "ench": 0, "atk": 159, "hp": 834, "def": 0.0838}, "2": {"lv": 10, "grade": 2, "ench": 2, "atk": 272, "hp": 1409, "def": 0.1457}, "3": {"lv": 19, "grade": 3, "ench": 4, "atk": 466, "hp": 2392, "def": 0.2282}, "4": {"lv": 26, "grade": 4, "ench": 6, "atk": 744, "hp": 3781, "def": 0.3363}, "5": {"lv": 35, "grade": 4, "ench": 8, "atk": 1062, "hp": 5338, "def": 0.3871}}, "cases": [{"id": 50101, "ch": 1, "name": "사라진 사람들", "desc": "삼 년 전 묻은 아이가 걸어 다니고, 사람들은 그것을 이상하게 여기지 못한다"}, {"id": 50201, "ch": 2, "name": "없는 배", "desc": "시신은 떠오르는데 관아는 침몰한 배가 없다고 기록한다"}, {"id": 50301, "ch": 3, "name": "지워진 마을", "desc": "나라가 지도에서 지워버린 땅에서 시신이 썩지 않는다"}, {"id": 50401, "ch": 4, "name": "믿는 사람들", "desc": "폐허 안쪽에서 만령진의 혜택을 믿으며 살아가는 사람들"}, {"id": 50501, "ch": 5, "name": "마지막 겨울", "desc": "황천문 앞에서 확인해야 할 마지막 것들"}], "clues": [{"id": 51101, "case": 50101, "ch": 1, "world": "Living", "acq": "Talk", "puzzle": "None", "name": "노파의 사연", "desc": "굿을 청하러 온 노파에게서 실종의 시작을 듣는다"}, {"id": 51102, "case": 50101, "ch": 1, "world": "Living", "acq": "Observe", "puzzle": "None", "name": "아이의 빈 무덤", "desc": "삼 년 전 판 무덤을 열어 보면 비어 있다"}, {"id": 51103, "case": 50101, "ch": 1, "world": "Underworld", "acq": "Underworld", "puzzle": "None", "name": "붉은 실의 끝", "desc": "저승의 숲에서 실을 끝까지 따라가면 혼이 땅에 묶여 있다"}, {"id": 51104, "case": 50101, "ch": 1, "world": "Living", "acq": "Observe", "puzzle": "None", "name": "실종자의 흔적", "desc": "붉은 실을 본 뒤에야 이승의 숲에서 흔적이 눈에 들어온다"}, {"id": 51201, "case": 50201, "ch": 2, "world": "Living", "acq": "Observe", "puzzle": "None", "name": "떠오른 시신의 표식", "desc": "시신마다 같은 자리에 같은 표식이 있다"}, {"id": 51202, "case": 50201, "ch": 2, "world": "Living", "acq": "Talk", "puzzle": "None", "name": "봉인된 장부", "desc": "아전을 설득해 봉인된 조운 기록을 본다"}, {"id": 51203, "case": 50201, "ch": 2, "world": "Underworld", "acq": "Underworld", "puzzle": "None", "name": "사공이 없는 나루", "desc": "건너지 못한 혼들이 뱃사공이 사라졌다고 말한다"}, {"id": 51204, "case": 50201, "ch": 2, "world": "Underworld", "acq": "Puzzle", "puzzle": "Contrast", "name": "배 밑의 진법 문양", "desc": "이승의 장부와 대조해야 문양의 뜻이 읽힌다"}, {"id": 51301, "case": 50301, "ch": 3, "world": "Living", "acq": "Talk", "puzzle": "None", "name": "유민의 증언", "desc": "살아남은 유민들이 그날 진법이 폭주하던 밤을 말한다"}, {"id": 51302, "case": 50301, "ch": 3, "world": "Living", "acq": "Observe", "puzzle": "None", "name": "지도에 없는 마을", "desc": "관에서 받은 지도에 이 마을이 없다"}, {"id": 51303, "case": 50301, "ch": 3, "world": "Living", "acq": "Puzzle", "puzzle": "Contrast", "name": "겹쳐 보이는 지형", "desc": "두 세계의 지형을 겹쳐 봐야 진법의 중심이 보인다"}, {"id": 51401, "case": 50401, "ch": 4, "world": "Living", "acq": "Talk", "puzzle": "None", "name": "도읍을 운영하는 사람들", "desc": "폐허 안쪽에서 멀쩡히 살아가는 이들의 사정을 듣는다"}, {"id": 51402, "case": 50401, "ch": 4, "world": "Underworld", "acq": "Underworld", "puzzle": "None", "name": "묶인 혼의 고통", "desc": "심판궁에서 만령진에 묶인 혼들이 겪는 것을 직접 본다"}, {"id": 51403, "case": 50401, "ch": 4, "world": "Underworld", "acq": "Puzzle", "puzzle": "Sequence", "name": "만령진의 설계도", "desc": "굿의 절차대로 순서를 되풀이해야 진법도가 드러난다"}, {"id": 51501, "case": 50501, "ch": 5, "world": "Living", "acq": "Observe", "puzzle": "None", "name": "지나온 이들의 흔적", "desc": "겨울숲에 남은 것은 지나온 챕터 인물들의 흔적뿐이다"}, {"id": 51502, "case": 50501, "ch": 5, "world": "Underworld", "acq": "Puzzle", "puzzle": "Contrast", "name": "황천문의 봉인", "desc": "두 세계의 문을 대조해야 봉인의 구조를 안다"}], "steps": [{"id": 64101, "ch": 1, "step": 1, "world": 1, "region": "감천 마을", "desc": "굿을 청하러 온 노파의 사연 청취. 삼 년 전 장사 지낸 아이가 걸어 다니는 것을 목격", "dungeon": null}, {"id": 64102, "ch": 1, "step": 2, "world": 1, "region": "안개골 숲", "desc": "숲에서 사라진 사람들의 흔적 추적. 첫 신단 발견", "dungeon": null}, {"id": 64103, "ch": 1, "step": 3, "world": 2, "region": "안개골 숲", "desc": "첫 강림. 스승과 재회하고 죽음으로 세계를 오가는 법을 배운다", "dungeon": "산신당 저승길"}, {"id": 64104, "ch": 1, "step": 4, "world": 2, "region": "안개골 숲", "desc": "붉은 실을 따라 이동. 혼이 땅에 묶여 있음을 확인 — \"누군가 붙잡아 두고 있다\"", "dungeon": "산신당 저승길"}, {"id": 64105, "ch": 1, "step": 5, "world": 2, "region": "산신당", "desc": "보스: 뒤틀린 목귀. 처치 후 붉은 실이 서쪽 바다로 이어지는 것을 본다", "dungeon": "산신당 저승길"}, {"id": 64201, "ch": 2, "step": 1, "world": 1, "region": "명진포 갯마을", "desc": "떠오르는 조운선 시신 조사. 관아는 침몰 기록이 없다고 답한다", "dungeon": null}, {"id": 64202, "ch": 2, "step": 2, "world": 1, "region": "명진포 갯마을", "desc": "봉인된 장부 확보. 국가가 개입했음을 처음 마주한다 [신념 선택 1]", "dungeon": null}, {"id": 64203, "ch": 2, "step": 3, "world": 2, "region": "명진포 갯벌", "desc": "삼도천 하구. 강을 건너지 못한 혼이 물가에 쌓여 있다. \"하구의 뱃사공이 사라졌다\"", "dungeon": "가라앉은 조운선"}, {"id": 64204, "ch": 2, "step": 4, "world": 2, "region": "침몰 조운선", "desc": "배 밑바닥의 진법 문양 발견. 스승이 그 이름을 알려준다 — 만령진", "dungeon": "가라앉은 조운선"}, {"id": 64205, "ch": 2, "step": 5, "world": 2, "region": "침몰 조운선", "desc": "보스: 수귀 사공. 처치 후 팔도의 진법 여덟 곳과 무너진 땅 황야를 알게 된다", "dungeon": "가라앉은 조운선"}, {"id": 64301, "ch": 3, "step": 1, "world": 1, "region": "재벌 유민촌", "desc": "유민 증언 수집. 죽어도 시신이 썩지 않는 땅", "dungeon": null}, {"id": 64302, "ch": 3, "step": 2, "world": 1, "region": "재벌 유민촌", "desc": "두 세계 지형이 겹쳐 보이는 경계 확인. 경계가 가장 얇은 구간 — [2026-11-21] 이승 단계로 변경. 이승 화면에 저", "dungeon": null}, {"id": 64303, "ch": 3, "step": 3, "world": 1, "region": "재벌 유민촌", "desc": "한월 1차 대면. 전투 없는 대화, 공범 제안. 어린 시절 죽음의 진실과 스승이 치른 대가가 드러난다 [신념 선택 2]", "dungeon": null}, {"id": 64304, "ch": 3, "step": 4, "world": 2, "region": "무너진 진법터", "desc": "진법터 결계 돌파", "dungeon": "무너진 진법터"}, {"id": 64305, "ch": 3, "step": 5, "world": 2, "region": "무너진 진법터", "desc": "보스: 호법귀장. 처치 후 한월이 향한 폐도의 위치를 알게 된다", "dungeon": "무너진 진법터"}, {"id": 64401, "ch": 4, "step": 1, "world": 1, "region": "폐도 시가", "desc": "폐허 안쪽에 멀쩡히 살아있는 사람들. 한월의 사람들이 도읍을 운영하고 있다", "dungeon": null}, {"id": 64402, "ch": 4, "step": 2, "world": 1, "region": "폐도 시가", "desc": "만령진의 혜택을 믿는 주민들과 대화. 주인공의 확신이 흔들린다 [신념 선택 3]", "dungeon": null}, {"id": 64403, "ch": 4, "step": 3, "world": 2, "region": "왕궁 잔해", "desc": "저승의 심판궁. 만령진에 묶인 혼이 고통받는 것을 직접 목격", "dungeon": "심판궁"}, {"id": 64404, "ch": 4, "step": 4, "world": 2, "region": "왕궁 잔해", "desc": "보스: 한월 2차 대면. 최후통첩 후 패배 — 연출상 반드시 패배하는 이벤트 전투", "dungeon": "심판궁"}, {"id": 64405, "ch": 4, "step": 5, "world": 2, "region": "만령진 지하 거점", "desc": "삼천도에서 스승이 마지막 진실을 전한다(열쇠는 주인공 자신). 다시 출항해 만령진 지하의 수문장 악귀 격파", "dungeon": "만령진 지하"}, {"id": 64501, "ch": 5, "step": 1, "world": 1, "region": "설령 겨울숲", "desc": "눈보라와 침묵. 지나온 인물들의 흔적만 발견. 이승으로 돌아오지 않을 각오를 굳힌다", "dungeon": null}, {"id": 64502, "ch": 5, "step": 2, "world": 2, "region": "설령 겨울숲", "desc": "숲 전체가 저승의 심판정으로 변한다. 만령진의 혼이 한월의 군세가 되어 몰려든다", "dungeon": "황천문"}, {"id": 64503, "ch": 5, "step": 3, "world": 2, "region": "황천문", "desc": "황천문 앞. 한월의 물음과 주인공의 대답이 최종전의 시작", "dungeon": "황천문"}, {"id": 64504, "ch": 5, "step": 4, "world": 2, "region": "황천문", "desc": "최종 보스: 국무 한월 3페이즈 (술법전 → 혼을 두른 형태 → 진법 융합)", "dungeon": "황천문"}, {"id": 64505, "ch": 5, "step": 5, "world": 2, "region": "황천문", "desc": "결말 분기 선택 — 끊는다 / 잇는다 [최종 선택]", "dungeon": "황천문"}], "quests": [{"id": 83101, "type": "Main", "ch": 1, "giver": null, "name": "사라진 사람들", "cond": "StepClear", "count": 1, "exp": 600, "desc": "감천 마을의 실종 사건을 끝까지 쫓는다"}, {"id": 83102, "type": "Sub", "ch": 1, "giver": "아이의 어머니", "name": "아이의 이름", "cond": "ClueGet", "count": 1, "exp": 180, "desc": "어머니가 끝내 부르지 못한 아이의 이름을 확인한다"}, {"id": 83103, "type": "Sub", "ch": 1, "giver": "마을 이장", "name": "숲에 남은 것들", "cond": "MonsterKill", "count": 10, "exp": 180, "desc": "안개골에 들끓는 잡귀를 정리한다"}, {"id": 83201, "type": "Main", "ch": 2, "giver": null, "name": "바다가 뱉어낸 것들", "cond": "StepClear", "count": 1, "exp": 920, "desc": "명진포의 침몰선 은폐를 파헤친다"}, {"id": 83202, "type": "Sub", "ch": 2, "giver": "시신을 수습하는 승려", "name": "이름 없는 시신", "cond": "Talk", "count": 1, "exp": 276, "desc": "인양된 시신에 이름을 붙여 보낸다"}, {"id": 83203, "type": "Sub", "ch": 2, "giver": null, "name": "물에 잠긴 이름", "cond": "MonsterKill", "count": 8, "exp": 276, "desc": "갯벌에 쌓인 혼을 건너보낸다"}, {"id": 83301, "type": "Main", "ch": 3, "giver": null, "name": "재벌에 선 사람", "cond": "StepClear", "count": 1, "exp": 1440, "desc": "지도에서 지워진 땅의 진실을 확인한다"}, {"id": 83302, "type": "Sub", "ch": 3, "giver": "유민 노인", "name": "썩지 않는 땅", "cond": "ClueGet", "count": 1, "exp": 432, "desc": "관의 지도와 실제 마을을 대조한다"}, {"id": 83303, "type": "Sub", "ch": 3, "giver": "미쳐가는 관군", "name": "돌아오지 못한 관군", "cond": "MonsterKill", "count": 12, "exp": 432, "desc": "재벌을 떠도는 잡귀에서 관군의 흔적을 찾는다"}, {"id": 83401, "type": "Main", "ch": 4, "giver": null, "name": "무너지는 것들 사이에서", "cond": "StepClear", "count": 1, "exp": 2600, "desc": "폐도 지하의 만령진 거점에 닿는다"}, {"id": 83402, "type": "Sub", "ch": 4, "giver": "만령진을 믿는 주민", "name": "죄인의 이름", "cond": "MonsterKill", "count": 10, "exp": 780, "desc": "저잣거리를 떠도는 죄인 망령을 달랜다"}, {"id": 83403, "type": "Sub", "ch": 4, "giver": "도읍을 지키는 관리", "name": "남겨진 사람들", "cond": "ClueGet", "count": 1, "exp": 780, "desc": "도읍이 어떻게 유지되는지 끝까지 듣는다"}, {"id": 83501, "type": "Main", "ch": 5, "giver": null, "name": "마지막 겨울", "cond": "StepClear", "count": 1, "exp": 4640, "desc": "황천문 앞에서 마지막 선택을 한다"}, {"id": 83502, "type": "Sub", "ch": 5, "giver": null, "name": "지나온 이들의 흔적", "cond": "ClueGet", "count": 1, "exp": 1392, "desc": "겨울숲에 남은 흔적을 모두 확인한다 (2026-11-22 63501 폐기 — 황천문 진입과 무관한 서브)"}], "dungeons": [{"id": 87101, "ch": 1, "name": "산신당 저승길"}, {"id": 87201, "ch": 2, "name": "가라앉은 조운선"}, {"id": 87301, "ch": 3, "name": "무너진 진법터"}, {"id": 87401, "ch": 4, "name": "심판궁"}, {"id": 87402, "ch": 4, "name": "만령진 지하"}, {"id": 87501, "ch": 5, "name": "황천문"}], "cfg": {"bag": 40, "store": 100, "hold": 2}};
+const TABS=[['bag','행장','I'],['spirit','원혼','K'],['case','사건 수첩','J'],['journey','여정','L']];
+const SLOT={1:'관',2:'무복',3:'띠',4:'신',5:'방울'};
+const GN={1:'범',2:'상',3:'진',4:'영',5:'신'};
+const STAT={Attack:'atk',HP:'hp',MaxHP:'hp',Defence:'def',Defense:'def',Critical:'crit',CriticalAttack:'critDmg',CriticalDamage:'critDmg'};
+const SN={atk:'공격력',hp:'체력',def:'방어율',crit:'치명타 확률',critDmg:'치명타 배율'};
+let S;
+const $=id=>document.getElementById(id);
+function item(slot,grade){return D.items.find(i=>i.slot===slot&&i.grade===grade)}
+function reset(){
+  const ch=+$('dCh').value, ex=D.expect[ch];
+  const g=Math.max(1,Math.round(ex.grade||1)), e=Math.round(ex.ench||0);
+  S={tab:'bag',open:false,sel:{kind:'bag',i:0},sp:0,hon:[0,600,1500,3200,5200,7800][ch],msg:'',
+     eq:{},bag:[],tree:{},solved:new Set(),claimed:new Set(),nsel:0,lsel:ch-1};
+  for(let s=1;s<=5;s++)S.eq[s]={it:item(s,g),e};
+  const add=(s,gr,en)=>{const it=item(s,Math.min(5,Math.max(1,gr)));if(it)S.bag.push({it,e:en})};
+  add(1,g+1,0);add(2,g,e+1);add(5,g+1,0);add(3,g-1,3);add(4,g,0);add(2,g-1,5);add(1,g,0);add(5,g,2);add(4,g+1,0);
+  D.spirits.forEach(sp=>S.tree[sp.id]=new Set());
+  render();
+}
+function level(){return $('dLv').value==='40'?40:D.expect[+$('dCh').value].lv}
+function syncInfo(){const ch=+$('dCh').value,ex=D.expect[ch];
+  if($('dSpace').value!=='dungeon')return null;const L=level();if(L<=ex.lv+5)return null;
+  return {lv:ex.lv+5,grade:Math.round(ex.grade),ench:Math.round(ex.ench),ex}}
+function enchMul(e){return 1+0.08*e}
+function eqStats2(){const t={atk:0,hp:0,def:0,crit:0,critDmg:0};
+  for(let s=1;s<=5;s++){const q=S.eq[s];if(!q||!q.it)continue;const mk=STAT[q.it.ms],sk=STAT[q.it.ss];
+    if(mk)t[mk]+=q.it.mv*enchMul(q.e);if(sk)t[sk]+=q.it.sv}return t}
+function points(){const L=level();return L<10?0:Math.min(7,Math.floor((L-10)/5)+1)}
+const can={equip:()=>$('dSpace').value!=='dungeon',ench:()=>$('dSpace').value==='inn',tree:()=>$('dSpace').value!=='dungeon',respec:()=>['lobby','inn'].includes($('dSpace').value)};
+const why={equip:'던전 안에서는 장비를 바꿀 수 없다. 보기만 된다',ench:'강화·분해는 삼천도 주막에서',tree:'던전 안에서는 트리를 바꿀 수 없다',respec:'리스펙은 삼천도에서만(무료·무제한)'};
+function fmt(k,v){return k==='def'||k==='crit'?(v*100).toFixed(1)+'%':k==='critDmg'?'×'+v.toFixed(2):Math.round(v).toLocaleString()}
+function render(){
+  const st=$('stage');st.className='stage '+$('dSpace').value;
+  const sp={living:'이승',lobby:'삼천도',inn:'삼천도 · 주막',dungeon:'저승 던전'}[$('dSpace').value];
+  $('hint').innerHTML=sp+' · Lv'+level()+(S.open?'':' — <b>I</b> 행장 <b>K</b> 원혼 <b>J</b> 사건 수첩 <b>L</b> 여정')+(S.open&&$('dSpace').value==='dungeon'?' · 던전에선 메뉴가 열려도 전투는 멈추지 않는다':'');
+  $('menu').classList.toggle('on',S.open);
+  $('tabs').innerHTML=TABS.map(t=>`<div class="${t[0]===S.tab?'on':''}" data-t="${t[0]}">${t[1]} <span class="dim">${t[2]}</span></div>`).join('')+'<div class="sp"></div><div class="money">혼백 '+S.hon.toLocaleString()+'</div>';
+  document.querySelectorAll('#tabs [data-t]').forEach(e=>e.onclick=()=>{S.tab=e.dataset.t;S.msg='';render()});
+  ({bag:rBag,spirit:rSpirit,case:rCase,journey:rJourney})[S.tab]();
+}
+function rBag(){
+  const base=D.lv[level()],eq=eqStats2(),sy=syncInfo();
+  const sel=S.sel.kind==='bag'?S.bag[S.sel.i]:S.eq[S.sel.i];
+  let cmp='';
+  if(S.sel.kind==='bag'&&sel){const cur=S.eq[sel.it.slot],mk=STAT[sel.it.ms];
+    const nv=sel.it.mv*enchMul(sel.e),cv=cur?cur.it.mv*enchMul(cur.e):0,d=nv-cv;
+    cmp=`<div class="box"><h3>비교 — ${SLOT[sel.it.slot]}</h3><div class="g${sel.it.grade}">${sel.it.name}${sel.e?' +'+sel.e:''}</div><div class="dim">현재: ${cur?cur.it.name+(cur.e?' +'+cur.e:''):'없음'}</div><div>${SN[mk]} <span class="${d>=0?'up':'dn'}">${d>=0?'▲':'▼'} ${fmt(mk,Math.abs(d))}</span></div></div>`}
+  const enc=sel?D.ench.find(x=>x.lv===sel.e+1):null;
+  const act=`<div class="box"><h3>행동</h3>
+    <span class="btn ${can.equip()&&S.sel.kind==='bag'?'':'off'}" id="aEq">Enter 장착</span>
+    <span class="btn ${can.ench()&&sel&&enc?'':'off'}" id="aUp">U 강화${enc?' ('+enc.cost+')':''}</span>
+    <span class="btn ${can.ench()&&S.sel.kind==='bag'?'':'off'}" id="aDis">X 분해</span>
+    <div class="msg">${S.msg}</div></div>`;
+  const tot=k=>(base[k]+eq[k]);
+  const rows=['atk','hp','def','crit','critDmg'].map(k=>`<tr><td>${SN[k]}</td><td>${fmt(k,base[k])}</td><td>${k==='critDmg'?'+'+eq[k].toFixed(2):fmt(k,eq[k])}</td><td>${fmt(k,tot(k))}</td>${sy?`<td class="dim">${k==='atk'?fmt(k,sy.ex.atk):k==='hp'?fmt(k,sy.ex.hp):k==='def'?fmt(k,sy.ex.def):'—'}</td>`:''}</tr>`).join('');
+  const sps=D.spirits.map(s=>{const a=(sy?sy.ex.atk:tot('atk'))*s.atk,h=(sy?sy.ex.hp:tot('hp'))*s.hp,d=Math.min(.75,sy?sy.ex.def:tot('def'));
+    return `<tr><td>${s.name} <span class="dim">${s.role}</span></td><td>${fmt('atk',a)}</td><td>${fmt('hp',h)}</td><td>${fmt('def',d)}${s.dmgTaken<1?' <span class="dim">×'+s.dmgTaken+'</span>':''}</td></tr>`}).join('');
+  $('body').innerHTML=`
+  <div class="col" style="width:230px"><div class="box"><h3>장착 (5부위)</h3>${[1,2,3,4,5].map(s=>{const q=S.eq[s];return `<div class="slot ${S.sel.kind==='eq'&&S.sel.i===s?'sel':''}" data-eq="${s}"><span class="k">${SLOT[s]}</span><span class="g${q.it.grade}">${q.it.name}</span>${q.e?'<span class="e" style="margin-left:auto;color:#e4cf8a">+'+q.e+'</span>':''}</div>`}).join('')}</div>${cmp}</div>
+  <div class="col" style="width:400px"><div class="box"><h3>보따리 ${S.bag.length} / ${D.cfg.bag}</h3><div class="bag">${Array.from({length:D.cfg.bag},(_,i)=>{const b=S.bag[i];return `<div class="cell ${S.sel.kind==='bag'&&S.sel.i===i?'sel':''}" data-bag="${i}">${b?`<span class="g${b.it.grade}">${GN[b.it.grade]}<br>${SLOT[b.it.slot]}</span>${b.e?'<span class="e">+'+b.e+'</span>':''}`:''}</div>`}).join('')}</div></div>${act}</div>
+  <div class="col" style="flex:1">${sy?`<div class="sync">동기화 중 — 적용 값은 Lv${sy.lv} · ${GN[sy.grade]} ${sy.ench}강 기준(configs 60004·60006). 외형은 그대로.</div>`:''}
+   <div class="box"><h3>무당 능력치 (Lv${level()})</h3><table><tr><th></th><th>성장</th><th>장비</th><th>합계</th>${sy?'<th>동기화</th>':''}</tr>${rows}</table></div>
+   <div class="box"><h3>원혼을 받으면 — (성장 + 장비) × 원혼 배율</h3><table><tr><th></th><th>공격력</th><th>체력</th><th>방어율</th></tr>${sps}</table></div></div>`;
+  document.querySelectorAll('[data-bag]').forEach(e=>e.onclick=()=>{S.sel={kind:'bag',i:+e.dataset.bag};S.msg='';render()});
+  document.querySelectorAll('[data-eq]').forEach(e=>e.onclick=()=>{S.sel={kind:'eq',i:+e.dataset.eq};S.msg='';render()});
+  $('aEq').onclick=doEquip;$('aUp').onclick=doEnch;$('aDis').onclick=doDis;
+}
+function doEquip(){if(!can.equip()){S.msg=why.equip;return render()}if(S.sel.kind!=='bag'||!S.bag[S.sel.i])return;
+  const b=S.bag[S.sel.i],cur=S.eq[b.it.slot];S.eq[b.it.slot]=b;S.bag[S.sel.i]=cur;S.msg=SLOT[b.it.slot]+' 장착';render()}
+function doEnch(){if(!can.ench()){S.msg=why.ench;return render()}const t=S.sel.kind==='bag'?S.bag[S.sel.i]:S.eq[S.sel.i];if(!t)return;
+  const n=D.ench.find(x=>x.lv===t.e+1);if(!n){S.msg='이미 10강';return render()}if(S.hon<n.cost){S.msg='혼백이 모자라다';return render()}
+  S.hon-=n.cost;t.e++;S.msg='강화 +'+t.e+' — 실패 없음';render()}
+function doDis(){if(!can.ench()){S.msg=why.ench;return render()}if(S.sel.kind!=='bag'||!S.bag[S.sel.i])return;
+  const b=S.bag[S.sel.i];const spent=D.ench.filter(x=>x.lv<=b.e).reduce((a,x)=>a+x.cost,0);const back=Math.round(spent*0.3)+5*b.it.grade;
+  S.hon+=back;S.bag.splice(S.sel.i,1);S.msg='분해 — 혼백 +'+back+'(투입의 30% + 기본)';render()}
+function rSpirit(){
+  const sp=D.spirits[S.sp],got=S.tree[sp.id],used=got.size,pts=points();
+  const sks=D.skills.filter(k=>k.spirit===sp.id).sort((a,b)=>a.slot-b.slot);
+  const nodeHtml=sks.map(k=>{const ns=D.nodes.filter(n=>n.skill===k.id).sort((a,b)=>a.type-b.type);
+    return `<div class="row"><div class="sk">${k.slot}. ${k.name}<small>${k.res==='Spirit'?'신력':'쿨타임'} 계열</small></div>${ns.map(n=>{const ok=got.has(n.id),pre=!n.prev||got.has(n.prev);
+      return `<div class="node ${ok?'got':(pre&&used<pts?'can':'')} ${S.nsel===n.id?'sel':''}" data-n="${n.id}"><b>${['','위력','회전','특화'][n.type]}</b>${n.desc}</div>`}).join('')}</div>`}).join('');
+  const BUILD={8501:[['철벽',[2,4]],['호령꾼',[1,3]]],8502:[['처형인',[2,3]],['칼바람',[1,4]]],8503:[['저격수',[2,4]],['사냥꾼',[1,3]]],8504:[['판놀음',[4,1]],['훼방꾼',[2,3]]],8505:[['구완',[1,4]],['약방',[2,3]]]}[sp.id]||[];
+  $('body').innerHTML=`<div class="col" style="flex:1">
+   <div class="sp-tabs">${D.spirits.map((s,i)=>`<div class="${i===S.sp?'on':''}" data-sp="${i}">${i+1} ${s.name}</div>`).join('')}</div>
+   <div class="box"><h3>${sp.name} — ${sp.role} · ${sp.weapon} · 남은 포인트 <b style="color:#e4cf8a">${pts-used}</b> / ${pts} <span class="dim">(원혼마다 따로, Lv10부터 5레벨마다 1점)</span></h3>${nodeHtml}</div></div>
+   <div class="col" style="width:250px"><div class="box"><h3>행동</h3>
+   <span class="btn ${can.tree()?'':'off'}" id="aLearn">Enter 찍기</span><span class="btn ${can.respec()?'':'off'}" id="aRe">R 리스펙(무료)</span>
+   <div class="msg">${S.msg}</div></div>
+   <div class="box"><h3>빌드 예시 — 눌러서 적용</h3>${BUILD.map((b,i)=>`<span class="btn ${can.tree()?'':'off'}" data-b="${i}">${b[0]}</span>`).join('')}<p class="dim" style="margin-top:6px;font-size:11px">특화 두 스킬 → 남는 점은 다음 스킬 위력. 포인트가 모자라면 앞에서부터.</p></div>
+   <div class="box"><h3>규칙</h3><p class="dim" style="font-size:11px;line-height:1.5">위력 → 회전 → 특화 순서. 원혼 스킬 4개는 처음부터 다 쓸 수 있다. 리스펙은 삼천도에서만, 원혼마다 따로.</p></div></div>`;
+  document.querySelectorAll('[data-sp]').forEach(e=>e.onclick=()=>{S.sp=+e.dataset.sp;S.msg='';render()});
+  document.querySelectorAll('[data-n]').forEach(e=>e.onclick=()=>{S.nsel=+e.dataset.n;learn()});
+  $('aLearn').onclick=learn;$('aRe').onclick=respec;
+  document.querySelectorAll('[data-b]').forEach(e=>e.onclick=()=>applyBuild(BUILD[+e.dataset.b]));
+}
+function learn(){const sp=D.spirits[S.sp],got=S.tree[sp.id],n=D.nodes.find(x=>x.id===S.nsel);if(!n)return render();
+  if(!can.tree()){S.msg=why.tree;return render()}if(got.has(n.id))return render();
+  if(n.prev&&!got.has(n.prev)){S.msg='앞 노드를 먼저 찍어야 한다';return render()}if(got.size>=points()){S.msg='포인트가 없다';return render()}
+  got.add(n.id);S.msg='';render()}
+function respec(){if(!can.respec()){S.msg=why.respec;return render()}S.tree[D.spirits[S.sp].id]=new Set();S.msg='초기화 — 이 원혼만';render()}
+function applyBuild(b){if(!can.tree()){S.msg=why.tree;return render()}if(!can.respec()&&S.tree[D.spirits[S.sp].id].size){S.msg='찍은 노드가 있어 리스펙이 필요하다 — '+why.respec;return render()}
+  const sp=D.spirits[S.sp],set=new Set(),pts=points();const sks=D.skills.filter(k=>k.spirit===sp.id);
+  const order=[];b[1].forEach(sl=>{const k=sks.find(x=>x.slot===sl);D.nodes.filter(n=>n.skill===k.id).sort((a,c)=>a.type-c.type).forEach(n=>order.push(n.id))});
+  const rest=sks.find(x=>!b[1].includes(x.slot));order.push(D.nodes.find(n=>n.skill===rest.id&&n.type===1).id);
+  order.slice(0,pts).forEach(id=>set.add(id));S.tree[sp.id]=set;S.msg=b[0]+' 적용 ('+set.size+'/'+pts+'점)';render()}
+function clueState(c){const ch=+$('dCh').value;if(c.ch<ch)return 'got';if(c.ch>ch)return 'none';
+  if(S.solved.has(c.id))return 'got';const cs=D.clues.filter(x=>x.ch===ch);const idx=cs.indexOf(c);
+  if(c.puzzle&&c.puzzle!=='None'&&idx<=Math.ceil(cs.length/2))return 'pz';return idx<Math.floor(cs.length/2)?'got':'none'}
+function rCase(){const ch=+$('dCh').value;const cases=D.cases.filter(c=>c.ch<=ch);
+  const c=cases[Math.min(S.lsel,cases.length-1)]||cases[0];const cl=D.clues.filter(x=>x.case===c.id);
+  const got=cl.filter(x=>clueState(x)==='got').length;
+  $('body').innerHTML=`<div class="col" style="width:260px"><div class="box"><h3>사건</h3>${cases.map((x,i)=>{const n=D.clues.filter(y=>y.case===x.id),g=n.filter(y=>clueState(y)==='got').length;
+     return `<div class="li ${x===c?'sel':''}" data-c="${i}">${x.ch}챕터 · ${x.name}${g===n.length?'<span class="tag ok">해결</span>':''}<small>${g} / ${n.length}</small></div>`}).join('')}</div></div>
+   <div class="col" style="flex:1"><div class="box"><h3>${c.name} — ${c.desc}</h3>${cl.map(x=>{const s=clueState(x);
+     return `<div class="li">${s==='none'?'<span class="dim">？？？ — 아직 모르는 단서</span>':x.name}${s==='pz'?'<span class="tag pz">목격 · 퍼즐 미해결</span>':''}${s==='got'?'<span class="tag ok">'+x.acq+'</span>':''}<small>${s==='none'?(x.world==='Underworld'?'저승에서 찾을 수 있을 것 같다':'이승 어딘가'):x.desc}</small>${s==='pz'?`<span class="btn" data-pz="${x.id}">퍼즐 풀기</span>`:''}</div>`}).join('')}
+     <p class="dim" style="margin-top:6px;font-size:11px">미획득 단서는 빈칸 — 몇 개 남았는지만 보인다. 사건 해결은 보상이 없다(보상은 퀘스트).</p></div><div class="msg">${S.msg}</div></div>`;
+  document.querySelectorAll('[data-c]').forEach(e=>e.onclick=()=>{S.lsel=+e.dataset.c;S.msg='';render()});
+  document.querySelectorAll('[data-pz]').forEach(e=>e.onclick=()=>{S.solved.add(+e.dataset.pz);S.msg='퍼즐을 풀었다 — 단서 획득(퍼즐 화면은 사건 조사 시스템 몫)';render()});
+}
+function questState(q){const ch=+$('dCh').value;if(q.ch<ch)return 'done';if(q.ch>ch)return 'hide';
+  if(S.claimed.has(q.id))return 'done';if(q.type==='Main')return 'prog';return D.quests.filter(x=>x.ch===ch&&x.type!=='Main').indexOf(q)===0?'ready':'prog'}
+function rJourney(){const ch=+$('dCh').value;const cur=D.steps.findIndex(s=>s.ch===ch&&s.step===3);
+  const qs=D.quests.filter(q=>questState(q)!=='hide');
+  $('body').innerHTML=`<div class="col" style="flex:1"><div class="box"><h3>챕터 진행 — ○ 이승 단계 · ◇ 저승 던전 단계</h3>
+   ${[1,2,3,4,5].map(c=>`<div style="display:flex;align-items:center;gap:8px;margin-bottom:5px"><span class="dim" style="width:46px">${c}챕터</span><div class="steps">${D.steps.filter(s=>s.ch===c).map(s=>{const i=D.steps.indexOf(s);
+      return `<div class="st ${s.world===1?'l':'d'} ${i<cur?'done':''} ${i===cur?'cur':''}" title="${s.region} — ${s.desc}">${s.world===1?'○':'◇'}${s.step}</div>`}).join('')}</div></div>`).join('')}
+   <p class="dim" style="font-size:11px;margin-top:4px">현재: ${D.steps[cur].region} — ${D.steps[cur].desc}${D.steps[cur].dungeon?' · 던전: '+D.steps[cur].dungeon:''}</p></div>
+   <div class="box" style="flex:1;overflow:auto"><h3>퀘스트</h3>${qs.map(q=>{const s=questState(q);
+     return `<div class="li">${q.type==='Main'?'<b style="color:var(--ac)">메인</b>':'서브'} · ${q.name}${s==='done'?'<span class="tag ok">완료</span>':s==='ready'?'<span class="tag wait">보상 대기</span>':''}<small>${q.desc}${q.giver?' — '+q.giver:''} · 경험치 ${q.exp}</small>${s==='ready'?`<span class="btn" data-q="${q.id}">Enter 보상 받기</span>`:''}</div>`}).join('')}</div><div class="msg">${S.msg}</div></div>`;
+  document.querySelectorAll('[data-q]').forEach(e=>e.onclick=()=>{if(S.bag.length>=D.cfg.bag){S.msg='보따리가 가득 — 보상은 사라지지 않고 대기한다';return render()}
+    S.claimed.add(+e.dataset.q);S.bag.push({it:item(1+Math.floor(Math.random()*5),3),e:0});S.msg='보상을 받았다 — 서브 퀘스트는 그 챕터 기대 등급 중심(dropGroups 96121~96125)';render()});
+}
+// 결말 전 경고
+let holdT=null,holdStart=0;
+function openEnd(){const ch=+$('dCh').value;$('holdSec').textContent=D.cfg.hold;
+  const subs=D.quests.filter(q=>q.type!=='Main'&&q.ch<=ch&&questState(q)!=='done');const pz=D.clues.filter(c=>clueState(c)==='pz').length;
+  $('endList').innerHTML=(subs.length?subs.map(q=>`<div class="li">${q.ch}챕터 서브 · ${q.name}<small>${q.desc}</small></div>`).join(''):'<div class="dim">남은 서브 퀘스트 없음</div>')+(pz?`<div class="li">풀지 않은 퍼즐 ${pz}개 <small>사건 수첩에서 언제든 열 수 있다(결말 뒤에도)</small></div>`:'');
+  $('popEnd').classList.add('on');$('holdBar').style.width='0'}
+function retCard(){const ch=+$('dCh').value;const d=D.dungeons.filter(x=>x.ch===ch).slice(-1)[0];const pz=D.clues.filter(c=>c.ch===ch&&c.world==='Underworld'&&c.puzzle!=='None');
+  $('retCard').innerHTML=`<h2>귀항 — ${d.name}</h2><p class="dim">처음 클리어: 이야기 장면(개인 화면) → 아래 정리 → 삼천도 나루터</p>
+   <div class="box" style="margin-bottom:8px"><h3>얻은 것</h3><div>경험치 · 혼백 · 장비 ${3+ch}개 (모두 개인 굴림)</div><div class="dim">처치 퀘스트 집계는 파티원 모두 같이</div></div>
+   ${pz.length?`<div class="box" style="margin-bottom:8px"><h3>목격한 것</h3>${pz.map(c=>`<div class="li">${c.name}<small>${c.desc}</small></div>`).join('')}<span class="btn" id="rSolve">Enter 지금 풀기</span><span class="btn" id="rLater">Esc 나중에(사건 수첩)</span></div>`:'<p>목격한 퍼즐 없음</p>'}
+   <span class="btn" id="rClose">삼천도로</span>`;
+  $('popRet').classList.add('on');
+  const close=()=>{$('popRet').classList.remove('on');render()};$('rClose').onclick=close;
+  if($('rSolve')){$('rSolve').onclick=()=>{pz.forEach(c=>S.solved.add(c.id));close()};$('rLater').onclick=close}}
+document.addEventListener('keydown',e=>{
+  if($('popEnd').classList.contains('on')){if(e.key==='Escape'){$('popEnd').classList.remove('on');clearInterval(holdT)}
+    if(e.key==='Enter'&&!holdT){holdStart=Date.now();holdT=setInterval(()=>{const p=(Date.now()-holdStart)/(D.cfg.hold*1000);$('holdBar').style.width=Math.min(100,p*100)+'%';
+      if(p>=1){clearInterval(holdT);holdT=null;$('endList').innerHTML='<div class="li">결말 선택 화면으로 — 끊는다 / 잇는다</div>'}},50)}return}
+  if($('popRet').classList.contains('on')){if(e.key==='Escape'&&$('rLater'))$('rLater').click();else if(e.key==='Enter'&&$('rSolve'))$('rSolve').click();else if(e.key==='Escape')$('rClose').click();return}
+  const k=e.key.toLowerCase();const map={i:'bag',k:'spirit',j:'case',l:'journey'};
+  if(map[k]){if(S.open&&S.tab===map[k])S.open=false;else{S.open=true;S.tab=map[k]}S.msg='';render();e.preventDefault();return}
+  if(!S.open)return;
+  if(e.key==='Escape'){S.open=false;render();return}
+  if(k==='q'||k==='e'){const i=TABS.findIndex(t=>t[0]===S.tab);S.tab=TABS[(i+(k==='e'?1:TABS.length-1))%TABS.length][0];S.msg='';render();return}
+  if(S.tab==='bag'){if(e.key==='Enter')doEquip();if(k==='u')doEnch();if(k==='x')doDis();
+    if(e.key.startsWith('Arrow')&&S.sel.kind==='bag'){const d={ArrowLeft:-1,ArrowRight:1,ArrowUp:-8,ArrowDown:8}[e.key];S.sel.i=Math.max(0,Math.min(D.cfg.bag-1,S.sel.i+d));S.msg='';render();e.preventDefault()}}
+  if(S.tab==='spirit'){if(/^[1-5]$/.test(e.key)){S.sp=+e.key-1;S.msg='';render()}if(k==='r')respec();if(e.key==='Enter')learn();
+    if(e.key.startsWith('Arrow')){const sp=D.spirits[S.sp];const ns=D.nodes.filter(n=>D.skills.find(s=>s.id===n.skill).spirit===sp.id).sort((a,b)=>a.id-b.id);let i=Math.max(0,ns.findIndex(n=>n.id===S.nsel));
+      i={ArrowLeft:i-1,ArrowRight:i+1,ArrowUp:i-3,ArrowDown:i+3}[e.key];S.nsel=ns[Math.max(0,Math.min(ns.length-1,i))].id;render();e.preventDefault()}}
+});
+['dSpace','dLv'].forEach(id=>$(id).onchange=()=>{S.msg='';render()});$('dCh').onchange=reset;
+$('dReset').onclick=reset;$('dEnd').onclick=openEnd;$('dRet').onclick=retCard;
+reset();
+</script>
+</body>
+</html>

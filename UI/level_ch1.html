@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>무당: 조선의 낮과 밤 — 1챕터 레벨 배치도</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#14161c;color:#d8d3c8;font-family:'Malgun Gothic','맑은 고딕',sans-serif;padding:18px;display:flex;flex-direction:column;align-items:flex-start;gap:12px}
+h1{font-size:15px;font-weight:700;color:#b9b2a3}
+h1 small{font-weight:400;color:#6d6759;margin-left:8px;font-size:12px}
+.tabs{display:flex;gap:6px;flex-wrap:wrap}
+.tabs button{background:#1d2028;border:1px solid #2c2f38;color:#a19c90;padding:6px 14px;font:inherit;font-size:12.5px;cursor:pointer}
+.tabs button.on{background:#2a2f3a;color:#e9e2d2;border-color:#5e6873}
+.wrap{display:flex;gap:14px;align-items:flex-start;flex-wrap:wrap}
+.board{position:relative;border:1px solid #2c2f38;background:#0e1014}
+canvas{display:block}
+.side{width:300px;display:flex;flex-direction:column;gap:10px;font-size:12px}
+.card{background:#1a1d24;border:1px solid #2a2d36;padding:10px 12px}
+.card h2{font-size:12.5px;color:#e9e2d2;margin-bottom:6px}
+.card p{color:#a19c90;line-height:1.55}
+.legend{display:grid;grid-template-columns:1fr 1fr;gap:3px 8px}
+.legend label{display:flex;align-items:center;gap:6px;cursor:pointer;color:#bdb6a8}
+.sw{width:11px;height:11px;border:1px solid #000;flex:none}
+.opts label{display:flex;gap:6px;align-items:center;margin:3px 0;color:#bdb6a8;cursor:pointer}
+#tip{position:absolute;pointer-events:none;background:rgba(10,12,16,.94);border:1px solid #5e6873;padding:7px 9px;font-size:11.5px;max-width:320px;line-height:1.5;display:none;z-index:5}
+#tip b{color:#f0e6d0}
+.coord{color:#6d6759;font-variant-numeric:tabular-nums}
+.list{max-height:300px;overflow:auto}
+.list div{padding:3px 0;border-bottom:1px solid #22252d;cursor:pointer;color:#bdb6a8}
+.list div:hover{color:#fff}
+</style>
+</head>
+<body>
+<h1>1챕터 레벨 배치도 <small>1칸 = 32px · 화면 30×17칸 · 데이터: MasterTable levelMaps / levelObjects</small></h1>
+<div class="tabs" id="tabs"></div>
+<div class="wrap">
+  <div class="board" id="board"><canvas id="cv"></canvas><div id="tip"></div></div>
+  <div class="side">
+    <div class="card"><h2 id="mname"></h2><p id="mdesc"></p><p class="coord" id="msize"></p></div>
+    <div class="card opts">
+      <h2>보기</h2>
+      <label><input type="checkbox" id="oDetect" checked> 팩 탐지 범위(10칸 정사각형)</label>
+      <label><input type="checkbox" id="oScreen" checked> 화면 프레임 30×17(마우스 따라감)</label>
+      <label><input type="checkbox" id="oGrid" checked> 격자</label>
+      <label><input type="checkbox" id="oLabel" checked> 이름표</label>
+    </div>
+    <div class="card"><h2>범례 (눌러서 켜고 끄기)</h2><div class="legend" id="legend"></div></div>
+    <div class="card"><h2>오브젝트</h2><div class="list" id="list"></div></div>
+  </div>
+</div>
+<script>
+const D={"types": [{"id": 1, "name": "PlayerStart", "desc": "시작·입장 지점", "color": "#ffffff"}, {"id": 2, "name": "Altar", "desc": "이승 신단 — 강림·부활", "color": "#f5c542"}, {"id": 3, "name": "NPC", "desc": "NPC 서는 칸", "color": "#7ec8ff"}, {"id": 4, "name": "Clue", "desc": "단서 조사 지점", "color": "#c38bff"}, {"id": 5, "name": "Passage", "desc": "관문(passages)", "color": "#ff8c42"}, {"id": 6, "name": "Landmark", "desc": "랜드마크·연출 소품", "color": "#9fd38a"}, {"id": 7, "name": "Event", "desc": "연출 구역", "color": "#ffd1e8"}, {"id": 8, "name": "Path", "desc": "걸을 수 있는 길·구간 띠", "color": "#5b5346"}, {"id": 9, "name": "CombatSpace", "desc": "교전 공간", "color": "#7a3b3b"}, {"id": 10, "name": "Pack", "desc": "망령 팩(size=체 수)", "color": "#ff4d4d"}, {"id": 11, "name": "Elite", "desc": "정예", "color": "#ff00aa"}, {"id": 12, "name": "Bonfire", "desc": "구간 불씨", "color": "#ffb347"}, {"id": 13, "name": "BossArena", "desc": "보스 아레나", "color": "#3b2a4a"}, {"id": 14, "name": "BossStart", "desc": "보스 시작 위치", "color": "#d6336c"}, {"id": 15, "name": "ArenaBonfire", "desc": "보스방 불씨", "color": "#ffd27f"}, {"id": 16, "name": "SectionGate", "desc": "구간 문(정리하면 열림)·보스방 입구", "color": "#e64980"}, {"id": 17, "name": "Blocked", "desc": "통행 불가 지형", "color": "#1c1c1c"}, {"id": 18, "name": "Building", "desc": "건물", "color": "#8c7a5b"}], "maps": [{"id": 65101, "name": "감천 마을", "kind": 1, "ref": 61101, "w": 48, "h": 32, "dir": "남→북(마을 안 순환)", "cam": 1, "desc": "챕터 시작 지역. 우물 광장을 중심으로 노파·어머니·이장 집이 둘러싼다. 뒷산 묘지는 이승만의 길"}, {"id": 65102, "name": "안개골 숲", "kind": 1, "ref": 61102, "w": 72, "h": 40, "dir": "서→동", "cam": 1, "desc": "갈림길에서 북쪽 능선(산신당) / 동쪽 무너진 다리(막힘 → 산신당 저승길)로 갈린다"}, {"id": 65103, "name": "산신당", "kind": 1, "ref": 61103, "w": 32, "h": 24, "dir": "서→동", "cam": 1, "desc": "봉인문(63101) 너머 작은 신당. 산신 고목을 먼저 보여 주는 곳 — 저승판에서 목귀가 된다"}, {"id": 65104, "name": "산신당 저승길", "kind": 2, "ref": 87101, "w": 106, "h": 58, "dir": "구간1 서→동 / 구간2 동→서 / 보스 서→동", "cam": 2, "desc": "안개골 저승판 2구간 → 산신당 앞 불씨 → 목귀 아레나. 구간마다 가로 진행"}], "objs": [{"id": 6510101, "map": 65101, "t": 8, "ref": 0, "x": 22, "y": 5, "w": 4, "h": 27, "size": 0, "desc": "마을 큰길(남북). 폭 4칸"}, {"id": 6510102, "map": 65101, "t": 8, "ref": 0, "x": 26, "y": 17, "w": 21, "h": 3, "size": 0, "desc": "동쪽 길 → 숲길 입구"}, {"id": 6510103, "map": 65101, "t": 8, "ref": 0, "x": 3, "y": 12, "w": 19, "h": 2, "size": 0, "desc": "서쪽 길 → 노파 집·묘지길"}, {"id": 6510104, "map": 65101, "t": 8, "ref": 0, "x": 26, "y": 13, "w": 10, "h": 2, "size": 0, "desc": "어머니 집 앞길"}, {"id": 6510105, "map": 65101, "t": 1, "ref": 0, "x": 24, "y": 30, "w": 1, "h": 1, "size": 0, "desc": "챕터 시작. 남쪽 고갯길로 들어온다"}, {"id": 6510106, "map": 65101, "t": 2, "ref": 61101, "x": 19, "y": 26, "w": 1, "h": 1, "size": 0, "desc": "감천 신단. 챕터 시작·부활 지점. 주변 3×3 비움"}, {"id": 6510107, "map": 65101, "t": 6, "ref": 0, "x": 23, "y": 15, "w": 2, "h": 2, "size": 0, "desc": "마을 우물 — 저승판에선 검은 물(objectSwaps 8906)"}, {"id": 6510108, "map": 65101, "t": 7, "ref": 0, "x": 20, "y": 13, "w": 8, "h": 6, "size": 0, "desc": "죽은 아이가 우물가를 맴도는 구역(64101 목격). 주민은 아이를 지나쳐 간다"}, {"id": 6510109, "map": 65101, "t": 18, "ref": 0, "x": 6, "y": 6, "w": 6, "h": 5, "size": 0, "desc": "굿을 청한 노파의 집. 빈 제사상"}, {"id": 6510110, "map": 65101, "t": 3, "ref": 81101, "x": 9, "y": 11, "w": 1, "h": 1, "size": 0, "desc": "굿을 청한 노파 — 단서 51101(대화)"}, {"id": 6510111, "map": 65101, "t": 18, "ref": 0, "x": 32, "y": 7, "w": 6, "h": 5, "size": 0, "desc": "아이의 어머니 집"}, {"id": 6510112, "map": 65101, "t": 3, "ref": 81102, "x": 35, "y": 13, "w": 1, "h": 1, "size": 0, "desc": "아이의 어머니(망각) — 서브 83102 의뢰"}, {"id": 6510113, "map": 65101, "t": 18, "ref": 0, "x": 20, "y": 1, "w": 8, "h": 4, "size": 0, "desc": "마을 회관"}, {"id": 6510114, "map": 65101, "t": 3, "ref": 81103, "x": 24, "y": 5, "w": 1, "h": 1, "size": 0, "desc": "마을 이장(망각) — 서브 83103 의뢰(던전 처치)"}, {"id": 6510115, "map": 65101, "t": 5, "ref": 62104, "x": 4, "y": 4, "w": 1, "h": 8, "size": 0, "desc": "뒷산 묘지길 — 이승만의 길. 저승판에선 꺼진 땅"}, {"id": 6510116, "map": 65101, "t": 6, "ref": 0, "x": 1, "y": 1, "w": 9, "h": 3, "size": 0, "desc": "뒷산 묘지"}, {"id": 6510117, "map": 65101, "t": 4, "ref": 51102, "x": 6, "y": 2, "w": 1, "h": 1, "size": 0, "desc": "아이의 빈 무덤(관찰) — 서브 83102 완료 조건"}, {"id": 6510118, "map": 65101, "t": 5, "ref": 62101, "x": 47, "y": 17, "w": 1, "h": 3, "size": 0, "desc": "숲길 입구 → 안개골 숲"}, {"id": 6510201, "map": 65102, "t": 5, "ref": 62101, "x": 0, "y": 19, "w": 1, "h": 3, "size": 0, "desc": "감천 마을에서 들어온다"}, {"id": 6510202, "map": 65102, "t": 8, "ref": 0, "x": 1, "y": 19, "w": 23, "h": 3, "size": 0, "desc": "숲 입구 길"}, {"id": 6510203, "map": 65102, "t": 2, "ref": 61102, "x": 10, "y": 23, "w": 1, "h": 1, "size": 0, "desc": "첫 신단 발견(64102). 숲 입구 쪽"}, {"id": 6510204, "map": 65102, "t": 6, "ref": 0, "x": 24, "y": 19, "w": 3, "h": 3, "size": 0, "desc": "숲 갈림길"}, {"id": 6510205, "map": 65102, "t": 8, "ref": 0, "x": 24, "y": 4, "w": 3, "h": 15, "size": 0, "desc": "북쪽 오르막"}, {"id": 6510206, "map": 65102, "t": 8, "ref": 0, "x": 27, "y": 4, "w": 43, "h": 3, "size": 0, "desc": "북쪽 능선길 → 산신당 봉인문"}, {"id": 6510207, "map": 65102, "t": 4, "ref": 51104, "x": 30, "y": 8, "w": 1, "h": 1, "size": 0, "desc": "실종자의 흔적(관찰) — 63102 이후에만 보인다. 능선길에서 2칸"}, {"id": 6510208, "map": 65102, "t": 8, "ref": 0, "x": 27, "y": 19, "w": 16, "h": 3, "size": 0, "desc": "동쪽 길 → 무너진 다리"}, {"id": 6510209, "map": 65102, "t": 6, "ref": 0, "x": 28, "y": 18, "w": 15, "h": 1, "size": 0, "desc": "붉은 실이 감긴 나무들 — 다리 쪽으로 이어진다"}, {"id": 6510210, "map": 65102, "t": 17, "ref": 0, "x": 44, "y": 12, "w": 5, "h": 28, "size": 0, "desc": "골짜기 — 두 세계 모두 통행 불가"}, {"id": 6510211, "map": 65102, "t": 5, "ref": 62102, "x": 44, "y": 19, "w": 5, "h": 3, "size": 0, "desc": "무너진 나무다리 — 이승 막힘. 저승판은 망자의 다리(산신당 저승길 구간 2)"}, {"id": 6510212, "map": 65102, "t": 2, "ref": 61102, "x": 37, "y": 24, "w": 1, "h": 1, "size": 0, "desc": "강림 신단(64103). 무너진 다리에서 7칸"}, {"id": 6510213, "map": 65102, "t": 6, "ref": 0, "x": 50, "y": 16, "w": 20, "h": 12, "size": 0, "desc": "다리 건너편 숲 — 이승에선 보이기만 한다"}, {"id": 6510214, "map": 65102, "t": 5, "ref": 62103, "x": 70, "y": 4, "w": 1, "h": 3, "size": 0, "desc": "봉인된 산신당 문 → 산신당(63101로 이승 개방)"}, {"id": 6510301, "map": 65103, "t": 5, "ref": 62103, "x": 0, "y": 11, "w": 1, "h": 3, "size": 0, "desc": "안개골 능선에서 들어온다"}, {"id": 6510302, "map": 65103, "t": 8, "ref": 0, "x": 1, "y": 11, "w": 22, "h": 3, "size": 0, "desc": "신당 앞마당 길"}, {"id": 6510303, "map": 65103, "t": 2, "ref": 61103, "x": 6, "y": 15, "w": 1, "h": 1, "size": 0, "desc": "산신당 신단 — 저승판에선 구간 불씨 제단(objectSwaps 8903)"}, {"id": 6510304, "map": 65103, "t": 18, "ref": 0, "x": 14, "y": 3, "w": 9, "h": 6, "size": 0, "desc": "산신당 사당"}, {"id": 6510305, "map": 65103, "t": 6, "ref": 0, "x": 18, "y": 9, "w": 1, "h": 1, "size": 0, "desc": "봉인된 사당문"}, {"id": 6510306, "map": 65103, "t": 6, "ref": 0, "x": 20, "y": 12, "w": 1, "h": 1, "size": 0, "desc": "제단 — 제기·향로"}, {"id": 6510307, "map": 65103, "t": 6, "ref": 0, "x": 23, "y": 13, "w": 6, "h": 1, "size": 0, "desc": "금줄"}, {"id": 6510308, "map": 65103, "t": 6, "ref": 0, "x": 25, "y": 15, "w": 2, "h": 2, "size": 0, "desc": "산신 고목 — 저승판 아레나의 목귀 시작 위치와 대응(랜드마크 선행 노출)"}, {"id": 6510401, "map": 65104, "t": 8, "ref": 871011, "x": 14, "y": 4, "w": 89, "h": 11, "size": 0, "desc": "구간 1 — 안개골 저승판. 서→동, 길이 88칸(입구 8 + 팩 5×16)"}, {"id": 6510402, "map": 65104, "t": 1, "ref": 0, "x": 16, "y": 9, "w": 1, "h": 1, "size": 0, "desc": "입장 지점(나룻배에서 내린 자리)"}, {"id": 6510403, "map": 65104, "t": 9, "ref": 871011, "x": 26, "y": 5, "w": 12, "h": 9, "size": 0, "desc": "구간 1 교전 공간 1"}, {"id": 6510404, "map": 65104, "t": 10, "ref": 871011, "x": 34, "y": 9, "w": 1, "h": 1, "size": 4, "desc": "구간 1 팩 1 — 작(4체), 92101"}, {"id": 6510405, "map": 65104, "t": 9, "ref": 871011, "x": 42, "y": 5, "w": 12, "h": 9, "size": 0, "desc": "구간 1 교전 공간 2"}, {"id": 6510406, "map": 65104, "t": 10, "ref": 871011, "x": 50, "y": 9, "w": 1, "h": 1, "size": 6, "desc": "구간 1 팩 2 — 표준(6체), 92101"}, {"id": 6510407, "map": 65104, "t": 9, "ref": 871011, "x": 58, "y": 5, "w": 12, "h": 9, "size": 0, "desc": "구간 1 교전 공간 3"}, {"id": 6510408, "map": 65104, "t": 10, "ref": 871011, "x": 66, "y": 9, "w": 1, "h": 1, "size": 7, "desc": "구간 1 팩 3 — 큰(7체), 92101"}, {"id": 6510409, "map": 65104, "t": 9, "ref": 871011, "x": 74, "y": 5, "w": 12, "h": 9, "size": 0, "desc": "구간 1 교전 공간 4"}, {"id": 6510410, "map": 65104, "t": 10, "ref": 871011, "x": 82, "y": 9, "w": 1, "h": 1, "size": 6, "desc": "구간 1 팩 4 — 표준(6체), 92101"}, {"id": 6510411, "map": 65104, "t": 9, "ref": 871011, "x": 90, "y": 5, "w": 12, "h": 9, "size": 0, "desc": "구간 1 교전 공간 5"}, {"id": 6510412, "map": 65104, "t": 10, "ref": 871011, "x": 98, "y": 9, "w": 1, "h": 1, "size": 7, "desc": "구간 1 팩 5 — 큰(7체), 92101"}, {"id": 6510413, "map": 65104, "t": 16, "ref": 871012, "x": 100, "y": 15, "w": 3, "h": 1, "size": 0, "desc": "붉은 실 장막 — 구간 1 팩을 모두 정리하면 걷힌다"}, {"id": 6510414, "map": 65104, "t": 8, "ref": 0, "x": 98, "y": 15, "w": 5, "h": 13, "size": 0, "desc": "연결로 1(남쪽으로 꺾음). 폭 5칸, 팩 없음"}, {"id": 6510415, "map": 65104, "t": 8, "ref": 871012, "x": 0, "y": 28, "w": 104, "h": 11, "size": 0, "desc": "구간 2 — 안개골 저승판(망자의 다리). 동→서, 길이 104칸(입구 8 + 팩 6×16)"}, {"id": 6510416, "map": 65104, "t": 9, "ref": 871012, "x": 80, "y": 29, "w": 12, "h": 9, "size": 0, "desc": "구간 2 교전 공간 1"}, {"id": 6510417, "map": 65104, "t": 10, "ref": 871012, "x": 83, "y": 33, "w": 1, "h": 1, "size": 4, "desc": "구간 2 팩 1 — 작(4체), 92101"}, {"id": 6510418, "map": 65104, "t": 9, "ref": 871012, "x": 64, "y": 29, "w": 12, "h": 9, "size": 0, "desc": "구간 2 교전 공간 2"}, {"id": 6510419, "map": 65104, "t": 10, "ref": 871012, "x": 67, "y": 33, "w": 1, "h": 1, "size": 6, "desc": "구간 2 팩 2 — 표준(6체), 92101"}, {"id": 6510420, "map": 65104, "t": 9, "ref": 871012, "x": 48, "y": 29, "w": 12, "h": 9, "size": 0, "desc": "구간 2 교전 공간 3"}, {"id": 6510421, "map": 65104, "t": 10, "ref": 871012, "x": 51, "y": 33, "w": 1, "h": 1, "size": 7, "desc": "구간 2 팩 3 — 큰(7체), 92101"}, {"id": 6510422, "map": 65104, "t": 9, "ref": 871012, "x": 32, "y": 29, "w": 12, "h": 9, "size": 0, "desc": "구간 2 교전 공간 4"}, {"id": 6510423, "map": 65104, "t": 10, "ref": 871012, "x": 35, "y": 33, "w": 1, "h": 1, "size": 4, "desc": "구간 2 팩 4 — 작(4체), 92101"}, {"id": 6510424, "map": 65104, "t": 9, "ref": 871012, "x": 16, "y": 29, "w": 12, "h": 9, "size": 0, "desc": "구간 2 교전 공간 5"}, {"id": 6510425, "map": 65104, "t": 10, "ref": 871012, "x": 19, "y": 33, "w": 1, "h": 1, "size": 6, "desc": "구간 2 팩 5 — 표준(6체), 92101"}, {"id": 6510426, "map": 65104, "t": 9, "ref": 871012, "x": 0, "y": 29, "w": 12, "h": 9, "size": 0, "desc": "구간 2 교전 공간 6"}, {"id": 6510427, "map": 65104, "t": 10, "ref": 871012, "x": 3, "y": 33, "w": 1, "h": 1, "size": 7, "desc": "구간 2 팩 6 — 큰(7체), 92101"}, {"id": 6510428, "map": 65104, "t": 17, "ref": 0, "x": 44, "y": 28, "w": 4, "h": 4, "size": 0, "desc": "골짜기(저승판)"}, {"id": 6510429, "map": 65104, "t": 17, "ref": 0, "x": 44, "y": 35, "w": 4, "h": 4, "size": 0, "desc": "골짜기(저승판)"}, {"id": 6510430, "map": 65104, "t": 5, "ref": 62102, "x": 44, "y": 32, "w": 4, "h": 3, "size": 0, "desc": "망자의 다리 — 이승의 무너진 나무다리. 폭 3칸"}, {"id": 6510431, "map": 65104, "t": 16, "ref": 871013, "x": 1, "y": 39, "w": 3, "h": 1, "size": 0, "desc": "붉은 실 장막 — 구간 2 정리 후 걷힌다"}, {"id": 6510432, "map": 65104, "t": 8, "ref": 0, "x": 1, "y": 39, "w": 5, "h": 9, "size": 0, "desc": "연결로 2. 폭 5칸"}, {"id": 6510433, "map": 65104, "t": 4, "ref": 51103, "x": 3, "y": 41, "w": 1, "h": 1, "size": 0, "desc": "붉은 실의 끝(저승 발견) — 실이 땅에 묶인 혼에 닿는다. 팩 정리 뒤 지나는 통로"}, {"id": 6510434, "map": 65104, "t": 8, "ref": 871013, "x": 1, "y": 47, "w": 20, "h": 8, "size": 0, "desc": "산신당 앞마당(저승판)"}, {"id": 6510435, "map": 65104, "t": 12, "ref": 871013, "x": 15, "y": 50, "w": 1, "h": 1, "size": 0, "desc": "구간 불씨 — 이승 산신당 신단 자리. 주변 5×5 적 없음"}, {"id": 6510436, "map": 65104, "t": 16, "ref": 871014, "x": 21, "y": 50, "w": 1, "h": 3, "size": 0, "desc": "보스방 입구 — 교전 시작 시 닫힌다"}, {"id": 6510437, "map": 65104, "t": 13, "ref": 871014, "x": 22, "y": 44, "w": 19, "h": 13, "size": 0, "desc": "목귀 아레나 19×13 — 카메라 고정. 장애물 없음"}, {"id": 6510438, "map": 65104, "t": 14, "ref": 3000101, "x": 31, "y": 49, "w": 2, "h": 2, "size": 0, "desc": "뒤틀린 목귀(2×2). 가로 중앙, 세로 중앙보다 1칸 위 — 이승 산신 고목 자리"}, {"id": 6510439, "map": 65104, "t": 15, "ref": 871014, "x": 23, "y": 55, "w": 1, "h": 1, "size": 0, "desc": "보스방 불씨(2회). 목귀에서 8칸"}]};
+const T={};D.types.forEach(t=>T[t.id]=t);
+const hidden=new Set();
+let cur=D.maps[0].id, mouse=null, focus=null;
+const cv=document.getElementById('cv'),cx=cv.getContext('2d'),tip=document.getElementById('tip');
+function cellSize(m){const avail=Math.min(1040,window.innerWidth-40-(window.innerWidth>1200?320:0));return Math.max(4,Math.min(16,Math.floor(Math.min(avail/m.w,640/m.h))))}
+function shortName(o){
+  const t=T[o.t].name;
+  if(t==='Pack')return o.size+'체';
+  if(t==='NPC'||t==='Clue'||t==='Passage'||t==='Altar')return String(o.ref||'');
+  if(t==='BossStart')return '보스';if(t==='Elite')return '정예';
+  if(t==='Bonfire'||t==='ArenaBonfire')return '불씨';
+  if(t==='PlayerStart')return '시작';
+  return '';
+}
+const ORDER=[17,8,13,9,7,18,6,5,16,2,3,4,12,15,10,11,14,1];
+function draw(){
+  const m=D.maps.find(x=>x.id===cur), s=cellSize(m);
+  cv.width=m.w*s; cv.height=m.h*s;
+  cx.fillStyle=m.kind===2?'#120d16':'#18201a';cx.fillRect(0,0,cv.width,cv.height);
+  const objs=D.objs.filter(o=>o.map===cur&&!hidden.has(o.t)).sort((a,b)=>ORDER.indexOf(a.t)-ORDER.indexOf(b.t));
+  for(const o of objs){
+    const t=T[o.t];cx.globalAlpha=[8,9,13,17,18,7].includes(o.t)?(o.t===9?.55:o.t===7?.35:.9):1;
+    cx.fillStyle=(o===focus)?'#ffffff':t.color;
+    cx.fillRect(o.x*s,o.y*s,o.w*s,o.h*s);
+    cx.globalAlpha=1;
+    if([10,14,2,4,3,12,15,1].includes(o.t)){cx.strokeStyle='#000';cx.lineWidth=1;cx.strokeRect(o.x*s+.5,o.y*s+.5,o.w*s-1,o.h*s-1)}
+  }
+  if(document.getElementById('oDetect').checked&&!hidden.has(10)){
+    cx.strokeStyle='rgba(255,90,90,.55)';cx.setLineDash([4,3]);
+    for(const o of objs.filter(o=>o.t===10)){const r=10;cx.strokeRect((o.x-r)*s,(o.y-r)*s,(2*r+1)*s,(2*r+1)*s)}
+    cx.setLineDash([]);
+  }
+  if(document.getElementById('oGrid').checked&&s>=8){
+    cx.strokeStyle='rgba(255,255,255,.05)';cx.beginPath();
+    for(let x=0;x<=m.w;x++){cx.moveTo(x*s+.5,0);cx.lineTo(x*s+.5,m.h*s)}
+    for(let y=0;y<=m.h;y++){cx.moveTo(0,y*s+.5);cx.lineTo(m.w*s,y*s+.5)}
+    cx.stroke();
+  }
+  if(document.getElementById('oLabel').checked){
+    cx.font='bold '+Math.max(9,s-3)+'px Malgun Gothic';cx.textBaseline='bottom';
+    for(const o of objs){const n=shortName(o);if(!n)continue;
+      cx.fillStyle='#000';cx.fillText(n,o.x*s+1,o.y*s);cx.fillStyle='#f4ecda';cx.fillText(n,o.x*s,o.y*s-1)}
+  }
+  if(mouse&&document.getElementById('oScreen').checked){
+    cx.strokeStyle='rgba(120,200,255,.8)';cx.lineWidth=2;
+    cx.strokeRect((mouse.x-14.5)*s,(mouse.y-7.94)*s,30*s,16.875*s);cx.lineWidth=1;
+    cx.fillStyle='rgba(120,200,255,.9)';cx.fillRect(mouse.x*s,mouse.y*s,s,s);
+  }
+  document.getElementById('mname').textContent=m.name+' ('+m.id+')';
+  document.getElementById('mdesc').textContent=m.desc;
+  document.getElementById('msize').textContent=m.w+'×'+m.h+'칸 · 진행 '+m.dir+' · 카메라 '+(m.cam===1?'플레이어 중심':'구간 플레이어 중심 / 보스방 고정');
+}
+function buildSide(){
+  const lg=document.getElementById('legend');lg.innerHTML='';
+  const used=new Set(D.objs.filter(o=>o.map===cur).map(o=>o.t));
+  D.types.filter(t=>used.has(t.id)).forEach(t=>{
+    const l=document.createElement('label');l.title=t.desc;
+    l.innerHTML='<input type="checkbox" '+(hidden.has(t.id)?'':'checked')+'><span class="sw" style="background:'+t.color+'"></span>'+t.name;
+    l.querySelector('input').onchange=e=>{e.target.checked?hidden.delete(t.id):hidden.add(t.id);draw()};
+    lg.appendChild(l)});
+  const li=document.getElementById('list');li.innerHTML='';
+  D.objs.filter(o=>o.map===cur&&![8,9].includes(o.t)).forEach(o=>{
+    const d=document.createElement('div');d.textContent=o.id+' · '+T[o.t].name+(o.ref?' '+o.ref:'')+' · ('+o.x+','+o.y+')';
+    d.title=o.desc;d.onmouseenter=()=>{focus=o;draw()};d.onmouseleave=()=>{focus=null;draw()};li.appendChild(d)});
+}
+function tabs(){
+  const tb=document.getElementById('tabs');tb.innerHTML='';
+  D.maps.forEach(m=>{const b=document.createElement('button');b.textContent=m.name;b.className=m.id===cur?'on':'';
+    b.onclick=()=>{cur=m.id;focus=null;tabs();buildSide();draw()};tb.appendChild(b)});
+}
+cv.addEventListener('mousemove',e=>{
+  const m=D.maps.find(x=>x.id===cur),s=cellSize(m),r=cv.getBoundingClientRect();
+  const x=Math.floor((e.clientX-r.left)/s),y=Math.floor((e.clientY-r.top)/s);mouse={x,y};
+  const hits=D.objs.filter(o=>o.map===cur&&!hidden.has(o.t)&&x>=o.x&&x<o.x+o.w&&y>=o.y&&y<o.y+o.h).sort((a,b)=>ORDER.indexOf(b.t)-ORDER.indexOf(a.t));
+  if(hits.length){const o=hits[0];tip.style.display='block';
+    tip.innerHTML='<b>'+T[o.t].name+(o.ref?' · '+o.ref:'')+'</b> <span class="coord">#'+o.id+' ('+o.x+','+o.y+') '+o.w+'×'+o.h+(o.size?' · '+o.size+'체':'')+'</span><br>'+o.desc;
+    tip.style.left=Math.min(e.clientX-r.left+14,cv.width-320)+'px';tip.style.top=(e.clientY-r.top+14)+'px';}
+  else tip.style.display='none';
+  draw();
+});
+cv.addEventListener('mouseleave',()=>{mouse=null;tip.style.display='none';draw()});
+['oDetect','oScreen','oGrid','oLabel'].forEach(id=>document.getElementById(id).onchange=draw);
+window.addEventListener('resize',draw);
+tabs();buildSide();draw();
+</script>
+</body>
+</html>
