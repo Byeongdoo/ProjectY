@@ -1,0 +1,4 @@
+{
+  // 시트별 추가 규칙. key를 생략하면 첫 데이터 컬럼이 키.
+  "characterLevel": { "key": ["group", "level"] }
+}

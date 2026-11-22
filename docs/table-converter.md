@@ -90,9 +90,20 @@
 - 수정: 서버 `Program.cs` 시작 시 `TableManager.Load()` 호출, `config.json`의 `dataPath` 재사용.
 - 레거시 교체: `DataManager.StatDict` → `characterLevel`, `SkillDict` → `spiritSkills` 기반으로 `Monster.cs`, `GameRoom.cs`, `ClientSession.cs`의 사용처를 옮긴 뒤 `StatData.json`/`SkillData.json`과 무기 계열 시트를 삭제한다. (사용처는 현재 3곳)
 
+## 구현 상태
+
+- **1단계 완료 (2026-11-22)**: `Tools/TableConverter/` (ClosedXML 0.105.1, MIT). `spirits`·`spiritSkills`·`characterLevel` 3개 시트를 JSON으로 변환. 같은 입력 두 번 실행 시 출력 바이트 동일 확인, 행 수(5/20/65) 일치.
+- 실행: `dotnet run --project Tools/TableConverter` (저장소 어디서든, `CLAUDE.md`를 찾아 루트를 잡는다). 옵션: `--sheet <이름>`(반복 가능, 기본 3개), `--xlsx <경로>`, `--out <폴더>`.
+- 내용이 같으면 파일을 다시 쓰지 않는다(mtime 유지). 오류가 하나라도 있으면 아무 파일도 쓰지 않는다.
+- 구현된 규칙: `#` 컬럼·`//` 행·빈 행 제외, `<List>` 배열, `|float` 힌트, 정수/문자열 자동 판정(소수가 힌트 없이 섞이면 오류), 중복 키 오류, 빈 셀 기본값.
+- **2단계 구현 완료, 클라 Unity 컴파일은 미확인**: 변환기가 C# 데이터 클래스·테이블·`TableManager`를 생성한다 (`Server/Server/Data/Generated/Tables.g.cs`, `Client/Assets/Scripts/Data/Generated/Tables.g.cs`, 내용 동일). 시트당 `<Sheet>Row`(필드 = JSON 키), `<Sheet>File`(`rows`), `<Sheet>Table`(키 조회). 키는 기본 첫 컬럼, 예외는 `Tools/TableConverter/tables.json`의 `key`(예: `characterLevel` = `(group, level)`). 키 중복은 변환 단계에서도 오류로 잡는다. `--sheet`로 일부만 변환할 때는 C# 생성을 건너뛴다.
+  - 서버: `FileTableReader`(Newtonsoft) + `Program.Main`에서 `TableManager.LoadAll` 호출, 실패 시 메시지 출력 후 종료. 빌드 성공, 기동 확인, 별도 테스트로 조회 값(`spirits` 5 / `spiritSkills` 20 / `characterLevel` 65, 복합 키, 없는 경로 오류 메시지) 확인.
+  - 클라: `ResourcesTableReader`(Resources + `JsonUtility`) + `DataManager.Init`에서 `TableManager.LoadAll` 호출. C# 9 + Unity 스텁으로 별도 컴파일은 통과했지만, **실제 Unity에서의 컴파일·`.meta` 생성·`JsonUtility` 역직렬화는 아직 확인하지 못했다**(Pipeline 패키지가 없어 CLI로 Editor를 구동할 수 없음). Unity를 열어 컴파일 오류가 없는지, Play 시 로딩 로그가 정상인지 확인해야 한다.
+- 미구현: 아래 3~5단계.
+
 ## 구현 순서
 
-1. 시트 읽기 + 타입 판정 + JSON 출력 (`spirits`, `spiritSkills`, `characterLevel` 3개로 시작). 출력 결정성 확인.
+1. ✅ 시트 읽기 + 타입 판정 + JSON 출력 (`spirits`, `spiritSkills`, `characterLevel` 3개로 시작). 출력 결정성 확인.
 2. C# 클래스 생성 + `TableManager`(서버 먼저, 클라는 Unity 컴파일 확인).
 3. `tables.json` 기반 검증(키·참조·stringID). 전 시트로 확대.
 4. `strings`.
