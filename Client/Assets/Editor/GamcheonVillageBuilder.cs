@@ -20,7 +20,8 @@ public static class GamcheonVillageBuilder
     const string ScenePath = "Assets/Scenes/Single/Village_Gamcheon.unity";
     const string TerrainRoot = "Assets/Resources/Art/Tiles/Iseung/Gamcheon";
     const string PlaceholderRoot = "Assets/Placeholders/Gamcheon";
-    const string HeroSprite = "Assets/Resources/Art/Characters/Protagonist/Sprites/Rotations/south.png";
+    const string ProtagonistRoot = "Assets/Resources/Art/Characters/Protagonist";
+    const string HeroSprite = ProtagonistRoot + "/Sprites/Rotations/south.png";
 
     // 지역 크기(칸). 최대 변 길이는 configs 90018로 검증한다.
     const int W = 64, H = 44;
@@ -305,19 +306,55 @@ public static class GamcheonVillageBuilder
         gate.transform.position = new Vector3(ForestGate.center.x, ForestGate.center.y, 0);
         var gateBox = gate.AddComponent<BoxCollider2D>(); gateBox.isTrigger = true; gateBox.size = new Vector2(ForestGate.width, ForestGate.height);
 
-        // 기준 해상도(90002×90003)를 32px 타일로 정수배 표시하는 카메라. 플레이어 추적은 이동 구현 때 붙인다.
+        // 칸 판정: Ground 범위 + Collision(이승판) 마스크.
+        var map = root.AddComponent<IseungMap>();
+        SetRefs(map, ("_grid", grid.GetComponent<Grid>()), ("_ground", layers["Ground"]), ("_collision", layers["Collision"]));
+
+        // 조작 가능한 주인공. 나무·바위와 같은 Y 정렬 순서를 쓴다.
+        var hero = new GameObject("Player", typeof(SpriteRenderer), typeof(Animator));
+        hero.transform.SetParent(root.transform); hero.transform.position = new Vector3(Spawn.x + .5f, Spawn.y + .5f, 0);
+        var hsr = hero.GetComponent<SpriteRenderer>(); hsr.sprite = AssetDatabase.LoadAssetAtPath<Sprite>(HeroSprite);
+        hsr.sortingOrder = propOrder; hsr.spriteSortPoint = SpriteSortPoint.Pivot;
+        hero.GetComponent<Animator>().runtimeAnimatorController = ProtagonistController();
+        var player = hero.AddComponent<IseungPlayerController>();
+        SetRefs(player, ("_map", map));
+        var so = new SerializedObject(player); so.FindProperty("_cellPos").vector3IntValue = (Vector3Int)Spawn; so.ApplyModifiedPropertiesWithoutUndo();
+
+        // 기준 해상도(90002×90003)를 32px 타일로 정수배 표시하는 카메라. 주인공을 따라간다.
         var cam = new GameObject("Main Camera", typeof(Camera), typeof(AudioListener)).GetComponent<Camera>();
+        SetRefs(cam.gameObject.AddComponent<IseungCameraFollow>(), ("_target", hero.transform), ("_map", map));
         cam.tag = "MainCamera"; cam.orthographic = true; cam.orthographicSize = cfg.RefH / 2f / cfg.TilePx;
         cam.transform.position = new Vector3(Spawn.x + .5f, Spawn.y + .5f + cam.orthographicSize - 3, -10);
         cam.clearFlags = CameraClearFlags.SolidColor; cam.backgroundColor = new Color(0.07f, 0.10f, 0.08f);
         cam.transparencySortMode = TransparencySortMode.CustomAxis; cam.transparencySortAxis = Vector3.up;
         cam.allowMSAA = false;
+    }
 
-        // 크기 확인용 주인공(플레이어 프리팹이 생기면 지운다).
-        var hero = new GameObject("Preview_Protagonist", typeof(SpriteRenderer)); hero.tag = "EditorOnly";
-        hero.transform.SetParent(root.transform); hero.transform.position = new Vector3(Spawn.x + .5f, Spawn.y, 0);
-        var hsr = hero.GetComponent<SpriteRenderer>(); hsr.sprite = AssetDatabase.LoadAssetAtPath<Sprite>(HeroSprite);
-        hsr.sortingOrder = propOrder; hsr.spriteSortPoint = SpriteSortPoint.Pivot;
+    static void SetRefs(UnityEngine.Object target, params (string field, UnityEngine.Object value)[] refs)
+    {
+        var so = new SerializedObject(target);
+        foreach (var (field, value) in refs) so.FindProperty(field).objectReferenceValue = value;
+        so.ApplyModifiedPropertiesWithoutUndo();
+    }
+
+    // 주인공 IDLE/RUN 8방향 클립을 상태 이름 = 클립 이름으로 담는다. 전환은 IseungPlayerController가 Play로 한다.
+    static UnityEditor.Animations.AnimatorController ProtagonistController()
+    {
+        string path = ProtagonistRoot + "/Protagonist.controller";
+        AssetDatabase.DeleteAsset(path);
+        var ctrl = UnityEditor.Animations.AnimatorController.CreateAnimatorControllerAtPath(path);
+        var sm = ctrl.layers[0].stateMachine;
+        foreach (string anim in new[] { "IDLE", "RUN" })
+            foreach (string dir in Enum.GetNames(typeof(IseungDir)))
+            {
+                string name = anim + "_" + dir;
+                var clip = AssetDatabase.LoadAssetAtPath<AnimationClip>($"{ProtagonistRoot}/Animations/{name}.anim");
+                if (!clip) throw new Exception("주인공 애니메이션 누락: " + name);
+                var state = sm.AddState(name); state.motion = clip;
+                if (name == "IDLE_SOUTH") sm.defaultState = state;
+            }
+        AssetDatabase.SaveAssets();
+        return ctrl;
     }
 
     // 가장자리 숲: 2칸 간격 격자, 행마다 1칸 엇갈려 빽빽하게.

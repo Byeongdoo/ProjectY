@@ -21,7 +21,14 @@
 
 - 레이어: `tileLayers` 8종을 Tilemap으로 만들고 sortOrder를 그대로 쓴다. Collision은 렌더러를 끈 마스크(이승판만). 나무·바위는 발밑 Y 정렬 오브젝트(Props 순서).
 - 빌더가 검사하는 것: 최대 변(90018), 주 동선 폭(90007), 조사 대상 간격(90019)·앞 칸, 신단 주변, 관문 앞 3×3, NPC·단서·신단·출구가 스폰에서 걸어서 닿는지(대각선 규칙 미확정이라 4방향으로 판정), 테이블의 감천 NPC·Observe 단서 목록과 배치 일치.
-- `Markers`의 시각 표시와 `Preview_Protagonist`는 `EditorOnly`라 빌드에서 빠진다. NPC 생성·상호작용·출구 이동은 이승 시스템 구현 때 마커 이름으로 연결한다.
+- `Markers`의 시각 표시는 `EditorOnly`라 빌드에서 빠진다. NPC 생성·상호작용·출구 이동은 이승 시스템 구현 때 마커 이름으로 연결한다.
+
+## 조작 (이승 단독, 서버 없음)
+
+- `Player`(스폰 칸) + [IseungPlayerController](../../Client/Assets/Scripts/Iseung/IseungPlayerController.cs): 방향키 8방향 칸 이동, 두 키 = 대각선 1칸, Shift+방향키 = 제자리 방향 전환. 속도는 `characterLevel`(1000001, 레벨 1)의 `moveSpeed`(4칸/초). 레벨은 로컬 세이브가 생기면 거기서 읽는다.
+- 칸 판정은 씬 루트의 [IseungMap](../../Client/Assets/Scripts/Iseung/IseungMap.cs)(Ground 범위 + Collision 마스크). 대각선은 서버 `Map.CanMove`와 같이 직선 두 칸이 모두 막혔을 때만 막는다.
+- 카메라는 [IseungCameraFollow](../../Client/Assets/Scripts/Iseung/IseungCameraFollow.cs): 주인공 추적, 맵 밖 비추지 않음, 1픽셀 격자 스냅.
+- 애니메이터: `Resources/Art/Characters/Protagonist/Protagonist.controller`(빌더가 IDLE/RUN 8방향 클립으로 생성).
 
 ## 결정이 필요한 것
 
