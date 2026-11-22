@@ -1,0 +1,180 @@
+{
+  "rows": [
+    {
+      "clueID": 51101,
+      "case": 50101,
+      "chapter": 1,
+      "region": 61101,
+      "world": 1,
+      "acquireType": 1,
+      "puzzleType": 0,
+      "enableBy": 0,
+      "name": "Clue_51101"
+    },
+    {
+      "clueID": 51102,
+      "case": 50101,
+      "chapter": 1,
+      "region": 61101,
+      "world": 1,
+      "acquireType": 2,
+      "puzzleType": 0,
+      "enableBy": 0,
+      "name": "Clue_51102"
+    },
+    {
+      "clueID": 51103,
+      "case": 50101,
+      "chapter": 1,
+      "region": 61102,
+      "world": 2,
+      "acquireType": 4,
+      "puzzleType": 0,
+      "enableBy": 0,
+      "name": "Clue_51103"
+    },
+    {
+      "clueID": 51104,
+      "case": 50101,
+      "chapter": 1,
+      "region": 61102,
+      "world": 1,
+      "acquireType": 2,
+      "puzzleType": 0,
+      "enableBy": 63102,
+      "name": "Clue_51104"
+    },
+    {
+      "clueID": 51201,
+      "case": 50201,
+      "chapter": 2,
+      "region": 61201,
+      "world": 1,
+      "acquireType": 2,
+      "puzzleType": 0,
+      "enableBy": 0,
+      "name": "Clue_51201"
+    },
+    {
+      "clueID": 51202,
+      "case": 50201,
+      "chapter": 2,
+      "region": 61201,
+      "world": 1,
+      "acquireType": 1,
+      "puzzleType": 0,
+      "enableBy": 0,
+      "name": "Clue_51202"
+    },
+    {
+      "clueID": 51203,
+      "case": 50201,
+      "chapter": 2,
+      "region": 61202,
+      "world": 2,
+      "acquireType": 4,
+      "puzzleType": 0,
+      "enableBy": 0,
+      "name": "Clue_51203"
+    },
+    {
+      "clueID": 51204,
+      "case": 50201,
+      "chapter": 2,
+      "region": 61203,
+      "world": 2,
+      "acquireType": 3,
+      "puzzleType": 3,
+      "enableBy": 0,
+      "name": "Clue_51204"
+    },
+    {
+      "clueID": 51301,
+      "case": 50301,
+      "chapter": 3,
+      "region": 61301,
+      "world": 1,
+      "acquireType": 1,
+      "puzzleType": 0,
+      "enableBy": 0,
+      "name": "Clue_51301"
+    },
+    {
+      "clueID": 51302,
+      "case": 50301,
+      "chapter": 3,
+      "region": 61301,
+      "world": 1,
+      "acquireType": 2,
+      "puzzleType": 0,
+      "enableBy": 0,
+      "name": "Clue_51302"
+    },
+    {
+      "clueID": 51303,
+      "case": 50301,
+      "chapter": 3,
+      "region": 61301,
+      "world": 2,
+      "acquireType": 3,
+      "puzzleType": 3,
+      "enableBy": 0,
+      "name": "Clue_51303"
+    },
+    {
+      "clueID": 51401,
+      "case": 50401,
+      "chapter": 4,
+      "region": 61401,
+      "world": 1,
+      "acquireType": 1,
+      "puzzleType": 0,
+      "enableBy": 0,
+      "name": "Clue_51401"
+    },
+    {
+      "clueID": 51402,
+      "case": 50401,
+      "chapter": 4,
+      "region": 61402,
+      "world": 2,
+      "acquireType": 4,
+      "puzzleType": 0,
+      "enableBy": 0,
+      "name": "Clue_51402"
+    },
+    {
+      "clueID": 51403,
+      "case": 50401,
+      "chapter": 4,
+      "region": 61403,
+      "world": 2,
+      "acquireType": 3,
+      "puzzleType": 2,
+      "enableBy": 0,
+      "name": "Clue_51403"
+    },
+    {
+      "clueID": 51501,
+      "case": 50501,
+      "chapter": 5,
+      "region": 61501,
+      "world": 1,
+      "acquireType": 2,
+      "puzzleType": 0,
+      "enableBy": 0,
+      "name": "Clue_51501"
+    },
+    {
+      "clueID": 51502,
+      "case": 50501,
+      "chapter": 5,
+      "region": 61502,
+      "world": 2,
+      "acquireType": 3,
+      "puzzleType": 3,
+      "enableBy": 0,
+      "name": "Clue_51502"
+    }
+  ]
+}

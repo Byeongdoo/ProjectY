@@ -1,0 +1,268 @@
+{
+  "rows": [
+    {
+      "sectionID": 871011,
+      "dungeonID": 87101,
+      "order": 1,
+      "sectionType": 1,
+      "region": 61102,
+      "spawnGroup": 92101,
+      "packCount": 5,
+      "eliteID": 0,
+      "stepID": 64103
+    },
+    {
+      "sectionID": 871012,
+      "dungeonID": 87101,
+      "order": 2,
+      "sectionType": 1,
+      "region": 61102,
+      "spawnGroup": 92101,
+      "packCount": 6,
+      "eliteID": 0,
+      "stepID": 64104
+    },
+    {
+      "sectionID": 871013,
+      "dungeonID": 87101,
+      "order": 3,
+      "sectionType": 2,
+      "region": 61103,
+      "spawnGroup": 0,
+      "packCount": 0,
+      "eliteID": 0,
+      "stepID": 0
+    },
+    {
+      "sectionID": 871014,
+      "dungeonID": 87101,
+      "order": 4,
+      "sectionType": 3,
+      "region": 61103,
+      "spawnGroup": 0,
+      "packCount": 0,
+      "eliteID": 0,
+      "stepID": 64105
+    },
+    {
+      "sectionID": 872011,
+      "dungeonID": 87201,
+      "order": 1,
+      "sectionType": 1,
+      "region": 61202,
+      "spawnGroup": 92201,
+      "packCount": 6,
+      "eliteID": 0,
+      "stepID": 64203
+    },
+    {
+      "sectionID": 872012,
+      "dungeonID": 87201,
+      "order": 2,
+      "sectionType": 1,
+      "region": 61203,
+      "spawnGroup": 92201,
+      "packCount": 6,
+      "eliteID": 2000204,
+      "stepID": 64204
+    },
+    {
+      "sectionID": 872013,
+      "dungeonID": 87201,
+      "order": 3,
+      "sectionType": 2,
+      "region": 61203,
+      "spawnGroup": 0,
+      "packCount": 0,
+      "eliteID": 0,
+      "stepID": 0
+    },
+    {
+      "sectionID": 872014,
+      "dungeonID": 87201,
+      "order": 4,
+      "sectionType": 3,
+      "region": 61203,
+      "spawnGroup": 0,
+      "packCount": 0,
+      "eliteID": 0,
+      "stepID": 64205
+    },
+    {
+      "sectionID": 873011,
+      "dungeonID": 87301,
+      "order": 1,
+      "sectionType": 1,
+      "region": 61302,
+      "spawnGroup": 92301,
+      "packCount": 6,
+      "eliteID": 0,
+      "stepID": 64304
+    },
+    {
+      "sectionID": 873012,
+      "dungeonID": 87301,
+      "order": 2,
+      "sectionType": 1,
+      "region": 61302,
+      "spawnGroup": 92301,
+      "packCount": 6,
+      "eliteID": 2000304,
+      "stepID": 64304
+    },
+    {
+      "sectionID": 873013,
+      "dungeonID": 87301,
+      "order": 3,
+      "sectionType": 2,
+      "region": 61302,
+      "spawnGroup": 0,
+      "packCount": 0,
+      "eliteID": 0,
+      "stepID": 0
+    },
+    {
+      "sectionID": 873014,
+      "dungeonID": 87301,
+      "order": 4,
+      "sectionType": 3,
+      "region": 61302,
+      "spawnGroup": 0,
+      "packCount": 0,
+      "eliteID": 0,
+      "stepID": 64305
+    },
+    {
+      "sectionID": 874011,
+      "dungeonID": 87401,
+      "order": 1,
+      "sectionType": 1,
+      "region": 61402,
+      "spawnGroup": 92401,
+      "packCount": 6,
+      "eliteID": 2000404,
+      "stepID": 64403
+    },
+    {
+      "sectionID": 874012,
+      "dungeonID": 87401,
+      "order": 2,
+      "sectionType": 2,
+      "region": 61402,
+      "spawnGroup": 0,
+      "packCount": 0,
+      "eliteID": 0,
+      "stepID": 0
+    },
+    {
+      "sectionID": 874013,
+      "dungeonID": 87401,
+      "order": 3,
+      "sectionType": 3,
+      "region": 61402,
+      "spawnGroup": 0,
+      "packCount": 0,
+      "eliteID": 0,
+      "stepID": 64404
+    },
+    {
+      "sectionID": 874021,
+      "dungeonID": 87402,
+      "order": 1,
+      "sectionType": 1,
+      "region": 61403,
+      "spawnGroup": 92401,
+      "packCount": 6,
+      "eliteID": 0,
+      "stepID": 64405
+    },
+    {
+      "sectionID": 874022,
+      "dungeonID": 87402,
+      "order": 2,
+      "sectionType": 1,
+      "region": 61403,
+      "spawnGroup": 92401,
+      "packCount": 6,
+      "eliteID": 2000404,
+      "stepID": 64405
+    },
+    {
+      "sectionID": 874023,
+      "dungeonID": 87402,
+      "order": 3,
+      "sectionType": 2,
+      "region": 61403,
+      "spawnGroup": 0,
+      "packCount": 0,
+      "eliteID": 0,
+      "stepID": 0
+    },
+    {
+      "sectionID": 874024,
+      "dungeonID": 87402,
+      "order": 4,
+      "sectionType": 3,
+      "region": 61403,
+      "spawnGroup": 0,
+      "packCount": 0,
+      "eliteID": 0,
+      "stepID": 64405
+    },
+    {
+      "sectionID": 875011,
+      "dungeonID": 87501,
+      "order": 1,
+      "sectionType": 1,
+      "region": 61501,
+      "spawnGroup": 92501,
+      "packCount": 6,
+      "eliteID": 0,
+      "stepID": 64502
+    },
+    {
+      "sectionID": 875012,
+      "dungeonID": 87501,
+      "order": 2,
+      "sectionType": 1,
+      "region": 61501,
+      "spawnGroup": 92502,
+      "packCount": 3,
+      "eliteID": 0,
+      "stepID": 64502
+    },
+    {
+      "sectionID": 875013,
+      "dungeonID": 87501,
+      "order": 3,
+      "sectionType": 1,
+      "region": 61502,
+      "spawnGroup": 92501,
+      "packCount": 4,
+      "eliteID": 2000504,
+      "stepID": 64503
+    },
+    {
+      "sectionID": 875014,
+      "dungeonID": 87501,
+      "order": 4,
+      "sectionType": 2,
+      "region": 61502,
+      "spawnGroup": 0,
+      "packCount": 0,
+      "eliteID": 0,
+      "stepID": 0
+    },
+    {
+      "sectionID": 875015,
+      "dungeonID": 87501,
+      "order": 5,
+      "sectionType": 3,
+      "region": 61502,
+      "spawnGroup": 0,
+      "packCount": 0,
+      "eliteID": 0,
+      "stepID": 64504
+    }
+  ]
+}

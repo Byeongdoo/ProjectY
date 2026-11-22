@@ -1,0 +1,264 @@
+{
+  "rows": [
+    {
+      "itemID": 9500,
+      "slot": 0,
+      "grade": 0,
+      "name": "Item_9500",
+      "mainStat": 0,
+      "mainValue": 0,
+      "subStat": 0,
+      "subValue": 0
+    },
+    {
+      "itemID": 9511,
+      "slot": 1,
+      "grade": 1,
+      "name": "Item_9511",
+      "mainStat": 4,
+      "mainValue": 0.018,
+      "subStat": 1,
+      "subValue": 26.5
+    },
+    {
+      "itemID": 9512,
+      "slot": 1,
+      "grade": 2,
+      "name": "Item_9512",
+      "mainStat": 4,
+      "mainValue": 0.0288,
+      "subStat": 1,
+      "subValue": 42.4
+    },
+    {
+      "itemID": 9513,
+      "slot": 1,
+      "grade": 3,
+      "name": "Item_9513",
+      "mainStat": 4,
+      "mainValue": 0.0468,
+      "subStat": 1,
+      "subValue": 68.9
+    },
+    {
+      "itemID": 9514,
+      "slot": 1,
+      "grade": 4,
+      "name": "Item_9514",
+      "mainStat": 4,
+      "mainValue": 0.0756,
+      "subStat": 1,
+      "subValue": 111.3
+    },
+    {
+      "itemID": 9515,
+      "slot": 1,
+      "grade": 5,
+      "name": "Item_9515",
+      "mainStat": 4,
+      "mainValue": 0.1224,
+      "subStat": 1,
+      "subValue": 180.2
+    },
+    {
+      "itemID": 9521,
+      "slot": 2,
+      "grade": 1,
+      "name": "Item_9521",
+      "mainStat": 2,
+      "mainValue": 0.0122,
+      "subStat": 3,
+      "subValue": 132
+    },
+    {
+      "itemID": 9522,
+      "slot": 2,
+      "grade": 2,
+      "name": "Item_9522",
+      "mainStat": 2,
+      "mainValue": 0.0195,
+      "subStat": 3,
+      "subValue": 211.2
+    },
+    {
+      "itemID": 9523,
+      "slot": 2,
+      "grade": 3,
+      "name": "Item_9523",
+      "mainStat": 2,
+      "mainValue": 0.0317,
+      "subStat": 3,
+      "subValue": 343.2
+    },
+    {
+      "itemID": 9524,
+      "slot": 2,
+      "grade": 4,
+      "name": "Item_9524",
+      "mainStat": 2,
+      "mainValue": 0.0512,
+      "subStat": 3,
+      "subValue": 554.4
+    },
+    {
+      "itemID": 9525,
+      "slot": 2,
+      "grade": 5,
+      "name": "Item_9525",
+      "mainStat": 2,
+      "mainValue": 0.083,
+      "subStat": 3,
+      "subValue": 897.6
+    },
+    {
+      "itemID": 9531,
+      "slot": 3,
+      "grade": 1,
+      "name": "Item_9531",
+      "mainStat": 3,
+      "mainValue": 114.4,
+      "subStat": 2,
+      "subValue": 0.0118
+    },
+    {
+      "itemID": 9532,
+      "slot": 3,
+      "grade": 2,
+      "name": "Item_9532",
+      "mainStat": 3,
+      "mainValue": 183.04,
+      "subStat": 2,
+      "subValue": 0.0189
+    },
+    {
+      "itemID": 9533,
+      "slot": 3,
+      "grade": 3,
+      "name": "Item_9533",
+      "mainStat": 3,
+      "mainValue": 297.44,
+      "subStat": 2,
+      "subValue": 0.0307
+    },
+    {
+      "itemID": 9534,
+      "slot": 3,
+      "grade": 4,
+      "name": "Item_9534",
+      "mainStat": 3,
+      "mainValue": 480.48,
+      "subStat": 2,
+      "subValue": 0.0496
+    },
+    {
+      "itemID": 9535,
+      "slot": 3,
+      "grade": 5,
+      "name": "Item_9535",
+      "mainStat": 3,
+      "mainValue": 777.92,
+      "subStat": 2,
+      "subValue": 0.0802
+    },
+    {
+      "itemID": 9541,
+      "slot": 4,
+      "grade": 1,
+      "name": "Item_9541",
+      "mainStat": 2,
+      "mainValue": 0.0098,
+      "subStat": 3,
+      "subValue": 88
+    },
+    {
+      "itemID": 9542,
+      "slot": 4,
+      "grade": 2,
+      "name": "Item_9542",
+      "mainStat": 2,
+      "mainValue": 0.0157,
+      "subStat": 3,
+      "subValue": 140.8
+    },
+    {
+      "itemID": 9543,
+      "slot": 4,
+      "grade": 3,
+      "name": "Item_9543",
+      "mainStat": 2,
+      "mainValue": 0.0255,
+      "subStat": 3,
+      "subValue": 228.8
+    },
+    {
+      "itemID": 9544,
+      "slot": 4,
+      "grade": 4,
+      "name": "Item_9544",
+      "mainStat": 2,
+      "mainValue": 0.0412,
+      "subStat": 3,
+      "subValue": 369.6
+    },
+    {
+      "itemID": 9545,
+      "slot": 4,
+      "grade": 5,
+      "name": "Item_9545",
+      "mainStat": 2,
+      "mainValue": 0.0666,
+      "subStat": 3,
+      "subValue": 598.4
+    },
+    {
+      "itemID": 9551,
+      "slot": 5,
+      "grade": 1,
+      "name": "Item_9551",
+      "mainStat": 1,
+      "mainValue": 32.7,
+      "subStat": 5,
+      "subValue": 0.118
+    },
+    {
+      "itemID": 9552,
+      "slot": 5,
+      "grade": 2,
+      "name": "Item_9552",
+      "mainStat": 1,
+      "mainValue": 52.32,
+      "subStat": 5,
+      "subValue": 0.1888
+    },
+    {
+      "itemID": 9553,
+      "slot": 5,
+      "grade": 3,
+      "name": "Item_9553",
+      "mainStat": 1,
+      "mainValue": 85.02,
+      "subStat": 5,
+      "subValue": 0.3068
+    },
+    {
+      "itemID": 9554,
+      "slot": 5,
+      "grade": 4,
+      "name": "Item_9554",
+      "mainStat": 1,
+      "mainValue": 137.34,
+      "subStat": 5,
+      "subValue": 0.4956
+    },
+    {
+      "itemID": 9555,
+      "slot": 5,
+      "grade": 5,
+      "name": "Item_9555",
+      "mainStat": 1,
+      "mainValue": 222.36,
+      "subStat": 5,
+      "subValue": 0.8024
+    }
+  ]
+}

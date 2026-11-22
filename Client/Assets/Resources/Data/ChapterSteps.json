@@ -1,0 +1,229 @@
+{
+  "rows": [
+    {
+      "stepID": 64101,
+      "chapter": 1,
+      "step": 1,
+      "region": 61101,
+      "world": 1,
+      "stepType": 1,
+      "beliefChoice": 0
+    },
+    {
+      "stepID": 64102,
+      "chapter": 1,
+      "step": 2,
+      "region": 61102,
+      "world": 1,
+      "stepType": 1,
+      "beliefChoice": 0
+    },
+    {
+      "stepID": 64103,
+      "chapter": 1,
+      "step": 3,
+      "region": 61102,
+      "world": 2,
+      "stepType": 2,
+      "beliefChoice": 0
+    },
+    {
+      "stepID": 64104,
+      "chapter": 1,
+      "step": 4,
+      "region": 61102,
+      "world": 2,
+      "stepType": 3,
+      "beliefChoice": 0
+    },
+    {
+      "stepID": 64105,
+      "chapter": 1,
+      "step": 5,
+      "region": 61103,
+      "world": 2,
+      "stepType": 5,
+      "beliefChoice": 0
+    },
+    {
+      "stepID": 64201,
+      "chapter": 2,
+      "step": 1,
+      "region": 61201,
+      "world": 1,
+      "stepType": 1,
+      "beliefChoice": 0
+    },
+    {
+      "stepID": 64202,
+      "chapter": 2,
+      "step": 2,
+      "region": 61201,
+      "world": 1,
+      "stepType": 4,
+      "beliefChoice": 1
+    },
+    {
+      "stepID": 64203,
+      "chapter": 2,
+      "step": 3,
+      "region": 61202,
+      "world": 2,
+      "stepType": 1,
+      "beliefChoice": 0
+    },
+    {
+      "stepID": 64204,
+      "chapter": 2,
+      "step": 4,
+      "region": 61203,
+      "world": 2,
+      "stepType": 4,
+      "beliefChoice": 0
+    },
+    {
+      "stepID": 64205,
+      "chapter": 2,
+      "step": 5,
+      "region": 61203,
+      "world": 2,
+      "stepType": 5,
+      "beliefChoice": 0
+    },
+    {
+      "stepID": 64301,
+      "chapter": 3,
+      "step": 1,
+      "region": 61301,
+      "world": 1,
+      "stepType": 1,
+      "beliefChoice": 0
+    },
+    {
+      "stepID": 64302,
+      "chapter": 3,
+      "step": 2,
+      "region": 61301,
+      "world": 2,
+      "stepType": 1,
+      "beliefChoice": 0
+    },
+    {
+      "stepID": 64303,
+      "chapter": 3,
+      "step": 3,
+      "region": 61301,
+      "world": 1,
+      "stepType": 4,
+      "beliefChoice": 1
+    },
+    {
+      "stepID": 64304,
+      "chapter": 3,
+      "step": 4,
+      "region": 61302,
+      "world": 2,
+      "stepType": 3,
+      "beliefChoice": 0
+    },
+    {
+      "stepID": 64305,
+      "chapter": 3,
+      "step": 5,
+      "region": 61302,
+      "world": 2,
+      "stepType": 5,
+      "beliefChoice": 0
+    },
+    {
+      "stepID": 64401,
+      "chapter": 4,
+      "step": 1,
+      "region": 61401,
+      "world": 1,
+      "stepType": 1,
+      "beliefChoice": 0
+    },
+    {
+      "stepID": 64402,
+      "chapter": 4,
+      "step": 2,
+      "region": 61401,
+      "world": 1,
+      "stepType": 4,
+      "beliefChoice": 1
+    },
+    {
+      "stepID": 64403,
+      "chapter": 4,
+      "step": 3,
+      "region": 61402,
+      "world": 2,
+      "stepType": 1,
+      "beliefChoice": 0
+    },
+    {
+      "stepID": 64404,
+      "chapter": 4,
+      "step": 4,
+      "region": 61402,
+      "world": 2,
+      "stepType": 5,
+      "beliefChoice": 0
+    },
+    {
+      "stepID": 64405,
+      "chapter": 4,
+      "step": 5,
+      "region": 61403,
+      "world": 2,
+      "stepType": 5,
+      "beliefChoice": 0
+    },
+    {
+      "stepID": 64501,
+      "chapter": 5,
+      "step": 1,
+      "region": 61501,
+      "world": 1,
+      "stepType": 1,
+      "beliefChoice": 0
+    },
+    {
+      "stepID": 64502,
+      "chapter": 5,
+      "step": 2,
+      "region": 61501,
+      "world": 2,
+      "stepType": 3,
+      "beliefChoice": 0
+    },
+    {
+      "stepID": 64503,
+      "chapter": 5,
+      "step": 3,
+      "region": 61502,
+      "world": 2,
+      "stepType": 4,
+      "beliefChoice": 0
+    },
+    {
+      "stepID": 64504,
+      "chapter": 5,
+      "step": 4,
+      "region": 61502,
+      "world": 2,
+      "stepType": 5,
+      "beliefChoice": 0
+    },
+    {
+      "stepID": 64505,
+      "chapter": 5,
+      "step": 5,
+      "region": 61502,
+      "world": 2,
+      "stepType": 4,
+      "beliefChoice": 1
+    }
+  ]
+}

@@ -1,0 +1,1652 @@
+{
+  "rows": [
+    {
+      "stringID": "Region_61101",
+      "KR": "감천 마을",
+      "EN": "Gamcheon Village",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Region_61102",
+      "KR": "안개골 숲",
+      "EN": "Angaegol Forest",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Region_61103",
+      "KR": "산신당",
+      "EN": "Mountain God Shrine",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Region_61201",
+      "KR": "명진포 갯마을",
+      "EN": "Myeongjin Port",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Region_61202",
+      "KR": "명진포 갯벌",
+      "EN": "Myeongjin Tideland",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Region_61203",
+      "KR": "침몰 조운선",
+      "EN": "Sunken Tribute Ship",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Region_61301",
+      "KR": "재벌 유민촌",
+      "EN": "Jaebeol Refugee Camp",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Region_61302",
+      "KR": "무너진 진법터",
+      "EN": "Collapsed Ritual Ground",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Region_61401",
+      "KR": "폐도 시가",
+      "EN": "Abandoned Capital Streets",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Region_61402",
+      "KR": "왕궁 잔해",
+      "EN": "Palace Ruins",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Region_61403",
+      "KR": "만령진 지하 거점",
+      "EN": "Manryeongjin Core",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Region_61501",
+      "KR": "설령 겨울숲",
+      "EN": "Seolryeong Winter Forest",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Region_61502",
+      "KR": "황천문",
+      "EN": "Hwangcheon Gate",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Chapter_1",
+      "KR": "숲",
+      "EN": "Forest",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Chapter_2",
+      "KR": "해안",
+      "EN": "Coast",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Chapter_3",
+      "KR": "황야",
+      "EN": "Wasteland",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Chapter_4",
+      "KR": "폐도",
+      "EN": "Abandoned Capital",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Chapter_5",
+      "KR": "겨울숲",
+      "EN": "Winter Forest",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "ChapterSub_1",
+      "KR": "돌아온 죽음",
+      "EN": "The Returned Dead",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "ChapterSub_2",
+      "KR": "바다가 뱉어낸 것들",
+      "EN": "What the Sea Spat Out",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "ChapterSub_3",
+      "KR": "재벌에 선 사람",
+      "EN": "The One Who Stands on Ashes",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "ChapterSub_4",
+      "KR": "무너지는 것들 사이에서",
+      "EN": "Among the Falling",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "ChapterSub_5",
+      "KR": "마지막 겨울",
+      "EN": "The Last Winter",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Character_1000001",
+      "KR": "무당",
+      "EN": "Mudang",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Weapon_7001",
+      "KR": "신장대·부적",
+      "EN": "Spirit Staff & Talismans",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Weapon_7002",
+      "KR": "작두",
+      "EN": "Ritual Blade",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Weapon_7003",
+      "KR": "쌍신칼",
+      "EN": "Twin Spirit Knives",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Weapon_7004",
+      "KR": "삼지창",
+      "EN": "Trident",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Status_8001",
+      "KR": "결박",
+      "EN": "Bind",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Status_8002",
+      "KR": "영화(靈火)",
+      "EN": "Spirit Fire",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Status_8003",
+      "KR": "취약",
+      "EN": "Weaken",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Status_8004",
+      "KR": "둔화",
+      "EN": "Slow",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Skill_700100",
+      "KR": "소지(燒紙)",
+      "EN": "Talisman Burst",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Skill_700101",
+      "KR": "결진(結陣)",
+      "EN": "Binding Circle",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Skill_700102",
+      "KR": "신장 강림",
+      "EN": "Divine General",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Skill_700103",
+      "KR": "초혼(招魂)",
+      "EN": "Soul Call",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Skill_700104",
+      "KR": "만장(輓章)",
+      "EN": "Funeral Banner",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Skill_700200",
+      "KR": "작두질",
+      "EN": "Whirling Blade",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Skill_700201",
+      "KR": "내림",
+      "EN": "Descent",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Skill_700202",
+      "KR": "날세우기",
+      "EN": "Whetting",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Skill_700203",
+      "KR": "쓸어내기",
+      "EN": "Sweep",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Skill_700204",
+      "KR": "작두 타기",
+      "EN": "Blade Dance",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Skill_700300",
+      "KR": "난도(亂刀)",
+      "EN": "Flurry",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Skill_700301",
+      "KR": "베고 지나기",
+      "EN": "Cleave Through",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Skill_700302",
+      "KR": "살 새김",
+      "EN": "Death Mark",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Skill_700303",
+      "KR": "연참",
+      "EN": "Rending Chain",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Skill_700304",
+      "KR": "신칼 굿",
+      "EN": "Knife Rite",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Skill_700400",
+      "KR": "걸어 비틀기",
+      "EN": "Twist Lock",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Skill_700401",
+      "KR": "밀쳐내기",
+      "EN": "Shove",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Skill_700402",
+      "KR": "버팀",
+      "EN": "Bulwark",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Skill_700403",
+      "KR": "꿰뚫기",
+      "EN": "Impale",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Skill_700404",
+      "KR": "진혼(鎭魂)",
+      "EN": "Requiem",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "MonsterType_9001",
+      "KR": "잡귀",
+      "EN": "Petty Spirit",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "MonsterType_9002",
+      "KR": "원혼",
+      "EN": "Vengeful Soul",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "MonsterType_9003",
+      "KR": "귀신",
+      "EN": "Wraith",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "MonsterType_9004",
+      "KR": "악귀",
+      "EN": "Malevolent",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "MonsterType_9005",
+      "KR": "저승의 수호자",
+      "EN": "Warden",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Character_2000101",
+      "KR": "안개 잡귀",
+      "EN": "Mist Wretch",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Character_2000102",
+      "KR": "목매단 원혼",
+      "EN": "Hanged Soul",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Character_2000103",
+      "KR": "곡하는 귀신",
+      "EN": "Wailing Wraith",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Character_2000201",
+      "KR": "갯벌 잡귀",
+      "EN": "Tideland Wretch",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Character_2000202",
+      "KR": "물먹은 원혼",
+      "EN": "Drowned Soul",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Character_2000203",
+      "KR": "뱃노래 귀신",
+      "EN": "Shanty Wraith",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Character_2000204",
+      "KR": "그물 악귀",
+      "EN": "Netted Malevolent",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Character_2000301",
+      "KR": "재 잡귀",
+      "EN": "Ash Wretch",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Character_2000302",
+      "KR": "타버린 원혼",
+      "EN": "Charred Soul",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Character_2000303",
+      "KR": "진법 악귀",
+      "EN": "Circle Malevolent",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Character_2000304",
+      "KR": "호법 졸귀",
+      "EN": "Warden Acolyte",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Character_2000401",
+      "KR": "죄인 원혼",
+      "EN": "Convict Soul",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Character_2000402",
+      "KR": "심판 귀신",
+      "EN": "Judge Wraith",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Character_2000403",
+      "KR": "형벌 악귀",
+      "EN": "Punisher Malevolent",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Character_2000404",
+      "KR": "심판궁 수문졸",
+      "EN": "Palace Warden",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Character_2000501",
+      "KR": "얼어붙은 원혼",
+      "EN": "Frozen Soul",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Character_2000502",
+      "KR": "설령 귀신",
+      "EN": "Seolryeong Wraith",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Character_2000503",
+      "KR": "만령진 악귀",
+      "EN": "Manryeong Malevolent",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Character_2000504",
+      "KR": "황천 수문장",
+      "EN": "Hwangcheon Warden",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Character_3000101",
+      "KR": "뒤틀린 목귀",
+      "EN": "Twisted Tree Spirit",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Character_3000201",
+      "KR": "수귀 사공",
+      "EN": "Drowned Ferryman",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Character_3000301",
+      "KR": "호법귀장",
+      "EN": "Warden General",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Character_3000401",
+      "KR": "국무 한월 (중간전)",
+      "EN": "Hanwol (Interlude)",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Character_3000402",
+      "KR": "왕궁의 수문장 악귀",
+      "EN": "Palace Gatekeeper",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Character_3000501",
+      "KR": "국무 한월",
+      "EN": "Hanwol",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Case_50101",
+      "KR": "사라진 사람들",
+      "EN": "The Missing",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Case_50201",
+      "KR": "없는 배",
+      "EN": "The Ship That Never Was",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Case_50301",
+      "KR": "지워진 마을",
+      "EN": "The Erased Village",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Case_50401",
+      "KR": "믿는 사람들",
+      "EN": "The Believers",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Case_50501",
+      "KR": "마지막 겨울",
+      "EN": "The Last Winter",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Clue_51101",
+      "KR": "노파의 사연",
+      "EN": "The Crone's Tale",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Clue_51102",
+      "KR": "아이의 빈 무덤",
+      "EN": "The Empty Grave",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Clue_51103",
+      "KR": "붉은 실의 끝",
+      "EN": "End of the Red Thread",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Clue_51104",
+      "KR": "실종자의 흔적",
+      "EN": "Traces of the Lost",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Clue_51201",
+      "KR": "떠오른 시신의 표식",
+      "EN": "Mark on the Drowned",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Clue_51202",
+      "KR": "봉인된 장부",
+      "EN": "The Sealed Ledger",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Clue_51203",
+      "KR": "사공이 없는 나루",
+      "EN": "The Ferryman's Absence",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Clue_51204",
+      "KR": "배 밑의 진법 문양",
+      "EN": "Sigil Beneath the Hull",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Clue_51301",
+      "KR": "유민의 증언",
+      "EN": "Refugee Testimony",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Clue_51302",
+      "KR": "지도에 없는 마을",
+      "EN": "Village Off the Map",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Clue_51303",
+      "KR": "겹쳐 보이는 지형",
+      "EN": "Overlapping Ground",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Clue_51401",
+      "KR": "도읍을 운영하는 사람들",
+      "EN": "Those Who Keep the City",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Clue_51402",
+      "KR": "묶인 혼의 고통",
+      "EN": "Agony of the Bound",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Clue_51403",
+      "KR": "만령진의 설계도",
+      "EN": "Blueprint of Manryeongjin",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Clue_51501",
+      "KR": "지나온 이들의 흔적",
+      "EN": "Traces of the Departed",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Clue_51502",
+      "KR": "황천문의 봉인",
+      "EN": "Seal of Hwangcheon",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Npc_81101",
+      "KR": "굿을 청한 노파",
+      "EN": "The Petitioning Crone",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Npc_81102",
+      "KR": "아이의 어머니",
+      "EN": "The Child's Mother",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Npc_81103",
+      "KR": "마을 이장",
+      "EN": "The Village Head",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Npc_81104",
+      "KR": "스승 (전대 무당)",
+      "EN": "The Master",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Npc_81201",
+      "KR": "갯마을 어부",
+      "EN": "The Fisherman",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Npc_81202",
+      "KR": "관아 아전",
+      "EN": "The Clerk",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Npc_81203",
+      "KR": "시신을 수습하는 승려",
+      "EN": "The Attending Monk",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Npc_81301",
+      "KR": "유민 노인",
+      "EN": "The Old Refugee",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Npc_81302",
+      "KR": "미쳐가는 관군",
+      "EN": "The Unraveling Soldier",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Npc_81303",
+      "KR": "국무 한월",
+      "EN": "Hanwol",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Npc_81401",
+      "KR": "도읍을 지키는 관리",
+      "EN": "The Steward",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Npc_81402",
+      "KR": "만령진을 믿는 주민",
+      "EN": "The Faithful Resident",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Quest_83101",
+      "KR": "사라진 사람들",
+      "EN": "The Missing",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Quest_83102",
+      "KR": "아이의 이름",
+      "EN": "The Child's Name",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Quest_83103",
+      "KR": "숲에 남은 것들",
+      "EN": "What Remains in the Woods",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Quest_83201",
+      "KR": "바다가 뱉어낸 것들",
+      "EN": "What the Sea Spat Out",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Quest_83202",
+      "KR": "이름 없는 시신",
+      "EN": "The Nameless Dead",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Quest_83203",
+      "KR": "물에 잠긴 이름",
+      "EN": "Names Beneath the Water",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Quest_83301",
+      "KR": "재벌에 선 사람",
+      "EN": "The One Who Stands on Ashes",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Quest_83302",
+      "KR": "썩지 않는 땅",
+      "EN": "The Land That Will Not Rot",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Quest_83303",
+      "KR": "돌아오지 못한 관군",
+      "EN": "Soldiers Who Never Returned",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Quest_83401",
+      "KR": "무너지는 것들 사이에서",
+      "EN": "Among the Falling",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Quest_83402",
+      "KR": "죄인의 이름",
+      "EN": "Names of the Condemned",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Quest_83403",
+      "KR": "남겨진 사람들",
+      "EN": "Those Left Behind",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Quest_83501",
+      "KR": "마지막 겨울",
+      "EN": "The Last Winter",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Quest_83502",
+      "KR": "지나온 이들의 흔적",
+      "EN": "Traces of the Departed",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Belief_84201",
+      "KR": "나라가 무슨 짓을 했든, 죽은 사람이 먼저다.",
+      "EN": "Whatever the state did, the dead come first.",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Belief_84202",
+      "KR": "나라가 한 일이라면 이유가 있었을 것이다. 먼저 알아야겠다.",
+      "EN": "If the state did this, there was a reason. I must know it first.",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Belief_84301",
+      "KR": "그 대가로 수만이 묶여 있다면, 나는 살아 있지 않은 편이 나았다.",
+      "EN": "If tens of thousands are bound for it, I would rather not have lived.",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Belief_84302",
+      "KR": "…내가 살아 있는 것이 그들의 대가라면, 나는 무엇을 갚아야 하는가.",
+      "EN": "…If my life is their price, then what is it I owe?",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Belief_84401",
+      "KR": "이 평온은 빌린 것이다. 갚을 때가 온다.",
+      "EN": "This peace is borrowed. The debt will come due.",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Belief_84402",
+      "KR": "이 사람들에게서 이걸 빼앗을 권리가 나에게 있는가.",
+      "EN": "Have I the right to take this from these people?",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Item_9500",
+      "KR": "혼백",
+      "EN": "Soul Essence",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Item_9511",
+      "KR": "범(凡) 관(冠)",
+      "EN": "Common Crown",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Item_9512",
+      "KR": "상(上) 관(冠)",
+      "EN": "Fine Crown",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Item_9513",
+      "KR": "진(珍) 관(冠)",
+      "EN": "Rare Crown",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Item_9514",
+      "KR": "영(靈) 관(冠)",
+      "EN": "Spirit Crown",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Item_9515",
+      "KR": "신(神) 관(冠)",
+      "EN": "Divine Crown",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Item_9521",
+      "KR": "범(凡) 무복(巫服)",
+      "EN": "Common Robe",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Item_9522",
+      "KR": "상(上) 무복(巫服)",
+      "EN": "Fine Robe",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Item_9523",
+      "KR": "진(珍) 무복(巫服)",
+      "EN": "Rare Robe",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Item_9524",
+      "KR": "영(靈) 무복(巫服)",
+      "EN": "Spirit Robe",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Item_9525",
+      "KR": "신(神) 무복(巫服)",
+      "EN": "Divine Robe",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Item_9531",
+      "KR": "범(凡) 띠(帶)",
+      "EN": "Common Belt",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Item_9532",
+      "KR": "상(上) 띠(帶)",
+      "EN": "Fine Belt",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Item_9533",
+      "KR": "진(珍) 띠(帶)",
+      "EN": "Rare Belt",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Item_9534",
+      "KR": "영(靈) 띠(帶)",
+      "EN": "Spirit Belt",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Item_9535",
+      "KR": "신(神) 띠(帶)",
+      "EN": "Divine Belt",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Item_9541",
+      "KR": "범(凡) 신(靴)",
+      "EN": "Common Shoes",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Item_9542",
+      "KR": "상(上) 신(靴)",
+      "EN": "Fine Shoes",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Item_9543",
+      "KR": "진(珍) 신(靴)",
+      "EN": "Rare Shoes",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Item_9544",
+      "KR": "영(靈) 신(靴)",
+      "EN": "Spirit Shoes",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Item_9545",
+      "KR": "신(神) 신(靴)",
+      "EN": "Divine Shoes",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Item_9551",
+      "KR": "범(凡) 방울(鈴)",
+      "EN": "Common Bell",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Item_9552",
+      "KR": "상(上) 방울(鈴)",
+      "EN": "Fine Bell",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Item_9553",
+      "KR": "진(珍) 방울(鈴)",
+      "EN": "Rare Bell",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Item_9554",
+      "KR": "영(靈) 방울(鈴)",
+      "EN": "Spirit Bell",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Item_9555",
+      "KR": "신(神) 방울(鈴)",
+      "EN": "Divine Bell",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Spirit_8501",
+      "KR": "무명장수",
+      "EN": "Nameless General",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Spirit_8502",
+      "KR": "망나니",
+      "EN": "Executioner",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Spirit_8503",
+      "KR": "착호갑사",
+      "EN": "Tiger Hunter",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Spirit_8504",
+      "KR": "꼭두쇠",
+      "EN": "Troupe Leader",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Spirit_8505",
+      "KR": "의녀",
+      "EN": "Healing Maiden",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "SpiritWeapon_8501",
+      "KR": "등패·요도",
+      "EN": "Rattan Shield & Saber",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "SpiritWeapon_8502",
+      "KR": "망나니칼",
+      "EN": "Executioner's Blade",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "SpiritWeapon_8503",
+      "KR": "각궁",
+      "EN": "Horn Bow",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "SpiritWeapon_8504",
+      "KR": "꽹과리",
+      "EN": "Kkwaenggwari Gong",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "SpiritWeapon_8505",
+      "KR": "침통",
+      "EN": "Acupuncture Case",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "SpiritSkill_85011",
+      "KR": "호령",
+      "EN": "Battle Cry",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "SpiritSkill_85012",
+      "KR": "등패 세우기",
+      "EN": "Shield Wall",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "SpiritSkill_85013",
+      "KR": "방패 밀치기",
+      "EN": "Shield Bash",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "SpiritSkill_85014",
+      "KR": "대신 맞기",
+      "EN": "Intercept",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "SpiritSkill_85021",
+      "KR": "칼춤",
+      "EN": "Blade Dance",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "SpiritSkill_85022",
+      "KR": "참수",
+      "EN": "Behead",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "SpiritSkill_85023",
+      "KR": "돌진베기",
+      "EN": "Lunging Cut",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "SpiritSkill_85024",
+      "KR": "피바람",
+      "EN": "Blood Frenzy",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "SpiritSkill_85031",
+      "KR": "관통 화살",
+      "EN": "Piercing Arrow",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "SpiritSkill_85032",
+      "KR": "조준 사격",
+      "EN": "Aimed Shot",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "SpiritSkill_85033",
+      "KR": "덫 놓기",
+      "EN": "Snare Trap",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "SpiritSkill_85034",
+      "KR": "물러서기",
+      "EN": "Backstep",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "SpiritSkill_85041",
+      "KR": "길놀이",
+      "EN": "Procession",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "SpiritSkill_85042",
+      "KR": "잡귀 쫓기",
+      "EN": "Ward Off",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "SpiritSkill_85043",
+      "KR": "줄타기",
+      "EN": "Tightrope",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "SpiritSkill_85044",
+      "KR": "판 벌이기",
+      "EN": "Grand Stage",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "SpiritSkill_85051",
+      "KR": "침 놓기",
+      "EN": "Acupuncture",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "SpiritSkill_85052",
+      "KR": "탕약",
+      "EN": "Herbal Brew",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "SpiritSkill_85053",
+      "KR": "해독",
+      "EN": "Purge",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "SpiritSkill_85054",
+      "KR": "회혼술",
+      "EN": "Soul Recall",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Status_8005",
+      "KR": "기절",
+      "EN": "Stun",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Status_8006",
+      "KR": "강화",
+      "EN": "Empower",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Status_8007",
+      "KR": "신속",
+      "EN": "Haste",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Status_8008",
+      "KR": "신명",
+      "EN": "Elation",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Status_8009",
+      "KR": "버팀",
+      "EN": "Brace",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Status_8010",
+      "KR": "수호",
+      "EN": "Guardian",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Status_8011",
+      "KR": "광기",
+      "EN": "Frenzy",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Status_8012",
+      "KR": "도발",
+      "EN": "Taunt",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Status_8013",
+      "KR": "탈진",
+      "EN": "Exhausted",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Dungeon_87101",
+      "KR": "산신당 저승길",
+      "EN": "Underpath of the Mountain Shrine",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Dungeon_87201",
+      "KR": "가라앉은 조운선",
+      "EN": "The Sunken Grain Ship",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Dungeon_87301",
+      "KR": "무너진 진법터",
+      "EN": "The Broken Circle",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Dungeon_87401",
+      "KR": "심판궁",
+      "EN": "Hall of Judgment",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Dungeon_87402",
+      "KR": "만령진 지하",
+      "EN": "Beneath the Manryeong Seal",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Dungeon_87501",
+      "KR": "황천문",
+      "EN": "The Yellow Springs Gate",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    }
+  ]
+}

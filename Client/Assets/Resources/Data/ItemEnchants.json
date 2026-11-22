@@ -1,0 +1,64 @@
+{
+  "rows": [
+    {
+      "enchantID": 9701,
+      "level": 1,
+      "cost": 20,
+      "mainBonus": 0.08
+    },
+    {
+      "enchantID": 9702,
+      "level": 2,
+      "cost": 27,
+      "mainBonus": 0.16
+    },
+    {
+      "enchantID": 9703,
+      "level": 3,
+      "cost": 36,
+      "mainBonus": 0.24
+    },
+    {
+      "enchantID": 9704,
+      "level": 4,
+      "cost": 49,
+      "mainBonus": 0.32
+    },
+    {
+      "enchantID": 9705,
+      "level": 5,
+      "cost": 66,
+      "mainBonus": 0.4
+    },
+    {
+      "enchantID": 9706,
+      "level": 6,
+      "cost": 90,
+      "mainBonus": 0.48
+    },
+    {
+      "enchantID": 9707,
+      "level": 7,
+      "cost": 121,
+      "mainBonus": 0.56
+    },
+    {
+      "enchantID": 9708,
+      "level": 8,
+      "cost": 163,
+      "mainBonus": 0.64
+    },
+    {
+      "enchantID": 9709,
+      "level": 9,
+      "cost": 221,
+      "mainBonus": 0.72
+    },
+    {
+      "enchantID": 9710,
+      "level": 10,
+      "cost": 298,
+      "mainBonus": 0.8
+    }
+  ]
+}

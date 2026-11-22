@@ -1,0 +1,60 @@
+{
+  "rows": [
+    {
+      "dropGroupID": 96001,
+      "rateNormal": 0.8,
+      "rateHigh": 0.2,
+      "rateRare": 0,
+      "rateEpic": 0,
+      "rateLegendary": 0
+    },
+    {
+      "dropGroupID": 96002,
+      "rateNormal": 0.6,
+      "rateHigh": 0.3,
+      "rateRare": 0.1,
+      "rateEpic": 0,
+      "rateLegendary": 0
+    },
+    {
+      "dropGroupID": 96003,
+      "rateNormal": 0.55,
+      "rateHigh": 0.3,
+      "rateRare": 0.15,
+      "rateEpic": 0,
+      "rateLegendary": 0
+    },
+    {
+      "dropGroupID": 96004,
+      "rateNormal": 0,
+      "rateHigh": 0.4,
+      "rateRare": 0.4,
+      "rateEpic": 0.2,
+      "rateLegendary": 0
+    },
+    {
+      "dropGroupID": 96005,
+      "rateNormal": 0,
+      "rateHigh": 0,
+      "rateRare": 0.4,
+      "rateEpic": 0.4,
+      "rateLegendary": 0.2
+    },
+    {
+      "dropGroupID": 96101,
+      "rateNormal": 0,
+      "rateHigh": 0,
+      "rateRare": 0.3,
+      "rateEpic": 0.5,
+      "rateLegendary": 0.2
+    },
+    {
+      "dropGroupID": 96102,
+      "rateNormal": 0,
+      "rateHigh": 0.4,
+      "rateRare": 0.45,
+      "rateEpic": 0.15,
+      "rateLegendary": 0
+    }
+  ]
+}

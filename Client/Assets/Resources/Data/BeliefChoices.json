@@ -1,0 +1,52 @@
+{
+  "rows": [
+    {
+      "choiceID": 84201,
+      "dialogue": 812020,
+      "chapter": 2,
+      "option": "A",
+      "beliefValue": -1,
+      "textKey": "Belief_84201"
+    },
+    {
+      "choiceID": 84202,
+      "dialogue": 812020,
+      "chapter": 2,
+      "option": "B",
+      "beliefValue": 1,
+      "textKey": "Belief_84202"
+    },
+    {
+      "choiceID": 84301,
+      "dialogue": 813030,
+      "chapter": 3,
+      "option": "A",
+      "beliefValue": -1,
+      "textKey": "Belief_84301"
+    },
+    {
+      "choiceID": 84302,
+      "dialogue": 813030,
+      "chapter": 3,
+      "option": "B",
+      "beliefValue": 1,
+      "textKey": "Belief_84302"
+    },
+    {
+      "choiceID": 84401,
+      "dialogue": 814010,
+      "chapter": 4,
+      "option": "A",
+      "beliefValue": -1,
+      "textKey": "Belief_84401"
+    },
+    {
+      "choiceID": 84402,
+      "dialogue": 814010,
+      "chapter": 4,
+      "option": "B",
+      "beliefValue": 1,
+      "textKey": "Belief_84402"
+    }
+  ]
+}

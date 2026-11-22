@@ -1,0 +1,76 @@
+{
+  "rows": [
+    {
+      "phaseID": 30001011,
+      "boss": 3000101,
+      "phase": 1,
+      "hpStart": 1
+    },
+    {
+      "phaseID": 30001012,
+      "boss": 3000101,
+      "phase": 2,
+      "hpStart": 0.6
+    },
+    {
+      "phaseID": 30002011,
+      "boss": 3000201,
+      "phase": 1,
+      "hpStart": 1
+    },
+    {
+      "phaseID": 30002012,
+      "boss": 3000201,
+      "phase": 2,
+      "hpStart": 0.55
+    },
+    {
+      "phaseID": 30003011,
+      "boss": 3000301,
+      "phase": 1,
+      "hpStart": 1
+    },
+    {
+      "phaseID": 30003012,
+      "boss": 3000301,
+      "phase": 2,
+      "hpStart": 0.5
+    },
+    {
+      "phaseID": 30004011,
+      "boss": 3000401,
+      "phase": 1,
+      "hpStart": 1
+    },
+    {
+      "phaseID": 30004021,
+      "boss": 3000402,
+      "phase": 1,
+      "hpStart": 1
+    },
+    {
+      "phaseID": 30004022,
+      "boss": 3000402,
+      "phase": 2,
+      "hpStart": 0.55
+    },
+    {
+      "phaseID": 30005011,
+      "boss": 3000501,
+      "phase": 1,
+      "hpStart": 1
+    },
+    {
+      "phaseID": 30005012,
+      "boss": 3000501,
+      "phase": 2,
+      "hpStart": 0.7
+    },
+    {
+      "phaseID": 30005013,
+      "boss": 3000501,
+      "phase": 3,
+      "hpStart": 0.35
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "rows": [
+    {
+      "worldEffectID": 63101,
+      "region": 61102,
+      "triggerWorld": 1,
+      "triggerType": 1,
+      "triggerValue": 51101,
+      "targetWorld": 3,
+      "resultType": 1,
+      "resultValue": 62103
+    },
+    {
+      "worldEffectID": 63102,
+      "region": 61102,
+      "triggerWorld": 2,
+      "triggerType": 1,
+      "triggerValue": 51103,
+      "targetWorld": 1,
+      "resultType": 5,
+      "resultValue": 51104
+    },
+    {
+      "worldEffectID": 63103,
+      "region": 61103,
+      "triggerWorld": 2,
+      "triggerType": 2,
+      "triggerValue": 3000101,
+      "targetWorld": 1,
+      "resultType": 4,
+      "resultValue": 811022
+    },
+    {
+      "worldEffectID": 63201,
+      "region": 61201,
+      "triggerWorld": 1,
+      "triggerType": 1,
+      "triggerValue": 51202,
+      "targetWorld": 2,
+      "resultType": 1,
+      "resultValue": 62203
+    },
+    {
+      "worldEffectID": 63202,
+      "region": 61203,
+      "triggerWorld": 2,
+      "triggerType": 2,
+      "triggerValue": 3000201,
+      "targetWorld": 1,
+      "resultType": 4,
+      "resultValue": 812033
+    },
+    {
+      "worldEffectID": 63301,
+      "region": 61301,
+      "triggerWorld": 1,
+      "triggerType": 1,
+      "triggerValue": 51301,
+      "targetWorld": 3,
+      "resultType": 1,
+      "resultValue": 62301
+    },
+    {
+      "worldEffectID": 63302,
+      "region": 61302,
+      "triggerWorld": 2,
+      "triggerType": 2,
+      "triggerValue": 3000301,
+      "targetWorld": 2,
+      "resultType": 3,
+      "resultValue": 92302
+    },
+    {
+      "worldEffectID": 63401,
+      "region": 61402,
+      "triggerWorld": 2,
+      "triggerType": 1,
+      "triggerValue": 51402,
+      "targetWorld": 1,
+      "resultType": 4,
+      "resultValue": 814024
+    },
+    {
+      "worldEffectID": 63501,
+      "region": 61501,
+      "triggerWorld": 1,
+      "triggerType": 3,
+      "triggerValue": 83502,
+      "targetWorld": 2,
+      "resultType": 1,
+      "resultValue": 62501
+    }
+  ]
+}

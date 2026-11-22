@@ -1,0 +1,514 @@
+{
+  "rows": [
+    {
+      "configID": 10001,
+      "value": [
+        0.8
+      ]
+    },
+    {
+      "configID": 10002,
+      "value": [
+        2
+      ]
+    },
+    {
+      "configID": 10003,
+      "value": [
+        0.5
+      ]
+    },
+    {
+      "configID": 20001,
+      "value": [
+        0.75
+      ]
+    },
+    {
+      "configID": 20002,
+      "value": [
+        0.05
+      ]
+    },
+    {
+      "configID": 20003,
+      "value": [
+        1.5
+      ]
+    },
+    {
+      "configID": 20004,
+      "value": [
+        1
+      ]
+    },
+    {
+      "configID": 20009,
+      "value": [
+        0.06
+      ]
+    },
+    {
+      "configID": 20010,
+      "value": [
+        0.12
+      ]
+    },
+    {
+      "configID": 20013,
+      "value": [
+        4
+      ]
+    },
+    {
+      "configID": 20014,
+      "value": [
+        10
+      ]
+    },
+    {
+      "configID": 20016,
+      "value": [
+        3
+      ]
+    },
+    {
+      "configID": 20017,
+      "value": [
+        0.07
+      ]
+    },
+    {
+      "configID": 20018,
+      "value": [
+        3
+      ]
+    },
+    {
+      "configID": 20019,
+      "value": [
+        0.35
+      ]
+    },
+    {
+      "configID": 20020,
+      "value": [
+        0.4
+      ]
+    },
+    {
+      "configID": 20021,
+      "value": [
+        6
+      ]
+    },
+    {
+      "configID": 20022,
+      "value": [
+        0.5
+      ]
+    },
+    {
+      "configID": 20023,
+      "value": [
+        0.15
+      ]
+    },
+    {
+      "configID": 20024,
+      "value": [
+        2
+      ]
+    },
+    {
+      "configID": 20025,
+      "value": [
+        0.4
+      ]
+    },
+    {
+      "configID": 20026,
+      "value": [
+        90
+      ]
+    },
+    {
+      "configID": 20027,
+      "value": [
+        0.9
+      ]
+    },
+    {
+      "configID": 20028,
+      "value": [
+        30
+      ]
+    },
+    {
+      "configID": 20029,
+      "value": [
+        20
+      ]
+    },
+    {
+      "configID": 20030,
+      "value": [
+        1
+      ]
+    },
+    {
+      "configID": 20031,
+      "value": [
+        1
+      ]
+    },
+    {
+      "configID": 20032,
+      "value": [
+        0.6
+      ]
+    },
+    {
+      "configID": 20033,
+      "value": [
+        8
+      ]
+    },
+    {
+      "configID": 20034,
+      "value": [
+        8
+      ]
+    },
+    {
+      "configID": 20035,
+      "value": [
+        0.02
+      ]
+    },
+    {
+      "configID": 20036,
+      "value": [
+        1
+      ]
+    },
+    {
+      "configID": 20037,
+      "value": [
+        0.5
+      ]
+    },
+    {
+      "configID": 20038,
+      "value": [
+        1.1
+      ]
+    },
+    {
+      "configID": 20039,
+      "value": [
+        30
+      ]
+    },
+    {
+      "configID": 20040,
+      "value": [
+        3
+      ]
+    },
+    {
+      "configID": 20041,
+      "value": [
+        0.5
+      ]
+    },
+    {
+      "configID": 20042,
+      "value": [
+        30
+      ]
+    },
+    {
+      "configID": 20043,
+      "value": [
+        4
+      ]
+    },
+    {
+      "configID": 20044,
+      "value": [
+        0.8
+      ]
+    },
+    {
+      "configID": 20045,
+      "value": [
+        2
+      ]
+    },
+    {
+      "configID": 20046,
+      "value": [
+        2
+      ]
+    },
+    {
+      "configID": 20047,
+      "value": [
+        0.3
+      ]
+    },
+    {
+      "configID": 30001,
+      "value": [
+        20
+      ]
+    },
+    {
+      "configID": 30002,
+      "value": [
+        15
+      ]
+    },
+    {
+      "configID": 30003,
+      "value": [
+        5
+      ]
+    },
+    {
+      "configID": 30004,
+      "value": [
+        1.5
+      ]
+    },
+    {
+      "configID": 30005,
+      "value": [
+        1.2
+      ]
+    },
+    {
+      "configID": 30006,
+      "value": [
+        0.03
+      ]
+    },
+    {
+      "configID": 30007,
+      "value": [
+        3
+      ]
+    },
+    {
+      "configID": 40001,
+      "value": [
+        1
+      ]
+    },
+    {
+      "configID": 40002,
+      "value": [
+        1
+      ]
+    },
+    {
+      "configID": 40003,
+      "value": [
+        0.2
+      ]
+    },
+    {
+      "configID": 40004,
+      "value": [
+        0.15
+      ]
+    },
+    {
+      "configID": 40005,
+      "value": [
+        0.15
+      ]
+    },
+    {
+      "configID": 40006,
+      "value": [
+        10
+      ]
+    },
+    {
+      "configID": 40007,
+      "value": [
+        0.08
+      ]
+    },
+    {
+      "configID": 40008,
+      "value": [
+        20
+      ]
+    },
+    {
+      "configID": 40009,
+      "value": [
+        0.35
+      ]
+    },
+    {
+      "configID": 40010,
+      "value": [
+        0.3
+      ]
+    },
+    {
+      "configID": 40011,
+      "value": [
+        0.25
+      ]
+    },
+    {
+      "configID": 50001,
+      "value": [
+        0.8
+      ]
+    },
+    {
+      "configID": 50002,
+      "value": [
+        3
+      ]
+    },
+    {
+      "configID": 50003,
+      "value": [
+        3
+      ]
+    },
+    {
+      "configID": 50004,
+      "value": [
+        1.5
+      ]
+    },
+    {
+      "configID": 60001,
+      "value": [
+        2
+      ]
+    },
+    {
+      "configID": 60002,
+      "value": [
+        3
+      ]
+    },
+    {
+      "configID": 60003,
+      "value": [
+        3
+      ]
+    },
+    {
+      "configID": 60004,
+      "value": [
+        5
+      ]
+    },
+    {
+      "configID": 60005,
+      "value": [
+        30
+      ]
+    },
+    {
+      "configID": 60011,
+      "value": [
+        4
+      ]
+    },
+    {
+      "configID": 60012,
+      "value": [
+        15
+      ]
+    },
+    {
+      "configID": 60013,
+      "value": [
+        30
+      ]
+    },
+    {
+      "configID": 60014,
+      "value": [
+        60
+      ]
+    },
+    {
+      "configID": 60015,
+      "value": [
+        0.3
+      ]
+    },
+    {
+      "configID": 60016,
+      "value": [
+        0.2
+      ]
+    },
+    {
+      "configID": 60017,
+      "value": [
+        300
+      ]
+    },
+    {
+      "configID": 60018,
+      "value": [
+        2
+      ]
+    },
+    {
+      "configID": 60019,
+      "value": [
+        24
+      ]
+    },
+    {
+      "configID": 60020,
+      "value": [
+        60
+      ]
+    },
+    {
+      "configID": 60021,
+      "value": [
+        3
+      ]
+    },
+    {
+      "configID": 60022,
+      "value": [
+        1
+      ]
+    },
+    {
+      "configID": 60023,
+      "value": [
+        180
+      ]
+    },
+    {
+      "configID": 60024,
+      "value": [
+        0.7
+      ]
+    },
+    {
+      "configID": 60025,
+      "value": [
+        3
+      ]
+    }
+  ]
+}

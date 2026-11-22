@@ -1,0 +1,84 @@
+{
+  "rows": [
+    {
+      "passageID": 62101,
+      "region": 61101,
+      "linkRegion": 61102,
+      "livingPass": 1,
+      "underPass": 1,
+      "openBy": 0
+    },
+    {
+      "passageID": 62102,
+      "region": 61102,
+      "linkRegion": 0,
+      "livingPass": 0,
+      "underPass": 1,
+      "openBy": 0
+    },
+    {
+      "passageID": 62103,
+      "region": 61102,
+      "linkRegion": 61103,
+      "livingPass": 0,
+      "underPass": 0,
+      "openBy": 63101
+    },
+    {
+      "passageID": 62201,
+      "region": 61201,
+      "linkRegion": 61202,
+      "livingPass": 1,
+      "underPass": 1,
+      "openBy": 0
+    },
+    {
+      "passageID": 62202,
+      "region": 61202,
+      "linkRegion": 0,
+      "livingPass": 1,
+      "underPass": 0,
+      "openBy": 0
+    },
+    {
+      "passageID": 62203,
+      "region": 61202,
+      "linkRegion": 61203,
+      "livingPass": 0,
+      "underPass": 1,
+      "openBy": 63201
+    },
+    {
+      "passageID": 62301,
+      "region": 61301,
+      "linkRegion": 61302,
+      "livingPass": 0,
+      "underPass": 0,
+      "openBy": 63301
+    },
+    {
+      "passageID": 62401,
+      "region": 61401,
+      "linkRegion": 61402,
+      "livingPass": 1,
+      "underPass": 1,
+      "openBy": 0
+    },
+    {
+      "passageID": 62402,
+      "region": 61402,
+      "linkRegion": 61403,
+      "livingPass": 0,
+      "underPass": 1,
+      "openBy": 0
+    },
+    {
+      "passageID": 62501,
+      "region": 61501,
+      "linkRegion": 61502,
+      "livingPass": 0,
+      "underPass": 1,
+      "openBy": 63501
+    }
+  ]
+}

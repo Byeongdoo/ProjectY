@@ -1,0 +1,100 @@
+{
+  "rows": [
+    {
+      "npcID": 81101,
+      "chapter": 1,
+      "region": 61101,
+      "world": 1,
+      "name": "Npc_81101",
+      "initState": 0
+    },
+    {
+      "npcID": 81102,
+      "chapter": 1,
+      "region": 61101,
+      "world": 1,
+      "name": "Npc_81102",
+      "initState": 1
+    },
+    {
+      "npcID": 81103,
+      "chapter": 1,
+      "region": 61101,
+      "world": 1,
+      "name": "Npc_81103",
+      "initState": 1
+    },
+    {
+      "npcID": 81104,
+      "chapter": 1,
+      "region": 61102,
+      "world": 2,
+      "name": "Npc_81104",
+      "initState": 0
+    },
+    {
+      "npcID": 81201,
+      "chapter": 2,
+      "region": 61201,
+      "world": 1,
+      "name": "Npc_81201",
+      "initState": 0
+    },
+    {
+      "npcID": 81202,
+      "chapter": 2,
+      "region": 61201,
+      "world": 1,
+      "name": "Npc_81202",
+      "initState": 0
+    },
+    {
+      "npcID": 81203,
+      "chapter": 2,
+      "region": 61201,
+      "world": 1,
+      "name": "Npc_81203",
+      "initState": 0
+    },
+    {
+      "npcID": 81301,
+      "chapter": 3,
+      "region": 61301,
+      "world": 1,
+      "name": "Npc_81301",
+      "initState": 0
+    },
+    {
+      "npcID": 81302,
+      "chapter": 3,
+      "region": 61301,
+      "world": 1,
+      "name": "Npc_81302",
+      "initState": 1
+    },
+    {
+      "npcID": 81303,
+      "chapter": 3,
+      "region": 61301,
+      "world": 1,
+      "name": "Npc_81303",
+      "initState": 0
+    },
+    {
+      "npcID": 81401,
+      "chapter": 4,
+      "region": 61401,
+      "world": 1,
+      "name": "Npc_81401",
+      "initState": 0
+    },
+    {
+      "npcID": 81402,
+      "chapter": 4,
+      "region": 61401,
+      "world": 1,
+      "name": "Npc_81402",
+      "initState": 0
+    }
+  ]
+}

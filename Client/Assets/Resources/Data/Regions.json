@@ -1,0 +1,134 @@
+{
+  "rows": [
+    {
+      "regionID": 61101,
+      "chapter": 1,
+      "conRegion": 0,
+      "name": "Region_61101",
+      "scene": "Village_Gamcheon",
+      "presetLiving": "Living_Forest",
+      "presetUnder": "Under_Forest",
+      "altarCount": 1
+    },
+    {
+      "regionID": 61102,
+      "chapter": 1,
+      "conRegion": 61101,
+      "name": "Region_61102",
+      "scene": "Forest_Angaegol",
+      "presetLiving": "Living_Forest",
+      "presetUnder": "Under_Forest",
+      "altarCount": 2
+    },
+    {
+      "regionID": 61103,
+      "chapter": 1,
+      "conRegion": 61102,
+      "name": "Region_61103",
+      "scene": "Shrine_Sansin",
+      "presetLiving": "Living_Forest",
+      "presetUnder": "Under_Forest",
+      "altarCount": 1
+    },
+    {
+      "regionID": 61201,
+      "chapter": 2,
+      "conRegion": 61103,
+      "name": "Region_61201",
+      "scene": "Port_Myeongjin",
+      "presetLiving": "Living_Coast",
+      "presetUnder": "Under_Coast",
+      "altarCount": 1
+    },
+    {
+      "regionID": 61202,
+      "chapter": 2,
+      "conRegion": 61201,
+      "name": "Region_61202",
+      "scene": "Tideland_Myeongjin",
+      "presetLiving": "Living_Coast",
+      "presetUnder": "Under_Coast",
+      "altarCount": 1
+    },
+    {
+      "regionID": 61203,
+      "chapter": 2,
+      "conRegion": 61202,
+      "name": "Region_61203",
+      "scene": "Wreck_Joun",
+      "presetLiving": "Living_Coast",
+      "presetUnder": "Under_Coast",
+      "altarCount": 1
+    },
+    {
+      "regionID": 61301,
+      "chapter": 3,
+      "conRegion": 61203,
+      "name": "Region_61301",
+      "scene": "Waste_Jaebeol",
+      "presetLiving": "Living_Waste",
+      "presetUnder": "Under_Waste",
+      "altarCount": 1
+    },
+    {
+      "regionID": 61302,
+      "chapter": 3,
+      "conRegion": 61301,
+      "name": "Region_61302",
+      "scene": "Waste_Circle",
+      "presetLiving": "Living_Waste",
+      "presetUnder": "Under_Waste",
+      "altarCount": 1
+    },
+    {
+      "regionID": 61401,
+      "chapter": 4,
+      "conRegion": 61302,
+      "name": "Region_61401",
+      "scene": "Ruin_City",
+      "presetLiving": "Living_Ruin",
+      "presetUnder": "Under_Ruin",
+      "altarCount": 1
+    },
+    {
+      "regionID": 61402,
+      "chapter": 4,
+      "conRegion": 61401,
+      "name": "Region_61402",
+      "scene": "Palace_Ruin",
+      "presetLiving": "Living_Ruin",
+      "presetUnder": "Under_Ruin",
+      "altarCount": 1
+    },
+    {
+      "regionID": 61403,
+      "chapter": 4,
+      "conRegion": 61402,
+      "name": "Region_61403",
+      "scene": "Core_Manryeong",
+      "presetLiving": "Living_Ruin",
+      "presetUnder": "Under_Ruin",
+      "altarCount": 1
+    },
+    {
+      "regionID": 61501,
+      "chapter": 5,
+      "conRegion": 61403,
+      "name": "Region_61501",
+      "scene": "Winter_Seolryeong",
+      "presetLiving": "Living_Winter",
+      "presetUnder": "Under_Winter",
+      "altarCount": 1
+    },
+    {
+      "regionID": 61502,
+      "chapter": 5,
+      "conRegion": 61501,
+      "name": "Region_61502",
+      "scene": "Gate_Hwangcheon",
+      "presetLiving": "Living_Winter",
+      "presetUnder": "Under_Winter",
+      "altarCount": 0
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "rows": [
+    {
+      "spawnGroupID": 92101,
+      "chapter": 1,
+      "composition": [
+        2000101,
+        2000102
+      ],
+      "countMin": 4,
+      "countMax": 7
+    },
+    {
+      "spawnGroupID": 92201,
+      "chapter": 2,
+      "composition": [
+        2000201,
+        2000202,
+        2000203
+      ],
+      "countMin": 5,
+      "countMax": 8
+    },
+    {
+      "spawnGroupID": 92301,
+      "chapter": 3,
+      "composition": [
+        2000301,
+        2000302,
+        2000303
+      ],
+      "countMin": 5,
+      "countMax": 8
+    },
+    {
+      "spawnGroupID": 92302,
+      "chapter": 3,
+      "composition": [
+        2000301,
+        2000302
+      ],
+      "countMin": 3,
+      "countMax": 5
+    },
+    {
+      "spawnGroupID": 92401,
+      "chapter": 4,
+      "composition": [
+        2000401,
+        2000402,
+        2000403
+      ],
+      "countMin": 5,
+      "countMax": 9
+    },
+    {
+      "spawnGroupID": 92501,
+      "chapter": 5,
+      "composition": [
+        2000501,
+        2000502,
+        2000503
+      ],
+      "countMin": 6,
+      "countMax": 10
+    },
+    {
+      "spawnGroupID": 92502,
+      "chapter": 5,
+      "composition": [
+        2000501,
+        2000502,
+        2000503
+      ],
+      "countMin": 12,
+      "countMax": 18
+    }
+  ]
+}

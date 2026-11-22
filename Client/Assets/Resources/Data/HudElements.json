@@ -1,0 +1,165 @@
+{
+  "rows": [
+    {
+      "elementID": 98001,
+      "area": "좌하단",
+      "name": "체력 게이지",
+      "sourceDoc": 4,
+      "alwaysOn": 1
+    },
+    {
+      "elementID": 98002,
+      "area": "우하단",
+      "name": "신력 게이지",
+      "sourceDoc": 4,
+      "alwaysOn": 1
+    },
+    {
+      "elementID": 98003,
+      "area": "하단 중앙",
+      "name": "스킬 슬롯 5칸",
+      "sourceDoc": 6,
+      "alwaysOn": 1
+    },
+    {
+      "elementID": 98004,
+      "area": "하단 중앙",
+      "name": "장착 무기 2칸",
+      "sourceDoc": 5,
+      "alwaysOn": 1
+    },
+    {
+      "elementID": 98005,
+      "area": "하단 중앙",
+      "name": "쌍신칼 중첩 표시",
+      "sourceDoc": 5,
+      "alwaysOn": 0
+    },
+    {
+      "elementID": 98006,
+      "area": "체력 위",
+      "name": "회피 충전",
+      "sourceDoc": 4,
+      "alwaysOn": 1
+    },
+    {
+      "elementID": 98007,
+      "area": "화면 하단",
+      "name": "경험치 바",
+      "sourceDoc": 12,
+      "alwaysOn": 1
+    },
+    {
+      "elementID": 98008,
+      "area": "캐릭터 위",
+      "name": "상태이상 아이콘",
+      "sourceDoc": 6,
+      "alwaysOn": 0
+    },
+    {
+      "elementID": 98009,
+      "area": "캐릭터 앞",
+      "name": "삼지창 반격 윈도우",
+      "sourceDoc": 5,
+      "alwaysOn": 0
+    },
+    {
+      "elementID": 98010,
+      "area": "화면 전체",
+      "name": "세계 상태 (톤·비네트)",
+      "sourceDoc": 2,
+      "alwaysOn": 1
+    },
+    {
+      "elementID": 98011,
+      "area": "우상단",
+      "name": "미니맵",
+      "sourceDoc": 2,
+      "alwaysOn": 1
+    },
+    {
+      "elementID": 98012,
+      "area": "좌상단",
+      "name": "현재 목표",
+      "sourceDoc": 11,
+      "alwaysOn": 1
+    },
+    {
+      "elementID": 98013,
+      "area": "상단 중앙",
+      "name": "퀘스트 완료 알림",
+      "sourceDoc": 11,
+      "alwaysOn": 0
+    },
+    {
+      "elementID": 98014,
+      "area": "적 머리 위",
+      "name": "적 체력바",
+      "sourceDoc": 7,
+      "alwaysOn": 0
+    },
+    {
+      "elementID": 98015,
+      "area": "적 머리 위",
+      "name": "적 경직 게이지",
+      "sourceDoc": 7,
+      "alwaysOn": 0
+    },
+    {
+      "elementID": 98016,
+      "area": "상단 중앙",
+      "name": "보스 체력바 · 페이즈 눈금",
+      "sourceDoc": 8,
+      "alwaysOn": 0
+    },
+    {
+      "elementID": 98017,
+      "area": "상단 중앙",
+      "name": "보스 붕괴 게이지",
+      "sourceDoc": 8,
+      "alwaysOn": 0
+    },
+    {
+      "elementID": 98018,
+      "area": "상단 중앙",
+      "name": "보스 예고 동작 경고",
+      "sourceDoc": 8,
+      "alwaysOn": 0
+    },
+    {
+      "elementID": 98019,
+      "area": "월드",
+      "name": "피해 숫자",
+      "sourceDoc": 7,
+      "alwaysOn": 0
+    },
+    {
+      "elementID": 98020,
+      "area": "월드",
+      "name": "감응 표시",
+      "sourceDoc": 9,
+      "alwaysOn": 0
+    },
+    {
+      "elementID": 98021,
+      "area": "캐릭터 앞",
+      "name": "상호작용 프롬프트",
+      "sourceDoc": 9,
+      "alwaysOn": 1
+    },
+    {
+      "elementID": 98022,
+      "area": "하단 중앙",
+      "name": "대화창",
+      "sourceDoc": 10,
+      "alwaysOn": 0
+    },
+    {
+      "elementID": 98023,
+      "area": "하단 중앙",
+      "name": "대화 선택지",
+      "sourceDoc": 10,
+      "alwaysOn": 0
+    }
+  ]
+}

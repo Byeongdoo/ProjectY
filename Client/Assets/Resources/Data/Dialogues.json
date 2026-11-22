@@ -1,0 +1,132 @@
+{
+  "rows": [
+    {
+      "dialogueID": 811010,
+      "npc": 81101,
+      "state": 0,
+      "giveClue": 51101,
+      "belief": 0,
+      "textKey": "Dlg_811010"
+    },
+    {
+      "dialogueID": 811021,
+      "npc": 81102,
+      "state": 1,
+      "giveClue": 0,
+      "belief": 0,
+      "textKey": "Dlg_811021"
+    },
+    {
+      "dialogueID": 811022,
+      "npc": 81102,
+      "state": 2,
+      "giveClue": 0,
+      "belief": 0,
+      "textKey": "Dlg_811022"
+    },
+    {
+      "dialogueID": 811031,
+      "npc": 81103,
+      "state": 1,
+      "giveClue": 0,
+      "belief": 0,
+      "textKey": "Dlg_811031"
+    },
+    {
+      "dialogueID": 811040,
+      "npc": 81104,
+      "state": 0,
+      "giveClue": 0,
+      "belief": 0,
+      "textKey": "Dlg_811040"
+    },
+    {
+      "dialogueID": 811043,
+      "npc": 81104,
+      "state": 3,
+      "giveClue": 0,
+      "belief": 0,
+      "textKey": "Dlg_811043"
+    },
+    {
+      "dialogueID": 812010,
+      "npc": 81201,
+      "state": 0,
+      "giveClue": 0,
+      "belief": 0,
+      "textKey": "Dlg_812010"
+    },
+    {
+      "dialogueID": 812020,
+      "npc": 81202,
+      "state": 0,
+      "giveClue": 51202,
+      "belief": 1,
+      "textKey": "Dlg_812020"
+    },
+    {
+      "dialogueID": 812030,
+      "npc": 81203,
+      "state": 0,
+      "giveClue": 0,
+      "belief": 0,
+      "textKey": "Dlg_812030"
+    },
+    {
+      "dialogueID": 812033,
+      "npc": 81203,
+      "state": 3,
+      "giveClue": 0,
+      "belief": 0,
+      "textKey": "Dlg_812033"
+    },
+    {
+      "dialogueID": 813010,
+      "npc": 81301,
+      "state": 0,
+      "giveClue": 51301,
+      "belief": 0,
+      "textKey": "Dlg_813010"
+    },
+    {
+      "dialogueID": 813021,
+      "npc": 81302,
+      "state": 1,
+      "giveClue": 0,
+      "belief": 0,
+      "textKey": "Dlg_813021"
+    },
+    {
+      "dialogueID": 813030,
+      "npc": 81303,
+      "state": 0,
+      "giveClue": 0,
+      "belief": 1,
+      "textKey": "Dlg_813030"
+    },
+    {
+      "dialogueID": 814010,
+      "npc": 81401,
+      "state": 0,
+      "giveClue": 51401,
+      "belief": 1,
+      "textKey": "Dlg_814010"
+    },
+    {
+      "dialogueID": 814020,
+      "npc": 81402,
+      "state": 0,
+      "giveClue": 0,
+      "belief": 0,
+      "textKey": "Dlg_814020"
+    },
+    {
+      "dialogueID": 814024,
+      "npc": 81402,
+      "state": 4,
+      "giveClue": 0,
+      "belief": 0,
+      "textKey": "Dlg_814024"
+    }
+  ]
+}

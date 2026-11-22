@@ -1,0 +1,44 @@
+{
+  "rows": [
+    {
+      "dropID": 9101,
+      "monsterType": 9001,
+      "itemRate": 0.05,
+      "countMin": 1,
+      "countMax": 1,
+      "dropGroup": 96001
+    },
+    {
+      "dropID": 9102,
+      "monsterType": 9002,
+      "itemRate": 0.12,
+      "countMin": 1,
+      "countMax": 1,
+      "dropGroup": 96002
+    },
+    {
+      "dropID": 9103,
+      "monsterType": 9003,
+      "itemRate": 0.15,
+      "countMin": 1,
+      "countMax": 1,
+      "dropGroup": 96003
+    },
+    {
+      "dropID": 9104,
+      "monsterType": 9004,
+      "itemRate": 0.45,
+      "countMin": 1,
+      "countMax": 2,
+      "dropGroup": 96004
+    },
+    {
+      "dropID": 9105,
+      "monsterType": 9005,
+      "itemRate": 1,
+      "countMin": 2,
+      "countMax": 3,
+      "dropGroup": 96005
+    }
+  ]
+}

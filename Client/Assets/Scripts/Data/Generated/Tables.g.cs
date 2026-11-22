@@ -45,6 +45,458 @@ namespace Table
         }
     }
 
+    // ===== configs =====
+    [Serializable]
+    public class ConfigsRow
+    {
+        /// <summary>고유 아이디</summary>
+        public int configID;
+        /// <summary>값</summary>
+        public List<float> value = new List<float>();
+    }
+
+    [Serializable]
+    public class ConfigsFile
+    {
+        public List<ConfigsRow> rows = new List<ConfigsRow>();
+    }
+
+    public sealed class ConfigsTable : RowTable<int, ConfigsRow>
+    {
+        public ConfigsTable(IEnumerable<ConfigsRow> rows) : base("configs", rows, r => r.configID) { }
+    }
+
+    // ===== regions =====
+    [Serializable]
+    public class RegionsRow
+    {
+        /// <summary>고유 아이디</summary>
+        public int regionID;
+        /// <summary>챕터</summary>
+        public int chapter;
+        /// <summary>선행 지역</summary>
+        public int conRegion;
+        /// <summary>지역 이름</summary>
+        public string name = "";
+        /// <summary>맵 리소스</summary>
+        public string scene = "";
+        /// <summary>이승 연출 프리셋</summary>
+        public string presetLiving = "";
+        /// <summary>저승 연출 프리셋</summary>
+        public string presetUnder = "";
+        /// <summary>신단 개수</summary>
+        public int altarCount;
+    }
+
+    [Serializable]
+    public class RegionsFile
+    {
+        public List<RegionsRow> rows = new List<RegionsRow>();
+    }
+
+    public sealed class RegionsTable : RowTable<int, RegionsRow>
+    {
+        public RegionsTable(IEnumerable<RegionsRow> rows) : base("regions", rows, r => r.regionID) { }
+    }
+
+    // ===== passages =====
+    [Serializable]
+    public class PassagesRow
+    {
+        /// <summary>고유 아이디</summary>
+        public int passageID;
+        /// <summary>소속 지역</summary>
+        public int region;
+        /// <summary>연결 지역</summary>
+        public int linkRegion;
+        /// <summary>이승 통행</summary>
+        public int livingPass;
+        /// <summary>저승 통행</summary>
+        public int underPass;
+        /// <summary>개방 영향</summary>
+        public int openBy;
+    }
+
+    [Serializable]
+    public class PassagesFile
+    {
+        public List<PassagesRow> rows = new List<PassagesRow>();
+    }
+
+    public sealed class PassagesTable : RowTable<int, PassagesRow>
+    {
+        public PassagesTable(IEnumerable<PassagesRow> rows) : base("passages", rows, r => r.passageID) { }
+    }
+
+    // ===== worldEffects =====
+    [Serializable]
+    public class WorldEffectsRow
+    {
+        /// <summary>고유 아이디</summary>
+        public int worldEffectID;
+        /// <summary>발생 지역</summary>
+        public int region;
+        /// <summary>발동 세계</summary>
+        public int triggerWorld;
+        /// <summary>발동 타입</summary>
+        public int triggerType;
+        /// <summary>발동 값</summary>
+        public int triggerValue;
+        /// <summary>대상 세계</summary>
+        public int targetWorld;
+        /// <summary>결과 타입</summary>
+        public int resultType;
+        /// <summary>결과 값</summary>
+        public int resultValue;
+    }
+
+    [Serializable]
+    public class WorldEffectsFile
+    {
+        public List<WorldEffectsRow> rows = new List<WorldEffectsRow>();
+    }
+
+    public sealed class WorldEffectsTable : RowTable<int, WorldEffectsRow>
+    {
+        public WorldEffectsTable(IEnumerable<WorldEffectsRow> rows) : base("worldEffects", rows, r => r.worldEffectID) { }
+    }
+
+    // ===== cases =====
+    [Serializable]
+    public class CasesRow
+    {
+        /// <summary>고유 아이디</summary>
+        public int caseID;
+        /// <summary>챕터</summary>
+        public int chapter;
+        /// <summary>사건 이름</summary>
+        public string name = "";
+        /// <summary>필요 단서 수</summary>
+        public int requiredClues;
+    }
+
+    [Serializable]
+    public class CasesFile
+    {
+        public List<CasesRow> rows = new List<CasesRow>();
+    }
+
+    public sealed class CasesTable : RowTable<int, CasesRow>
+    {
+        public CasesTable(IEnumerable<CasesRow> rows) : base("cases", rows, r => r.caseID) { }
+    }
+
+    // ===== clues =====
+    [Serializable]
+    public class CluesRow
+    {
+        /// <summary>고유 아이디</summary>
+        public int clueID;
+        /// <summary>사건</summary>
+        public int @case;
+        /// <summary>챕터</summary>
+        public int chapter;
+        /// <summary>조사 지역</summary>
+        public int region;
+        /// <summary>세계</summary>
+        public int world;
+        /// <summary>획득 방법</summary>
+        public int acquireType;
+        /// <summary>퍼즐 타입</summary>
+        public int puzzleType;
+        /// <summary>활성 조건</summary>
+        public int enableBy;
+        /// <summary>단서 이름</summary>
+        public string name = "";
+    }
+
+    [Serializable]
+    public class CluesFile
+    {
+        public List<CluesRow> rows = new List<CluesRow>();
+    }
+
+    public sealed class CluesTable : RowTable<int, CluesRow>
+    {
+        public CluesTable(IEnumerable<CluesRow> rows) : base("clues", rows, r => r.clueID) { }
+    }
+
+    // ===== npcs =====
+    [Serializable]
+    public class NpcsRow
+    {
+        /// <summary>고유 아이디</summary>
+        public int npcID;
+        /// <summary>챕터</summary>
+        public int chapter;
+        /// <summary>배치 지역</summary>
+        public int region;
+        /// <summary>세계</summary>
+        public int world;
+        /// <summary>NPC 이름</summary>
+        public string name = "";
+        /// <summary>초기 상태</summary>
+        public int initState;
+    }
+
+    [Serializable]
+    public class NpcsFile
+    {
+        public List<NpcsRow> rows = new List<NpcsRow>();
+    }
+
+    public sealed class NpcsTable : RowTable<int, NpcsRow>
+    {
+        public NpcsTable(IEnumerable<NpcsRow> rows) : base("npcs", rows, r => r.npcID) { }
+    }
+
+    // ===== dialogues =====
+    [Serializable]
+    public class DialoguesRow
+    {
+        /// <summary>고유 아이디</summary>
+        public int dialogueID;
+        /// <summary>NPC</summary>
+        public int npc;
+        /// <summary>상태</summary>
+        public int state;
+        /// <summary>부여 단서</summary>
+        public int giveClue;
+        /// <summary>신념 선택</summary>
+        public int belief;
+        /// <summary>대사 키</summary>
+        public string textKey = "";
+    }
+
+    [Serializable]
+    public class DialoguesFile
+    {
+        public List<DialoguesRow> rows = new List<DialoguesRow>();
+    }
+
+    public sealed class DialoguesTable : RowTable<int, DialoguesRow>
+    {
+        public DialoguesTable(IEnumerable<DialoguesRow> rows) : base("dialogues", rows, r => r.dialogueID) { }
+    }
+
+    // ===== quests =====
+    [Serializable]
+    public class QuestsRow
+    {
+        /// <summary>고유 아이디</summary>
+        public int questID;
+        /// <summary>타입</summary>
+        public int type;
+        /// <summary>챕터</summary>
+        public int chapter;
+        /// <summary>지역</summary>
+        public int region;
+        /// <summary>의뢰 NPC</summary>
+        public int giverNpc;
+        /// <summary>퀘스트 이름</summary>
+        public string name = "";
+        /// <summary>완료 조건</summary>
+        public int conditionType;
+        /// <summary>조건 값</summary>
+        public int conditionValue;
+        /// <summary>조건 수량</summary>
+        public int conditionCount;
+        /// <summary>경험치 보상</summary>
+        public int rewardExp;
+        /// <summary>보상 아이템</summary>
+        public int rewardItem;
+    }
+
+    [Serializable]
+    public class QuestsFile
+    {
+        public List<QuestsRow> rows = new List<QuestsRow>();
+    }
+
+    public sealed class QuestsTable : RowTable<int, QuestsRow>
+    {
+        public QuestsTable(IEnumerable<QuestsRow> rows) : base("quests", rows, r => r.questID) { }
+    }
+
+    // ===== beliefChoices =====
+    [Serializable]
+    public class BeliefChoicesRow
+    {
+        /// <summary>고유 아이디</summary>
+        public int choiceID;
+        /// <summary>대화</summary>
+        public int dialogue;
+        /// <summary>챕터</summary>
+        public int chapter;
+        /// <summary>선택지</summary>
+        public string option = "";
+        /// <summary>신념 값</summary>
+        public int beliefValue;
+        /// <summary>문안 키</summary>
+        public string textKey = "";
+    }
+
+    [Serializable]
+    public class BeliefChoicesFile
+    {
+        public List<BeliefChoicesRow> rows = new List<BeliefChoicesRow>();
+    }
+
+    public sealed class BeliefChoicesTable : RowTable<int, BeliefChoicesRow>
+    {
+        public BeliefChoicesTable(IEnumerable<BeliefChoicesRow> rows) : base("beliefChoices", rows, r => r.choiceID) { }
+    }
+
+    // ===== chapters =====
+    [Serializable]
+    public class ChaptersRow
+    {
+        /// <summary>고유 아이디</summary>
+        public int chapterID;
+        /// <summary>선행 챕터</summary>
+        public int conChapter;
+        /// <summary>챕터 이름</summary>
+        public string name = "";
+        /// <summary>챕터 부제</summary>
+        public string subtitle = "";
+        /// <summary>시작 지역</summary>
+        public int startRegion;
+        /// <summary>보스 지역</summary>
+        public int bossRegion;
+        /// <summary>보스</summary>
+        public int boss;
+        /// <summary>클리어 단계</summary>
+        public int clearStep;
+    }
+
+    [Serializable]
+    public class ChaptersFile
+    {
+        public List<ChaptersRow> rows = new List<ChaptersRow>();
+    }
+
+    public sealed class ChaptersTable : RowTable<int, ChaptersRow>
+    {
+        public ChaptersTable(IEnumerable<ChaptersRow> rows) : base("chapters", rows, r => r.chapterID) { }
+    }
+
+    // ===== chapterSteps =====
+    [Serializable]
+    public class ChapterStepsRow
+    {
+        /// <summary>고유 아이디</summary>
+        public int stepID;
+        /// <summary>챕터</summary>
+        public int chapter;
+        /// <summary>단계</summary>
+        public int step;
+        /// <summary>지역</summary>
+        public int region;
+        /// <summary>세계</summary>
+        public int world;
+        /// <summary>단계 타입</summary>
+        public int stepType;
+        /// <summary>신념 선택</summary>
+        public int beliefChoice;
+    }
+
+    [Serializable]
+    public class ChapterStepsFile
+    {
+        public List<ChapterStepsRow> rows = new List<ChapterStepsRow>();
+    }
+
+    public sealed class ChapterStepsTable : RowTable<int, ChapterStepsRow>
+    {
+        public ChapterStepsTable(IEnumerable<ChapterStepsRow> rows) : base("chapterSteps", rows, r => r.stepID) { }
+    }
+
+    // ===== characterInfos =====
+    [Serializable]
+    public class CharacterInfosRow
+    {
+        /// <summary>고유 아이디</summary>
+        public int characterID;
+        /// <summary>타입</summary>
+        public int type;
+        /// <summary>인덱스</summary>
+        public int index;
+        /// <summary>분류</summary>
+        public int monsterType;
+        /// <summary>챕터</summary>
+        public int chapter;
+        /// <summary>출현 지역</summary>
+        public int region;
+        /// <summary>캐릭터 이름</summary>
+        public string name = "";
+        /// <summary>프리팹 이름</summary>
+        public string prefabName = "";
+        /// <summary>탐지 범위</summary>
+        public int scanRange;
+        /// <summary>복귀 거리</summary>
+        public int leashRange;
+        /// <summary>드랍</summary>
+        public int dropID;
+    }
+
+    [Serializable]
+    public class CharacterInfosFile
+    {
+        public List<CharacterInfosRow> rows = new List<CharacterInfosRow>();
+    }
+
+    public sealed class CharacterInfosTable : RowTable<int, CharacterInfosRow>
+    {
+        public CharacterInfosTable(IEnumerable<CharacterInfosRow> rows) : base("characterInfos", rows, r => r.characterID) { }
+    }
+
+    // ===== characterLevel =====
+    [Serializable]
+    public class CharacterLevelRow
+    {
+        /// <summary>그룹 아이디</summary>
+        public int group;
+        /// <summary>레벨</summary>
+        public int level;
+        /// <summary>공격력</summary>
+        public int attack;
+        /// <summary>방어율</summary>
+        public float defence;
+        /// <summary>체력</summary>
+        public int maxHP;
+        /// <summary>신력</summary>
+        public int maxSpirit;
+        /// <summary>치명타 확률</summary>
+        public float critical;
+        /// <summary>치명타 배율</summary>
+        public float criticalAttack;
+        /// <summary>공격 속도</summary>
+        public float attackSpeed;
+        /// <summary>이동 속도(칸/초)</summary>
+        public float moveSpeed;
+        /// <summary>경직 저항</summary>
+        public int staggerResist;
+        /// <summary>경직 한계치</summary>
+        public int staggerMax;
+        /// <summary>경험치 보상</summary>
+        public int expReward;
+        /// <summary>다음 레벨 필요 경험치</summary>
+        public int expToNext;
+        /// <summary>누적 경험치</summary>
+        public int expTotal;
+    }
+
+    [Serializable]
+    public class CharacterLevelFile
+    {
+        public List<CharacterLevelRow> rows = new List<CharacterLevelRow>();
+    }
+
+    public sealed class CharacterLevelTable : RowTable<(int group, int level), CharacterLevelRow>
+    {
+        public CharacterLevelTable(IEnumerable<CharacterLevelRow> rows) : base("characterLevel", rows, r => (r.group, r.level)) { }
+    }
+
     // ===== spirits =====
     [Serializable]
     public class SpiritsRow
@@ -143,66 +595,474 @@ namespace Table
         public SpiritSkillsTable(IEnumerable<SpiritSkillsRow> rows) : base("spiritSkills", rows, r => r.skillID) { }
     }
 
-    // ===== characterLevel =====
+    // ===== monsterTypes =====
     [Serializable]
-    public class CharacterLevelRow
+    public class MonsterTypesRow
     {
-        /// <summary>그룹 아이디</summary>
-        public int group;
-        /// <summary>레벨</summary>
-        public int level;
-        /// <summary>공격력</summary>
-        public int attack;
-        /// <summary>방어율</summary>
-        public float defence;
-        /// <summary>체력</summary>
-        public int maxHP;
-        /// <summary>신력</summary>
-        public int maxSpirit;
-        /// <summary>치명타 확률</summary>
-        public float critical;
-        /// <summary>치명타 배율</summary>
-        public float criticalAttack;
-        /// <summary>공격 속도</summary>
-        public float attackSpeed;
-        /// <summary>이동 속도(칸/초)</summary>
-        public float moveSpeed;
-        /// <summary>경직 저항</summary>
-        public int staggerResist;
+        /// <summary>고유 아이디</summary>
+        public int monsterTypeID;
+        /// <summary>분류 이름</summary>
+        public string name = "";
+        /// <summary>공격력 배율</summary>
+        public float atkMul;
+        /// <summary>체력 배율</summary>
+        public float hpMul;
+        /// <summary>방어율 배율</summary>
+        public float defMul;
+        /// <summary>이동속도 배율</summary>
+        public float moveMul;
         /// <summary>경직 한계치</summary>
         public int staggerMax;
-        /// <summary>경험치 보상</summary>
-        public int expReward;
-        /// <summary>다음 레벨 필요 경험치</summary>
-        public int expToNext;
-        /// <summary>누적 경험치</summary>
-        public int expTotal;
+        /// <summary>보상 배율</summary>
+        public float rewardMul;
     }
 
     [Serializable]
-    public class CharacterLevelFile
+    public class MonsterTypesFile
     {
-        public List<CharacterLevelRow> rows = new List<CharacterLevelRow>();
+        public List<MonsterTypesRow> rows = new List<MonsterTypesRow>();
     }
 
-    public sealed class CharacterLevelTable : RowTable<(int group, int level), CharacterLevelRow>
+    public sealed class MonsterTypesTable : RowTable<int, MonsterTypesRow>
     {
-        public CharacterLevelTable(IEnumerable<CharacterLevelRow> rows) : base("characterLevel", rows, r => (r.group, r.level)) { }
+        public MonsterTypesTable(IEnumerable<MonsterTypesRow> rows) : base("monsterTypes", rows, r => r.monsterTypeID) { }
+    }
+
+    // ===== statusEffects =====
+    [Serializable]
+    public class StatusEffectsRow
+    {
+        /// <summary>고유 아이디</summary>
+        public int statusID;
+        /// <summary>상태이상 이름</summary>
+        public string name = "";
+        /// <summary>효과 값</summary>
+        public float value;
+        /// <summary>최대 중첩</summary>
+        public int maxStack;
+    }
+
+    [Serializable]
+    public class StatusEffectsFile
+    {
+        public List<StatusEffectsRow> rows = new List<StatusEffectsRow>();
+    }
+
+    public sealed class StatusEffectsTable : RowTable<int, StatusEffectsRow>
+    {
+        public StatusEffectsTable(IEnumerable<StatusEffectsRow> rows) : base("statusEffects", rows, r => r.statusID) { }
+    }
+
+    // ===== drops =====
+    [Serializable]
+    public class DropsRow
+    {
+        /// <summary>고유 아이디</summary>
+        public int dropID;
+        /// <summary>분류</summary>
+        public int monsterType;
+        /// <summary>아이템 드랍 확률</summary>
+        public float itemRate;
+        /// <summary>최소 개수</summary>
+        public int countMin;
+        /// <summary>최대 개수</summary>
+        public int countMax;
+        /// <summary>드랍 그룹</summary>
+        public int dropGroup;
+    }
+
+    [Serializable]
+    public class DropsFile
+    {
+        public List<DropsRow> rows = new List<DropsRow>();
+    }
+
+    public sealed class DropsTable : RowTable<int, DropsRow>
+    {
+        public DropsTable(IEnumerable<DropsRow> rows) : base("drops", rows, r => r.dropID) { }
+    }
+
+    // ===== spawnGroups =====
+    [Serializable]
+    public class SpawnGroupsRow
+    {
+        /// <summary>고유 아이디</summary>
+        public int spawnGroupID;
+        /// <summary>챕터</summary>
+        public int chapter;
+        /// <summary>구성</summary>
+        public List<int> composition = new List<int>();
+        /// <summary>최소 수</summary>
+        public int countMin;
+        /// <summary>최대 수</summary>
+        public int countMax;
+    }
+
+    [Serializable]
+    public class SpawnGroupsFile
+    {
+        public List<SpawnGroupsRow> rows = new List<SpawnGroupsRow>();
+    }
+
+    public sealed class SpawnGroupsTable : RowTable<int, SpawnGroupsRow>
+    {
+        public SpawnGroupsTable(IEnumerable<SpawnGroupsRow> rows) : base("spawnGroups", rows, r => r.spawnGroupID) { }
+    }
+
+    // ===== items =====
+    [Serializable]
+    public class ItemsRow
+    {
+        /// <summary>고유 아이디</summary>
+        public int itemID;
+        /// <summary>부위</summary>
+        public int slot;
+        /// <summary>등급</summary>
+        public int grade;
+        /// <summary>아이템 이름</summary>
+        public string name = "";
+        /// <summary>주 스탯</summary>
+        public int mainStat;
+        /// <summary>주 스탯 값</summary>
+        public float mainValue;
+        /// <summary>부 스탯</summary>
+        public int subStat;
+        /// <summary>부 스탯 값</summary>
+        public float subValue;
+    }
+
+    [Serializable]
+    public class ItemsFile
+    {
+        public List<ItemsRow> rows = new List<ItemsRow>();
+    }
+
+    public sealed class ItemsTable : RowTable<int, ItemsRow>
+    {
+        public ItemsTable(IEnumerable<ItemsRow> rows) : base("items", rows, r => r.itemID) { }
+    }
+
+    // ===== itemEnchants =====
+    [Serializable]
+    public class ItemEnchantsRow
+    {
+        /// <summary>고유 아이디</summary>
+        public int enchantID;
+        /// <summary>강화 단계</summary>
+        public int level;
+        /// <summary>필요 혼백</summary>
+        public int cost;
+        /// <summary>주 스탯 증가율</summary>
+        public float mainBonus;
+    }
+
+    [Serializable]
+    public class ItemEnchantsFile
+    {
+        public List<ItemEnchantsRow> rows = new List<ItemEnchantsRow>();
+    }
+
+    public sealed class ItemEnchantsTable : RowTable<int, ItemEnchantsRow>
+    {
+        public ItemEnchantsTable(IEnumerable<ItemEnchantsRow> rows) : base("itemEnchants", rows, r => r.enchantID) { }
+    }
+
+    // ===== dropGroups =====
+    [Serializable]
+    public class DropGroupsRow
+    {
+        /// <summary>고유 아이디</summary>
+        public int dropGroupID;
+        /// <summary>범 확률</summary>
+        public float rateNormal;
+        /// <summary>상 확률</summary>
+        public float rateHigh;
+        /// <summary>진 확률</summary>
+        public float rateRare;
+        /// <summary>영 확률</summary>
+        public float rateEpic;
+        /// <summary>신 확률</summary>
+        public float rateLegendary;
+    }
+
+    [Serializable]
+    public class DropGroupsFile
+    {
+        public List<DropGroupsRow> rows = new List<DropGroupsRow>();
+    }
+
+    public sealed class DropGroupsTable : RowTable<int, DropGroupsRow>
+    {
+        public DropGroupsTable(IEnumerable<DropGroupsRow> rows) : base("dropGroups", rows, r => r.dropGroupID) { }
+    }
+
+    // ===== hudElements =====
+    [Serializable]
+    public class HudElementsRow
+    {
+        /// <summary>고유 아이디</summary>
+        public int elementID;
+        /// <summary>화면 영역</summary>
+        public string area = "";
+        /// <summary>요소 이름</summary>
+        public string name = "";
+        /// <summary>요구 문서 번호</summary>
+        public int sourceDoc;
+        /// <summary>상시 노출</summary>
+        public int alwaysOn;
+    }
+
+    [Serializable]
+    public class HudElementsFile
+    {
+        public List<HudElementsRow> rows = new List<HudElementsRow>();
+    }
+
+    public sealed class HudElementsTable : RowTable<int, HudElementsRow>
+    {
+        public HudElementsTable(IEnumerable<HudElementsRow> rows) : base("hudElements", rows, r => r.elementID) { }
+    }
+
+    // ===== bossPhases =====
+    [Serializable]
+    public class BossPhasesRow
+    {
+        /// <summary>고유 아이디</summary>
+        public int phaseID;
+        /// <summary>보스</summary>
+        public int boss;
+        /// <summary>페이즈</summary>
+        public int phase;
+        /// <summary>시작 체력 비율</summary>
+        public float hpStart;
+    }
+
+    [Serializable]
+    public class BossPhasesFile
+    {
+        public List<BossPhasesRow> rows = new List<BossPhasesRow>();
+    }
+
+    public sealed class BossPhasesTable : RowTable<int, BossPhasesRow>
+    {
+        public BossPhasesTable(IEnumerable<BossPhasesRow> rows) : base("bossPhases", rows, r => r.phaseID) { }
+    }
+
+    // ===== bossSkills =====
+    [Serializable]
+    public class BossSkillsRow
+    {
+        /// <summary>고유 아이디</summary>
+        public int bossSkillID;
+        /// <summary>보스</summary>
+        public int boss;
+        /// <summary>페이즈</summary>
+        public int phase;
+        /// <summary>스킬 이름</summary>
+        public string name = "";
+        /// <summary>패턴</summary>
+        public int pattern;
+        /// <summary>대상 규칙</summary>
+        public int targetRule;
+        /// <summary>피해 계수</summary>
+        public float coefficient;
+        /// <summary>예고 시간</summary>
+        public float castTime;
+        /// <summary>쿨타임</summary>
+        public float coolTime;
+        /// <summary>최대 대상 수</summary>
+        public int maxTarget;
+        /// <summary>탈출 칸</summary>
+        public int escapeTiles;
+        /// <summary>상태이상</summary>
+        public int status;
+        /// <summary>상태이상 시간</summary>
+        public float statusTime;
+        /// <summary>탈진 시간</summary>
+        public float exhaustTime;
+    }
+
+    [Serializable]
+    public class BossSkillsFile
+    {
+        public List<BossSkillsRow> rows = new List<BossSkillsRow>();
+    }
+
+    public sealed class BossSkillsTable : RowTable<int, BossSkillsRow>
+    {
+        public BossSkillsTable(IEnumerable<BossSkillsRow> rows) : base("bossSkills", rows, r => r.bossSkillID) { }
+    }
+
+    // ===== dungeons =====
+    [Serializable]
+    public class DungeonsRow
+    {
+        /// <summary>고유 아이디</summary>
+        public int dungeonID;
+        /// <summary>챕터</summary>
+        public int chapter;
+        /// <summary>던전 이름</summary>
+        public string name = "";
+        /// <summary>보스</summary>
+        public int boss;
+        /// <summary>지역</summary>
+        public List<int> regions = new List<int>();
+        /// <summary>해금 단계</summary>
+        public int unlockStep;
+        /// <summary>완료 단계</summary>
+        public int clearStep;
+        /// <summary>기준 레벨</summary>
+        public int syncLevel;
+        /// <summary>적 체력 배율</summary>
+        public float mobHpRate;
+        /// <summary>구간 수</summary>
+        public int sectionCount;
+        /// <summary>단서</summary>
+        public List<int> clueIDs = new List<int>();
+        /// <summary>클리어 드랍 그룹</summary>
+        public int dropGroup;
+    }
+
+    [Serializable]
+    public class DungeonsFile
+    {
+        public List<DungeonsRow> rows = new List<DungeonsRow>();
+    }
+
+    public sealed class DungeonsTable : RowTable<int, DungeonsRow>
+    {
+        public DungeonsTable(IEnumerable<DungeonsRow> rows) : base("dungeons", rows, r => r.dungeonID) { }
+    }
+
+    // ===== dungeonSections =====
+    [Serializable]
+    public class DungeonSectionsRow
+    {
+        /// <summary>고유 아이디</summary>
+        public int sectionID;
+        /// <summary>던전</summary>
+        public int dungeonID;
+        /// <summary>순서</summary>
+        public int order;
+        /// <summary>구간 타입</summary>
+        public int sectionType;
+        /// <summary>지역</summary>
+        public int region;
+        /// <summary>스폰 그룹</summary>
+        public int spawnGroup;
+        /// <summary>팩 수</summary>
+        public int packCount;
+        /// <summary>정예</summary>
+        public int eliteID;
+        /// <summary>챕터 단계</summary>
+        public int stepID;
+    }
+
+    [Serializable]
+    public class DungeonSectionsFile
+    {
+        public List<DungeonSectionsRow> rows = new List<DungeonSectionsRow>();
+    }
+
+    public sealed class DungeonSectionsTable : RowTable<int, DungeonSectionsRow>
+    {
+        public DungeonSectionsTable(IEnumerable<DungeonSectionsRow> rows) : base("dungeonSections", rows, r => r.sectionID) { }
+    }
+
+    // ===== strings =====
+    [Serializable]
+    public class StringsRow
+    {
+        /// <summary>아이디</summary>
+        public string stringID = "";
+        /// <summary>한국어</summary>
+        public string KR = "";
+        /// <summary>영어</summary>
+        public string EN = "";
+        /// <summary>중국어</summary>
+        public string CN = "";
+        /// <summary>대만어</summary>
+        public string TW = "";
+        /// <summary>일본어</summary>
+        public string JP = "";
+    }
+
+    [Serializable]
+    public class StringsFile
+    {
+        public List<StringsRow> rows = new List<StringsRow>();
+    }
+
+    public sealed class StringsTable : RowTable<string, StringsRow>
+    {
+        public StringsTable(IEnumerable<StringsRow> rows) : base("strings", rows, r => r.stringID) { }
     }
 
     /// <summary>모든 마스터 테이블에 접근하는 진입점. 시작 시 LoadAll을 한 번 호출한다.</summary>
     public static partial class TableManager
     {
+        public static ConfigsTable Configs { get; private set; }
+        public static RegionsTable Regions { get; private set; }
+        public static PassagesTable Passages { get; private set; }
+        public static WorldEffectsTable WorldEffects { get; private set; }
+        public static CasesTable Cases { get; private set; }
+        public static CluesTable Clues { get; private set; }
+        public static NpcsTable Npcs { get; private set; }
+        public static DialoguesTable Dialogues { get; private set; }
+        public static QuestsTable Quests { get; private set; }
+        public static BeliefChoicesTable BeliefChoices { get; private set; }
+        public static ChaptersTable Chapters { get; private set; }
+        public static ChapterStepsTable ChapterSteps { get; private set; }
+        public static CharacterInfosTable CharacterInfos { get; private set; }
+        public static CharacterLevelTable CharacterLevel { get; private set; }
         public static SpiritsTable Spirits { get; private set; }
         public static SpiritSkillsTable SpiritSkills { get; private set; }
-        public static CharacterLevelTable CharacterLevel { get; private set; }
+        public static MonsterTypesTable MonsterTypes { get; private set; }
+        public static StatusEffectsTable StatusEffects { get; private set; }
+        public static DropsTable Drops { get; private set; }
+        public static SpawnGroupsTable SpawnGroups { get; private set; }
+        public static ItemsTable Items { get; private set; }
+        public static ItemEnchantsTable ItemEnchants { get; private set; }
+        public static DropGroupsTable DropGroups { get; private set; }
+        public static HudElementsTable HudElements { get; private set; }
+        public static BossPhasesTable BossPhases { get; private set; }
+        public static BossSkillsTable BossSkills { get; private set; }
+        public static DungeonsTable Dungeons { get; private set; }
+        public static DungeonSectionsTable DungeonSections { get; private set; }
+        public static StringsTable Strings { get; private set; }
 
         /// <summary>하나라도 실패하면 어느 파일인지 담은 예외를 던진다. 호출 쪽은 즉시 종료해야 한다.</summary>
         public static void LoadAll(ITableReader reader)
         {
+            Configs = Load<ConfigsFile, ConfigsTable>(reader, "Configs", f => new ConfigsTable(f.rows));
+            Regions = Load<RegionsFile, RegionsTable>(reader, "Regions", f => new RegionsTable(f.rows));
+            Passages = Load<PassagesFile, PassagesTable>(reader, "Passages", f => new PassagesTable(f.rows));
+            WorldEffects = Load<WorldEffectsFile, WorldEffectsTable>(reader, "WorldEffects", f => new WorldEffectsTable(f.rows));
+            Cases = Load<CasesFile, CasesTable>(reader, "Cases", f => new CasesTable(f.rows));
+            Clues = Load<CluesFile, CluesTable>(reader, "Clues", f => new CluesTable(f.rows));
+            Npcs = Load<NpcsFile, NpcsTable>(reader, "Npcs", f => new NpcsTable(f.rows));
+            Dialogues = Load<DialoguesFile, DialoguesTable>(reader, "Dialogues", f => new DialoguesTable(f.rows));
+            Quests = Load<QuestsFile, QuestsTable>(reader, "Quests", f => new QuestsTable(f.rows));
+            BeliefChoices = Load<BeliefChoicesFile, BeliefChoicesTable>(reader, "BeliefChoices", f => new BeliefChoicesTable(f.rows));
+            Chapters = Load<ChaptersFile, ChaptersTable>(reader, "Chapters", f => new ChaptersTable(f.rows));
+            ChapterSteps = Load<ChapterStepsFile, ChapterStepsTable>(reader, "ChapterSteps", f => new ChapterStepsTable(f.rows));
+            CharacterInfos = Load<CharacterInfosFile, CharacterInfosTable>(reader, "CharacterInfos", f => new CharacterInfosTable(f.rows));
+            CharacterLevel = Load<CharacterLevelFile, CharacterLevelTable>(reader, "CharacterLevel", f => new CharacterLevelTable(f.rows));
             Spirits = Load<SpiritsFile, SpiritsTable>(reader, "Spirits", f => new SpiritsTable(f.rows));
             SpiritSkills = Load<SpiritSkillsFile, SpiritSkillsTable>(reader, "SpiritSkills", f => new SpiritSkillsTable(f.rows));
-            CharacterLevel = Load<CharacterLevelFile, CharacterLevelTable>(reader, "CharacterLevel", f => new CharacterLevelTable(f.rows));
+            MonsterTypes = Load<MonsterTypesFile, MonsterTypesTable>(reader, "MonsterTypes", f => new MonsterTypesTable(f.rows));
+            StatusEffects = Load<StatusEffectsFile, StatusEffectsTable>(reader, "StatusEffects", f => new StatusEffectsTable(f.rows));
+            Drops = Load<DropsFile, DropsTable>(reader, "Drops", f => new DropsTable(f.rows));
+            SpawnGroups = Load<SpawnGroupsFile, SpawnGroupsTable>(reader, "SpawnGroups", f => new SpawnGroupsTable(f.rows));
+            Items = Load<ItemsFile, ItemsTable>(reader, "Items", f => new ItemsTable(f.rows));
+            ItemEnchants = Load<ItemEnchantsFile, ItemEnchantsTable>(reader, "ItemEnchants", f => new ItemEnchantsTable(f.rows));
+            DropGroups = Load<DropGroupsFile, DropGroupsTable>(reader, "DropGroups", f => new DropGroupsTable(f.rows));
+            HudElements = Load<HudElementsFile, HudElementsTable>(reader, "HudElements", f => new HudElementsTable(f.rows));
+            BossPhases = Load<BossPhasesFile, BossPhasesTable>(reader, "BossPhases", f => new BossPhasesTable(f.rows));
+            BossSkills = Load<BossSkillsFile, BossSkillsTable>(reader, "BossSkills", f => new BossSkillsTable(f.rows));
+            Dungeons = Load<DungeonsFile, DungeonsTable>(reader, "Dungeons", f => new DungeonsTable(f.rows));
+            DungeonSections = Load<DungeonSectionsFile, DungeonSectionsTable>(reader, "DungeonSections", f => new DungeonSectionsTable(f.rows));
+            Strings = Load<StringsFile, StringsTable>(reader, "Strings", f => new StringsTable(f.rows));
         }
 
         static TTable Load<TFile, TTable>(ITableReader reader, string fileName, Func<TFile, TTable> build) where TFile : class

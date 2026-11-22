@@ -1,0 +1,114 @@
+{
+  "rows": [
+    {
+      "dungeonID": 87101,
+      "chapter": 1,
+      "name": "Dungeon_87101",
+      "boss": 3000101,
+      "regions": [
+        61102,
+        61103
+      ],
+      "unlockStep": 64103,
+      "clearStep": 64105,
+      "syncLevel": 1,
+      "mobHpRate": 15,
+      "sectionCount": 4,
+      "clueIDs": [
+        51103
+      ],
+      "dropGroup": 96005
+    },
+    {
+      "dungeonID": 87201,
+      "chapter": 2,
+      "name": "Dungeon_87201",
+      "boss": 3000201,
+      "regions": [
+        61202,
+        61203
+      ],
+      "unlockStep": 64203,
+      "clearStep": 64205,
+      "syncLevel": 11,
+      "mobHpRate": 15,
+      "sectionCount": 4,
+      "clueIDs": [
+        51203,
+        51204
+      ],
+      "dropGroup": 96005
+    },
+    {
+      "dungeonID": 87301,
+      "chapter": 3,
+      "name": "Dungeon_87301",
+      "boss": 3000301,
+      "regions": [
+        61302
+      ],
+      "unlockStep": 64304,
+      "clearStep": 64305,
+      "syncLevel": 19,
+      "mobHpRate": 8,
+      "sectionCount": 4,
+      "clueIDs": [],
+      "dropGroup": 96005
+    },
+    {
+      "dungeonID": 87401,
+      "chapter": 4,
+      "name": "Dungeon_87401",
+      "boss": 3000401,
+      "regions": [
+        61402
+      ],
+      "unlockStep": 64403,
+      "clearStep": 64404,
+      "syncLevel": 25,
+      "mobHpRate": 5.5,
+      "sectionCount": 3,
+      "clueIDs": [
+        51402
+      ],
+      "dropGroup": 96005
+    },
+    {
+      "dungeonID": 87402,
+      "chapter": 4,
+      "name": "Dungeon_87402",
+      "boss": 3000402,
+      "regions": [
+        61403
+      ],
+      "unlockStep": 64405,
+      "clearStep": 64405,
+      "syncLevel": 25,
+      "mobHpRate": 5.5,
+      "sectionCount": 4,
+      "clueIDs": [
+        51403
+      ],
+      "dropGroup": 96005
+    },
+    {
+      "dungeonID": 87501,
+      "chapter": 5,
+      "name": "Dungeon_87501",
+      "boss": 3000501,
+      "regions": [
+        61501,
+        61502
+      ],
+      "unlockStep": 64502,
+      "clearStep": 64505,
+      "syncLevel": 32,
+      "mobHpRate": 4.5,
+      "sectionCount": 5,
+      "clueIDs": [
+        51502
+      ],
+      "dropGroup": 96005
+    }
+  ]
+}

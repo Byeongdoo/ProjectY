@@ -1,0 +1,34 @@
+{
+  "rows": [
+    {
+      "caseID": 50101,
+      "chapter": 1,
+      "name": "Case_50101",
+      "requiredClues": 4
+    },
+    {
+      "caseID": 50201,
+      "chapter": 2,
+      "name": "Case_50201",
+      "requiredClues": 4
+    },
+    {
+      "caseID": 50301,
+      "chapter": 3,
+      "name": "Case_50301",
+      "requiredClues": 3
+    },
+    {
+      "caseID": 50401,
+      "chapter": 4,
+      "name": "Case_50401",
+      "requiredClues": 3
+    },
+    {
+      "caseID": 50501,
+      "chapter": 5,
+      "name": "Case_50501",
+      "requiredClues": 2
+    }
+  ]
+}
