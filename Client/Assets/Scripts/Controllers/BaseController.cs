@@ -112,39 +112,61 @@ public class BaseController : MonoBehaviour
 		}
 	}
 
-	public MoveDir GetDirFromVec(Vector3Int dir)
+	public static Vector3Int DirToVec(MoveDir dir)
 	{
-		if (dir.x > 0)
-			return MoveDir.Right;
-		else if (dir.x < 0)
+		switch (dir)
+		{
+			case MoveDir.Up: return new Vector3Int(0, 1, 0);
+			case MoveDir.Down: return new Vector3Int(0, -1, 0);
+			case MoveDir.Left: return new Vector3Int(-1, 0, 0);
+			case MoveDir.Right: return new Vector3Int(1, 0, 0);
+			case MoveDir.UpLeft: return new Vector3Int(-1, 1, 0);
+			case MoveDir.UpRight: return new Vector3Int(1, 1, 0);
+			case MoveDir.DownLeft: return new Vector3Int(-1, -1, 0);
+			case MoveDir.DownRight: return new Vector3Int(1, -1, 0);
+		}
+		return Vector3Int.zero;
+	}
+
+	// 벡터의 부호만 보고 8방향 중 하나로 바꾼다. (0, 0)이면 Down
+	public static MoveDir GetDirFromVec(Vector3Int dir)
+	{
+		int sx = System.Math.Sign(dir.x);
+		int sy = System.Math.Sign(dir.y);
+
+		if (sy > 0)
+			return sx < 0 ? MoveDir.UpLeft : (sx > 0 ? MoveDir.UpRight : MoveDir.Up);
+		if (sy < 0)
+			return sx < 0 ? MoveDir.DownLeft : (sx > 0 ? MoveDir.DownRight : MoveDir.Down);
+		if (sx < 0)
 			return MoveDir.Left;
-		else if (dir.y > 0)
-			return MoveDir.Up;
-		else
-			return MoveDir.Down;
+		if (sx > 0)
+			return MoveDir.Right;
+		return MoveDir.Down;
 	}
 
 	public Vector3Int GetFrontCellPos()
 	{
-		Vector3Int cellPos = CellPos;
+		return CellPos + DirToVec(Dir);
+	}
 
+	// 임시 스프라이트(Tiny RPG)는 앞·뒤·옆 3종뿐이라 대각선은 옆 모습으로 보여준다.
+	// 8방향 스프라이트가 들어오면 이 매핑을 방향별 클립으로 교체한다.
+	protected void GetAnimDir(out string suffix, out bool flipX)
+	{
 		switch (Dir)
 		{
 			case MoveDir.Up:
-				cellPos += Vector3Int.up;
-				break;
+				suffix = "BACK"; flipX = false; return;
 			case MoveDir.Down:
-				cellPos += Vector3Int.down;
-				break;
+				suffix = "FRONT"; flipX = false; return;
 			case MoveDir.Left:
-				cellPos += Vector3Int.left;
-				break;
-			case MoveDir.Right:
-				cellPos += Vector3Int.right;
-				break;
+			case MoveDir.UpLeft:
+			case MoveDir.DownLeft:
+				suffix = "RIGHT"; flipX = true; return;
+			default:
+				suffix = "RIGHT"; flipX = false; return;
 		}
-
-		return cellPos;
 	}
 
 	protected virtual void UpdateAnimation()
@@ -152,76 +174,19 @@ public class BaseController : MonoBehaviour
 		if (_animator == null || _sprite == null)
 			return;
 
+		string prefix;
 		if (State == CreatureState.Idle)
-		{
-			switch (Dir)
-			{
-				case MoveDir.Up:
-					_animator.Play("IDLE_BACK");
-					_sprite.flipX = false;
-					break;
-				case MoveDir.Down:
-					_animator.Play("IDLE_FRONT");
-					_sprite.flipX = false;
-					break;
-				case MoveDir.Left:
-					_animator.Play("IDLE_RIGHT");
-					_sprite.flipX = true;
-					break;
-				case MoveDir.Right:
-					_animator.Play("IDLE_RIGHT");
-					_sprite.flipX = false;
-					break;
-			}
-		}
+			prefix = "IDLE_";
 		else if (State == CreatureState.Moving)
-		{
-			switch (Dir)
-			{
-				case MoveDir.Up:
-					_animator.Play("WALK_BACK");
-					_sprite.flipX = false;
-					break;
-				case MoveDir.Down:
-					_animator.Play("WALK_FRONT");
-					_sprite.flipX = false;
-					break;
-				case MoveDir.Left:
-					_animator.Play("WALK_RIGHT");
-					_sprite.flipX = true;
-					break;
-				case MoveDir.Right:
-					_animator.Play("WALK_RIGHT");
-					_sprite.flipX = false;
-					break;
-			}
-		}
+			prefix = "WALK_";
 		else if (State == CreatureState.Skill)
-		{
-			switch (Dir)
-			{
-				case MoveDir.Up:
-					_animator.Play("ATTACK_BACK");
-					_sprite.flipX = false;
-					break;
-				case MoveDir.Down:
-					_animator.Play("ATTACK_FRONT");
-					_sprite.flipX = false;
-					break;
-				case MoveDir.Left:
-					_animator.Play("ATTACK_RIGHT");
-					_sprite.flipX = true;
-					break;
-				case MoveDir.Right:
-					_animator.Play("ATTACK_RIGHT");
-					_sprite.flipX = false;
-					break;
-			}
-		}
+			prefix = "ATTACK_";
 		else
-		{
+			return;
 
-		}
+		GetAnimDir(out string suffix, out bool flipX);
+		_animator.Play(prefix + suffix);
+		_sprite.flipX = flipX;
 	}
 
 	void Start()
@@ -273,16 +238,18 @@ public class BaseController : MonoBehaviour
 		Vector3 destPos = Managers.Map.CurrentGrid.CellToWorld(CellPos) + new Vector3(0.5f, 0.5f);
 		Vector3 moveDir = destPos - transform.position;
 
-		// 도착 여부 체크
-		float dist = moveDir.magnitude;
-		if (dist < Speed * Time.deltaTime)
+		// 대각선도 직선과 같은 시간에 1칸을 가야 하므로(기획: 대각선도 1칸)
+		// 유클리드 거리가 아니라 축별 최대 거리(체비셰프) 기준으로 진행한다
+		float step = Speed * Time.deltaTime;
+		float dist = Mathf.Max(Mathf.Abs(moveDir.x), Mathf.Abs(moveDir.y));
+		if (dist < step)
 		{
 			transform.position = destPos;
 			MoveToNextPos();
 		}
 		else
 		{
-			transform.position += moveDir.normalized * Speed * Time.deltaTime;
+			transform.position += moveDir * (step / dist);
 			State = CreatureState.Moving;
 		}
 	}

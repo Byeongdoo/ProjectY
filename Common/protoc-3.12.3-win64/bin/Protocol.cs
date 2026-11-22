@@ -48,12 +48,14 @@ namespace Google.Protobuf.Protocol {
             "VkVfR0FNRRABEgsKB1NfU1BBV04QAhINCglTX0RFU1BBV04QAxIKCgZDX01P",
             "VkUQBBIKCgZTX01PVkUQBRILCgdDX1NLSUxMEAYSCwoHU19TS0lMTBAHEg8K",
             "C1NfQ0hBTkdFX0hQEAgSCQoFU19ESUUQCSo6Cg1DcmVhdHVyZVN0YXRlEggK",
-            "BElETEUQABIKCgZNT1ZJTkcQARIJCgVTS0lMTBACEggKBERFQUQQAyowCgdN",
+            "BElETEUQABIKCgZNT1ZJTkcQARIJCgVTS0lMTBACEggKBERFQUQQAypqCgdN",
             "b3ZlRGlyEgYKAlVQEAASCAoERE9XThABEggKBExFRlQQAhIJCgVSSUdIVBAD",
-            "KkMKDkdhbWVPYmplY3RUeXBlEggKBE5PTkUQABIKCgZQTEFZRVIQARILCgdN",
-            "T05TVEVSEAISDgoKUFJPSkVDVElMRRADKkEKCVNraWxsVHlwZRIOCgpTS0lM",
-            "TF9OT05FEAASDgoKU0tJTExfQVVUTxABEhQKEFNLSUxMX1BST0pFQ1RJTEUQ",
-            "AkIbqgIYR29vZ2xlLlByb3RvYnVmLlByb3RvY29sYgZwcm90bzM="));
+            "EgsKB1VQX0xFRlQQBBIMCghVUF9SSUdIVBAFEg0KCURPV05fTEVGVBAGEg4K",
+            "CkRPV05fUklHSFQQBypDCg5HYW1lT2JqZWN0VHlwZRIICgROT05FEAASCgoG",
+            "UExBWUVSEAESCwoHTU9OU1RFUhACEg4KClBST0pFQ1RJTEUQAypBCglTa2ls",
+            "bFR5cGUSDgoKU0tJTExfTk9ORRAAEg4KClNLSUxMX0FVVE8QARIUChBTS0lM",
+            "TF9QUk9KRUNUSUxFEAJCG6oCGEdvb2dsZS5Qcm90b2J1Zi5Qcm90b2NvbGIG",
+            "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Protobuf.Protocol.MsgId), typeof(global::Google.Protobuf.Protocol.CreatureState), typeof(global::Google.Protobuf.Protocol.MoveDir), typeof(global::Google.Protobuf.Protocol.GameObjectType), typeof(global::Google.Protobuf.Protocol.SkillType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -102,6 +104,10 @@ namespace Google.Protobuf.Protocol {
     [pbr::OriginalName("DOWN")] Down = 1,
     [pbr::OriginalName("LEFT")] Left = 2,
     [pbr::OriginalName("RIGHT")] Right = 3,
+    [pbr::OriginalName("UP_LEFT")] UpLeft = 4,
+    [pbr::OriginalName("UP_RIGHT")] UpRight = 5,
+    [pbr::OriginalName("DOWN_LEFT")] DownLeft = 6,
+    [pbr::OriginalName("DOWN_RIGHT")] DownRight = 7,
   }
 
   public enum GameObjectType {

@@ -8,21 +8,10 @@ public class ArrowController : BaseController
 {
 	protected override void Init()
 	{
-		switch (Dir)
-		{
-			case MoveDir.Up:
-				transform.rotation = Quaternion.Euler(0, 0, 0);
-				break;
-			case MoveDir.Down:
-				transform.rotation = Quaternion.Euler(0, 0, -180);
-				break;
-			case MoveDir.Left:
-				transform.rotation = Quaternion.Euler(0, 0, 90);
-				break;
-			case MoveDir.Right:
-				transform.rotation = Quaternion.Euler(0, 0, -90);
-				break;
-		}
+		// 스프라이트가 위(Up)를 향해 그려져 있으므로 진행 방향에서 90도를 뺀다
+		Vector3Int v = DirToVec(Dir);
+		float angle = Mathf.Atan2(v.y, v.x) * Mathf.Rad2Deg - 90f;
+		transform.rotation = Quaternion.Euler(0, 0, angle);
 
 		State = CreatureState.Moving;
 

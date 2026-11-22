@@ -37,6 +37,9 @@ public class MyPlayerController : PlayerController
 			return;
 		}
 
+		// Shift+방향키로 제자리에서 방향만 바꾼 경우 서버에 알린다
+		CheckUpdatedFlag();
+
 		if (_coSkillCooltime == null && Input.GetKey(KeyCode.Space))
 		{
 			Debug.Log("Skill !");
@@ -62,30 +65,27 @@ public class MyPlayerController : PlayerController
 	}
 
 	// 키보드 입력
+	// 방향키 8방향: 두 키를 함께 누르면 대각선, 반대 방향 키는 서로 상쇄된다
 	void GetDirInput()
 	{
-		_moveKeyPressed = true;
+		int x = 0;
+		int y = 0;
+		if (Input.GetKey(KeyCode.UpArrow)) y += 1;
+		if (Input.GetKey(KeyCode.DownArrow)) y -= 1;
+		if (Input.GetKey(KeyCode.LeftArrow)) x -= 1;
+		if (Input.GetKey(KeyCode.RightArrow)) x += 1;
 
-		if (Input.GetKey(KeyCode.W))
-		{
-			Dir = MoveDir.Up;
-		}
-		else if (Input.GetKey(KeyCode.S))
-		{
-			Dir = MoveDir.Down;
-		}
-		else if (Input.GetKey(KeyCode.A))
-		{
-			Dir = MoveDir.Left;
-		}
-		else if (Input.GetKey(KeyCode.D))
-		{
-			Dir = MoveDir.Right;
-		}
-		else
+		if (x == 0 && y == 0)
 		{
 			_moveKeyPressed = false;
+			return;
 		}
+
+		Dir = GetDirFromVec(new Vector3Int(x, y, 0));
+
+		// Shift+방향키는 이동 없이 방향만 바꾼다 (평타가 바라보는 방향으로만 나가므로)
+		bool turnOnly = Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift);
+		_moveKeyPressed = !turnOnly;
 	}
 
 	protected override void MoveToNextPos()
@@ -97,25 +97,9 @@ public class MyPlayerController : PlayerController
 			return;
 		}
 
-		Vector3Int destPos = CellPos;
+		Vector3Int destPos = CellPos + DirToVec(Dir);
 
-		switch (Dir)
-		{
-			case MoveDir.Up:
-				destPos += Vector3Int.up;
-				break;
-			case MoveDir.Down:
-				destPos += Vector3Int.down;
-				break;
-			case MoveDir.Left:
-				destPos += Vector3Int.left;
-				break;
-			case MoveDir.Right:
-				destPos += Vector3Int.right;
-				break;
-		}
-
-		if (Managers.Map.CanGo(destPos))
+		if (Managers.Map.CanMove(CellPos, destPos))
 		{
 			if (Managers.Object.FindCreature(destPos) == null)
 			{

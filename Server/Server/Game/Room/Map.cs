@@ -53,7 +53,8 @@ namespace Server.Game
 
 		public float magnitude { get { return (float)Math.Sqrt(sqrMagnitude); } }
 		public int sqrMagnitude { get { return (x * x + y * y); } }
-		public int cellDistFromZero { get { return Math.Abs(x) + Math.Abs(y); } }
+		// 대각선도 1칸으로 세므로(기획: 캐릭터 조작 및 전투 2-3) 맨해튼이 아니라 체비셰프 거리다
+		public int cellDist { get { return Math.Max(Math.Abs(x), Math.Abs(y)); } }
 	}
 
 	public class Map
@@ -79,6 +80,36 @@ namespace Server.Game
 			int x = cellPos.x - MinX;
 			int y = MaxY - cellPos.y;
 			return !_collision[y, x] && (!checkObjects || _objects[y, x] == null);
+		}
+
+		bool IsWall(Vector2Int cellPos)
+		{
+			if (cellPos.x < MinX || cellPos.x > MaxX)
+				return true;
+			if (cellPos.y < MinY || cellPos.y > MaxY)
+				return true;
+
+			return _collision[MaxY - cellPos.y, cellPos.x - MinX];
+		}
+
+		// 대각선 이동은 직선 두 칸이 모두 벽일 때만 막는다 (모서리 통과 규칙, 사용자 결정)
+		public bool IsCornerBlocked(Vector2Int from, Vector2Int dest)
+		{
+			if (from.x == dest.x || from.y == dest.y)
+				return false;
+
+			return IsWall(new Vector2Int(dest.x, from.y)) && IsWall(new Vector2Int(from.x, dest.y));
+		}
+
+		// 한 칸 이동(8방향)이 유효한지 판정한다
+		public bool CanMove(Vector2Int from, Vector2Int dest, bool checkObjects = true)
+		{
+			if ((dest - from).cellDist != 1)
+				return false;
+			if (CanGo(dest, checkObjects) == false)
+				return false;
+
+			return IsCornerBlocked(from, dest) == false;
 		}
 
 		public GameObject Find(Vector2Int cellPos)
@@ -187,10 +218,16 @@ namespace Server.Game
 
 		#region A* PathFinding
 
-		// U D L R
-		int[] _deltaY = new int[] { 1, -1, 0, 0 };
-		int[] _deltaX = new int[] { 0, 0, -1, 1 };
-		int[] _cost = new int[] { 10, 10, 10, 10 };
+		// 상 하 좌 우 + 대각선 4방향 (배열 좌표라 y는 아래로 증가)
+		// 대각선도 1칸이라 비용이 직선과 같다
+		int[] _deltaY = new int[] { 1, -1, 0, 0, 1, 1, -1, -1 };
+		int[] _deltaX = new int[] { 0, 0, -1, 1, -1, 1, -1, 1 };
+		int[] _cost = new int[] { 10, 10, 10, 10, 10, 10, 10, 10 };
+
+		static int Heuristic(Pos a, Pos b)
+		{
+			return 10 * Math.Max(Math.Abs(a.Y - b.Y), Math.Abs(a.X - b.X));
+		}
 
 		public List<Vector2Int> FindPath(Vector2Int startCellPos, Vector2Int destCellPos, bool checkObjects = true)
 		{
@@ -223,8 +260,8 @@ namespace Server.Game
 			Pos dest = Cell2Pos(destCellPos);
 
 			// 시작점 발견 (예약 진행)
-			open[pos.Y, pos.X] = 10 * (Math.Abs(dest.Y - pos.Y) + Math.Abs(dest.X - pos.X));
-			pq.Push(new PQNode() { F = 10 * (Math.Abs(dest.Y - pos.Y) + Math.Abs(dest.X - pos.X)), G = 0, Y = pos.Y, X = pos.X });
+			open[pos.Y, pos.X] = Heuristic(pos, dest);
+			pq.Push(new PQNode() { F = Heuristic(pos, dest), G = 0, Y = pos.Y, X = pos.X });
 			parent[pos.Y, pos.X] = new Pos(pos.Y, pos.X);
 
 			bool reached = false;
@@ -261,13 +298,17 @@ namespace Server.Game
 							continue;
 					}
 
+					// 플레이어와 같은 모서리 통과 규칙을 적용한다
+					if (IsCornerBlocked(Pos2Cell(new Pos(node.Y, node.X)), Pos2Cell(next)))
+						continue;
+
 					// 이미 방문한 곳이면 스킵
 					if (closed[next.Y, next.X])
 						continue;
 
-					// 비용 계산 (G: 시작점부터의 실제 비용, H: 맨해튼 거리 휴리스틱)
+					// 비용 계산 (G: 시작점부터의 실제 비용, H: 체비셰프 거리 휴리스틱)
 					int g = node.G + _cost[i];
-					int h = 10 * (Math.Abs(dest.Y - next.Y) + Math.Abs(dest.X - next.X));
+					int h = Heuristic(next, dest);
 					// 다른 경로에서 더 빠른 길 이미 찾았으면 스킵
 					if (open[next.Y, next.X] <= g + h)
 						continue;

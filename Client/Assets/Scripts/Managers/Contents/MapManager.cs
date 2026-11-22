@@ -52,6 +52,35 @@ public class MapManager
 		return !_collision[y, x];
 	}
 
+	bool IsWall(Vector3Int cellPos)
+	{
+		if (cellPos.x < MinX || cellPos.x > MaxX)
+			return true;
+		if (cellPos.y < MinY || cellPos.y > MaxY)
+			return true;
+
+		return _collision[MaxY - cellPos.y, cellPos.x - MinX];
+	}
+
+	// 서버 Map.CanMove와 같은 규칙: 8방향 한 칸, 대각선은 직선 두 칸이 모두 벽일 때만 막힌다
+	public bool CanMove(Vector3Int from, Vector3Int dest)
+	{
+		int dx = dest.x - from.x;
+		int dy = dest.y - from.y;
+		if (Mathf.Max(Mathf.Abs(dx), Mathf.Abs(dy)) != 1)
+			return false;
+		if (CanGo(dest) == false)
+			return false;
+
+		if (dx != 0 && dy != 0)
+		{
+			if (IsWall(new Vector3Int(dest.x, from.y, 0)) && IsWall(new Vector3Int(from.x, dest.y, 0)))
+				return false;
+		}
+
+		return true;
+	}
+
 	public void LoadMap(int mapId)
 	{
 		DestroyMap();

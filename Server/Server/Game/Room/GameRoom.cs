@@ -175,14 +175,10 @@ namespace Server.Game
 			if (info.PosInfo.State == CreatureState.Dead)
 				return;
 
-			// 다른 좌표로 이동할 경우, 한 칸 이내인지 + 갈 수 있는지 체크
+			// 다른 좌표로 이동할 경우, 8방향 한 칸 이동으로 갈 수 있는지 체크
 			if (movePosInfo.PosX != info.PosInfo.PosX || movePosInfo.PosY != info.PosInfo.PosY)
 			{
-				Vector2Int delta = new Vector2Int(movePosInfo.PosX, movePosInfo.PosY) - player.CellPos;
-				if (delta.cellDistFromZero != 1)
-					return;
-
-				if (Map.CanGo(new Vector2Int(movePosInfo.PosX, movePosInfo.PosY)) == false)
+				if (Map.CanMove(player.CellPos, new Vector2Int(movePosInfo.PosX, movePosInfo.PosY)) == false)
 					return;
 			}
 

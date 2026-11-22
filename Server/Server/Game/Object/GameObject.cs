@@ -76,37 +76,40 @@ namespace Server.Game
 
 		public Vector2Int GetFrontCellPos(MoveDir dir)
 		{
-			Vector2Int cellPos = CellPos;
-
-			switch (dir)
-			{
-				case MoveDir.Up:
-					cellPos += Vector2Int.up;
-					break;
-				case MoveDir.Down:
-					cellPos += Vector2Int.down;
-					break;
-				case MoveDir.Left:
-					cellPos += Vector2Int.left;
-					break;
-				case MoveDir.Right:
-					cellPos += Vector2Int.right;
-					break;
-			}
-
-			return cellPos;
+			return CellPos + DirToVec(dir);
 		}
 
+		public static Vector2Int DirToVec(MoveDir dir)
+		{
+			switch (dir)
+			{
+				case MoveDir.Up: return new Vector2Int(0, 1);
+				case MoveDir.Down: return new Vector2Int(0, -1);
+				case MoveDir.Left: return new Vector2Int(-1, 0);
+				case MoveDir.Right: return new Vector2Int(1, 0);
+				case MoveDir.UpLeft: return new Vector2Int(-1, 1);
+				case MoveDir.UpRight: return new Vector2Int(1, 1);
+				case MoveDir.DownLeft: return new Vector2Int(-1, -1);
+				case MoveDir.DownRight: return new Vector2Int(1, -1);
+			}
+			return new Vector2Int(0, 0);
+		}
+
+		// 벡터의 부호만 보고 8방향 중 하나로 바꾼다. (0, 0)이면 Down
 		public static MoveDir GetDirFromVec(Vector2Int dir)
 		{
-			if (dir.x > 0)
-				return MoveDir.Right;
-			else if (dir.x < 0)
+			int sx = Math.Sign(dir.x);
+			int sy = Math.Sign(dir.y);
+
+			if (sy > 0)
+				return sx < 0 ? MoveDir.UpLeft : (sx > 0 ? MoveDir.UpRight : MoveDir.Up);
+			if (sy < 0)
+				return sx < 0 ? MoveDir.DownLeft : (sx > 0 ? MoveDir.DownRight : MoveDir.Down);
+			if (sx < 0)
 				return MoveDir.Left;
-			else if (dir.y > 0)
-				return MoveDir.Up;
-			else
-				return MoveDir.Down;
+			if (sx > 0)
+				return MoveDir.Right;
+			return MoveDir.Down;
 		}
 
 		public virtual void OnDamaged(GameObject attacker, int damage)

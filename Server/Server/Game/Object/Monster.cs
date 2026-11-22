@@ -56,7 +56,7 @@ namespace Server.Game
 			Player target = Room.FindPlayer(p =>
 			{
 				Vector2Int dir = p.CellPos - CellPos;
-				return dir.cellDistFromZero <= _searchCellDist;
+				return dir.cellDist <= _searchCellDist;
 			});
 
 			if (target == null)
@@ -84,7 +84,7 @@ namespace Server.Game
 			}
 
 			Vector2Int dir = _target.CellPos - CellPos;
-			int dist = dir.cellDistFromZero;
+			int dist = dir.cellDist;
 			if (dist == 0 || dist > _chaseCellDist)
 			{
 				_target = null;
@@ -103,7 +103,7 @@ namespace Server.Game
 			}
 
 			// 스킬로 넘어갈지 체크
-			if (dist <= _skillRange && (dir.x == 0 || dir.y == 0))
+			if (dist <= _skillRange)
 			{
 				_coolTick = 0;
 				State = CreatureState.Skill;
@@ -141,8 +141,8 @@ namespace Server.Game
 
 				// 스킬이 아직 사용 가능한지
 				Vector2Int dir = (_target.CellPos - CellPos);
-				int dist = dir.cellDistFromZero;
-				bool canUseSkill = (dist <= _skillRange && (dir.x == 0 || dir.y == 0));
+				int dist = dir.cellDist;
+				bool canUseSkill = (dist <= _skillRange);
 				if (canUseSkill == false)
 				{
 					State = CreatureState.Moving;
