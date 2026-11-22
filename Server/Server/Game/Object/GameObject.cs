@@ -95,6 +95,23 @@ namespace Server.Game
 			return new Vector2Int(0, 0);
 		}
 
+		// 시계 방향 순서. RotateDir에서 45도 단위 회전에 쓴다.
+		static readonly MoveDir[] ClockwiseDirs =
+		{
+			MoveDir.Up, MoveDir.UpRight, MoveDir.Right, MoveDir.DownRight,
+			MoveDir.Down, MoveDir.DownLeft, MoveDir.Left, MoveDir.UpLeft,
+		};
+
+		// steps × 45도 회전한 방향. 양수 = 시계 방향(오른쪽), 음수 = 반시계 방향(왼쪽)
+		public static MoveDir RotateDir(MoveDir dir, int steps)
+		{
+			int index = Array.IndexOf(ClockwiseDirs, dir);
+			if (index < 0)
+				return dir;
+			int count = ClockwiseDirs.Length;
+			return ClockwiseDirs[((index + steps) % count + count) % count];
+		}
+
 		// 벡터의 부호만 보고 8방향 중 하나로 바꾼다. (0, 0)이면 Down
 		public static MoveDir GetDirFromVec(Vector2Int dir)
 		{

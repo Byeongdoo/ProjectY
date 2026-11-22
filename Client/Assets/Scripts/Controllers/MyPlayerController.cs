@@ -119,6 +119,8 @@ public class MyPlayerController : PlayerController
 		{
 			Debug.Log("Skill !");
 
+			// 평타 요청. 원혼별 근접(앞 칸·3칸 베기)/원거리(화살) 형태는 서버가 spirits 테이블로 정해
+			// S_Skill의 스킬 ID로 알려 주고, 연출은 그 ID를 따른다. 여기 ID는 원혼이 없을 때의 기본값이다.
 			C_Skill skill = new C_Skill() { Info = new SkillInfo() };
 			skill.Info.SkillId = 2;
 			Managers.Network.Send(skill);

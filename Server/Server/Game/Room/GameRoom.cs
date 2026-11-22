@@ -329,9 +329,15 @@ namespace Server.Game
 			if (skillPacket.Info == null)
 				return;
 
+			// 원혼에 빙의했으면 평타 형태(근접/원거리)는 클라 요청이 아니라 spirits 테이블로 서버가 정한다
+			int skillId = skillPacket.Info.SkillId;
+			Table.SpiritsRow spirit = null;
+			if (info.SpiritId != 0 && Table.TableManager.Spirits.TryGet(info.SpiritId, out spirit))
+				skillId = spirit.basicRange <= 1 ? BasicMeleeSkillId : BasicRangedSkillId;
+
 			// 존재하는 스킬인지 먼저 확인한다 (없는 스킬로 상태만 바뀌는 것을 방지)
 			Data.Skill skillData = null;
-			if (DataManager.SkillDict.TryGetValue(skillPacket.Info.SkillId, out skillData) == false)
+			if (DataManager.SkillDict.TryGetValue(skillId, out skillData) == false)
 				return;
 
 			// 쿨타임 체크
@@ -343,7 +349,7 @@ namespace Server.Game
 			info.PosInfo.State = CreatureState.Skill;
 			S_Skill skill = new S_Skill() { Info = new SkillInfo() };
 			skill.ObjectId = info.ObjectId;
-			skill.Info.SkillId = skillPacket.Info.SkillId;
+			skill.Info.SkillId = skillId;
 			Broadcast(skill);
 
 			// 클라이언트의 Idle 복귀 패킷이 오지 않더라도 쿨타임 후에는 Skill 상태에 갇히지 않게 한다
@@ -353,11 +359,17 @@ namespace Server.Game
 			{
 				case SkillType.SkillAuto:
 					{
-						Vector2Int skillPos = player.GetFrontCellPos(info.PosInfo.MoveDir);
-						GameObject target = Map.Find(skillPos);
-						if (target != null && target != player)
+						// 근접 평타: 바라보는 앞 칸을 가운데로 좌우 45도씩 넓힌다.
+						// 폭 1 = 앞 칸만(무명장수), 폭 3 = 왼쪽 앞·앞·오른쪽 앞(망나니). 폭은 spirits.basicWidth
+						int width = spirit != null ? Math.Max(1, spirit.basicWidth) : 1;
+						int half = (width - 1) / 2;
+						for (int step = -half; step <= half; step++)
 						{
-							target.OnDamaged(player, skillData.damage + player.Stat.Attack);
+							MoveDir dir = GameObject.RotateDir(info.PosInfo.MoveDir, step);
+							GameObject target = Map.Find(player.GetFrontCellPos(dir));
+							// 삼천도·저승 모두 PvP가 없으므로 망령(몬스터)만 맞는다
+							if (target != null && target.ObjectType == GameObjectType.Monster)
+								target.OnDamaged(player, skillData.damage + player.Stat.Attack);
 						}
 					}
 					break;
@@ -379,6 +391,10 @@ namespace Server.Game
 					break;
 			}
 		}
+
+		// 레거시 SkillData.json의 평타 스킬(1 = 근접, 2 = 화살). 원혼 평타 데이터가 spiritSkills로 옮겨지면 교체한다
+		public const int BasicMeleeSkillId = 1;
+		public const int BasicRangedSkillId = 2;
 
 		void ResetSkillState(Player player)
 		{

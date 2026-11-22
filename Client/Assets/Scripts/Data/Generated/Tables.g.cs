@@ -562,6 +562,8 @@ namespace Table
         public float spiritRegenRate;
         /// <summary>스킬 목록</summary>
         public List<int> skillIDs = new List<int>();
+        /// <summary>평타 폭</summary>
+        public int basicWidth;
     }
 
     [Serializable]
