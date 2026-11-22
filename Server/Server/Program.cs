@@ -53,6 +53,17 @@ namespace Server
 			ConfigManager.LoadConfig();
 			DataManager.LoadData();
 
+			// 마스터 테이블 로딩. 실패하면 어느 파일이 문제인지 출력하고 즉시 종료한다.
+			try
+			{
+				Table.TableManager.LoadAll(new FileTableReader(ConfigManager.Config.dataPath));
+			}
+			catch (Exception e)
+			{
+				Console.Error.WriteLine(e.Message);
+				Environment.Exit(1);
+			}
+
 			GameRoom room = RoomManager.Instance.Add(1);
 			TickRoom(room, 50);
 

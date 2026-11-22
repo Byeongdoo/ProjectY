@@ -1,0 +1,119 @@
+{
+  "rows": [
+    {
+      "spiritID": 8501,
+      "name": "Spirit_8501",
+      "role": 1,
+      "weaponName": "SpiritWeapon_8501",
+      "prefabName": "PC_Spirit_01",
+      "attackRate": 0.75,
+      "hpRate": 1.6,
+      "moveRate": 1,
+      "attackSpeedRate": 1,
+      "criticalAdd": 0,
+      "basicRange": 1,
+      "basicCoef": 1,
+      "damageTakenRate": 0.75,
+      "threatRate": 3,
+      "spiritRegenRate": 1,
+      "skillIDs": [
+        85011,
+        85012,
+        85013,
+        85014
+      ]
+    },
+    {
+      "spiritID": 8502,
+      "name": "Spirit_8502",
+      "role": 2,
+      "weaponName": "SpiritWeapon_8502",
+      "prefabName": "PC_Spirit_02",
+      "attackRate": 1.35,
+      "hpRate": 1,
+      "moveRate": 1,
+      "attackSpeedRate": 1,
+      "criticalAdd": 0.1,
+      "basicRange": 1,
+      "basicCoef": 1,
+      "damageTakenRate": 1,
+      "threatRate": 1,
+      "spiritRegenRate": 1,
+      "skillIDs": [
+        85021,
+        85022,
+        85023,
+        85024
+      ]
+    },
+    {
+      "spiritID": 8503,
+      "name": "Spirit_8503",
+      "role": 3,
+      "weaponName": "SpiritWeapon_8503",
+      "prefabName": "PC_Spirit_03",
+      "attackRate": 1.2,
+      "hpRate": 0.8,
+      "moveRate": 1,
+      "attackSpeedRate": 0.85,
+      "criticalAdd": 0.05,
+      "basicRange": 5,
+      "basicCoef": 1,
+      "damageTakenRate": 1,
+      "threatRate": 1,
+      "spiritRegenRate": 1,
+      "skillIDs": [
+        85031,
+        85032,
+        85033,
+        85034
+      ]
+    },
+    {
+      "spiritID": 8504,
+      "name": "Spirit_8504",
+      "role": 4,
+      "weaponName": "SpiritWeapon_8504",
+      "prefabName": "PC_Spirit_04",
+      "attackRate": 0.8,
+      "hpRate": 1,
+      "moveRate": 1.15,
+      "attackSpeedRate": 1,
+      "criticalAdd": 0,
+      "basicRange": 1,
+      "basicCoef": 1,
+      "damageTakenRate": 1,
+      "threatRate": 1,
+      "spiritRegenRate": 1.5,
+      "skillIDs": [
+        85041,
+        85042,
+        85043,
+        85044
+      ]
+    },
+    {
+      "spiritID": 8505,
+      "name": "Spirit_8505",
+      "role": 5,
+      "weaponName": "SpiritWeapon_8505",
+      "prefabName": "PC_Spirit_05",
+      "attackRate": 1,
+      "hpRate": 0.9,
+      "moveRate": 1,
+      "attackSpeedRate": 1,
+      "criticalAdd": 0,
+      "basicRange": 3,
+      "basicCoef": 0.6,
+      "damageTakenRate": 1,
+      "threatRate": 1,
+      "spiritRegenRate": 2,
+      "skillIDs": [
+        85051,
+        85052,
+        85053,
+        85054
+      ]
+    }
+  ]
+}
