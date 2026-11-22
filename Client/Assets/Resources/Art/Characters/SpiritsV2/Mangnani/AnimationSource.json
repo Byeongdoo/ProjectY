@@ -3,7 +3,7 @@
   "characterId": "478ad62f-9651-46ca-a174-7b869382d4fd",
   "pixelsPerUnit": 32,
   "rootMotion": false,
-  "visualApproval": "Generated assets require visual review",
+  "visualApproval": "QA requires revisions; see artifacts/pixellab/SpiritAnimationQA/QAReport.md",
   "clips": [
     {
       "animation": "IDLE",
@@ -96,7 +96,10 @@
         "Animations/ATTACK_NORTH_WEST.anim",
         "Animations/ATTACK_WEST.anim",
         "Animations/ATTACK_SOUTH_WEST.anim"
-      ]
+      ],
+      "nativeClipFrameRoot": "SpritesWithTrail",
+      "sourceFrameRoot": "Sprites",
+      "trailLayerRoot": "TrailLayers"
     },
     {
       "animation": "HIT",
@@ -251,6 +254,108 @@
         "Animations/SKILL_1_NORTH_WEST.anim",
         "Animations/SKILL_1_WEST.anim",
         "Animations/SKILL_1_SOUTH_WEST.anim"
+      ],
+      "nativeClipFrameRoot": "SpritesWithTrail",
+      "sourceFrameRoot": "Sprites",
+      "trailLayerRoot": "TrailLayers"
+    },
+    {
+      "animation": "SKILL_2",
+      "directions": [
+        "south",
+        "south-east",
+        "east",
+        "north-east",
+        "north",
+        "north-west",
+        "west",
+        "south-west"
+      ],
+      "frameCount": 12,
+      "framesPerSecond": 10,
+      "loop": false,
+      "cellWidth": 92,
+      "cellHeight": 92,
+      "sourcePixelsResized": false,
+      "alignment": "PixelLab canvas centres; no per-frame trimming",
+      "groupId": "8ed8c385-bab1-4ccc-955c-766e49652bc7",
+      "animationClips": [
+        "Animations/SKILL_2_SOUTH.anim",
+        "Animations/SKILL_2_SOUTH_EAST.anim",
+        "Animations/SKILL_2_EAST.anim",
+        "Animations/SKILL_2_NORTH_EAST.anim",
+        "Animations/SKILL_2_NORTH.anim",
+        "Animations/SKILL_2_NORTH_WEST.anim",
+        "Animations/SKILL_2_WEST.anim",
+        "Animations/SKILL_2_SOUTH_WEST.anim"
+      ],
+      "nativeClipFrameRoot": "SpritesWithTrail",
+      "sourceFrameRoot": "Sprites",
+      "trailLayerRoot": "TrailLayers"
+    },
+    {
+      "animation": "SKILL_3",
+      "directions": [
+        "south",
+        "south-east",
+        "east",
+        "north-east",
+        "north",
+        "north-west",
+        "west",
+        "south-west"
+      ],
+      "frameCount": 8,
+      "framesPerSecond": 10,
+      "loop": false,
+      "cellWidth": 92,
+      "cellHeight": 92,
+      "sourcePixelsResized": false,
+      "alignment": "PixelLab canvas centres; no per-frame trimming",
+      "groupId": "9425fd77-98ce-48f8-867d-753d26dc2045",
+      "animationClips": [
+        "Animations/SKILL_3_SOUTH.anim",
+        "Animations/SKILL_3_SOUTH_EAST.anim",
+        "Animations/SKILL_3_EAST.anim",
+        "Animations/SKILL_3_NORTH_EAST.anim",
+        "Animations/SKILL_3_NORTH.anim",
+        "Animations/SKILL_3_NORTH_WEST.anim",
+        "Animations/SKILL_3_WEST.anim",
+        "Animations/SKILL_3_SOUTH_WEST.anim"
+      ],
+      "nativeClipFrameRoot": "SpritesWithTrail",
+      "sourceFrameRoot": "Sprites",
+      "trailLayerRoot": "TrailLayers"
+    },
+    {
+      "animation": "SKILL_4",
+      "directions": [
+        "south",
+        "south-east",
+        "east",
+        "north-east",
+        "north",
+        "north-west",
+        "west",
+        "south-west"
+      ],
+      "frameCount": 8,
+      "framesPerSecond": 10,
+      "loop": false,
+      "cellWidth": 92,
+      "cellHeight": 92,
+      "sourcePixelsResized": false,
+      "alignment": "PixelLab canvas centres; no per-frame trimming",
+      "groupId": "a2de7362-23a7-4480-a69d-2240b70e6f0f",
+      "animationClips": [
+        "Animations/SKILL_4_SOUTH.anim",
+        "Animations/SKILL_4_SOUTH_EAST.anim",
+        "Animations/SKILL_4_EAST.anim",
+        "Animations/SKILL_4_NORTH_EAST.anim",
+        "Animations/SKILL_4_NORTH.anim",
+        "Animations/SKILL_4_NORTH_WEST.anim",
+        "Animations/SKILL_4_WEST.anim",
+        "Animations/SKILL_4_SOUTH_WEST.anim"
       ]
     }
   ]

@@ -1,0 +1,62 @@
+{
+  "recipeHash": "29233c3c0987a971ba990b7ca7ae61504ea20c9e43238290310ed6879c678b0e",
+  "checks": [
+    {
+      "frame": 0,
+      "changedCharacterPixels": 0,
+      "effectPixels": 0,
+      "visibleAddedPixels": 0
+    },
+    {
+      "frame": 1,
+      "changedCharacterPixels": 0,
+      "effectPixels": 102,
+      "visibleAddedPixels": 89
+    },
+    {
+      "frame": 2,
+      "changedCharacterPixels": 0,
+      "effectPixels": 171,
+      "visibleAddedPixels": 162
+    },
+    {
+      "frame": 3,
+      "changedCharacterPixels": 0,
+      "effectPixels": 143,
+      "visibleAddedPixels": 142
+    },
+    {
+      "frame": 4,
+      "changedCharacterPixels": 0,
+      "effectPixels": 134,
+      "visibleAddedPixels": 131
+    },
+    {
+      "frame": 5,
+      "changedCharacterPixels": 0,
+      "effectPixels": 232,
+      "visibleAddedPixels": 144
+    },
+    {
+      "frame": 6,
+      "changedCharacterPixels": 0,
+      "effectPixels": 278,
+      "visibleAddedPixels": 176
+    },
+    {
+      "frame": 7,
+      "changedCharacterPixels": 0,
+      "effectPixels": 0,
+      "visibleAddedPixels": 0
+    }
+  ],
+  "sourcePixelsResized": false,
+  "canvasShift": [
+    -1,
+    -1
+  ],
+  "recipeSubjectOffset": [
+    35,
+    35
+  ]
+}

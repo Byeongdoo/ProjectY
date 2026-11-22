@@ -113,7 +113,7 @@ class MCP:
         return message["result"]
 
     def call(self, name, arguments):
-        attempts = 3 if name in {"get_character", "wait_for_jobs", "get_balance"} else 1
+        attempts = 3 if name in {"get_character", "get_image", "wait_for_jobs", "get_balance"} else 1
         for attempt in range(attempts):
             try:
                 return self.rpc("tools/call", {"name": name, "arguments": arguments})
@@ -399,12 +399,12 @@ def texture_meta(path, root, size, centered=False):
     put_bytes(Path(str(path) + ".meta"), template.encode("utf-8"))
 
 
-def make_clip(root, task, direction):
+def make_clip(root, task, direction, frame_folder="Sprites"):
     """Write a native clip using the existing Unity-verified hero clip format."""
     name = task["animation"] + "_" + direction.upper().replace("-", "_")
     target = root / "Animations" / (name + ".anim")
     fps = task["fps"]
-    guids = [asset_guid(root / "Sprites" / task["animation"] / direction / f"frame_{i:03d}.png") for i in range(task["frameCount"])]
+    guids = [asset_guid(root / frame_folder / task["animation"] / direction / f"frame_{i:03d}.png") for i in range(task["frameCount"])]
     template = (ROOT / "Client/Assets/Resources/Art/Characters/Protagonist/Animations/IDLE_SOUTH.anim").read_text(encoding="utf-8-sig")
     template = re.sub(r"^  m_Name: .*", "  m_Name: " + name, template, count=1, flags=re.M)
     curve = "  m_PPtrCurves:\n  - curve:\n"

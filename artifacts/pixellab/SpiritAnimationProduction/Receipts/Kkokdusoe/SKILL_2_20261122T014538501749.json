@@ -1,0 +1,23 @@
+{
+  "request": {
+    "character_id": "5e2b8e1c-c556-4568-9002-2b1c25507dfc",
+    "animation_name": "SKILL_2",
+    "mode": "v3",
+    "action_description": "JAPGWI JJOTGI banishment: aim the gong toward a target in the facing direction, gesture at it with the mallet, then deliver one forceful gong strike and recover. No sound-wave graphics. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.",
+    "frame_count": 8,
+    "keep_first_frame": false,
+    "directions": [
+      "south-east"
+    ],
+    "animation_group_id": "e61e4eaa-39fa-47e7-985c-617612885834"
+  },
+  "response": {
+    "content": [
+      {
+        "type": "text",
+        "text": "character: 5e2b8e1c-c556-4568-9002-2b1c25507dfc\nanimation: v3 custom (JAPGWI JJOTGI banishment: aim the gong toward a target in the facing direction, gesture at it with the mallet, then deliver one forceful gong strike and recover. No sound-wave graphics. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.)\ndirections: south-east (1 jobs)\njob_ids: south-east=7e708047-1cdc-4b73-90e7-9ba4218f5616\ngroup: e61e4eaa-39fa-47e7-985c-617612885834\nframes: 8 (reference stripped, keep_first_frame=false)\ncanvas: south-east 88x88 (frames are stored at this size: the character plus room to move)\ncost: 1 generation (1/dir x 1)\neta: ~2-4 min/direction\n\nhint: get_character(character_id=\"5e2b8e1c-c556-4568-9002-2b1c25507dfc\")\nadd more directions to this group: animate_character(character_id=\"5e2b8e1c-c556-4568-9002-2b1c25507dfc\", action_description=\"JAPGWI JJOTGI banishment: aim the gong toward a target in the facing direction, gesture at it with the mallet, then deliver one forceful gong strike and recover. No sound-wave graphics. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.\", animation_group_id=\"e61e4eaa-39fa-47e7-985c-617612885834\", directions=[...])"
+      }
+    ],
+    "isError": false
+  }
+}

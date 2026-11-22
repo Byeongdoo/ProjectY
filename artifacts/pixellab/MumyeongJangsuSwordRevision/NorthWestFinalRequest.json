@@ -1,0 +1,13 @@
+{
+  "sourceJob": "c824b729-d1a6-40a5-91a6-c88dd2ab1f09",
+  "animationName": "R6_ATTACK",
+  "receipt": {
+    "content": [
+      {
+        "type": "text",
+        "text": "character: 6f8c501b-a360-4d0a-85fd-556e6a2e0b9d\nanimation: v3 custom (NORTH-WEST BACK VIEW, facing upper-left throughout. Sword begins ALREADY RAISED UPRIGHT IN FRONT, pointing upper-left above helmet, exactly as reference. Brief small windup, then deliver one fast powerful DOWNWARD-FORWARD sword cut toward UPPER-LEFT of image in front of his chest, and return to exact raised guard. Keep large bright blade visibly OUTSIDE upper-left silhouette during windup and strike, with secure right-hand grip. Sword and arm move in front of torso, NEVER sweep across visible back or toward lower-right. Shield remains in left hand. Preserve exact face/outfit, body size, native pixel scale and actor origin. Feet planted, no root movement. Fixed low top-down camera. No blood, particles, trails, glow, shadow or background.)\ndirections: north-west (1 jobs)\njob_ids: north-west=e8169ac1-07b6-4d02-a2a9-f85856180ce6\ngroup: 36e01bb9-dc6d-4454-b608-ee87fc0864b2\nframes: 8 (reference stripped, keep_first_frame=false)\ncanvas: north-west 100x108 (generated at this size; with custom frames the stored canvas is re-measured around the motion plus 40%, capped at 256 a side, so it often differs — read it off a saved frame)\ncost: 2 generations (2/dir x 1)\neta: ~2-4 min/direction\n\nhint: get_character(character_id=\"6f8c501b-a360-4d0a-85fd-556e6a2e0b9d\")\nadd more directions to this group: animate_character(character_id=\"6f8c501b-a360-4d0a-85fd-556e6a2e0b9d\", action_description=\"NORTH-WEST BACK VIEW, facing upper-left throughout. Sword begins ALREADY RAISED UPRIGHT IN FRONT, pointing upper-left above helmet, exactly as reference. Brief small windup, then deliver one fast powerful DOWNWARD-FORWARD sword cut toward UPPER-LEFT of image in front of his chest, and return to exact raised guard. Keep large bright blade visibly OUTSIDE upper-left silhouette during windup and strike, with secure right-hand grip. Sword and arm move in front of torso, NEVER sweep across visible back or toward lower-right. Shield remains in left hand. Preserve exact face/outfit, body size, native pixel scale and actor origin. Feet planted, no root movement. Fixed low top-down camera. No blood, particles, trails, glow, shadow or background.\", animation_group_id=\"36e01bb9-dc6d-4454-b608-ee87fc0864b2\", directions=[...])"
+      }
+    ],
+    "isError": false
+  }
+}

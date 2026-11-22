@@ -1,0 +1,23 @@
+{
+  "request": {
+    "character_id": "628b3449-3ba4-4a7b-9131-9f815afb3443",
+    "animation_name": "SKILL_3",
+    "mode": "v3",
+    "action_description": "DEOT NOTGI trap placement: keep the bow controlled at the side, crouch down, reach a hand toward the ground at the feet to place a trap, release the hand and stand back into ready stance. Do not draw a trap object. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.",
+    "frame_count": 8,
+    "keep_first_frame": false,
+    "directions": [
+      "south-west"
+    ],
+    "animation_group_id": "55478ba3-1ed8-405a-af2e-44499bc6785f"
+  },
+  "response": {
+    "content": [
+      {
+        "type": "text",
+        "text": "character: 628b3449-3ba4-4a7b-9131-9f815afb3443\nanimation: v3 custom (DEOT NOTGI trap placement: keep the bow controlled at the side, crouch down, reach a hand toward the ground at the feet to place a trap, release the hand and stand back into ready stance. Do not draw a trap object. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.)\ndirections: south-west (1 jobs)\njob_ids: south-west=bcb2138f-9e11-4bd5-97e3-4a6316a34fa8\ngroup: 55478ba3-1ed8-405a-af2e-44499bc6785f\nframes: 8 (reference stripped, keep_first_frame=false)\ncanvas: south-west 88x88 (frames are stored at this size: the character plus room to move)\ncost: 1 generation (1/dir x 1)\neta: ~2-4 min/direction\n\nhint: get_character(character_id=\"628b3449-3ba4-4a7b-9131-9f815afb3443\")\nadd more directions to this group: animate_character(character_id=\"628b3449-3ba4-4a7b-9131-9f815afb3443\", action_description=\"DEOT NOTGI trap placement: keep the bow controlled at the side, crouch down, reach a hand toward the ground at the feet to place a trap, release the hand and stand back into ready stance. Do not draw a trap object. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.\", animation_group_id=\"55478ba3-1ed8-405a-af2e-44499bc6785f\", directions=[...])"
+      }
+    ],
+    "isError": false
+  }
+}

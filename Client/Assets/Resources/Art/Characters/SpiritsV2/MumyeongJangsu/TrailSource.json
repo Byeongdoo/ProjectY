@@ -1,0 +1,132 @@
+{
+  "source": "PixelLab VFX workbench",
+  "originalSourceFramesPreserved": true,
+  "unintendedPixelChangesOutsideTrail": 0,
+  "pixelsPerUnit": 32,
+  "bakedFrameRoot": "SpritesWithTrail",
+  "separateLayerRoot": "TrailLayers",
+  "directionalClips": [
+    {
+      "key": "MumyeongJangsu",
+      "motion": "ATTACK",
+      "direction": "south",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\MumyeongJangsu\\ATTACK\\south\\Recipe.json",
+      "spriteRef": "1b63112a-d331-4614-8721-f07684c15e8b",
+      "activeFrames": [
+        2,
+        3,
+        4
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 0
+    },
+    {
+      "key": "MumyeongJangsu",
+      "motion": "ATTACK",
+      "direction": "south-east",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\MumyeongJangsu\\ATTACK\\south-east\\Recipe.json",
+      "spriteRef": "04cb5dd2-f38b-4abd-be58-d86c36d43997",
+      "activeFrames": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 0
+    },
+    {
+      "key": "MumyeongJangsu",
+      "motion": "ATTACK",
+      "direction": "east",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\MumyeongJangsu\\ATTACK\\east\\Recipe.json",
+      "spriteRef": "597f71d2-6b03-4709-91c9-a3ccb21f12ca",
+      "activeFrames": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 0
+    },
+    {
+      "key": "MumyeongJangsu",
+      "motion": "ATTACK",
+      "direction": "north-east",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\MumyeongJangsu\\ATTACK\\north-east\\Recipe.json",
+      "spriteRef": "character:6f8c501b-a360-4d0a-85fd-556e6a2e0b9d:north-east:R4_ATTACK",
+      "activeFrames": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 0
+    },
+    {
+      "key": "MumyeongJangsu",
+      "motion": "ATTACK",
+      "direction": "north",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\MumyeongJangsu\\ATTACK\\north\\Recipe.json",
+      "spriteRef": "character:6f8c501b-a360-4d0a-85fd-556e6a2e0b9d:north:R4_ATTACK",
+      "activeFrames": [
+        1,
+        2,
+        3
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 0
+    },
+    {
+      "key": "MumyeongJangsu",
+      "motion": "ATTACK",
+      "direction": "north-west",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\MumyeongJangsu\\ATTACK\\north-west\\Recipe.json",
+      "spriteRef": "7dc4616b-d288-4228-aed4-5146f5880b94:north-west",
+      "activeFrames": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 0
+    },
+    {
+      "key": "MumyeongJangsu",
+      "motion": "ATTACK",
+      "direction": "west",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\MumyeongJangsu\\ATTACK\\west\\Recipe.json",
+      "spriteRef": "014d427e-d294-4752-be3c-d3370e6800a1",
+      "activeFrames": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 0
+    },
+    {
+      "key": "MumyeongJangsu",
+      "motion": "ATTACK",
+      "direction": "south-west",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\MumyeongJangsu\\ATTACK\\south-west\\Recipe.json",
+      "spriteRef": "2bada38f-6506-4d20-8487-124425fb25fa",
+      "activeFrames": [
+        4,
+        5,
+        6
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 0
+    }
+  ]
+}

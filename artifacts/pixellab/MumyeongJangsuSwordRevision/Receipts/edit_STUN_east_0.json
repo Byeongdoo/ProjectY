@@ -1,0 +1,9 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "id: ae00f790-1f1d-49c0-b014-d408fc2e4fbb\njob_id: ae00f790-1f1d-49c0-b014-d408fc2e4fbb\nframes: 4\nsize: 84x84px\ndescription: TARGETED WEAPON EDIT ONLY. Keep this EXACT general, armour, head, face, shield, feet, root position, existing pose, palette and native pixel size unchanged. Enlarge only his small curved steel Korean saber: 1.5x current blade LENGTH and 1.5x WIDTH, clearly readable solid bright silver blade with dark outline and ivory edge, consistent large one-handed saber across all frames. Keep its grip securely in the same original sword hand, gold guard. Preserve every pose, phase and transparency. No second sword, no glow or effects.\ntransparent: True\nseed: 11222026\nasset_id: 08698a73-d3d3-5e4b-bf9a-cee83c77be25\nasset_status: pending (saved to your gallery when generation completes)\ncost: ~10 generations\nstatus: processing (~2 min)\n\nhint: get_image(job_id=\"ae00f790-1f1d-49c0-b014-d408fc2e4fbb\")\nwithout get_image: GET https://api.pixellab.ai/mcp/images/ae00f790-1f1d-49c0-b014-d408fc2e4fbb/download (423 + Retry-After until ready; ?index=N for the Nth of several images)"
+    }
+  ],
+  "isError": false
+}

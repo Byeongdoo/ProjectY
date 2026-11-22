@@ -13,9 +13,79 @@
   "frameCount": 4,
   "framesPerSecond": 6,
   "loop": true,
-  "cellWidth": 92,
-  "cellHeight": 92,
+  "cellWidth": 128,
+  "cellHeight": 128,
   "sourcePixelsResized": false,
   "alignment": "PixelLab canvas centres; no per-frame trimming",
-  "groupId": "e0b3d19f-85d8-42b1-b7ed-881c185d6110"
+  "groupId": "e0b3d19f-85d8-42b1-b7ed-881c185d6110",
+  "animationClips": [
+    "Animations/STUN_SOUTH.anim",
+    "Animations/STUN_SOUTH_EAST.anim",
+    "Animations/STUN_EAST.anim",
+    "Animations/STUN_NORTH_EAST.anim",
+    "Animations/STUN_NORTH.anim",
+    "Animations/STUN_NORTH_WEST.anim",
+    "Animations/STUN_WEST.anim",
+    "Animations/STUN_SOUTH_WEST.anim"
+  ],
+  "revision": "LargeSaber_NorthFrontAction",
+  "directionSources": {
+    "south": [
+      {
+        "jobId": "1af39aae-56f1-4ace-af34-0e51e695ebbc",
+        "sourceKind": "edit",
+        "startFrame": 0
+      }
+    ],
+    "south-east": [
+      {
+        "jobId": "177f490a-c5f4-4034-9c88-59ebec129355",
+        "sourceKind": "edit",
+        "startFrame": 0
+      }
+    ],
+    "east": [
+      {
+        "jobId": "ae00f790-1f1d-49c0-b014-d408fc2e4fbb",
+        "sourceKind": "edit",
+        "startFrame": 0
+      }
+    ],
+    "north-east": [
+      {
+        "jobId": "14d32edb-fea5-45a5-adbb-0fc04d3a82f9",
+        "sourceKind": "edit",
+        "startFrame": 0
+      }
+    ],
+    "north": [
+      {
+        "jobId": "e80746b4-b263-4cde-9478-cc2c889a6d07",
+        "sourceKind": "north",
+        "groupId": "7f68770d-a82c-4c78-84b5-559e58c18073",
+        "characterId": "6f8c501b-a360-4d0a-85fd-556e6a2e0b9d"
+      }
+    ],
+    "north-west": [
+      {
+        "jobId": "073fd571-db5a-492a-b203-8c6c14ecf6c4",
+        "sourceKind": "edit",
+        "startFrame": 0
+      }
+    ],
+    "west": [
+      {
+        "jobId": "c98a3a90-542f-4542-987e-b7503a438d0f",
+        "sourceKind": "edit",
+        "startFrame": 0
+      }
+    ],
+    "south-west": [
+      {
+        "jobId": "490c0a01-34fd-4f40-95f1-8b3b383ea261",
+        "sourceKind": "edit",
+        "startFrame": 0
+      }
+    ]
+  }
 }

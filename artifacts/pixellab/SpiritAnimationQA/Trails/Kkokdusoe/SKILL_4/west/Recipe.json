@@ -1,0 +1,376 @@
+{
+  "name": "ProjectY_Kkokdusoe_SKILL_4_west_Trail",
+  "canvas": {
+    "w": 128,
+    "h": 128
+  },
+  "frames": 8,
+  "fps": 10,
+  "loop": false,
+  "origin": [
+    64.0,
+    64.0
+  ],
+  "ramps": {
+    "main": [
+      "#9e652d",
+      "#ddb866",
+      "#fff0b2",
+      "#fffbe8"
+    ]
+  },
+  "outline": {
+    "mode": "none"
+  },
+  "tones": 4,
+  "dither": 0,
+  "detail": 0,
+  "subject": {
+    "x": 64.0,
+    "y": 64.0,
+    "align": "center"
+  },
+  "layers": [
+    {
+      "id": "trail_1",
+      "type": "shape",
+      "z": "front",
+      "x": 0,
+      "y": 0,
+      "points": [
+        [
+          67.8,
+          66.0
+        ],
+        [
+          72.44,
+          71.92
+        ],
+        [
+          72.44,
+          71.92
+        ],
+        [
+          65.2,
+          66.0
+        ]
+      ],
+      "closed": true,
+      "smooth": 0,
+      "fill": "flat",
+      "bevel": 1.2,
+      "outline": false,
+      "life": [
+        0.11142857142857143,
+        0.1742857142857143
+      ],
+      "lo": 0.1,
+      "fade": 0,
+      "level": 1
+    },
+    {
+      "id": "fade_1",
+      "type": "shape",
+      "z": "front",
+      "x": 0,
+      "y": 0,
+      "points": [
+        [
+          67.8,
+          66.0
+        ],
+        [
+          72.44,
+          71.92
+        ],
+        [
+          72.44,
+          71.92
+        ],
+        [
+          65.2,
+          66.0
+        ]
+      ],
+      "closed": true,
+      "smooth": 0,
+      "fill": "flat",
+      "bevel": 1.2,
+      "outline": false,
+      "life": [
+        0.2542857142857143,
+        0.3171428571428571
+      ],
+      "lo": 0.1,
+      "fade": 0,
+      "level": 1,
+      "intensity": 0.68,
+      "opacity": 0.45
+    },
+    {
+      "id": "trail_3",
+      "type": "shape",
+      "z": "front",
+      "x": 0,
+      "y": 0,
+      "points": [
+        [
+          71.55,
+          72.76
+        ],
+        [
+          66.25,
+          84.58
+        ],
+        [
+          66.25,
+          84.58
+        ],
+        [
+          69.0,
+          71.61
+        ]
+      ],
+      "closed": true,
+      "smooth": 0,
+      "fill": "flat",
+      "bevel": 1.2,
+      "outline": false,
+      "life": [
+        0.39714285714285713,
+        0.46
+      ],
+      "lo": 0.1,
+      "fade": 0,
+      "level": 1
+    },
+    {
+      "id": "fade_3",
+      "type": "shape",
+      "z": "front",
+      "x": 0,
+      "y": 0,
+      "points": [
+        [
+          71.55,
+          72.76
+        ],
+        [
+          66.25,
+          84.58
+        ],
+        [
+          66.25,
+          84.58
+        ],
+        [
+          69.0,
+          71.61
+        ]
+      ],
+      "closed": true,
+      "smooth": 0,
+      "fill": "flat",
+      "bevel": 1.2,
+      "outline": false,
+      "life": [
+        0.54,
+        0.6028571428571429
+      ],
+      "lo": 0.1,
+      "fade": 0,
+      "level": 1,
+      "intensity": 0.68,
+      "opacity": 0.45
+    },
+    {
+      "id": "trail_4",
+      "type": "shape",
+      "z": "front",
+      "x": 0,
+      "y": 0,
+      "points": [
+        [
+          66.25,
+          84.58
+        ],
+        [
+          71.36,
+          73.75
+        ],
+        [
+          71.36,
+          73.75
+        ],
+        [
+          68.78,
+          85.77
+        ]
+      ],
+      "closed": true,
+      "smooth": 0,
+      "fill": "flat",
+      "bevel": 1.2,
+      "outline": false,
+      "life": [
+        0.5399999999999999,
+        0.6028571428571429
+      ],
+      "lo": 0.1,
+      "fade": 0,
+      "level": 1
+    },
+    {
+      "id": "fade_4",
+      "type": "shape",
+      "z": "front",
+      "x": 0,
+      "y": 0,
+      "points": [
+        [
+          66.25,
+          84.58
+        ],
+        [
+          71.36,
+          73.75
+        ],
+        [
+          71.36,
+          73.75
+        ],
+        [
+          68.78,
+          85.77
+        ]
+      ],
+      "closed": true,
+      "smooth": 0,
+      "fill": "flat",
+      "bevel": 1.2,
+      "outline": false,
+      "life": [
+        0.6828571428571429,
+        0.7457142857142857
+      ],
+      "lo": 0.1,
+      "fade": 0,
+      "level": 1,
+      "intensity": 0.68,
+      "opacity": 0.45
+    },
+    {
+      "id": "trail_5",
+      "type": "shape",
+      "z": "front",
+      "x": 0,
+      "y": 0,
+      "points": [
+        [
+          72.3,
+          72.37
+        ],
+        [
+          80.16,
+          66.0
+        ],
+        [
+          80.16,
+          66.0
+        ],
+        [
+          74.61,
+          73.95
+        ]
+      ],
+      "closed": true,
+      "smooth": 0,
+      "fill": "flat",
+      "bevel": 1.2,
+      "outline": false,
+      "life": [
+        0.6828571428571429,
+        0.7457142857142857
+      ],
+      "lo": 0.1,
+      "fade": 0,
+      "level": 1
+    },
+    {
+      "id": "fade_5",
+      "type": "shape",
+      "z": "front",
+      "x": 0,
+      "y": 0,
+      "points": [
+        [
+          72.3,
+          72.37
+        ],
+        [
+          80.16,
+          66.0
+        ],
+        [
+          80.16,
+          66.0
+        ],
+        [
+          74.61,
+          73.95
+        ]
+      ],
+      "closed": true,
+      "smooth": 0,
+      "fill": "flat",
+      "bevel": 1.2,
+      "outline": false,
+      "life": [
+        0.8257142857142857,
+        0.8885714285714286
+      ],
+      "lo": 0.1,
+      "fade": 0,
+      "level": 1,
+      "intensity": 0.68,
+      "opacity": 0.45
+    },
+    {
+      "id": "trail_6",
+      "type": "shape",
+      "z": "front",
+      "x": 0,
+      "y": 0,
+      "points": [
+        [
+          80.16,
+          66.0
+        ],
+        [
+          66.81,
+          66.0
+        ],
+        [
+          66.81,
+          66.0
+        ],
+        [
+          80.66,
+          66.0
+        ]
+      ],
+      "closed": true,
+      "smooth": 0,
+      "fill": "flat",
+      "bevel": 1.2,
+      "outline": false,
+      "life": [
+        0.8257142857142857,
+        0.8885714285714286
+      ],
+      "lo": 0.1,
+      "fade": 0,
+      "level": 1
+    }
+  ]
+}

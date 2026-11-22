@@ -1,0 +1,3312 @@
+{
+  "createdAt": "2026-11-22T04:51:08.477690+00:00",
+  "sourceCharacter": "d08b8efa-ee49-477d-8db1-fbe0512ccdda",
+  "revisionCharacter": "6f8c501b-a360-4d0a-85fd-556e6a2e0b9d",
+  "prompt": "TARGETED WEAPON EDIT ONLY. Keep this EXACT general, armour, head, face, shield, feet, root position, existing pose, palette and native pixel size unchanged. Enlarge only his small curved steel Korean saber: 1.5x current blade LENGTH and 1.5x WIDTH, clearly readable solid bright silver blade with dark outline and ivory edge, consistent large one-handed saber across all frames. Keep its grip securely in the same original sword hand, gold guard. Preserve every pose, phase and transparency. No second sword, no glow or effects.",
+  "jobs": [
+    {
+      "kind": "edit",
+      "motion": "IDLE",
+      "direction": "south",
+      "start": 0,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\IDLE\\south\\frame_000.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\IDLE\\south\\frame_001.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\IDLE\\south\\frame_002.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\IDLE\\south\\frame_003.png"
+      ],
+      "status": "done",
+      "jobId": "8856ba25-b1c3-4dea-a698-ac232bb39e4e",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: 8856ba25-b1c3-4dea-a698-ac232bb39e4e\njob_id: 8856ba25-b1c3-4dea-a698-ac232bb39e4e\nframes: 4\ntransparent: yes\nasset_id: 9011096a-bf6f-5669-8322-cd7b2e0db5f2\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/8856ba25-b1c3-4dea-a698-ac232bb39e4e/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "IDLE",
+      "direction": "south-east",
+      "start": 0,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\IDLE\\south-east\\frame_000.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\IDLE\\south-east\\frame_001.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\IDLE\\south-east\\frame_002.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\IDLE\\south-east\\frame_003.png"
+      ],
+      "status": "done",
+      "jobId": "5fa8c3c4-5b57-4f7f-9816-a1154fcd4812",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: 5fa8c3c4-5b57-4f7f-9816-a1154fcd4812\njob_id: 5fa8c3c4-5b57-4f7f-9816-a1154fcd4812\nframes: 4\ntransparent: yes\nasset_id: 6c31659c-8e70-540e-a788-4d1c383e6f0b\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/5fa8c3c4-5b57-4f7f-9816-a1154fcd4812/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "IDLE",
+      "direction": "east",
+      "start": 0,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\IDLE\\east\\frame_000.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\IDLE\\east\\frame_001.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\IDLE\\east\\frame_002.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\IDLE\\east\\frame_003.png"
+      ],
+      "status": "done",
+      "jobId": "c69a96f9-ea37-4481-9cbf-aed5cd73ba60",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: c69a96f9-ea37-4481-9cbf-aed5cd73ba60\njob_id: c69a96f9-ea37-4481-9cbf-aed5cd73ba60\nframes: 4\ntransparent: yes\nasset_id: 3871e69f-0095-524e-a81b-b17b28650bce\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/c69a96f9-ea37-4481-9cbf-aed5cd73ba60/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "IDLE",
+      "direction": "north-east",
+      "start": 0,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\IDLE\\north-east\\frame_000.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\IDLE\\north-east\\frame_001.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\IDLE\\north-east\\frame_002.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\IDLE\\north-east\\frame_003.png"
+      ],
+      "status": "done",
+      "jobId": "152f5d6c-2816-4efc-b22e-16b771a32402",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: 152f5d6c-2816-4efc-b22e-16b771a32402\njob_id: 152f5d6c-2816-4efc-b22e-16b771a32402\nframes: 4\ntransparent: yes\nasset_id: bdf4f698-4d0e-5ff3-b6d4-7d387ceaa47c\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/152f5d6c-2816-4efc-b22e-16b771a32402/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "IDLE",
+      "direction": "north-west",
+      "start": 0,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\IDLE\\north-west\\frame_000.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\IDLE\\north-west\\frame_001.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\IDLE\\north-west\\frame_002.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\IDLE\\north-west\\frame_003.png"
+      ],
+      "status": "done",
+      "jobId": "e76ce675-8ffe-4f2f-9e86-303ddb9e8076",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: e76ce675-8ffe-4f2f-9e86-303ddb9e8076\njob_id: e76ce675-8ffe-4f2f-9e86-303ddb9e8076\nframes: 4\ntransparent: yes\nasset_id: 04712fa0-4361-5efc-bb7d-9bba0b5cada3\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/e76ce675-8ffe-4f2f-9e86-303ddb9e8076/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "IDLE",
+      "direction": "west",
+      "start": 0,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\IDLE\\west\\frame_000.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\IDLE\\west\\frame_001.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\IDLE\\west\\frame_002.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\IDLE\\west\\frame_003.png"
+      ],
+      "status": "done",
+      "jobId": "0cb9631d-9a13-4edb-9f97-0bd20575075e",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: 0cb9631d-9a13-4edb-9f97-0bd20575075e\njob_id: 0cb9631d-9a13-4edb-9f97-0bd20575075e\nframes: 4\ntransparent: yes\nasset_id: d45c2340-2837-5e59-b65d-fc4edaa5952a\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/0cb9631d-9a13-4edb-9f97-0bd20575075e/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "IDLE",
+      "direction": "south-west",
+      "start": 0,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\IDLE\\south-west\\frame_000.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\IDLE\\south-west\\frame_001.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\IDLE\\south-west\\frame_002.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\IDLE\\south-west\\frame_003.png"
+      ],
+      "status": "done",
+      "jobId": "bbce8ef5-786f-46a7-b280-cd27ecba213d",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: bbce8ef5-786f-46a7-b280-cd27ecba213d\njob_id: bbce8ef5-786f-46a7-b280-cd27ecba213d\nframes: 4\ntransparent: yes\nasset_id: abd18878-e84d-50f0-bddb-bdb381d02959\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/bbce8ef5-786f-46a7-b280-cd27ecba213d/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "RUN",
+      "direction": "south",
+      "start": 0,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\RUN\\south\\frame_000.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\RUN\\south\\frame_001.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\RUN\\south\\frame_002.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\RUN\\south\\frame_003.png"
+      ],
+      "status": "done",
+      "jobId": "8f552639-133e-4c84-962d-6d2a6ab7e5c7",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: 8f552639-133e-4c84-962d-6d2a6ab7e5c7\njob_id: 8f552639-133e-4c84-962d-6d2a6ab7e5c7\nframes: 4\ntransparent: yes\nasset_id: 7249afd1-2d6d-556d-882e-87e29b175abd\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/8f552639-133e-4c84-962d-6d2a6ab7e5c7/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "RUN",
+      "direction": "south",
+      "start": 4,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\RUN\\south\\frame_004.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\RUN\\south\\frame_005.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\RUN\\south\\frame_006.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\RUN\\south\\frame_007.png"
+      ],
+      "status": "done",
+      "jobId": "ea1296a4-4515-4093-a409-3a676c4fc538",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: ea1296a4-4515-4093-a409-3a676c4fc538\njob_id: ea1296a4-4515-4093-a409-3a676c4fc538\nframes: 4\ntransparent: yes\nasset_id: 0a4629ed-668d-5cb4-8f80-ed5c834b38a0\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/ea1296a4-4515-4093-a409-3a676c4fc538/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "RUN",
+      "direction": "south-east",
+      "start": 0,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\RUN\\south-east\\frame_000.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\RUN\\south-east\\frame_001.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\RUN\\south-east\\frame_002.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\RUN\\south-east\\frame_003.png"
+      ],
+      "status": "done",
+      "jobId": "ab94354e-bcd7-4a2d-9d59-494b5266b421",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: ab94354e-bcd7-4a2d-9d59-494b5266b421\njob_id: ab94354e-bcd7-4a2d-9d59-494b5266b421\nframes: 4\ntransparent: yes\nasset_id: 1257f571-df02-5c80-ac7d-7f7e6e068cba\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/ab94354e-bcd7-4a2d-9d59-494b5266b421/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "RUN",
+      "direction": "south-east",
+      "start": 4,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\RUN\\south-east\\frame_004.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\RUN\\south-east\\frame_005.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\RUN\\south-east\\frame_006.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\RUN\\south-east\\frame_007.png"
+      ],
+      "status": "done",
+      "jobId": "d6793671-9e88-4e9c-a945-c416249fb20f",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: d6793671-9e88-4e9c-a945-c416249fb20f\njob_id: d6793671-9e88-4e9c-a945-c416249fb20f\nframes: 4\ntransparent: yes\nasset_id: d5cb904d-b6c3-5d80-91a2-53366ea3c582\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/d6793671-9e88-4e9c-a945-c416249fb20f/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "RUN",
+      "direction": "east",
+      "start": 0,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\RUN\\east\\frame_000.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\RUN\\east\\frame_001.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\RUN\\east\\frame_002.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\RUN\\east\\frame_003.png"
+      ],
+      "status": "done",
+      "jobId": "e4200f97-1781-45e4-86c8-b2d91f6e88b1",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: e4200f97-1781-45e4-86c8-b2d91f6e88b1\njob_id: e4200f97-1781-45e4-86c8-b2d91f6e88b1\nframes: 4\ntransparent: yes\nasset_id: e7195844-0ad1-591f-9014-5a8bf6af1eed\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/e4200f97-1781-45e4-86c8-b2d91f6e88b1/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "RUN",
+      "direction": "east",
+      "start": 4,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\RUN\\east\\frame_004.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\RUN\\east\\frame_005.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\RUN\\east\\frame_006.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\RUN\\east\\frame_007.png"
+      ],
+      "status": "done",
+      "jobId": "8856fc8f-20d7-4ba0-bcc0-0361739c9188",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: 8856fc8f-20d7-4ba0-bcc0-0361739c9188\njob_id: 8856fc8f-20d7-4ba0-bcc0-0361739c9188\nframes: 4\ntransparent: yes\nasset_id: 9c61a360-e0b8-5cf1-9de1-40f77c1774b4\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/8856fc8f-20d7-4ba0-bcc0-0361739c9188/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "RUN",
+      "direction": "north-east",
+      "start": 0,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\RUN\\north-east\\frame_000.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\RUN\\north-east\\frame_001.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\RUN\\north-east\\frame_002.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\RUN\\north-east\\frame_003.png"
+      ],
+      "status": "done",
+      "jobId": "0bfab0ff-9d00-4305-b49f-6309ffd70842",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: 0bfab0ff-9d00-4305-b49f-6309ffd70842\njob_id: 0bfab0ff-9d00-4305-b49f-6309ffd70842\nframes: 4\ntransparent: yes\nasset_id: bab4d64b-e918-5e9b-966a-5161f5f72d97\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/0bfab0ff-9d00-4305-b49f-6309ffd70842/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "RUN",
+      "direction": "north-east",
+      "start": 4,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\RUN\\north-east\\frame_004.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\RUN\\north-east\\frame_005.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\RUN\\north-east\\frame_006.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\RUN\\north-east\\frame_007.png"
+      ],
+      "status": "done",
+      "jobId": "4e178293-17e5-48e5-bf4d-2f91e13a61f3",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: 4e178293-17e5-48e5-bf4d-2f91e13a61f3\njob_id: 4e178293-17e5-48e5-bf4d-2f91e13a61f3\nframes: 4\ntransparent: yes\nasset_id: 813d33ab-14a2-5f3b-a685-5aa23515c4cb\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/4e178293-17e5-48e5-bf4d-2f91e13a61f3/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "RUN",
+      "direction": "north-west",
+      "start": 0,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\RUN\\north-west\\frame_000.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\RUN\\north-west\\frame_001.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\RUN\\north-west\\frame_002.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\RUN\\north-west\\frame_003.png"
+      ],
+      "status": "done",
+      "jobId": "24570a51-8b40-4123-b989-a5a8b6b551c5",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: 24570a51-8b40-4123-b989-a5a8b6b551c5\njob_id: 24570a51-8b40-4123-b989-a5a8b6b551c5\nframes: 4\ntransparent: yes\nasset_id: e0acfff9-13b0-57db-85c9-23f4bd3770f4\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/24570a51-8b40-4123-b989-a5a8b6b551c5/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "RUN",
+      "direction": "north-west",
+      "start": 4,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\RUN\\north-west\\frame_004.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\RUN\\north-west\\frame_005.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\RUN\\north-west\\frame_006.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\RUN\\north-west\\frame_007.png"
+      ],
+      "status": "done",
+      "jobId": "b4d1adae-6658-4047-94fd-1725a54de119",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: b4d1adae-6658-4047-94fd-1725a54de119\njob_id: b4d1adae-6658-4047-94fd-1725a54de119\nframes: 4\ntransparent: yes\nasset_id: 2681020f-86d4-59a7-803e-eb2cb4448d54\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/b4d1adae-6658-4047-94fd-1725a54de119/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "RUN",
+      "direction": "west",
+      "start": 0,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\RUN\\west\\frame_000.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\RUN\\west\\frame_001.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\RUN\\west\\frame_002.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\RUN\\west\\frame_003.png"
+      ],
+      "status": "done",
+      "jobId": "2cdb14f5-d94b-491a-8e53-11ae211df356",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: 2cdb14f5-d94b-491a-8e53-11ae211df356\njob_id: 2cdb14f5-d94b-491a-8e53-11ae211df356\nframes: 4\ntransparent: yes\nasset_id: 43e95ca7-f902-5757-b74a-35f59524a585\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/2cdb14f5-d94b-491a-8e53-11ae211df356/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "RUN",
+      "direction": "west",
+      "start": 4,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\RUN\\west\\frame_004.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\RUN\\west\\frame_005.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\RUN\\west\\frame_006.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\RUN\\west\\frame_007.png"
+      ],
+      "status": "done",
+      "jobId": "60b47b1d-31a7-4431-a22d-92bed363aa71",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: 60b47b1d-31a7-4431-a22d-92bed363aa71\njob_id: 60b47b1d-31a7-4431-a22d-92bed363aa71\nframes: 4\ntransparent: yes\nasset_id: 8c9a8ae3-f7d1-541b-985d-9d1926cf713c\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/60b47b1d-31a7-4431-a22d-92bed363aa71/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "RUN",
+      "direction": "south-west",
+      "start": 0,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\RUN\\south-west\\frame_000.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\RUN\\south-west\\frame_001.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\RUN\\south-west\\frame_002.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\RUN\\south-west\\frame_003.png"
+      ],
+      "status": "done",
+      "jobId": "4f69a120-7e2b-4f21-8371-eb5ed73515dd",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: 4f69a120-7e2b-4f21-8371-eb5ed73515dd\njob_id: 4f69a120-7e2b-4f21-8371-eb5ed73515dd\nframes: 4\ntransparent: yes\nasset_id: adbdf921-c694-5b0f-a6b5-1896f54090a5\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/4f69a120-7e2b-4f21-8371-eb5ed73515dd/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "RUN",
+      "direction": "south-west",
+      "start": 4,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\RUN\\south-west\\frame_004.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\RUN\\south-west\\frame_005.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\RUN\\south-west\\frame_006.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\RUN\\south-west\\frame_007.png"
+      ],
+      "status": "done",
+      "jobId": "378ca8be-b48c-4ea0-ae42-5c08fb26496c",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: 378ca8be-b48c-4ea0-ae42-5c08fb26496c\njob_id: 378ca8be-b48c-4ea0-ae42-5c08fb26496c\nframes: 4\ntransparent: yes\nasset_id: e935ed1b-04b6-5fcd-95d7-18e6c89a09d4\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/378ca8be-b48c-4ea0-ae42-5c08fb26496c/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "ATTACK",
+      "direction": "south",
+      "start": 0,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\ATTACK\\south\\frame_000.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\ATTACK\\south\\frame_001.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\ATTACK\\south\\frame_002.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\ATTACK\\south\\frame_003.png"
+      ],
+      "status": "done",
+      "jobId": "17327877-e82f-4df7-8b82-f7f3e8fa8882",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: 17327877-e82f-4df7-8b82-f7f3e8fa8882\njob_id: 17327877-e82f-4df7-8b82-f7f3e8fa8882\nframes: 4\ntransparent: yes\nasset_id: b9d918d4-29fa-5054-9816-0b476e84d560\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/17327877-e82f-4df7-8b82-f7f3e8fa8882/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "ATTACK",
+      "direction": "south",
+      "start": 4,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\ATTACK\\south\\frame_004.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\ATTACK\\south\\frame_005.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\ATTACK\\south\\frame_006.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\ATTACK\\south\\frame_007.png"
+      ],
+      "status": "done",
+      "jobId": "be2533fd-2977-48de-b2ef-ee126d258de9",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: be2533fd-2977-48de-b2ef-ee126d258de9\njob_id: be2533fd-2977-48de-b2ef-ee126d258de9\nframes: 4\ntransparent: yes\nasset_id: c1de6c10-2001-5fe0-bff6-1e6e2de266b6\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/be2533fd-2977-48de-b2ef-ee126d258de9/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "ATTACK",
+      "direction": "south-east",
+      "start": 0,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\ATTACK\\south-east\\frame_000.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\ATTACK\\south-east\\frame_001.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\ATTACK\\south-east\\frame_002.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\ATTACK\\south-east\\frame_003.png"
+      ],
+      "status": "done",
+      "jobId": "4c746e61-ede8-4e1f-beb7-54d65693f3d6",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: 4c746e61-ede8-4e1f-beb7-54d65693f3d6\njob_id: 4c746e61-ede8-4e1f-beb7-54d65693f3d6\nframes: 4\ntransparent: yes\nasset_id: 99f0e66a-f5a1-5344-b2d1-2bf5070e8433\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/4c746e61-ede8-4e1f-beb7-54d65693f3d6/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "ATTACK",
+      "direction": "south-east",
+      "start": 4,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\ATTACK\\south-east\\frame_004.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\ATTACK\\south-east\\frame_005.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\ATTACK\\south-east\\frame_006.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\ATTACK\\south-east\\frame_007.png"
+      ],
+      "status": "done",
+      "jobId": "63c2f712-94bd-497b-9fe2-a745fe88961f",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: 63c2f712-94bd-497b-9fe2-a745fe88961f\njob_id: 63c2f712-94bd-497b-9fe2-a745fe88961f\nframes: 4\ntransparent: yes\nasset_id: 114ca800-ba3c-5d00-bc12-14572d8c8ad2\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/63c2f712-94bd-497b-9fe2-a745fe88961f/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "ATTACK",
+      "direction": "east",
+      "start": 0,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\ATTACK\\east\\frame_000.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\ATTACK\\east\\frame_001.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\ATTACK\\east\\frame_002.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\ATTACK\\east\\frame_003.png"
+      ],
+      "status": "done",
+      "jobId": "8baf38eb-0492-4eb3-9847-5db4182c89db",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: 8baf38eb-0492-4eb3-9847-5db4182c89db\njob_id: 8baf38eb-0492-4eb3-9847-5db4182c89db\nframes: 4\ntransparent: yes\nasset_id: c4c2d53b-1d8e-5f49-929c-ecac67aa643d\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/8baf38eb-0492-4eb3-9847-5db4182c89db/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "ATTACK",
+      "direction": "east",
+      "start": 4,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\ATTACK\\east\\frame_004.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\ATTACK\\east\\frame_005.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\ATTACK\\east\\frame_006.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\ATTACK\\east\\frame_007.png"
+      ],
+      "status": "done",
+      "jobId": "d7863f3f-0553-4c62-83d0-4e5c5ac09d4d",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: d7863f3f-0553-4c62-83d0-4e5c5ac09d4d\njob_id: d7863f3f-0553-4c62-83d0-4e5c5ac09d4d\nframes: 4\ntransparent: yes\nasset_id: 4766d918-5437-5319-8947-0566ea6181e4\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/d7863f3f-0553-4c62-83d0-4e5c5ac09d4d/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "ATTACK",
+      "direction": "north-east",
+      "start": 0,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\ATTACK\\north-east\\frame_000.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\ATTACK\\north-east\\frame_001.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\ATTACK\\north-east\\frame_002.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\ATTACK\\north-east\\frame_003.png"
+      ],
+      "status": "done",
+      "jobId": "ef3b82ee-8208-4986-a144-832f47d997fe",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: ef3b82ee-8208-4986-a144-832f47d997fe\njob_id: ef3b82ee-8208-4986-a144-832f47d997fe\nframes: 4\ntransparent: yes\nasset_id: 3a95a2a0-8bbe-5f9d-a9e3-974ef0c6d70c\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/ef3b82ee-8208-4986-a144-832f47d997fe/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "ATTACK",
+      "direction": "north-east",
+      "start": 4,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\ATTACK\\north-east\\frame_004.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\ATTACK\\north-east\\frame_005.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\ATTACK\\north-east\\frame_006.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\ATTACK\\north-east\\frame_007.png"
+      ],
+      "status": "done",
+      "jobId": "976197f3-3307-4df6-b27e-6ffaecdcb9c5",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: 976197f3-3307-4df6-b27e-6ffaecdcb9c5\njob_id: 976197f3-3307-4df6-b27e-6ffaecdcb9c5\nframes: 4\ntransparent: yes\nasset_id: 85ac0f3f-f48f-5ec0-a167-2dc4ce8d76ad\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/976197f3-3307-4df6-b27e-6ffaecdcb9c5/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "ATTACK",
+      "direction": "north-west",
+      "start": 0,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\ATTACK\\north-west\\frame_000.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\ATTACK\\north-west\\frame_001.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\ATTACK\\north-west\\frame_002.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\ATTACK\\north-west\\frame_003.png"
+      ],
+      "status": "done",
+      "jobId": "0d8c7704-08f4-4de5-9e06-79ebd9547bbe",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: 0d8c7704-08f4-4de5-9e06-79ebd9547bbe\njob_id: 0d8c7704-08f4-4de5-9e06-79ebd9547bbe\nframes: 4\ntransparent: yes\nasset_id: 86fb5e6f-5e95-5c44-b797-96ed63735cbc\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/0d8c7704-08f4-4de5-9e06-79ebd9547bbe/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "ATTACK",
+      "direction": "north-west",
+      "start": 4,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\ATTACK\\north-west\\frame_004.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\ATTACK\\north-west\\frame_005.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\ATTACK\\north-west\\frame_006.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\ATTACK\\north-west\\frame_007.png"
+      ],
+      "status": "done",
+      "jobId": "daa6e2b4-103a-4aa0-a009-2577fcea3d25",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: daa6e2b4-103a-4aa0-a009-2577fcea3d25\njob_id: daa6e2b4-103a-4aa0-a009-2577fcea3d25\nframes: 4\ntransparent: yes\nasset_id: a248f175-6f38-5d55-ad36-8a31fe25484e\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/daa6e2b4-103a-4aa0-a009-2577fcea3d25/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "ATTACK",
+      "direction": "west",
+      "start": 0,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\ATTACK\\west\\frame_000.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\ATTACK\\west\\frame_001.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\ATTACK\\west\\frame_002.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\ATTACK\\west\\frame_003.png"
+      ],
+      "status": "done",
+      "jobId": "a1d280ed-c3ba-4bba-9b91-de607a3814aa",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: a1d280ed-c3ba-4bba-9b91-de607a3814aa\njob_id: a1d280ed-c3ba-4bba-9b91-de607a3814aa\nframes: 4\ntransparent: yes\nasset_id: ca35d564-81a3-52ca-99ad-77fa76a6a03d\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/a1d280ed-c3ba-4bba-9b91-de607a3814aa/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "ATTACK",
+      "direction": "west",
+      "start": 4,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\ATTACK\\west\\frame_004.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\ATTACK\\west\\frame_005.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\ATTACK\\west\\frame_006.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\ATTACK\\west\\frame_007.png"
+      ],
+      "status": "done",
+      "jobId": "1c3f6111-ea32-4987-b627-05849a2b79a0",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: 1c3f6111-ea32-4987-b627-05849a2b79a0\njob_id: 1c3f6111-ea32-4987-b627-05849a2b79a0\nframes: 4\ntransparent: yes\nasset_id: f66099f0-2664-53d9-9bc9-10702fe282b3\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/1c3f6111-ea32-4987-b627-05849a2b79a0/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "ATTACK",
+      "direction": "south-west",
+      "start": 0,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\ATTACK\\south-west\\frame_000.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\ATTACK\\south-west\\frame_001.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\ATTACK\\south-west\\frame_002.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\ATTACK\\south-west\\frame_003.png"
+      ],
+      "status": "done",
+      "jobId": "a042afda-e072-4e68-b195-44e930a4ba2a",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: a042afda-e072-4e68-b195-44e930a4ba2a\njob_id: a042afda-e072-4e68-b195-44e930a4ba2a\nframes: 4\ntransparent: yes\nasset_id: 0baa0f0b-c87b-5dc7-bef1-23e7909ab567\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/a042afda-e072-4e68-b195-44e930a4ba2a/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "ATTACK",
+      "direction": "south-west",
+      "start": 4,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\ATTACK\\south-west\\frame_004.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\ATTACK\\south-west\\frame_005.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\ATTACK\\south-west\\frame_006.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\ATTACK\\south-west\\frame_007.png"
+      ],
+      "status": "done",
+      "jobId": "cf256431-9ffa-44b5-bde8-722085cd75e5",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: cf256431-9ffa-44b5-bde8-722085cd75e5\njob_id: cf256431-9ffa-44b5-bde8-722085cd75e5\nframes: 4\ntransparent: yes\nasset_id: 8368a043-379f-560a-b349-943b9d6660ae\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/cf256431-9ffa-44b5-bde8-722085cd75e5/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "HIT",
+      "direction": "south",
+      "start": 0,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\HIT\\south\\frame_000.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\HIT\\south\\frame_001.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\HIT\\south\\frame_002.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\HIT\\south\\frame_003.png"
+      ],
+      "status": "done",
+      "jobId": "3015317a-c9cf-4476-b9bd-d452e278d7e9",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: 3015317a-c9cf-4476-b9bd-d452e278d7e9\njob_id: 3015317a-c9cf-4476-b9bd-d452e278d7e9\nframes: 4\ntransparent: yes\nasset_id: cb536f10-ee7a-5439-b342-56bb250ecef9\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/3015317a-c9cf-4476-b9bd-d452e278d7e9/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "HIT",
+      "direction": "south-east",
+      "start": 0,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\HIT\\south-east\\frame_000.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\HIT\\south-east\\frame_001.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\HIT\\south-east\\frame_002.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\HIT\\south-east\\frame_003.png"
+      ],
+      "status": "done",
+      "jobId": "c795e662-8e66-4ef0-95d6-6c3d5c94282b",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: c795e662-8e66-4ef0-95d6-6c3d5c94282b\njob_id: c795e662-8e66-4ef0-95d6-6c3d5c94282b\nframes: 4\ntransparent: yes\nasset_id: 4944b558-1e5f-5193-91cf-d23d690e04fd\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/c795e662-8e66-4ef0-95d6-6c3d5c94282b/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "HIT",
+      "direction": "east",
+      "start": 0,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\HIT\\east\\frame_000.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\HIT\\east\\frame_001.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\HIT\\east\\frame_002.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\HIT\\east\\frame_003.png"
+      ],
+      "status": "done",
+      "jobId": "126fb9bc-b480-423b-9a9c-64b53566a956",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: 126fb9bc-b480-423b-9a9c-64b53566a956\njob_id: 126fb9bc-b480-423b-9a9c-64b53566a956\nframes: 4\ntransparent: yes\nasset_id: 7940c23f-cb0d-5c20-a1f2-5b068da9bebe\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/126fb9bc-b480-423b-9a9c-64b53566a956/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "HIT",
+      "direction": "north-east",
+      "start": 0,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\HIT\\north-east\\frame_000.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\HIT\\north-east\\frame_001.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\HIT\\north-east\\frame_002.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\HIT\\north-east\\frame_003.png"
+      ],
+      "status": "done",
+      "jobId": "adfcbe07-f3f6-4e32-95f5-0ca6cb753cd1",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: adfcbe07-f3f6-4e32-95f5-0ca6cb753cd1\njob_id: adfcbe07-f3f6-4e32-95f5-0ca6cb753cd1\nframes: 4\ntransparent: yes\nasset_id: 94575f95-2297-5e1c-b1a2-d428421cbfb2\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/adfcbe07-f3f6-4e32-95f5-0ca6cb753cd1/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "HIT",
+      "direction": "north-west",
+      "start": 0,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\HIT\\north-west\\frame_000.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\HIT\\north-west\\frame_001.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\HIT\\north-west\\frame_002.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\HIT\\north-west\\frame_003.png"
+      ],
+      "status": "done",
+      "jobId": "6738f80b-a030-4125-9648-5bccbd3dc812",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: 6738f80b-a030-4125-9648-5bccbd3dc812\njob_id: 6738f80b-a030-4125-9648-5bccbd3dc812\nframes: 4\ntransparent: yes\nasset_id: 71b7ac46-b93e-5d97-b667-4899ce60e984\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/6738f80b-a030-4125-9648-5bccbd3dc812/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "HIT",
+      "direction": "west",
+      "start": 0,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\HIT\\west\\frame_000.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\HIT\\west\\frame_001.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\HIT\\west\\frame_002.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\HIT\\west\\frame_003.png"
+      ],
+      "status": "done",
+      "jobId": "2c72aa60-d1dd-45c3-86ca-ea34b7fec446",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: 2c72aa60-d1dd-45c3-86ca-ea34b7fec446\njob_id: 2c72aa60-d1dd-45c3-86ca-ea34b7fec446\nframes: 4\ntransparent: yes\nasset_id: da7a58a1-eb4b-5290-84fc-f7a4355dc179\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/2c72aa60-d1dd-45c3-86ca-ea34b7fec446/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "HIT",
+      "direction": "south-west",
+      "start": 0,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\HIT\\south-west\\frame_000.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\HIT\\south-west\\frame_001.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\HIT\\south-west\\frame_002.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\HIT\\south-west\\frame_003.png"
+      ],
+      "status": "done",
+      "jobId": "47576f7c-c8b7-430b-ac9b-78b460006b50",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: 47576f7c-c8b7-430b-ac9b-78b460006b50\njob_id: 47576f7c-c8b7-430b-ac9b-78b460006b50\nframes: 4\ntransparent: yes\nasset_id: 65bea55e-7767-5104-96c2-2fdcd0eb4fb2\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/47576f7c-c8b7-430b-ac9b-78b460006b50/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "STUN",
+      "direction": "south",
+      "start": 0,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\STUN\\south\\frame_000.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\STUN\\south\\frame_001.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\STUN\\south\\frame_002.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\STUN\\south\\frame_003.png"
+      ],
+      "status": "done",
+      "jobId": "1af39aae-56f1-4ace-af34-0e51e695ebbc",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: 1af39aae-56f1-4ace-af34-0e51e695ebbc\njob_id: 1af39aae-56f1-4ace-af34-0e51e695ebbc\nframes: 4\ntransparent: yes\nasset_id: 770367df-cc20-5dea-b0b5-4f0a34dbe03e\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/1af39aae-56f1-4ace-af34-0e51e695ebbc/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "STUN",
+      "direction": "south-east",
+      "start": 0,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\STUN\\south-east\\frame_000.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\STUN\\south-east\\frame_001.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\STUN\\south-east\\frame_002.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\STUN\\south-east\\frame_003.png"
+      ],
+      "status": "done",
+      "jobId": "177f490a-c5f4-4034-9c88-59ebec129355",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: 177f490a-c5f4-4034-9c88-59ebec129355\njob_id: 177f490a-c5f4-4034-9c88-59ebec129355\nframes: 4\ntransparent: yes\nasset_id: f2d6fb6d-8658-5d77-a508-a12c3adc00ad\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/177f490a-c5f4-4034-9c88-59ebec129355/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "STUN",
+      "direction": "east",
+      "start": 0,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\STUN\\east\\frame_000.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\STUN\\east\\frame_001.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\STUN\\east\\frame_002.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\STUN\\east\\frame_003.png"
+      ],
+      "status": "done",
+      "jobId": "ae00f790-1f1d-49c0-b014-d408fc2e4fbb",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: ae00f790-1f1d-49c0-b014-d408fc2e4fbb\njob_id: ae00f790-1f1d-49c0-b014-d408fc2e4fbb\nframes: 4\ntransparent: yes\nasset_id: 08698a73-d3d3-5e4b-bf9a-cee83c77be25\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/ae00f790-1f1d-49c0-b014-d408fc2e4fbb/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "STUN",
+      "direction": "north-east",
+      "start": 0,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\STUN\\north-east\\frame_000.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\STUN\\north-east\\frame_001.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\STUN\\north-east\\frame_002.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\STUN\\north-east\\frame_003.png"
+      ],
+      "status": "done",
+      "jobId": "14d32edb-fea5-45a5-adbb-0fc04d3a82f9",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: 14d32edb-fea5-45a5-adbb-0fc04d3a82f9\njob_id: 14d32edb-fea5-45a5-adbb-0fc04d3a82f9\nframes: 4\ntransparent: yes\nasset_id: 27458e03-3db8-5c3d-8e4a-c96cfbdb5390\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/14d32edb-fea5-45a5-adbb-0fc04d3a82f9/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "STUN",
+      "direction": "north-west",
+      "start": 0,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\STUN\\north-west\\frame_000.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\STUN\\north-west\\frame_001.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\STUN\\north-west\\frame_002.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\STUN\\north-west\\frame_003.png"
+      ],
+      "status": "done",
+      "jobId": "073fd571-db5a-492a-b203-8c6c14ecf6c4",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: 073fd571-db5a-492a-b203-8c6c14ecf6c4\njob_id: 073fd571-db5a-492a-b203-8c6c14ecf6c4\nframes: 4\ntransparent: yes\nasset_id: d116311c-b697-594b-be1f-030dbdbe554f\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/073fd571-db5a-492a-b203-8c6c14ecf6c4/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "STUN",
+      "direction": "west",
+      "start": 0,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\STUN\\west\\frame_000.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\STUN\\west\\frame_001.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\STUN\\west\\frame_002.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\STUN\\west\\frame_003.png"
+      ],
+      "status": "done",
+      "jobId": "c98a3a90-542f-4542-987e-b7503a438d0f",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: c98a3a90-542f-4542-987e-b7503a438d0f\njob_id: c98a3a90-542f-4542-987e-b7503a438d0f\nframes: 4\ntransparent: yes\nasset_id: abf3bc6b-47c4-5204-8c27-316feec5b6d7\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/c98a3a90-542f-4542-987e-b7503a438d0f/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "STUN",
+      "direction": "south-west",
+      "start": 0,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\STUN\\south-west\\frame_000.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\STUN\\south-west\\frame_001.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\STUN\\south-west\\frame_002.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\STUN\\south-west\\frame_003.png"
+      ],
+      "status": "done",
+      "jobId": "490c0a01-34fd-4f40-95f1-8b3b383ea261",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: 490c0a01-34fd-4f40-95f1-8b3b383ea261\njob_id: 490c0a01-34fd-4f40-95f1-8b3b383ea261\nframes: 4\ntransparent: yes\nasset_id: 0bb75f36-d222-504d-b1cd-6849e388cf86\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/490c0a01-34fd-4f40-95f1-8b3b383ea261/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "DIE",
+      "direction": "south",
+      "start": 0,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\DIE\\south\\frame_000.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\DIE\\south\\frame_001.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\DIE\\south\\frame_002.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\DIE\\south\\frame_003.png"
+      ],
+      "status": "done",
+      "jobId": "9368c473-9a7d-4003-8ddd-4a926c092db2",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: 9368c473-9a7d-4003-8ddd-4a926c092db2\njob_id: 9368c473-9a7d-4003-8ddd-4a926c092db2\nframes: 4\ntransparent: yes\nasset_id: 3f23369e-b763-5a98-acb6-2506ed59dc9a\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/9368c473-9a7d-4003-8ddd-4a926c092db2/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "DIE",
+      "direction": "south",
+      "start": 4,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\DIE\\south\\frame_004.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\DIE\\south\\frame_005.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\DIE\\south\\frame_006.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\DIE\\south\\frame_007.png"
+      ],
+      "status": "done",
+      "jobId": "a69a7781-b8ba-4587-98f2-ceeef5f134c5",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: a69a7781-b8ba-4587-98f2-ceeef5f134c5\njob_id: a69a7781-b8ba-4587-98f2-ceeef5f134c5\nframes: 4\ntransparent: yes\nasset_id: c3aca009-8494-5c3f-8b09-febc30b580a2\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/a69a7781-b8ba-4587-98f2-ceeef5f134c5/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "DIE",
+      "direction": "south",
+      "start": 8,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\DIE\\south\\frame_008.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\DIE\\south\\frame_009.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\DIE\\south\\frame_010.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\DIE\\south\\frame_011.png"
+      ],
+      "status": "done",
+      "jobId": "01393787-2c43-40cb-a1e4-726fab41f28b",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: 01393787-2c43-40cb-a1e4-726fab41f28b\njob_id: 01393787-2c43-40cb-a1e4-726fab41f28b\nframes: 4\ntransparent: yes\nasset_id: b65f1fbd-60ae-5c30-a73b-9376f68d8edd\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/01393787-2c43-40cb-a1e4-726fab41f28b/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "DIE",
+      "direction": "south-east",
+      "start": 0,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\DIE\\south-east\\frame_000.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\DIE\\south-east\\frame_001.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\DIE\\south-east\\frame_002.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\DIE\\south-east\\frame_003.png"
+      ],
+      "status": "done",
+      "jobId": "a5b5d106-f95d-4a4c-b186-146c8bea8a1a",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: a5b5d106-f95d-4a4c-b186-146c8bea8a1a\njob_id: a5b5d106-f95d-4a4c-b186-146c8bea8a1a\nframes: 4\ntransparent: yes\nasset_id: 1d31d6a1-c8f1-5529-b1ea-1f1306534126\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/a5b5d106-f95d-4a4c-b186-146c8bea8a1a/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "DIE",
+      "direction": "south-east",
+      "start": 4,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\DIE\\south-east\\frame_004.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\DIE\\south-east\\frame_005.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\DIE\\south-east\\frame_006.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\DIE\\south-east\\frame_007.png"
+      ],
+      "status": "done",
+      "jobId": "12727115-21e6-4655-bf56-5425139753e7",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: 12727115-21e6-4655-bf56-5425139753e7\njob_id: 12727115-21e6-4655-bf56-5425139753e7\nframes: 4\ntransparent: yes\nasset_id: d9575016-20ba-5ec4-9b88-c855213e0fae\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/12727115-21e6-4655-bf56-5425139753e7/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "DIE",
+      "direction": "south-east",
+      "start": 8,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\DIE\\south-east\\frame_008.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\DIE\\south-east\\frame_009.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\DIE\\south-east\\frame_010.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\DIE\\south-east\\frame_011.png"
+      ],
+      "status": "done",
+      "jobId": "29beb4de-3cca-40b4-956b-ae2c2b910b38",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: 29beb4de-3cca-40b4-956b-ae2c2b910b38\njob_id: 29beb4de-3cca-40b4-956b-ae2c2b910b38\nframes: 4\ntransparent: yes\nasset_id: de19250a-9508-5109-97ce-23140a086de3\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/29beb4de-3cca-40b4-956b-ae2c2b910b38/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "DIE",
+      "direction": "east",
+      "start": 0,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\DIE\\east\\frame_000.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\DIE\\east\\frame_001.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\DIE\\east\\frame_002.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\DIE\\east\\frame_003.png"
+      ],
+      "status": "done",
+      "jobId": "208c44ad-3b8f-4fe7-8e95-c973a77e6212",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: 208c44ad-3b8f-4fe7-8e95-c973a77e6212\njob_id: 208c44ad-3b8f-4fe7-8e95-c973a77e6212\nframes: 4\ntransparent: yes\nasset_id: cbec04cc-1f4d-55bf-8445-033b15af9d9b\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/208c44ad-3b8f-4fe7-8e95-c973a77e6212/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "DIE",
+      "direction": "east",
+      "start": 4,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\DIE\\east\\frame_004.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\DIE\\east\\frame_005.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\DIE\\east\\frame_006.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\DIE\\east\\frame_007.png"
+      ],
+      "status": "done",
+      "jobId": "110dfcf7-5be0-4335-a20e-17071cbb77b1",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: 110dfcf7-5be0-4335-a20e-17071cbb77b1\njob_id: 110dfcf7-5be0-4335-a20e-17071cbb77b1\nframes: 4\ntransparent: yes\nasset_id: 84d5c4e0-e65d-5369-a5bd-9a5b54cef527\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/110dfcf7-5be0-4335-a20e-17071cbb77b1/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "DIE",
+      "direction": "east",
+      "start": 8,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\DIE\\east\\frame_008.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\DIE\\east\\frame_009.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\DIE\\east\\frame_010.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\DIE\\east\\frame_011.png"
+      ],
+      "status": "done",
+      "jobId": "95b4c3f7-8440-4e5c-a345-43756f5f42f7",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: 95b4c3f7-8440-4e5c-a345-43756f5f42f7\njob_id: 95b4c3f7-8440-4e5c-a345-43756f5f42f7\nframes: 4\ntransparent: yes\nasset_id: b7bdc0a1-ccfc-526c-a7ea-aa1e57c50b7d\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/95b4c3f7-8440-4e5c-a345-43756f5f42f7/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "DIE",
+      "direction": "north-east",
+      "start": 0,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\DIE\\north-east\\frame_000.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\DIE\\north-east\\frame_001.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\DIE\\north-east\\frame_002.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\DIE\\north-east\\frame_003.png"
+      ],
+      "status": "done",
+      "jobId": "90ae0a9b-5665-4128-8e8c-6e457eef8728",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: 90ae0a9b-5665-4128-8e8c-6e457eef8728\njob_id: 90ae0a9b-5665-4128-8e8c-6e457eef8728\nframes: 4\ntransparent: yes\nasset_id: e371d65f-3a27-56fd-88ea-281fb3c04cc8\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/90ae0a9b-5665-4128-8e8c-6e457eef8728/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "DIE",
+      "direction": "north-east",
+      "start": 4,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\DIE\\north-east\\frame_004.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\DIE\\north-east\\frame_005.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\DIE\\north-east\\frame_006.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\DIE\\north-east\\frame_007.png"
+      ],
+      "status": "done",
+      "jobId": "cdd1c64e-b5a6-46db-8995-31b9c03a81cb",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: cdd1c64e-b5a6-46db-8995-31b9c03a81cb\njob_id: cdd1c64e-b5a6-46db-8995-31b9c03a81cb\nframes: 4\ntransparent: yes\nasset_id: 426a33fe-7a69-51e6-9fd2-1540fd1d649e\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/cdd1c64e-b5a6-46db-8995-31b9c03a81cb/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "DIE",
+      "direction": "north-east",
+      "start": 8,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\DIE\\north-east\\frame_008.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\DIE\\north-east\\frame_009.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\DIE\\north-east\\frame_010.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\DIE\\north-east\\frame_011.png"
+      ],
+      "status": "done",
+      "jobId": "46d3fc07-9020-4029-889c-c9c019fa6920",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: 46d3fc07-9020-4029-889c-c9c019fa6920\njob_id: 46d3fc07-9020-4029-889c-c9c019fa6920\nframes: 4\ntransparent: yes\nasset_id: 1f56a30f-7588-5e1c-9a59-182b3b540e4f\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/46d3fc07-9020-4029-889c-c9c019fa6920/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "DIE",
+      "direction": "north-west",
+      "start": 0,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\DIE\\north-west\\frame_000.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\DIE\\north-west\\frame_001.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\DIE\\north-west\\frame_002.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\DIE\\north-west\\frame_003.png"
+      ],
+      "status": "done",
+      "jobId": "be65389b-23ae-405a-a8b9-9c31b828f7fc",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: be65389b-23ae-405a-a8b9-9c31b828f7fc\njob_id: be65389b-23ae-405a-a8b9-9c31b828f7fc\nframes: 4\ntransparent: yes\nasset_id: 49ce54e4-b595-52b8-b936-388d544256c8\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/be65389b-23ae-405a-a8b9-9c31b828f7fc/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "DIE",
+      "direction": "north-west",
+      "start": 4,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\DIE\\north-west\\frame_004.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\DIE\\north-west\\frame_005.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\DIE\\north-west\\frame_006.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\DIE\\north-west\\frame_007.png"
+      ],
+      "status": "done",
+      "jobId": "e71fd2e4-c53a-476f-a892-afb9609e1d5f",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: e71fd2e4-c53a-476f-a892-afb9609e1d5f\njob_id: e71fd2e4-c53a-476f-a892-afb9609e1d5f\nframes: 4\ntransparent: yes\nasset_id: 5faeeda3-2cd6-5070-8627-907465cc853e\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/e71fd2e4-c53a-476f-a892-afb9609e1d5f/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "DIE",
+      "direction": "north-west",
+      "start": 8,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\DIE\\north-west\\frame_008.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\DIE\\north-west\\frame_009.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\DIE\\north-west\\frame_010.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\DIE\\north-west\\frame_011.png"
+      ],
+      "status": "done",
+      "jobId": "ec4a9121-f750-42fc-80c3-c7deb6be70dd",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: ec4a9121-f750-42fc-80c3-c7deb6be70dd\njob_id: ec4a9121-f750-42fc-80c3-c7deb6be70dd\nframes: 4\ntransparent: yes\nasset_id: ede081be-b6a9-5ebb-af68-a8119c264913\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/ec4a9121-f750-42fc-80c3-c7deb6be70dd/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "DIE",
+      "direction": "west",
+      "start": 0,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\DIE\\west\\frame_000.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\DIE\\west\\frame_001.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\DIE\\west\\frame_002.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\DIE\\west\\frame_003.png"
+      ],
+      "status": "done",
+      "jobId": "f50244cf-8050-4ac1-9c95-4001650d9c2d",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: f50244cf-8050-4ac1-9c95-4001650d9c2d\njob_id: f50244cf-8050-4ac1-9c95-4001650d9c2d\nframes: 4\ntransparent: yes\nasset_id: 09aefd88-cbef-5e84-a7f3-dba6575d945f\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/f50244cf-8050-4ac1-9c95-4001650d9c2d/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "DIE",
+      "direction": "west",
+      "start": 4,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\DIE\\west\\frame_004.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\DIE\\west\\frame_005.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\DIE\\west\\frame_006.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\DIE\\west\\frame_007.png"
+      ],
+      "status": "done",
+      "jobId": "77826861-a8ec-4e4b-9bd4-db9c1a3a5095",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: 77826861-a8ec-4e4b-9bd4-db9c1a3a5095\njob_id: 77826861-a8ec-4e4b-9bd4-db9c1a3a5095\nframes: 4\ntransparent: yes\nasset_id: 395f976e-0f26-544d-b3de-787f8807496f\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/77826861-a8ec-4e4b-9bd4-db9c1a3a5095/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "DIE",
+      "direction": "west",
+      "start": 8,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\DIE\\west\\frame_008.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\DIE\\west\\frame_009.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\DIE\\west\\frame_010.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\DIE\\west\\frame_011.png"
+      ],
+      "status": "done",
+      "jobId": "5130b4d6-5c0c-4670-bae4-6d8585c23f9a",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: 5130b4d6-5c0c-4670-bae4-6d8585c23f9a\njob_id: 5130b4d6-5c0c-4670-bae4-6d8585c23f9a\nframes: 4\ntransparent: yes\nasset_id: b44f8f00-6c87-5b7e-adb3-a67e3ead958d\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/5130b4d6-5c0c-4670-bae4-6d8585c23f9a/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "DIE",
+      "direction": "south-west",
+      "start": 0,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\DIE\\south-west\\frame_000.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\DIE\\south-west\\frame_001.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\DIE\\south-west\\frame_002.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\DIE\\south-west\\frame_003.png"
+      ],
+      "status": "done",
+      "jobId": "7b378aac-79d2-476e-a080-712bc0c8fc96",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: 7b378aac-79d2-476e-a080-712bc0c8fc96\njob_id: 7b378aac-79d2-476e-a080-712bc0c8fc96\nframes: 4\ntransparent: yes\nasset_id: 08d89c93-65be-582a-b455-722137ae6289\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/7b378aac-79d2-476e-a080-712bc0c8fc96/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "DIE",
+      "direction": "south-west",
+      "start": 4,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\DIE\\south-west\\frame_004.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\DIE\\south-west\\frame_005.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\DIE\\south-west\\frame_006.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\DIE\\south-west\\frame_007.png"
+      ],
+      "status": "done",
+      "jobId": "956983f3-dd87-46fd-9d11-7cb9a5eb2e21",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: 956983f3-dd87-46fd-9d11-7cb9a5eb2e21\njob_id: 956983f3-dd87-46fd-9d11-7cb9a5eb2e21\nframes: 4\ntransparent: yes\nasset_id: 083ac2a6-d241-5917-8845-c31cab957646\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/956983f3-dd87-46fd-9d11-7cb9a5eb2e21/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "DIE",
+      "direction": "south-west",
+      "start": 8,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\DIE\\south-west\\frame_008.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\DIE\\south-west\\frame_009.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\DIE\\south-west\\frame_010.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\DIE\\south-west\\frame_011.png"
+      ],
+      "status": "done",
+      "jobId": "6500b777-669f-4503-8c3f-df0368fcfd88",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: 6500b777-669f-4503-8c3f-df0368fcfd88\njob_id: 6500b777-669f-4503-8c3f-df0368fcfd88\nframes: 4\ntransparent: yes\nasset_id: 172df3f9-3b3a-5f39-9d12-938310383f2e\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/6500b777-669f-4503-8c3f-df0368fcfd88/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "KNOCKBACK",
+      "direction": "south",
+      "start": 0,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\KNOCKBACK\\south\\frame_000.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\KNOCKBACK\\south\\frame_001.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\KNOCKBACK\\south\\frame_002.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\KNOCKBACK\\south\\frame_003.png"
+      ],
+      "status": "done",
+      "jobId": "5d18b0a5-bdd1-4a26-98b7-5951cc590024",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: 5d18b0a5-bdd1-4a26-98b7-5951cc590024\njob_id: 5d18b0a5-bdd1-4a26-98b7-5951cc590024\nframes: 4\ntransparent: yes\nasset_id: 96a4b082-21da-58cd-8cee-6d40e4ab5506\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/5d18b0a5-bdd1-4a26-98b7-5951cc590024/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "KNOCKBACK",
+      "direction": "south-east",
+      "start": 0,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\KNOCKBACK\\south-east\\frame_000.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\KNOCKBACK\\south-east\\frame_001.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\KNOCKBACK\\south-east\\frame_002.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\KNOCKBACK\\south-east\\frame_003.png"
+      ],
+      "status": "done",
+      "jobId": "7a3da58d-7c7a-4d9d-8709-ac5dbea2d840",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: 7a3da58d-7c7a-4d9d-8709-ac5dbea2d840\njob_id: 7a3da58d-7c7a-4d9d-8709-ac5dbea2d840\nframes: 4\ntransparent: yes\nasset_id: ef377281-dd57-500d-a9a9-f3718fa6c2df\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/7a3da58d-7c7a-4d9d-8709-ac5dbea2d840/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "KNOCKBACK",
+      "direction": "east",
+      "start": 0,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\KNOCKBACK\\east\\frame_000.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\KNOCKBACK\\east\\frame_001.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\KNOCKBACK\\east\\frame_002.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\KNOCKBACK\\east\\frame_003.png"
+      ],
+      "status": "done",
+      "jobId": "2c861231-1d8f-42b9-9aa6-9e35c2e32885",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: 2c861231-1d8f-42b9-9aa6-9e35c2e32885\njob_id: 2c861231-1d8f-42b9-9aa6-9e35c2e32885\nframes: 4\ntransparent: yes\nasset_id: e827e062-a86a-568d-9839-eb023b3eb634\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/2c861231-1d8f-42b9-9aa6-9e35c2e32885/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "KNOCKBACK",
+      "direction": "north-east",
+      "start": 0,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\KNOCKBACK\\north-east\\frame_000.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\KNOCKBACK\\north-east\\frame_001.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\KNOCKBACK\\north-east\\frame_002.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\KNOCKBACK\\north-east\\frame_003.png"
+      ],
+      "status": "done",
+      "jobId": "92cf9f67-bfea-4bd6-a7be-f498fc1199b0",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: 92cf9f67-bfea-4bd6-a7be-f498fc1199b0\njob_id: 92cf9f67-bfea-4bd6-a7be-f498fc1199b0\nframes: 4\ntransparent: yes\nasset_id: fdd20995-49bb-5dc0-a612-b2acb99dcf5d\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/92cf9f67-bfea-4bd6-a7be-f498fc1199b0/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "KNOCKBACK",
+      "direction": "north-west",
+      "start": 0,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\KNOCKBACK\\north-west\\frame_000.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\KNOCKBACK\\north-west\\frame_001.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\KNOCKBACK\\north-west\\frame_002.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\KNOCKBACK\\north-west\\frame_003.png"
+      ],
+      "status": "done",
+      "jobId": "80eb163c-ae48-4fa1-b638-ef411034a23f",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: 80eb163c-ae48-4fa1-b638-ef411034a23f\njob_id: 80eb163c-ae48-4fa1-b638-ef411034a23f\nframes: 4\ntransparent: yes\nasset_id: dc895abf-e60c-5235-9834-0acd2ad34a5e\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/80eb163c-ae48-4fa1-b638-ef411034a23f/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "KNOCKBACK",
+      "direction": "west",
+      "start": 0,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\KNOCKBACK\\west\\frame_000.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\KNOCKBACK\\west\\frame_001.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\KNOCKBACK\\west\\frame_002.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\KNOCKBACK\\west\\frame_003.png"
+      ],
+      "status": "done",
+      "jobId": "9cd89081-aead-4e37-b752-d65d4a822755",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: 9cd89081-aead-4e37-b752-d65d4a822755\njob_id: 9cd89081-aead-4e37-b752-d65d4a822755\nframes: 4\ntransparent: yes\nasset_id: ce5e0e71-3644-5b72-a24a-27b136e5ad88\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/9cd89081-aead-4e37-b752-d65d4a822755/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "KNOCKBACK",
+      "direction": "south-west",
+      "start": 0,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\KNOCKBACK\\south-west\\frame_000.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\KNOCKBACK\\south-west\\frame_001.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\KNOCKBACK\\south-west\\frame_002.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\KNOCKBACK\\south-west\\frame_003.png"
+      ],
+      "status": "done",
+      "jobId": "7a182ecb-1589-45b1-8110-4bd3faec8081",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: 7a182ecb-1589-45b1-8110-4bd3faec8081\njob_id: 7a182ecb-1589-45b1-8110-4bd3faec8081\nframes: 4\ntransparent: yes\nasset_id: 741c7b08-02d8-5b2f-b49a-1afe0b57ae1b\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/7a182ecb-1589-45b1-8110-4bd3faec8081/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "SKILL_1",
+      "direction": "south",
+      "start": 0,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_1\\south\\frame_000.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_1\\south\\frame_001.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_1\\south\\frame_002.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_1\\south\\frame_003.png"
+      ],
+      "status": "done",
+      "jobId": "6c877cd7-3e34-424d-a416-5741da6c9dcd",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: 6c877cd7-3e34-424d-a416-5741da6c9dcd\njob_id: 6c877cd7-3e34-424d-a416-5741da6c9dcd\nframes: 4\ntransparent: yes\nasset_id: 18d40572-f2df-535d-89e5-126cbd2c6eec\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/6c877cd7-3e34-424d-a416-5741da6c9dcd/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "SKILL_1",
+      "direction": "south",
+      "start": 4,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_1\\south\\frame_004.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_1\\south\\frame_005.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_1\\south\\frame_006.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_1\\south\\frame_007.png"
+      ],
+      "status": "done",
+      "jobId": "ab6df804-6cb0-4c29-8bbe-a4112b8843bf",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: ab6df804-6cb0-4c29-8bbe-a4112b8843bf\njob_id: ab6df804-6cb0-4c29-8bbe-a4112b8843bf\nframes: 4\ntransparent: yes\nasset_id: fa4d5645-0c79-5537-9f73-79da4df1cbf7\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/ab6df804-6cb0-4c29-8bbe-a4112b8843bf/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "SKILL_1",
+      "direction": "south-east",
+      "start": 0,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_1\\south-east\\frame_000.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_1\\south-east\\frame_001.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_1\\south-east\\frame_002.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_1\\south-east\\frame_003.png"
+      ],
+      "status": "done",
+      "jobId": "d63c06d8-5e16-49cd-a2a1-8b44c14765b9",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: d63c06d8-5e16-49cd-a2a1-8b44c14765b9\njob_id: d63c06d8-5e16-49cd-a2a1-8b44c14765b9\nframes: 4\ntransparent: yes\nasset_id: 5d402d5a-a4cf-5ed6-845f-6a1c4c2fde3d\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/d63c06d8-5e16-49cd-a2a1-8b44c14765b9/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "SKILL_1",
+      "direction": "south-east",
+      "start": 4,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_1\\south-east\\frame_004.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_1\\south-east\\frame_005.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_1\\south-east\\frame_006.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_1\\south-east\\frame_007.png"
+      ],
+      "status": "done",
+      "jobId": "ebc5d6c8-968e-45bc-b476-81bd6c753dca",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: ebc5d6c8-968e-45bc-b476-81bd6c753dca\njob_id: ebc5d6c8-968e-45bc-b476-81bd6c753dca\nframes: 4\ntransparent: yes\nasset_id: dd9968b1-5f08-51be-95d6-19260312b988\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/ebc5d6c8-968e-45bc-b476-81bd6c753dca/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "SKILL_1",
+      "direction": "east",
+      "start": 0,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_1\\east\\frame_000.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_1\\east\\frame_001.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_1\\east\\frame_002.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_1\\east\\frame_003.png"
+      ],
+      "status": "done",
+      "jobId": "244698ad-9b92-404a-85f5-883ea9d05065",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: 244698ad-9b92-404a-85f5-883ea9d05065\njob_id: 244698ad-9b92-404a-85f5-883ea9d05065\nframes: 4\ntransparent: yes\nasset_id: c20ea7ef-2580-5d8f-b956-1a1a2b390597\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/244698ad-9b92-404a-85f5-883ea9d05065/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "SKILL_1",
+      "direction": "east",
+      "start": 4,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_1\\east\\frame_004.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_1\\east\\frame_005.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_1\\east\\frame_006.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_1\\east\\frame_007.png"
+      ],
+      "status": "done",
+      "jobId": "3e8727af-9c67-482a-9065-1d7af3490c79",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: 3e8727af-9c67-482a-9065-1d7af3490c79\njob_id: 3e8727af-9c67-482a-9065-1d7af3490c79\nframes: 4\ntransparent: yes\nasset_id: c724437b-ef50-5108-b5bf-003e5e39e6e4\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/3e8727af-9c67-482a-9065-1d7af3490c79/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "SKILL_1",
+      "direction": "north-east",
+      "start": 0,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_1\\north-east\\frame_000.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_1\\north-east\\frame_001.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_1\\north-east\\frame_002.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_1\\north-east\\frame_003.png"
+      ],
+      "status": "done",
+      "jobId": "e3fde8b2-73ba-4cbc-b7b3-26d83d44581a",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: e3fde8b2-73ba-4cbc-b7b3-26d83d44581a\njob_id: e3fde8b2-73ba-4cbc-b7b3-26d83d44581a\nframes: 4\ntransparent: yes\nasset_id: 068f5ee7-5449-593e-b099-d10ae299dcce\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/e3fde8b2-73ba-4cbc-b7b3-26d83d44581a/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "SKILL_1",
+      "direction": "north-east",
+      "start": 4,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_1\\north-east\\frame_004.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_1\\north-east\\frame_005.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_1\\north-east\\frame_006.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_1\\north-east\\frame_007.png"
+      ],
+      "status": "done",
+      "jobId": "e86dab6b-15fd-4aa8-94e7-e76779fc1fea",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: e86dab6b-15fd-4aa8-94e7-e76779fc1fea\njob_id: e86dab6b-15fd-4aa8-94e7-e76779fc1fea\nframes: 4\ntransparent: yes\nasset_id: 260a26f4-2f1d-5663-b2fa-eb085c262a5a\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/e86dab6b-15fd-4aa8-94e7-e76779fc1fea/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "SKILL_1",
+      "direction": "north-west",
+      "start": 0,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_1\\north-west\\frame_000.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_1\\north-west\\frame_001.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_1\\north-west\\frame_002.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_1\\north-west\\frame_003.png"
+      ],
+      "status": "done",
+      "jobId": "74e2df06-be1b-45b5-82ff-d848819599af",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: 74e2df06-be1b-45b5-82ff-d848819599af\njob_id: 74e2df06-be1b-45b5-82ff-d848819599af\nframes: 4\ntransparent: yes\nasset_id: 7d0016e3-dc49-5b49-adbf-eb5ad4fb112e\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/74e2df06-be1b-45b5-82ff-d848819599af/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "SKILL_1",
+      "direction": "north-west",
+      "start": 4,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_1\\north-west\\frame_004.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_1\\north-west\\frame_005.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_1\\north-west\\frame_006.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_1\\north-west\\frame_007.png"
+      ],
+      "status": "done",
+      "jobId": "3414e0f9-c914-44b8-b438-6655f140dc5f",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: 3414e0f9-c914-44b8-b438-6655f140dc5f\njob_id: 3414e0f9-c914-44b8-b438-6655f140dc5f\nframes: 4\ntransparent: yes\nasset_id: bafb4632-cd29-5b0b-847e-ca35a8b3a89b\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/3414e0f9-c914-44b8-b438-6655f140dc5f/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "SKILL_1",
+      "direction": "west",
+      "start": 0,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_1\\west\\frame_000.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_1\\west\\frame_001.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_1\\west\\frame_002.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_1\\west\\frame_003.png"
+      ],
+      "status": "done",
+      "jobId": "913c1a0b-446d-4825-af0b-05bf36611404",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: 913c1a0b-446d-4825-af0b-05bf36611404\njob_id: 913c1a0b-446d-4825-af0b-05bf36611404\nframes: 4\ntransparent: yes\nasset_id: beb903d1-f97c-5d01-b6d3-64860d377d46\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/913c1a0b-446d-4825-af0b-05bf36611404/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "SKILL_1",
+      "direction": "west",
+      "start": 4,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_1\\west\\frame_004.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_1\\west\\frame_005.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_1\\west\\frame_006.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_1\\west\\frame_007.png"
+      ],
+      "status": "done",
+      "jobId": "dad217ef-27ec-43f9-b61a-48083fde6790",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: dad217ef-27ec-43f9-b61a-48083fde6790\njob_id: dad217ef-27ec-43f9-b61a-48083fde6790\nframes: 4\ntransparent: yes\nasset_id: 80048077-5061-5df1-83a2-cc1d9dcb4a33\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/dad217ef-27ec-43f9-b61a-48083fde6790/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "SKILL_1",
+      "direction": "south-west",
+      "start": 0,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_1\\south-west\\frame_000.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_1\\south-west\\frame_001.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_1\\south-west\\frame_002.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_1\\south-west\\frame_003.png"
+      ],
+      "status": "done",
+      "jobId": "ddda80a4-9930-4b42-8701-e4007a6e7487",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: ddda80a4-9930-4b42-8701-e4007a6e7487\njob_id: ddda80a4-9930-4b42-8701-e4007a6e7487\nframes: 4\ntransparent: yes\nasset_id: 3abfbd1b-6c3c-55ac-be23-d7ac5abafab7\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/ddda80a4-9930-4b42-8701-e4007a6e7487/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "SKILL_1",
+      "direction": "south-west",
+      "start": 4,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_1\\south-west\\frame_004.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_1\\south-west\\frame_005.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_1\\south-west\\frame_006.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_1\\south-west\\frame_007.png"
+      ],
+      "status": "done",
+      "jobId": "304164b6-21d3-4930-a1a4-a50c19a8ebbe",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: 304164b6-21d3-4930-a1a4-a50c19a8ebbe\njob_id: 304164b6-21d3-4930-a1a4-a50c19a8ebbe\nframes: 4\ntransparent: yes\nasset_id: 76cc1628-427a-5f1b-8b4d-6eaa738e1992\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/304164b6-21d3-4930-a1a4-a50c19a8ebbe/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "SKILL_2",
+      "direction": "south",
+      "start": 0,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_2\\south\\frame_000.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_2\\south\\frame_001.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_2\\south\\frame_002.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_2\\south\\frame_003.png"
+      ],
+      "status": "done",
+      "jobId": "89f1e043-346f-42d7-938e-3babb5efec8d",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: 89f1e043-346f-42d7-938e-3babb5efec8d\njob_id: 89f1e043-346f-42d7-938e-3babb5efec8d\nframes: 4\ntransparent: yes\nasset_id: f9b89c14-1bff-5080-82ec-0464f140edbd\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/89f1e043-346f-42d7-938e-3babb5efec8d/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "SKILL_2",
+      "direction": "south",
+      "start": 4,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_2\\south\\frame_004.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_2\\south\\frame_005.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_2\\south\\frame_006.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_2\\south\\frame_007.png"
+      ],
+      "status": "done",
+      "jobId": "3a59cb50-fac5-495f-91dc-24043b388e5d",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: 3a59cb50-fac5-495f-91dc-24043b388e5d\njob_id: 3a59cb50-fac5-495f-91dc-24043b388e5d\nframes: 4\ntransparent: yes\nasset_id: 2d5146bc-a9db-5172-b642-408faea92515\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/3a59cb50-fac5-495f-91dc-24043b388e5d/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "SKILL_2",
+      "direction": "south-east",
+      "start": 0,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_2\\south-east\\frame_000.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_2\\south-east\\frame_001.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_2\\south-east\\frame_002.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_2\\south-east\\frame_003.png"
+      ],
+      "status": "done",
+      "jobId": "1b72e387-4c40-4cdd-a724-3907e7ac8493",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: 1b72e387-4c40-4cdd-a724-3907e7ac8493\njob_id: 1b72e387-4c40-4cdd-a724-3907e7ac8493\nframes: 4\ntransparent: yes\nasset_id: de727ea1-5dc1-5578-a872-5ae873b6d936\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/1b72e387-4c40-4cdd-a724-3907e7ac8493/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "SKILL_2",
+      "direction": "south-east",
+      "start": 4,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_2\\south-east\\frame_004.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_2\\south-east\\frame_005.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_2\\south-east\\frame_006.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_2\\south-east\\frame_007.png"
+      ],
+      "status": "done",
+      "jobId": "eb98c853-ae03-437e-9f28-b4621c1d73d0",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: eb98c853-ae03-437e-9f28-b4621c1d73d0\njob_id: eb98c853-ae03-437e-9f28-b4621c1d73d0\nframes: 4\ntransparent: yes\nasset_id: 89b1f9c9-39a0-5577-8164-c9bf50b9b6d8\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/eb98c853-ae03-437e-9f28-b4621c1d73d0/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "SKILL_2",
+      "direction": "east",
+      "start": 0,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_2\\east\\frame_000.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_2\\east\\frame_001.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_2\\east\\frame_002.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_2\\east\\frame_003.png"
+      ],
+      "status": "done",
+      "jobId": "1ac348fe-dc04-409f-8754-b064ffb081b8",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: 1ac348fe-dc04-409f-8754-b064ffb081b8\njob_id: 1ac348fe-dc04-409f-8754-b064ffb081b8\nframes: 4\ntransparent: yes\nasset_id: 2053e457-47a0-539d-aed2-cad63f00a260\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/1ac348fe-dc04-409f-8754-b064ffb081b8/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "SKILL_2",
+      "direction": "east",
+      "start": 4,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_2\\east\\frame_004.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_2\\east\\frame_005.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_2\\east\\frame_006.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_2\\east\\frame_007.png"
+      ],
+      "status": "done",
+      "jobId": "32fb3c13-2559-40fe-9014-04edaffffc37",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: 32fb3c13-2559-40fe-9014-04edaffffc37\njob_id: 32fb3c13-2559-40fe-9014-04edaffffc37\nframes: 4\ntransparent: yes\nasset_id: cc962f0b-ab07-540e-b2c0-036aa615dc3c\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/32fb3c13-2559-40fe-9014-04edaffffc37/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "SKILL_2",
+      "direction": "north-east",
+      "start": 0,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_2\\north-east\\frame_000.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_2\\north-east\\frame_001.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_2\\north-east\\frame_002.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_2\\north-east\\frame_003.png"
+      ],
+      "status": "done",
+      "jobId": "b26f04da-5493-4d45-9e12-0791f1909174",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: b26f04da-5493-4d45-9e12-0791f1909174\njob_id: b26f04da-5493-4d45-9e12-0791f1909174\nframes: 4\ntransparent: yes\nasset_id: fc26ad8a-152d-5b3a-ba58-ce4bad6f9c1a\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/b26f04da-5493-4d45-9e12-0791f1909174/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "SKILL_2",
+      "direction": "north-east",
+      "start": 4,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_2\\north-east\\frame_004.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_2\\north-east\\frame_005.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_2\\north-east\\frame_006.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_2\\north-east\\frame_007.png"
+      ],
+      "status": "done",
+      "jobId": "67202179-5d7a-4ca7-80da-b3e058c9d627",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: 67202179-5d7a-4ca7-80da-b3e058c9d627\njob_id: 67202179-5d7a-4ca7-80da-b3e058c9d627\nframes: 4\ntransparent: yes\nasset_id: ea58a53a-9ee1-5825-96ca-99055d47ca08\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/67202179-5d7a-4ca7-80da-b3e058c9d627/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "SKILL_2",
+      "direction": "north-west",
+      "start": 0,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_2\\north-west\\frame_000.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_2\\north-west\\frame_001.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_2\\north-west\\frame_002.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_2\\north-west\\frame_003.png"
+      ],
+      "status": "done",
+      "jobId": "13542f56-faea-4335-a111-1bbdd702ad8c",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: 13542f56-faea-4335-a111-1bbdd702ad8c\njob_id: 13542f56-faea-4335-a111-1bbdd702ad8c\nframes: 4\ntransparent: yes\nasset_id: ffc72b33-de7e-5144-8bb9-f76d5885d7b0\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/13542f56-faea-4335-a111-1bbdd702ad8c/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "SKILL_2",
+      "direction": "north-west",
+      "start": 4,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_2\\north-west\\frame_004.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_2\\north-west\\frame_005.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_2\\north-west\\frame_006.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_2\\north-west\\frame_007.png"
+      ],
+      "status": "done",
+      "jobId": "3f76176a-f5fc-4114-bfe2-745764b6998e",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: 3f76176a-f5fc-4114-bfe2-745764b6998e\njob_id: 3f76176a-f5fc-4114-bfe2-745764b6998e\nframes: 4\ntransparent: yes\nasset_id: f319688d-6ae1-5ee6-83b1-7b2b51e38c06\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/3f76176a-f5fc-4114-bfe2-745764b6998e/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "SKILL_2",
+      "direction": "west",
+      "start": 0,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_2\\west\\frame_000.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_2\\west\\frame_001.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_2\\west\\frame_002.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_2\\west\\frame_003.png"
+      ],
+      "status": "done",
+      "jobId": "64c6e926-9754-4516-97af-7cb0f4e40003",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: 64c6e926-9754-4516-97af-7cb0f4e40003\njob_id: 64c6e926-9754-4516-97af-7cb0f4e40003\nframes: 4\ntransparent: yes\nasset_id: 8da2d34b-1890-5d0b-a41e-b3534547dd90\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/64c6e926-9754-4516-97af-7cb0f4e40003/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "SKILL_2",
+      "direction": "west",
+      "start": 4,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_2\\west\\frame_004.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_2\\west\\frame_005.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_2\\west\\frame_006.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_2\\west\\frame_007.png"
+      ],
+      "status": "done",
+      "jobId": "7d81a688-840a-4e01-982f-a6627032c92c",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: 7d81a688-840a-4e01-982f-a6627032c92c\njob_id: 7d81a688-840a-4e01-982f-a6627032c92c\nframes: 4\ntransparent: yes\nasset_id: ee24d87c-d7d3-5f11-8599-ff7db78f228e\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/7d81a688-840a-4e01-982f-a6627032c92c/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "SKILL_2",
+      "direction": "south-west",
+      "start": 0,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_2\\south-west\\frame_000.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_2\\south-west\\frame_001.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_2\\south-west\\frame_002.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_2\\south-west\\frame_003.png"
+      ],
+      "status": "done",
+      "jobId": "a4cca5ec-d373-4f3c-98f1-8e03305101ad",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: a4cca5ec-d373-4f3c-98f1-8e03305101ad\njob_id: a4cca5ec-d373-4f3c-98f1-8e03305101ad\nframes: 4\ntransparent: yes\nasset_id: 8d2a0213-cbf2-53c0-81ff-49ee1c5db29e\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/a4cca5ec-d373-4f3c-98f1-8e03305101ad/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "SKILL_2",
+      "direction": "south-west",
+      "start": 4,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_2\\south-west\\frame_004.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_2\\south-west\\frame_005.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_2\\south-west\\frame_006.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_2\\south-west\\frame_007.png"
+      ],
+      "status": "done",
+      "jobId": "c51cde99-8c61-44c9-a601-03c6d730992d",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: c51cde99-8c61-44c9-a601-03c6d730992d\njob_id: c51cde99-8c61-44c9-a601-03c6d730992d\nframes: 4\ntransparent: yes\nasset_id: 49378837-8585-5cca-b0e5-b2bddf81c217\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/c51cde99-8c61-44c9-a601-03c6d730992d/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "SKILL_3",
+      "direction": "south",
+      "start": 0,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_3\\south\\frame_000.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_3\\south\\frame_001.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_3\\south\\frame_002.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_3\\south\\frame_003.png"
+      ],
+      "status": "done",
+      "jobId": "2be13863-c0cf-4df5-b1b6-e1ebe39ae229",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: 2be13863-c0cf-4df5-b1b6-e1ebe39ae229\njob_id: 2be13863-c0cf-4df5-b1b6-e1ebe39ae229\nframes: 4\ntransparent: yes\nasset_id: 2a2f71db-28e0-5944-b79d-64573656a142\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/2be13863-c0cf-4df5-b1b6-e1ebe39ae229/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "SKILL_3",
+      "direction": "south",
+      "start": 4,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_3\\south\\frame_004.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_3\\south\\frame_005.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_3\\south\\frame_006.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_3\\south\\frame_007.png"
+      ],
+      "status": "done",
+      "jobId": "795dcd37-a020-48f3-9fb7-4bd909882594",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: 795dcd37-a020-48f3-9fb7-4bd909882594\njob_id: 795dcd37-a020-48f3-9fb7-4bd909882594\nframes: 4\ntransparent: yes\nasset_id: 0e074066-4b7a-5c62-854b-4debf04f0d32\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/795dcd37-a020-48f3-9fb7-4bd909882594/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "SKILL_3",
+      "direction": "south-east",
+      "start": 0,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_3\\south-east\\frame_000.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_3\\south-east\\frame_001.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_3\\south-east\\frame_002.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_3\\south-east\\frame_003.png"
+      ],
+      "status": "done",
+      "jobId": "43420c92-61c2-46c4-a29d-ba061e592632",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: 43420c92-61c2-46c4-a29d-ba061e592632\njob_id: 43420c92-61c2-46c4-a29d-ba061e592632\nframes: 4\ntransparent: yes\nasset_id: b389ea38-7393-5646-b049-5f1f643c4578\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/43420c92-61c2-46c4-a29d-ba061e592632/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "SKILL_3",
+      "direction": "south-east",
+      "start": 4,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_3\\south-east\\frame_004.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_3\\south-east\\frame_005.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_3\\south-east\\frame_006.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_3\\south-east\\frame_007.png"
+      ],
+      "status": "done",
+      "jobId": "e5deef4d-1ae5-4534-842d-61727b4d1d6a",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: e5deef4d-1ae5-4534-842d-61727b4d1d6a\njob_id: e5deef4d-1ae5-4534-842d-61727b4d1d6a\nframes: 4\ntransparent: yes\nasset_id: b48c15d6-40d1-542b-a1d0-79db4d117b98\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/e5deef4d-1ae5-4534-842d-61727b4d1d6a/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "SKILL_3",
+      "direction": "east",
+      "start": 0,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_3\\east\\frame_000.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_3\\east\\frame_001.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_3\\east\\frame_002.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_3\\east\\frame_003.png"
+      ],
+      "status": "done",
+      "jobId": "c628846e-5d43-4068-912c-9a9e0bad5261",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: c628846e-5d43-4068-912c-9a9e0bad5261\njob_id: c628846e-5d43-4068-912c-9a9e0bad5261\nframes: 4\ntransparent: yes\nasset_id: 584d5d2d-d980-5b92-9f05-9cd6385330f1\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/c628846e-5d43-4068-912c-9a9e0bad5261/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "SKILL_3",
+      "direction": "east",
+      "start": 4,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_3\\east\\frame_004.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_3\\east\\frame_005.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_3\\east\\frame_006.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_3\\east\\frame_007.png"
+      ],
+      "status": "done",
+      "jobId": "32852c05-335d-478d-b132-be7f4156d2c7",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: 32852c05-335d-478d-b132-be7f4156d2c7\njob_id: 32852c05-335d-478d-b132-be7f4156d2c7\nframes: 4\ntransparent: yes\nasset_id: 08ccad32-60aa-59ca-a5aa-84233eaae815\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/32852c05-335d-478d-b132-be7f4156d2c7/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "SKILL_3",
+      "direction": "north-east",
+      "start": 0,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_3\\north-east\\frame_000.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_3\\north-east\\frame_001.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_3\\north-east\\frame_002.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_3\\north-east\\frame_003.png"
+      ],
+      "status": "done",
+      "jobId": "97d6820e-d985-4adf-a08c-a272ecd21e83",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: 97d6820e-d985-4adf-a08c-a272ecd21e83\njob_id: 97d6820e-d985-4adf-a08c-a272ecd21e83\nframes: 4\ntransparent: yes\nasset_id: 6b2a7555-b718-5ed2-9fc8-2c74826809ca\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/97d6820e-d985-4adf-a08c-a272ecd21e83/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "SKILL_3",
+      "direction": "north-east",
+      "start": 4,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_3\\north-east\\frame_004.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_3\\north-east\\frame_005.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_3\\north-east\\frame_006.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_3\\north-east\\frame_007.png"
+      ],
+      "status": "done",
+      "jobId": "8dab0581-7502-4e24-aeb9-658185f84e52",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: 8dab0581-7502-4e24-aeb9-658185f84e52\njob_id: 8dab0581-7502-4e24-aeb9-658185f84e52\nframes: 4\ntransparent: yes\nasset_id: 9ec723e1-d00f-51c3-849e-878a9866230e\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/8dab0581-7502-4e24-aeb9-658185f84e52/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "SKILL_3",
+      "direction": "north-west",
+      "start": 0,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_3\\north-west\\frame_000.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_3\\north-west\\frame_001.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_3\\north-west\\frame_002.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_3\\north-west\\frame_003.png"
+      ],
+      "status": "done",
+      "jobId": "1b32c1b0-701a-4bc2-8514-ebf363020e04",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: 1b32c1b0-701a-4bc2-8514-ebf363020e04\njob_id: 1b32c1b0-701a-4bc2-8514-ebf363020e04\nframes: 4\ntransparent: yes\nasset_id: 6d23e149-788e-542a-be14-b60f6aecc12e\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/1b32c1b0-701a-4bc2-8514-ebf363020e04/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "SKILL_3",
+      "direction": "north-west",
+      "start": 4,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_3\\north-west\\frame_004.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_3\\north-west\\frame_005.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_3\\north-west\\frame_006.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_3\\north-west\\frame_007.png"
+      ],
+      "status": "done",
+      "jobId": "0d8ac29c-fd00-44c5-b209-70ba13831db0",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: 0d8ac29c-fd00-44c5-b209-70ba13831db0\njob_id: 0d8ac29c-fd00-44c5-b209-70ba13831db0\nframes: 4\ntransparent: yes\nasset_id: e19ac314-b9e1-5df6-a470-fb7be140041f\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/0d8ac29c-fd00-44c5-b209-70ba13831db0/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "SKILL_3",
+      "direction": "west",
+      "start": 0,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_3\\west\\frame_000.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_3\\west\\frame_001.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_3\\west\\frame_002.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_3\\west\\frame_003.png"
+      ],
+      "status": "done",
+      "jobId": "fca65fdb-1502-409e-87cc-b956095ceac2",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: fca65fdb-1502-409e-87cc-b956095ceac2\njob_id: fca65fdb-1502-409e-87cc-b956095ceac2\nframes: 4\ntransparent: yes\nasset_id: 5a0059ac-18b7-5c1d-8376-79f3ae82c1a8\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/fca65fdb-1502-409e-87cc-b956095ceac2/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "SKILL_3",
+      "direction": "west",
+      "start": 4,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_3\\west\\frame_004.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_3\\west\\frame_005.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_3\\west\\frame_006.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_3\\west\\frame_007.png"
+      ],
+      "status": "done",
+      "jobId": "1354d378-19b5-4ead-9b6a-856b3ee978e7",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: 1354d378-19b5-4ead-9b6a-856b3ee978e7\njob_id: 1354d378-19b5-4ead-9b6a-856b3ee978e7\nframes: 4\ntransparent: yes\nasset_id: 7b9e07d7-9871-5f0b-9249-0b39d415c3aa\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/1354d378-19b5-4ead-9b6a-856b3ee978e7/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "SKILL_3",
+      "direction": "south-west",
+      "start": 0,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_3\\south-west\\frame_000.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_3\\south-west\\frame_001.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_3\\south-west\\frame_002.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_3\\south-west\\frame_003.png"
+      ],
+      "status": "done",
+      "jobId": "c6fa4c66-8229-4c56-bbc6-61748835b4b1",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: c6fa4c66-8229-4c56-bbc6-61748835b4b1\njob_id: c6fa4c66-8229-4c56-bbc6-61748835b4b1\nframes: 4\ntransparent: yes\nasset_id: 5840722d-d098-5cd9-a31a-62f460e06a97\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/c6fa4c66-8229-4c56-bbc6-61748835b4b1/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "SKILL_3",
+      "direction": "south-west",
+      "start": 4,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_3\\south-west\\frame_004.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_3\\south-west\\frame_005.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_3\\south-west\\frame_006.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_3\\south-west\\frame_007.png"
+      ],
+      "status": "done",
+      "jobId": "a767b935-4387-45f5-a4e4-c29746b32e24",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: a767b935-4387-45f5-a4e4-c29746b32e24\njob_id: a767b935-4387-45f5-a4e4-c29746b32e24\nframes: 4\ntransparent: yes\nasset_id: a0f04476-4438-559d-a9b4-5c818b15ffe8\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/a767b935-4387-45f5-a4e4-c29746b32e24/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "SKILL_4",
+      "direction": "south",
+      "start": 0,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_4\\south\\frame_000.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_4\\south\\frame_001.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_4\\south\\frame_002.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_4\\south\\frame_003.png"
+      ],
+      "status": "done",
+      "jobId": "9fb7bde3-b867-4ada-9ca5-869ac81e6b34",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: 9fb7bde3-b867-4ada-9ca5-869ac81e6b34\njob_id: 9fb7bde3-b867-4ada-9ca5-869ac81e6b34\nframes: 4\ntransparent: yes\nasset_id: 87fc5c7a-5a77-5d82-883a-43dc9efc41b5\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/9fb7bde3-b867-4ada-9ca5-869ac81e6b34/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "SKILL_4",
+      "direction": "south",
+      "start": 4,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_4\\south\\frame_004.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_4\\south\\frame_005.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_4\\south\\frame_006.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_4\\south\\frame_007.png"
+      ],
+      "status": "done",
+      "jobId": "2bec4190-babb-48c9-92bb-45790053137d",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: 2bec4190-babb-48c9-92bb-45790053137d\njob_id: 2bec4190-babb-48c9-92bb-45790053137d\nframes: 4\ntransparent: yes\nasset_id: e95d764b-63d3-513d-9302-01c4bc03ced2\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/2bec4190-babb-48c9-92bb-45790053137d/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "SKILL_4",
+      "direction": "south-east",
+      "start": 0,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_4\\south-east\\frame_000.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_4\\south-east\\frame_001.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_4\\south-east\\frame_002.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_4\\south-east\\frame_003.png"
+      ],
+      "status": "done",
+      "jobId": "11013f9d-3602-4ada-ba89-4d0504b63ee0",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: 11013f9d-3602-4ada-ba89-4d0504b63ee0\njob_id: 11013f9d-3602-4ada-ba89-4d0504b63ee0\nframes: 4\ntransparent: yes\nasset_id: 484afb7a-38dd-5eb9-81a4-1bdb99ebe02e\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/11013f9d-3602-4ada-ba89-4d0504b63ee0/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "SKILL_4",
+      "direction": "south-east",
+      "start": 4,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_4\\south-east\\frame_004.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_4\\south-east\\frame_005.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_4\\south-east\\frame_006.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_4\\south-east\\frame_007.png"
+      ],
+      "status": "done",
+      "jobId": "809383a2-fc9d-45fc-8763-99ce5622da84",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: 809383a2-fc9d-45fc-8763-99ce5622da84\njob_id: 809383a2-fc9d-45fc-8763-99ce5622da84\nframes: 4\ntransparent: yes\nasset_id: 54c1e0a0-1605-543b-857f-aa56b2a87aa8\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/809383a2-fc9d-45fc-8763-99ce5622da84/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "SKILL_4",
+      "direction": "east",
+      "start": 0,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_4\\east\\frame_000.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_4\\east\\frame_001.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_4\\east\\frame_002.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_4\\east\\frame_003.png"
+      ],
+      "status": "done",
+      "jobId": "d70b1f86-a23f-4ff5-844a-38c958465472",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: d70b1f86-a23f-4ff5-844a-38c958465472\njob_id: d70b1f86-a23f-4ff5-844a-38c958465472\nframes: 4\ntransparent: yes\nasset_id: 7bb5e01c-d9ed-5487-805d-bae1efcb504e\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/d70b1f86-a23f-4ff5-844a-38c958465472/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "SKILL_4",
+      "direction": "east",
+      "start": 4,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_4\\east\\frame_004.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_4\\east\\frame_005.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_4\\east\\frame_006.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_4\\east\\frame_007.png"
+      ],
+      "status": "done",
+      "jobId": "342cddb4-4b2d-4d69-8d37-a4ea144ab1c9",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: 342cddb4-4b2d-4d69-8d37-a4ea144ab1c9\njob_id: 342cddb4-4b2d-4d69-8d37-a4ea144ab1c9\nframes: 4\ntransparent: yes\nasset_id: 925ffbe7-07c4-5e43-994a-6e8e6f85f2ad\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/342cddb4-4b2d-4d69-8d37-a4ea144ab1c9/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "SKILL_4",
+      "direction": "north-east",
+      "start": 0,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_4\\north-east\\frame_000.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_4\\north-east\\frame_001.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_4\\north-east\\frame_002.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_4\\north-east\\frame_003.png"
+      ],
+      "status": "done",
+      "jobId": "2a12f16d-44a6-45dc-b571-278e2113b89e",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: 2a12f16d-44a6-45dc-b571-278e2113b89e\njob_id: 2a12f16d-44a6-45dc-b571-278e2113b89e\nframes: 4\ntransparent: yes\nasset_id: 1e7e3890-b927-5210-99bd-a18b08028171\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/2a12f16d-44a6-45dc-b571-278e2113b89e/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "SKILL_4",
+      "direction": "north-east",
+      "start": 4,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_4\\north-east\\frame_004.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_4\\north-east\\frame_005.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_4\\north-east\\frame_006.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_4\\north-east\\frame_007.png"
+      ],
+      "status": "done",
+      "jobId": "73e016d5-076e-43a8-84c0-1f32c2df9481",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: 73e016d5-076e-43a8-84c0-1f32c2df9481\njob_id: 73e016d5-076e-43a8-84c0-1f32c2df9481\nframes: 4\ntransparent: yes\nasset_id: 366ef0dd-675f-56b1-ac5c-179413807643\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/73e016d5-076e-43a8-84c0-1f32c2df9481/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "SKILL_4",
+      "direction": "north-west",
+      "start": 0,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_4\\north-west\\frame_000.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_4\\north-west\\frame_001.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_4\\north-west\\frame_002.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_4\\north-west\\frame_003.png"
+      ],
+      "status": "done",
+      "jobId": "de988c72-acbb-4599-bb13-d6ca3cf5f129",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: de988c72-acbb-4599-bb13-d6ca3cf5f129\njob_id: de988c72-acbb-4599-bb13-d6ca3cf5f129\nframes: 4\ntransparent: yes\nasset_id: cbe37a93-109c-52b1-badf-26088ca083de\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/de988c72-acbb-4599-bb13-d6ca3cf5f129/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "SKILL_4",
+      "direction": "north-west",
+      "start": 4,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_4\\north-west\\frame_004.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_4\\north-west\\frame_005.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_4\\north-west\\frame_006.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_4\\north-west\\frame_007.png"
+      ],
+      "status": "done",
+      "jobId": "b4b56b00-c5d3-4ff4-859e-2ee8f70bf97b",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: b4b56b00-c5d3-4ff4-859e-2ee8f70bf97b\njob_id: b4b56b00-c5d3-4ff4-859e-2ee8f70bf97b\nframes: 4\ntransparent: yes\nasset_id: e2bac222-7912-5610-94f4-271c2eb33e5f\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/b4b56b00-c5d3-4ff4-859e-2ee8f70bf97b/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "SKILL_4",
+      "direction": "west",
+      "start": 0,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_4\\west\\frame_000.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_4\\west\\frame_001.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_4\\west\\frame_002.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_4\\west\\frame_003.png"
+      ],
+      "status": "done",
+      "jobId": "49086197-a8a0-419c-85f4-ef5414db7e37",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: 49086197-a8a0-419c-85f4-ef5414db7e37\njob_id: 49086197-a8a0-419c-85f4-ef5414db7e37\nframes: 4\ntransparent: yes\nasset_id: ad8e72b4-b023-582a-b88f-69fd8b96d814\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/49086197-a8a0-419c-85f4-ef5414db7e37/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "SKILL_4",
+      "direction": "west",
+      "start": 4,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_4\\west\\frame_004.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_4\\west\\frame_005.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_4\\west\\frame_006.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_4\\west\\frame_007.png"
+      ],
+      "status": "done",
+      "jobId": "7f417049-5807-4e60-927a-f5977a709a98",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: 7f417049-5807-4e60-927a-f5977a709a98\njob_id: 7f417049-5807-4e60-927a-f5977a709a98\nframes: 4\ntransparent: yes\nasset_id: 23126ef5-93bb-5b19-a65c-0308e44ed249\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/7f417049-5807-4e60-927a-f5977a709a98/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "SKILL_4",
+      "direction": "south-west",
+      "start": 0,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_4\\south-west\\frame_000.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_4\\south-west\\frame_001.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_4\\south-west\\frame_002.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_4\\south-west\\frame_003.png"
+      ],
+      "status": "done",
+      "jobId": "0b927af2-eda3-4b4f-8052-2c41e8c711e6",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: 0b927af2-eda3-4b4f-8052-2c41e8c711e6\njob_id: 0b927af2-eda3-4b4f-8052-2c41e8c711e6\nframes: 4\ntransparent: yes\nasset_id: 3513430f-5c02-5c84-89ff-c34f558eaa10\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/0b927af2-eda3-4b4f-8052-2c41e8c711e6/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "edit",
+      "motion": "SKILL_4",
+      "direction": "south-west",
+      "start": 4,
+      "count": 4,
+      "paths": [
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_4\\south-west\\frame_004.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_4\\south-west\\frame_005.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_4\\south-west\\frame_006.png",
+        "artifacts\\pixellab\\MumyeongJangsuSwordRevision\\Before\\Sprites\\SKILL_4\\south-west\\frame_007.png"
+      ],
+      "status": "done",
+      "jobId": "e73e97de-704e-4f31-930c-f6ddd2f5714d",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "status: completed\nid: e73e97de-704e-4f31-930c-f6ddd2f5714d\njob_id: e73e97de-704e-4f31-930c-f6ddd2f5714d\nframes: 4\ntransparent: yes\nasset_id: 1c94d5d0-609f-5c5f-9be2-1a8c3615fa84\nasset_type: image\nasset_status: saved\ngallery: saved to your PixelLab gallery (pixellab.ai/create)\ncharged: 10 generations\ndownload: https://api.pixellab.ai/mcp/images/e73e97de-704e-4f31-930c-f6ddd2f5714d/download?index=0 ... ?index=3"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "kind": "north",
+      "motion": "IDLE",
+      "direction": "north",
+      "count": 4,
+      "status": "done",
+      "groupId": "8c332dd6-0cca-4c59-b7f0-762fc85765dd",
+      "jobId": "71ca851a-420f-415e-a3a5-46a8e36345e4",
+      "selectedAnimation": "R5_IDLE"
+    },
+    {
+      "kind": "north",
+      "motion": "RUN",
+      "direction": "north",
+      "count": 8,
+      "status": "done",
+      "groupId": "9e875a18-da18-4d06-b8cf-f89fff9dba4d",
+      "jobId": "e79cafa6-a344-4779-9518-8f6ef7f4bfce"
+    },
+    {
+      "kind": "north",
+      "motion": "ATTACK",
+      "direction": "north",
+      "count": 8,
+      "status": "done",
+      "groupId": "a4e8f256-4688-4902-b785-fd17eda5d424",
+      "jobId": "d388127d-cc54-426e-b781-914853a8d454",
+      "selectedAnimation": "R4_ATTACK"
+    },
+    {
+      "kind": "north",
+      "motion": "HIT",
+      "direction": "north",
+      "count": 4,
+      "status": "done",
+      "groupId": "7a36bcb6-04b8-4051-bcaf-141d5312db28",
+      "jobId": "b77b7faa-ee2d-45ce-b71a-5ee1386bc729"
+    },
+    {
+      "kind": "north",
+      "motion": "STUN",
+      "direction": "north",
+      "count": 4,
+      "status": "done",
+      "groupId": "7f68770d-a82c-4c78-84b5-559e58c18073",
+      "jobId": "e80746b4-b263-4cde-9478-cc2c889a6d07"
+    },
+    {
+      "kind": "north",
+      "motion": "DIE",
+      "direction": "north",
+      "count": 12,
+      "status": "done",
+      "groupId": "692ba6ae-f2f7-45c2-ab56-4a4fb5ab1fb6",
+      "jobId": "2da1fdea-aa15-495f-af29-731687f8968b"
+    },
+    {
+      "kind": "north",
+      "motion": "KNOCKBACK",
+      "direction": "north",
+      "count": 4,
+      "status": "done",
+      "groupId": "b10caf68-36b2-4707-ae0e-a367cd6c7e9c",
+      "jobId": "7d5e2f34-5ec0-476c-9667-54319840d4e7"
+    },
+    {
+      "kind": "north",
+      "motion": "SKILL_1",
+      "direction": "north",
+      "count": 8,
+      "status": "done",
+      "groupId": "26dc5f87-2136-4d11-904f-a3da6995c47d",
+      "jobId": "457158d2-e672-4c4b-b89e-1a0d136a0ee9"
+    },
+    {
+      "kind": "north",
+      "motion": "SKILL_2",
+      "direction": "north",
+      "count": 8,
+      "status": "done",
+      "groupId": "8d609a20-51b1-4cdb-9353-44eb77ae5ab5",
+      "jobId": "4f8c8267-f956-485d-80ea-a8ed33a9eb58"
+    },
+    {
+      "kind": "north",
+      "motion": "SKILL_3",
+      "direction": "north",
+      "count": 8,
+      "status": "done",
+      "groupId": "fa95ccae-f066-47b0-b2eb-edce7b904966",
+      "jobId": "294f4eff-89cf-4218-938b-034a9287bc10"
+    },
+    {
+      "kind": "north",
+      "motion": "SKILL_4",
+      "direction": "north",
+      "count": 8,
+      "status": "done",
+      "groupId": "cc1f458c-4adc-4c94-81c2-20f80d2f3d7c",
+      "jobId": "09e7a9c6-6eee-49c0-937b-9c9ab39b5865"
+    }
+  ],
+  "status": "complete",
+  "unityPublished": true,
+  "unityValidation": {
+    "clips": 88,
+    "frames": 608,
+    "allProjectClips": 440,
+    "trailClips": 8,
+    "trailFrames": 64,
+    "consoleErrors": 0,
+    "sceneUnchanged": true
+  }
+}

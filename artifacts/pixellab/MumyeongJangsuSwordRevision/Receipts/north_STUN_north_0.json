@@ -1,0 +1,9 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "character: 6f8c501b-a360-4d0a-85fd-556e6a2e0b9d\nanimation: v3 custom (Lower the shield slightly, bend knees and hang the head, swaying weakly while still standing. Seamless dazed hold cycle with equipment retained. BACK VIEW: face NORTH / screen-up throughout. Both arms and all active actions occur in FRONT of his chest, toward screen-up; the sword belongs to the right hand, kept ahead of the body or upright beside the right shoulder. Never draw sword or forearm across the visible back. Torso/head occlude far-side weapons naturally. Preserve the large saber size. )\ndirections: north (1 jobs)\njob_ids: north=e80746b4-b263-4cde-9478-cc2c889a6d07\ngroup: 7f68770d-a82c-4c78-84b5-559e58c18073\nframes: 4 (reference stripped, keep_first_frame=false)\ncanvas: north 92x92 (frames are stored at this size: the character plus room to move)\ncost: 1 generation (1/dir x 1)\neta: ~2-4 min/direction\nprompts: one per direction (direction_prompts)\n\nhint: get_character(character_id=\"6f8c501b-a360-4d0a-85fd-556e6a2e0b9d\")\nadd more directions to this group: animate_character(character_id=\"6f8c501b-a360-4d0a-85fd-556e6a2e0b9d\", action_description=\"Lower the shield slightly, bend knees and hang the head, swaying weakly while still standing. Seamless dazed hold cycle with equipment retained. BACK VIEW: face NORTH / screen-up throughout. Both arms and all active actions occur in FRONT of his chest, toward screen-up; the sword belongs to the right hand, kept ahead of the body or upright beside the right shoulder. Never draw sword or forearm across the visible back. Torso/head occlude far-side weapons naturally. Preserve the large saber size. \", animation_group_id=\"7f68770d-a82c-4c78-84b5-559e58c18073\", directions=[...]) (its direction_prompts are reused)"
+    }
+  ],
+  "isError": false
+}

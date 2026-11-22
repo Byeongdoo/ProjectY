@@ -1,0 +1,18 @@
+{
+  "sourceId": "31b53cfc-87ca-4fec-895e-d3ee09c16365",
+  "editedId": "17d1943c-f1b3-4b24-9ac3-033e803ea158",
+  "sheetId": "333aed05-2037-48b8-804d-bc019c877a6c",
+  "integerYOffsets": {
+    "south": 12,
+    "south-east": -9,
+    "east": -4,
+    "north-east": -4,
+    "north": -4,
+    "north-west": -4,
+    "west": -4,
+    "south-west": -1
+  },
+  "canvas": 96,
+  "bootBaseline": 78,
+  "pixelResampling": false
+}

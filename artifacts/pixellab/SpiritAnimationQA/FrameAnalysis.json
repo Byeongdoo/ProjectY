@@ -1,0 +1,939 @@
+{
+  "availableClips": 440,
+  "motionGroups": 55,
+  "automaticReviewFlags": 62,
+  "note": "Flags are inspection cues, not automatic artistic failures.",
+  "flags": [
+    {
+      "key": "MumyeongJangsu",
+      "motion": "IDLE",
+      "direction": "south",
+      "flags": [
+        "루프 연결 확인"
+      ],
+      "metrics": {
+        "loopSeam": 0.63,
+        "seamVsAdjacent": 1.96,
+        "startVsIdle": 0.0,
+        "endVsIdle": 0.63,
+        "bottomRange": 2.0
+      }
+    },
+    {
+      "key": "MumyeongJangsu",
+      "motion": "IDLE",
+      "direction": "south-east",
+      "flags": [
+        "루프 연결 확인",
+        "대기 발 위치 확인"
+      ],
+      "metrics": {
+        "loopSeam": 0.657,
+        "seamVsAdjacent": 1.828,
+        "startVsIdle": 0.0,
+        "endVsIdle": 0.657,
+        "bottomRange": 5.0
+      }
+    },
+    {
+      "key": "MumyeongJangsu",
+      "motion": "IDLE",
+      "direction": "west",
+      "flags": [
+        "루프 연결 확인"
+      ],
+      "metrics": {
+        "loopSeam": 0.757,
+        "seamVsAdjacent": 1.641,
+        "startVsIdle": 0.0,
+        "endVsIdle": 0.757,
+        "bottomRange": 0.0
+      }
+    },
+    {
+      "key": "MumyeongJangsu",
+      "motion": "ATTACK",
+      "direction": "east",
+      "flags": [
+        "대기 복귀 자세 확인"
+      ],
+      "metrics": {
+        "loopSeam": 0.634,
+        "seamVsAdjacent": 1.048,
+        "startVsIdle": 0.454,
+        "endVsIdle": 0.68,
+        "bottomRange": 4.0
+      }
+    },
+    {
+      "key": "MumyeongJangsu",
+      "motion": "ATTACK",
+      "direction": "west",
+      "flags": [
+        "대기 복귀 자세 확인"
+      ],
+      "metrics": {
+        "loopSeam": 0.853,
+        "seamVsAdjacent": 1.568,
+        "startVsIdle": 0.46,
+        "endVsIdle": 0.857,
+        "bottomRange": 0.0
+      }
+    },
+    {
+      "key": "MumyeongJangsu",
+      "motion": "SKILL_1",
+      "direction": "south-west",
+      "flags": [
+        "대기 복귀 자세 확인"
+      ],
+      "metrics": {
+        "loopSeam": 0.474,
+        "seamVsAdjacent": 0.725,
+        "startVsIdle": 0.397,
+        "endVsIdle": 0.538,
+        "bottomRange": 0.0
+      }
+    },
+    {
+      "key": "MumyeongJangsu",
+      "motion": "SKILL_2",
+      "direction": "east",
+      "flags": [
+        "루프 연결 확인"
+      ],
+      "metrics": {
+        "loopSeam": 0.782,
+        "seamVsAdjacent": 1.818,
+        "startVsIdle": 0.535,
+        "endVsIdle": 0.821,
+        "bottomRange": 0.0
+      }
+    },
+    {
+      "key": "MumyeongJangsu",
+      "motion": "SKILL_2",
+      "direction": "south-west",
+      "flags": [
+        "루프 연결 확인"
+      ],
+      "metrics": {
+        "loopSeam": 0.809,
+        "seamVsAdjacent": 2.739,
+        "startVsIdle": 0.65,
+        "endVsIdle": 0.78,
+        "bottomRange": 3.0
+      }
+    },
+    {
+      "key": "MumyeongJangsu",
+      "motion": "SKILL_3",
+      "direction": "south-east",
+      "flags": [
+        "대기 복귀 자세 확인"
+      ],
+      "metrics": {
+        "loopSeam": 0.783,
+        "seamVsAdjacent": 1.328,
+        "startVsIdle": 0.482,
+        "endVsIdle": 0.771,
+        "bottomRange": 1.0
+      }
+    },
+    {
+      "key": "MumyeongJangsu",
+      "motion": "SKILL_3",
+      "direction": "east",
+      "flags": [
+        "대기 복귀 자세 확인"
+      ],
+      "metrics": {
+        "loopSeam": 0.809,
+        "seamVsAdjacent": 1.245,
+        "startVsIdle": 0.477,
+        "endVsIdle": 0.805,
+        "bottomRange": 0.0
+      }
+    },
+    {
+      "key": "MumyeongJangsu",
+      "motion": "SKILL_3",
+      "direction": "north-east",
+      "flags": [
+        "대기 복귀 자세 확인"
+      ],
+      "metrics": {
+        "loopSeam": 0.813,
+        "seamVsAdjacent": 1.288,
+        "startVsIdle": 0.491,
+        "endVsIdle": 0.82,
+        "bottomRange": 1.0
+      }
+    },
+    {
+      "key": "Mangnani",
+      "motion": "IDLE",
+      "direction": "south-east",
+      "flags": [
+        "루프 연결 확인"
+      ],
+      "metrics": {
+        "loopSeam": 0.539,
+        "seamVsAdjacent": 1.793,
+        "startVsIdle": 0.0,
+        "endVsIdle": 0.539,
+        "bottomRange": 0.0
+      }
+    },
+    {
+      "key": "Mangnani",
+      "motion": "IDLE",
+      "direction": "north-east",
+      "flags": [
+        "루프 연결 확인"
+      ],
+      "metrics": {
+        "loopSeam": 0.55,
+        "seamVsAdjacent": 4.01,
+        "startVsIdle": 0.0,
+        "endVsIdle": 0.55,
+        "bottomRange": 0.0
+      }
+    },
+    {
+      "key": "Mangnani",
+      "motion": "ATTACK",
+      "direction": "north-east",
+      "flags": [
+        "대기 복귀 자세 확인"
+      ],
+      "metrics": {
+        "loopSeam": 0.595,
+        "seamVsAdjacent": 1.009,
+        "startVsIdle": 0.399,
+        "endVsIdle": 0.632,
+        "bottomRange": 1.0
+      }
+    },
+    {
+      "key": "Mangnani",
+      "motion": "ATTACK",
+      "direction": "north-west",
+      "flags": [
+        "대기 복귀 자세 확인"
+      ],
+      "metrics": {
+        "loopSeam": 0.764,
+        "seamVsAdjacent": 1.156,
+        "startVsIdle": 0.473,
+        "endVsIdle": 0.786,
+        "bottomRange": 0.0
+      }
+    },
+    {
+      "key": "Mangnani",
+      "motion": "ATTACK",
+      "direction": "west",
+      "flags": [
+        "대기 복귀 자세 확인"
+      ],
+      "metrics": {
+        "loopSeam": 0.757,
+        "seamVsAdjacent": 1.11,
+        "startVsIdle": 0.471,
+        "endVsIdle": 0.724,
+        "bottomRange": 1.0
+      }
+    },
+    {
+      "key": "Mangnani",
+      "motion": "ATTACK",
+      "direction": "south-west",
+      "flags": [
+        "대기 복귀 자세 확인"
+      ],
+      "metrics": {
+        "loopSeam": 0.714,
+        "seamVsAdjacent": 1.028,
+        "startVsIdle": 0.408,
+        "endVsIdle": 0.715,
+        "bottomRange": 0.0
+      }
+    },
+    {
+      "key": "Mangnani",
+      "motion": "STUN",
+      "direction": "south-east",
+      "flags": [
+        "루프 연결 확인"
+      ],
+      "metrics": {
+        "loopSeam": 0.519,
+        "seamVsAdjacent": 1.801,
+        "startVsIdle": 0.433,
+        "endVsIdle": 0.624,
+        "bottomRange": 1.0
+      }
+    },
+    {
+      "key": "Mangnani",
+      "motion": "STUN",
+      "direction": "south-west",
+      "flags": [
+        "루프 연결 확인"
+      ],
+      "metrics": {
+        "loopSeam": 0.643,
+        "seamVsAdjacent": 1.63,
+        "startVsIdle": 0.425,
+        "endVsIdle": 0.653,
+        "bottomRange": 0.0
+      }
+    },
+    {
+      "key": "Mangnani",
+      "motion": "SKILL_1",
+      "direction": "east",
+      "flags": [
+        "대기 복귀 자세 확인"
+      ],
+      "metrics": {
+        "loopSeam": 0.833,
+        "seamVsAdjacent": 1.288,
+        "startVsIdle": 0.581,
+        "endVsIdle": 0.836,
+        "bottomRange": 1.0
+      }
+    },
+    {
+      "key": "Mangnani",
+      "motion": "SKILL_1",
+      "direction": "north-east",
+      "flags": [
+        "대기 복귀 자세 확인"
+      ],
+      "metrics": {
+        "loopSeam": 0.704,
+        "seamVsAdjacent": 1.02,
+        "startVsIdle": 0.446,
+        "endVsIdle": 0.669,
+        "bottomRange": 1.0
+      }
+    },
+    {
+      "key": "Mangnani",
+      "motion": "SKILL_1",
+      "direction": "north",
+      "flags": [
+        "대기 복귀 자세 확인"
+      ],
+      "metrics": {
+        "loopSeam": 0.529,
+        "seamVsAdjacent": 1.042,
+        "startVsIdle": 0.417,
+        "endVsIdle": 0.585,
+        "bottomRange": 0.0
+      }
+    },
+    {
+      "key": "Mangnani",
+      "motion": "SKILL_1",
+      "direction": "north-west",
+      "flags": [
+        "대기 복귀 자세 확인"
+      ],
+      "metrics": {
+        "loopSeam": 0.801,
+        "seamVsAdjacent": 1.178,
+        "startVsIdle": 0.528,
+        "endVsIdle": 0.804,
+        "bottomRange": 0.0
+      }
+    },
+    {
+      "key": "Mangnani",
+      "motion": "SKILL_2",
+      "direction": "south-east",
+      "flags": [
+        "대기 복귀 자세 확인"
+      ],
+      "metrics": {
+        "loopSeam": 0.685,
+        "seamVsAdjacent": 1.462,
+        "startVsIdle": 0.484,
+        "endVsIdle": 0.709,
+        "bottomRange": 0.0
+      }
+    },
+    {
+      "key": "Mangnani",
+      "motion": "SKILL_2",
+      "direction": "west",
+      "flags": [
+        "대기 복귀 자세 확인"
+      ],
+      "metrics": {
+        "loopSeam": 0.767,
+        "seamVsAdjacent": 1.184,
+        "startVsIdle": 0.431,
+        "endVsIdle": 0.773,
+        "bottomRange": 0.0
+      }
+    },
+    {
+      "key": "Mangnani",
+      "motion": "SKILL_3",
+      "direction": "south",
+      "flags": [
+        "대기 복귀 자세 확인"
+      ],
+      "metrics": {
+        "loopSeam": 0.769,
+        "seamVsAdjacent": 1.628,
+        "startVsIdle": 0.445,
+        "endVsIdle": 0.717,
+        "bottomRange": 0.0
+      }
+    },
+    {
+      "key": "Mangnani",
+      "motion": "SKILL_3",
+      "direction": "north-east",
+      "flags": [
+        "대기 복귀 자세 확인"
+      ],
+      "metrics": {
+        "loopSeam": 0.818,
+        "seamVsAdjacent": 1.545,
+        "startVsIdle": 0.397,
+        "endVsIdle": 0.822,
+        "bottomRange": 1.0
+      }
+    },
+    {
+      "key": "Mangnani",
+      "motion": "SKILL_3",
+      "direction": "north-west",
+      "flags": [
+        "대기 복귀 자세 확인"
+      ],
+      "metrics": {
+        "loopSeam": 0.816,
+        "seamVsAdjacent": 1.179,
+        "startVsIdle": 0.558,
+        "endVsIdle": 0.826,
+        "bottomRange": 0.0
+      }
+    },
+    {
+      "key": "Mangnani",
+      "motion": "SKILL_3",
+      "direction": "west",
+      "flags": [
+        "대기 복귀 자세 확인"
+      ],
+      "metrics": {
+        "loopSeam": 0.844,
+        "seamVsAdjacent": 1.292,
+        "startVsIdle": 0.542,
+        "endVsIdle": 0.834,
+        "bottomRange": 1.0
+      }
+    },
+    {
+      "key": "Mangnani",
+      "motion": "SKILL_3",
+      "direction": "south-west",
+      "flags": [
+        "대기 복귀 자세 확인"
+      ],
+      "metrics": {
+        "loopSeam": 0.713,
+        "seamVsAdjacent": 1.104,
+        "startVsIdle": 0.433,
+        "endVsIdle": 0.75,
+        "bottomRange": 1.0
+      }
+    },
+    {
+      "key": "Mangnani",
+      "motion": "SKILL_4",
+      "direction": "south",
+      "flags": [
+        "대기 복귀 자세 확인"
+      ],
+      "metrics": {
+        "loopSeam": 0.41,
+        "seamVsAdjacent": 0.65,
+        "startVsIdle": 0.334,
+        "endVsIdle": 0.523,
+        "bottomRange": 0.0
+      }
+    },
+    {
+      "key": "Mangnani",
+      "motion": "SKILL_4",
+      "direction": "north",
+      "flags": [
+        "대기 복귀 자세 확인"
+      ],
+      "metrics": {
+        "loopSeam": 0.761,
+        "seamVsAdjacent": 1.201,
+        "startVsIdle": 0.445,
+        "endVsIdle": 0.761,
+        "bottomRange": 1.0
+      }
+    },
+    {
+      "key": "ChakhoGapsa",
+      "motion": "IDLE",
+      "direction": "north-east",
+      "flags": [
+        "루프 연결 확인"
+      ],
+      "metrics": {
+        "loopSeam": 0.364,
+        "seamVsAdjacent": 2.338,
+        "startVsIdle": 0.0,
+        "endVsIdle": 0.364,
+        "bottomRange": 0.0
+      }
+    },
+    {
+      "key": "ChakhoGapsa",
+      "motion": "ATTACK",
+      "direction": "north-west",
+      "flags": [
+        "대기 복귀 자세 확인"
+      ],
+      "metrics": {
+        "loopSeam": 0.438,
+        "seamVsAdjacent": 1.181,
+        "startVsIdle": 0.372,
+        "endVsIdle": 0.502,
+        "bottomRange": 4.0
+      }
+    },
+    {
+      "key": "ChakhoGapsa",
+      "motion": "STUN",
+      "direction": "north-east",
+      "flags": [
+        "루프 연결 확인"
+      ],
+      "metrics": {
+        "loopSeam": 0.266,
+        "seamVsAdjacent": 1.696,
+        "startVsIdle": 0.244,
+        "endVsIdle": 0.38,
+        "bottomRange": 0.0
+      }
+    },
+    {
+      "key": "ChakhoGapsa",
+      "motion": "SKILL_1",
+      "direction": "south-east",
+      "flags": [
+        "대기 복귀 자세 확인"
+      ],
+      "metrics": {
+        "loopSeam": 0.685,
+        "seamVsAdjacent": 1.261,
+        "startVsIdle": 0.422,
+        "endVsIdle": 0.694,
+        "bottomRange": 0.0
+      }
+    },
+    {
+      "key": "ChakhoGapsa",
+      "motion": "SKILL_1",
+      "direction": "east",
+      "flags": [
+        "대기 복귀 자세 확인"
+      ],
+      "metrics": {
+        "loopSeam": 0.806,
+        "seamVsAdjacent": 1.681,
+        "startVsIdle": 0.505,
+        "endVsIdle": 0.784,
+        "bottomRange": 0.0
+      }
+    },
+    {
+      "key": "ChakhoGapsa",
+      "motion": "SKILL_1",
+      "direction": "north-west",
+      "flags": [
+        "캔버스 가장자리 확인"
+      ],
+      "metrics": {
+        "loopSeam": 0.337,
+        "seamVsAdjacent": 0.694,
+        "startVsIdle": 0.445,
+        "endVsIdle": 0.532,
+        "bottomRange": 0.0
+      }
+    },
+    {
+      "key": "ChakhoGapsa",
+      "motion": "SKILL_2",
+      "direction": "south-east",
+      "flags": [
+        "대기 복귀 자세 확인"
+      ],
+      "metrics": {
+        "loopSeam": 0.706,
+        "seamVsAdjacent": 1.609,
+        "startVsIdle": 0.397,
+        "endVsIdle": 0.7,
+        "bottomRange": 0.0
+      }
+    },
+    {
+      "key": "ChakhoGapsa",
+      "motion": "SKILL_2",
+      "direction": "east",
+      "flags": [
+        "대기 복귀 자세 확인"
+      ],
+      "metrics": {
+        "loopSeam": 0.609,
+        "seamVsAdjacent": 1.934,
+        "startVsIdle": 0.46,
+        "endVsIdle": 0.65,
+        "bottomRange": 0.0
+      }
+    },
+    {
+      "key": "ChakhoGapsa",
+      "motion": "SKILL_2",
+      "direction": "north-east",
+      "flags": [
+        "대기 복귀 자세 확인"
+      ],
+      "metrics": {
+        "loopSeam": 0.648,
+        "seamVsAdjacent": 2.245,
+        "startVsIdle": 0.324,
+        "endVsIdle": 0.651,
+        "bottomRange": 0.0
+      }
+    },
+    {
+      "key": "ChakhoGapsa",
+      "motion": "SKILL_4",
+      "direction": "east",
+      "flags": [
+        "대기 복귀 자세 확인"
+      ],
+      "metrics": {
+        "loopSeam": 0.721,
+        "seamVsAdjacent": 1.27,
+        "startVsIdle": 0.506,
+        "endVsIdle": 0.749,
+        "bottomRange": 2.0
+      }
+    },
+    {
+      "key": "Kkokdusoe",
+      "motion": "IDLE",
+      "direction": "south-east",
+      "flags": [
+        "루프 연결 확인"
+      ],
+      "metrics": {
+        "loopSeam": 0.555,
+        "seamVsAdjacent": 1.604,
+        "startVsIdle": 0.0,
+        "endVsIdle": 0.555,
+        "bottomRange": 0.0
+      }
+    },
+    {
+      "key": "Kkokdusoe",
+      "motion": "IDLE",
+      "direction": "north-east",
+      "flags": [
+        "루프 연결 확인"
+      ],
+      "metrics": {
+        "loopSeam": 0.377,
+        "seamVsAdjacent": 1.66,
+        "startVsIdle": 0.0,
+        "endVsIdle": 0.377,
+        "bottomRange": 0.0
+      }
+    },
+    {
+      "key": "Kkokdusoe",
+      "motion": "IDLE",
+      "direction": "south-west",
+      "flags": [
+        "루프 연결 확인"
+      ],
+      "metrics": {
+        "loopSeam": 0.774,
+        "seamVsAdjacent": 1.854,
+        "startVsIdle": 0.0,
+        "endVsIdle": 0.774,
+        "bottomRange": 0.0
+      }
+    },
+    {
+      "key": "Kkokdusoe",
+      "motion": "SKILL_2",
+      "direction": "east",
+      "flags": [
+        "대기 복귀 자세 확인"
+      ],
+      "metrics": {
+        "loopSeam": 0.775,
+        "seamVsAdjacent": 1.103,
+        "startVsIdle": 0.511,
+        "endVsIdle": 0.774,
+        "bottomRange": 0.0
+      }
+    },
+    {
+      "key": "Kkokdusoe",
+      "motion": "SKILL_2",
+      "direction": "north-east",
+      "flags": [
+        "대기 복귀 자세 확인"
+      ],
+      "metrics": {
+        "loopSeam": 0.617,
+        "seamVsAdjacent": 1.302,
+        "startVsIdle": 0.426,
+        "endVsIdle": 0.606,
+        "bottomRange": 0.0
+      }
+    },
+    {
+      "key": "Kkokdusoe",
+      "motion": "SKILL_4",
+      "direction": "east",
+      "flags": [
+        "대기 복귀 자세 확인"
+      ],
+      "metrics": {
+        "loopSeam": 0.865,
+        "seamVsAdjacent": 1.252,
+        "startVsIdle": 0.551,
+        "endVsIdle": 0.886,
+        "bottomRange": 0.0
+      }
+    },
+    {
+      "key": "Kkokdusoe",
+      "motion": "SKILL_4",
+      "direction": "north-east",
+      "flags": [
+        "대기 복귀 자세 확인"
+      ],
+      "metrics": {
+        "loopSeam": 0.55,
+        "seamVsAdjacent": 1.32,
+        "startVsIdle": 0.395,
+        "endVsIdle": 0.567,
+        "bottomRange": 0.0
+      }
+    },
+    {
+      "key": "Kkokdusoe",
+      "motion": "SKILL_4",
+      "direction": "west",
+      "flags": [
+        "대기 복귀 자세 확인"
+      ],
+      "metrics": {
+        "loopSeam": 0.897,
+        "seamVsAdjacent": 1.313,
+        "startVsIdle": 0.598,
+        "endVsIdle": 0.893,
+        "bottomRange": 0.0
+      }
+    },
+    {
+      "key": "Uinyeo",
+      "motion": "RUN",
+      "direction": "south-west",
+      "flags": [
+        "루프 연결 확인"
+      ],
+      "metrics": {
+        "loopSeam": 0.626,
+        "seamVsAdjacent": 1.869,
+        "startVsIdle": 0.452,
+        "endVsIdle": 0.655,
+        "bottomRange": 0.0
+      }
+    },
+    {
+      "key": "Uinyeo",
+      "motion": "STUN",
+      "direction": "north-east",
+      "flags": [
+        "루프 연결 확인"
+      ],
+      "metrics": {
+        "loopSeam": 0.447,
+        "seamVsAdjacent": 2.372,
+        "startVsIdle": 0.336,
+        "endVsIdle": 0.499,
+        "bottomRange": 0.0
+      }
+    },
+    {
+      "key": "Uinyeo",
+      "motion": "SKILL_1",
+      "direction": "north-west",
+      "flags": [
+        "대기 복귀 자세 확인"
+      ],
+      "metrics": {
+        "loopSeam": 0.522,
+        "seamVsAdjacent": 1.727,
+        "startVsIdle": 0.31,
+        "endVsIdle": 0.481,
+        "bottomRange": 0.0
+      }
+    },
+    {
+      "key": "Uinyeo",
+      "motion": "SKILL_2",
+      "direction": "south",
+      "flags": [
+        "대기 복귀 자세 확인"
+      ],
+      "metrics": {
+        "loopSeam": 0.613,
+        "seamVsAdjacent": 1.581,
+        "startVsIdle": 0.426,
+        "endVsIdle": 0.631,
+        "bottomRange": 0.0
+      }
+    },
+    {
+      "key": "Uinyeo",
+      "motion": "SKILL_2",
+      "direction": "south-east",
+      "flags": [
+        "대기 복귀 자세 확인"
+      ],
+      "metrics": {
+        "loopSeam": 0.66,
+        "seamVsAdjacent": 1.912,
+        "startVsIdle": 0.465,
+        "endVsIdle": 0.663,
+        "bottomRange": 0.0
+      }
+    },
+    {
+      "key": "Uinyeo",
+      "motion": "SKILL_2",
+      "direction": "east",
+      "flags": [
+        "대기 복귀 자세 확인"
+      ],
+      "metrics": {
+        "loopSeam": 0.831,
+        "seamVsAdjacent": 1.821,
+        "startVsIdle": 0.476,
+        "endVsIdle": 0.819,
+        "bottomRange": 0.0
+      }
+    },
+    {
+      "key": "Uinyeo",
+      "motion": "SKILL_2",
+      "direction": "north-east",
+      "flags": [
+        "대기 복귀 자세 확인"
+      ],
+      "metrics": {
+        "loopSeam": 0.548,
+        "seamVsAdjacent": 1.76,
+        "startVsIdle": 0.332,
+        "endVsIdle": 0.622,
+        "bottomRange": 0.0
+      }
+    },
+    {
+      "key": "Uinyeo",
+      "motion": "SKILL_3",
+      "direction": "south-east",
+      "flags": [
+        "대기 복귀 자세 확인"
+      ],
+      "metrics": {
+        "loopSeam": 0.46,
+        "seamVsAdjacent": 1.034,
+        "startVsIdle": 0.357,
+        "endVsIdle": 0.516,
+        "bottomRange": 0.0
+      }
+    },
+    {
+      "key": "Uinyeo",
+      "motion": "SKILL_4",
+      "direction": "south-east",
+      "flags": [
+        "대기 복귀 자세 확인"
+      ],
+      "metrics": {
+        "loopSeam": 0.672,
+        "seamVsAdjacent": 1.269,
+        "startVsIdle": 0.438,
+        "endVsIdle": 0.703,
+        "bottomRange": 1.0
+      }
+    },
+    {
+      "key": "Uinyeo",
+      "motion": "SKILL_4",
+      "direction": "east",
+      "flags": [
+        "대기 복귀 자세 확인"
+      ],
+      "metrics": {
+        "loopSeam": 0.826,
+        "seamVsAdjacent": 2.065,
+        "startVsIdle": 0.55,
+        "endVsIdle": 0.828,
+        "bottomRange": 0.0
+      }
+    },
+    {
+      "key": "Uinyeo",
+      "motion": "SKILL_4",
+      "direction": "north-west",
+      "flags": [
+        "대기 복귀 자세 확인"
+      ],
+      "metrics": {
+        "loopSeam": 0.832,
+        "seamVsAdjacent": 1.674,
+        "startVsIdle": 0.517,
+        "endVsIdle": 0.854,
+        "bottomRange": 1.0
+      }
+    },
+    {
+      "key": "Uinyeo",
+      "motion": "SKILL_4",
+      "direction": "west",
+      "flags": [
+        "대기 복귀 자세 확인"
+      ],
+      "metrics": {
+        "loopSeam": 0.829,
+        "seamVsAdjacent": 1.608,
+        "startVsIdle": 0.528,
+        "endVsIdle": 0.838,
+        "bottomRange": 0.0
+      }
+    }
+  ]
+}

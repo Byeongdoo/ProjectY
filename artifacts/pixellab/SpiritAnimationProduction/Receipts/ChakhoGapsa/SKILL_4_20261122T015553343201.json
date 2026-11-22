@@ -1,0 +1,23 @@
+{
+  "request": {
+    "character_id": "628b3449-3ba4-4a7b-9131-9f815afb3443",
+    "animation_name": "SKILL_4",
+    "mode": "v3",
+    "action_description": "MULLEO SEOGI retreat: keep upper body and bow aimed toward the original facing direction, push off with the feet into a backward hop posture and land balanced. Entire animation in place; game code supplies travel. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.",
+    "frame_count": 8,
+    "keep_first_frame": false,
+    "directions": [
+      "south-west"
+    ],
+    "animation_group_id": "349e4892-1ba5-4d59-888f-76d4bef5e5ef"
+  },
+  "response": {
+    "content": [
+      {
+        "type": "text",
+        "text": "character: 628b3449-3ba4-4a7b-9131-9f815afb3443\nanimation: v3 custom (MULLEO SEOGI retreat: keep upper body and bow aimed toward the original facing direction, push off with the feet into a backward hop posture and land balanced. Entire animation in place; game code supplies travel. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.)\ndirections: south-west (1 jobs)\njob_ids: south-west=f3ef39a0-8b96-4a04-bc93-4deb421caaac\ngroup: 349e4892-1ba5-4d59-888f-76d4bef5e5ef\nframes: 8 (reference stripped, keep_first_frame=false)\ncanvas: south-west 88x88 (frames are stored at this size: the character plus room to move)\ncost: 1 generation (1/dir x 1)\neta: ~2-4 min/direction\n\nhint: get_character(character_id=\"628b3449-3ba4-4a7b-9131-9f815afb3443\")\nadd more directions to this group: animate_character(character_id=\"628b3449-3ba4-4a7b-9131-9f815afb3443\", action_description=\"MULLEO SEOGI retreat: keep upper body and bow aimed toward the original facing direction, push off with the feet into a backward hop posture and land balanced. Entire animation in place; game code supplies travel. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.\", animation_group_id=\"349e4892-1ba5-4d59-888f-76d4bef5e5ef\", directions=[...])"
+      }
+    ],
+    "isError": false
+  }
+}

@@ -1,0 +1,829 @@
+[
+  {
+    "key": "Kkokdusoe",
+    "motion": "ATTACK",
+    "direction": "east",
+    "visibleAddedPixels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "key": "Kkokdusoe",
+    "motion": "ATTACK",
+    "direction": "north",
+    "visibleAddedPixels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "key": "Kkokdusoe",
+    "motion": "ATTACK",
+    "direction": "north-east",
+    "visibleAddedPixels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "key": "Kkokdusoe",
+    "motion": "ATTACK",
+    "direction": "north-west",
+    "visibleAddedPixels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "key": "Kkokdusoe",
+    "motion": "ATTACK",
+    "direction": "south",
+    "visibleAddedPixels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "key": "Kkokdusoe",
+    "motion": "ATTACK",
+    "direction": "south-east",
+    "visibleAddedPixels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "key": "Kkokdusoe",
+    "motion": "ATTACK",
+    "direction": "south-west",
+    "visibleAddedPixels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "key": "Kkokdusoe",
+    "motion": "ATTACK",
+    "direction": "west",
+    "visibleAddedPixels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "key": "Kkokdusoe",
+    "motion": "SKILL_1",
+    "direction": "east",
+    "visibleAddedPixels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "key": "Kkokdusoe",
+    "motion": "SKILL_1",
+    "direction": "north",
+    "visibleAddedPixels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "key": "Kkokdusoe",
+    "motion": "SKILL_1",
+    "direction": "north-east",
+    "visibleAddedPixels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "key": "Kkokdusoe",
+    "motion": "SKILL_1",
+    "direction": "south",
+    "visibleAddedPixels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "key": "Kkokdusoe",
+    "motion": "SKILL_1",
+    "direction": "south-east",
+    "visibleAddedPixels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "key": "Mangnani",
+    "motion": "ATTACK",
+    "direction": "east",
+    "visibleAddedPixels": [
+      0,
+      0,
+      136,
+      295,
+      179,
+      111,
+      92,
+      0
+    ]
+  },
+  {
+    "key": "Mangnani",
+    "motion": "ATTACK",
+    "direction": "north",
+    "visibleAddedPixels": [
+      0,
+      0,
+      11,
+      43,
+      62,
+      153,
+      175,
+      0
+    ]
+  },
+  {
+    "key": "Mangnani",
+    "motion": "ATTACK",
+    "direction": "north-east",
+    "visibleAddedPixels": [
+      0,
+      0,
+      43,
+      158,
+      173,
+      106,
+      34,
+      0
+    ]
+  },
+  {
+    "key": "Mangnani",
+    "motion": "ATTACK",
+    "direction": "north-west",
+    "visibleAddedPixels": [
+      0,
+      0,
+      45,
+      93,
+      57,
+      78,
+      44,
+      0
+    ]
+  },
+  {
+    "key": "Mangnani",
+    "motion": "ATTACK",
+    "direction": "south",
+    "visibleAddedPixels": [
+      0,
+      0,
+      66,
+      289,
+      225,
+      156,
+      147,
+      0
+    ]
+  },
+  {
+    "key": "Mangnani",
+    "motion": "ATTACK",
+    "direction": "south-east",
+    "visibleAddedPixels": [
+      0,
+      0,
+      251,
+      192,
+      2,
+      4,
+      22,
+      0
+    ]
+  },
+  {
+    "key": "Mangnani",
+    "motion": "ATTACK",
+    "direction": "south-west",
+    "visibleAddedPixels": [
+      0,
+      0,
+      105,
+      289,
+      171,
+      96,
+      23,
+      0
+    ]
+  },
+  {
+    "key": "Mangnani",
+    "motion": "ATTACK",
+    "direction": "west",
+    "visibleAddedPixels": [
+      0,
+      0,
+      68,
+      264,
+      181,
+      164,
+      244,
+      0
+    ]
+  },
+  {
+    "key": "Mangnani",
+    "motion": "SKILL_1",
+    "direction": "east",
+    "visibleAddedPixels": [
+      0,
+      38,
+      107,
+      117,
+      105,
+      55,
+      62,
+      0
+    ]
+  },
+  {
+    "key": "Mangnani",
+    "motion": "SKILL_1",
+    "direction": "north",
+    "visibleAddedPixels": [
+      0,
+      5,
+      50,
+      91,
+      146,
+      190,
+      137,
+      0
+    ]
+  },
+  {
+    "key": "Mangnani",
+    "motion": "SKILL_1",
+    "direction": "north-east",
+    "visibleAddedPixels": [
+      0,
+      10,
+      29,
+      59,
+      110,
+      99,
+      262,
+      0
+    ]
+  },
+  {
+    "key": "Mangnani",
+    "motion": "SKILL_1",
+    "direction": "north-west",
+    "visibleAddedPixels": [
+      0,
+      0,
+      110,
+      101,
+      49,
+      91,
+      97,
+      0
+    ]
+  },
+  {
+    "key": "Mangnani",
+    "motion": "SKILL_1",
+    "direction": "south",
+    "visibleAddedPixels": [
+      0,
+      29,
+      135,
+      186,
+      70,
+      4,
+      183,
+      0
+    ]
+  },
+  {
+    "key": "Mangnani",
+    "motion": "SKILL_1",
+    "direction": "south-east",
+    "visibleAddedPixels": [
+      0,
+      29,
+      102,
+      102,
+      124,
+      153,
+      77,
+      0
+    ]
+  },
+  {
+    "key": "Mangnani",
+    "motion": "SKILL_1",
+    "direction": "south-west",
+    "visibleAddedPixels": [
+      0,
+      89,
+      162,
+      142,
+      131,
+      144,
+      176,
+      0
+    ]
+  },
+  {
+    "key": "Mangnani",
+    "motion": "SKILL_1",
+    "direction": "west",
+    "visibleAddedPixels": [
+      0,
+      41,
+      59,
+      154,
+      265,
+      139,
+      147,
+      0
+    ]
+  },
+  {
+    "key": "Mangnani",
+    "motion": "SKILL_2",
+    "direction": "east",
+    "visibleAddedPixels": [
+      0,
+      0,
+      0,
+      0,
+      3,
+      17,
+      15,
+      323,
+      327,
+      49,
+      10,
+      0
+    ]
+  },
+  {
+    "key": "Mangnani",
+    "motion": "SKILL_2",
+    "direction": "north",
+    "visibleAddedPixels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      71,
+      159,
+      173,
+      99,
+      0
+    ]
+  },
+  {
+    "key": "Mangnani",
+    "motion": "SKILL_2",
+    "direction": "north-east",
+    "visibleAddedPixels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      11,
+      288,
+      273,
+      6,
+      0
+    ]
+  },
+  {
+    "key": "Mangnani",
+    "motion": "SKILL_2",
+    "direction": "north-west",
+    "visibleAddedPixels": [
+      0,
+      0,
+      0,
+      0,
+      16,
+      9,
+      0,
+      23,
+      213,
+      229,
+      27,
+      0
+    ]
+  },
+  {
+    "key": "Mangnani",
+    "motion": "SKILL_2",
+    "direction": "south",
+    "visibleAddedPixels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      121,
+      322,
+      183,
+      17,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "key": "Mangnani",
+    "motion": "SKILL_2",
+    "direction": "south-east",
+    "visibleAddedPixels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      4,
+      226,
+      234,
+      57,
+      7,
+      0
+    ]
+  },
+  {
+    "key": "Mangnani",
+    "motion": "SKILL_2",
+    "direction": "south-west",
+    "visibleAddedPixels": [
+      0,
+      0,
+      0,
+      0,
+      60,
+      73,
+      34,
+      176,
+      363,
+      224,
+      30,
+      0
+    ]
+  },
+  {
+    "key": "Mangnani",
+    "motion": "SKILL_2",
+    "direction": "west",
+    "visibleAddedPixels": [
+      0,
+      0,
+      0,
+      0,
+      56,
+      69,
+      9,
+      57,
+      78,
+      102,
+      66,
+      0
+    ]
+  },
+  {
+    "key": "Mangnani",
+    "motion": "SKILL_3",
+    "direction": "east",
+    "visibleAddedPixels": [
+      0,
+      0,
+      5,
+      18,
+      151,
+      128,
+      0,
+      0
+    ]
+  },
+  {
+    "key": "Mangnani",
+    "motion": "SKILL_3",
+    "direction": "north",
+    "visibleAddedPixels": [
+      0,
+      0,
+      9,
+      126,
+      111,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "key": "Mangnani",
+    "motion": "SKILL_3",
+    "direction": "north-east",
+    "visibleAddedPixels": [
+      0,
+      0,
+      18,
+      110,
+      91,
+      169,
+      89,
+      0
+    ]
+  },
+  {
+    "key": "Mangnani",
+    "motion": "SKILL_3",
+    "direction": "north-west",
+    "visibleAddedPixels": [
+      0,
+      0,
+      0,
+      0,
+      134,
+      137,
+      172,
+      0
+    ]
+  },
+  {
+    "key": "Mangnani",
+    "motion": "SKILL_3",
+    "direction": "south",
+    "visibleAddedPixels": [
+      0,
+      0,
+      13,
+      49,
+      23,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "key": "Mangnani",
+    "motion": "SKILL_3",
+    "direction": "south-east",
+    "visibleAddedPixels": [
+      0,
+      0,
+      20,
+      192,
+      139,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "key": "Mangnani",
+    "motion": "SKILL_3",
+    "direction": "south-west",
+    "visibleAddedPixels": [
+      0,
+      0,
+      213,
+      284,
+      74,
+      0,
+      47,
+      0
+    ]
+  },
+  {
+    "key": "Mangnani",
+    "motion": "SKILL_3",
+    "direction": "west",
+    "visibleAddedPixels": [
+      0,
+      0,
+      22,
+      81,
+      91,
+      39,
+      6,
+      0
+    ]
+  },
+  {
+    "key": "MumyeongJangsu",
+    "motion": "ATTACK",
+    "direction": "east",
+    "visibleAddedPixels": [
+      0,
+      0,
+      10,
+      12,
+      4,
+      8,
+      8,
+      0
+    ]
+  },
+  {
+    "key": "MumyeongJangsu",
+    "motion": "ATTACK",
+    "direction": "north",
+    "visibleAddedPixels": [
+      0,
+      10,
+      14,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "key": "MumyeongJangsu",
+    "motion": "ATTACK",
+    "direction": "north-east",
+    "visibleAddedPixels": [
+      0,
+      0,
+      15,
+      15,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "key": "MumyeongJangsu",
+    "motion": "ATTACK",
+    "direction": "north-west",
+    "visibleAddedPixels": [
+      0,
+      0,
+      0,
+      0,
+      13,
+      14,
+      0,
+      0
+    ]
+  },
+  {
+    "key": "MumyeongJangsu",
+    "motion": "ATTACK",
+    "direction": "south",
+    "visibleAddedPixels": [
+      0,
+      0,
+      78,
+      78,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "key": "MumyeongJangsu",
+    "motion": "ATTACK",
+    "direction": "south-east",
+    "visibleAddedPixels": [
+      0,
+      0,
+      1,
+      0,
+      3,
+      2,
+      0,
+      0
+    ]
+  },
+  {
+    "key": "MumyeongJangsu",
+    "motion": "ATTACK",
+    "direction": "south-west",
+    "visibleAddedPixels": [
+      0,
+      0,
+      38,
+      36,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "key": "MumyeongJangsu",
+    "motion": "ATTACK",
+    "direction": "west",
+    "visibleAddedPixels": [
+      0,
+      0,
+      0,
+      0,
+      36,
+      1,
+      0,
+      0
+    ]
+  }
+]

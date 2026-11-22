@@ -1,0 +1,26 @@
+{
+  "request": {
+    "character_id": "5e2b8e1c-c556-4568-9002-2b1c25507dfc",
+    "animation_name": "SKILL_4",
+    "mode": "v3",
+    "action_description": "PAN BEORIGI grand performance: spread both arms in a broad welcoming flourish, then beat the small gong in a lively repeated rhythm and finish facing the original direction. Hat and bright ribbons remain attached. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.",
+    "frame_count": 8,
+    "keep_first_frame": false,
+    "directions": [
+      "north",
+      "north-west",
+      "west",
+      "south-west"
+    ],
+    "animation_group_id": "18599b11-6444-4b55-9cf3-2bced49461fd"
+  },
+  "response": {
+    "content": [
+      {
+        "type": "text",
+        "text": "character: 5e2b8e1c-c556-4568-9002-2b1c25507dfc\nanimation: v3 custom (PAN BEORIGI grand performance: spread both arms in a broad welcoming flourish, then beat the small gong in a lively repeated rhythm and finish facing the original direction. Hat and bright ribbons remain attached. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.)\ndirections: north, north-west, west, south-west (4 jobs)\njob_ids: north=a844aec4-c800-4c92-ba9f-d741c03dc471, north-west=5c2d8455-c0dd-42ea-9422-d6f104f6a791, west=d16e4fed-19e1-4a06-a7d8-b2dd1d551f10, south-west=4975f6a3-dd78-4c33-a95c-5b4c81bdeae6\ngroup: 18599b11-6444-4b55-9cf3-2bced49461fd\nframes: 8 (reference stripped, keep_first_frame=false)\ncanvas: north 88x88, north-west 88x88, west 88x88, south-west 88x88 (frames are stored at this size: the character plus room to move)\ncost: 4 generations (1/dir x 4)\neta: ~2-4 min/direction\n\nhint: get_character(character_id=\"5e2b8e1c-c556-4568-9002-2b1c25507dfc\")\nadd more directions to this group: animate_character(character_id=\"5e2b8e1c-c556-4568-9002-2b1c25507dfc\", action_description=\"PAN BEORIGI grand performance: spread both arms in a broad welcoming flourish, then beat the small gong in a lively repeated rhythm and finish facing the original direction. Hat and bright ribbons remain attached. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.\", animation_group_id=\"18599b11-6444-4b55-9cf3-2bced49461fd\", directions=[...])"
+      }
+    ],
+    "isError": false
+  }
+}

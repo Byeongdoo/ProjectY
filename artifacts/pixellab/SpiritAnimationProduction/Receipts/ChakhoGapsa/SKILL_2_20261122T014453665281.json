@@ -1,0 +1,29 @@
+{
+  "request": {
+    "character_id": "628b3449-3ba4-4a7b-9131-9f815afb3443",
+    "animation_name": "SKILL_2",
+    "mode": "v3",
+    "action_description": "JOJUN SAGYEOK aimed shot: firmly plant both feet, raise the bow, slowly draw and hold a very steady aiming pose with the string at the cheek, release one powerful shot, then recover. Deliberate sustained anticipation. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.",
+    "frame_count": 12,
+    "keep_first_frame": false,
+    "directions": [
+      "south-east",
+      "east",
+      "north-east",
+      "north",
+      "north-west",
+      "west",
+      "south-west"
+    ],
+    "animation_group_id": "c9594111-9741-4fa1-9f54-8a512422444d"
+  },
+  "response": {
+    "content": [
+      {
+        "type": "text",
+        "text": "character: 628b3449-3ba4-4a7b-9131-9f815afb3443\nanimation: v3 custom (JOJUN SAGYEOK aimed shot: firmly plant both feet, raise the bow, slowly draw and hold a very steady aiming pose with the string at the cheek, release one powerful shot, then recover. Deliberate sustained anticipation. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.)\ndirections: south-east, east, north-east, north, north-west, west, south-west (7 jobs)\njob_ids: south-east=34750b8a-81c5-4ac1-b590-928ada99de92, east=10166df8-a467-4328-abee-6ce7f86f26ec, north-east=391b5cd0-7997-4d80-bc94-cceed8fe7fc6, north=52afa54b-6e06-4a80-828c-1742805665db, north-west=5e747a42-abf3-4756-bd6c-911c34d3d1a0, west=8c0218e8-4aea-42f7-93bc-ac5b4f10f1fe, south-west=f4899a5c-b1c8-418e-b2df-20f9a9fb8566\ngroup: c9594111-9741-4fa1-9f54-8a512422444d\nframes: 12 (reference stripped, keep_first_frame=false)\ncanvas: south-east 88x88, east 88x88, north-east 84x84, north 84x84, north-west 88x88, west 88x88, south-west 88x88 (frames are stored at this size: the character plus room to move)\ncost: 14 generations (2/dir x 7)\neta: ~2-4 min/direction\n\nhint: get_character(character_id=\"628b3449-3ba4-4a7b-9131-9f815afb3443\")\nadd more directions to this group: animate_character(character_id=\"628b3449-3ba4-4a7b-9131-9f815afb3443\", action_description=\"JOJUN SAGYEOK aimed shot: firmly plant both feet, raise the bow, slowly draw and hold a very steady aiming pose with the string at the cheek, release one powerful shot, then recover. Deliberate sustained anticipation. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.\", animation_group_id=\"c9594111-9741-4fa1-9f54-8a512422444d\", directions=[...])"
+      }
+    ],
+    "isError": false
+  }
+}

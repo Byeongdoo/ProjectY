@@ -3,7 +3,7 @@
   "characterId": "d08b8efa-ee49-477d-8db1-fbe0512ccdda",
   "pixelsPerUnit": 32,
   "rootMotion": false,
-  "visualApproval": "Generated assets require visual review",
+  "visualApproval": "QA requires revisions; see artifacts/pixellab/SpiritAnimationQA/QAReport.md",
   "clips": [
     {
       "animation": "IDLE",
@@ -20,8 +20,8 @@
       "frameCount": 4,
       "framesPerSecond": 8,
       "loop": true,
-      "cellWidth": 92,
-      "cellHeight": 92,
+      "cellWidth": 128,
+      "cellHeight": 128,
       "sourcePixelsResized": false,
       "alignment": "PixelLab canvas centres; no per-frame trimming",
       "groupId": "5fdaee8c-be9e-4484-8914-321e911ce9c5",
@@ -34,7 +34,69 @@
         "Animations/IDLE_NORTH_WEST.anim",
         "Animations/IDLE_WEST.anim",
         "Animations/IDLE_SOUTH_WEST.anim"
-      ]
+      ],
+      "revision": "LargeSaber_NorthFrontAction",
+      "directionSources": {
+        "south": [
+          {
+            "jobId": "8856ba25-b1c3-4dea-a698-ac232bb39e4e",
+            "sourceKind": "edit",
+            "startFrame": 0
+          }
+        ],
+        "south-east": [
+          {
+            "jobId": "5fa8c3c4-5b57-4f7f-9816-a1154fcd4812",
+            "sourceKind": "edit",
+            "startFrame": 0
+          }
+        ],
+        "east": [
+          {
+            "jobId": "c69a96f9-ea37-4481-9cbf-aed5cd73ba60",
+            "sourceKind": "edit",
+            "startFrame": 0
+          }
+        ],
+        "north-east": [
+          {
+            "jobId": "152f5d6c-2816-4efc-b22e-16b771a32402",
+            "sourceKind": "edit",
+            "startFrame": 0
+          }
+        ],
+        "north": [
+          {
+            "animationName": "R5_IDLE",
+            "jobId": "71ca851a-420f-415e-a3a5-46a8e36345e4",
+            "groupId": "8c332dd6-0cca-4c59-b7f0-762fc85765dd",
+            "reason": "Consistent upright visible saber guard for all four breathing frames; source/ending pose pinned.",
+            "characterId": "6f8c501b-a360-4d0a-85fd-556e6a2e0b9d",
+            "sourceKind": "reviewed forward attack/guard revision"
+          }
+        ],
+        "north-west": [
+          {
+            "jobId": "e76ce675-8ffe-4f2f-9e86-303ddb9e8076",
+            "sourceKind": "edit",
+            "startFrame": 0
+          }
+        ],
+        "west": [
+          {
+            "jobId": "0cb9631d-9a13-4edb-9f97-0bd20575075e",
+            "sourceKind": "edit",
+            "startFrame": 0
+          }
+        ],
+        "south-west": [
+          {
+            "jobId": "bbce8ef5-786f-46a7-b280-cd27ecba213d",
+            "sourceKind": "edit",
+            "startFrame": 0
+          }
+        ]
+      }
     },
     {
       "animation": "RUN",
@@ -51,8 +113,8 @@
       "frameCount": 8,
       "framesPerSecond": 10,
       "loop": true,
-      "cellWidth": 92,
-      "cellHeight": 92,
+      "cellWidth": 128,
+      "cellHeight": 128,
       "sourcePixelsResized": false,
       "alignment": "PixelLab canvas centres; no per-frame trimming",
       "groupId": "91fff35d-7367-4c13-b31d-83c00ec4e05e",
@@ -65,7 +127,102 @@
         "Animations/RUN_NORTH_WEST.anim",
         "Animations/RUN_WEST.anim",
         "Animations/RUN_SOUTH_WEST.anim"
-      ]
+      ],
+      "revision": "LargeSaber_NorthFrontAction",
+      "directionSources": {
+        "south": [
+          {
+            "jobId": "8f552639-133e-4c84-962d-6d2a6ab7e5c7",
+            "sourceKind": "edit",
+            "startFrame": 0
+          },
+          {
+            "jobId": "ea1296a4-4515-4093-a409-3a676c4fc538",
+            "sourceKind": "edit",
+            "startFrame": 4
+          }
+        ],
+        "south-east": [
+          {
+            "jobId": "ab94354e-bcd7-4a2d-9d59-494b5266b421",
+            "sourceKind": "edit",
+            "startFrame": 0
+          },
+          {
+            "jobId": "d6793671-9e88-4e9c-a945-c416249fb20f",
+            "sourceKind": "edit",
+            "startFrame": 4
+          }
+        ],
+        "east": [
+          {
+            "jobId": "e4200f97-1781-45e4-86c8-b2d91f6e88b1",
+            "sourceKind": "edit",
+            "startFrame": 0
+          },
+          {
+            "jobId": "8856fc8f-20d7-4ba0-bcc0-0361739c9188",
+            "sourceKind": "edit",
+            "startFrame": 4
+          }
+        ],
+        "north-east": [
+          {
+            "jobId": "0bfab0ff-9d00-4305-b49f-6309ffd70842",
+            "sourceKind": "edit",
+            "startFrame": 0
+          },
+          {
+            "jobId": "4e178293-17e5-48e5-bf4d-2f91e13a61f3",
+            "sourceKind": "edit",
+            "startFrame": 4
+          }
+        ],
+        "north": [
+          {
+            "jobId": "e79cafa6-a344-4779-9518-8f6ef7f4bfce",
+            "sourceKind": "north",
+            "groupId": "9e875a18-da18-4d06-b8cf-f89fff9dba4d",
+            "characterId": "6f8c501b-a360-4d0a-85fd-556e6a2e0b9d"
+          }
+        ],
+        "north-west": [
+          {
+            "jobId": "24570a51-8b40-4123-b989-a5a8b6b551c5",
+            "sourceKind": "edit",
+            "startFrame": 0
+          },
+          {
+            "jobId": "b4d1adae-6658-4047-94fd-1725a54de119",
+            "sourceKind": "edit",
+            "startFrame": 4
+          }
+        ],
+        "west": [
+          {
+            "jobId": "2cdb14f5-d94b-491a-8e53-11ae211df356",
+            "sourceKind": "edit",
+            "startFrame": 0
+          },
+          {
+            "jobId": "60b47b1d-31a7-4431-a22d-92bed363aa71",
+            "sourceKind": "edit",
+            "startFrame": 4
+          }
+        ],
+        "south-west": [
+          {
+            "jobId": "4f69a120-7e2b-4f21-8371-eb5ed73515dd",
+            "sourceKind": "edit",
+            "startFrame": 0
+          },
+          {
+            "jobId": "378ca8be-b48c-4ea0-ae42-5c08fb26496c",
+            "sourceKind": "edit",
+            "startFrame": 4
+          }
+        ]
+      }
     },
     {
       "animation": "ATTACK",
@@ -82,8 +239,8 @@
       "frameCount": 8,
       "framesPerSecond": 12,
       "loop": false,
-      "cellWidth": 92,
-      "cellHeight": 92,
+      "cellWidth": 128,
+      "cellHeight": 128,
       "sourcePixelsResized": false,
       "alignment": "PixelLab canvas centres; no per-frame trimming",
       "groupId": "f09771f5-2505-42d2-8619-fc3baa9ac9ec",
@@ -96,7 +253,102 @@
         "Animations/ATTACK_NORTH_WEST.anim",
         "Animations/ATTACK_WEST.anim",
         "Animations/ATTACK_SOUTH_WEST.anim"
-      ]
+      ],
+      "nativeClipFrameRoot": "SpritesWithTrail",
+      "sourceFrameRoot": "Sprites",
+      "trailLayerRoot": "TrailLayers",
+      "revision": "LargeSaber_NorthFrontAction",
+      "directionSources": {
+        "south": [
+          {
+            "jobId": "17327877-e82f-4df7-8b82-f7f3e8fa8882",
+            "sourceKind": "edit",
+            "startFrame": 0
+          },
+          {
+            "jobId": "be2533fd-2977-48de-b2ef-ee126d258de9",
+            "sourceKind": "edit",
+            "startFrame": 4
+          }
+        ],
+        "south-east": [
+          {
+            "jobId": "4c746e61-ede8-4e1f-beb7-54d65693f3d6",
+            "sourceKind": "edit",
+            "startFrame": 0
+          },
+          {
+            "jobId": "63c2f712-94bd-497b-9fe2-a745fe88961f",
+            "sourceKind": "edit",
+            "startFrame": 4
+          }
+        ],
+        "east": [
+          {
+            "jobId": "8baf38eb-0492-4eb3-9847-5db4182c89db",
+            "sourceKind": "edit",
+            "startFrame": 0
+          },
+          {
+            "jobId": "d7863f3f-0553-4c62-83d0-4e5c5ac09d4d",
+            "sourceKind": "edit",
+            "startFrame": 4
+          }
+        ],
+        "north-east": [
+          {
+            "animationName": "R4_ATTACK",
+            "groupId": "a4e8f256-4688-4902-b785-fd17eda5d424",
+            "jobId": "c14b0d48-6421-4adc-aac4-d35edfbc171b",
+            "characterId": "6f8c501b-a360-4d0a-85fd-556e6a2e0b9d",
+            "sourceKind": "reviewed forward attack/guard revision"
+          }
+        ],
+        "north": [
+          {
+            "animationName": "R4_ATTACK",
+            "jobId": "d388127d-cc54-426e-b781-914853a8d454",
+            "groupId": "a4e8f256-4688-4902-b785-fd17eda5d424",
+            "reason": "Right arm lifts above shoulder and passes to far side in front of torso; no visible blade across back or waist. Forward blade becomes naturally occluded. Overlay trail must follow upper/forward strike, not waist.",
+            "characterId": "6f8c501b-a360-4d0a-85fd-556e6a2e0b9d",
+            "sourceKind": "reviewed forward attack/guard revision"
+          }
+        ],
+        "north-west": [
+          {
+            "drawingId": "7dc4616b-d288-4228-aed4-5146f5880b94",
+            "reference": "7dc4616b-d288-4228-aed4-5146f5880b94:north-west",
+            "sourceFolder": "ManualAttacks/north-west",
+            "sourceKind": "reviewed forward attack/guard revision",
+            "pixelResampling": "Weapon rotation only; body copied at integer offsets",
+            "characterId": "6f8c501b-a360-4d0a-85fd-556e6a2e0b9d"
+          }
+        ],
+        "west": [
+          {
+            "jobId": "a1d280ed-c3ba-4bba-9b91-de607a3814aa",
+            "sourceKind": "edit",
+            "startFrame": 0
+          },
+          {
+            "jobId": "1c3f6111-ea32-4987-b627-05849a2b79a0",
+            "sourceKind": "edit",
+            "startFrame": 4
+          }
+        ],
+        "south-west": [
+          {
+            "jobId": "a042afda-e072-4e68-b195-44e930a4ba2a",
+            "sourceKind": "edit",
+            "startFrame": 0
+          },
+          {
+            "jobId": "cf256431-9ffa-44b5-bde8-722085cd75e5",
+            "sourceKind": "edit",
+            "startFrame": 4
+          }
+        ]
+      }
     },
     {
       "animation": "HIT",
@@ -113,8 +365,8 @@
       "frameCount": 4,
       "framesPerSecond": 12,
       "loop": false,
-      "cellWidth": 92,
-      "cellHeight": 92,
+      "cellWidth": 128,
+      "cellHeight": 128,
       "sourcePixelsResized": false,
       "alignment": "PixelLab canvas centres; no per-frame trimming",
       "groupId": "363d4fc3-3af0-47ee-8050-d4ebf2553262",
@@ -127,7 +379,67 @@
         "Animations/HIT_NORTH_WEST.anim",
         "Animations/HIT_WEST.anim",
         "Animations/HIT_SOUTH_WEST.anim"
-      ]
+      ],
+      "revision": "LargeSaber_NorthFrontAction",
+      "directionSources": {
+        "south": [
+          {
+            "jobId": "3015317a-c9cf-4476-b9bd-d452e278d7e9",
+            "sourceKind": "edit",
+            "startFrame": 0
+          }
+        ],
+        "south-east": [
+          {
+            "jobId": "c795e662-8e66-4ef0-95d6-6c3d5c94282b",
+            "sourceKind": "edit",
+            "startFrame": 0
+          }
+        ],
+        "east": [
+          {
+            "jobId": "126fb9bc-b480-423b-9a9c-64b53566a956",
+            "sourceKind": "edit",
+            "startFrame": 0
+          }
+        ],
+        "north-east": [
+          {
+            "jobId": "adfcbe07-f3f6-4e32-95f5-0ca6cb753cd1",
+            "sourceKind": "edit",
+            "startFrame": 0
+          }
+        ],
+        "north": [
+          {
+            "jobId": "b77b7faa-ee2d-45ce-b71a-5ee1386bc729",
+            "sourceKind": "north",
+            "groupId": "7a36bcb6-04b8-4051-bcaf-141d5312db28",
+            "characterId": "6f8c501b-a360-4d0a-85fd-556e6a2e0b9d"
+          }
+        ],
+        "north-west": [
+          {
+            "jobId": "6738f80b-a030-4125-9648-5bccbd3dc812",
+            "sourceKind": "edit",
+            "startFrame": 0
+          }
+        ],
+        "west": [
+          {
+            "jobId": "2c72aa60-d1dd-45c3-86ca-ea34b7fec446",
+            "sourceKind": "edit",
+            "startFrame": 0
+          }
+        ],
+        "south-west": [
+          {
+            "jobId": "47576f7c-c8b7-430b-ac9b-78b460006b50",
+            "sourceKind": "edit",
+            "startFrame": 0
+          }
+        ]
+      }
     },
     {
       "animation": "STUN",
@@ -144,8 +456,8 @@
       "frameCount": 4,
       "framesPerSecond": 6,
       "loop": true,
-      "cellWidth": 92,
-      "cellHeight": 92,
+      "cellWidth": 128,
+      "cellHeight": 128,
       "sourcePixelsResized": false,
       "alignment": "PixelLab canvas centres; no per-frame trimming",
       "groupId": "e0b3d19f-85d8-42b1-b7ed-881c185d6110",
@@ -158,7 +470,67 @@
         "Animations/STUN_NORTH_WEST.anim",
         "Animations/STUN_WEST.anim",
         "Animations/STUN_SOUTH_WEST.anim"
-      ]
+      ],
+      "revision": "LargeSaber_NorthFrontAction",
+      "directionSources": {
+        "south": [
+          {
+            "jobId": "1af39aae-56f1-4ace-af34-0e51e695ebbc",
+            "sourceKind": "edit",
+            "startFrame": 0
+          }
+        ],
+        "south-east": [
+          {
+            "jobId": "177f490a-c5f4-4034-9c88-59ebec129355",
+            "sourceKind": "edit",
+            "startFrame": 0
+          }
+        ],
+        "east": [
+          {
+            "jobId": "ae00f790-1f1d-49c0-b014-d408fc2e4fbb",
+            "sourceKind": "edit",
+            "startFrame": 0
+          }
+        ],
+        "north-east": [
+          {
+            "jobId": "14d32edb-fea5-45a5-adbb-0fc04d3a82f9",
+            "sourceKind": "edit",
+            "startFrame": 0
+          }
+        ],
+        "north": [
+          {
+            "jobId": "e80746b4-b263-4cde-9478-cc2c889a6d07",
+            "sourceKind": "north",
+            "groupId": "7f68770d-a82c-4c78-84b5-559e58c18073",
+            "characterId": "6f8c501b-a360-4d0a-85fd-556e6a2e0b9d"
+          }
+        ],
+        "north-west": [
+          {
+            "jobId": "073fd571-db5a-492a-b203-8c6c14ecf6c4",
+            "sourceKind": "edit",
+            "startFrame": 0
+          }
+        ],
+        "west": [
+          {
+            "jobId": "c98a3a90-542f-4542-987e-b7503a438d0f",
+            "sourceKind": "edit",
+            "startFrame": 0
+          }
+        ],
+        "south-west": [
+          {
+            "jobId": "490c0a01-34fd-4f40-95f1-8b3b383ea261",
+            "sourceKind": "edit",
+            "startFrame": 0
+          }
+        ]
+      }
     },
     {
       "animation": "DIE",
@@ -175,8 +547,8 @@
       "frameCount": 12,
       "framesPerSecond": 10,
       "loop": false,
-      "cellWidth": 92,
-      "cellHeight": 92,
+      "cellWidth": 128,
+      "cellHeight": 128,
       "sourcePixelsResized": false,
       "alignment": "PixelLab canvas centres; no per-frame trimming",
       "groupId": "c8de3e63-8ed4-48f8-87fe-263d974f6f86",
@@ -189,7 +561,137 @@
         "Animations/DIE_NORTH_WEST.anim",
         "Animations/DIE_WEST.anim",
         "Animations/DIE_SOUTH_WEST.anim"
-      ]
+      ],
+      "revision": "LargeSaber_NorthFrontAction",
+      "directionSources": {
+        "south": [
+          {
+            "jobId": "9368c473-9a7d-4003-8ddd-4a926c092db2",
+            "sourceKind": "edit",
+            "startFrame": 0
+          },
+          {
+            "jobId": "a69a7781-b8ba-4587-98f2-ceeef5f134c5",
+            "sourceKind": "edit",
+            "startFrame": 4
+          },
+          {
+            "jobId": "01393787-2c43-40cb-a1e4-726fab41f28b",
+            "sourceKind": "edit",
+            "startFrame": 8
+          }
+        ],
+        "south-east": [
+          {
+            "jobId": "a5b5d106-f95d-4a4c-b186-146c8bea8a1a",
+            "sourceKind": "edit",
+            "startFrame": 0
+          },
+          {
+            "jobId": "12727115-21e6-4655-bf56-5425139753e7",
+            "sourceKind": "edit",
+            "startFrame": 4
+          },
+          {
+            "jobId": "29beb4de-3cca-40b4-956b-ae2c2b910b38",
+            "sourceKind": "edit",
+            "startFrame": 8
+          }
+        ],
+        "east": [
+          {
+            "jobId": "208c44ad-3b8f-4fe7-8e95-c973a77e6212",
+            "sourceKind": "edit",
+            "startFrame": 0
+          },
+          {
+            "jobId": "110dfcf7-5be0-4335-a20e-17071cbb77b1",
+            "sourceKind": "edit",
+            "startFrame": 4
+          },
+          {
+            "jobId": "95b4c3f7-8440-4e5c-a345-43756f5f42f7",
+            "sourceKind": "edit",
+            "startFrame": 8
+          }
+        ],
+        "north-east": [
+          {
+            "jobId": "90ae0a9b-5665-4128-8e8c-6e457eef8728",
+            "sourceKind": "edit",
+            "startFrame": 0
+          },
+          {
+            "jobId": "cdd1c64e-b5a6-46db-8995-31b9c03a81cb",
+            "sourceKind": "edit",
+            "startFrame": 4
+          },
+          {
+            "jobId": "46d3fc07-9020-4029-889c-c9c019fa6920",
+            "sourceKind": "edit",
+            "startFrame": 8
+          }
+        ],
+        "north": [
+          {
+            "jobId": "2da1fdea-aa15-495f-af29-731687f8968b",
+            "sourceKind": "north",
+            "groupId": "692ba6ae-f2f7-45c2-ab56-4a4fb5ab1fb6",
+            "characterId": "6f8c501b-a360-4d0a-85fd-556e6a2e0b9d"
+          }
+        ],
+        "north-west": [
+          {
+            "jobId": "be65389b-23ae-405a-a8b9-9c31b828f7fc",
+            "sourceKind": "edit",
+            "startFrame": 0
+          },
+          {
+            "jobId": "e71fd2e4-c53a-476f-a892-afb9609e1d5f",
+            "sourceKind": "edit",
+            "startFrame": 4
+          },
+          {
+            "jobId": "ec4a9121-f750-42fc-80c3-c7deb6be70dd",
+            "sourceKind": "edit",
+            "startFrame": 8
+          }
+        ],
+        "west": [
+          {
+            "jobId": "f50244cf-8050-4ac1-9c95-4001650d9c2d",
+            "sourceKind": "edit",
+            "startFrame": 0
+          },
+          {
+            "jobId": "77826861-a8ec-4e4b-9bd4-db9c1a3a5095",
+            "sourceKind": "edit",
+            "startFrame": 4
+          },
+          {
+            "jobId": "5130b4d6-5c0c-4670-bae4-6d8585c23f9a",
+            "sourceKind": "edit",
+            "startFrame": 8
+          }
+        ],
+        "south-west": [
+          {
+            "jobId": "7b378aac-79d2-476e-a080-712bc0c8fc96",
+            "sourceKind": "edit",
+            "startFrame": 0
+          },
+          {
+            "jobId": "956983f3-dd87-46fd-9d11-7cb9a5eb2e21",
+            "sourceKind": "edit",
+            "startFrame": 4
+          },
+          {
+            "jobId": "6500b777-669f-4503-8c3f-df0368fcfd88",
+            "sourceKind": "edit",
+            "startFrame": 8
+          }
+        ]
+      }
     },
     {
       "animation": "KNOCKBACK",
@@ -206,8 +708,8 @@
       "frameCount": 4,
       "framesPerSecond": 10,
       "loop": false,
-      "cellWidth": 92,
-      "cellHeight": 92,
+      "cellWidth": 128,
+      "cellHeight": 128,
       "sourcePixelsResized": false,
       "alignment": "PixelLab canvas centres; no per-frame trimming",
       "groupId": "246da6f2-9e99-4bf4-af26-2cf951b023ec",
@@ -220,7 +722,67 @@
         "Animations/KNOCKBACK_NORTH_WEST.anim",
         "Animations/KNOCKBACK_WEST.anim",
         "Animations/KNOCKBACK_SOUTH_WEST.anim"
-      ]
+      ],
+      "revision": "LargeSaber_NorthFrontAction",
+      "directionSources": {
+        "south": [
+          {
+            "jobId": "5d18b0a5-bdd1-4a26-98b7-5951cc590024",
+            "sourceKind": "edit",
+            "startFrame": 0
+          }
+        ],
+        "south-east": [
+          {
+            "jobId": "7a3da58d-7c7a-4d9d-8709-ac5dbea2d840",
+            "sourceKind": "edit",
+            "startFrame": 0
+          }
+        ],
+        "east": [
+          {
+            "jobId": "2c861231-1d8f-42b9-9aa6-9e35c2e32885",
+            "sourceKind": "edit",
+            "startFrame": 0
+          }
+        ],
+        "north-east": [
+          {
+            "jobId": "92cf9f67-bfea-4bd6-a7be-f498fc1199b0",
+            "sourceKind": "edit",
+            "startFrame": 0
+          }
+        ],
+        "north": [
+          {
+            "jobId": "7d5e2f34-5ec0-476c-9667-54319840d4e7",
+            "sourceKind": "north",
+            "groupId": "b10caf68-36b2-4707-ae0e-a367cd6c7e9c",
+            "characterId": "6f8c501b-a360-4d0a-85fd-556e6a2e0b9d"
+          }
+        ],
+        "north-west": [
+          {
+            "jobId": "80eb163c-ae48-4fa1-b638-ef411034a23f",
+            "sourceKind": "edit",
+            "startFrame": 0
+          }
+        ],
+        "west": [
+          {
+            "jobId": "9cd89081-aead-4e37-b752-d65d4a822755",
+            "sourceKind": "edit",
+            "startFrame": 0
+          }
+        ],
+        "south-west": [
+          {
+            "jobId": "7a182ecb-1589-45b1-8110-4bd3faec8081",
+            "sourceKind": "edit",
+            "startFrame": 0
+          }
+        ]
+      }
     },
     {
       "animation": "SKILL_1",
@@ -237,8 +799,8 @@
       "frameCount": 8,
       "framesPerSecond": 10,
       "loop": false,
-      "cellWidth": 92,
-      "cellHeight": 92,
+      "cellWidth": 128,
+      "cellHeight": 128,
       "sourcePixelsResized": false,
       "alignment": "PixelLab canvas centres; no per-frame trimming",
       "groupId": "baac2080-0d55-463d-a4c6-84946156ca0f",
@@ -251,7 +813,483 @@
         "Animations/SKILL_1_NORTH_WEST.anim",
         "Animations/SKILL_1_WEST.anim",
         "Animations/SKILL_1_SOUTH_WEST.anim"
-      ]
+      ],
+      "revision": "LargeSaber_NorthFrontAction",
+      "directionSources": {
+        "south": [
+          {
+            "jobId": "6c877cd7-3e34-424d-a416-5741da6c9dcd",
+            "sourceKind": "edit",
+            "startFrame": 0
+          },
+          {
+            "jobId": "ab6df804-6cb0-4c29-8bbe-a4112b8843bf",
+            "sourceKind": "edit",
+            "startFrame": 4
+          }
+        ],
+        "south-east": [
+          {
+            "jobId": "d63c06d8-5e16-49cd-a2a1-8b44c14765b9",
+            "sourceKind": "edit",
+            "startFrame": 0
+          },
+          {
+            "jobId": "ebc5d6c8-968e-45bc-b476-81bd6c753dca",
+            "sourceKind": "edit",
+            "startFrame": 4
+          }
+        ],
+        "east": [
+          {
+            "jobId": "244698ad-9b92-404a-85f5-883ea9d05065",
+            "sourceKind": "edit",
+            "startFrame": 0
+          },
+          {
+            "jobId": "3e8727af-9c67-482a-9065-1d7af3490c79",
+            "sourceKind": "edit",
+            "startFrame": 4
+          }
+        ],
+        "north-east": [
+          {
+            "jobId": "e3fde8b2-73ba-4cbc-b7b3-26d83d44581a",
+            "sourceKind": "edit",
+            "startFrame": 0
+          },
+          {
+            "jobId": "e86dab6b-15fd-4aa8-94e7-e76779fc1fea",
+            "sourceKind": "edit",
+            "startFrame": 4
+          }
+        ],
+        "north": [
+          {
+            "jobId": "457158d2-e672-4c4b-b89e-1a0d136a0ee9",
+            "sourceKind": "north",
+            "groupId": "26dc5f87-2136-4d11-904f-a3da6995c47d",
+            "characterId": "6f8c501b-a360-4d0a-85fd-556e6a2e0b9d"
+          }
+        ],
+        "north-west": [
+          {
+            "jobId": "74e2df06-be1b-45b5-82ff-d848819599af",
+            "sourceKind": "edit",
+            "startFrame": 0
+          },
+          {
+            "jobId": "3414e0f9-c914-44b8-b438-6655f140dc5f",
+            "sourceKind": "edit",
+            "startFrame": 4
+          }
+        ],
+        "west": [
+          {
+            "jobId": "913c1a0b-446d-4825-af0b-05bf36611404",
+            "sourceKind": "edit",
+            "startFrame": 0
+          },
+          {
+            "jobId": "dad217ef-27ec-43f9-b61a-48083fde6790",
+            "sourceKind": "edit",
+            "startFrame": 4
+          }
+        ],
+        "south-west": [
+          {
+            "jobId": "ddda80a4-9930-4b42-8701-e4007a6e7487",
+            "sourceKind": "edit",
+            "startFrame": 0
+          },
+          {
+            "jobId": "304164b6-21d3-4930-a1a4-a50c19a8ebbe",
+            "sourceKind": "edit",
+            "startFrame": 4
+          }
+        ]
+      }
+    },
+    {
+      "animation": "SKILL_2",
+      "directions": [
+        "south",
+        "south-east",
+        "east",
+        "north-east",
+        "north",
+        "north-west",
+        "west",
+        "south-west"
+      ],
+      "frameCount": 8,
+      "framesPerSecond": 10,
+      "loop": true,
+      "cellWidth": 128,
+      "cellHeight": 128,
+      "sourcePixelsResized": false,
+      "alignment": "PixelLab canvas centres; no per-frame trimming",
+      "groupId": "cb493a40-775d-4d3b-96ca-24c862524137",
+      "animationClips": [
+        "Animations/SKILL_2_SOUTH.anim",
+        "Animations/SKILL_2_SOUTH_EAST.anim",
+        "Animations/SKILL_2_EAST.anim",
+        "Animations/SKILL_2_NORTH_EAST.anim",
+        "Animations/SKILL_2_NORTH.anim",
+        "Animations/SKILL_2_NORTH_WEST.anim",
+        "Animations/SKILL_2_WEST.anim",
+        "Animations/SKILL_2_SOUTH_WEST.anim"
+      ],
+      "revision": "LargeSaber_NorthFrontAction",
+      "directionSources": {
+        "south": [
+          {
+            "jobId": "89f1e043-346f-42d7-938e-3babb5efec8d",
+            "sourceKind": "edit",
+            "startFrame": 0
+          },
+          {
+            "jobId": "3a59cb50-fac5-495f-91dc-24043b388e5d",
+            "sourceKind": "edit",
+            "startFrame": 4
+          }
+        ],
+        "south-east": [
+          {
+            "jobId": "1b72e387-4c40-4cdd-a724-3907e7ac8493",
+            "sourceKind": "edit",
+            "startFrame": 0
+          },
+          {
+            "jobId": "eb98c853-ae03-437e-9f28-b4621c1d73d0",
+            "sourceKind": "edit",
+            "startFrame": 4
+          }
+        ],
+        "east": [
+          {
+            "jobId": "1ac348fe-dc04-409f-8754-b064ffb081b8",
+            "sourceKind": "edit",
+            "startFrame": 0
+          },
+          {
+            "jobId": "32fb3c13-2559-40fe-9014-04edaffffc37",
+            "sourceKind": "edit",
+            "startFrame": 4
+          }
+        ],
+        "north-east": [
+          {
+            "jobId": "b26f04da-5493-4d45-9e12-0791f1909174",
+            "sourceKind": "edit",
+            "startFrame": 0
+          },
+          {
+            "jobId": "67202179-5d7a-4ca7-80da-b3e058c9d627",
+            "sourceKind": "edit",
+            "startFrame": 4
+          }
+        ],
+        "north": [
+          {
+            "jobId": "4f8c8267-f956-485d-80ea-a8ed33a9eb58",
+            "sourceKind": "north",
+            "groupId": "8d609a20-51b1-4cdb-9353-44eb77ae5ab5",
+            "characterId": "6f8c501b-a360-4d0a-85fd-556e6a2e0b9d"
+          }
+        ],
+        "north-west": [
+          {
+            "jobId": "13542f56-faea-4335-a111-1bbdd702ad8c",
+            "sourceKind": "edit",
+            "startFrame": 0
+          },
+          {
+            "jobId": "3f76176a-f5fc-4114-bfe2-745764b6998e",
+            "sourceKind": "edit",
+            "startFrame": 4
+          }
+        ],
+        "west": [
+          {
+            "jobId": "64c6e926-9754-4516-97af-7cb0f4e40003",
+            "sourceKind": "edit",
+            "startFrame": 0
+          },
+          {
+            "jobId": "7d81a688-840a-4e01-982f-a6627032c92c",
+            "sourceKind": "edit",
+            "startFrame": 4
+          }
+        ],
+        "south-west": [
+          {
+            "jobId": "a4cca5ec-d373-4f3c-98f1-8e03305101ad",
+            "sourceKind": "edit",
+            "startFrame": 0
+          },
+          {
+            "jobId": "c51cde99-8c61-44c9-a601-03c6d730992d",
+            "sourceKind": "edit",
+            "startFrame": 4
+          }
+        ]
+      }
+    },
+    {
+      "animation": "SKILL_3",
+      "directions": [
+        "south",
+        "south-east",
+        "east",
+        "north-east",
+        "north",
+        "north-west",
+        "west",
+        "south-west"
+      ],
+      "frameCount": 8,
+      "framesPerSecond": 10,
+      "loop": false,
+      "cellWidth": 128,
+      "cellHeight": 128,
+      "sourcePixelsResized": false,
+      "alignment": "PixelLab canvas centres; no per-frame trimming",
+      "groupId": "42e5a237-0d59-475b-b8e5-b8fac92d3e18",
+      "animationClips": [
+        "Animations/SKILL_3_SOUTH.anim",
+        "Animations/SKILL_3_SOUTH_EAST.anim",
+        "Animations/SKILL_3_EAST.anim",
+        "Animations/SKILL_3_NORTH_EAST.anim",
+        "Animations/SKILL_3_NORTH.anim",
+        "Animations/SKILL_3_NORTH_WEST.anim",
+        "Animations/SKILL_3_WEST.anim",
+        "Animations/SKILL_3_SOUTH_WEST.anim"
+      ],
+      "revision": "LargeSaber_NorthFrontAction",
+      "directionSources": {
+        "south": [
+          {
+            "jobId": "2be13863-c0cf-4df5-b1b6-e1ebe39ae229",
+            "sourceKind": "edit",
+            "startFrame": 0
+          },
+          {
+            "jobId": "795dcd37-a020-48f3-9fb7-4bd909882594",
+            "sourceKind": "edit",
+            "startFrame": 4
+          }
+        ],
+        "south-east": [
+          {
+            "jobId": "43420c92-61c2-46c4-a29d-ba061e592632",
+            "sourceKind": "edit",
+            "startFrame": 0
+          },
+          {
+            "jobId": "e5deef4d-1ae5-4534-842d-61727b4d1d6a",
+            "sourceKind": "edit",
+            "startFrame": 4
+          }
+        ],
+        "east": [
+          {
+            "jobId": "c628846e-5d43-4068-912c-9a9e0bad5261",
+            "sourceKind": "edit",
+            "startFrame": 0
+          },
+          {
+            "jobId": "32852c05-335d-478d-b132-be7f4156d2c7",
+            "sourceKind": "edit",
+            "startFrame": 4
+          }
+        ],
+        "north-east": [
+          {
+            "jobId": "97d6820e-d985-4adf-a08c-a272ecd21e83",
+            "sourceKind": "edit",
+            "startFrame": 0
+          },
+          {
+            "jobId": "8dab0581-7502-4e24-aeb9-658185f84e52",
+            "sourceKind": "edit",
+            "startFrame": 4
+          }
+        ],
+        "north": [
+          {
+            "jobId": "294f4eff-89cf-4218-938b-034a9287bc10",
+            "sourceKind": "north",
+            "groupId": "fa95ccae-f066-47b0-b2eb-edce7b904966",
+            "characterId": "6f8c501b-a360-4d0a-85fd-556e6a2e0b9d"
+          }
+        ],
+        "north-west": [
+          {
+            "jobId": "1b32c1b0-701a-4bc2-8514-ebf363020e04",
+            "sourceKind": "edit",
+            "startFrame": 0
+          },
+          {
+            "jobId": "0d8ac29c-fd00-44c5-b209-70ba13831db0",
+            "sourceKind": "edit",
+            "startFrame": 4
+          }
+        ],
+        "west": [
+          {
+            "jobId": "fca65fdb-1502-409e-87cc-b956095ceac2",
+            "sourceKind": "edit",
+            "startFrame": 0
+          },
+          {
+            "jobId": "1354d378-19b5-4ead-9b6a-856b3ee978e7",
+            "sourceKind": "edit",
+            "startFrame": 4
+          }
+        ],
+        "south-west": [
+          {
+            "jobId": "c6fa4c66-8229-4c56-bbc6-61748835b4b1",
+            "sourceKind": "edit",
+            "startFrame": 0
+          },
+          {
+            "jobId": "a767b935-4387-45f5-a4e4-c29746b32e24",
+            "sourceKind": "edit",
+            "startFrame": 4
+          }
+        ]
+      }
+    },
+    {
+      "animation": "SKILL_4",
+      "directions": [
+        "south",
+        "south-east",
+        "east",
+        "north-east",
+        "north",
+        "north-west",
+        "west",
+        "south-west"
+      ],
+      "frameCount": 8,
+      "framesPerSecond": 10,
+      "loop": false,
+      "cellWidth": 128,
+      "cellHeight": 128,
+      "sourcePixelsResized": false,
+      "alignment": "PixelLab canvas centres; no per-frame trimming",
+      "groupId": "27a4beb5-78ca-453a-a673-2de10fb5cb15",
+      "animationClips": [
+        "Animations/SKILL_4_SOUTH.anim",
+        "Animations/SKILL_4_SOUTH_EAST.anim",
+        "Animations/SKILL_4_EAST.anim",
+        "Animations/SKILL_4_NORTH_EAST.anim",
+        "Animations/SKILL_4_NORTH.anim",
+        "Animations/SKILL_4_NORTH_WEST.anim",
+        "Animations/SKILL_4_WEST.anim",
+        "Animations/SKILL_4_SOUTH_WEST.anim"
+      ],
+      "revision": "LargeSaber_NorthFrontAction",
+      "directionSources": {
+        "south": [
+          {
+            "jobId": "9fb7bde3-b867-4ada-9ca5-869ac81e6b34",
+            "sourceKind": "edit",
+            "startFrame": 0
+          },
+          {
+            "jobId": "2bec4190-babb-48c9-92bb-45790053137d",
+            "sourceKind": "edit",
+            "startFrame": 4
+          }
+        ],
+        "south-east": [
+          {
+            "jobId": "11013f9d-3602-4ada-ba89-4d0504b63ee0",
+            "sourceKind": "edit",
+            "startFrame": 0
+          },
+          {
+            "jobId": "809383a2-fc9d-45fc-8763-99ce5622da84",
+            "sourceKind": "edit",
+            "startFrame": 4
+          }
+        ],
+        "east": [
+          {
+            "jobId": "d70b1f86-a23f-4ff5-844a-38c958465472",
+            "sourceKind": "edit",
+            "startFrame": 0
+          },
+          {
+            "jobId": "342cddb4-4b2d-4d69-8d37-a4ea144ab1c9",
+            "sourceKind": "edit",
+            "startFrame": 4
+          }
+        ],
+        "north-east": [
+          {
+            "jobId": "2a12f16d-44a6-45dc-b571-278e2113b89e",
+            "sourceKind": "edit",
+            "startFrame": 0
+          },
+          {
+            "jobId": "73e016d5-076e-43a8-84c0-1f32c2df9481",
+            "sourceKind": "edit",
+            "startFrame": 4
+          }
+        ],
+        "north": [
+          {
+            "jobId": "09e7a9c6-6eee-49c0-937b-9c9ab39b5865",
+            "sourceKind": "north",
+            "groupId": "cc1f458c-4adc-4c94-81c2-20f80d2f3d7c",
+            "characterId": "6f8c501b-a360-4d0a-85fd-556e6a2e0b9d"
+          }
+        ],
+        "north-west": [
+          {
+            "jobId": "de988c72-acbb-4599-bb13-d6ca3cf5f129",
+            "sourceKind": "edit",
+            "startFrame": 0
+          },
+          {
+            "jobId": "b4b56b00-c5d3-4ff4-859e-2ee8f70bf97b",
+            "sourceKind": "edit",
+            "startFrame": 4
+          }
+        ],
+        "west": [
+          {
+            "jobId": "49086197-a8a0-419c-85f4-ef5414db7e37",
+            "sourceKind": "edit",
+            "startFrame": 0
+          },
+          {
+            "jobId": "7f417049-5807-4e60-927a-f5977a709a98",
+            "sourceKind": "edit",
+            "startFrame": 4
+          }
+        ],
+        "south-west": [
+          {
+            "jobId": "0b927af2-eda3-4b4f-8052-2c41e8c711e6",
+            "sourceKind": "edit",
+            "startFrame": 0
+          },
+          {
+            "jobId": "e73e97de-704e-4f31-930c-f6ddd2f5714d",
+            "sourceKind": "edit",
+            "startFrame": 4
+          }
+        ]
+      }
     }
-  ]
+  ],
+  "revisionCharacterId": "6f8c501b-a360-4d0a-85fd-556e6a2e0b9d",
+  "revision": "LargeSaber_NorthFrontAction",
+  "tipRepair": "PixelLab exact 128px padding, pointed blade completions and detached edge debris removal; original interior pixels retained"
 }

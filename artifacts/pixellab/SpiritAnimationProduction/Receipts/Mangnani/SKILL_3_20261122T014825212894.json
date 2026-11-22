@@ -1,0 +1,23 @@
+{
+  "request": {
+    "character_id": "478ad62f-9651-46ca-a174-7b869382d4fd",
+    "animation_name": "SKILL_3",
+    "mode": "v3",
+    "action_description": "DOLJIN BEGI rushing slash: crouch low into a forward-lunging attack posture, make a fast horizontal cleaver cut in the facing direction, then recover. Motion in place; actual dash/teleport is handled by game code. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.",
+    "frame_count": 8,
+    "keep_first_frame": false,
+    "directions": [
+      "south",
+      "south-east"
+    ]
+  },
+  "response": {
+    "content": [
+      {
+        "type": "text",
+        "text": "character: 478ad62f-9651-46ca-a174-7b869382d4fd\nanimation: v3 custom (DOLJIN BEGI rushing slash: crouch low into a forward-lunging attack posture, make a fast horizontal cleaver cut in the facing direction, then recover. Motion in place; actual dash/teleport is handled by game code. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.)\ndirections: south, south-east (2 jobs)\njob_ids: south=23387fba-2c2e-4442-8620-19b5e0cc5dda, south-east=4e6c01ff-72d0-4b0b-ab5b-af6a383332d0\ngroup: 9425fd77-98ce-48f8-867d-753d26dc2045\nframes: 8 (reference stripped, keep_first_frame=false)\ncanvas: south 92x92, south-east 92x92 (frames are stored at this size: the character plus room to move)\ncost: 4 generations (2/dir x 2)\neta: ~2-4 min/direction\n\nhint: get_character(character_id=\"478ad62f-9651-46ca-a174-7b869382d4fd\")\nadd more directions to this group: animate_character(character_id=\"478ad62f-9651-46ca-a174-7b869382d4fd\", action_description=\"DOLJIN BEGI rushing slash: crouch low into a forward-lunging attack posture, make a fast horizontal cleaver cut in the facing direction, then recover. Motion in place; actual dash/teleport is handled by game code. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.\", animation_group_id=\"9425fd77-98ce-48f8-867d-753d26dc2045\", directions=[...])"
+      }
+    ],
+    "isError": false
+  }
+}

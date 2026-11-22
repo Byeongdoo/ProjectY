@@ -1,0 +1,9 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "character: 6f8c501b-a360-4d0a-85fd-556e6a2e0b9d\nanimation: v3 custom (BANGPAE MILCHIGI shield bash: pull the round shield back, lean forward and thrust it forcefully straight toward the facing direction, then recover into guard. Emphasize the contact pose. BACK VIEW: face NORTH / screen-up throughout. Both arms and all active actions occur in FRONT of his chest, toward screen-up; the sword belongs to the right hand, kept ahead of the body or upright beside the right shoulder. Never draw sword or forearm across the visible back. Torso/head occlude far-side weapons naturally. Preserve the large saber size. )\ndirections: north (1 jobs)\njob_ids: north=294f4eff-89cf-4218-938b-034a9287bc10\ngroup: fa95ccae-f066-47b0-b2eb-edce7b904966\nframes: 8 (reference stripped, keep_first_frame=false)\ncanvas: north 92x92 (frames are stored at this size: the character plus room to move)\ncost: 2 generations (2/dir x 1)\neta: ~2-4 min/direction\nprompts: one per direction (direction_prompts)\n\nhint: get_character(character_id=\"6f8c501b-a360-4d0a-85fd-556e6a2e0b9d\")\nadd more directions to this group: animate_character(character_id=\"6f8c501b-a360-4d0a-85fd-556e6a2e0b9d\", action_description=\"BANGPAE MILCHIGI shield bash: pull the round shield back, lean forward and thrust it forcefully straight toward the facing direction, then recover into guard. Emphasize the contact pose. BACK VIEW: face NORTH / screen-up throughout. Both arms and all active actions occur in FRONT of his chest, toward screen-up; the sword belongs to the right hand, kept ahead of the body or upright beside the right shoulder. Never draw sword or forearm across the visible back. Torso/head occlude far-side weapons naturally. Preserve the large saber size. \", animation_group_id=\"fa95ccae-f066-47b0-b2eb-edce7b904966\", directions=[...]) (its direction_prompts are reused)"
+    }
+  ],
+  "isError": false
+}

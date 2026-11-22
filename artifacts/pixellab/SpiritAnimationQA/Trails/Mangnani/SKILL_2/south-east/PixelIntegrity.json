@@ -1,0 +1,86 @@
+{
+  "recipeHash": "1442c9ae8648bb4ab1a84092613bc2a5a250bcb7cffe6c78a63730285b5ca46e",
+  "checks": [
+    {
+      "frame": 0,
+      "changedCharacterPixels": 0,
+      "effectPixels": 0,
+      "visibleAddedPixels": 0
+    },
+    {
+      "frame": 1,
+      "changedCharacterPixels": 0,
+      "effectPixels": 0,
+      "visibleAddedPixels": 0
+    },
+    {
+      "frame": 2,
+      "changedCharacterPixels": 0,
+      "effectPixels": 0,
+      "visibleAddedPixels": 0
+    },
+    {
+      "frame": 3,
+      "changedCharacterPixels": 0,
+      "effectPixels": 0,
+      "visibleAddedPixels": 0
+    },
+    {
+      "frame": 4,
+      "changedCharacterPixels": 0,
+      "effectPixels": 0,
+      "visibleAddedPixels": 0
+    },
+    {
+      "frame": 5,
+      "changedCharacterPixels": 0,
+      "effectPixels": 0,
+      "visibleAddedPixels": 0
+    },
+    {
+      "frame": 6,
+      "changedCharacterPixels": 0,
+      "effectPixels": 14,
+      "visibleAddedPixels": 4
+    },
+    {
+      "frame": 7,
+      "changedCharacterPixels": 0,
+      "effectPixels": 245,
+      "visibleAddedPixels": 226
+    },
+    {
+      "frame": 8,
+      "changedCharacterPixels": 0,
+      "effectPixels": 291,
+      "visibleAddedPixels": 234
+    },
+    {
+      "frame": 9,
+      "changedCharacterPixels": 0,
+      "effectPixels": 92,
+      "visibleAddedPixels": 57
+    },
+    {
+      "frame": 10,
+      "changedCharacterPixels": 0,
+      "effectPixels": 32,
+      "visibleAddedPixels": 7
+    },
+    {
+      "frame": 11,
+      "changedCharacterPixels": 0,
+      "effectPixels": 0,
+      "visibleAddedPixels": 0
+    }
+  ],
+  "sourcePixelsResized": false,
+  "canvasShift": [
+    0,
+    -1
+  ],
+  "recipeSubjectOffset": [
+    18,
+    19
+  ]
+}

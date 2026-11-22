@@ -1,0 +1,254 @@
+{
+  "text": "drawing_id: 7dc4616b-d288-4228-aed4-5146f5880b94\ncanvas 128x128, 8 frames, 640 ms, views: north-west\nstate: needs_visual_review\nlayers (north-west): Body - far side saber | Body - original general\nnodes (north-west): body, root, saber\nimages: assets/north-west/review/full-01.png\n(+2 more evidence images — body-only, change masks, palette: repeat with mode=\"high\", or zoom with --inspect […])\ndownload https://api.pixellab.ai/mcp/pixel-tools/7dc4616b-d288-4228-aed4-5146f5880b94/: assets/north-west/animation.gif, assets/north-west/full.png, assets/north-west/layers.npz, recipe.json\nnext: draw --drawing 7dc4616b-d288-4228-aed4-5146f5880b94 --changes […]",
+  "recipe": {
+    "job": {
+      "canvas": [
+        128,
+        128
+      ],
+      "frame_count": 8,
+      "durations_ms": [
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80
+      ],
+      "views": [
+        {
+          "id": "north-west",
+          "offset": [
+            24,
+            23
+          ]
+        }
+      ],
+      "source_bookends_exact": true,
+      "return_to_rest": true,
+      "require_clear_border": true,
+      "body_palette_exact": true
+    },
+    "scene": {
+      "palette": {},
+      "layers": [
+        {
+          "id": "weapon",
+          "name": "Body - far side saber"
+        },
+        {
+          "id": "body",
+          "name": "Body - original general"
+        }
+      ],
+      "views": {
+        "north-west": {
+          "parts": {
+            "saber": {
+              "include": [
+                [
+                  [
+                    4,
+                    2
+                  ],
+                  [
+                    12,
+                    6
+                  ],
+                  [
+                    30,
+                    25
+                  ],
+                  [
+                    31,
+                    29
+                  ],
+                  [
+                    28,
+                    32
+                  ],
+                  [
+                    22,
+                    29
+                  ],
+                  [
+                    12,
+                    21
+                  ],
+                  [
+                    5,
+                    14
+                  ],
+                  [
+                    3,
+                    7
+                  ]
+                ]
+              ]
+            },
+            "rest": {
+              "exclude": [
+                [
+                  [
+                    4,
+                    2
+                  ],
+                  [
+                    12,
+                    6
+                  ],
+                  [
+                    30,
+                    25
+                  ],
+                  [
+                    31,
+                    29
+                  ],
+                  [
+                    28,
+                    32
+                  ],
+                  [
+                    22,
+                    29
+                  ],
+                  [
+                    12,
+                    21
+                  ],
+                  [
+                    5,
+                    14
+                  ],
+                  [
+                    3,
+                    7
+                  ]
+                ]
+              ]
+            }
+          },
+          "nodes": {
+            "root": {
+              "layer": "body",
+              "draw": [],
+              "at": [
+                24,
+                23
+              ]
+            },
+            "saber": {
+              "layer": "weapon",
+              "at": {
+                "node": "root",
+                "point": [
+                  0,
+                  0
+                ]
+              },
+              "pivot": [
+                28,
+                32
+              ],
+              "draw": [
+                {
+                  "op": "copy",
+                  "part": "saber",
+                  "method": "nearest"
+                }
+              ]
+            },
+            "body": {
+              "layer": "body",
+              "at": {
+                "node": "root",
+                "point": [
+                  0,
+                  0
+                ]
+              },
+              "draw": [
+                {
+                  "op": "copy",
+                  "part": "rest"
+                }
+              ]
+            }
+          },
+          "tracks": [
+            {
+              "node": "saber",
+              "property": "angle",
+              "interpolation": "step",
+              "keys": [
+                [
+                  1,
+                  0
+                ],
+                [
+                  2,
+                  25
+                ],
+                [
+                  3,
+                  30
+                ],
+                [
+                  4,
+                  -20
+                ],
+                [
+                  5,
+                  -40
+                ],
+                [
+                  6,
+                  -45
+                ],
+                [
+                  7,
+                  -15
+                ],
+                [
+                  8,
+                  0
+                ]
+              ]
+            },
+            {
+              "node": "root",
+              "property": "at",
+              "interpolation": "step",
+              "keys": [
+                [
+                  1,
+                  [
+                    24,
+                    23
+                  ]
+                ],
+                [
+                  4,
+                  [
+                    23,
+                    24
+                  ]
+                ],
+                [
+                  7,
+                  [
+                    24,
+                    23
+                  ]
+                ]
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }
+}

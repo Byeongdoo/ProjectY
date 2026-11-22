@@ -1,0 +1,126 @@
+{
+  "animation": "SKILL_2",
+  "directions": [
+    "south",
+    "south-east",
+    "east",
+    "north-east",
+    "north",
+    "north-west",
+    "west",
+    "south-west"
+  ],
+  "frameCount": 8,
+  "framesPerSecond": 10,
+  "loop": true,
+  "cellWidth": 128,
+  "cellHeight": 128,
+  "sourcePixelsResized": false,
+  "alignment": "PixelLab canvas centres; no per-frame trimming",
+  "groupId": "cb493a40-775d-4d3b-96ca-24c862524137",
+  "animationClips": [
+    "Animations/SKILL_2_SOUTH.anim",
+    "Animations/SKILL_2_SOUTH_EAST.anim",
+    "Animations/SKILL_2_EAST.anim",
+    "Animations/SKILL_2_NORTH_EAST.anim",
+    "Animations/SKILL_2_NORTH.anim",
+    "Animations/SKILL_2_NORTH_WEST.anim",
+    "Animations/SKILL_2_WEST.anim",
+    "Animations/SKILL_2_SOUTH_WEST.anim"
+  ],
+  "revision": "LargeSaber_NorthFrontAction",
+  "directionSources": {
+    "south": [
+      {
+        "jobId": "89f1e043-346f-42d7-938e-3babb5efec8d",
+        "sourceKind": "edit",
+        "startFrame": 0
+      },
+      {
+        "jobId": "3a59cb50-fac5-495f-91dc-24043b388e5d",
+        "sourceKind": "edit",
+        "startFrame": 4
+      }
+    ],
+    "south-east": [
+      {
+        "jobId": "1b72e387-4c40-4cdd-a724-3907e7ac8493",
+        "sourceKind": "edit",
+        "startFrame": 0
+      },
+      {
+        "jobId": "eb98c853-ae03-437e-9f28-b4621c1d73d0",
+        "sourceKind": "edit",
+        "startFrame": 4
+      }
+    ],
+    "east": [
+      {
+        "jobId": "1ac348fe-dc04-409f-8754-b064ffb081b8",
+        "sourceKind": "edit",
+        "startFrame": 0
+      },
+      {
+        "jobId": "32fb3c13-2559-40fe-9014-04edaffffc37",
+        "sourceKind": "edit",
+        "startFrame": 4
+      }
+    ],
+    "north-east": [
+      {
+        "jobId": "b26f04da-5493-4d45-9e12-0791f1909174",
+        "sourceKind": "edit",
+        "startFrame": 0
+      },
+      {
+        "jobId": "67202179-5d7a-4ca7-80da-b3e058c9d627",
+        "sourceKind": "edit",
+        "startFrame": 4
+      }
+    ],
+    "north": [
+      {
+        "jobId": "4f8c8267-f956-485d-80ea-a8ed33a9eb58",
+        "sourceKind": "north",
+        "groupId": "8d609a20-51b1-4cdb-9353-44eb77ae5ab5",
+        "characterId": "6f8c501b-a360-4d0a-85fd-556e6a2e0b9d"
+      }
+    ],
+    "north-west": [
+      {
+        "jobId": "13542f56-faea-4335-a111-1bbdd702ad8c",
+        "sourceKind": "edit",
+        "startFrame": 0
+      },
+      {
+        "jobId": "3f76176a-f5fc-4114-bfe2-745764b6998e",
+        "sourceKind": "edit",
+        "startFrame": 4
+      }
+    ],
+    "west": [
+      {
+        "jobId": "64c6e926-9754-4516-97af-7cb0f4e40003",
+        "sourceKind": "edit",
+        "startFrame": 0
+      },
+      {
+        "jobId": "7d81a688-840a-4e01-982f-a6627032c92c",
+        "sourceKind": "edit",
+        "startFrame": 4
+      }
+    ],
+    "south-west": [
+      {
+        "jobId": "a4cca5ec-d373-4f3c-98f1-8e03305101ad",
+        "sourceKind": "edit",
+        "startFrame": 0
+      },
+      {
+        "jobId": "c51cde99-8c61-44c9-a601-03c6d730992d",
+        "sourceKind": "edit",
+        "startFrame": 4
+      }
+    ]
+  }
+}

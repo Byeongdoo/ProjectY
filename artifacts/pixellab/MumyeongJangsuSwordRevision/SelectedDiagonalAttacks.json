@@ -1,0 +1,14 @@
+{
+  "north-east": {
+    "animationName": "R4_ATTACK",
+    "groupId": "a4e8f256-4688-4902-b785-fd17eda5d424",
+    "jobId": "c14b0d48-6421-4adc-aac4-d35edfbc171b"
+  },
+  "north-west": {
+    "drawingId": "7dc4616b-d288-4228-aed4-5146f5880b94",
+    "reference": "7dc4616b-d288-4228-aed4-5146f5880b94:north-west",
+    "sourceFolder": "ManualAttacks/north-west",
+    "sourceKind": "PixelLab exact layered forward cut",
+    "pixelResampling": "Weapon rotation only; body copied at integer offsets"
+  }
+}

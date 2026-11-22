@@ -1,0 +1,22 @@
+{
+  "request": {
+    "character_id": "d08b8efa-ee49-477d-8db1-fbe0512ccdda",
+    "animation_name": "SKILL_3",
+    "mode": "v3",
+    "action_description": "BANGPAE MILCHIGI shield bash: pull the round shield back, lean forward and thrust it forcefully straight toward the facing direction, then recover into guard. Emphasize the contact pose. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.",
+    "frame_count": 8,
+    "keep_first_frame": false,
+    "directions": [
+      "south"
+    ]
+  },
+  "response": {
+    "content": [
+      {
+        "type": "text",
+        "text": "character: d08b8efa-ee49-477d-8db1-fbe0512ccdda\nanimation: v3 custom (BANGPAE MILCHIGI shield bash: pull the round shield back, lean forward and thrust it forcefully straight toward the facing direction, then recover into guard. Emphasize the contact pose. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.)\ndirections: south (1 jobs)\njob_ids: south=ac5f98fd-bd5d-42ff-9061-fab85ab11ea2\ngroup: 42e5a237-0d59-475b-b8e5-b8fac92d3e18\nframes: 8 (reference stripped, keep_first_frame=false)\ncanvas: south 84x84 (frames are stored at this size: the character plus room to move)\ncost: 1 generation (1/dir x 1)\neta: ~2-4 min/direction\n\nhint: get_character(character_id=\"d08b8efa-ee49-477d-8db1-fbe0512ccdda\")\nadd more directions to this group: animate_character(character_id=\"d08b8efa-ee49-477d-8db1-fbe0512ccdda\", action_description=\"BANGPAE MILCHIGI shield bash: pull the round shield back, lean forward and thrust it forcefully straight toward the facing direction, then recover into guard. Emphasize the contact pose. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.\", animation_group_id=\"42e5a237-0d59-475b-b8e5-b8fac92d3e18\", directions=[...])"
+      }
+    ],
+    "isError": false
+  }
+}

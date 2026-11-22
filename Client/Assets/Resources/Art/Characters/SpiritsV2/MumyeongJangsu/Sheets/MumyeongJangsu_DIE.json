@@ -13,9 +13,149 @@
   "frameCount": 12,
   "framesPerSecond": 10,
   "loop": false,
-  "cellWidth": 92,
-  "cellHeight": 92,
+  "cellWidth": 128,
+  "cellHeight": 128,
   "sourcePixelsResized": false,
   "alignment": "PixelLab canvas centres; no per-frame trimming",
-  "groupId": "c8de3e63-8ed4-48f8-87fe-263d974f6f86"
+  "groupId": "c8de3e63-8ed4-48f8-87fe-263d974f6f86",
+  "animationClips": [
+    "Animations/DIE_SOUTH.anim",
+    "Animations/DIE_SOUTH_EAST.anim",
+    "Animations/DIE_EAST.anim",
+    "Animations/DIE_NORTH_EAST.anim",
+    "Animations/DIE_NORTH.anim",
+    "Animations/DIE_NORTH_WEST.anim",
+    "Animations/DIE_WEST.anim",
+    "Animations/DIE_SOUTH_WEST.anim"
+  ],
+  "revision": "LargeSaber_NorthFrontAction",
+  "directionSources": {
+    "south": [
+      {
+        "jobId": "9368c473-9a7d-4003-8ddd-4a926c092db2",
+        "sourceKind": "edit",
+        "startFrame": 0
+      },
+      {
+        "jobId": "a69a7781-b8ba-4587-98f2-ceeef5f134c5",
+        "sourceKind": "edit",
+        "startFrame": 4
+      },
+      {
+        "jobId": "01393787-2c43-40cb-a1e4-726fab41f28b",
+        "sourceKind": "edit",
+        "startFrame": 8
+      }
+    ],
+    "south-east": [
+      {
+        "jobId": "a5b5d106-f95d-4a4c-b186-146c8bea8a1a",
+        "sourceKind": "edit",
+        "startFrame": 0
+      },
+      {
+        "jobId": "12727115-21e6-4655-bf56-5425139753e7",
+        "sourceKind": "edit",
+        "startFrame": 4
+      },
+      {
+        "jobId": "29beb4de-3cca-40b4-956b-ae2c2b910b38",
+        "sourceKind": "edit",
+        "startFrame": 8
+      }
+    ],
+    "east": [
+      {
+        "jobId": "208c44ad-3b8f-4fe7-8e95-c973a77e6212",
+        "sourceKind": "edit",
+        "startFrame": 0
+      },
+      {
+        "jobId": "110dfcf7-5be0-4335-a20e-17071cbb77b1",
+        "sourceKind": "edit",
+        "startFrame": 4
+      },
+      {
+        "jobId": "95b4c3f7-8440-4e5c-a345-43756f5f42f7",
+        "sourceKind": "edit",
+        "startFrame": 8
+      }
+    ],
+    "north-east": [
+      {
+        "jobId": "90ae0a9b-5665-4128-8e8c-6e457eef8728",
+        "sourceKind": "edit",
+        "startFrame": 0
+      },
+      {
+        "jobId": "cdd1c64e-b5a6-46db-8995-31b9c03a81cb",
+        "sourceKind": "edit",
+        "startFrame": 4
+      },
+      {
+        "jobId": "46d3fc07-9020-4029-889c-c9c019fa6920",
+        "sourceKind": "edit",
+        "startFrame": 8
+      }
+    ],
+    "north": [
+      {
+        "jobId": "2da1fdea-aa15-495f-af29-731687f8968b",
+        "sourceKind": "north",
+        "groupId": "692ba6ae-f2f7-45c2-ab56-4a4fb5ab1fb6",
+        "characterId": "6f8c501b-a360-4d0a-85fd-556e6a2e0b9d"
+      }
+    ],
+    "north-west": [
+      {
+        "jobId": "be65389b-23ae-405a-a8b9-9c31b828f7fc",
+        "sourceKind": "edit",
+        "startFrame": 0
+      },
+      {
+        "jobId": "e71fd2e4-c53a-476f-a892-afb9609e1d5f",
+        "sourceKind": "edit",
+        "startFrame": 4
+      },
+      {
+        "jobId": "ec4a9121-f750-42fc-80c3-c7deb6be70dd",
+        "sourceKind": "edit",
+        "startFrame": 8
+      }
+    ],
+    "west": [
+      {
+        "jobId": "f50244cf-8050-4ac1-9c95-4001650d9c2d",
+        "sourceKind": "edit",
+        "startFrame": 0
+      },
+      {
+        "jobId": "77826861-a8ec-4e4b-9bd4-db9c1a3a5095",
+        "sourceKind": "edit",
+        "startFrame": 4
+      },
+      {
+        "jobId": "5130b4d6-5c0c-4670-bae4-6d8585c23f9a",
+        "sourceKind": "edit",
+        "startFrame": 8
+      }
+    ],
+    "south-west": [
+      {
+        "jobId": "7b378aac-79d2-476e-a080-712bc0c8fc96",
+        "sourceKind": "edit",
+        "startFrame": 0
+      },
+      {
+        "jobId": "956983f3-dd87-46fd-9d11-7cb9a5eb2e21",
+        "sourceKind": "edit",
+        "startFrame": 4
+      },
+      {
+        "jobId": "6500b777-669f-4503-8c3f-df0368fcfd88",
+        "sourceKind": "edit",
+        "startFrame": 8
+      }
+    ]
+  }
 }

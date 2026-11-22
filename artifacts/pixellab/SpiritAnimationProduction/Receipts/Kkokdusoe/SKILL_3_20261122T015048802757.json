@@ -1,0 +1,26 @@
+{
+  "request": {
+    "character_id": "5e2b8e1c-c556-4568-9002-2b1c25507dfc",
+    "animation_name": "SKILL_3",
+    "mode": "v3",
+    "action_description": "JULTAGI balance dance: open the arms wide while keeping gong and mallet, pose like a tightrope performer, make a light hop in place and ring the gong on landing, then recover. No literal rope. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.",
+    "frame_count": 8,
+    "keep_first_frame": false,
+    "directions": [
+      "south",
+      "south-east",
+      "east",
+      "north-east",
+      "north"
+    ]
+  },
+  "response": {
+    "content": [
+      {
+        "type": "text",
+        "text": "character: 5e2b8e1c-c556-4568-9002-2b1c25507dfc\nanimation: v3 custom (JULTAGI balance dance: open the arms wide while keeping gong and mallet, pose like a tightrope performer, make a light hop in place and ring the gong on landing, then recover. No literal rope. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.)\ndirections: south, south-east, east, north-east, north (5 jobs)\njob_ids: south=3c2546e7-b172-41b8-a3c2-bb3be3ad1873, south-east=db86d7e9-3b34-4ba3-85c3-b71210cf806a, east=f8417785-0ec6-4863-96e5-2cdd0a2c6c7b, north-east=61581bb0-9fa9-4c56-a12e-411de7bdd154, north=a4b42bf2-beea-4dc5-b4e4-fdd6cd230a5a\ngroup: 7a431176-540e-4d58-a5af-c952cf00d361\nframes: 8 (reference stripped, keep_first_frame=false)\ncanvas: south 92x92, south-east 88x88, east 88x88, north-east 88x88, north 88x88 (frames are stored at this size: the character plus room to move)\ncost: 6 generations (south=2, south-east=1, east=1, north-east=1, north=1)\neta: ~2-4 min/direction\n\nhint: get_character(character_id=\"5e2b8e1c-c556-4568-9002-2b1c25507dfc\")\nadd more directions to this group: animate_character(character_id=\"5e2b8e1c-c556-4568-9002-2b1c25507dfc\", action_description=\"JULTAGI balance dance: open the arms wide while keeping gong and mallet, pose like a tightrope performer, make a light hop in place and ring the gong on landing, then recover. No literal rope. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.\", animation_group_id=\"7a431176-540e-4d58-a5af-c952cf00d361\", directions=[...])"
+      }
+    ],
+    "isError": false
+  }
+}

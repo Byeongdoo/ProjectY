@@ -1,0 +1,211 @@
+{
+  "characterId": "6f8c501b-a360-4d0a-85fd-556e6a2e0b9d",
+  "jobId": "6f6962d5-cc5a-4f0f-9cf2-d2aca6a45646",
+  "groupId": "eba1023f-c70f-4f23-b570-0c3747a3137b",
+  "animationName": "R3_ATTACK",
+  "mode": "skeleton-v3",
+  "poses": [
+    {
+      "frame": 1,
+      "right_hand": [
+        0.22,
+        0.08,
+        0.18
+      ],
+      "left_hand": [
+        -0.15,
+        0.16,
+        0.18
+      ],
+      "lean": [
+        0,
+        0
+      ]
+    },
+    {
+      "frame": 2,
+      "right_hand": [
+        0.18,
+        -0.05,
+        0.39
+      ],
+      "left_hand": [
+        -0.15,
+        0.16,
+        0.18
+      ],
+      "chest": -8,
+      "hips": -4,
+      "lean": [
+        -4,
+        0
+      ],
+      "right_elbow": [
+        1,
+        -0.4,
+        0.3
+      ]
+    },
+    {
+      "frame": 3,
+      "right_hand": [
+        0.14,
+        -0.08,
+        0.43
+      ],
+      "left_hand": [
+        -0.15,
+        0.16,
+        0.18
+      ],
+      "chest": -10,
+      "hips": -5,
+      "lean": [
+        -5,
+        0
+      ],
+      "right_elbow": [
+        1,
+        -0.4,
+        0.3
+      ]
+    },
+    {
+      "frame": 4,
+      "right_hand": [
+        0.13,
+        0.23,
+        0.3
+      ],
+      "left_hand": [
+        -0.15,
+        0.18,
+        0.18
+      ],
+      "chest": 8,
+      "hips": 4,
+      "lean": [
+        12,
+        0
+      ],
+      "pelvis": [
+        0,
+        0.015,
+        -0.015
+      ],
+      "right_elbow": [
+        0.3,
+        0,
+        -1
+      ]
+    },
+    {
+      "frame": 5,
+      "right_hand": [
+        0.09,
+        0.28,
+        0.2
+      ],
+      "left_hand": [
+        -0.15,
+        0.18,
+        0.18
+      ],
+      "chest": 12,
+      "hips": 6,
+      "lean": [
+        16,
+        0
+      ],
+      "pelvis": [
+        0,
+        0.025,
+        -0.025
+      ],
+      "right_elbow": [
+        0.3,
+        0,
+        -1
+      ]
+    },
+    {
+      "frame": 6,
+      "right_hand": [
+        0.09,
+        0.3,
+        0.13
+      ],
+      "left_hand": [
+        -0.15,
+        0.18,
+        0.18
+      ],
+      "chest": 15,
+      "hips": 8,
+      "lean": [
+        19,
+        -2
+      ],
+      "pelvis": [
+        0,
+        0.02,
+        -0.03
+      ],
+      "right_elbow": [
+        0.3,
+        0,
+        -1
+      ]
+    },
+    {
+      "frame": 7,
+      "right_hand": [
+        0.18,
+        0.15,
+        0.17
+      ],
+      "left_hand": [
+        -0.15,
+        0.16,
+        0.18
+      ],
+      "chest": 5,
+      "hips": 3,
+      "lean": [
+        5,
+        0
+      ],
+      "pelvis": [
+        0,
+        0.005,
+        -0.01
+      ]
+    },
+    {
+      "frame": 8,
+      "right_hand": [
+        0.22,
+        0.08,
+        0.18
+      ],
+      "left_hand": [
+        -0.15,
+        0.16,
+        0.18
+      ],
+      "lean": [
+        0,
+        0
+      ]
+    }
+  ],
+  "receipt": {
+    "content": [
+      {
+        "type": "text",
+        "text": "character: 6f8c501b-a360-4d0a-85fd-556e6a2e0b9d\nanimation: Chop the sword forward overhead\nmode: skeleton-v3 (custom motion)\ndirections: north (1 jobs)\n  north: job 6f6962d5-cc5a-4f0f-9cf2-d2aca6a45646\ngroup: eba1023f-c70f-4f23-b570-0c3747a3137b\nframes: 8\ncost: 3 generations per direction\neta: about 2-3 min per direction\nadjusted to fit the body:\n  frame 6: right hand still 0.010 short: stops at full reach\nadd more directions to this group (same motion, no poses needed): animate_character(character_id=\"6f8c501b-a360-4d0a-85fd-556e6a2e0b9d\", mode=\"skeleton-v3\", action_description=\"Chop the sword forward overhead\", animation_group_id=\"eba1023f-c70f-4f23-b570-0c3747a3137b\", directions=[...])\n\nhint: get_character(character_id=\"6f8c501b-a360-4d0a-85fd-556e6a2e0b9d\")"
+      }
+    ],
+    "isError": false
+  }
+}

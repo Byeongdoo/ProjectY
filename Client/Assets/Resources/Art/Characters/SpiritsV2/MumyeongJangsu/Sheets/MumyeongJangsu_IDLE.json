@@ -13,9 +13,81 @@
   "frameCount": 4,
   "framesPerSecond": 8,
   "loop": true,
-  "cellWidth": 92,
-  "cellHeight": 92,
+  "cellWidth": 128,
+  "cellHeight": 128,
   "sourcePixelsResized": false,
   "alignment": "PixelLab canvas centres; no per-frame trimming",
-  "groupId": "5fdaee8c-be9e-4484-8914-321e911ce9c5"
+  "groupId": "5fdaee8c-be9e-4484-8914-321e911ce9c5",
+  "animationClips": [
+    "Animations/IDLE_SOUTH.anim",
+    "Animations/IDLE_SOUTH_EAST.anim",
+    "Animations/IDLE_EAST.anim",
+    "Animations/IDLE_NORTH_EAST.anim",
+    "Animations/IDLE_NORTH.anim",
+    "Animations/IDLE_NORTH_WEST.anim",
+    "Animations/IDLE_WEST.anim",
+    "Animations/IDLE_SOUTH_WEST.anim"
+  ],
+  "revision": "LargeSaber_NorthFrontAction",
+  "directionSources": {
+    "south": [
+      {
+        "jobId": "8856ba25-b1c3-4dea-a698-ac232bb39e4e",
+        "sourceKind": "edit",
+        "startFrame": 0
+      }
+    ],
+    "south-east": [
+      {
+        "jobId": "5fa8c3c4-5b57-4f7f-9816-a1154fcd4812",
+        "sourceKind": "edit",
+        "startFrame": 0
+      }
+    ],
+    "east": [
+      {
+        "jobId": "c69a96f9-ea37-4481-9cbf-aed5cd73ba60",
+        "sourceKind": "edit",
+        "startFrame": 0
+      }
+    ],
+    "north-east": [
+      {
+        "jobId": "152f5d6c-2816-4efc-b22e-16b771a32402",
+        "sourceKind": "edit",
+        "startFrame": 0
+      }
+    ],
+    "north": [
+      {
+        "animationName": "R5_IDLE",
+        "jobId": "71ca851a-420f-415e-a3a5-46a8e36345e4",
+        "groupId": "8c332dd6-0cca-4c59-b7f0-762fc85765dd",
+        "reason": "Consistent upright visible saber guard for all four breathing frames; source/ending pose pinned.",
+        "characterId": "6f8c501b-a360-4d0a-85fd-556e6a2e0b9d",
+        "sourceKind": "reviewed forward attack/guard revision"
+      }
+    ],
+    "north-west": [
+      {
+        "jobId": "e76ce675-8ffe-4f2f-9e86-303ddb9e8076",
+        "sourceKind": "edit",
+        "startFrame": 0
+      }
+    ],
+    "west": [
+      {
+        "jobId": "0cb9631d-9a13-4edb-9f97-0bd20575075e",
+        "sourceKind": "edit",
+        "startFrame": 0
+      }
+    ],
+    "south-west": [
+      {
+        "jobId": "bbce8ef5-786f-46a7-b280-cd27ecba213d",
+        "sourceKind": "edit",
+        "startFrame": 0
+      }
+    ]
+  }
 }

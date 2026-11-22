@@ -1,0 +1,1179 @@
+{
+  "clips": 80,
+  "frames": 672,
+  "entries": [
+    {
+      "key": "MumyeongJangsu",
+      "motion": "ATTACK",
+      "direction": "south",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\MumyeongJangsu\\ATTACK\\south\\Recipe.json",
+      "spriteRef": "1b63112a-d331-4614-8721-f07684c15e8b",
+      "activeFrames": [
+        2,
+        3,
+        4
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 0
+    },
+    {
+      "key": "MumyeongJangsu",
+      "motion": "ATTACK",
+      "direction": "south-east",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\MumyeongJangsu\\ATTACK\\south-east\\Recipe.json",
+      "spriteRef": "04cb5dd2-f38b-4abd-be58-d86c36d43997",
+      "activeFrames": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 0
+    },
+    {
+      "key": "MumyeongJangsu",
+      "motion": "ATTACK",
+      "direction": "east",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\MumyeongJangsu\\ATTACK\\east\\Recipe.json",
+      "spriteRef": "597f71d2-6b03-4709-91c9-a3ccb21f12ca",
+      "activeFrames": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 0
+    },
+    {
+      "key": "MumyeongJangsu",
+      "motion": "ATTACK",
+      "direction": "north-east",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\MumyeongJangsu\\ATTACK\\north-east\\Recipe.json",
+      "spriteRef": "character:6f8c501b-a360-4d0a-85fd-556e6a2e0b9d:north-east:R4_ATTACK",
+      "activeFrames": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 0
+    },
+    {
+      "key": "MumyeongJangsu",
+      "motion": "ATTACK",
+      "direction": "north",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\MumyeongJangsu\\ATTACK\\north\\Recipe.json",
+      "spriteRef": "character:6f8c501b-a360-4d0a-85fd-556e6a2e0b9d:north:R4_ATTACK",
+      "activeFrames": [
+        1,
+        2,
+        3
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 0
+    },
+    {
+      "key": "MumyeongJangsu",
+      "motion": "ATTACK",
+      "direction": "north-west",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\MumyeongJangsu\\ATTACK\\north-west\\Recipe.json",
+      "spriteRef": "7dc4616b-d288-4228-aed4-5146f5880b94:north-west",
+      "activeFrames": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 0
+    },
+    {
+      "key": "MumyeongJangsu",
+      "motion": "ATTACK",
+      "direction": "west",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\MumyeongJangsu\\ATTACK\\west\\Recipe.json",
+      "spriteRef": "014d427e-d294-4752-be3c-d3370e6800a1",
+      "activeFrames": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 0
+    },
+    {
+      "key": "MumyeongJangsu",
+      "motion": "ATTACK",
+      "direction": "south-west",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\MumyeongJangsu\\ATTACK\\south-west\\Recipe.json",
+      "spriteRef": "2bada38f-6506-4d20-8487-124425fb25fa",
+      "activeFrames": [
+        4,
+        5,
+        6
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 0
+    },
+    {
+      "key": "Mangnani",
+      "motion": "ATTACK",
+      "direction": "south",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Mangnani\\ATTACK\\south\\Recipe.json",
+      "activeFrames": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 0
+    },
+    {
+      "key": "Mangnani",
+      "motion": "ATTACK",
+      "direction": "south-east",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Mangnani\\ATTACK\\south-east\\Recipe.json",
+      "activeFrames": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 0
+    },
+    {
+      "key": "Mangnani",
+      "motion": "ATTACK",
+      "direction": "east",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Mangnani\\ATTACK\\east\\Recipe.json",
+      "activeFrames": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 0
+    },
+    {
+      "key": "Mangnani",
+      "motion": "ATTACK",
+      "direction": "north-east",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Mangnani\\ATTACK\\north-east\\Recipe.json",
+      "activeFrames": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 0
+    },
+    {
+      "key": "Mangnani",
+      "motion": "ATTACK",
+      "direction": "north",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Mangnani\\ATTACK\\north\\Recipe.json",
+      "activeFrames": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 0
+    },
+    {
+      "key": "Mangnani",
+      "motion": "ATTACK",
+      "direction": "north-west",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Mangnani\\ATTACK\\north-west\\Recipe.json",
+      "activeFrames": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 0
+    },
+    {
+      "key": "Mangnani",
+      "motion": "ATTACK",
+      "direction": "west",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Mangnani\\ATTACK\\west\\Recipe.json",
+      "activeFrames": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 0
+    },
+    {
+      "key": "Mangnani",
+      "motion": "ATTACK",
+      "direction": "south-west",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Mangnani\\ATTACK\\south-west\\Recipe.json",
+      "activeFrames": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 0
+    },
+    {
+      "key": "Mangnani",
+      "motion": "SKILL_1",
+      "direction": "south",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Mangnani\\SKILL_1\\south\\Recipe.json",
+      "activeFrames": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 0
+    },
+    {
+      "key": "Mangnani",
+      "motion": "SKILL_1",
+      "direction": "south-east",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Mangnani\\SKILL_1\\south-east\\Recipe.json",
+      "activeFrames": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 0
+    },
+    {
+      "key": "Mangnani",
+      "motion": "SKILL_1",
+      "direction": "east",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Mangnani\\SKILL_1\\east\\Recipe.json",
+      "activeFrames": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 0
+    },
+    {
+      "key": "Mangnani",
+      "motion": "SKILL_1",
+      "direction": "north-east",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Mangnani\\SKILL_1\\north-east\\Recipe.json",
+      "activeFrames": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 0
+    },
+    {
+      "key": "Mangnani",
+      "motion": "SKILL_1",
+      "direction": "north",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Mangnani\\SKILL_1\\north\\Recipe.json",
+      "activeFrames": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 0
+    },
+    {
+      "key": "Mangnani",
+      "motion": "SKILL_1",
+      "direction": "north-west",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Mangnani\\SKILL_1\\north-west\\Recipe.json",
+      "activeFrames": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 0
+    },
+    {
+      "key": "Mangnani",
+      "motion": "SKILL_1",
+      "direction": "west",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Mangnani\\SKILL_1\\west\\Recipe.json",
+      "activeFrames": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 0
+    },
+    {
+      "key": "Mangnani",
+      "motion": "SKILL_1",
+      "direction": "south-west",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Mangnani\\SKILL_1\\south-west\\Recipe.json",
+      "activeFrames": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 0
+    },
+    {
+      "key": "Mangnani",
+      "motion": "SKILL_2",
+      "direction": "south",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Mangnani\\SKILL_2\\south\\Recipe.json",
+      "activeFrames": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 0
+    },
+    {
+      "key": "Mangnani",
+      "motion": "SKILL_2",
+      "direction": "south-east",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Mangnani\\SKILL_2\\south-east\\Recipe.json",
+      "activeFrames": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 0
+    },
+    {
+      "key": "Mangnani",
+      "motion": "SKILL_2",
+      "direction": "east",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Mangnani\\SKILL_2\\east\\Recipe.json",
+      "activeFrames": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 0
+    },
+    {
+      "key": "Mangnani",
+      "motion": "SKILL_2",
+      "direction": "north-east",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Mangnani\\SKILL_2\\north-east\\Recipe.json",
+      "activeFrames": [
+        7,
+        8,
+        9,
+        10
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 0
+    },
+    {
+      "key": "Mangnani",
+      "motion": "SKILL_2",
+      "direction": "north",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Mangnani\\SKILL_2\\north\\Recipe.json",
+      "activeFrames": [
+        4,
+        5,
+        7,
+        8,
+        9,
+        10
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 0
+    },
+    {
+      "key": "Mangnani",
+      "motion": "SKILL_2",
+      "direction": "north-west",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Mangnani\\SKILL_2\\north-west\\Recipe.json",
+      "activeFrames": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 0
+    },
+    {
+      "key": "Mangnani",
+      "motion": "SKILL_2",
+      "direction": "west",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Mangnani\\SKILL_2\\west\\Recipe.json",
+      "activeFrames": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 0
+    },
+    {
+      "key": "Mangnani",
+      "motion": "SKILL_2",
+      "direction": "south-west",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Mangnani\\SKILL_2\\south-west\\Recipe.json",
+      "activeFrames": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 0
+    },
+    {
+      "key": "Mangnani",
+      "motion": "SKILL_3",
+      "direction": "south",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Mangnani\\SKILL_3\\south\\Recipe.json",
+      "activeFrames": [
+        2,
+        3,
+        4
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 0
+    },
+    {
+      "key": "Mangnani",
+      "motion": "SKILL_3",
+      "direction": "south-east",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Mangnani\\SKILL_3\\south-east\\Recipe.json",
+      "activeFrames": [
+        2,
+        3,
+        4
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 0
+    },
+    {
+      "key": "Mangnani",
+      "motion": "SKILL_3",
+      "direction": "east",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Mangnani\\SKILL_3\\east\\Recipe.json",
+      "activeFrames": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 0
+    },
+    {
+      "key": "Mangnani",
+      "motion": "SKILL_3",
+      "direction": "north-east",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Mangnani\\SKILL_3\\north-east\\Recipe.json",
+      "activeFrames": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 0
+    },
+    {
+      "key": "Mangnani",
+      "motion": "SKILL_3",
+      "direction": "north",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Mangnani\\SKILL_3\\north\\Recipe.json",
+      "activeFrames": [
+        2,
+        3,
+        4
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 0
+    },
+    {
+      "key": "Mangnani",
+      "motion": "SKILL_3",
+      "direction": "north-west",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Mangnani\\SKILL_3\\north-west\\Recipe.json",
+      "activeFrames": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 0
+    },
+    {
+      "key": "Mangnani",
+      "motion": "SKILL_3",
+      "direction": "west",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Mangnani\\SKILL_3\\west\\Recipe.json",
+      "activeFrames": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 0
+    },
+    {
+      "key": "Mangnani",
+      "motion": "SKILL_3",
+      "direction": "south-west",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Mangnani\\SKILL_3\\south-west\\Recipe.json",
+      "activeFrames": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 0
+    },
+    {
+      "key": "Kkokdusoe",
+      "motion": "ATTACK",
+      "direction": "south",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Kkokdusoe\\ATTACK\\south\\Recipe.json",
+      "activeFrames": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 87
+    },
+    {
+      "key": "Kkokdusoe",
+      "motion": "ATTACK",
+      "direction": "south-east",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Kkokdusoe\\ATTACK\\south-east\\Recipe.json",
+      "activeFrames": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 150
+    },
+    {
+      "key": "Kkokdusoe",
+      "motion": "ATTACK",
+      "direction": "east",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Kkokdusoe\\ATTACK\\east\\Recipe.json",
+      "activeFrames": [
+        2,
+        3,
+        4
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 26
+    },
+    {
+      "key": "Kkokdusoe",
+      "motion": "ATTACK",
+      "direction": "north-east",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Kkokdusoe\\ATTACK\\north-east\\Recipe.json",
+      "activeFrames": [
+        2,
+        3
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 8
+    },
+    {
+      "key": "Kkokdusoe",
+      "motion": "ATTACK",
+      "direction": "north",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Kkokdusoe\\ATTACK\\north\\Recipe.json",
+      "activeFrames": [
+        2,
+        3
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 18
+    },
+    {
+      "key": "Kkokdusoe",
+      "motion": "ATTACK",
+      "direction": "north-west",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Kkokdusoe\\ATTACK\\north-west\\Recipe.json",
+      "activeFrames": [
+        4,
+        5,
+        6
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 38
+    },
+    {
+      "key": "Kkokdusoe",
+      "motion": "ATTACK",
+      "direction": "west",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Kkokdusoe\\ATTACK\\west\\Recipe.json",
+      "activeFrames": [
+        4,
+        5
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 0
+    },
+    {
+      "key": "Kkokdusoe",
+      "motion": "ATTACK",
+      "direction": "south-west",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Kkokdusoe\\ATTACK\\south-west\\Recipe.json",
+      "activeFrames": [
+        2,
+        3
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 24
+    },
+    {
+      "key": "Kkokdusoe",
+      "motion": "SKILL_1",
+      "direction": "south",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Kkokdusoe\\SKILL_1\\south\\Recipe.json",
+      "activeFrames": [
+        1,
+        2
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 8
+    },
+    {
+      "key": "Kkokdusoe",
+      "motion": "SKILL_1",
+      "direction": "south-east",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Kkokdusoe\\SKILL_1\\south-east\\Recipe.json",
+      "activeFrames": [
+        1,
+        2,
+        3
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 16
+    },
+    {
+      "key": "Kkokdusoe",
+      "motion": "SKILL_1",
+      "direction": "east",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Kkokdusoe\\SKILL_1\\east\\Recipe.json",
+      "activeFrames": [
+        3,
+        4,
+        5
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 50
+    },
+    {
+      "key": "Kkokdusoe",
+      "motion": "SKILL_1",
+      "direction": "north-east",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Kkokdusoe\\SKILL_1\\north-east\\Recipe.json",
+      "activeFrames": [
+        1,
+        2,
+        3,
+        5,
+        6
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 70
+    },
+    {
+      "key": "Kkokdusoe",
+      "motion": "SKILL_1",
+      "direction": "north",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Kkokdusoe\\SKILL_1\\north\\Recipe.json",
+      "activeFrames": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 30
+    },
+    {
+      "key": "Kkokdusoe",
+      "motion": "SKILL_1",
+      "direction": "north-west",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Kkokdusoe\\SKILL_1\\north-west\\Recipe.json",
+      "activeFrames": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 41
+    },
+    {
+      "key": "Kkokdusoe",
+      "motion": "SKILL_1",
+      "direction": "west",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Kkokdusoe\\SKILL_1\\west\\Recipe.json",
+      "activeFrames": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 94
+    },
+    {
+      "key": "Kkokdusoe",
+      "motion": "SKILL_1",
+      "direction": "south-west",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Kkokdusoe\\SKILL_1\\south-west\\Recipe.json",
+      "activeFrames": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 72
+    },
+    {
+      "key": "Kkokdusoe",
+      "motion": "SKILL_2",
+      "direction": "south",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Kkokdusoe\\SKILL_2\\south\\Recipe.json",
+      "activeFrames": [
+        2,
+        3
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 10
+    },
+    {
+      "key": "Kkokdusoe",
+      "motion": "SKILL_2",
+      "direction": "south-east",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Kkokdusoe\\SKILL_2\\south-east\\Recipe.json",
+      "activeFrames": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 35
+    },
+    {
+      "key": "Kkokdusoe",
+      "motion": "SKILL_2",
+      "direction": "east",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Kkokdusoe\\SKILL_2\\east\\Recipe.json",
+      "activeFrames": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 79
+    },
+    {
+      "key": "Kkokdusoe",
+      "motion": "SKILL_2",
+      "direction": "north-east",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Kkokdusoe\\SKILL_2\\north-east\\Recipe.json",
+      "activeFrames": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 16
+    },
+    {
+      "key": "Kkokdusoe",
+      "motion": "SKILL_2",
+      "direction": "north",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Kkokdusoe\\SKILL_2\\north\\Recipe.json",
+      "activeFrames": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 62
+    },
+    {
+      "key": "Kkokdusoe",
+      "motion": "SKILL_2",
+      "direction": "north-west",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Kkokdusoe\\SKILL_2\\north-west\\Recipe.json",
+      "activeFrames": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 53
+    },
+    {
+      "key": "Kkokdusoe",
+      "motion": "SKILL_2",
+      "direction": "west",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Kkokdusoe\\SKILL_2\\west\\Recipe.json",
+      "activeFrames": [
+        2,
+        3,
+        4
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 60
+    },
+    {
+      "key": "Kkokdusoe",
+      "motion": "SKILL_2",
+      "direction": "south-west",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Kkokdusoe\\SKILL_2\\south-west\\Recipe.json",
+      "activeFrames": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 60
+    },
+    {
+      "key": "Kkokdusoe",
+      "motion": "SKILL_3",
+      "direction": "south",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Kkokdusoe\\SKILL_3\\south\\Recipe.json",
+      "activeFrames": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 92
+    },
+    {
+      "key": "Kkokdusoe",
+      "motion": "SKILL_3",
+      "direction": "south-east",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Kkokdusoe\\SKILL_3\\south-east\\Recipe.json",
+      "activeFrames": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 69
+    },
+    {
+      "key": "Kkokdusoe",
+      "motion": "SKILL_3",
+      "direction": "east",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Kkokdusoe\\SKILL_3\\east\\Recipe.json",
+      "activeFrames": [
+        2,
+        3
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 23
+    },
+    {
+      "key": "Kkokdusoe",
+      "motion": "SKILL_3",
+      "direction": "north-east",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Kkokdusoe\\SKILL_3\\north-east\\Recipe.json",
+      "activeFrames": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 105
+    },
+    {
+      "key": "Kkokdusoe",
+      "motion": "SKILL_3",
+      "direction": "north",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Kkokdusoe\\SKILL_3\\north\\Recipe.json",
+      "activeFrames": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 43
+    },
+    {
+      "key": "Kkokdusoe",
+      "motion": "SKILL_3",
+      "direction": "north-west",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Kkokdusoe\\SKILL_3\\north-west\\Recipe.json",
+      "activeFrames": [
+        2,
+        3
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 10
+    },
+    {
+      "key": "Kkokdusoe",
+      "motion": "SKILL_3",
+      "direction": "west",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Kkokdusoe\\SKILL_3\\west\\Recipe.json",
+      "activeFrames": [
+        2,
+        3
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 20
+    },
+    {
+      "key": "Kkokdusoe",
+      "motion": "SKILL_3",
+      "direction": "south-west",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Kkokdusoe\\SKILL_3\\south-west\\Recipe.json",
+      "activeFrames": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 78
+    },
+    {
+      "key": "Kkokdusoe",
+      "motion": "SKILL_4",
+      "direction": "south",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Kkokdusoe\\SKILL_4\\south\\Recipe.json",
+      "activeFrames": [
+        1,
+        2
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 4
+    },
+    {
+      "key": "Kkokdusoe",
+      "motion": "SKILL_4",
+      "direction": "south-east",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Kkokdusoe\\SKILL_4\\south-east\\Recipe.json",
+      "activeFrames": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 116
+    },
+    {
+      "key": "Kkokdusoe",
+      "motion": "SKILL_4",
+      "direction": "east",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Kkokdusoe\\SKILL_4\\east\\Recipe.json",
+      "activeFrames": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 33
+    },
+    {
+      "key": "Kkokdusoe",
+      "motion": "SKILL_4",
+      "direction": "north-east",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Kkokdusoe\\SKILL_4\\north-east\\Recipe.json",
+      "activeFrames": [
+        1,
+        2,
+        5,
+        6
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 43
+    },
+    {
+      "key": "Kkokdusoe",
+      "motion": "SKILL_4",
+      "direction": "north",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Kkokdusoe\\SKILL_4\\north\\Recipe.json",
+      "activeFrames": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 49
+    },
+    {
+      "key": "Kkokdusoe",
+      "motion": "SKILL_4",
+      "direction": "north-west",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Kkokdusoe\\SKILL_4\\north-west\\Recipe.json",
+      "activeFrames": [
+        1,
+        2,
+        3,
+        5,
+        6
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 36
+    },
+    {
+      "key": "Kkokdusoe",
+      "motion": "SKILL_4",
+      "direction": "west",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Kkokdusoe\\SKILL_4\\west\\Recipe.json",
+      "activeFrames": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 102
+    },
+    {
+      "key": "Kkokdusoe",
+      "motion": "SKILL_4",
+      "direction": "south-west",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Kkokdusoe\\SKILL_4\\south-west\\Recipe.json",
+      "activeFrames": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 48
+    }
+  ],
+  "originalSourceFramesPreserved": true,
+  "unintendedPixelChangesOutsideTrail": 0,
+  "nativeClipsUseTrailFrames": true
+}

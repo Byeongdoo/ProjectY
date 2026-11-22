@@ -13,9 +13,114 @@
   "frameCount": 8,
   "framesPerSecond": 12,
   "loop": false,
-  "cellWidth": 92,
-  "cellHeight": 92,
+  "cellWidth": 128,
+  "cellHeight": 128,
   "sourcePixelsResized": false,
   "alignment": "PixelLab canvas centres; no per-frame trimming",
-  "groupId": "f09771f5-2505-42d2-8619-fc3baa9ac9ec"
+  "groupId": "f09771f5-2505-42d2-8619-fc3baa9ac9ec",
+  "animationClips": [
+    "Animations/ATTACK_SOUTH.anim",
+    "Animations/ATTACK_SOUTH_EAST.anim",
+    "Animations/ATTACK_EAST.anim",
+    "Animations/ATTACK_NORTH_EAST.anim",
+    "Animations/ATTACK_NORTH.anim",
+    "Animations/ATTACK_NORTH_WEST.anim",
+    "Animations/ATTACK_WEST.anim",
+    "Animations/ATTACK_SOUTH_WEST.anim"
+  ],
+  "nativeClipFrameRoot": "SpritesWithTrail",
+  "sourceFrameRoot": "Sprites",
+  "trailLayerRoot": "TrailLayers",
+  "revision": "LargeSaber_NorthFrontAction",
+  "directionSources": {
+    "south": [
+      {
+        "jobId": "17327877-e82f-4df7-8b82-f7f3e8fa8882",
+        "sourceKind": "edit",
+        "startFrame": 0
+      },
+      {
+        "jobId": "be2533fd-2977-48de-b2ef-ee126d258de9",
+        "sourceKind": "edit",
+        "startFrame": 4
+      }
+    ],
+    "south-east": [
+      {
+        "jobId": "4c746e61-ede8-4e1f-beb7-54d65693f3d6",
+        "sourceKind": "edit",
+        "startFrame": 0
+      },
+      {
+        "jobId": "63c2f712-94bd-497b-9fe2-a745fe88961f",
+        "sourceKind": "edit",
+        "startFrame": 4
+      }
+    ],
+    "east": [
+      {
+        "jobId": "8baf38eb-0492-4eb3-9847-5db4182c89db",
+        "sourceKind": "edit",
+        "startFrame": 0
+      },
+      {
+        "jobId": "d7863f3f-0553-4c62-83d0-4e5c5ac09d4d",
+        "sourceKind": "edit",
+        "startFrame": 4
+      }
+    ],
+    "north-east": [
+      {
+        "animationName": "R4_ATTACK",
+        "groupId": "a4e8f256-4688-4902-b785-fd17eda5d424",
+        "jobId": "c14b0d48-6421-4adc-aac4-d35edfbc171b",
+        "characterId": "6f8c501b-a360-4d0a-85fd-556e6a2e0b9d",
+        "sourceKind": "reviewed forward attack/guard revision"
+      }
+    ],
+    "north": [
+      {
+        "animationName": "R4_ATTACK",
+        "jobId": "d388127d-cc54-426e-b781-914853a8d454",
+        "groupId": "a4e8f256-4688-4902-b785-fd17eda5d424",
+        "reason": "Right arm lifts above shoulder and passes to far side in front of torso; no visible blade across back or waist. Forward blade becomes naturally occluded. Overlay trail must follow upper/forward strike, not waist.",
+        "characterId": "6f8c501b-a360-4d0a-85fd-556e6a2e0b9d",
+        "sourceKind": "reviewed forward attack/guard revision"
+      }
+    ],
+    "north-west": [
+      {
+        "drawingId": "7dc4616b-d288-4228-aed4-5146f5880b94",
+        "reference": "7dc4616b-d288-4228-aed4-5146f5880b94:north-west",
+        "sourceFolder": "ManualAttacks/north-west",
+        "sourceKind": "reviewed forward attack/guard revision",
+        "pixelResampling": "Weapon rotation only; body copied at integer offsets",
+        "characterId": "6f8c501b-a360-4d0a-85fd-556e6a2e0b9d"
+      }
+    ],
+    "west": [
+      {
+        "jobId": "a1d280ed-c3ba-4bba-9b91-de607a3814aa",
+        "sourceKind": "edit",
+        "startFrame": 0
+      },
+      {
+        "jobId": "1c3f6111-ea32-4987-b627-05849a2b79a0",
+        "sourceKind": "edit",
+        "startFrame": 4
+      }
+    ],
+    "south-west": [
+      {
+        "jobId": "a042afda-e072-4e68-b195-44e930a4ba2a",
+        "sourceKind": "edit",
+        "startFrame": 0
+      },
+      {
+        "jobId": "cf256431-9ffa-44b5-bde8-722085cd75e5",
+        "sourceKind": "edit",
+        "startFrame": 4
+      }
+    ]
+  }
 }

@@ -1,0 +1,339 @@
+{
+  "name": "ProjectY_Kkokdusoe_ATTACK_north-west_Trail",
+  "canvas": {
+    "w": 128,
+    "h": 128
+  },
+  "frames": 8,
+  "fps": 12,
+  "loop": false,
+  "origin": [
+    64.0,
+    64.0
+  ],
+  "ramps": {
+    "main": [
+      "#9e652d",
+      "#ddb866",
+      "#fff0b2",
+      "#fffbe8"
+    ]
+  },
+  "outline": {
+    "mode": "none"
+  },
+  "tones": 4,
+  "dither": 0,
+  "detail": 0,
+  "subject": {
+    "x": 64.0,
+    "y": 64.0,
+    "align": "center"
+  },
+  "layers": [
+    {
+      "id": "trail_2",
+      "type": "shape",
+      "z": "front",
+      "x": 0,
+      "y": 0,
+      "points": [
+        [
+          77.86,
+          65.0
+        ],
+        [
+          90.35,
+          65.0
+        ],
+        [
+          90.35,
+          65.0
+        ],
+        [
+          79.13,
+          65.0
+        ]
+      ],
+      "closed": true,
+      "smooth": 0,
+      "fill": "flat",
+      "bevel": 1.2,
+      "outline": false,
+      "life": [
+        0.2542857142857143,
+        0.31714285714285717
+      ],
+      "lo": 0.1,
+      "fade": 0,
+      "level": 1
+    },
+    {
+      "id": "fade_2",
+      "type": "shape",
+      "z": "front",
+      "x": 0,
+      "y": 0,
+      "points": [
+        [
+          77.86,
+          65.0
+        ],
+        [
+          90.35,
+          65.0
+        ],
+        [
+          90.35,
+          65.0
+        ],
+        [
+          79.13,
+          65.0
+        ]
+      ],
+      "closed": true,
+      "smooth": 0,
+      "fill": "flat",
+      "bevel": 1.2,
+      "outline": false,
+      "life": [
+        0.3971428571428572,
+        0.45999999999999996
+      ],
+      "lo": 0.1,
+      "fade": 0,
+      "level": 1,
+      "intensity": 0.68,
+      "opacity": 0.45
+    },
+    {
+      "id": "trail_3",
+      "type": "shape",
+      "z": "front",
+      "x": 0,
+      "y": 0,
+      "points": [
+        [
+          47.61,
+          65.0
+        ],
+        [
+          34.89,
+          69.11
+        ],
+        [
+          34.89,
+          69.11
+        ],
+        [
+          46.45,
+          65.0
+        ]
+      ],
+      "closed": true,
+      "smooth": 0,
+      "fill": "flat",
+      "bevel": 1.2,
+      "outline": false,
+      "life": [
+        0.39714285714285713,
+        0.46
+      ],
+      "lo": 0.1,
+      "fade": 0,
+      "level": 1
+    },
+    {
+      "id": "fade_3",
+      "type": "shape",
+      "z": "front",
+      "x": 0,
+      "y": 0,
+      "points": [
+        [
+          47.61,
+          65.0
+        ],
+        [
+          34.89,
+          69.11
+        ],
+        [
+          34.89,
+          69.11
+        ],
+        [
+          46.45,
+          65.0
+        ]
+      ],
+      "closed": true,
+      "smooth": 0,
+      "fill": "flat",
+      "bevel": 1.2,
+      "outline": false,
+      "life": [
+        0.54,
+        0.6028571428571429
+      ],
+      "lo": 0.1,
+      "fade": 0,
+      "level": 1,
+      "intensity": 0.68,
+      "opacity": 0.45
+    },
+    {
+      "id": "trail_4",
+      "type": "shape",
+      "z": "front",
+      "x": 0,
+      "y": 0,
+      "points": [
+        [
+          37.99,
+          66.47
+        ],
+        [
+          48.65,
+          65.0
+        ],
+        [
+          48.65,
+          65.0
+        ],
+        [
+          39.8,
+          68.61
+        ]
+      ],
+      "closed": true,
+      "smooth": 0,
+      "fill": "flat",
+      "bevel": 1.2,
+      "outline": false,
+      "life": [
+        0.5399999999999999,
+        0.6028571428571429
+      ],
+      "lo": 0.1,
+      "fade": 0,
+      "level": 1
+    },
+    {
+      "id": "fade_4",
+      "type": "shape",
+      "z": "front",
+      "x": 0,
+      "y": 0,
+      "points": [
+        [
+          37.99,
+          66.47
+        ],
+        [
+          48.65,
+          65.0
+        ],
+        [
+          48.65,
+          65.0
+        ],
+        [
+          39.8,
+          68.61
+        ]
+      ],
+      "closed": true,
+      "smooth": 0,
+      "fill": "flat",
+      "bevel": 1.2,
+      "outline": false,
+      "life": [
+        0.6828571428571429,
+        0.7457142857142857
+      ],
+      "lo": 0.1,
+      "fade": 0,
+      "level": 1,
+      "intensity": 0.68,
+      "opacity": 0.45
+    },
+    {
+      "id": "trail_5",
+      "type": "shape",
+      "z": "front",
+      "x": 0,
+      "y": 0,
+      "points": [
+        [
+          47.75,
+          65.0
+        ],
+        [
+          42.08,
+          72.23
+        ],
+        [
+          42.08,
+          72.23
+        ],
+        [
+          45.19,
+          65.0
+        ]
+      ],
+      "closed": true,
+      "smooth": 0,
+      "fill": "flat",
+      "bevel": 1.2,
+      "outline": false,
+      "life": [
+        0.6828571428571429,
+        0.7457142857142857
+      ],
+      "lo": 0.1,
+      "fade": 0,
+      "level": 1
+    },
+    {
+      "id": "fade_5",
+      "type": "shape",
+      "z": "front",
+      "x": 0,
+      "y": 0,
+      "points": [
+        [
+          47.75,
+          65.0
+        ],
+        [
+          42.08,
+          72.23
+        ],
+        [
+          42.08,
+          72.23
+        ],
+        [
+          45.19,
+          65.0
+        ]
+      ],
+      "closed": true,
+      "smooth": 0,
+      "fill": "flat",
+      "bevel": 1.2,
+      "outline": false,
+      "life": [
+        0.8257142857142857,
+        0.8885714285714286
+      ],
+      "lo": 0.1,
+      "fade": 0,
+      "level": 1,
+      "intensity": 0.68,
+      "opacity": 0.45
+    }
+  ]
+}

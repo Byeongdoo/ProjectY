@@ -1,0 +1,28 @@
+{
+  "request": {
+    "character_id": "d08b8efa-ee49-477d-8db1-fbe0512ccdda",
+    "animation_name": "SKILL_4",
+    "mode": "v3",
+    "action_description": "DAESIN MATGI protection vow: turn the shield toward an ally in the facing direction and extend the saber arm protectively without losing grip; hold a solemn guarding pledge then return to guard. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.",
+    "frame_count": 8,
+    "keep_first_frame": false,
+    "directions": [
+      "east",
+      "north-east",
+      "north",
+      "north-west",
+      "west",
+      "south-west"
+    ],
+    "animation_group_id": "27a4beb5-78ca-453a-a673-2de10fb5cb15"
+  },
+  "response": {
+    "content": [
+      {
+        "type": "text",
+        "text": "character: d08b8efa-ee49-477d-8db1-fbe0512ccdda\nanimation: v3 custom (DAESIN MATGI protection vow: turn the shield toward an ally in the facing direction and extend the saber arm protectively without losing grip; hold a solemn guarding pledge then return to guard. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.)\ndirections: east, north-east, north, north-west, west, south-west (6 jobs)\njob_ids: east=51980f52-e6f8-4d8c-8931-66d9b491c9fd, north-east=01e740c2-c6a9-48eb-b9eb-9aee5e310161, north=c20b89dd-2245-4f06-9738-7004de12c9d3, north-west=e38e29c2-8964-450f-863e-b543ee5dad3d, west=ee73f758-2df0-4218-985a-1327772e90a8, south-west=86d0c245-783d-4415-a977-f48c99bfeee2\ngroup: 27a4beb5-78ca-453a-a673-2de10fb5cb15\nframes: 8 (reference stripped, keep_first_frame=false)\ncanvas: east 84x84, north-east 84x84, north 84x84, north-west 84x84, west 84x84, south-west 92x92 (frames are stored at this size: the character plus room to move)\ncost: 7 generations (east=1, north-east=1, north=1, north-west=1, west=1, south-west=2)\neta: ~2-4 min/direction\n\nhint: get_character(character_id=\"d08b8efa-ee49-477d-8db1-fbe0512ccdda\")\nadd more directions to this group: animate_character(character_id=\"d08b8efa-ee49-477d-8db1-fbe0512ccdda\", action_description=\"DAESIN MATGI protection vow: turn the shield toward an ally in the facing direction and extend the saber arm protectively without losing grip; hold a solemn guarding pledge then return to guard. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.\", animation_group_id=\"27a4beb5-78ca-453a-a673-2de10fb5cb15\", directions=[...])"
+      }
+    ],
+    "isError": false
+  }
+}

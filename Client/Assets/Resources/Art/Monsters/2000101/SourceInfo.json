@@ -1,0 +1,15 @@
+{
+  "name": "안개 잡귀",
+  "characterId": "350951f8-1af7-4827-80e5-d4d9dfb48163",
+  "sourceJobId": "33eaa076-66e5-406d-b58f-a6ef9af32504",
+  "sourceImageIndex": 13,
+  "metrics": {
+    "canvasWidth": 64,
+    "canvasHeight": 64,
+    "pixelsPerUnit": 32,
+    "pivotPixels": {
+      "x": 32.0,
+      "y": 8.0
+    }
+  }
+}

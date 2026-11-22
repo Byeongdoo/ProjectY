@@ -1,41 +1,43 @@
 {
     "unityVersion": "6000.3.5f2",
-    "generatedAtUtc": "2026-11-22T01:09:54.1212029Z",
-    "status": "Partial production: available assets verified, remaining clips still queued",
+    "generatedAtUtc": "2026-11-22T05:34:47.6988464Z",
+    "status": "All generated assets imported; visual approval remains separate",
     "expectedClips": 440,
     "expectedFrames": 3136,
-    "availableClips": 24,
-    "frameReferences": 96,
+    "availableClips": 440,
+    "frameReferences": 3136,
+    "trailClips": 80,
+    "trailFrameReferences": 672,
     "classes": [
         {
             "key": "MumyeongJangsu",
-            "animations": 1,
-            "clips": 8,
-            "frameReferences": 32
+            "animations": 11,
+            "clips": 88,
+            "frameReferences": 608
         },
         {
             "key": "Mangnani",
-            "animations": 1,
-            "clips": 8,
-            "frameReferences": 32
+            "animations": 11,
+            "clips": 88,
+            "frameReferences": 640
         },
         {
             "key": "ChakhoGapsa",
-            "animations": 1,
-            "clips": 8,
-            "frameReferences": 32
+            "animations": 11,
+            "clips": 88,
+            "frameReferences": 640
         },
         {
             "key": "Kkokdusoe",
-            "animations": 0,
-            "clips": 0,
-            "frameReferences": 0
+            "animations": 11,
+            "clips": 88,
+            "frameReferences": 608
         },
         {
             "key": "Uinyeo",
-            "animations": 0,
-            "clips": 0,
-            "frameReferences": 0
+            "animations": 11,
+            "clips": 88,
+            "frameReferences": 640
         }
     ],
     "checks": [

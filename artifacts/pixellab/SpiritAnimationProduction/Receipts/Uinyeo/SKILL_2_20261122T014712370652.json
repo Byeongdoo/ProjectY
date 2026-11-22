@@ -1,0 +1,28 @@
+{
+  "request": {
+    "character_id": "20edb5b5-8698-424e-be5e-99b63c356064",
+    "animation_name": "SKILL_2",
+    "mode": "v3",
+    "action_description": "TANGYAK herbal medicine: reach into the medicine case for a small medicine bowl or packet, lift it carefully with both hands, then open the arms in a gentle offering gesture and recover. Keep original case visible beside the body. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.",
+    "frame_count": 8,
+    "keep_first_frame": false,
+    "directions": [
+      "east",
+      "north-east",
+      "north",
+      "north-west",
+      "west",
+      "south-west"
+    ],
+    "animation_group_id": "e41bb1a3-c97d-4210-9966-4ac2e04a8028"
+  },
+  "response": {
+    "content": [
+      {
+        "type": "text",
+        "text": "character: 20edb5b5-8698-424e-be5e-99b63c356064\nanimation: v3 custom (TANGYAK herbal medicine: reach into the medicine case for a small medicine bowl or packet, lift it carefully with both hands, then open the arms in a gentle offering gesture and recover. Keep original case visible beside the body. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.)\ndirections: east, north-east, north, north-west, west, south-west (6 jobs)\njob_ids: east=daa1c7e7-b758-481d-9dde-4f6f6e7034de, north-east=f420fadd-10c0-4812-bc0f-802c4fcb8b6c, north=51982e66-9dcd-4f3c-9a6b-2a0a55d2c6d3, north-west=38a313ce-c14f-42d3-be80-482f8bcc413d, west=3372ade4-c798-4efe-afb9-fa35a57c3481, south-west=dc7a0f33-e218-4e9e-aa5d-d6f4968d6fe4\ngroup: e41bb1a3-c97d-4210-9966-4ac2e04a8028\nframes: 8 (reference stripped, keep_first_frame=false)\ncanvas: east 88x88, north-east 84x84, north 84x84, north-west 88x88, west 88x88, south-west 88x88 (frames are stored at this size: the character plus room to move)\ncost: 6 generations (1/dir x 6)\neta: ~2-4 min/direction\n\nhint: get_character(character_id=\"20edb5b5-8698-424e-be5e-99b63c356064\")\nadd more directions to this group: animate_character(character_id=\"20edb5b5-8698-424e-be5e-99b63c356064\", action_description=\"TANGYAK herbal medicine: reach into the medicine case for a small medicine bowl or packet, lift it carefully with both hands, then open the arms in a gentle offering gesture and recover. Keep original case visible beside the body. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.\", animation_group_id=\"e41bb1a3-c97d-4210-9966-4ac2e04a8028\", directions=[...])"
+      }
+    ],
+    "isError": false
+  }
+}

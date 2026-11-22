@@ -1,0 +1,33 @@
+{
+  "key": "MumyeongJangsu",
+  "name": "무명장수",
+  "revision": "UserReferenceV2",
+  "phase": "Front concept only, pending visual approval",
+  "model": "PixelLab create_image_pro",
+  "date": "2026-11-22",
+  "jobId": "b2d1c421-85f9-49da-97b2-3b3dd9c2523e",
+  "galleryAssetId": "060a2ed5-c10e-5b64-a195-9af8e93b4d71",
+  "candidateIndex": 0,
+  "candidateCount": 16,
+  "downloadUrl": "https://api.pixellab.ai/mcp/images/b2d1c421-85f9-49da-97b2-3b3dd9c2523e/download?index=0",
+  "designDescription": "A stern bearded Joseon general, ornate navy and black lamellar armour with bold warm GOLD embroidery and sculpted beast shoulder plates, blue headband and tied topknot, dark-blue trailing headband tails, crimson waist sash and layered battle skirt, heavy boots. A large round DARK NAVY SHIELD WITH A CLEAR GOLDEN LION FACE BOSS and gilded rim in one hand, short curved Korean saber in the other. Dark blue, warm gold and red. Match the supplied general reference's actual rich costume and lion shield, not a plain wooden shield.",
+  "selectionReason": "정면 갑옷과 사자 장식 방패, 요도가 함께 보이는 후보",
+  "referenceManifest": "artifacts/pixellab/SpiritConceptStudyV2/SourceManifest.json",
+  "userReference": "artifacts/pixellab/SpiritConceptStudyV2/References/UserReference.png",
+  "metrics": {
+    "key": "MumyeongJangsu",
+    "spritePath": "Assets/Resources/Art/Characters/SpiritsV2/MumyeongJangsu/MumyeongJangsu_Front.png",
+    "canvasWidth": 64,
+    "canvasHeight": 64,
+    "visibleWidth": 56,
+    "visibleHeight": 60,
+    "alphaX": 2,
+    "alphaY": 2,
+    "pivotPixels": {
+      "x": 32.0,
+      "y": 2.0
+    },
+    "pixelsPerUnit": 32
+  },
+  "referencePolicy": "This exact selected PNG, including candidate index and actual equipment placement, defines this revision. Preserve asymmetric equipment; do not substitute another candidate or mirror it."
+}

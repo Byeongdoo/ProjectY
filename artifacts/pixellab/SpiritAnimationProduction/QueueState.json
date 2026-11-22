@@ -2163,10 +2163,16 @@
         }
       },
       "completed": [
+        "west",
+        "east",
+        "north",
+        "south-west",
+        "north-west",
+        "north-east",
         "south-east",
         "south"
       ],
-      "imported": false,
+      "imported": true,
       "receipts": [
         "artifacts\\pixellab\\SpiritAnimationProduction\\Receipts\\MumyeongJangsu\\SKILL_2_20261122T014213965252.json",
         "artifacts\\pixellab\\SpiritAnimationProduction\\Receipts\\MumyeongJangsu\\SKILL_2_20261122T014239963245.json",
@@ -2200,128 +2206,744 @@
         "north-west": {
           "jobId": "5dc17936-36a8-4cc1-999e-1caad1e65cc8",
           "submittedAt": "2026-11-22T01:43:49.879318+00:00"
+        },
+        "west": {
+          "jobId": "45ff5e58-d78e-470b-8690-a6740a5d3a5d",
+          "submittedAt": "2026-11-22T01:44:12.920042+00:00"
+        },
+        "south-west": {
+          "jobId": "373ed842-7b4b-426a-b434-08530008bb6b",
+          "submittedAt": "2026-11-22T01:44:12.920042+00:00"
         }
       },
-      "completed": [],
-      "imported": false,
+      "completed": [
+        "west",
+        "south-west",
+        "north-west",
+        "east",
+        "north-east",
+        "north",
+        "south-east",
+        "south"
+      ],
+      "imported": true,
       "receipts": [
         "artifacts\\pixellab\\SpiritAnimationProduction\\Receipts\\Mangnani\\SKILL_2_20261122T014314259121.json",
-        "artifacts\\pixellab\\SpiritAnimationProduction\\Receipts\\Mangnani\\SKILL_2_20261122T014349874966.json"
+        "artifacts\\pixellab\\SpiritAnimationProduction\\Receipts\\Mangnani\\SKILL_2_20261122T014349874966.json",
+        "artifacts\\pixellab\\SpiritAnimationProduction\\Receipts\\Mangnani\\SKILL_2_20261122T014412918007.json"
       ],
       "failures": 0
     },
     "ChakhoGapsa/SKILL_2": {
-      "groupId": null,
-      "submitted": {},
-      "completed": [],
-      "imported": false,
-      "receipts": [],
+      "groupId": "c9594111-9741-4fa1-9f54-8a512422444d",
+      "submitted": {
+        "south": {
+          "jobId": "8cbc8419-6a6d-491d-8727-ea1acd2a5de1",
+          "submittedAt": "2026-11-22T01:44:17.831735+00:00"
+        },
+        "south-east": {
+          "jobId": "34750b8a-81c5-4ac1-b590-928ada99de92",
+          "submittedAt": "2026-11-22T01:44:53.666806+00:00"
+        },
+        "east": {
+          "jobId": "10166df8-a467-4328-abee-6ce7f86f26ec",
+          "submittedAt": "2026-11-22T01:44:53.666806+00:00"
+        },
+        "north-east": {
+          "jobId": "391b5cd0-7997-4d80-bc94-cceed8fe7fc6",
+          "submittedAt": "2026-11-22T01:44:53.666806+00:00"
+        },
+        "north": {
+          "jobId": "52afa54b-6e06-4a80-828c-1742805665db",
+          "submittedAt": "2026-11-22T01:44:53.666806+00:00"
+        },
+        "north-west": {
+          "jobId": "5e747a42-abf3-4756-bd6c-911c34d3d1a0",
+          "submittedAt": "2026-11-22T01:44:53.666806+00:00"
+        },
+        "west": {
+          "jobId": "8c0218e8-4aea-42f7-93bc-ac5b4f10f1fe",
+          "submittedAt": "2026-11-22T01:44:53.666806+00:00"
+        },
+        "south-west": {
+          "jobId": "f4899a5c-b1c8-418e-b2df-20f9a9fb8566",
+          "submittedAt": "2026-11-22T01:44:53.666806+00:00"
+        }
+      },
+      "completed": [
+        "north-east",
+        "south-west",
+        "north",
+        "south-east",
+        "north-west",
+        "east",
+        "west",
+        "south"
+      ],
+      "imported": true,
+      "receipts": [
+        "artifacts\\pixellab\\SpiritAnimationProduction\\Receipts\\ChakhoGapsa\\SKILL_2_20261122T014417828220.json",
+        "artifacts\\pixellab\\SpiritAnimationProduction\\Receipts\\ChakhoGapsa\\SKILL_2_20261122T014453665281.json"
+      ],
       "failures": 0
     },
     "Kkokdusoe/SKILL_2": {
-      "groupId": null,
-      "submitted": {},
-      "completed": [],
-      "imported": false,
-      "receipts": [],
+      "groupId": "e61e4eaa-39fa-47e7-985c-617612885834",
+      "submitted": {
+        "south": {
+          "jobId": "4adabe80-3990-495a-95d8-3de87f7e6920",
+          "submittedAt": "2026-11-22T01:45:15.986140+00:00"
+        },
+        "south-east": {
+          "jobId": "7e708047-1cdc-4b73-90e7-9ba4218f5616",
+          "submittedAt": "2026-11-22T01:45:38.504780+00:00"
+        },
+        "east": {
+          "jobId": "1e2c2d48-dae3-4c63-bec9-f85fe1228c3f",
+          "submittedAt": "2026-11-22T01:46:19.250118+00:00"
+        },
+        "north-east": {
+          "jobId": "a220341b-82c3-4677-be1e-a21769100321",
+          "submittedAt": "2026-11-22T01:46:19.250118+00:00"
+        },
+        "north": {
+          "jobId": "c9d826d2-3872-4743-b2de-5be6b3365637",
+          "submittedAt": "2026-11-22T01:46:19.250118+00:00"
+        },
+        "north-west": {
+          "jobId": "46cce3ce-2eeb-45b5-a13a-32b3bf85a828",
+          "submittedAt": "2026-11-22T01:46:19.250118+00:00"
+        },
+        "west": {
+          "jobId": "834d4c51-1f12-4976-8bd9-58c6908e76ec",
+          "submittedAt": "2026-11-22T01:46:19.250118+00:00"
+        },
+        "south-west": {
+          "jobId": "5c8fa9e2-ad57-4617-82d8-12b315b6c41f",
+          "submittedAt": "2026-11-22T01:46:19.250118+00:00"
+        }
+      },
+      "completed": [
+        "north",
+        "north-west",
+        "west",
+        "east",
+        "south-west",
+        "north-east",
+        "south-east",
+        "south"
+      ],
+      "imported": true,
+      "receipts": [
+        "artifacts\\pixellab\\SpiritAnimationProduction\\Receipts\\Kkokdusoe\\SKILL_2_20261122T014515983602.json",
+        "artifacts\\pixellab\\SpiritAnimationProduction\\Receipts\\Kkokdusoe\\SKILL_2_20261122T014538501749.json",
+        "artifacts\\pixellab\\SpiritAnimationProduction\\Receipts\\Kkokdusoe\\SKILL_2_20261122T014619241043.json"
+      ],
       "failures": 0
     },
     "Uinyeo/SKILL_2": {
-      "groupId": null,
-      "submitted": {},
-      "completed": [],
-      "imported": false,
-      "receipts": [],
+      "groupId": "e41bb1a3-c97d-4210-9966-4ac2e04a8028",
+      "submitted": {
+        "south": {
+          "jobId": "3d0fbdc3-03ed-4b83-9b34-65ff4c959880",
+          "submittedAt": "2026-11-22T01:46:25.275194+00:00"
+        },
+        "south-east": {
+          "jobId": "fd1520b3-7749-426f-95fa-bb5ace6a29e7",
+          "submittedAt": "2026-11-22T01:46:25.275194+00:00"
+        },
+        "east": {
+          "jobId": "daa1c7e7-b758-481d-9dde-4f6f6e7034de",
+          "submittedAt": "2026-11-22T01:47:12.372986+00:00"
+        },
+        "north-east": {
+          "jobId": "f420fadd-10c0-4812-bc0f-802c4fcb8b6c",
+          "submittedAt": "2026-11-22T01:47:12.372986+00:00"
+        },
+        "north": {
+          "jobId": "51982e66-9dcd-4f3c-9a6b-2a0a55d2c6d3",
+          "submittedAt": "2026-11-22T01:47:12.372986+00:00"
+        },
+        "north-west": {
+          "jobId": "38a313ce-c14f-42d3-be80-482f8bcc413d",
+          "submittedAt": "2026-11-22T01:47:12.372986+00:00"
+        },
+        "west": {
+          "jobId": "3372ade4-c798-4efe-afb9-fa35a57c3481",
+          "submittedAt": "2026-11-22T01:47:12.372986+00:00"
+        },
+        "south-west": {
+          "jobId": "dc7a0f33-e218-4e9e-aa5d-d6f4968d6fe4",
+          "submittedAt": "2026-11-22T01:47:12.372986+00:00"
+        }
+      },
+      "completed": [
+        "south-west",
+        "north",
+        "east",
+        "north-west",
+        "north-east",
+        "west",
+        "south",
+        "south-east"
+      ],
+      "imported": true,
+      "receipts": [
+        "artifacts\\pixellab\\SpiritAnimationProduction\\Receipts\\Uinyeo\\SKILL_2_20261122T014625272178.json",
+        "artifacts\\pixellab\\SpiritAnimationProduction\\Receipts\\Uinyeo\\SKILL_2_20261122T014712370652.json"
+      ],
       "failures": 0
     },
     "MumyeongJangsu/SKILL_3": {
-      "groupId": null,
-      "submitted": {},
-      "completed": [],
-      "imported": false,
-      "receipts": [],
+      "groupId": "42e5a237-0d59-475b-b8e5-b8fac92d3e18",
+      "submitted": {
+        "south": {
+          "jobId": "ac5f98fd-bd5d-42ff-9061-fab85ab11ea2",
+          "submittedAt": "2026-11-22T01:47:17.245530+00:00"
+        },
+        "south-east": {
+          "jobId": "da6ec151-3df7-46c6-bd8b-3b5faaa57db6",
+          "submittedAt": "2026-11-22T01:47:54.200302+00:00"
+        },
+        "east": {
+          "jobId": "c9cc1149-9bbd-4d19-988f-ca031721e495",
+          "submittedAt": "2026-11-22T01:47:54.200302+00:00"
+        },
+        "north-east": {
+          "jobId": "ba124158-9b54-43d6-9503-57bfa70b195e",
+          "submittedAt": "2026-11-22T01:47:54.200302+00:00"
+        },
+        "north": {
+          "jobId": "4d1a9593-81aa-4b7b-8889-a4e82a75f050",
+          "submittedAt": "2026-11-22T01:48:20.084731+00:00"
+        },
+        "north-west": {
+          "jobId": "842dfa07-369f-49c2-bed4-e63fa1228bcd",
+          "submittedAt": "2026-11-22T01:48:20.084731+00:00"
+        },
+        "west": {
+          "jobId": "c18dfe5d-9617-487c-8161-9fe7c05784ab",
+          "submittedAt": "2026-11-22T01:48:20.084731+00:00"
+        },
+        "south-west": {
+          "jobId": "f82f8981-d699-417a-808e-f13bb3256437",
+          "submittedAt": "2026-11-22T01:48:20.084731+00:00"
+        }
+      },
+      "completed": [
+        "west",
+        "north-west",
+        "south-west",
+        "north",
+        "east",
+        "north-east",
+        "south-east",
+        "south"
+      ],
+      "imported": true,
+      "receipts": [
+        "artifacts\\pixellab\\SpiritAnimationProduction\\Receipts\\MumyeongJangsu\\SKILL_3_20261122T014717243240.json",
+        "artifacts\\pixellab\\SpiritAnimationProduction\\Receipts\\MumyeongJangsu\\SKILL_3_20261122T014754192642.json",
+        "artifacts\\pixellab\\SpiritAnimationProduction\\Receipts\\MumyeongJangsu\\SKILL_3_20261122T014820078747.json"
+      ],
       "failures": 0
     },
     "Mangnani/SKILL_3": {
-      "groupId": null,
-      "submitted": {},
-      "completed": [],
-      "imported": false,
-      "receipts": [],
+      "groupId": "9425fd77-98ce-48f8-867d-753d26dc2045",
+      "submitted": {
+        "south": {
+          "jobId": "23387fba-2c2e-4442-8620-19b5e0cc5dda",
+          "submittedAt": "2026-11-22T01:48:25.224438+00:00"
+        },
+        "south-east": {
+          "jobId": "4e6c01ff-72d0-4b0b-ab5b-af6a383332d0",
+          "submittedAt": "2026-11-22T01:48:25.224438+00:00"
+        },
+        "east": {
+          "jobId": "30cbd9bb-61e3-4cfe-b11d-f40940f2533a",
+          "submittedAt": "2026-11-22T01:49:09.688365+00:00"
+        },
+        "north-east": {
+          "jobId": "dacb8999-498f-4ada-8f06-592ea249fe7c",
+          "submittedAt": "2026-11-22T01:49:09.688365+00:00"
+        },
+        "north": {
+          "jobId": "cf1627a1-f6db-4853-967a-80d797afcd22",
+          "submittedAt": "2026-11-22T01:49:09.688365+00:00"
+        },
+        "north-west": {
+          "jobId": "f1d86b39-a3b6-442d-bf05-184ca2b0562d",
+          "submittedAt": "2026-11-22T01:49:09.688365+00:00"
+        },
+        "west": {
+          "jobId": "42929c4f-f408-4f17-bfea-cb7ec28e8f1d",
+          "submittedAt": "2026-11-22T01:49:09.688365+00:00"
+        },
+        "south-west": {
+          "jobId": "c8e03f9e-6f93-4150-8ef6-872aa4f18ab6",
+          "submittedAt": "2026-11-22T01:49:09.688365+00:00"
+        }
+      },
+      "completed": [
+        "north-east",
+        "north-west",
+        "north",
+        "south-west",
+        "west",
+        "east",
+        "south-east",
+        "south"
+      ],
+      "imported": true,
+      "receipts": [
+        "artifacts\\pixellab\\SpiritAnimationProduction\\Receipts\\Mangnani\\SKILL_3_20261122T014825212894.json",
+        "artifacts\\pixellab\\SpiritAnimationProduction\\Receipts\\Mangnani\\SKILL_3_20261122T014909685694.json"
+      ],
       "failures": 0
     },
     "ChakhoGapsa/SKILL_3": {
-      "groupId": null,
-      "submitted": {},
-      "completed": [],
-      "imported": false,
-      "receipts": [],
+      "groupId": "55478ba3-1ed8-405a-af2e-44499bc6785f",
+      "submitted": {
+        "south": {
+          "jobId": "04241fcd-a191-49d8-9877-5003b724fcb0",
+          "submittedAt": "2026-11-22T01:49:31.839275+00:00"
+        },
+        "south-east": {
+          "jobId": "bc51b026-63db-42a8-99c4-82999cb547de",
+          "submittedAt": "2026-11-22T01:49:31.839275+00:00"
+        },
+        "east": {
+          "jobId": "e600284b-e92d-49b9-85e2-26d60687c072",
+          "submittedAt": "2026-11-22T01:49:31.839275+00:00"
+        },
+        "north-east": {
+          "jobId": "14ae8154-222f-497c-acdf-9b89af51d1f2",
+          "submittedAt": "2026-11-22T01:49:58.183682+00:00"
+        },
+        "north": {
+          "jobId": "90156af3-e325-42eb-a073-76008946b97b",
+          "submittedAt": "2026-11-22T01:49:58.183682+00:00"
+        },
+        "north-west": {
+          "jobId": "2d1a81d5-151b-4a53-86e4-17e550c81121",
+          "submittedAt": "2026-11-22T01:49:58.183682+00:00"
+        },
+        "west": {
+          "jobId": "865c7033-aa46-4858-82d9-14dc01634c18",
+          "submittedAt": "2026-11-22T01:49:58.183682+00:00"
+        },
+        "south-west": {
+          "jobId": "bcb2138f-9e11-4bd5-97e3-4a6316a34fa8",
+          "submittedAt": "2026-11-22T01:50:43.355555+00:00"
+        }
+      },
+      "completed": [
+        "south-west",
+        "north-east",
+        "north-west",
+        "north",
+        "west",
+        "east",
+        "south-east",
+        "south"
+      ],
+      "imported": true,
+      "receipts": [
+        "artifacts\\pixellab\\SpiritAnimationProduction\\Receipts\\ChakhoGapsa\\SKILL_3_20261122T014931836263.json",
+        "artifacts\\pixellab\\SpiritAnimationProduction\\Receipts\\ChakhoGapsa\\SKILL_3_20261122T014958181668.json",
+        "artifacts\\pixellab\\SpiritAnimationProduction\\Receipts\\ChakhoGapsa\\SKILL_3_20261122T015043353484.json"
+      ],
       "failures": 0
     },
     "Kkokdusoe/SKILL_3": {
-      "groupId": null,
-      "submitted": {},
-      "completed": [],
-      "imported": false,
-      "receipts": [],
+      "groupId": "7a431176-540e-4d58-a5af-c952cf00d361",
+      "submitted": {
+        "south": {
+          "jobId": "3c2546e7-b172-41b8-a3c2-bb3be3ad1873",
+          "submittedAt": "2026-11-22T01:50:48.805784+00:00"
+        },
+        "south-east": {
+          "jobId": "db86d7e9-3b34-4ba3-85c3-b71210cf806a",
+          "submittedAt": "2026-11-22T01:50:48.805784+00:00"
+        },
+        "east": {
+          "jobId": "f8417785-0ec6-4863-96e5-2cdd0a2c6c7b",
+          "submittedAt": "2026-11-22T01:50:48.805784+00:00"
+        },
+        "north-east": {
+          "jobId": "61581bb0-9fa9-4c56-a12e-411de7bdd154",
+          "submittedAt": "2026-11-22T01:50:48.805784+00:00"
+        },
+        "north": {
+          "jobId": "a4b42bf2-beea-4dc5-b4e4-fdd6cd230a5a",
+          "submittedAt": "2026-11-22T01:50:48.805784+00:00"
+        },
+        "north-west": {
+          "jobId": "b2ef06ec-8fe8-4c75-a150-76f9bf06eff1",
+          "submittedAt": "2026-11-22T01:51:27.297686+00:00"
+        },
+        "west": {
+          "jobId": "c4e7e3b6-81c1-4a99-97bd-1877661912d4",
+          "submittedAt": "2026-11-22T01:51:27.297686+00:00"
+        },
+        "south-west": {
+          "jobId": "087b3a5a-10e8-4099-91e1-d3e291e9eb7d",
+          "submittedAt": "2026-11-22T01:51:27.297686+00:00"
+        }
+      },
+      "completed": [
+        "south-west",
+        "west",
+        "north-west",
+        "north-east",
+        "east",
+        "south-east",
+        "north",
+        "south"
+      ],
+      "imported": true,
+      "receipts": [
+        "artifacts\\pixellab\\SpiritAnimationProduction\\Receipts\\Kkokdusoe\\SKILL_3_20261122T015048802757.json",
+        "artifacts\\pixellab\\SpiritAnimationProduction\\Receipts\\Kkokdusoe\\SKILL_3_20261122T015127285258.json"
+      ],
       "failures": 0
     },
     "Uinyeo/SKILL_3": {
-      "groupId": null,
-      "submitted": {},
-      "completed": [],
-      "imported": false,
-      "receipts": [],
+      "groupId": "cc23ea8c-fba5-48f5-bf0b-829e88f457dd",
+      "submitted": {
+        "south": {
+          "jobId": "46306391-c62e-4d98-a545-c846ac619c6b",
+          "submittedAt": "2026-11-22T01:51:32.309386+00:00"
+        },
+        "south-east": {
+          "jobId": "80815403-022e-40db-9e2a-bbabbdd2a317",
+          "submittedAt": "2026-11-22T01:51:32.309386+00:00"
+        },
+        "east": {
+          "jobId": "1c50ab60-c9f1-467b-8dd6-c333a2662cba",
+          "submittedAt": "2026-11-22T01:52:01.692155+00:00"
+        },
+        "north-east": {
+          "jobId": "2d2223a2-624e-4590-8682-6bfac0258878",
+          "submittedAt": "2026-11-22T01:52:01.692155+00:00"
+        },
+        "north": {
+          "jobId": "e489d911-157d-4c61-a40b-e13c153bec05",
+          "submittedAt": "2026-11-22T01:52:01.692155+00:00"
+        },
+        "north-west": {
+          "jobId": "0f9159bb-c231-49c8-99ed-b7064eb37e71",
+          "submittedAt": "2026-11-22T01:52:25.718595+00:00"
+        },
+        "west": {
+          "jobId": "b479f87b-eaca-4a0a-bf5b-1d4ca07ba336",
+          "submittedAt": "2026-11-22T01:52:25.718595+00:00"
+        },
+        "south-west": {
+          "jobId": "db477509-c521-47af-814b-97f341dda350",
+          "submittedAt": "2026-11-22T01:52:25.718595+00:00"
+        }
+      },
+      "completed": [
+        "north-east",
+        "north-west",
+        "west",
+        "south-west",
+        "south-east",
+        "north",
+        "east",
+        "south"
+      ],
+      "imported": true,
+      "receipts": [
+        "artifacts\\pixellab\\SpiritAnimationProduction\\Receipts\\Uinyeo\\SKILL_3_20261122T015132307847.json",
+        "artifacts\\pixellab\\SpiritAnimationProduction\\Receipts\\Uinyeo\\SKILL_3_20261122T015201690644.json",
+        "artifacts\\pixellab\\SpiritAnimationProduction\\Receipts\\Uinyeo\\SKILL_3_20261122T015225716064.json"
+      ],
       "failures": 0
     },
     "MumyeongJangsu/SKILL_4": {
-      "groupId": null,
-      "submitted": {},
-      "completed": [],
-      "imported": false,
-      "receipts": [],
+      "groupId": "27a4beb5-78ca-453a-a673-2de10fb5cb15",
+      "submitted": {
+        "south": {
+          "jobId": "9ea45292-ea74-4776-a840-a6bb2d59c145",
+          "submittedAt": "2026-11-22T01:52:30.696027+00:00"
+        },
+        "south-east": {
+          "jobId": "cb42adc2-62b1-4206-83dd-4793c783d695",
+          "submittedAt": "2026-11-22T01:52:30.696027+00:00"
+        },
+        "east": {
+          "jobId": "51980f52-e6f8-4d8c-8931-66d9b491c9fd",
+          "submittedAt": "2026-11-22T01:53:18.965345+00:00"
+        },
+        "north-east": {
+          "jobId": "01e740c2-c6a9-48eb-b9eb-9aee5e310161",
+          "submittedAt": "2026-11-22T01:53:18.965345+00:00"
+        },
+        "north": {
+          "jobId": "c20b89dd-2245-4f06-9738-7004de12c9d3",
+          "submittedAt": "2026-11-22T01:53:18.965345+00:00"
+        },
+        "north-west": {
+          "jobId": "e38e29c2-8964-450f-863e-b543ee5dad3d",
+          "submittedAt": "2026-11-22T01:53:18.965345+00:00"
+        },
+        "west": {
+          "jobId": "ee73f758-2df0-4218-985a-1327772e90a8",
+          "submittedAt": "2026-11-22T01:53:18.965345+00:00"
+        },
+        "south-west": {
+          "jobId": "86d0c245-783d-4415-a977-f48c99bfeee2",
+          "submittedAt": "2026-11-22T01:53:18.965345+00:00"
+        }
+      },
+      "completed": [
+        "east",
+        "north-east",
+        "north-west",
+        "west",
+        "north",
+        "south-west",
+        "south",
+        "south-east"
+      ],
+      "imported": true,
+      "receipts": [
+        "artifacts\\pixellab\\SpiritAnimationProduction\\Receipts\\MumyeongJangsu\\SKILL_4_20261122T015230692201.json",
+        "artifacts\\pixellab\\SpiritAnimationProduction\\Receipts\\MumyeongJangsu\\SKILL_4_20261122T015318952546.json"
+      ],
       "failures": 0
     },
     "Mangnani/SKILL_4": {
-      "groupId": null,
-      "submitted": {},
-      "completed": [],
-      "imported": false,
-      "receipts": [],
+      "groupId": "a2de7362-23a7-4480-a69d-2240b70e6f0f",
+      "submitted": {
+        "south": {
+          "jobId": "67069e7f-08a7-496b-b297-ee263356d643",
+          "submittedAt": "2026-11-22T01:53:54.024189+00:00"
+        },
+        "south-east": {
+          "jobId": "bf42bc32-a330-4103-9c2e-b45f14a0ec06",
+          "submittedAt": "2026-11-22T01:53:54.024189+00:00"
+        },
+        "east": {
+          "jobId": "838cd436-e2a4-4058-b6ac-64d4e6db5a8c",
+          "submittedAt": "2026-11-22T01:53:54.024189+00:00"
+        },
+        "north-east": {
+          "jobId": "faccc14a-cd9f-4418-bb14-5e9f3be22ff2",
+          "submittedAt": "2026-11-22T01:53:54.024189+00:00"
+        },
+        "north": {
+          "jobId": "a4ca02bc-3670-410e-9d7e-46bb9981553c",
+          "submittedAt": "2026-11-22T01:54:36.978202+00:00"
+        },
+        "north-west": {
+          "jobId": "23aeb029-be89-40b7-bb33-c0d0f0eb6e2c",
+          "submittedAt": "2026-11-22T01:54:36.978202+00:00"
+        },
+        "west": {
+          "jobId": "98dd7427-0069-448c-b5d8-91df3c9ad96d",
+          "submittedAt": "2026-11-22T01:54:36.978202+00:00"
+        },
+        "south-west": {
+          "jobId": "551cf115-3f86-42ba-abb1-497442bb9a04",
+          "submittedAt": "2026-11-22T01:54:36.978202+00:00"
+        }
+      },
+      "completed": [
+        "north",
+        "south-west",
+        "north-west",
+        "west",
+        "north-east",
+        "south",
+        "south-east",
+        "east"
+      ],
+      "imported": true,
+      "receipts": [
+        "artifacts\\pixellab\\SpiritAnimationProduction\\Receipts\\Mangnani\\SKILL_4_20261122T015354020158.json",
+        "artifacts\\pixellab\\SpiritAnimationProduction\\Receipts\\Mangnani\\SKILL_4_20261122T015436975096.json"
+      ],
       "failures": 0
     },
     "ChakhoGapsa/SKILL_4": {
-      "groupId": null,
-      "submitted": {},
-      "completed": [],
-      "imported": false,
-      "receipts": [],
+      "groupId": "349e4892-1ba5-4d59-888f-76d4bef5e5ef",
+      "submitted": {
+        "south": {
+          "jobId": "2235de4b-35d9-4190-b0f6-c54e504e82b2",
+          "submittedAt": "2026-11-22T01:54:41.965288+00:00"
+        },
+        "south-east": {
+          "jobId": "356c1bbe-a2d8-46a3-bd83-6f397f4d8503",
+          "submittedAt": "2026-11-22T01:54:41.965288+00:00"
+        },
+        "east": {
+          "jobId": "b730ff50-0d42-400c-92b2-d803b5866ee3",
+          "submittedAt": "2026-11-22T01:55:14.998917+00:00"
+        },
+        "north-east": {
+          "jobId": "a5b04b4b-64fc-497b-ac8a-b2e70c4aaa81",
+          "submittedAt": "2026-11-22T01:55:14.998917+00:00"
+        },
+        "north": {
+          "jobId": "ccaab3d5-31f3-4bf7-bc22-d30e373d7770",
+          "submittedAt": "2026-11-22T01:55:14.998917+00:00"
+        },
+        "north-west": {
+          "jobId": "90f825e1-3e85-4548-bfd7-62b47ad92160",
+          "submittedAt": "2026-11-22T01:55:14.998917+00:00"
+        },
+        "west": {
+          "jobId": "34accbcb-c459-4805-b362-2c65ae646751",
+          "submittedAt": "2026-11-22T01:55:14.998917+00:00"
+        },
+        "south-west": {
+          "jobId": "f3ef39a0-8b96-4a04-bc93-4deb421caaac",
+          "submittedAt": "2026-11-22T01:55:53.346221+00:00"
+        }
+      },
+      "completed": [
+        "south-west",
+        "north-east",
+        "west",
+        "north-west",
+        "north",
+        "east",
+        "south-east",
+        "south"
+      ],
+      "imported": true,
+      "receipts": [
+        "artifacts\\pixellab\\SpiritAnimationProduction\\Receipts\\ChakhoGapsa\\SKILL_4_20261122T015441961559.json",
+        "artifacts\\pixellab\\SpiritAnimationProduction\\Receipts\\ChakhoGapsa\\SKILL_4_20261122T015514995875.json",
+        "artifacts\\pixellab\\SpiritAnimationProduction\\Receipts\\ChakhoGapsa\\SKILL_4_20261122T015553343201.json"
+      ],
       "failures": 0
     },
     "Kkokdusoe/SKILL_4": {
-      "groupId": null,
-      "submitted": {},
-      "completed": [],
-      "imported": false,
-      "receipts": [],
+      "groupId": "18599b11-6444-4b55-9cf3-2bced49461fd",
+      "submitted": {
+        "south": {
+          "jobId": "e87053c6-0243-4eed-ba56-e06d1a36d7a1",
+          "submittedAt": "2026-11-22T01:55:58.537842+00:00"
+        },
+        "south-east": {
+          "jobId": "c39b98a5-befd-43ed-b09d-e805fe55dc61",
+          "submittedAt": "2026-11-22T01:55:58.537842+00:00"
+        },
+        "east": {
+          "jobId": "a1d96554-86cd-4014-a167-a008dabf62dc",
+          "submittedAt": "2026-11-22T01:55:58.537842+00:00"
+        },
+        "north-east": {
+          "jobId": "fd1757bb-7457-4764-bf81-759faf72e36a",
+          "submittedAt": "2026-11-22T01:55:58.537842+00:00"
+        },
+        "north": {
+          "jobId": "a844aec4-c800-4c92-ba9f-d741c03dc471",
+          "submittedAt": "2026-11-22T01:56:22.193979+00:00"
+        },
+        "north-west": {
+          "jobId": "5c2d8455-c0dd-42ea-9422-d6f104f6a791",
+          "submittedAt": "2026-11-22T01:56:22.193979+00:00"
+        },
+        "west": {
+          "jobId": "d16e4fed-19e1-4a06-a7d8-b2dd1d551f10",
+          "submittedAt": "2026-11-22T01:56:22.193979+00:00"
+        },
+        "south-west": {
+          "jobId": "4975f6a3-dd78-4c33-a95c-5b4c81bdeae6",
+          "submittedAt": "2026-11-22T01:56:22.193979+00:00"
+        }
+      },
+      "completed": [
+        "north",
+        "west",
+        "south-west",
+        "north-west",
+        "north-east",
+        "south",
+        "south-east",
+        "east"
+      ],
+      "imported": true,
+      "receipts": [
+        "artifacts\\pixellab\\SpiritAnimationProduction\\Receipts\\Kkokdusoe\\SKILL_4_20261122T015558535338.json",
+        "artifacts\\pixellab\\SpiritAnimationProduction\\Receipts\\Kkokdusoe\\SKILL_4_20261122T015622190756.json"
+      ],
       "failures": 0
     },
     "Uinyeo/SKILL_4": {
-      "groupId": null,
-      "submitted": {},
-      "completed": [],
-      "imported": false,
-      "receipts": [],
+      "groupId": "06f78943-736b-4d10-a55e-2118eaaba596",
+      "submitted": {
+        "south": {
+          "jobId": "ca01c61c-d6ec-4079-93d4-ca590a1c8339",
+          "submittedAt": "2026-11-22T01:56:49.099421+00:00"
+        },
+        "south-east": {
+          "jobId": "67c86558-14af-42d3-990a-df817391a24e",
+          "submittedAt": "2026-11-22T01:56:49.099421+00:00"
+        },
+        "east": {
+          "jobId": "eb16ebb0-bc83-414e-8a31-891d3bb92ae3",
+          "submittedAt": "2026-11-22T01:56:49.099421+00:00"
+        },
+        "north-east": {
+          "jobId": "bc297f57-f6cf-411f-8839-851138a29d2f",
+          "submittedAt": "2026-11-22T01:57:25.295918+00:00"
+        },
+        "north": {
+          "jobId": "54838a29-35dc-4c84-b554-c623535c5520",
+          "submittedAt": "2026-11-22T01:57:25.295918+00:00"
+        },
+        "north-west": {
+          "jobId": "26a34cad-65c5-4419-8698-e1b164b4c90d",
+          "submittedAt": "2026-11-22T01:57:25.295918+00:00"
+        },
+        "west": {
+          "jobId": "9d22a43a-4220-402a-9634-24dc69f7dfec",
+          "submittedAt": "2026-11-22T01:57:25.296969+00:00"
+        },
+        "south-west": {
+          "jobId": "a17fc972-c733-4d02-b202-356df621fdd9",
+          "submittedAt": "2026-11-22T01:57:25.296969+00:00"
+        }
+      },
+      "completed": [
+        "north-east",
+        "north",
+        "south",
+        "west",
+        "east",
+        "north-west",
+        "south-west",
+        "south-east"
+      ],
+      "imported": true,
+      "receipts": [
+        "artifacts\\pixellab\\SpiritAnimationProduction\\Receipts\\Uinyeo\\SKILL_4_20261122T015649097358.json",
+        "artifacts\\pixellab\\SpiritAnimationProduction\\Receipts\\Uinyeo\\SKILL_4_20261122T015725293946.json"
+      ],
       "failures": 0
     }
   },
-  "status": "running",
-  "updatedAt": "2026-11-22T01:43:51.997792+00:00",
+  "status": "generation_complete_pending_visual_review",
+  "updatedAt": "2026-11-22T02:00:26.044639+00:00",
   "counts": {
     "total": 440,
-    "submitted": 334,
-    "completed": 322,
-    "waiting": 106
+    "submitted": 440,
+    "completed": 440,
+    "waiting": 0
   },
-  "inactiveChecks": 0
+  "inactiveChecks": 0,
+  "visualReview": {
+    "status": "requires_revisions",
+    "reviewedClips": 440,
+    "report": "artifacts/pixellab/SpiritAnimationQA/QAReport.md",
+    "trailClips": 80,
+    "trailFrames": 672,
+    "unityPlaybackVerified": true
+  }
 }

@@ -1,0 +1,25 @@
+{
+  "request": {
+    "character_id": "20edb5b5-8698-424e-be5e-99b63c356064",
+    "animation_name": "SKILL_3",
+    "mode": "v3",
+    "action_description": "HAEDOK purification: lift the thin acupuncture needle toward the facing direction, then sweep the free hand gently outward to brush away illness and return to ready stance. No magical mist or particles. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.",
+    "frame_count": 8,
+    "keep_first_frame": false,
+    "directions": [
+      "east",
+      "north-east",
+      "north"
+    ],
+    "animation_group_id": "cc23ea8c-fba5-48f5-bf0b-829e88f457dd"
+  },
+  "response": {
+    "content": [
+      {
+        "type": "text",
+        "text": "character: 20edb5b5-8698-424e-be5e-99b63c356064\nanimation: v3 custom (HAEDOK purification: lift the thin acupuncture needle toward the facing direction, then sweep the free hand gently outward to brush away illness and return to ready stance. No magical mist or particles. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.)\ndirections: east, north-east, north (3 jobs)\njob_ids: east=1c50ab60-c9f1-467b-8dd6-c333a2662cba, north-east=2d2223a2-624e-4590-8682-6bfac0258878, north=e489d911-157d-4c61-a40b-e13c153bec05\ngroup: cc23ea8c-fba5-48f5-bf0b-829e88f457dd\nframes: 8 (reference stripped, keep_first_frame=false)\ncanvas: east 88x88, north-east 84x84, north 84x84 (frames are stored at this size: the character plus room to move)\ncost: 3 generations (1/dir x 3)\neta: ~2-4 min/direction\n\nhint: get_character(character_id=\"20edb5b5-8698-424e-be5e-99b63c356064\")\nadd more directions to this group: animate_character(character_id=\"20edb5b5-8698-424e-be5e-99b63c356064\", action_description=\"HAEDOK purification: lift the thin acupuncture needle toward the facing direction, then sweep the free hand gently outward to brush away illness and return to ready stance. No magical mist or particles. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.\", animation_group_id=\"cc23ea8c-fba5-48f5-bf0b-829e88f457dd\", directions=[...])"
+      }
+    ],
+    "isError": false
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "request": {
+    "character_id": "478ad62f-9651-46ca-a174-7b869382d4fd",
+    "animation_name": "SKILL_4",
+    "mode": "v3",
+    "action_description": "PIBARAM battle fervour: plant the feet, hold the cleaver vertically in front, tense the shoulders and shake with rising fighting spirit, then return to a fierce ready stance. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.",
+    "frame_count": 8,
+    "keep_first_frame": false,
+    "directions": [
+      "south",
+      "south-east",
+      "east",
+      "north-east"
+    ]
+  },
+  "response": {
+    "content": [
+      {
+        "type": "text",
+        "text": "character: 478ad62f-9651-46ca-a174-7b869382d4fd\nanimation: v3 custom (PIBARAM battle fervour: plant the feet, hold the cleaver vertically in front, tense the shoulders and shake with rising fighting spirit, then return to a fierce ready stance. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.)\ndirections: south, south-east, east, north-east (4 jobs)\njob_ids: south=67069e7f-08a7-496b-b297-ee263356d643, south-east=bf42bc32-a330-4103-9c2e-b45f14a0ec06, east=838cd436-e2a4-4058-b6ac-64d4e6db5a8c, north-east=faccc14a-cd9f-4418-bb14-5e9f3be22ff2\ngroup: a2de7362-23a7-4480-a69d-2240b70e6f0f\nframes: 8 (reference stripped, keep_first_frame=false)\ncanvas: south 92x92, south-east 92x92, east 92x92, north-east 92x92 (frames are stored at this size: the character plus room to move)\ncost: 8 generations (2/dir x 4)\neta: ~2-4 min/direction\n\nhint: get_character(character_id=\"478ad62f-9651-46ca-a174-7b869382d4fd\")\nadd more directions to this group: animate_character(character_id=\"478ad62f-9651-46ca-a174-7b869382d4fd\", action_description=\"PIBARAM battle fervour: plant the feet, hold the cleaver vertically in front, tense the shoulders and shake with rising fighting spirit, then return to a fierce ready stance. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.\", animation_group_id=\"a2de7362-23a7-4480-a69d-2240b70e6f0f\", directions=[...])"
+      }
+    ],
+    "isError": false
+  }
+}

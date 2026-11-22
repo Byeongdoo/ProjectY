@@ -13,9 +13,79 @@
   "frameCount": 4,
   "framesPerSecond": 12,
   "loop": false,
-  "cellWidth": 92,
-  "cellHeight": 92,
+  "cellWidth": 128,
+  "cellHeight": 128,
   "sourcePixelsResized": false,
   "alignment": "PixelLab canvas centres; no per-frame trimming",
-  "groupId": "363d4fc3-3af0-47ee-8050-d4ebf2553262"
+  "groupId": "363d4fc3-3af0-47ee-8050-d4ebf2553262",
+  "animationClips": [
+    "Animations/HIT_SOUTH.anim",
+    "Animations/HIT_SOUTH_EAST.anim",
+    "Animations/HIT_EAST.anim",
+    "Animations/HIT_NORTH_EAST.anim",
+    "Animations/HIT_NORTH.anim",
+    "Animations/HIT_NORTH_WEST.anim",
+    "Animations/HIT_WEST.anim",
+    "Animations/HIT_SOUTH_WEST.anim"
+  ],
+  "revision": "LargeSaber_NorthFrontAction",
+  "directionSources": {
+    "south": [
+      {
+        "jobId": "3015317a-c9cf-4476-b9bd-d452e278d7e9",
+        "sourceKind": "edit",
+        "startFrame": 0
+      }
+    ],
+    "south-east": [
+      {
+        "jobId": "c795e662-8e66-4ef0-95d6-6c3d5c94282b",
+        "sourceKind": "edit",
+        "startFrame": 0
+      }
+    ],
+    "east": [
+      {
+        "jobId": "126fb9bc-b480-423b-9a9c-64b53566a956",
+        "sourceKind": "edit",
+        "startFrame": 0
+      }
+    ],
+    "north-east": [
+      {
+        "jobId": "adfcbe07-f3f6-4e32-95f5-0ca6cb753cd1",
+        "sourceKind": "edit",
+        "startFrame": 0
+      }
+    ],
+    "north": [
+      {
+        "jobId": "b77b7faa-ee2d-45ce-b71a-5ee1386bc729",
+        "sourceKind": "north",
+        "groupId": "7a36bcb6-04b8-4051-bcaf-141d5312db28",
+        "characterId": "6f8c501b-a360-4d0a-85fd-556e6a2e0b9d"
+      }
+    ],
+    "north-west": [
+      {
+        "jobId": "6738f80b-a030-4125-9648-5bccbd3dc812",
+        "sourceKind": "edit",
+        "startFrame": 0
+      }
+    ],
+    "west": [
+      {
+        "jobId": "2c72aa60-d1dd-45c3-86ca-ea34b7fec446",
+        "sourceKind": "edit",
+        "startFrame": 0
+      }
+    ],
+    "south-west": [
+      {
+        "jobId": "47576f7c-c8b7-430b-ac9b-78b460006b50",
+        "sourceKind": "edit",
+        "startFrame": 0
+      }
+    ]
+  }
 }

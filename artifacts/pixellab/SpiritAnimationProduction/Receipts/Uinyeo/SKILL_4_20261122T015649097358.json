@@ -1,0 +1,24 @@
+{
+  "request": {
+    "character_id": "20edb5b5-8698-424e-be5e-99b63c356064",
+    "animation_name": "SKILL_4",
+    "mode": "v3",
+    "action_description": "HOEHONSUL revival: bring the hands together at the chest and bow the head in sustained concentration, then extend both hands toward an ally in the facing direction in a broad restoring gesture, and recover. Keep the medicine case attached close to the body. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.",
+    "frame_count": 12,
+    "keep_first_frame": false,
+    "directions": [
+      "south",
+      "south-east",
+      "east"
+    ]
+  },
+  "response": {
+    "content": [
+      {
+        "type": "text",
+        "text": "character: 20edb5b5-8698-424e-be5e-99b63c356064\nanimation: v3 custom (HOEHONSUL revival: bring the hands together at the chest and bow the head in sustained concentration, then extend both hands toward an ally in the facing direction in a broad restoring gesture, and recover. Keep the medicine case attached close to the body. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.)\ndirections: south, south-east, east (3 jobs)\njob_ids: south=ca01c61c-d6ec-4079-93d4-ca590a1c8339, south-east=67c86558-14af-42d3-990a-df817391a24e, east=eb16ebb0-bc83-414e-8a31-891d3bb92ae3\ngroup: 06f78943-736b-4d10-a55e-2118eaaba596\nframes: 12 (reference stripped, keep_first_frame=false)\ncanvas: south 88x88, south-east 88x88, east 88x88 (frames are stored at this size: the character plus room to move)\ncost: 6 generations (2/dir x 3)\neta: ~2-4 min/direction\n\nhint: get_character(character_id=\"20edb5b5-8698-424e-be5e-99b63c356064\")\nadd more directions to this group: animate_character(character_id=\"20edb5b5-8698-424e-be5e-99b63c356064\", action_description=\"HOEHONSUL revival: bring the hands together at the chest and bow the head in sustained concentration, then extend both hands toward an ally in the facing direction in a broad restoring gesture, and recover. Keep the medicine case attached close to the body. Preserve the EXACT source character identity, proportions, colours and all held gear. Fixed low top-down camera, crisp pixel art on transparency. Animate IN PLACE about the same actor origin, no root translation, no camera movement, no zoom, no resizing or changing body scale. Keep asymmetric equipment in the same anatomical hands. No extra characters, no background, no ground shadow, no blood spray, no trails, no glow, no spell VFX or text.\", animation_group_id=\"06f78943-736b-4d10-a55e-2118eaaba596\", directions=[...])"
+      }
+    ],
+    "isError": false
+  }
+}

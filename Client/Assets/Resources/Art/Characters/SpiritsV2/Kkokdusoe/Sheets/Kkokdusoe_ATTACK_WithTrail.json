@@ -1,0 +1,36 @@
+{
+  "animation": "ATTACK",
+  "directions": [
+    "south",
+    "south-east",
+    "east",
+    "north-east",
+    "north",
+    "north-west",
+    "west",
+    "south-west"
+  ],
+  "frameCount": 8,
+  "framesPerSecond": 12,
+  "loop": false,
+  "cellWidth": 128,
+  "cellHeight": 128,
+  "sourcePixelsResized": false,
+  "alignment": "PixelLab canvas centres; no per-frame trimming",
+  "groupId": "fd4094b8-77a8-46d9-be15-9bd5195a67a6",
+  "animationClips": [
+    "Animations/ATTACK_SOUTH.anim",
+    "Animations/ATTACK_SOUTH_EAST.anim",
+    "Animations/ATTACK_EAST.anim",
+    "Animations/ATTACK_NORTH_EAST.anim",
+    "Animations/ATTACK_NORTH.anim",
+    "Animations/ATTACK_NORTH_WEST.anim",
+    "Animations/ATTACK_WEST.anim",
+    "Animations/ATTACK_SOUTH_WEST.anim"
+  ],
+  "nativeClipFrameRoot": "SpritesWithTrail",
+  "sourceFrameRoot": "Sprites",
+  "trailLayerRoot": "TrailLayers",
+  "frameRoot": "SpritesWithTrail",
+  "nativePixelsResized": false
+}

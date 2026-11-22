@@ -1,0 +1,40 @@
+{
+  "key": "MistWretch",
+  "characterId": "350951f8-1af7-4827-80e5-d4d9dfb48163",
+  "pixelsPerUnit": 32,
+  "rootMotion": false,
+  "visualApproval": "Generated assets require visual review",
+  "clips": [
+    {
+      "animation": "IDLE",
+      "directions": [
+        "south",
+        "south-east",
+        "east",
+        "north-east",
+        "north",
+        "north-west",
+        "west",
+        "south-west"
+      ],
+      "frameCount": 4,
+      "framesPerSecond": 8,
+      "loop": true,
+      "cellWidth": 80,
+      "cellHeight": 80,
+      "sourcePixelsResized": false,
+      "alignment": "PixelLab canvas centres; no per-frame trimming",
+      "groupId": "22883c8d-a43f-478c-98be-a0d4c6609814",
+      "animationClips": [
+        "Animations/IDLE_SOUTH.anim",
+        "Animations/IDLE_SOUTH_EAST.anim",
+        "Animations/IDLE_EAST.anim",
+        "Animations/IDLE_NORTH_EAST.anim",
+        "Animations/IDLE_NORTH.anim",
+        "Animations/IDLE_NORTH_WEST.anim",
+        "Animations/IDLE_WEST.anim",
+        "Animations/IDLE_SOUTH_WEST.anim"
+      ]
+    }
+  ]
+}

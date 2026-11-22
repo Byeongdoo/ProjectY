@@ -1,0 +1,553 @@
+{
+ "characters": [
+  {
+   "key": "MistWretch",
+   "name": "안개 잡귀",
+   "gameId": 2000101,
+   "characterId": "350951f8-1af7-4827-80e5-d4d9dfb48163",
+   "sourceJobId": "33eaa076-66e5-406d-b58f-a6ef9af32504",
+   "sourceIndex": 13
+  },
+  {
+   "key": "HangedSoul",
+   "name": "목매단 망령",
+   "gameId": 2000102,
+   "characterId": "43d7eab8-9921-4b00-8e53-268d4b2e5a03",
+   "sourceJobId": "020a35c2-687c-481f-b731-00a8b6e148f1",
+   "sourceIndex": 0
+  },
+  {
+   "key": "WailingWraith",
+   "name": "곡하는 귀신",
+   "gameId": 2000103,
+   "characterId": "796ac10a-f9a4-4f3b-a8cf-1bff0295655e",
+   "sourceJobId": "3ad57e2c-80b9-4742-a9ce-975afa0c6199",
+   "sourceIndex": 1
+  }
+ ],
+ "tasks": [
+  {
+   "key": "MistWretch",
+   "characterId": "350951f8-1af7-4827-80e5-d4d9dfb48163",
+   "animation": "IDLE",
+   "frameCount": 4,
+   "fps": 8,
+   "loop": true,
+   "directions": [
+    "south",
+    "south-east",
+    "east",
+    "north-east",
+    "north",
+    "north-west",
+    "west",
+    "south-west"
+   ],
+   "action": "Quiet loop; crouched shoulders breathe and a few wisps drift minutely. Preserve the exact selected character, palette and costume. Fixed low top-down camera, pixel art on transparency. Animate in place with consistent grounded origin; no camera movement, resizing or background. Keep effects, projectiles, glows and attack trails off the character frames."
+  },
+  {
+   "key": "HangedSoul",
+   "characterId": "43d7eab8-9921-4b00-8e53-268d4b2e5a03",
+   "animation": "IDLE",
+   "frameCount": 4,
+   "fps": 8,
+   "loop": true,
+   "directions": [
+    "south",
+    "south-east",
+    "east",
+    "north-east",
+    "north",
+    "north-west",
+    "west",
+    "south-west"
+   ],
+   "action": "Uneven low breathing with bowed head, slight shoulders and scarlet cord sway. Preserve the exact selected character, palette and costume. Fixed low top-down camera, pixel art on transparency. Animate in place with consistent grounded origin; no camera movement, resizing or background. Keep effects, projectiles, glows and attack trails off the character frames."
+  },
+  {
+   "key": "WailingWraith",
+   "characterId": "796ac10a-f9a4-4f3b-a8cf-1bff0295655e",
+   "animation": "IDLE",
+   "frameCount": 4,
+   "fps": 8,
+   "loop": true,
+   "directions": [
+    "south",
+    "south-east",
+    "east",
+    "north-east",
+    "north",
+    "north-west",
+    "west",
+    "south-west"
+   ],
+   "action": "Pale sleeves and loose hair sway gently as she hovers at a steady height. Preserve the exact selected character, palette and costume. Fixed low top-down camera, pixel art on transparency. Animate in place with consistent grounded origin; no camera movement, resizing or background. Keep effects, projectiles, glows and attack trails off the character frames."
+  },
+  {
+   "key": "MistWretch",
+   "characterId": "350951f8-1af7-4827-80e5-d4d9dfb48163",
+   "animation": "RUN",
+   "frameCount": 8,
+   "fps": 10,
+   "loop": true,
+   "directions": [
+    "south",
+    "south-east",
+    "east",
+    "north-east",
+    "north",
+    "north-west",
+    "west",
+    "south-west"
+   ],
+   "action": "Very low rapid pursuit, short alternating strides, mist stays near feet. Preserve the exact selected character, palette and costume. Fixed low top-down camera, pixel art on transparency. Animate in place with consistent grounded origin; no camera movement, resizing or background. Keep effects, projectiles, glows and attack trails off the character frames."
+  },
+  {
+   "key": "HangedSoul",
+   "characterId": "43d7eab8-9921-4b00-8e53-268d4b2e5a03",
+   "animation": "RUN",
+   "frameCount": 8,
+   "fps": 10,
+   "loop": true,
+   "directions": [
+    "south",
+    "south-east",
+    "east",
+    "north-east",
+    "north",
+    "north-west",
+    "west",
+    "south-west"
+   ],
+   "action": "Uneven heavy advance alternating lagging feet and swaying shoulders; cord follows. Preserve the exact selected character, palette and costume. Fixed low top-down camera, pixel art on transparency. Animate in place with consistent grounded origin; no camera movement, resizing or background. Keep effects, projectiles, glows and attack trails off the character frames."
+  },
+  {
+   "key": "WailingWraith",
+   "characterId": "796ac10a-f9a4-4f3b-a8cf-1bff0295655e",
+   "animation": "RUN",
+   "frameCount": 8,
+   "fps": 10,
+   "loop": true,
+   "directions": [
+    "south",
+    "south-east",
+    "east",
+    "north-east",
+    "north",
+    "north-west",
+    "west",
+    "south-west"
+   ],
+   "action": "Glide forward at fixed hover height with no walking steps; hem and sleeves trail. Preserve the exact selected character, palette and costume. Fixed low top-down camera, pixel art on transparency. Animate in place with consistent grounded origin; no camera movement, resizing or background. Keep effects, projectiles, glows and attack trails off the character frames."
+  },
+  {
+   "key": "MistWretch",
+   "characterId": "350951f8-1af7-4827-80e5-d4d9dfb48163",
+   "animation": "ATTACK",
+   "frameCount": 8,
+   "fps": 12,
+   "loop": false,
+   "directions": [
+    "south",
+    "south-east",
+    "east",
+    "north-east",
+    "north",
+    "north-west",
+    "west",
+    "south-west"
+   ],
+   "action": "Drop into a crouch, snap one forward claw swipe, retract to guard. Preserve the exact selected character, palette and costume. Fixed low top-down camera, pixel art on transparency. Animate in place with consistent grounded origin; no camera movement, resizing or background. Keep effects, projectiles, glows and attack trails off the character frames."
+  },
+  {
+   "key": "HangedSoul",
+   "characterId": "43d7eab8-9921-4b00-8e53-268d4b2e5a03",
+   "animation": "ATTACK",
+   "frameCount": 8,
+   "fps": 12,
+   "loop": false,
+   "directions": [
+    "south",
+    "south-east",
+    "east",
+    "north-east",
+    "north",
+    "north-west",
+    "west",
+    "south-west"
+   ],
+   "action": "Wind up and perform two consecutive long-arm sweeping strikes, then recover. Preserve the exact selected character, palette and costume. Fixed low top-down camera, pixel art on transparency. Animate in place with consistent grounded origin; no camera movement, resizing or background. Keep effects, projectiles, glows and attack trails off the character frames."
+  },
+  {
+   "key": "WailingWraith",
+   "characterId": "796ac10a-f9a4-4f3b-a8cf-1bff0295655e",
+   "animation": "ATTACK",
+   "frameCount": 8,
+   "fps": 12,
+   "loop": false,
+   "directions": [
+    "south",
+    "south-east",
+    "east",
+    "north-east",
+    "north",
+    "north-west",
+    "west",
+    "south-west"
+   ],
+   "action": "Open the sleeves and thrust both forearms forward to cast a ranged cry, then fold the sleeves. Preserve the exact selected character, palette and costume. Fixed low top-down camera, pixel art on transparency. Animate in place with consistent grounded origin; no camera movement, resizing or background. Keep effects, projectiles, glows and attack trails off the character frames."
+  },
+  {
+   "key": "MistWretch",
+   "characterId": "350951f8-1af7-4827-80e5-d4d9dfb48163",
+   "animation": "HIT",
+   "frameCount": 4,
+   "fps": 12,
+   "loop": false,
+   "directions": [
+    "south",
+    "south-east",
+    "east",
+    "north-east",
+    "north",
+    "north-west",
+    "west",
+    "south-west"
+   ],
+   "action": "Head and shoulders twitch back sharply then recover to idle. Preserve the exact selected character, palette and costume. Fixed low top-down camera, pixel art on transparency. Animate in place with consistent grounded origin; no camera movement, resizing or background. Keep effects, projectiles, glows and attack trails off the character frames."
+  },
+  {
+   "key": "HangedSoul",
+   "characterId": "43d7eab8-9921-4b00-8e53-268d4b2e5a03",
+   "animation": "HIT",
+   "frameCount": 4,
+   "fps": 12,
+   "loop": false,
+   "directions": [
+    "south",
+    "south-east",
+    "east",
+    "north-east",
+    "north",
+    "north-west",
+    "west",
+    "south-west"
+   ],
+   "action": "Shoulders snap back briefly; scarlet cord flicks, then recover to idle. Preserve the exact selected character, palette and costume. Fixed low top-down camera, pixel art on transparency. Animate in place with consistent grounded origin; no camera movement, resizing or background. Keep effects, projectiles, glows and attack trails off the character frames."
+  },
+  {
+   "key": "WailingWraith",
+   "characterId": "796ac10a-f9a4-4f3b-a8cf-1bff0295655e",
+   "animation": "HIT",
+   "frameCount": 4,
+   "fps": 12,
+   "loop": false,
+   "directions": [
+    "south",
+    "south-east",
+    "east",
+    "north-east",
+    "north",
+    "north-west",
+    "west",
+    "south-west"
+   ],
+   "action": "Brief upper body recoil and sleeve flick, then return to normal hover. Preserve the exact selected character, palette and costume. Fixed low top-down camera, pixel art on transparency. Animate in place with consistent grounded origin; no camera movement, resizing or background. Keep effects, projectiles, glows and attack trails off the character frames."
+  },
+  {
+   "key": "MistWretch",
+   "characterId": "350951f8-1af7-4827-80e5-d4d9dfb48163",
+   "animation": "STUN",
+   "frameCount": 4,
+   "fps": 8,
+   "loop": true,
+   "directions": [
+    "south",
+    "south-east",
+    "east",
+    "north-east",
+    "north",
+    "north-west",
+    "west",
+    "south-west"
+   ],
+   "action": "Contract into a stunned crouch with small alternating head and arm shakes. Preserve the exact selected character, palette and costume. Fixed low top-down camera, pixel art on transparency. Animate in place with consistent grounded origin; no camera movement, resizing or background. Keep effects, projectiles, glows and attack trails off the character frames."
+  },
+  {
+   "key": "HangedSoul",
+   "characterId": "43d7eab8-9921-4b00-8e53-268d4b2e5a03",
+   "animation": "STUN",
+   "frameCount": 4,
+   "fps": 8,
+   "loop": true,
+   "directions": [
+    "south",
+    "south-east",
+    "east",
+    "north-east",
+    "north",
+    "north-west",
+    "west",
+    "south-west"
+   ],
+   "action": "Knees buckle and torso droops forward; tiny shoulder shake in a short loop. Preserve the exact selected character, palette and costume. Fixed low top-down camera, pixel art on transparency. Animate in place with consistent grounded origin; no camera movement, resizing or background. Keep effects, projectiles, glows and attack trails off the character frames."
+  },
+  {
+   "key": "WailingWraith",
+   "characterId": "796ac10a-f9a4-4f3b-a8cf-1bff0295655e",
+   "animation": "STUN",
+   "frameCount": 4,
+   "fps": 8,
+   "loop": true,
+   "directions": [
+    "south",
+    "south-east",
+    "east",
+    "north-east",
+    "north",
+    "north-west",
+    "west",
+    "south-west"
+   ],
+   "action": "Hover a little lower with sagging sleeves and a small upper body tremor. Preserve the exact selected character, palette and costume. Fixed low top-down camera, pixel art on transparency. Animate in place with consistent grounded origin; no camera movement, resizing or background. Keep effects, projectiles, glows and attack trails off the character frames."
+  },
+  {
+   "key": "MistWretch",
+   "characterId": "350951f8-1af7-4827-80e5-d4d9dfb48163",
+   "animation": "DIE",
+   "frameCount": 12,
+   "fps": 10,
+   "loop": false,
+   "directions": [
+    "south",
+    "south-east",
+    "east",
+    "north-east",
+    "north",
+    "north-west",
+    "west",
+    "south-west"
+   ],
+   "action": "Hunch collapses inward and the ghost body disperses into its existing wisps. Preserve the exact selected character, palette and costume. Fixed low top-down camera, pixel art on transparency. Animate in place with consistent grounded origin; no camera movement, resizing or background. Keep effects, projectiles, glows and attack trails off the character frames."
+  },
+  {
+   "key": "HangedSoul",
+   "characterId": "43d7eab8-9921-4b00-8e53-268d4b2e5a03",
+   "animation": "DIE",
+   "frameCount": 12,
+   "fps": 10,
+   "loop": false,
+   "directions": [
+    "south",
+    "south-east",
+    "east",
+    "north-east",
+    "north",
+    "north-west",
+    "west",
+    "south-west"
+   ],
+   "action": "Drop to the knees and slump down; the scarlet cord stays visible until the end. Preserve the exact selected character, palette and costume. Fixed low top-down camera, pixel art on transparency. Animate in place with consistent grounded origin; no camera movement, resizing or background. Keep effects, projectiles, glows and attack trails off the character frames."
+  },
+  {
+   "key": "WailingWraith",
+   "characterId": "796ac10a-f9a4-4f3b-a8cf-1bff0295655e",
+   "animation": "DIE",
+   "frameCount": 12,
+   "fps": 10,
+   "loop": false,
+   "directions": [
+    "south",
+    "south-east",
+    "east",
+    "north-east",
+    "north",
+    "north-west",
+    "west",
+    "south-west"
+   ],
+   "action": "Body sinks and sleeves fold inward as the ghost fades away. Preserve the exact selected character, palette and costume. Fixed low top-down camera, pixel art on transparency. Animate in place with consistent grounded origin; no camera movement, resizing or background. Keep effects, projectiles, glows and attack trails off the character frames."
+  },
+  {
+   "key": "MistWretch",
+   "characterId": "350951f8-1af7-4827-80e5-d4d9dfb48163",
+   "animation": "KNOCKBACK",
+   "frameCount": 4,
+   "fps": 10,
+   "loop": false,
+   "directions": [
+    "south",
+    "south-east",
+    "east",
+    "north-east",
+    "north",
+    "north-west",
+    "west",
+    "south-west"
+   ],
+   "action": "Arch upper body backward and flare arms, followed by return to ready. Preserve the exact selected character, palette and costume. Fixed low top-down camera, pixel art on transparency. Animate in place with consistent grounded origin; no camera movement, resizing or background. Keep effects, projectiles, glows and attack trails off the character frames."
+  },
+  {
+   "key": "HangedSoul",
+   "characterId": "43d7eab8-9921-4b00-8e53-268d4b2e5a03",
+   "animation": "KNOCKBACK",
+   "frameCount": 4,
+   "fps": 10,
+   "loop": false,
+   "directions": [
+    "south",
+    "south-east",
+    "east",
+    "north-east",
+    "north",
+    "north-west",
+    "west",
+    "south-west"
+   ],
+   "action": "Reel back much farther than hit with both long arms and cord lagging, then settle. Preserve the exact selected character, palette and costume. Fixed low top-down camera, pixel art on transparency. Animate in place with consistent grounded origin; no camera movement, resizing or background. Keep effects, projectiles, glows and attack trails off the character frames."
+  },
+  {
+   "key": "WailingWraith",
+   "characterId": "796ac10a-f9a4-4f3b-a8cf-1bff0295655e",
+   "animation": "KNOCKBACK",
+   "frameCount": 4,
+   "fps": 10,
+   "loop": false,
+   "directions": [
+    "south",
+    "south-east",
+    "east",
+    "north-east",
+    "north",
+    "north-west",
+    "west",
+    "south-west"
+   ],
+   "action": "Arc backwards sharply with hair and sleeves streaming forward before settling. Preserve the exact selected character, palette and costume. Fixed low top-down camera, pixel art on transparency. Animate in place with consistent grounded origin; no camera movement, resizing or background. Keep effects, projectiles, glows and attack trails off the character frames."
+  },
+  {
+   "key": "MistWretch",
+   "characterId": "350951f8-1af7-4827-80e5-d4d9dfb48163",
+   "animation": "SKILL_1",
+   "frameCount": 8,
+   "fps": 10,
+   "loop": false,
+   "directions": [
+    "south",
+    "south-east",
+    "east",
+    "north-east",
+    "north",
+    "north-west",
+    "west",
+    "south-west"
+   ],
+   "action": "Crouch and briefly disappear into the existing body's mist, then lunge sharply with one leading claw and recover. Preserve the exact selected character, palette and costume. Fixed low top-down camera, pixel art on transparency. Animate in place with consistent grounded origin; no camera movement, resizing or background. Keep effects, projectiles, glows and attack trails off the character frames."
+  },
+  {
+   "key": "HangedSoul",
+   "characterId": "43d7eab8-9921-4b00-8e53-268d4b2e5a03",
+   "animation": "SKILL_1",
+   "frameCount": 8,
+   "fps": 10,
+   "loop": false,
+   "directions": [
+    "south",
+    "south-east",
+    "east",
+    "north-east",
+    "north",
+    "north-west",
+    "west",
+    "south-west"
+   ],
+   "action": "Draw one hand to the neck cord, then make a strong forward pulling and casting gesture, then release. Preserve the exact selected character, palette and costume. Fixed low top-down camera, pixel art on transparency. Animate in place with consistent grounded origin; no camera movement, resizing or background. Keep effects, projectiles, glows and attack trails off the character frames."
+  },
+  {
+   "key": "WailingWraith",
+   "characterId": "796ac10a-f9a4-4f3b-a8cf-1bff0295655e",
+   "animation": "SKILL_1",
+   "frameCount": 8,
+   "fps": 10,
+   "loop": false,
+   "directions": [
+    "south",
+    "south-east",
+    "east",
+    "north-east",
+    "north",
+    "north-west",
+    "west",
+    "south-west"
+   ],
+   "action": "Cover the face with both hands and sleeves, draw a deep breath, then recoil from a strong wail; recover. Preserve the exact selected character, palette and costume. Fixed low top-down camera, pixel art on transparency. Animate in place with consistent grounded origin; no camera movement, resizing or background. Keep effects, projectiles, glows and attack trails off the character frames."
+  },
+  {
+   "key": "MistWretch",
+   "characterId": "350951f8-1af7-4827-80e5-d4d9dfb48163",
+   "animation": "SKILL_2",
+   "frameCount": 8,
+   "fps": 10,
+   "loop": false,
+   "directions": [
+    "south",
+    "south-east",
+    "east",
+    "north-east",
+    "north",
+    "north-west",
+    "west",
+    "south-west"
+   ],
+   "action": "Gather both arms inward, then spread them sideways in a broad mist-dispersal casting pose, then recover. Preserve the exact selected character, palette and costume. Fixed low top-down camera, pixel art on transparency. Animate in place with consistent grounded origin; no camera movement, resizing or background. Keep effects, projectiles, glows and attack trails off the character frames."
+  },
+  {
+   "key": "HangedSoul",
+   "characterId": "43d7eab8-9921-4b00-8e53-268d4b2e5a03",
+   "animation": "SKILL_2",
+   "frameCount": 8,
+   "fps": 10,
+   "loop": false,
+   "directions": [
+    "south",
+    "south-east",
+    "east",
+    "north-east",
+    "north",
+    "north-west",
+    "west",
+    "south-west"
+   ],
+   "action": "Throw the head back with a wide upper body arch, then release a pulse with open arms and recover. Preserve the exact selected character, palette and costume. Fixed low top-down camera, pixel art on transparency. Animate in place with consistent grounded origin; no camera movement, resizing or background. Keep effects, projectiles, glows and attack trails off the character frames."
+  },
+  {
+   "key": "WailingWraith",
+   "characterId": "796ac10a-f9a4-4f3b-a8cf-1bff0295655e",
+   "animation": "SKILL_2",
+   "frameCount": 8,
+   "fps": 10,
+   "loop": false,
+   "directions": [
+    "south",
+    "south-east",
+    "east",
+    "north-east",
+    "north",
+    "north-west",
+    "west",
+    "south-west"
+   ],
+   "action": "Hold a brief pause after crying, then extend one open palm forward to cast cold air, and draw it back. Preserve the exact selected character, palette and costume. Fixed low top-down camera, pixel art on transparency. Animate in place with consistent grounded origin; no camera movement, resizing or background. Keep effects, projectiles, glows and attack trails off the character frames."
+  }
+ ],
+ "directions": [
+  "south",
+  "south-east",
+  "east",
+  "north-east",
+  "north",
+  "north-west",
+  "west",
+  "south-west"
+ ]
+}

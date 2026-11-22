@@ -13,9 +13,79 @@
   "frameCount": 4,
   "framesPerSecond": 10,
   "loop": false,
-  "cellWidth": 92,
-  "cellHeight": 92,
+  "cellWidth": 128,
+  "cellHeight": 128,
   "sourcePixelsResized": false,
   "alignment": "PixelLab canvas centres; no per-frame trimming",
-  "groupId": "246da6f2-9e99-4bf4-af26-2cf951b023ec"
+  "groupId": "246da6f2-9e99-4bf4-af26-2cf951b023ec",
+  "animationClips": [
+    "Animations/KNOCKBACK_SOUTH.anim",
+    "Animations/KNOCKBACK_SOUTH_EAST.anim",
+    "Animations/KNOCKBACK_EAST.anim",
+    "Animations/KNOCKBACK_NORTH_EAST.anim",
+    "Animations/KNOCKBACK_NORTH.anim",
+    "Animations/KNOCKBACK_NORTH_WEST.anim",
+    "Animations/KNOCKBACK_WEST.anim",
+    "Animations/KNOCKBACK_SOUTH_WEST.anim"
+  ],
+  "revision": "LargeSaber_NorthFrontAction",
+  "directionSources": {
+    "south": [
+      {
+        "jobId": "5d18b0a5-bdd1-4a26-98b7-5951cc590024",
+        "sourceKind": "edit",
+        "startFrame": 0
+      }
+    ],
+    "south-east": [
+      {
+        "jobId": "7a3da58d-7c7a-4d9d-8709-ac5dbea2d840",
+        "sourceKind": "edit",
+        "startFrame": 0
+      }
+    ],
+    "east": [
+      {
+        "jobId": "2c861231-1d8f-42b9-9aa6-9e35c2e32885",
+        "sourceKind": "edit",
+        "startFrame": 0
+      }
+    ],
+    "north-east": [
+      {
+        "jobId": "92cf9f67-bfea-4bd6-a7be-f498fc1199b0",
+        "sourceKind": "edit",
+        "startFrame": 0
+      }
+    ],
+    "north": [
+      {
+        "jobId": "7d5e2f34-5ec0-476c-9667-54319840d4e7",
+        "sourceKind": "north",
+        "groupId": "b10caf68-36b2-4707-ae0e-a367cd6c7e9c",
+        "characterId": "6f8c501b-a360-4d0a-85fd-556e6a2e0b9d"
+      }
+    ],
+    "north-west": [
+      {
+        "jobId": "80eb163c-ae48-4fa1-b638-ef411034a23f",
+        "sourceKind": "edit",
+        "startFrame": 0
+      }
+    ],
+    "west": [
+      {
+        "jobId": "9cd89081-aead-4e37-b752-d65d4a822755",
+        "sourceKind": "edit",
+        "startFrame": 0
+      }
+    ],
+    "south-west": [
+      {
+        "jobId": "7a182ecb-1589-45b1-8110-4bd3faec8081",
+        "sourceKind": "edit",
+        "startFrame": 0
+      }
+    ]
+  }
 }

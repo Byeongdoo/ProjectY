@@ -1,0 +1,14 @@
+{
+  "groupId": "a4e8f256-4688-4902-b785-fd17eda5d424",
+  "northEastJob": "c14b0d48-6421-4adc-aac4-d35edfbc171b",
+  "northWestStatus": "not_queued_concurrency_limit",
+  "receipt": {
+    "content": [
+      {
+        "type": "text",
+        "text": "character: 6f8c501b-a360-4d0a-85fd-556e6a2e0b9d\nanimation: Slash high forward above shoulders\nmode: skeleton-v3 (custom motion)\ndirections: north-east (1 jobs)\n  north-east: job c14b0d48-6421-4adc-aac4-d35edfbc171b\ngroup: a4e8f256-4688-4902-b785-fd17eda5d424\nframes: 8\ncost: 3 generations per direction\neta: about 2-3 min per direction\nwarning: north-west not queued: Maximum 10 concurrent background jobs allowed (Tier 2). You have 10 active jobs.\nadd more directions to this group (same motion, no poses needed): animate_character(character_id=\"6f8c501b-a360-4d0a-85fd-556e6a2e0b9d\", mode=\"skeleton-v3\", action_description=\"Slash high forward above shoulders\", animation_group_id=\"a4e8f256-4688-4902-b785-fd17eda5d424\", directions=[...])\n\nhint: get_character(character_id=\"6f8c501b-a360-4d0a-85fd-556e6a2e0b9d\")"
+      }
+    ],
+    "isError": false
+  }
+}

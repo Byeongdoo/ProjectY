@@ -1,0 +1,9 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "character: 6f8c501b-a360-4d0a-85fd-556e6a2e0b9d\nanimation: v3 custom (Brace behind the shield as an impact leans the torso backwards and drags the feet into a stagger; regain footing. In-place reaction only. BACK VIEW: face NORTH / screen-up throughout. Both arms and all active actions occur in FRONT of his chest, toward screen-up; the sword belongs to the right hand, kept ahead of the body or upright beside the right shoulder. Never draw sword or forearm across the visible back. Torso/head occlude far-side weapons naturally. Preserve the large saber size. )\ndirections: north (1 jobs)\njob_ids: north=7d5e2f34-5ec0-476c-9667-54319840d4e7\ngroup: b10caf68-36b2-4707-ae0e-a367cd6c7e9c\nframes: 4 (reference stripped, keep_first_frame=false)\ncanvas: north 92x92 (frames are stored at this size: the character plus room to move)\ncost: 1 generation (1/dir x 1)\neta: ~2-4 min/direction\nprompts: one per direction (direction_prompts)\n\nhint: get_character(character_id=\"6f8c501b-a360-4d0a-85fd-556e6a2e0b9d\")\nadd more directions to this group: animate_character(character_id=\"6f8c501b-a360-4d0a-85fd-556e6a2e0b9d\", action_description=\"Brace behind the shield as an impact leans the torso backwards and drags the feet into a stagger; regain footing. In-place reaction only. BACK VIEW: face NORTH / screen-up throughout. Both arms and all active actions occur in FRONT of his chest, toward screen-up; the sword belongs to the right hand, kept ahead of the body or upright beside the right shoulder. Never draw sword or forearm across the visible back. Torso/head occlude far-side weapons naturally. Preserve the large saber size. \", animation_group_id=\"b10caf68-36b2-4707-ae0e-a367cd6c7e9c\", directions=[...]) (its direction_prompts are reused)"
+    }
+  ],
+  "isError": false
+}
