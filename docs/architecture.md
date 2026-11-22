@@ -26,11 +26,12 @@
 ## 패킷 흐름
 
 1. `Common/protoc-3.12.3-win64/bin/Protocol.proto` 수정
-2. 같은 폴더 `GenProto.bat` 실행 → `Protocol.cs`, 패킷 매니저/핸들러 생성
-3. 클라(`Client/Assets/Scripts/Packet`)·서버(`Server/Server/Packet`)로 복사/생성되는지 확인
+2. 같은 폴더의 생성 스크립트 실행 → `Protocol.cs`, `ClientPacketManager.cs`/`ServerPacketManager.cs` 생성
+   - Windows: `GenProto.bat` (`protoc.exe`)
+   - macOS: `GenProto.sh` (`Common/protoc-3.12.3-osx/bin/protoc`, x86_64 바이너리라 Apple Silicon에서는 Rosetta로 실행). PacketGenerator를 빌드한 뒤 실행한다.
+   - protoc 버전은 런타임 `Google.Protobuf 3.12.3`과 맞춘다. 다른 버전으로 생성하지 않는다.
+3. 두 스크립트 모두 `Protocol.cs`를 클라(`Client/Assets/Scripts/Packet`)·서버(`Server/Server/Packet`)에, `ClientPacketManager.cs`는 클라에, `ServerPacketManager.cs`는 서버에 복사한다(2026-11-22 확인).
 4. 핸들러(`PacketHandler.cs`)에 로직 추가
-
-> GenProto.bat이 실제로 복사하는 대상 경로는 첫 사용 시 확인해 이 문서에 보정한다.
 
 ## 이승(클라 단독)과 서버의 경계
 
