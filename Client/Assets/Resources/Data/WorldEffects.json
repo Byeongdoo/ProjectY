@@ -6,7 +6,7 @@
       "triggerWorld": 1,
       "triggerType": 1,
       "triggerValue": 51101,
-      "targetWorld": 3,
+      "targetWorld": 1,
       "resultType": 1,
       "resultValue": 62103
     },
@@ -31,16 +31,6 @@
       "resultValue": 811022
     },
     {
-      "worldEffectID": 63201,
-      "region": 61201,
-      "triggerWorld": 1,
-      "triggerType": 1,
-      "triggerValue": 51202,
-      "targetWorld": 2,
-      "resultType": 1,
-      "resultValue": 62203
-    },
-    {
       "worldEffectID": 63202,
       "region": 61203,
       "triggerWorld": 2,
@@ -56,7 +46,7 @@
       "triggerWorld": 1,
       "triggerType": 1,
       "triggerValue": 51301,
-      "targetWorld": 3,
+      "targetWorld": 1,
       "resultType": 1,
       "resultValue": 62301
     },
@@ -66,9 +56,9 @@
       "triggerWorld": 2,
       "triggerType": 2,
       "triggerValue": 3000301,
-      "targetWorld": 2,
-      "resultType": 3,
-      "resultValue": 92302
+      "targetWorld": 1,
+      "resultType": 4,
+      "resultValue": 813022
     },
     {
       "worldEffectID": 63401,
@@ -79,16 +69,6 @@
       "targetWorld": 1,
       "resultType": 4,
       "resultValue": 814024
-    },
-    {
-      "worldEffectID": 63501,
-      "region": 61501,
-      "triggerWorld": 1,
-      "triggerType": 3,
-      "triggerValue": 83502,
-      "targetWorld": 2,
-      "resultType": 1,
-      "resultValue": 62501
     }
   ]
 }

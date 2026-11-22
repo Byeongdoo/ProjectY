@@ -426,7 +426,7 @@
     },
     {
       "stringID": "MonsterType_9002",
-      "KR": "원혼",
+      "KR": "망령",
       "EN": "Vengeful Soul",
       "CN": "",
       "TW": "",
@@ -466,7 +466,7 @@
     },
     {
       "stringID": "Character_2000102",
-      "KR": "목매단 원혼",
+      "KR": "목매단 망령",
       "EN": "Hanged Soul",
       "CN": "",
       "TW": "",
@@ -490,7 +490,7 @@
     },
     {
       "stringID": "Character_2000202",
-      "KR": "물먹은 원혼",
+      "KR": "물먹은 망령",
       "EN": "Drowned Soul",
       "CN": "",
       "TW": "",
@@ -522,7 +522,7 @@
     },
     {
       "stringID": "Character_2000302",
-      "KR": "타버린 원혼",
+      "KR": "타버린 망령",
       "EN": "Charred Soul",
       "CN": "",
       "TW": "",
@@ -546,7 +546,7 @@
     },
     {
       "stringID": "Character_2000401",
-      "KR": "죄인 원혼",
+      "KR": "죄인 망령",
       "EN": "Convict Soul",
       "CN": "",
       "TW": "",
@@ -578,7 +578,7 @@
     },
     {
       "stringID": "Character_2000501",
-      "KR": "얼어붙은 원혼",
+      "KR": "얼어붙은 망령",
       "EN": "Frozen Soul",
       "CN": "",
       "TW": "",
@@ -1644,6 +1644,70 @@
       "stringID": "Dungeon_87501",
       "KR": "황천문",
       "EN": "The Yellow Springs Gate",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Lobby_8801",
+      "KR": "강가",
+      "EN": "Riverbank",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Lobby_8802",
+      "KR": "나루터",
+      "EN": "Ferry Landing",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Lobby_8803",
+      "KR": "명부 게시판",
+      "EN": "Register Board",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Lobby_8804",
+      "KR": "주막",
+      "EN": "Riverside Inn",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "Lobby_8805",
+      "KR": "저승 신단",
+      "EN": "Underworld Altar",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "LobbyNpc_8801",
+      "KR": "스승",
+      "EN": "Mentor",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "LobbyNpc_8802",
+      "KR": "사공",
+      "EN": "Ferryman",
+      "CN": "",
+      "TW": "",
+      "JP": ""
+    },
+    {
+      "stringID": "LobbyNpc_8804",
+      "KR": "주모",
+      "EN": "Innkeeper",
       "CN": "",
       "TW": "",
       "JP": ""

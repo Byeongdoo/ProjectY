@@ -33,16 +33,6 @@
       "countMax": 8
     },
     {
-      "spawnGroupID": 92302,
-      "chapter": 3,
-      "composition": [
-        2000301,
-        2000302
-      ],
-      "countMin": 3,
-      "countMax": 5
-    },
-    {
       "spawnGroupID": 92401,
       "chapter": 4,
       "composition": [

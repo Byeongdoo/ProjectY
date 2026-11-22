@@ -22,8 +22,8 @@
       "region": 61102,
       "name": "Character_2000101",
       "prefabName": "Mob_101",
-      "scanRange": 12,
-      "leashRange": 24,
+      "scanRange": 9,
+      "leashRange": 18,
       "dropID": 9101
     },
     {
@@ -35,8 +35,8 @@
       "region": 61102,
       "name": "Character_2000102",
       "prefabName": "Mob_102",
-      "scanRange": 14,
-      "leashRange": 28,
+      "scanRange": 10,
+      "leashRange": 20,
       "dropID": 9102
     },
     {
@@ -48,8 +48,8 @@
       "region": 61103,
       "name": "Character_2000103",
       "prefabName": "Mob_103",
-      "scanRange": 12,
-      "leashRange": 24,
+      "scanRange": 9,
+      "leashRange": 18,
       "dropID": 9103
     },
     {
@@ -61,8 +61,8 @@
       "region": 61202,
       "name": "Character_2000201",
       "prefabName": "Mob_201",
-      "scanRange": 12,
-      "leashRange": 24,
+      "scanRange": 9,
+      "leashRange": 18,
       "dropID": 9101
     },
     {
@@ -74,8 +74,8 @@
       "region": 61202,
       "name": "Character_2000202",
       "prefabName": "Mob_202",
-      "scanRange": 14,
-      "leashRange": 28,
+      "scanRange": 10,
+      "leashRange": 20,
       "dropID": 9102
     },
     {
@@ -87,8 +87,8 @@
       "region": 61201,
       "name": "Character_2000203",
       "prefabName": "Mob_203",
-      "scanRange": 12,
-      "leashRange": 24,
+      "scanRange": 9,
+      "leashRange": 18,
       "dropID": 9103
     },
     {
@@ -100,8 +100,8 @@
       "region": 61203,
       "name": "Character_2000204",
       "prefabName": "Mob_204",
-      "scanRange": 16,
-      "leashRange": 32,
+      "scanRange": 12,
+      "leashRange": 24,
       "dropID": 9104
     },
     {
@@ -113,8 +113,8 @@
       "region": 61301,
       "name": "Character_2000301",
       "prefabName": "Mob_301",
-      "scanRange": 12,
-      "leashRange": 24,
+      "scanRange": 9,
+      "leashRange": 18,
       "dropID": 9101
     },
     {
@@ -126,8 +126,8 @@
       "region": 61301,
       "name": "Character_2000302",
       "prefabName": "Mob_302",
-      "scanRange": 14,
-      "leashRange": 28,
+      "scanRange": 10,
+      "leashRange": 20,
       "dropID": 9102
     },
     {
@@ -139,8 +139,8 @@
       "region": 61302,
       "name": "Character_2000303",
       "prefabName": "Mob_303",
-      "scanRange": 16,
-      "leashRange": 32,
+      "scanRange": 12,
+      "leashRange": 24,
       "dropID": 9104
     },
     {
@@ -152,8 +152,8 @@
       "region": 61302,
       "name": "Character_2000304",
       "prefabName": "Mob_304",
-      "scanRange": 14,
-      "leashRange": 28,
+      "scanRange": 10,
+      "leashRange": 20,
       "dropID": 9105
     },
     {
@@ -165,8 +165,8 @@
       "region": 61401,
       "name": "Character_2000401",
       "prefabName": "Mob_401",
-      "scanRange": 14,
-      "leashRange": 28,
+      "scanRange": 10,
+      "leashRange": 20,
       "dropID": 9102
     },
     {
@@ -178,8 +178,8 @@
       "region": 61402,
       "name": "Character_2000402",
       "prefabName": "Mob_402",
-      "scanRange": 12,
-      "leashRange": 24,
+      "scanRange": 9,
+      "leashRange": 18,
       "dropID": 9103
     },
     {
@@ -191,8 +191,8 @@
       "region": 61402,
       "name": "Character_2000403",
       "prefabName": "Mob_403",
-      "scanRange": 16,
-      "leashRange": 32,
+      "scanRange": 12,
+      "leashRange": 24,
       "dropID": 9104
     },
     {
@@ -204,8 +204,8 @@
       "region": 61403,
       "name": "Character_2000404",
       "prefabName": "Mob_404",
-      "scanRange": 14,
-      "leashRange": 28,
+      "scanRange": 10,
+      "leashRange": 20,
       "dropID": 9105
     },
     {
@@ -217,8 +217,8 @@
       "region": 61501,
       "name": "Character_2000501",
       "prefabName": "Mob_501",
-      "scanRange": 14,
-      "leashRange": 28,
+      "scanRange": 10,
+      "leashRange": 20,
       "dropID": 9102
     },
     {
@@ -230,8 +230,8 @@
       "region": 61501,
       "name": "Character_2000502",
       "prefabName": "Mob_502",
-      "scanRange": 12,
-      "leashRange": 24,
+      "scanRange": 9,
+      "leashRange": 18,
       "dropID": 9103
     },
     {
@@ -243,8 +243,8 @@
       "region": 61501,
       "name": "Character_2000503",
       "prefabName": "Mob_503",
-      "scanRange": 16,
-      "leashRange": 32,
+      "scanRange": 12,
+      "leashRange": 24,
       "dropID": 9104
     },
     {
@@ -256,8 +256,8 @@
       "region": 61502,
       "name": "Character_2000504",
       "prefabName": "Mob_504",
-      "scanRange": 14,
-      "leashRange": 28,
+      "scanRange": 10,
+      "leashRange": 20,
       "dropID": 9105
     },
     {

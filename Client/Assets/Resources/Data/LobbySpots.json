@@ -1,0 +1,39 @@
+{
+  "rows": [
+    {
+      "spotID": 8801,
+      "name": "Lobby_8801",
+      "function": 1,
+      "npcName": "LobbyNpc_8801",
+      "isSpawn": 1
+    },
+    {
+      "spotID": 8802,
+      "name": "Lobby_8802",
+      "function": 2,
+      "npcName": "LobbyNpc_8802",
+      "isSpawn": 0
+    },
+    {
+      "spotID": 8803,
+      "name": "Lobby_8803",
+      "function": 3,
+      "npcName": "",
+      "isSpawn": 0
+    },
+    {
+      "spotID": 8804,
+      "name": "Lobby_8804",
+      "function": 4,
+      "npcName": "LobbyNpc_8804",
+      "isSpawn": 0
+    },
+    {
+      "spotID": 8805,
+      "name": "Lobby_8805",
+      "function": 5,
+      "npcName": "",
+      "isSpawn": 0
+    }
+  ]
+}

@@ -12,7 +12,7 @@
       "unlockStep": 64103,
       "clearStep": 64105,
       "syncLevel": 1,
-      "mobHpRate": 15,
+      "mobHpRate": 24.5,
       "sectionCount": 4,
       "clueIDs": [
         51103
@@ -30,8 +30,8 @@
       ],
       "unlockStep": 64203,
       "clearStep": 64205,
-      "syncLevel": 11,
-      "mobHpRate": 15,
+      "syncLevel": 10,
+      "mobHpRate": 24,
       "sectionCount": 4,
       "clueIDs": [
         51203,
@@ -50,7 +50,7 @@
       "unlockStep": 64304,
       "clearStep": 64305,
       "syncLevel": 19,
-      "mobHpRate": 8,
+      "mobHpRate": 13,
       "sectionCount": 4,
       "clueIDs": [],
       "dropGroup": 96005
@@ -65,8 +65,8 @@
       ],
       "unlockStep": 64403,
       "clearStep": 64404,
-      "syncLevel": 25,
-      "mobHpRate": 5.5,
+      "syncLevel": 26,
+      "mobHpRate": 10.5,
       "sectionCount": 3,
       "clueIDs": [
         51402
@@ -83,8 +83,8 @@
       ],
       "unlockStep": 64405,
       "clearStep": 64405,
-      "syncLevel": 25,
-      "mobHpRate": 5.5,
+      "syncLevel": 26,
+      "mobHpRate": 10.5,
       "sectionCount": 4,
       "clueIDs": [
         51403
@@ -102,8 +102,8 @@
       ],
       "unlockStep": 64502,
       "clearStep": 64505,
-      "syncLevel": 32,
-      "mobHpRate": 4.5,
+      "syncLevel": 35,
+      "mobHpRate": 7.3,
       "sectionCount": 5,
       "clueIDs": [
         51502

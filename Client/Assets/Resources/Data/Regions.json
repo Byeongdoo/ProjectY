@@ -58,7 +58,7 @@
       "scene": "Wreck_Joun",
       "presetLiving": "Living_Coast",
       "presetUnder": "Under_Coast",
-      "altarCount": 1
+      "altarCount": 0
     },
     {
       "regionID": 61301,
@@ -108,7 +108,7 @@
       "scene": "Core_Manryeong",
       "presetLiving": "Living_Ruin",
       "presetUnder": "Under_Ruin",
-      "altarCount": 1
+      "altarCount": 0
     },
     {
       "regionID": 61501,

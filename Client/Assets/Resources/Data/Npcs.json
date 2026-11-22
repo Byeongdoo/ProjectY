@@ -27,8 +27,8 @@
     {
       "npcID": 81104,
       "chapter": 1,
-      "region": 61102,
-      "world": 2,
+      "region": 0,
+      "world": 4,
       "name": "Npc_81104",
       "initState": 0
     },

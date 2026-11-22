@@ -7,7 +7,8 @@
       "region": 61101,
       "world": 1,
       "stepType": 1,
-      "beliefChoice": 0
+      "beliefChoice": 0,
+      "dungeon": 0
     },
     {
       "stepID": 64102,
@@ -16,7 +17,8 @@
       "region": 61102,
       "world": 1,
       "stepType": 1,
-      "beliefChoice": 0
+      "beliefChoice": 0,
+      "dungeon": 0
     },
     {
       "stepID": 64103,
@@ -25,7 +27,8 @@
       "region": 61102,
       "world": 2,
       "stepType": 2,
-      "beliefChoice": 0
+      "beliefChoice": 0,
+      "dungeon": 87101
     },
     {
       "stepID": 64104,
@@ -34,7 +37,8 @@
       "region": 61102,
       "world": 2,
       "stepType": 3,
-      "beliefChoice": 0
+      "beliefChoice": 0,
+      "dungeon": 87101
     },
     {
       "stepID": 64105,
@@ -43,7 +47,8 @@
       "region": 61103,
       "world": 2,
       "stepType": 5,
-      "beliefChoice": 0
+      "beliefChoice": 0,
+      "dungeon": 87101
     },
     {
       "stepID": 64201,
@@ -52,7 +57,8 @@
       "region": 61201,
       "world": 1,
       "stepType": 1,
-      "beliefChoice": 0
+      "beliefChoice": 0,
+      "dungeon": 0
     },
     {
       "stepID": 64202,
@@ -61,7 +67,8 @@
       "region": 61201,
       "world": 1,
       "stepType": 4,
-      "beliefChoice": 1
+      "beliefChoice": 1,
+      "dungeon": 0
     },
     {
       "stepID": 64203,
@@ -70,7 +77,8 @@
       "region": 61202,
       "world": 2,
       "stepType": 1,
-      "beliefChoice": 0
+      "beliefChoice": 0,
+      "dungeon": 87201
     },
     {
       "stepID": 64204,
@@ -79,7 +87,8 @@
       "region": 61203,
       "world": 2,
       "stepType": 4,
-      "beliefChoice": 0
+      "beliefChoice": 0,
+      "dungeon": 87201
     },
     {
       "stepID": 64205,
@@ -88,7 +97,8 @@
       "region": 61203,
       "world": 2,
       "stepType": 5,
-      "beliefChoice": 0
+      "beliefChoice": 0,
+      "dungeon": 87201
     },
     {
       "stepID": 64301,
@@ -97,16 +107,18 @@
       "region": 61301,
       "world": 1,
       "stepType": 1,
-      "beliefChoice": 0
+      "beliefChoice": 0,
+      "dungeon": 0
     },
     {
       "stepID": 64302,
       "chapter": 3,
       "step": 2,
       "region": 61301,
-      "world": 2,
+      "world": 1,
       "stepType": 1,
-      "beliefChoice": 0
+      "beliefChoice": 0,
+      "dungeon": 0
     },
     {
       "stepID": 64303,
@@ -115,7 +127,8 @@
       "region": 61301,
       "world": 1,
       "stepType": 4,
-      "beliefChoice": 1
+      "beliefChoice": 1,
+      "dungeon": 0
     },
     {
       "stepID": 64304,
@@ -124,7 +137,8 @@
       "region": 61302,
       "world": 2,
       "stepType": 3,
-      "beliefChoice": 0
+      "beliefChoice": 0,
+      "dungeon": 87301
     },
     {
       "stepID": 64305,
@@ -133,7 +147,8 @@
       "region": 61302,
       "world": 2,
       "stepType": 5,
-      "beliefChoice": 0
+      "beliefChoice": 0,
+      "dungeon": 87301
     },
     {
       "stepID": 64401,
@@ -142,7 +157,8 @@
       "region": 61401,
       "world": 1,
       "stepType": 1,
-      "beliefChoice": 0
+      "beliefChoice": 0,
+      "dungeon": 0
     },
     {
       "stepID": 64402,
@@ -151,7 +167,8 @@
       "region": 61401,
       "world": 1,
       "stepType": 4,
-      "beliefChoice": 1
+      "beliefChoice": 1,
+      "dungeon": 0
     },
     {
       "stepID": 64403,
@@ -160,7 +177,8 @@
       "region": 61402,
       "world": 2,
       "stepType": 1,
-      "beliefChoice": 0
+      "beliefChoice": 0,
+      "dungeon": 87401
     },
     {
       "stepID": 64404,
@@ -169,7 +187,8 @@
       "region": 61402,
       "world": 2,
       "stepType": 5,
-      "beliefChoice": 0
+      "beliefChoice": 0,
+      "dungeon": 87401
     },
     {
       "stepID": 64405,
@@ -178,7 +197,8 @@
       "region": 61403,
       "world": 2,
       "stepType": 5,
-      "beliefChoice": 0
+      "beliefChoice": 0,
+      "dungeon": 87402
     },
     {
       "stepID": 64501,
@@ -187,7 +207,8 @@
       "region": 61501,
       "world": 1,
       "stepType": 1,
-      "beliefChoice": 0
+      "beliefChoice": 0,
+      "dungeon": 0
     },
     {
       "stepID": 64502,
@@ -196,7 +217,8 @@
       "region": 61501,
       "world": 2,
       "stepType": 3,
-      "beliefChoice": 0
+      "beliefChoice": 0,
+      "dungeon": 87501
     },
     {
       "stepID": 64503,
@@ -205,7 +227,8 @@
       "region": 61502,
       "world": 2,
       "stepType": 4,
-      "beliefChoice": 0
+      "beliefChoice": 0,
+      "dungeon": 87501
     },
     {
       "stepID": 64504,
@@ -214,7 +237,8 @@
       "region": 61502,
       "world": 2,
       "stepType": 5,
-      "beliefChoice": 0
+      "beliefChoice": 0,
+      "dungeon": 87501
     },
     {
       "stepID": 64505,
@@ -223,7 +247,8 @@
       "region": 61502,
       "world": 2,
       "stepType": 4,
-      "beliefChoice": 1
+      "beliefChoice": 1,
+      "dungeon": 87501
     }
   ]
 }

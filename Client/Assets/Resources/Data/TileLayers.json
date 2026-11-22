@@ -1,0 +1,60 @@
+{
+  "rows": [
+    {
+      "layerID": 8601,
+      "name": "Ground",
+      "sortOrder": 0,
+      "collision": 0,
+      "worldSwap": 1
+    },
+    {
+      "layerID": 8602,
+      "name": "Details",
+      "sortOrder": 10,
+      "collision": 0,
+      "worldSwap": 1
+    },
+    {
+      "layerID": 8603,
+      "name": "Collision",
+      "sortOrder": 0,
+      "collision": 1,
+      "worldSwap": 1
+    },
+    {
+      "layerID": 8604,
+      "name": "Structures",
+      "sortOrder": 20,
+      "collision": 0,
+      "worldSwap": 1
+    },
+    {
+      "layerID": 8605,
+      "name": "Props",
+      "sortOrder": 30,
+      "collision": 0,
+      "worldSwap": 1
+    },
+    {
+      "layerID": 8606,
+      "name": "Animated",
+      "sortOrder": 40,
+      "collision": 0,
+      "worldSwap": 1
+    },
+    {
+      "layerID": 8607,
+      "name": "GameplayMarkers",
+      "sortOrder": 50,
+      "collision": 0,
+      "worldSwap": 0
+    },
+    {
+      "layerID": 8608,
+      "name": "Foreground",
+      "sortOrder": 100,
+      "collision": 0,
+      "worldSwap": 1
+    }
+  ]
+}

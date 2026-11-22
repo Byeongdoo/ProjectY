@@ -111,8 +111,8 @@ namespace Table
         public int linkRegion;
         /// <summary>이승 통행</summary>
         public int livingPass;
-        /// <summary>저승 통행</summary>
-        public int underPass;
+        /// <summary>던전</summary>
+        public int dungeon;
         /// <summary>개방 영향</summary>
         public int openBy;
     }
@@ -398,6 +398,8 @@ namespace Table
         public int stepType;
         /// <summary>신념 선택</summary>
         public int beliefChoice;
+        /// <summary>던전</summary>
+        public int dungeon;
     }
 
     [Serializable]
@@ -431,9 +433,9 @@ namespace Table
         public string name = "";
         /// <summary>프리팹 이름</summary>
         public string prefabName = "";
-        /// <summary>탐지 범위</summary>
+        /// <summary>탐지 범위(칸)</summary>
         public int scanRange;
-        /// <summary>복귀 거리</summary>
+        /// <summary>복귀 거리(칸)</summary>
         public int leashRange;
         /// <summary>드랍</summary>
         public int dropID;
@@ -474,9 +476,9 @@ namespace Table
         public float attackSpeed;
         /// <summary>이동 속도(칸/초)</summary>
         public float moveSpeed;
-        /// <summary>경직 저항</summary>
+        /// <summary>[폐기] 경직 저항</summary>
         public int staggerResist;
-        /// <summary>경직 한계치</summary>
+        /// <summary>[폐기] 경직 한계치</summary>
         public int staggerMax;
         /// <summary>경험치 보상</summary>
         public int expReward;
@@ -611,7 +613,7 @@ namespace Table
         public float defMul;
         /// <summary>이동속도 배율</summary>
         public float moveMul;
-        /// <summary>경직 한계치</summary>
+        /// <summary>[폐기] 경직 한계치</summary>
         public int staggerMax;
         /// <summary>보상 배율</summary>
         public float rewardMul;
@@ -802,6 +804,8 @@ namespace Table
     {
         /// <summary>고유 아이디</summary>
         public int elementID;
+        /// <summary>공간</summary>
+        public int space;
         /// <summary>화면 영역</summary>
         public string area = "";
         /// <summary>요소 이름</summary>
@@ -969,6 +973,83 @@ namespace Table
         public DungeonSectionsTable(IEnumerable<DungeonSectionsRow> rows) : base("dungeonSections", rows, r => r.sectionID) { }
     }
 
+    // ===== lobbySpots =====
+    [Serializable]
+    public class LobbySpotsRow
+    {
+        /// <summary>고유 아이디</summary>
+        public int spotID;
+        /// <summary>시설 이름</summary>
+        public string name = "";
+        /// <summary>기능</summary>
+        public int function;
+        /// <summary>NPC</summary>
+        public string npcName = "";
+        /// <summary>도착 지점 여부</summary>
+        public int isSpawn;
+    }
+
+    [Serializable]
+    public class LobbySpotsFile
+    {
+        public List<LobbySpotsRow> rows = new List<LobbySpotsRow>();
+    }
+
+    public sealed class LobbySpotsTable : RowTable<int, LobbySpotsRow>
+    {
+        public LobbySpotsTable(IEnumerable<LobbySpotsRow> rows) : base("lobbySpots", rows, r => r.spotID) { }
+    }
+
+    // ===== tileLayers =====
+    [Serializable]
+    public class TileLayersRow
+    {
+        /// <summary>고유 아이디</summary>
+        public int layerID;
+        /// <summary>레이어 이름</summary>
+        public string name = "";
+        /// <summary>정렬 순서</summary>
+        public int sortOrder;
+        /// <summary>충돌</summary>
+        public int collision;
+        /// <summary>세계별 교체</summary>
+        public int worldSwap;
+    }
+
+    [Serializable]
+    public class TileLayersFile
+    {
+        public List<TileLayersRow> rows = new List<TileLayersRow>();
+    }
+
+    public sealed class TileLayersTable : RowTable<int, TileLayersRow>
+    {
+        public TileLayersTable(IEnumerable<TileLayersRow> rows) : base("tileLayers", rows, r => r.layerID) { }
+    }
+
+    // ===== objectSwaps =====
+    [Serializable]
+    public class ObjectSwapsRow
+    {
+        /// <summary>고유 아이디</summary>
+        public int swapID;
+        /// <summary>분류</summary>
+        public int category;
+        /// <summary>충돌 규칙</summary>
+        public int collisionRule;
+    }
+
+    [Serializable]
+    public class ObjectSwapsFile
+    {
+        public List<ObjectSwapsRow> rows = new List<ObjectSwapsRow>();
+    }
+
+    public sealed class ObjectSwapsTable : RowTable<int, ObjectSwapsRow>
+    {
+        public ObjectSwapsTable(IEnumerable<ObjectSwapsRow> rows) : base("objectSwaps", rows, r => r.swapID) { }
+    }
+
     // ===== strings =====
     [Serializable]
     public class StringsRow
@@ -1029,6 +1110,9 @@ namespace Table
         public static BossSkillsTable BossSkills { get; private set; }
         public static DungeonsTable Dungeons { get; private set; }
         public static DungeonSectionsTable DungeonSections { get; private set; }
+        public static LobbySpotsTable LobbySpots { get; private set; }
+        public static TileLayersTable TileLayers { get; private set; }
+        public static ObjectSwapsTable ObjectSwaps { get; private set; }
         public static StringsTable Strings { get; private set; }
 
         /// <summary>하나라도 실패하면 어느 파일인지 담은 예외를 던진다. 호출 쪽은 즉시 종료해야 한다.</summary>
@@ -1062,6 +1146,9 @@ namespace Table
             BossSkills = Load<BossSkillsFile, BossSkillsTable>(reader, "BossSkills", f => new BossSkillsTable(f.rows));
             Dungeons = Load<DungeonsFile, DungeonsTable>(reader, "Dungeons", f => new DungeonsTable(f.rows));
             DungeonSections = Load<DungeonSectionsFile, DungeonSectionsTable>(reader, "DungeonSections", f => new DungeonSectionsTable(f.rows));
+            LobbySpots = Load<LobbySpotsFile, LobbySpotsTable>(reader, "LobbySpots", f => new LobbySpotsTable(f.rows));
+            TileLayers = Load<TileLayersFile, TileLayersTable>(reader, "TileLayers", f => new TileLayersTable(f.rows));
+            ObjectSwaps = Load<ObjectSwapsFile, ObjectSwapsTable>(reader, "ObjectSwaps", f => new ObjectSwapsTable(f.rows));
             Strings = Load<StringsFile, StringsTable>(reader, "Strings", f => new StringsTable(f.rows));
         }
 

@@ -5,7 +5,7 @@
       "region": 61101,
       "linkRegion": 61102,
       "livingPass": 1,
-      "underPass": 1,
+      "dungeon": 0,
       "openBy": 0
     },
     {
@@ -13,7 +13,7 @@
       "region": 61102,
       "linkRegion": 0,
       "livingPass": 0,
-      "underPass": 1,
+      "dungeon": 87101,
       "openBy": 0
     },
     {
@@ -21,7 +21,7 @@
       "region": 61102,
       "linkRegion": 61103,
       "livingPass": 0,
-      "underPass": 0,
+      "dungeon": 87101,
       "openBy": 63101
     },
     {
@@ -29,7 +29,7 @@
       "region": 61201,
       "linkRegion": 61202,
       "livingPass": 1,
-      "underPass": 1,
+      "dungeon": 0,
       "openBy": 0
     },
     {
@@ -37,7 +37,7 @@
       "region": 61202,
       "linkRegion": 0,
       "livingPass": 1,
-      "underPass": 0,
+      "dungeon": 0,
       "openBy": 0
     },
     {
@@ -45,15 +45,15 @@
       "region": 61202,
       "linkRegion": 61203,
       "livingPass": 0,
-      "underPass": 1,
-      "openBy": 63201
+      "dungeon": 87201,
+      "openBy": 0
     },
     {
       "passageID": 62301,
       "region": 61301,
       "linkRegion": 61302,
       "livingPass": 0,
-      "underPass": 0,
+      "dungeon": 87301,
       "openBy": 63301
     },
     {
@@ -61,7 +61,7 @@
       "region": 61401,
       "linkRegion": 61402,
       "livingPass": 1,
-      "underPass": 1,
+      "dungeon": 0,
       "openBy": 0
     },
     {
@@ -69,7 +69,7 @@
       "region": 61402,
       "linkRegion": 61403,
       "livingPass": 0,
-      "underPass": 1,
+      "dungeon": 87402,
       "openBy": 0
     },
     {
@@ -77,8 +77,8 @@
       "region": 61501,
       "linkRegion": 61502,
       "livingPass": 0,
-      "underPass": 1,
-      "openBy": 63501
+      "dungeon": 87501,
+      "openBy": 0
     }
   ]
 }

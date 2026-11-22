@@ -97,6 +97,14 @@
       "textKey": "Dlg_813021"
     },
     {
+      "dialogueID": 813022,
+      "npc": 81302,
+      "state": 2,
+      "giveClue": 0,
+      "belief": 0,
+      "textKey": "Dlg_813022"
+    },
+    {
       "dialogueID": 813030,
       "npc": 81303,
       "state": 0,
