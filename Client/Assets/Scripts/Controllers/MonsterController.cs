@@ -13,6 +13,21 @@ public class MonsterController : CreatureController
 		base.Init();
 	}
 
+	// 망령 프리팹(Prefabs/Creature/Monster)은 8방향 클립을 쓴다. 레거시 Monster 프리팹은 기존 규칙.
+	protected override void UpdateAnimation()
+	{
+		if (_animator == null || _sprite == null)
+			return;
+
+		if (_eightDirClips)
+		{
+			PlayEightDirClip();
+			return;
+		}
+
+		base.UpdateAnimation();
+	}
+
 	protected override void UpdateIdle()
 	{
 		base.UpdateIdle();

@@ -27,6 +27,19 @@ public class ObjectManager
 		return mine ? MyPlayerPrefab : PlayerPrefab;
 	}
 
+	// 망령은 characterInfos.prefabName 프리팹(Prefabs/Creature/Monster, 생성은 Tools > ProjectY > Build Monster Prefabs).
+	// characterId가 0이거나 프리팹이 아직 없으면 레거시 임시 몬스터를 쓴다.
+	static string MonsterPrefabFor(int characterId)
+	{
+		if (characterId != 0 && Table.TableManager.CharacterInfos.TryGet(characterId, out Table.CharacterInfosRow row))
+		{
+			string path = $"Creature/Monster/{row.prefabName}";
+			if (Resources.Load<GameObject>($"Prefabs/{path}") != null)
+				return path;
+		}
+		return "Creature/Monster";
+	}
+
 	const int ConfigAlliesOverlap = 90005; // 아군끼리 같은 칸 겹침 허용(1=허용)
 
 	// 내 캐릭터가 그 칸으로 들어가지 못하게 막는 대상. 아군 겹침을 허용하면 다른 플레이어는 막지 않는다.
@@ -87,7 +100,7 @@ public class ObjectManager
 		}
 		else if (objectType == GameObjectType.Monster)
 		{
-			GameObject go = Managers.Resource.Instantiate("Creature/Monster");
+			GameObject go = Managers.Resource.Instantiate(MonsterPrefabFor(info.CharacterId));
 			go.name = info.Name;
 			_objects.Add(info.ObjectId, go);
 

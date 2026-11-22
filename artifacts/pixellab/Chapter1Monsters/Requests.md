@@ -22,3 +22,17 @@
 | 곡하는 귀신 | 02 | 2000103 | `Assets/Resources/Art/Monsters/2000103/2000103_Front.png` |
 
 비교표에서 각 외형이 잘 드러나는 정면 후보를 골라 임포트했다. Unity에서 세 파일을 Resources의 Sprite로 불러와 64×64 px, 32 PPU, Point, 투명 배경과 하단 기준 피벗을 확인했다.
+
+## 8방향 애니메이션 납품
+
+세 몬스터의 대기, 이동, 기본 공격, 피격, 기절, 사망, 넉백, 스킬 1·2를 PixelLab V3로 제작했다. [제작 명세](AnimationPlan.json)와 [작업 기록](AnimationQueue.json)에 캐릭터와 애니메이션 그룹 ID를 보관한다.
+
+| 몬스터 | Unity 에셋 폴더 | 시트 | 클립 | 프레임 |
+| --- | --- | ---: | ---: | ---: |
+| 안개 잡귀 | `Assets/Resources/Art/Monsters/2000101` | 9 | 72 | 480 |
+| 목매단 망령 | `Assets/Resources/Art/Monsters/2000102` | 9 | 72 | 480 |
+| 곡하는 귀신 | `Assets/Resources/Art/Monsters/2000103` | 9 | 72 | 480 |
+
+각 폴더에 `Sprites`, `Sheets`, `Animations`, `AnimationSource.json`, Animator Controller와 `<ID>_Animated.prefab`을 저장했다. Unity에서 프리팹을 임포트했고, 총 216개 Animator 상태와 1,440개 스프라이트 참조를 확인했다. 기본 상태는 `IDLE_SOUTH`다. 던전 스폰 연결은 별도 구현 대상이다.
+
+일부 원본 프레임에 PixelLab이 만든 효과 픽셀이 있다. 정면 샘플에서 곡하는 귀신의 대기 중 청록색 파편과 목매단 망령의 스킬 1 중 섬광을 확인했다.

@@ -1,0 +1,21 @@
+{
+  "animation": "ATTACK",
+  "directions": [
+    "south",
+    "south-east",
+    "east",
+    "north-east",
+    "north",
+    "north-west",
+    "west",
+    "south-west"
+  ],
+  "frameCount": 8,
+  "framesPerSecond": 12,
+  "loop": false,
+  "cellWidth": 80,
+  "cellHeight": 80,
+  "sourcePixelsResized": false,
+  "alignment": "PixelLab canvas centres; no per-frame trimming",
+  "groupId": "a29f8773-810b-4f41-930b-0c8fd19db300"
+}

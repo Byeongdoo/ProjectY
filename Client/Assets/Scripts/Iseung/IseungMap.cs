@@ -11,6 +11,13 @@ public class IseungMap : MonoBehaviour
 
 	public Grid Grid => _grid;
 
+	// Collision은 에디터에서 팔레트로 칠하며 보이도록 렌더러를 켜 두고, 플레이 중에는 숨긴다.
+	void Awake()
+	{
+		if (_collision != null && _collision.TryGetComponent(out TilemapRenderer r))
+			r.enabled = false;
+	}
+
 	// 지면이 깔린 범위(월드 좌표). 카메라가 맵 밖을 비추지 않게 할 때 쓴다.
 	public Bounds WorldBounds
 	{

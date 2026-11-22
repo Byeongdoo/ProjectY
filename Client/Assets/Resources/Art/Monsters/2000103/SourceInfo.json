@@ -1,0 +1,15 @@
+{
+  "name": "곡하는 귀신",
+  "characterId": "796ac10a-f9a4-4f3b-a8cf-1bff0295655e",
+  "sourceJobId": "3ad57e2c-80b9-4742-a9ce-975afa0c6199",
+  "sourceImageIndex": 1,
+  "metrics": {
+    "canvasWidth": 64,
+    "canvasHeight": 64,
+    "pixelsPerUnit": 32,
+    "pivotPixels": {
+      "x": 32.0,
+      "y": 2.0
+    }
+  }
+}

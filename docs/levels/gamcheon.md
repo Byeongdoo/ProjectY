@@ -1,27 +1,37 @@
 # 감천 마을 (regions 61101) 레벨
 
 - 씬: `Client/Assets/Scenes/Single/Village_Gamcheon.unity` (`regions.scene` = `Village_Gamcheon`). Build Settings에 등록됨.
-- 생성·검증: `Tools > ProjectY > Levels > Build Village_Gamcheon` ([GamcheonVillageBuilder.cs](../../Client/Assets/Editor/GamcheonVillageBuilder.cs)). **배치 좌표는 이 스크립트가 원본**이다. 씬을 손으로 고치면 다시 돌릴 때 덮어쓰므로 좌표를 스크립트에 반영한다. 저장 안 된 씬이 열려 있으면 실행하지 않는다.
-- 미리보기: `artifacts/levels/Village_Gamcheon_Overview.png` (1칸 = 32px).
+- **맵은 사람이 칠한다.** 지면·건물·충돌은 Tile Palette로 각 레이어 Tilemap에 칠하고, 건물·나무·소품 프리팹은 `Village_Gamcheon/YSortedObjects` 아래에 놓는다. **위치의 원본은 씬**이다.
+- 도구([GamcheonVillageBuilder.cs](../../Client/Assets/Editor/GamcheonVillageBuilder.cs)), 둘 다 칠한 타일·놓은 프리팹은 건드리지 않는다.
+  - `Tools > ProjectY > Levels > Gamcheon > Setup Scene`: 씬 뼈대를 **없는 것만** 만들고 참조를 다시 잇는다. 레이어 Tilemap(`tileLayers`), 마커, `IseungMap`, `Player`(스폰 마커 칸으로 이동), 카메라, 충돌 타일·팔레트가 대상이다. 이미 있는 마커는 옮기지 않는다.
+  - `Tools > ProjectY > Levels > Gamcheon > Validate + Overview`: 칠한 Ground/Collision과 마커 위치로 규격을 검사하고, `artifacts/levels/Village_Gamcheon_Overview.png`(1칸 = 32px)를 만든다.
 - 기준: Notion `레벨 디자인 가이드`(2-5 이승 지역, 2-10 타일맵 레이어), `01 감천 마을` 맵 설정. 수치는 `configs` 90001~90019, 레이어 정렬은 `tileLayers`에서 읽는다.
 
-## 배치 (64×44칸, 왼쪽 아래 원점)
+## 칠하는 법
 
-| 요소 | 위치 | 비고 |
-|---|---|---|
-| 플레이어 시작 | (32,4) 마을 어귀 | `Markers/PlayerSpawn` |
-| 주 동선 | 남북 큰길 3칸(x 31~33), 동서 길 2칸(y 21~22) | 90007(2칸) 이상 |
-| 마을 우물 (랜드마크) | 광장 중앙 3×3 (31~33, 21~23) | 통행 불가 |
-| 노파 집 (랜드마크) | 동쪽, 돌담 안 7×5 + 마당 + 장독대 | 돌담 서쪽 틈으로 출입 |
-| 숲길 입구 (랜드마크) | 북쪽 끝 x 31~33 | `Markers/Passage_62101`(트리거) → 안개골 숲 61102, 앞 3×3 비움 |
-| 이장 집(기와), 아이 어머니 집(초가) | 서쪽 길 북편 | 일반 초가 2채는 남쪽 길 양옆 |
-| 이승 신단 (altarCount 1) | (37,34) 북쪽 길 동편 | 주변 8칸 비충돌 |
-| 단서 51102 아이의 빈 무덤 (Observe) | (21,36) 무덤 언덕, 상호작용 칸 (22,36) | 주 동선에서 9칸 |
-| NPC 81101 노파 / 81102 어머니 / 81103 이장 | (52,24) / (17,24) / (36,23) | `Markers/NpcSpot_<npcID>` |
+- **팔레트:** `Tools > ProjectY > Levels > Gamcheon > Build Tile Palettes`가 `Tile_Gamcheon_Ground/Deco/Struct.png`를 잘라(32 PPU, Point) 시트별 `Tiles/` 타일 에셋과 `Assets/Art/Palettes/Gamcheon/Palette_Gamcheon_{Ground,Deco,Struct}`를 만든다. 모든 타일은 한 칸(32px)이다. Ground는 시트 격자 그대로, Deco·Struct는 그림마다 그 그림을 덮는 칸 묶음으로 잘라(가로 가운데, 바닥 맞춤) 팔레트에 묶음별로 늘어놓는다. 큰 그림은 팔레트에서 묶음을 드래그로 골라 한 번에 칠한다. 시트를 다시 그리면 다시 실행한다(같은 이름은 GUID 유지).
+- **레이어:** Ground(지면, 없는 칸은 맵 밖으로 막힘) / Details / Structures / Props / Animated / Foreground(캐릭터 위를 덮는 것). 정렬 순서는 Setup이 `tileLayers`에서 맞춘다.
+- **충돌:** `Collision` Tilemap에 `Placeholders/Gamcheon/Palette_Collision` 팔레트의 빨간 타일을 칠한다. 타일이 있는 칸은 못 지나간다. 에디터에서는 반투명으로 보이고 플레이 중에는 `IseungMap`이 숨긴다.
+- **Y 정렬 프리팹:** 건물·나무 등 캐릭터가 뒤로 돌아가는 것은 Tilemap 대신 프리팹으로 `YSortedObjects`에 둔다. 카메라는 Y축 정렬이고 정렬 순서는 Props(30)다. 프리팹이 놓인 칸의 충돌은 따로 칠한다.
+- **마커(`Markers/*`):** 칸 안에 놓으면 그 칸이 위치다. `PlayerSpawn`, `NpcSpot_<npcID>`, `Clue_<clueID>`(Observe 단서), `Altar_61101`(IseungAltar), `Passage_62101`(BoxCollider2D 트리거, 크기가 출구 범위). 시각 표시는 `EditorOnly`라 빌드에서 빠진다.
 
-- 레이어: `tileLayers` 8종을 Tilemap으로 만들고 sortOrder를 그대로 쓴다. Collision은 렌더러를 끈 마스크(이승판만). 나무·바위는 발밑 Y 정렬 오브젝트(Props 순서).
-- 빌더가 검사하는 것: 최대 변(90018), 주 동선 폭(90007), 조사 대상 간격(90019)·앞 칸, 신단 주변, 관문 앞 3×3, NPC·단서·신단·출구가 스폰에서 걸어서 닿는지(대각선 규칙 미확정이라 4방향으로 판정), 테이블의 감천 NPC·Observe 단서 목록과 배치 일치.
-- `Markers`의 시각 표시는 `EditorOnly`라 빌드에서 빠진다. NPC 생성·상호작용·출구 이동은 이승 시스템 구현 때 마커 이름으로 연결한다.
+## Validate가 검사하는 것
+
+- 씬 이름 = `regions.scene`, 칠한 지면의 최대 변 ≤ 90018, `passages` 62101이 이승 통행 가능.
+- 마커가 테이블과 맞는가: 감천 NPC 전원, Observe 단서 전원, 신단 수 = `altarCount`.
+- 스폰에서 걸어서 닿는가(대각선 모서리 규칙 미확정이라 4방향으로 판정): NPC 칸, 단서 상하좌우 중 한 칸, 신단 주변, 출구.
+- 신단 주변 8칸 비충돌, 출구 트리거 칸 비충돌, 조사 대상끼리 간격 ≥ 90019.
+- 주 동선 폭(90007)은 칠한 길을 자동으로 판정하지 않는다. 눈으로 확인한다.
+
+## 처음 위치 (마커가 없을 때 Setup이 쓰는 값)
+
+| 마커 | 칸 |
+|---|---|
+| PlayerSpawn | (32,4) |
+| NpcSpot 81101 노파 / 81102 어머니 / 81103 이장 | (52,24) / (17,24) / (36,23) |
+| Clue_51102 아이의 빈 무덤 | (21,36) |
+| Altar_61101 | (37,34) |
+| Passage_62101 → 안개골 숲 61102 | (32,42), 3×3 |
 
 ## 조작 (이승 단독, 서버 없음)
 
@@ -30,7 +40,7 @@
 - 이동 중 입력 보정: 직선 한 칸을 시작하고 `configs` 20048(0.15초, 가정값) 안에 두 번째 방향키가 들어오면 그 칸을 대각선으로 바꾼다. 진행 방향의 정반대를 누르면 출발 칸으로 바로 돌아간다. 둘 다 한 칸에 한 번만 적용된다. 그 밖의 방향 전환은 칸 도착 때 반영되고, 이동 중에 눌렀다 뗀 방향키도 기억해 두었다가 칸 도착 때 한 칸 반영한다(`StepInputBuffer`, 키를 뗀 순간은 기억하지 않음).
 - 칸 판정은 씬 루트의 [IseungMap](../../Client/Assets/Scripts/Iseung/IseungMap.cs)(Ground 범위 + Collision 마스크). 대각선은 서버 `Map.CanMove`와 같이 직선 두 칸이 모두 막혔을 때만 막는다.
 - 카메라는 [IseungCameraFollow](../../Client/Assets/Scripts/Iseung/IseungCameraFollow.cs): 주인공 추적, 맵 밖 비추지 않음, 1픽셀 격자 스냅.
-- 애니메이터: `Resources/Art/Characters/Protagonist/Protagonist.controller`(빌더가 IDLE/RUN 8방향 클립으로 생성).
+- 애니메이터: `Resources/Art/Characters/Protagonist/Protagonist.controller`(없으면 Setup이 IDLE/RUN 8방향 클립으로 생성).
 
 ## 결정이 필요한 것
 
@@ -38,19 +48,3 @@
 - 이승만의 길(챕터마다 1개 이상): 1챕터에 `passages` 행이 없다. 감천에 둘지는 '챕터별 레벨 디자인'에서 정해야 한다.
 - 남쪽 어귀는 다른 지역과 연결되지 않는다(감천은 선행 지역 없음). 마을 밖으로 나가는 길을 막을 연출이 필요한지.
 
-## 리소스 요청 (Codex/PixelLab, 규격은 art-pipeline.md v1)
-
-현재는 `Client/Assets/Placeholders/Gamcheon/`의 단색 타일. 받으면 빌더의 해당 타일만 바꾼다.
-
-| 이름 | 크기 | 용도 / 레이어 |
-|---|---|---|
-| Gamcheon_ThatchHouse (몸체·벽·문 / 지붕 분리) | 5×4칸(160×128px) 기준 | 초가 — Structures(몸체), Foreground(지붕) |
-| Gamcheon_TileHouse (몸체 / 기와지붕 분리) | 7×5칸(224×160px) | 이장 집 |
-| Gamcheon_CroneHouse | 7×5칸 | 노파 집(굿을 청한 집 표식: 금줄 등) |
-| Gamcheon_StoneWall 직선·모서리·끝 | 32×32 모듈 | 돌담 — Structures |
-| Gamcheon_Well + 물결 4프레임 | 3×3칸(96×96) | 우물 — Structures / Animated |
-| Gamcheon_Jangdokdae | 2×2칸 | 장독대 — Props |
-| Gamcheon_Grave, Gamcheon_GraveEmpty(파헤쳐진) | 1×1칸(투명 소품, 높이 여유 허용) | 무덤 — Props, 빈 무덤은 조사 대상 |
-| Gamcheon_Altar (이승 신단) | 1×1칸 + 높이 여유 | Props |
-| Gamcheon_ForestEdge (빽빽한 숲 가장자리) | 32×32 모듈 또는 큰 수관 | 지금은 소나무를 촘촘히 배치 |
-| Gamcheon_Details (풀 덤불·낙엽·돌멩이) | 32×32 투명 | Details |

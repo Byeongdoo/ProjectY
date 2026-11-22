@@ -4,7 +4,7 @@
 
 ## 만드는 법 (Unity 메뉴)
 
-1. `Tools > ProjectY > Levels > Build Village_Gamcheon` — 감천 신단에 `IseungAltar`가 붙는다. `Protagonist.controller`도 여기서 만든다.
+1. `Tools > ProjectY > Levels > Gamcheon > Setup Scene` — 감천 신단에 `IseungAltar`가 붙는다. `Protagonist.controller`도 여기서 만든다.
 2. `Tools > ProjectY > Levels > Build Multi Prototype` ([MultiPrototypeBuilder.cs](../../Client/Assets/Editor/MultiLevels/MultiPrototypeBuilder.cs))
    - 씬: `Assets/Scenes/Multi/Samcheondo.unity`, `Dungeon_87101.unity` (Build Settings 등록)
    - 프리팹: `Resources/Prefabs/Creature/MudangMyPlayer`, `MudangPlayer` (주인공 8방향 스프라이트) — 삼천도용
@@ -22,6 +22,7 @@
 | 삼천도 입장 | `MultiScene`이 타일맵으로 칸 판정 생성, 접속, 접속되면 `C_EnterGame` | 접속 시 `PendingRoom = 삼천도`, `C_EnterGame`에 강가 도착 영역(6×6, configs 90020) 빈 칸에 배치 |
 | 출항 | 사공(8802) 앞 칸에서 F → 원혼 선택(←→, Enter, Esc) → `C_EnterDungeon(87101, spiritId)` | 로비 룸·던전·원혼 존재·사공 옆 칸(체비셰프 1) 검증 → 던전 룸에서 원혼 예약(같은 룸 안 중복이면 `S_EnterDungeonReject`) → 로비에서 퇴장 → `S_ChangeScene("Dungeon_87101")`. 던전에서는 `ObjectInfo.spiritId`의 원혼 프리팹으로 스폰 |
 | 던전 입장 | 씬 로딩 후 `C_EnterGame` | 던전 룸(던전별 공용 1개)의 입장 영역에 배치 |
+| 망령 배치 | `ObjectInfo.characterId`의 `Prefabs/Creature/Monster/<prefabName>`(생성: `Tools > ProjectY > Build Monster Prefabs`)으로 표시 | 던전 룸 생성 때 levelObjects 팩 지점(objType 10, size = 체 수)에 구간 spawnGroups 구성으로 배치. 스탯 characterLevel(group = characterID), 체력 × dungeons.mobHpRate, 탐지·복귀 characterInfos. 팩 연동. 쓰러지면 사라짐(재배치는 서버 재시작) |
 
 - 씬 이름 = 서버 맵 이름: `Samcheondo`, `Dungeon_<dungeonID>` (서버 `RoomManager`, 클라 빌더가 같은 규칙).
 - 삼천도는 전투 없음: 클라 Space 비활성·체력 막대 숨김, 서버도 로비 룸의 `C_Skill`을 버린다.
@@ -30,7 +31,7 @@
 ## 임시로 정한 것 (정식 기획·데이터가 오면 교체)
 
 - **강림 해금 조건 없음**: 감천 신단에서 바로 강림한다. Notion 기준 첫 강림은 안개골 무너진 다리 앞 신단(64103)이다.
-- **매칭 없음, 원혼 선택은 임시 화면**: 사공 → 원혼 선택(IMGUI 임시 화면) → 던전 87101 테스트 룸. 모든 플레이어가 같은 룸을 쓰고, 그 룸 안에서 원혼 중복만 막는다(인원 제한·큐·수락·30초 제한·원혼별 스탯 배율 미적용).
+- **매칭 없음, 원혼 선택은 임시 화면**: 사공 → 원혼 선택(IMGUI 임시 화면) → 던전 87101 테스트 룸. 모든 플레이어가 같은 룸을 쓰고, 그 룸 안에서 원혼 중복만 막는다(인원 제한·큐·수락·30초 제한 없음). 스탯은 characterLevel × 원혼 배율을 서버가 정한다(공격력·체력·이동·공속·받는 피해 적용, 치명타·위협·신력·평타 사거리·계수는 값만 보관 — 해당 전투 판정 미구현).
 - **삼천도 배치**: Notion에 배치가 없어 규격(60×34, 강가 6×6, 시설 간 40칸)으로 임시 배치했다. 강은 북쪽, 잔교 끝에 사공(30,28).
 - **던전 배치**: 구간·연결로·불씨·보스방 좌표는 Notion '1챕터 숲' 2-6을 옮겼다(왼쪽 위 원점 → Unity 왼쪽 아래 원점으로 변환). 원본인 xlsx `levelMaps`/`levelObjects` 시트가 **저장소 xlsx에 없다.** 산신당 앞마당(x1~20, y46~54)·보스방 입구(x21, y49~51)·입장 영역·단서 51103 위치는 문서에 없어 임의로 정했고, 망자의 다리·붉은 실 장막은 아직 없다.
 - **강림 확인 창**: OnGUI 플레이스홀더. '인게임 HUD' 구현 때 교체.

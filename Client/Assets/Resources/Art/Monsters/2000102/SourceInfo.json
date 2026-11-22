@@ -1,0 +1,15 @@
+{
+  "name": "목매단 망령",
+  "characterId": "43d7eab8-9921-4b00-8e53-268d4b2e5a03",
+  "sourceJobId": "020a35c2-687c-481f-b731-00a8b6e148f1",
+  "sourceImageIndex": 0,
+  "metrics": {
+    "canvasWidth": 64,
+    "canvasHeight": 64,
+    "pixelsPerUnit": 32,
+    "pivotPixels": {
+      "x": 32.0,
+      "y": 1.0
+    }
+  }
+}

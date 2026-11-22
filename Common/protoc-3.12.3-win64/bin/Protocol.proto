@@ -122,6 +122,7 @@ message ObjectInfo {
   PositionInfo posInfo = 3;
   StatInfo statInfo = 4;
   int32 spiritId = 5; // 저승 던전에서 빙의한 원혼(spirits.spiritID). 0 = 무당 본모습(삼천도)
+  int32 characterId = 6; // 몬스터: characterInfos.characterID(프리팹·스탯 기준). 0 = 레거시 임시 몬스터
 }
 
 message PositionInfo {

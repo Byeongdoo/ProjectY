@@ -1,0 +1,21 @@
+{
+  "animation": "STUN",
+  "directions": [
+    "south",
+    "south-east",
+    "east",
+    "north-east",
+    "north",
+    "north-west",
+    "west",
+    "south-west"
+  ],
+  "frameCount": 4,
+  "framesPerSecond": 8,
+  "loop": true,
+  "cellWidth": 80,
+  "cellHeight": 80,
+  "sourcePixelsResized": false,
+  "alignment": "PixelLab canvas centres; no per-frame trimming",
+  "groupId": "f2ef380f-8c12-43e4-883d-50cf3763004d"
+}

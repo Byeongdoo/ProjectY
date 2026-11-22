@@ -333,7 +333,7 @@ public static class MultiPrototypeBuilder
     static void BuildPlayerPrefabs(Cfg cfg)
     {
         var ctrl = AssetDatabase.LoadAssetAtPath<RuntimeAnimatorController>(ProtagonistRoot + "/Protagonist.controller");
-        if (!ctrl) throw new Exception("Protagonist.controller가 없다 — Tools > ProjectY > Levels > Build Village_Gamcheon을 먼저 실행한다");
+        if (!ctrl) throw new Exception("Protagonist.controller가 없다 — Tools > ProjectY > Levels > Gamcheon > Setup Scene을 먼저 실행한다");
         var sprite = AssetDatabase.LoadAssetAtPath<Sprite>(HeroSprite);
         if (!sprite) throw new Exception("주인공 스프라이트 누락: " + HeroSprite);
         int order = cfg.Layers["Props"].sortOrder;

@@ -1,0 +1,21 @@
+{
+  "animation": "HIT",
+  "directions": [
+    "south",
+    "south-east",
+    "east",
+    "north-east",
+    "north",
+    "north-west",
+    "west",
+    "south-west"
+  ],
+  "frameCount": 4,
+  "framesPerSecond": 12,
+  "loop": false,
+  "cellWidth": 80,
+  "cellHeight": 80,
+  "sourcePixelsResized": false,
+  "alignment": "PixelLab canvas centres; no per-frame trimming",
+  "groupId": "9def2cf5-3c60-4b3e-9322-6bf7c5db463a"
+}

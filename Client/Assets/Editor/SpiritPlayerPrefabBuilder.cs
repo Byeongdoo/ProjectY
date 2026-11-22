@@ -86,7 +86,7 @@ public static class SpiritPlayerPrefabBuilder
     }
 
     // 발밑 피벗 기준, 불투명 픽셀의 가장 높은 곳(칸). 캔버스 여백(무명장수 96px 등)을 빼고 머리 위에 체력 막대를 둔다.
-    static float OpaqueTop(Sprite sprite)
+    internal static float OpaqueTop(Sprite sprite)
     {
         var tex = new Texture2D(2, 2);
         tex.LoadImage(File.ReadAllBytes(AssetDatabase.GetAssetPath(sprite)));

@@ -1,0 +1,21 @@
+{
+  "animation": "KNOCKBACK",
+  "directions": [
+    "south",
+    "south-east",
+    "east",
+    "north-east",
+    "north",
+    "north-west",
+    "west",
+    "south-west"
+  ],
+  "frameCount": 4,
+  "framesPerSecond": 10,
+  "loop": false,
+  "cellWidth": 80,
+  "cellHeight": 80,
+  "sourcePixelsResized": false,
+  "alignment": "PixelLab canvas centres; no per-frame trimming",
+  "groupId": "5503889d-f2b2-4b79-a1e0-63c8e1625774"
+}

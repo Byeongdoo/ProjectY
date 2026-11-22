@@ -53,6 +53,41 @@ public class CreatureController : BaseController
 			AddHpBar();
 	}
 
+	// 8방향 클립(IDLE_SOUTH_EAST, RUN_NORTH …)을 가진 프리팹이면 켠다(무당·원혼·망령). 프리팹 생성 도구가 정한다.
+	// 끄면 레거시 임시 스프라이트(앞·뒤·옆 3종 + 뒤집기) 규칙을 쓴다.
+	[SerializeField] protected bool _eightDirClips = false;
+
+	protected static string EightDirSuffix(MoveDir dir)
+	{
+		switch (dir)
+		{
+			case MoveDir.Up: return "NORTH";
+			case MoveDir.Down: return "SOUTH";
+			case MoveDir.Left: return "WEST";
+			case MoveDir.Right: return "EAST";
+			case MoveDir.UpLeft: return "NORTH_WEST";
+			case MoveDir.UpRight: return "NORTH_EAST";
+			case MoveDir.DownLeft: return "SOUTH_WEST";
+			default: return "SOUTH_EAST";
+		}
+	}
+
+	// 원혼·망령 프리팹은 ATTACK·DIE 클립이 있다. 무당 프리팹처럼 없는 동작이면 서 있는 모습으로 둔다.
+	protected void PlayEightDirClip()
+	{
+		string action;
+		if (State == CreatureState.Moving) action = "RUN_";
+		else if (State == CreatureState.Skill) action = "ATTACK_";
+		else if (State == CreatureState.Dead) action = "DIE_";
+		else action = "IDLE_";
+
+		string clip = action + EightDirSuffix(Dir);
+		if (_animator.HasState(0, Animator.StringToHash(clip)) == false)
+			clip = "IDLE_" + EightDirSuffix(Dir);
+		_animator.Play(clip);
+		_sprite.flipX = false;
+	}
+
 	public virtual void OnDamaged()
 	{
 

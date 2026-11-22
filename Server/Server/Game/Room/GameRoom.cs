@@ -32,6 +32,33 @@ namespace Server.Game
 			Map.LoadMap(sceneName);
 		}
 
+		// 던전 룸을 만들 때 한 번 망령 팩을 배치한다(DungeonSpawner). 지금은 던전별 공용 룸이라 쓰러진 망령은 서버를 다시 켜야 돌아온다.
+		public void SpawnDungeonMonsters()
+		{
+			if (Kind != RoomKind.Dungeon)
+				return;
+			if (Table.TableManager.Dungeons.TryGet(DungeonId, out Table.DungeonsRow dungeon) == false)
+				return;
+
+			int count = 0;
+			foreach (DungeonSpawner.PackSpawn pack in DungeonSpawner.Plan(DungeonId, _random))
+			{
+				List<Vector2Int> cells = DungeonSpawner.PickCells(Map, pack.Point, pack.CharacterIds.Count, _random);
+				var members = new List<Monster>();
+				for (int i = 0; i < cells.Count; i++)
+				{
+					Monster monster = ObjectManager.Instance.Add<Monster>();
+					monster.InitFromTable(pack.CharacterIds[i], dungeon.mobHpRate);
+					monster.CellPos = cells[i];
+					monster.Pack = members;
+					members.Add(monster);
+					EnterGame(monster);
+					count++;
+				}
+			}
+			Console.WriteLine($"[{SceneName}] 망령 {count}체 배치");
+		}
+
 		// 들어오는 플레이어를 입장 영역(markers.spawn) 안의 빈 칸에 흩어 놓는다('레벨 디자인 가이드' 2-8 삼천도 도착 영역)
 		Vector2Int PickSpawnCell()
 		{
@@ -86,7 +113,7 @@ namespace Server.Game
 				// 삼천도에서는 무당 본모습이다. 원혼은 던전 입장 때 나루터에서 고른다.
 				if (Kind == RoomKind.Lobby)
 					player.Info.SpiritId = 0;
-				player.ApplyMoveSpeed();
+				player.ApplyStats();
 
 				player.CellPos = PickSpawnCell();
 				player.State = CreatureState.Idle;
@@ -340,11 +367,12 @@ namespace Server.Game
 			if (DataManager.SkillDict.TryGetValue(skillId, out skillData) == false)
 				return;
 
-			// 쿨타임 체크
+			// 쿨타임 체크. 지금 스킬은 Space 평타 자리의 레거시 스킬이라 공격 속도(원혼 배율 포함)로 간격을 나눈다.
+			int cooldownMs = (int)(1000 * skillData.cooldown / player.AttackSpeed);
 			long now = Environment.TickCount64;
 			if (player.NextSkillTick > now)
 				return;
-			player.NextSkillTick = now + (long)(1000 * skillData.cooldown);
+			player.NextSkillTick = now + cooldownMs;
 
 			info.PosInfo.State = CreatureState.Skill;
 			S_Skill skill = new S_Skill() { Info = new SkillInfo() };
@@ -353,7 +381,7 @@ namespace Server.Game
 			Broadcast(skill);
 
 			// 클라이언트의 Idle 복귀 패킷이 오지 않더라도 쿨타임 후에는 Skill 상태에 갇히지 않게 한다
-			PushAfter((int)(1000 * skillData.cooldown), ResetSkillState, player);
+			PushAfter(cooldownMs, ResetSkillState, player);
 
 			switch (skillData.skillType)
 			{

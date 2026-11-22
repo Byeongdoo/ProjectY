@@ -2,6 +2,7 @@
 using Server.Data;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Runtime.InteropServices.ComTypes;
 using System.Text;
 
@@ -20,6 +21,81 @@ namespace Server.Game
 			Stat.Speed = 5.0f;
 
 			State = CreatureState.Idle;
+		}
+
+		// characterInfos.characterID. 클라는 이 값의 prefabName(Prefabs/Creature/Monster)으로 보여 준다. 0이면 레거시 임시 몬스터.
+		public int CharacterId
+		{
+			get { return Info.CharacterId; }
+			set { Info.CharacterId = value; }
+		}
+
+		// 같은 팩(spawnGroups 1회분). 한 체가 탐지·피격되면 팩 전체가 반응한다('망령(적) 시스템' 2-5).
+		public List<Monster> Pack { get; set; }
+
+		// 테이블 망령으로 초기화한다('망령(적) 시스템' 2-4).
+		//   개체 스탯 = characterLevel(group = characterID), 던전 체력 = 개체 체력 × dungeons.mobHpRate
+		//   탐지 = characterInfos.scanRange, 복귀 거리 = characterInfos.leashRange
+		public void InitFromTable(int characterId, float mobHpRate)
+		{
+			Table.CharacterInfosRow info = Table.TableManager.CharacterInfos.Get(characterId);
+			Table.CharacterLevelRow stat = Table.TableManager.CharacterLevel.Rows.First(r => r.group == characterId);
+
+			CharacterId = characterId;
+			Info.Name = info.name;
+			Stat.Level = stat.level;
+			Stat.Attack = stat.attack;
+			Stat.MaxHp = (int)Math.Round(stat.maxHP * mobHpRate);
+			Stat.Hp = Stat.MaxHp;
+			Stat.Speed = stat.moveSpeed;
+			_searchCellDist = info.scanRange;
+			_chaseCellDist = info.leashRange;
+		}
+
+		// 팩 전체가 같은 대상을 노린다. 이미 싸우는 체는 그대로 둔다.
+		void AlertPack(Player target)
+		{
+			if (Pack == null)
+				return;
+			foreach (Monster m in Pack)
+			{
+				if (m == this || m.Room != Room || m.State != CreatureState.Idle)
+					continue;
+				m._target = target;
+				m.State = CreatureState.Moving;
+			}
+		}
+
+		public override void OnDamaged(GameObject attacker, int damage)
+		{
+			base.OnDamaged(attacker, damage);
+			if (Room == null || State == CreatureState.Dead)
+				return;
+
+			// 탐지 범위 밖에서 맞아도 반응한다
+			if (_target == null && attacker is Player p)
+			{
+				_target = p;
+				if (State == CreatureState.Idle)
+					State = CreatureState.Moving;
+				AlertPack(p);
+			}
+		}
+
+		// 망령은 쓰러지면 그 판에서 사라진다(레거시처럼 그 자리에서 되살아나지 않는다).
+		public override void OnDead(GameObject attacker)
+		{
+			if (Room == null)
+				return;
+
+			S_Die diePacket = new S_Die();
+			diePacket.ObjectId = Id;
+			diePacket.AttackerId = attacker.Id;
+			Room.Broadcast(diePacket);
+
+			State = CreatureState.Dead;
+			Room.LeaveGame(Id);
+			ObjectManager.Instance.Remove(Id);
 		}
 
 		// FSM (Finite State Machine)
@@ -64,6 +140,7 @@ namespace Server.Game
 
 			_target = target;
 			State = CreatureState.Moving;
+			AlertPack(target);
 		}
 
 		int _skillRange = 1;

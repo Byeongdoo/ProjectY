@@ -45,6 +45,7 @@ namespace Server.Game
 					return null;
 				}
 				_dungeonRooms.Add(dungeonId, room);
+				room.Push(room.SpawnDungeonMonsters);
 				return room;
 			}
 		}
