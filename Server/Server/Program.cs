@@ -67,12 +67,9 @@ namespace Server
 			GameRoom room = RoomManager.Instance.Add(1);
 			TickRoom(room, 50);
 
-			// DNS (Domain Name System)
-			string host = Dns.GetHostName();
-			IPHostEntry ipHost = Dns.GetHostEntry(host);
-			// IPv6/가상 어댑터가 먼저 잡히는 경우를 피하기 위해 IPv4 주소를 우선 사용한다
-			IPAddress ipAddr = Array.Find(ipHost.AddressList, a => a.AddressFamily == AddressFamily.InterNetwork) ?? ipHost.AddressList[0];
-			IPEndPoint endPoint = new IPEndPoint(ipAddr, 7777);
+			// 호스트 이름이 여러 IPv4(루프백·LAN)로 풀리는 환경에서 서버와 클라가 서로 다른 주소를 고르면
+			// 접속이 거부된다. 모든 IPv4 인터페이스에서 받으면 클라가 어느 주소를 골라도 붙는다.
+			IPEndPoint endPoint = new IPEndPoint(IPAddress.Any, 7777);
 
 			_listener.Init(endPoint, () => { return SessionManager.Instance.Generate(); });
 			Console.WriteLine("Listening...");
