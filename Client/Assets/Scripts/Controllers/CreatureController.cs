@@ -97,6 +97,9 @@ public class CreatureController : BaseController
 	{
 		State = CreatureState.Dead;
 
+		// 쓰러짐 이펙트 리소스(Prefabs/Effect/DieEffect)는 새 리소스가 나올 때까지 비어 있다. 없으면 건너뛴다.
+		if (Resources.Load<GameObject>("Prefabs/Effect/DieEffect") == null)
+			return;
 		GameObject effect = Managers.Resource.Instantiate("Effect/DieEffect");
 		effect.transform.position = transform.position;
 		effect.GetComponent<Animator>().Play("START");

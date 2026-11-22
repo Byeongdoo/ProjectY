@@ -118,6 +118,8 @@ public class MapManager
 
 		string mapName = "Map_" + mapId.ToString("000");
 		GameObject go = Managers.Resource.Instantiate($"Map/{mapName}");
+		if (go == null)
+			return; // 레거시 프리팹 맵(지금은 씬 단위 맵을 쓴다)
 		go.name = "Map";
 
 		GameObject collision = Util.FindChild(go, "Tilemap_Collision", true);

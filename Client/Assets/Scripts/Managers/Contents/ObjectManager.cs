@@ -28,7 +28,7 @@ public class ObjectManager
 	}
 
 	// 망령은 characterInfos.prefabName 프리팹(Prefabs/Creature/Monster, 생성은 Tools > ProjectY > Build Monster Prefabs).
-	// characterId가 0이거나 프리팹이 아직 없으면 레거시 임시 몬스터를 쓴다.
+	// characterId가 0이거나 프리팹이 아직 없으면 null(표시하지 않음).
 	static string MonsterPrefabFor(int characterId)
 	{
 		if (characterId != 0 && Table.TableManager.CharacterInfos.TryGet(characterId, out Table.CharacterInfosRow row))
@@ -37,8 +37,11 @@ public class ObjectManager
 			if (Resources.Load<GameObject>($"Prefabs/{path}") != null)
 				return path;
 		}
-		return "Creature/Monster";
+		return null;
 	}
+
+	// 투사체 표시 프리팹. 새 리소스가 나올 때까지 비어 있을 수 있다.
+	const string ProjectilePrefab = "Creature/Arrow";
 
 	const int ConfigAlliesOverlap = 90005; // 아군끼리 같은 칸 겹침 허용(1=허용)
 
@@ -100,7 +103,13 @@ public class ObjectManager
 		}
 		else if (objectType == GameObjectType.Monster)
 		{
-			GameObject go = Managers.Resource.Instantiate(MonsterPrefabFor(info.CharacterId));
+			string prefab = MonsterPrefabFor(info.CharacterId);
+			if (prefab == null)
+			{
+				Debug.LogWarning($"망령 프리팹 없음: characterId {info.CharacterId} (Tools > ProjectY > Build Monster Prefabs)");
+				return;
+			}
+			GameObject go = Managers.Resource.Instantiate(prefab);
 			go.name = info.Name;
 			_objects.Add(info.ObjectId, go);
 
@@ -112,7 +121,9 @@ public class ObjectManager
 		}
 		else if (objectType == GameObjectType.Projectile)
 		{
-			GameObject go = Managers.Resource.Instantiate("Creature/Arrow");
+			if (Resources.Load<GameObject>($"Prefabs/{ProjectilePrefab}") == null)
+				return; // 투사체 리소스 없음: 서버 판정은 그대로, 클라 표시만 생략
+			GameObject go = Managers.Resource.Instantiate(ProjectilePrefab);
 			go.name = "Arrow";
 			_objects.Add(info.ObjectId, go);
 
