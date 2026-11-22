@@ -1,0 +1,10 @@
+{
+  "spawn": { "x": 6, "y": 18, "w": 6, "h": 6 },
+  "spots": [
+    { "kind": "LobbySpot", "id": 8802, "x": 30, "y": 28 },
+    { "kind": "LobbySpot", "id": 8801, "x": 13, "y": 21 },
+    { "kind": "LobbySpot", "id": 8803, "x": 20, "y": 20 },
+    { "kind": "LobbySpot", "id": 8804, "x": 47, "y": 13 },
+    { "kind": "LobbySpot", "id": 8805, "x": 30, "y": 6 }
+  ]
+}

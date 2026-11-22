@@ -57,7 +57,7 @@ public class Managers : MonoBehaviour
             DontDestroyOnLoad(go);
             s_instance = go.GetComponent<Managers>();
 
-            s_instance._network.Init();
+            // 서버 접속은 멀티 씬(삼천도·저승 던전)이 열릴 때 MultiScene이 한다
             s_instance._data.Init();
             s_instance._pool.Init();
             s_instance._sound.Init();

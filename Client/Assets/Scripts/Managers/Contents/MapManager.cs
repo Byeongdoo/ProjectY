@@ -81,6 +81,37 @@ public class MapManager
 		return true;
 	}
 
+	// 씬에 미리 깔린 타일맵(삼천도·던전 씬 빌더 산출물)으로 칸 판정을 만든다.
+	// Ground가 없는 칸과 Collision 타일이 있는 칸은 막힌 칸이다. 서버는 같은 씬에서 내보낸 Common/MapData/<씬>.txt를 읽는다.
+	public void LoadFromTilemaps(Grid grid, UnityEngine.Tilemaps.Tilemap ground, UnityEngine.Tilemaps.Tilemap collision)
+	{
+		CurrentGrid = grid;
+
+		ground.CompressBounds();
+		BoundsInt b = ground.cellBounds;
+		MinX = b.xMin; MaxX = b.xMax - 1;
+		MinY = b.yMin; MaxY = b.yMax - 1;
+
+		_collision = new bool[SizeY, SizeX];
+		for (int y = MinY; y <= MaxY; y++)
+			for (int x = MinX; x <= MaxX; x++)
+			{
+				Vector3Int cell = new Vector3Int(x, y, 0);
+				_collision[MaxY - y, x - MinX] = ground.HasTile(cell) == false || collision.HasTile(cell);
+			}
+	}
+
+	// 칸 경계(월드 좌표). 카메라가 맵 밖을 비추지 않게 할 때 쓴다.
+	public Bounds WorldBounds
+	{
+		get
+		{
+			Vector3 min = CurrentGrid.CellToWorld(new Vector3Int(MinX, MinY, 0));
+			Vector3 max = CurrentGrid.CellToWorld(new Vector3Int(MaxX + 1, MaxY + 1, 0));
+			return new Bounds((min + max) / 2, max - min);
+		}
+	}
+
 	public void LoadMap(int mapId)
 	{
 		DestroyMap();

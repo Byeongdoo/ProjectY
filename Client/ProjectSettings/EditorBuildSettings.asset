@@ -11,5 +11,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Single/Village_Gamcheon.unity
     guid: be7f09c7e1923704ba6f90355572fe1d
+  - enabled: 1
+    path: Assets/Scenes/Multi/Samcheondo.unity
+    guid: 3bf7e0de29990fd4f900d67ecb19eacc
+  - enabled: 1
+    path: Assets/Scenes/Multi/Dungeon_87101.unity
+    guid: 6c7b7ea67c68a5949af4bb504916de96
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

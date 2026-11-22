@@ -5,13 +5,19 @@ using UnityEngine.SceneManagement;
 
 public class SceneManagerEx
 {
-    public BaseScene CurrentScene { get { return GameObject.FindObjectOfType<BaseScene>(); } }
+    public BaseScene CurrentScene { get { return GameObject.FindFirstObjectByType<BaseScene>(); } }
 
 	public void LoadScene(Define.Scene type)
     {
+        LoadScene(GetSceneName(type));
+    }
+
+    // 씬 이름으로 부른다(삼천도·던전 씬은 서버가 S_ChangeScene으로 이름을 준다)
+    public void LoadScene(string sceneName)
+    {
         Managers.Clear();
 
-        SceneManager.LoadScene(GetSceneName(type));
+        SceneManager.LoadScene(sceneName);
     }
 
     string GetSceneName(Define.Scene type)
@@ -22,6 +28,6 @@ public class SceneManagerEx
 
     public void Clear()
     {
-        CurrentScene.Clear();
+        CurrentScene?.Clear();
     }
 }

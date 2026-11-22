@@ -53,8 +53,8 @@ namespace Server
 				MyPlayer.Session = this;
 			}
 
-			GameRoom room = RoomManager.Instance.Find(1);
-			room.Push(room.EnterGame, MyPlayer);
+			// 접속하면 삼천도 채널에 배정만 해 둔다. 클라가 삼천도 씬을 다 불러와 C_EnterGame을 보내면 들어간다.
+			MyPlayer.PendingRoom = RoomManager.Instance.Lobby;
 		}
 
 		public override void OnRecvPacket(ArraySegment<byte> buffer)
@@ -67,7 +67,8 @@ namespace Server
 			Player player = MyPlayer;
 			if (player != null)
 			{
-				GameRoom room = player.Room ?? RoomManager.Instance.Find(1);
+				// 룸을 옮기는 중이면 들어가려던 룸에서 뺀다(그 룸 잡 큐에 EnterGame이 먼저 들어가 있어도 순서대로 처리된다)
+				GameRoom room = player.Room ?? player.PendingRoom;
 				room?.Push(room.LeaveGame, player.Info.ObjectId);
 
 				// 접속이 끊긴 플레이어가 ObjectManager 에 남아 있지 않도록 제거한다

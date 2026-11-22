@@ -19,35 +19,6 @@ namespace Server
 	{
 		static Listener _listener = new Listener();
 
-		// 룸 틱은 전용 스레드 하나에서 순차 실행한다.
-		// (System.Timers.Timer는 이전 콜백이 끝나기 전에 다음 콜백이 겹쳐 실행될 수 있어서 Update/Flush가 동시에 돌 위험이 있다)
-		static void TickRoom(GameRoom room, int tick = 100)
-		{
-			Thread thread = new Thread(() =>
-			{
-				while (true)
-				{
-					long start = Environment.TickCount64;
-
-					try
-					{
-						room.Update();
-					}
-					catch (Exception e)
-					{
-						Console.WriteLine($"Room Update Failed {e}");
-					}
-
-					int elapsed = (int)(Environment.TickCount64 - start);
-					if (elapsed < tick)
-						Thread.Sleep(tick - elapsed);
-				}
-			});
-			thread.IsBackground = true;
-			thread.Name = $"Room_{room.RoomId}";
-			thread.Start();
-		}
-
 		static void Main(string[] args)
 		{
 			ConfigManager.LoadConfig();
@@ -64,8 +35,16 @@ namespace Server
 				Environment.Exit(1);
 			}
 
-			GameRoom room = RoomManager.Instance.Add(1);
-			TickRoom(room, 50);
+			// 접속하면 삼천도 채널에 배정된다. 맵(Common/MapData/Samcheondo.txt)이 없으면 시작하지 않는다.
+			try
+			{
+				RoomManager.Instance.CreateLobby();
+			}
+			catch (Exception e)
+			{
+				Console.Error.WriteLine($"삼천도 룸 생성 실패: {e.Message}");
+				Environment.Exit(1);
+			}
 
 			// 호스트 이름이 여러 IPv4(루프백·LAN)로 풀리는 환경에서 서버와 클라가 서로 다른 주소를 고르면
 			// 접속이 거부된다. 모든 IPv4 인터페이스에서 받으면 클라가 어느 주소를 골라도 붙는다.

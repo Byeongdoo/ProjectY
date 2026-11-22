@@ -27,6 +27,46 @@ class PacketHandler
 		room.Push(room.HandleMove, player, movePacket);
 	}
 
+	// 씬 로딩을 마친 클라를 배정된 룸(PendingRoom)에 넣는다
+	public static void C_EnterGameHandler(PacketSession session, IMessage packet)
+	{
+		C_EnterGame enterPacket = packet as C_EnterGame;
+		ClientSession clientSession = session as ClientSession;
+
+		Player player = clientSession.MyPlayer;
+		if (player == null || player.Room != null)
+			return;
+
+		GameRoom room = player.PendingRoom;
+		if (room == null)
+			return;
+
+		// 이름은 로컬 세이브의 캐릭터 이름이 생기면 그 값을 받는다. 지금은 비어 있으면 서버 기본 이름을 쓴다.
+		string name = enterPacket.Name?.Trim();
+		if (string.IsNullOrEmpty(name) == false)
+			player.Info.Name = name.Length > NameMaxLength ? name.Substring(0, NameMaxLength) : name;
+
+		room.Push(room.EnterGame, player);
+	}
+
+	const int NameMaxLength = 16;
+
+	public static void C_EnterDungeonHandler(PacketSession session, IMessage packet)
+	{
+		C_EnterDungeon enterPacket = packet as C_EnterDungeon;
+		ClientSession clientSession = session as ClientSession;
+
+		Player player = clientSession.MyPlayer;
+		if (player == null)
+			return;
+
+		GameRoom room = player.Room;
+		if (room == null)
+			return;
+
+		room.Push(room.HandleEnterDungeon, player, enterPacket);
+	}
+
 	public static void C_SkillHandler(PacketSession session, IMessage packet)
 	{
 		C_Skill skillPacket = packet as C_Skill;

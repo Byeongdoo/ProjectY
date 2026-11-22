@@ -19,6 +19,22 @@ class PacketHandler
 		Managers.Object.Clear();
 	}
 
+	// 서버가 다른 룸(던전 등)으로 옮겼다. 씬을 바꾸고, 새 씬의 MultiScene이 다 불러온 뒤 C_EnterGame을 보낸다.
+	public static void S_ChangeSceneHandler(PacketSession session, IMessage packet)
+	{
+		S_ChangeScene changePacket = packet as S_ChangeScene;
+		SpiritSelectPanel.Close();
+		Managers.Object.Clear();
+		Managers.Scene.LoadScene(changePacket.SceneName);
+	}
+
+	// 나루터에서 고른 원혼을 같은 던전의 다른 플레이어가 이미 쓰고 있다. 원혼 선택 화면에서 다시 고른다.
+	public static void S_EnterDungeonRejectHandler(PacketSession session, IMessage packet)
+	{
+		S_EnterDungeonReject rejectPacket = packet as S_EnterDungeonReject;
+		SpiritSelectPanel.OnRejected(rejectPacket.SpiritId);
+	}
+
 	public static void S_SpawnHandler(PacketSession session, IMessage packet)
 	{
 		S_Spawn spawnPacket = packet as S_Spawn;
@@ -45,8 +61,13 @@ class PacketHandler
 		if (go == null)
 			return;
 
+		// 내 캐릭터는 클라가 예측해 움직인다. 서버 위치와 허용 오차(configs 20049)보다 멀어졌을 때만 맞춘다.
 		if (Managers.Object.MyPlayer.Id == movePacket.ObjectId)
+		{
+			int tolerance = Mathf.RoundToInt(Table.TableManager.Configs.Get(20049).value[0]);
+			Managers.Object.MyPlayer.OnServerPosition(movePacket.PosInfo, tolerance);
 			return;
+		}
 
 		BaseController bc = go.GetComponent<BaseController>();
 		if (bc == null)

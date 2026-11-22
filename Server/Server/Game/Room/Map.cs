@@ -68,9 +68,20 @@ namespace Server.Game
 		public int SizeY { get { return MaxY - MinY + 1; } }
 
 		bool[,] _collision;
-		GameObject[,] _objects;
+		GameObject[,] _objects;     // 칸을 막는 오브젝트(몬스터, 겹침을 허용하지 않을 때의 플레이어)
 
-		public bool CanGo(Vector2Int cellPos, bool checkObjects = true)
+		// 아군끼리 같은 칸 겹침 허용(configs 90005, '레벨 디자인 가이드' 2-3).
+		// 허용하면 플레이어는 _objects에 올리지 않고 칸별 인원만 센다 — 플레이어끼리는 막지 않고, 몬스터는 플레이어를 막는다.
+		const int ConfigAlliesOverlap = 90005;
+		bool _alliesOverlap;
+		int[,] _playerCount;
+		Dictionary<int, Vector2Int> _playerCells = new Dictionary<int, Vector2Int>();
+
+		// 맵 파일과 함께 빌더가 내보낸 위치 정보(도착 영역, 시설·NPC 칸 등). 레거시 맵은 null
+		public MapMarkers Markers { get; private set; }
+
+		// blockPlayers: 몬스터처럼 플레이어에게 막히는 쪽이 물을 때 true
+		public bool CanGo(Vector2Int cellPos, bool checkObjects = true, bool blockPlayers = false)
 		{
 			if (cellPos.x < MinX || cellPos.x > MaxX)
 				return false;
@@ -79,7 +90,16 @@ namespace Server.Game
 
 			int x = cellPos.x - MinX;
 			int y = MaxY - cellPos.y;
-			return !_collision[y, x] && (!checkObjects || _objects[y, x] == null);
+			if (_collision[y, x])
+				return false;
+			if (checkObjects == false)
+				return true;
+			return _objects[y, x] == null && (blockPlayers == false || _playerCount[y, x] == 0);
+		}
+
+		bool OccupiesGrid(GameObject gameObject)
+		{
+			return gameObject.ObjectType != GameObjectType.Player || _alliesOverlap == false;
 		}
 
 		bool IsWall(Vector2Int cellPos)
@@ -131,6 +151,15 @@ namespace Server.Game
 			if (gameObject.Room.Map != this)
 				return false;
 
+			if (OccupiesGrid(gameObject) == false)
+			{
+				// 실제로 올려 둔 칸에서만 뺀다(처음 들어올 때 ApplyMove가 먼저 부르는 ApplyLeave가 남의 칸을 깎지 않게)
+				if (_playerCells.Remove(gameObject.Id, out Vector2Int placed) == false)
+					return false;
+				_playerCount[MaxY - placed.y, placed.x - MinX]--;
+				return true;
+			}
+
 			PositionInfo posInfo = gameObject.PosInfo;
 			if (posInfo.PosX < MinX || posInfo.PosX > MaxX)
 				return false;
@@ -157,13 +186,22 @@ namespace Server.Game
 				return false;
 
 			PositionInfo posInfo = gameObject.PosInfo;
-			if (CanGo(dest, true) == false)
+			bool isPlayer = gameObject.ObjectType == GameObjectType.Player;
+			if (CanGo(dest, true, blockPlayers: isPlayer == false) == false)
 				return false;
 
 			{
 				int x = dest.x - MinX;
 				int y = MaxY - dest.y;
-				_objects[y, x] = gameObject;
+				if (OccupiesGrid(gameObject))
+				{
+					_objects[y, x] = gameObject;
+				}
+				else
+				{
+					_playerCount[y, x]++;
+					_playerCells[gameObject.Id] = dest;
+				}
 			}
 
 			// 실제 좌표 이동
@@ -174,26 +212,41 @@ namespace Server.Game
 
 		public void LoadMap(int mapId, string pathPrefix = "../../../../../Common/MapData")
 		{
-			string mapName = "Map_" + mapId.ToString("000");
+			LoadMap("Map_" + mapId.ToString("000"), pathPrefix);
+		}
 
-			// 기본 상대 경로에 파일이 없으면 실행 위치에서 위로 올라가며 Common/MapData 를 찾는다
-			if (File.Exists($"{pathPrefix}/{mapName}.txt") == false)
+		// 기본 상대 경로에 없으면 실행 위치에서 위로 올라가며 Common/MapData 를 찾는다. 없으면 null
+		public static string FindMapFile(string fileName, string pathPrefix = "../../../../../Common/MapData")
+		{
+			if (File.Exists($"{pathPrefix}/{fileName}"))
+				return $"{pathPrefix}/{fileName}";
+
+			DirectoryInfo dir = new DirectoryInfo(AppContext.BaseDirectory);
+			while (dir != null)
 			{
-				DirectoryInfo dir = new DirectoryInfo(AppContext.BaseDirectory);
-				while (dir != null)
-				{
-					string candidate = Path.Combine(dir.FullName, "Common", "MapData");
-					if (File.Exists(Path.Combine(candidate, $"{mapName}.txt")))
-					{
-						pathPrefix = candidate;
-						break;
-					}
-					dir = dir.Parent;
-				}
+				string candidate = Path.Combine(dir.FullName, "Common", "MapData", fileName);
+				if (File.Exists(candidate))
+					return candidate;
+				dir = dir.Parent;
 			}
+			return null;
+		}
+
+		// 씬 빌더가 내보낸 맵: <이름>.txt(충돌) + <이름>.markers.json(위치 정보, 선택)
+		public void LoadMap(string mapName, string pathPrefix = "../../../../../Common/MapData")
+		{
+			string path = FindMapFile($"{mapName}.txt", pathPrefix);
+			if (path == null)
+				throw new FileNotFoundException($"맵 충돌 파일이 없다: Common/MapData/{mapName}.txt");
+
+			string markersPath = FindMapFile($"{mapName}.markers.json", pathPrefix);
+			Markers = markersPath == null ? null : Newtonsoft.Json.JsonConvert.DeserializeObject<MapMarkers>(File.ReadAllText(markersPath));
+
+			_alliesOverlap = Table.TableManager.Configs.Get(ConfigAlliesOverlap).value[0] >= 1;
+			_playerCells.Clear();
 
 			// Collision 관련 파일
-			string text = File.ReadAllText($"{pathPrefix}/{mapName}.txt");
+			string text = File.ReadAllText(path);
 			StringReader reader = new StringReader(text);
 
 			MinX = int.Parse(reader.ReadLine());
@@ -205,6 +258,7 @@ namespace Server.Game
 			int yCount = MaxY - MinY + 1;
 			_collision = new bool[yCount, xCount];
 			_objects = new GameObject[yCount, xCount];
+			_playerCount = new int[yCount, xCount];
 
 			for (int y = 0; y < yCount; y++)
 			{

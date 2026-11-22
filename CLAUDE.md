@@ -27,6 +27,7 @@
 6. **리소스는 직접 만들지 않는다.** 스프라이트는 Codex가 만든다. 필요한 리소스는 [docs/art-pipeline.md](docs/art-pipeline.md)의 규격으로 요청 목록을 정리해 전달하고, 임시 구현은 플레이스홀더로 한다.
 7. **DB·웹서버는 지금 만들지 않는다.** 로드맵상 해당 단계에 도달했을 때 도입한다. 그 전에는 메모리 상태 + 인터페이스(저장소 추상화)만 유지한다. → [docs/roadmap.md](docs/roadmap.md)
 8. **Unity `.meta` 파일은 항상 함께 커밋한다.** GUID가 깨지면 참조가 전부 끊어진다.
+9. **PixelLab 요청 전에 GPT 컨셉 이미지와 사용자 컨펌을 거친다.** 신규 리소스 또는 외형·연출 재작업은 GPT(ChatGPT/Codex)가 먼저 이미지 생성 도구로 컨셉 이미지를 직접 그려 사용자에게 보여준다. 수정 요청을 반영하고 해당 이미지에 대한 명시적 컨펌을 받은 뒤에만 승인된 이미지를 참조로 PixelLab 제작을 요청한다. 텍스트 설명이나 GPT의 자체 판단만으로 컨펌을 대신하지 않는다. → [docs/art-pipeline.md](docs/art-pipeline.md)
 
 ## 기획 문서 (Notion ProjectY) 읽는 법
 

@@ -21,9 +21,14 @@ public class ServerSession : PacketSession
 		Send(new ArraySegment<byte>(sendBuffer));
 	}
 
+	// 네트워크 스레드에서 바뀌고 메인 스레드에서 읽는다
+	volatile bool _connected;
+	public bool Connected => _connected;
+
 	public override void OnConnected(EndPoint endPoint)
 	{
 		Debug.Log($"OnConnected : {endPoint}");
+		_connected = true;
 
 		PacketManager.Instance.CustomHandler = (s, m, i) =>
 		{
@@ -34,6 +39,7 @@ public class ServerSession : PacketSession
 	public override void OnDisconnected(EndPoint endPoint)
 	{
 		Debug.Log($"OnDisconnected : {endPoint}");
+		_connected = false;
 	}
 
 	public override void OnRecvPacket(ArraySegment<byte> buffer)

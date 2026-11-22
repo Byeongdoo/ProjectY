@@ -68,6 +68,7 @@ namespace Server.Game
 
 		int _skillRange = 1;
 		long _nextMoveTick = 0;
+		const int ConfigDiagonalTimeScale = 20030; // 대각선 1칸 소요 시간 배율
 		protected virtual void UpdateMoving()
 		{
 			if (_nextMoveTick > Environment.TickCount64)
@@ -110,9 +111,12 @@ namespace Server.Game
 				return;
 			}
 
-			// 이동
-			Dir = GetDirFromVec(path[1] - CellPos);
+			// 이동. 대각선 한 칸은 configs 20030 배율만큼 다음 이동까지 더 기다린다(클라 보간과 같은 배율, 화면상 속도를 직선과 맞춤)
+			Vector2Int step = path[1] - CellPos;
+			Dir = GetDirFromVec(step);
 			Room.Map.ApplyMove(this, path[1]);
+			if (step.x != 0 && step.y != 0)
+				_nextMoveTick = Environment.TickCount64 + (int)(moveTick * Table.TableManager.Configs.Get(ConfigDiagonalTimeScale).value[0]);
 			BroadcastMove();
 		}
 

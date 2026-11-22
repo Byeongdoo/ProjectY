@@ -15,6 +15,10 @@ enum MsgId {
   S_SKILL = 7;
   S_CHANGE_HP = 8;
   S_DIE = 9;
+  C_ENTER_GAME = 10;
+  C_ENTER_DUNGEON = 11;
+  S_CHANGE_SCENE = 12;
+  S_ENTER_DUNGEON_REJECT = 13;
 }
 
 enum CreatureState {
@@ -91,11 +95,33 @@ message S_Die {
   int32 attackerId = 2;
 }
 
+// 씬 로딩을 마친 클라가 서버가 배정해 둔 룸(삼천도 채널·던전)에 들어가겠다고 알린다
+message C_EnterGame {
+  string name = 1;
+}
+
+// 삼천도 나루터(사공)에서 원혼을 골라 던전 입장 요청. 서버가 위치·던전·원혼(던전 안 중복 불가)을 검증한다
+message C_EnterDungeon {
+  int32 dungeonId = 1;
+  int32 spiritId = 2; // spirits.spiritID
+}
+
+// 고른 원혼을 이미 그 던전의 다른 플레이어가 쓰고 있다. 클라는 원혼 선택을 다시 받는다
+message S_EnterDungeonReject {
+  int32 spiritId = 1;
+}
+
+// 다른 룸으로 옮겨 갈 때 클라가 불러야 할 씬. 씬을 다 불러오면 C_EnterGame을 보낸다
+message S_ChangeScene {
+  string sceneName = 1;
+}
+
 message ObjectInfo {
   int32 objectId = 1;
   string name = 2;
   PositionInfo posInfo = 3;
   StatInfo statInfo = 4;
+  int32 spiritId = 5; // 저승 던전에서 빙의한 원혼(spirits.spiritID). 0 = 무당 본모습(삼천도)
 }
 
 message PositionInfo {

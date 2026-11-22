@@ -41,6 +41,9 @@ public class BaseController : MonoBehaviour
 
 	protected bool _updated = false;
 
+	// 대각선 1칸 소요 시간 배율 (configs 20030)
+	static float DiagonalTimeScale => Table.TableManager.Configs.Get(20030).value[0];
+
 	PositionInfo _positionInfo = new PositionInfo();
 	public PositionInfo PosInfo
 	{
@@ -238,9 +241,10 @@ public class BaseController : MonoBehaviour
 		Vector3 destPos = Managers.Map.CurrentGrid.CellToWorld(CellPos) + new Vector3(0.5f, 0.5f);
 		Vector3 moveDir = destPos - transform.position;
 
-		// 대각선도 직선과 같은 시간에 1칸을 가야 하므로(기획: 대각선도 1칸)
-		// 유클리드 거리가 아니라 축별 최대 거리(체비셰프) 기준으로 진행한다
-		float step = Speed * Time.deltaTime;
+		// 대각선도 1칸이라 축별 최대 거리(체비셰프) 기준으로 진행한다.
+		// 대각선 구간은 configs 20030 배율만큼 시간을 더 써서 화면상 속도를 직선과 맞춘다(서버 몬스터 이동 간격과 같은 배율)
+		bool diagonal = Mathf.Abs(moveDir.x) > 0.001f && Mathf.Abs(moveDir.y) > 0.001f;
+		float step = (diagonal ? Speed / DiagonalTimeScale : Speed) * Time.deltaTime;
 		float dist = Mathf.Max(Mathf.Abs(moveDir.x), Mathf.Abs(moveDir.y));
 		if (dist < step)
 		{

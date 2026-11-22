@@ -301,7 +301,11 @@ public static class GamcheonVillageBuilder
         Marker(markers.transform, "PlayerSpawn", Spawn, "Spawn");
         foreach (var kv in NpcSpots) Marker(markers.transform, "NpcSpot_" + kv.Key, kv.Value, "Npc");
         Marker(markers.transform, "Clue_51102_EmptyGrave", EmptyGrave, "Clue");
-        Marker(markers.transform, "Altar_" + RegionId, Altar, "Altar");
+        // 이승 신단: F → 강림(삼천도). 임시로 해금 조건 없이 동작한다(IseungAltar 주석).
+        var altar = Marker(markers.transform, "Altar_" + RegionId, Altar, "Altar");
+        var altarComp = altar.AddComponent<IseungAltar>();
+        SetRefs(altarComp, ("_grid", grid.GetComponent<Grid>()));
+        var altarSo = new SerializedObject(altarComp); altarSo.FindProperty("_regionId").intValue = RegionId; altarSo.ApplyModifiedPropertiesWithoutUndo();
         var gate = Marker(markers.transform, "Passage_" + PassageToForest, new Vector2Int(32, H - 1), "Passage");
         gate.transform.position = new Vector3(ForestGate.center.x, ForestGate.center.y, 0);
         var gateBox = gate.AddComponent<BoxCollider2D>(); gateBox.isTrigger = true; gateBox.size = new Vector2(ForestGate.width, ForestGate.height);
