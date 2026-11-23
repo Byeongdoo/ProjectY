@@ -49,6 +49,8 @@ namespace Server.Game
 			return packs;
 		}
 
+		public const int ObjTypeBossArena = 13;     // 보스 아레나(영역)
+		public const int ObjTypeBossStart = 14;     // 보스 시작 위치(refID = 보스 characterID)
 		public const int ObjTypeBonfire = 12;       // 구간 불씨
 		public const int ObjTypeArenaBonfire = 15;  // 보스방 불씨
 
@@ -63,6 +65,22 @@ namespace Server.Game
 				if (obj.mapID == map.mapID && obj.objType == objType)
 					points.Add(new Vector2Int(obj.x, map.height - 1 - obj.y));
 			return points;
+		}
+
+		// 그 던전 맵의 levelObjects 중 objType인 영역들(서버 좌표, 양 끝 포함). levelObjects는 위쪽이 y 0이라 뒤집는다
+		public static List<(Vector2Int min, Vector2Int max, int refId)> Rects(int dungeonId, int objType)
+		{
+			var rects = new List<(Vector2Int, Vector2Int, int)>();
+			LevelMapsRow map = TableManager.LevelMaps.Rows.FirstOrDefault(m => m.kind == MapKindDungeon && m.refID == dungeonId);
+			if (map == null)
+				return rects;
+			foreach (LevelObjectsRow obj in TableManager.LevelObjects.Rows)
+				if (obj.mapID == map.mapID && obj.objType == objType)
+				{
+					int w = Math.Max(1, obj.w), h = Math.Max(1, obj.h);
+					rects.Add((new Vector2Int(obj.x, map.height - 1 - (obj.y + h - 1)), new Vector2Int(obj.x + w - 1, map.height - 1 - obj.y), obj.refID));
+				}
+			return rects;
 		}
 
 		// 팩 지점에서 가까운 빈 칸부터 채운다(체비셰프 거리 순, 같은 거리면 무작위).

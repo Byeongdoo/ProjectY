@@ -83,6 +83,8 @@ namespace Server.Game
 			}
 
 			LoadSkills();
+			if (_isBoss)
+				LoadBossPhases();
 		}
 
 		float _moveSpeed = 5f, _defence, _critical, _criticalAttack = 1.5f, _attackSpeed = 1f;
@@ -112,13 +114,15 @@ namespace Server.Game
 			// 복귀 중에는 교전하지 않는다
 			if (_returning || player == null || player.IsAlive == false || player.Room != Room)
 				return;
-			if (IsEngaged == false)
-				_engagedAtTick = Environment.TickCount64;
+			bool first = IsEngaged == false;
+			if (first)
+				OnEngageStart(Environment.TickCount64);
 			_threat.TryGetValue(player, out float current);
 			_threat[player] = current + amount * player.ThreatRate;
 			if (_target == null)
 				_target = player;
-			if (State == CreatureState.Idle)
+			// 교전을 막 시작했을 때만 추격 상태로. 이미 싸우는 중이면 상태를 건드리지 않는다(맞을 때마다 이동 패킷이 나가지 않게)
+			if (first && State == CreatureState.Idle)
 				State = CreatureState.Moving;
 		}
 
@@ -189,10 +193,10 @@ namespace Server.Game
 
 		#endregion
 
-		// 복귀 중에는 맞지 않는다
+		// 복귀 중·보스 페이즈 전환 무적 중에는 맞지 않는다
 		public override void OnDamaged(GameObject attacker, int damage, bool critical, bool redirected = false)
 		{
-			if (_returning)
+			if (_returning || IsInvulnerable)
 				return;
 			base.OnDamaged(attacker, damage, critical, redirected);
 		}
@@ -208,6 +212,8 @@ namespace Server.Game
 				if (first)
 					AlertPack(p);
 			}
+			if (Hp > 0)
+				CheckPhase();
 		}
 
 		// 망령은 쓰러지면 그 판에서 사라진다(레거시처럼 그 자리에서 되살아나지 않는다).
@@ -251,8 +257,8 @@ namespace Server.Game
 			if (Room == null)
 				return;
 
-			// 기절: 아무것도 하지 않고 시전 중인 특수기를 취소한다
-			if (Status.Has(StatusId.Stun))
+			// 기절: 아무것도 하지 않고 시전 중인 특수기를 취소한다. 탈진(보스)은 스킬 발동 뒤에 걸리므로 시전이 없다
+			if (Status.Has(StatusId.Stun) || Status.Has(StatusId.Exhaust))
 			{
 				CancelCast();
 				return;
@@ -294,6 +300,18 @@ namespace Server.Game
 			if (_nextSearchTick > now)
 				return;
 			_nextSearchTick = now + 1000;
+
+			// 보스는 아레나에 들어온 플레이어와 교전한다
+			if (_isBoss)
+			{
+				Player challenger = FindPlayerInArena();
+				if (challenger != null)
+				{
+					AddThreat(challenger, 0f);
+					_target = challenger;
+				}
+				return;
+			}
 
 			Player target = Room.FindPlayer(p =>
 			{
@@ -354,7 +372,7 @@ namespace Server.Game
 
 				if (_nextAttackTick > now)
 					return;
-				_nextAttackTick = now + (long)(1000 * CombatConfig.Get(CombatConfig.BasicInterval) / Math.Max(0.05f, AttackSpeed));
+				_nextAttackTick = now + BasicIntervalMs();
 				BasicAttack();
 				return;
 			}
@@ -371,7 +389,7 @@ namespace Server.Game
 			skill.ObjectId = Id;
 			Room.Broadcast(skill);
 
-			Combat.Damage(this, _target, _basicCoef);
+			Combat.Damage(this, _target, BasicCoef);
 		}
 
 		// from에서 멀어지는 이웃 칸으로 한 칸 물러선다. 복귀 거리 밖·시야가 끊기는 칸으로는 물러나지 않는다.
@@ -513,6 +531,8 @@ namespace Server.Game
 		void FinishReturn()
 		{
 			_returning = false;
+			if (_isBoss)
+				ResetBoss();
 			int healed = Stat.MaxHp - Hp;
 			Hp = Stat.MaxHp;
 			if (healed > 0)

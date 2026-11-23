@@ -71,7 +71,7 @@ namespace Server.Game
 
 		public bool IsAlive => Room != null && Stat.Hp > 0 && State != CreatureState.Dead;
 		// 기절이면 아무것도 못 한다
-		public bool CanAct => IsAlive && Status.Has(StatusId.Stun) == false;
+		public bool CanAct => IsAlive && Status.Has(StatusId.Stun) == false && Status.Has(StatusId.Exhaust) == false;
 		// 결박·버팀이면 제자리에서 버틴다
 		public virtual bool CanMove => CanAct && Status.Has(StatusId.Root) == false && Status.Has(StatusId.Brace) == false;
 
@@ -172,14 +172,14 @@ namespace Server.Game
 		}
 
 		// 피해 판정(Combat.Damage)을 마친 피해를 받는다. 받는 쪽 배율은 여기서 곱한다(방어율 상한 뒤).
-		//   × 받는 피해 배율(원혼) × (1 + 취약) × (1 − 버팀), 그다음 수호가 있으면 일부를 시전자가 대신 받는다.
+		//   × 받는 피해 배율(원혼) × (1 + 취약) × (1 + 탈진) × (1 − 버팀), 그다음 수호가 있으면 일부를 시전자가 대신 받는다.
 		// redirected: 수호로 넘어온 피해. 다시 넘기지 않는다
 		public virtual void OnDamaged(GameObject attacker, int damage, bool critical, bool redirected = false)
 		{
 			if (IsAlive == false)
 				return;
 
-			float scaled = damage * DamageTakenRate * (1f + Status.Value(StatusId.Vulnerable)) * (1f - Status.Value(StatusId.Brace));
+			float scaled = damage * DamageTakenRate * (1f + Status.Value(StatusId.Vulnerable)) * (1f + Status.Value(StatusId.Exhaust)) * (1f - Status.Value(StatusId.Brace));
 			damage = Math.Max((int)CombatConfig.Get(CombatConfig.MinDamage), (int)Math.Round(scaled));
 
 			StatusInstance guard = redirected ? null : Status.Get(StatusId.Guard);

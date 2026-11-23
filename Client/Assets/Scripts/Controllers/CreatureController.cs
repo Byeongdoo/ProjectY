@@ -89,6 +89,7 @@ public class CreatureController : BaseController
 		string action;
 		if (State == CreatureState.Dead) action = "DIE_";
 		else if (HasStatus(StatusStun)) action = "STUN_";
+		else if (HasStatus(StatusExhaust)) action = "EXHAUSTED_LOOP_"; // 보스 탈진(클립 없으면 서 있는 모습)
 		else if (State == CreatureState.Moving) action = "RUN_";
 		else if (State == CreatureState.Skill) action = _skillAction;
 		else action = "IDLE_";
@@ -154,6 +155,7 @@ public class CreatureController : BaseController
 	public const int StatusBrace = 8009;  // 버팀: 이동 불가
 	public const int StatusFrenzy = 8011; // 광기: 공격 속도 증가
 	public const int StatusSlow = 8004;   // 둔화: 이동·공격 속도 감소
+	public const int StatusExhaust = 8013; // 탈진: 보스 전용, 행동 정지
 
 	readonly Dictionary<int, (float endTime, int stack)> _statuses = new Dictionary<int, (float, int)>();
 
@@ -174,12 +176,12 @@ public class CreatureController : BaseController
 
 	public void SetStatus(int statusId, float duration, int stack)
 	{
-		bool stunBefore = HasStatus(StatusStun);
+		bool stunBefore = HasStatus(StatusStun), exhaustBefore = HasStatus(StatusExhaust);
 		if (duration <= 0f)
 			_statuses.Remove(statusId);
 		else
 			_statuses[statusId] = (Time.time + duration, stack);
-		if (stunBefore != HasStatus(StatusStun))
+		if (stunBefore != HasStatus(StatusStun) || exhaustBefore != HasStatus(StatusExhaust))
 			UpdateAnimation();
 	}
 

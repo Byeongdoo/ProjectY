@@ -61,6 +61,7 @@ namespace Server.Game
 					count++;
 				}
 			}
+			SpawnBoss(dungeon);
 			Console.WriteLine($"[{SceneName}] 망령 {count}체 배치");
 		}
 
@@ -397,15 +398,58 @@ namespace Server.Game
 			player.Session.Send(new S_ChangeScene() { SceneName = dungeon.SceneName });
 		}
 
-		// 적 처치 보상: 룸의 플레이어 전원(혼절 중 포함)이 각자 굴리고, 받은 것은 본인에게만 알린다
+		// 보스: 보스 시작 위치(levelObjects 14, refID = 보스)에 배치하고, 그 위치를 담은 아레나(13)를 교전 영역으로 준다
+		void SpawnBoss(Table.DungeonsRow dungeon)
+		{
+			if (dungeon.boss == 0)
+				return;
+			var start = DungeonSpawner.Rects(DungeonId, DungeonSpawner.ObjTypeBossStart).FirstOrDefault(r => r.refId == dungeon.boss);
+			if (start.refId == 0)
+				return;
+
+			Vector2Int point = new Vector2Int((start.min.x + start.max.x) / 2, (start.min.y + start.max.y) / 2);
+			List<Vector2Int> cells = DungeonSpawner.PickCells(Map, point, 1, _random);
+			if (cells.Count == 0)
+				return;
+
+			Monster boss = ObjectManager.Instance.Add<Monster>();
+			boss.InitFromTable(dungeon.boss, 1f); // 보스 체력은 characterLevel 값 그대로(4인 기준 역산, '보스 시스템' 2-8)
+			boss.CellPos = cells[0];
+			boss.SpawnCell = cells[0];
+			var arena = DungeonSpawner.Rects(DungeonId, DungeonSpawner.ObjTypeBossArena)
+				.FirstOrDefault(r => point.x >= r.min.x && point.x <= r.max.x && point.y >= r.min.y && point.y <= r.max.y);
+			if (arena.max.x >= arena.min.x && (arena.min.x != 0 || arena.max.x != 0))
+			{
+				boss.ArenaMin = arena.min;
+				boss.ArenaMax = arena.max;
+				boss.HasArena = true;
+			}
+			EnterGame(boss);
+			Console.WriteLine($"[{SceneName}] 보스 {dungeon.boss} 배치 ({cells[0].x},{cells[0].y})");
+		}
+
+		// 적 처치 보상: 룸의 플레이어 전원(혼절 중 포함)이 각자 굴리고, 받은 것은 본인에게만 알린다.
+		// 보스는 여기에 던전 클리어 보상(dungeons.dropGroup)을 각자 1회 더한다('저승 던전 구조' 2-8)
 		public void GrantKillRewards(Monster monster)
 		{
+			int clearGroup = 0;
+			if (monster.IsBoss && Table.TableManager.Dungeons.TryGet(DungeonId, out Table.DungeonsRow dungeon) && dungeon.boss == monster.CharacterId)
+				clearGroup = dungeon.dropGroup;
+
 			foreach (Player p in _players.Values)
 			{
 				S_Loot loot = Loot.Roll(monster);
+				if (clearGroup != 0)
+					Loot.AddClearReward(loot, clearGroup);
 				if (loot.Items.Count > 0)
 					p.Session.Send(loot);
 			}
+		}
+
+		// 살아 있는 플레이어들(보스 무작위·가장 먼 대상 고르기용)
+		public List<Player> TargetablePlayers()
+		{
+			return _players.Values.Where(p => p.IsAlive).ToList();
 		}
 
 		// 그 칸에 서 있는 살아 있는 플레이어들(아군끼리는 한 칸에 겹칠 수 있다). 적 특수기 판정용

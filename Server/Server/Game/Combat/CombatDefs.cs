@@ -18,6 +18,10 @@ namespace Server.Game
 		public const int ExecuteMultiplier = 20051;   // 참수 피해 배율
 		public const int TrapLifetime = 20052;        // 덫 유지 시간(초)
 		public const int MonsterBindImmunity = 20055; // 적 특수기: 같은 스킬 결박 재적용 면역(초)
+		public const int BossPhaseInvulnerable = 20024; // 보스 페이즈 전환 무적(초)
+		public const int BossBasicInterval = 20059;   // 보스 평타 간격(초)
+		public const int BossBasicCoef = 20060;       // 보스 평타 계수
+		public const int BossSkillGap = 20061;        // 보스 스킬 사이 최소 간격(초)
 		public const int ThreatPerDamage = 20036;     // 피해 1당 위협
 		public const int ThreatPerHeal = 20037;       // 회복 1당 위협
 		public const int ThreatSwitchRate = 20038;    // 대상 변경 배율
@@ -48,6 +52,7 @@ namespace Server.Game
 		public const int Guard = 8010;       // 수호: 대상 피해 일부를 시전자가 대신 받음
 		public const int Frenzy = 8011;      // 광기: 공격 속도 증가
 		public const int Taunt = 8012;       // 도발: 시전자만 노린다
+		public const int Exhaust = 8013;     // 탈진: 보스 전용. 행동 정지 + 받는 피해 증가('보스 시스템' 2-6)
 	}
 
 	// #타입 정의

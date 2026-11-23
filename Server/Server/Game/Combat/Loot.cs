@@ -56,6 +56,21 @@ namespace Server.Game
 			return loot;
 		}
 
+		// 던전 클리어 보상: 그 던전의 dropGroup 분포로 장비 1개(보스 클리어, '장비 아이템 시스템' 2-8)
+		public static void AddClearReward(S_Loot loot, int dropGroupId)
+		{
+			if (Table.TableManager.DropGroups.TryGet(dropGroupId, out Table.DropGroupsRow group) == false)
+				return;
+			int itemId = RollEquipment(group);
+			if (itemId == 0)
+				return;
+			ItemCount same = loot.Items.FirstOrDefault(x => x.ItemId == itemId);
+			if (same != null)
+				same.Count++;
+			else
+				loot.Items.Add(new ItemCount() { ItemId = itemId, Count = 1 });
+		}
+
 		// 등급(1 범 ~ 5 신)을 분포대로 고르고, 그 등급 장비 중 부위를 균등하게 고른다
 		static int RollEquipment(Table.DropGroupsRow group)
 		{
