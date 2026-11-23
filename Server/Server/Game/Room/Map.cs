@@ -273,14 +273,26 @@ namespace Server.Game
 		#region A* PathFinding
 
 		// 상 하 좌 우 + 대각선 4방향 (배열 좌표라 y는 아래로 증가)
-		// 대각선도 1칸이라 비용이 직선과 같다
+		// 대각선도 거리상 1칸이지만 이동 시간은 configs 20030 배율만큼 더 걸린다.
+		// 비용을 같게 두면 직선 대신 지그재그 대각선 경로가 같은 비용으로 뽑히므로, 비용도 시간 기준으로 둔다.
+		const int ConfigDiagonalTimeScale = 20030;
+		const int StraightCost = 10;
 		int[] _deltaY = new int[] { 1, -1, 0, 0, 1, 1, -1, -1 };
 		int[] _deltaX = new int[] { 0, 0, -1, 1, -1, 1, -1, 1 };
-		int[] _cost = new int[] { 10, 10, 10, 10, 10, 10, 10, 10 };
 
-		static int Heuristic(Pos a, Pos b)
+		static int DiagonalCost()
 		{
-			return 10 * Math.Max(Math.Abs(a.Y - b.Y), Math.Abs(a.X - b.X));
+			return (int)Math.Round(StraightCost * Table.TableManager.Configs.Get(ConfigDiagonalTimeScale).value[0]);
+		}
+
+		// 옥타일 거리 (직선 비용 10, 대각선 비용 = 10 × 대각선 배율)
+		static int Heuristic(Pos a, Pos b, int diagonalCost)
+		{
+			int dy = Math.Abs(a.Y - b.Y);
+			int dx = Math.Abs(a.X - b.X);
+			int diag = Math.Min(dy, dx);
+			int straight = Math.Max(dy, dx) - diag;
+			return StraightCost * straight + diagonalCost * diag;
 		}
 
 		public List<Vector2Int> FindPath(Vector2Int startCellPos, Vector2Int destCellPos, bool checkObjects = true)
@@ -312,10 +324,11 @@ namespace Server.Game
 			// CellPos -> ArrayPos
 			Pos pos = Cell2Pos(startCellPos);
 			Pos dest = Cell2Pos(destCellPos);
+			int diagonalCost = DiagonalCost();
 
 			// 시작점 발견 (예약 진행)
-			open[pos.Y, pos.X] = Heuristic(pos, dest);
-			pq.Push(new PQNode() { F = Heuristic(pos, dest), G = 0, Y = pos.Y, X = pos.X });
+			open[pos.Y, pos.X] = Heuristic(pos, dest, diagonalCost);
+			pq.Push(new PQNode() { F = Heuristic(pos, dest, diagonalCost), G = 0, Y = pos.Y, X = pos.X });
 			parent[pos.Y, pos.X] = new Pos(pos.Y, pos.X);
 
 			bool reached = false;
@@ -360,9 +373,10 @@ namespace Server.Game
 					if (closed[next.Y, next.X])
 						continue;
 
-					// 비용 계산 (G: 시작점부터의 실제 비용, H: 체비셰프 거리 휴리스틱)
-					int g = node.G + _cost[i];
-					int h = Heuristic(next, dest);
+					// 비용 계산 (G: 시작점부터의 실제 비용, H: 옥타일 거리 휴리스틱)
+					bool diagonal = _deltaY[i] != 0 && _deltaX[i] != 0;
+					int g = node.G + (diagonal ? diagonalCost : StraightCost);
+					int h = Heuristic(next, dest, diagonalCost);
 					// 다른 경로에서 더 빠른 길 이미 찾았으면 스킵
 					if (open[next.Y, next.X] <= g + h)
 						continue;
