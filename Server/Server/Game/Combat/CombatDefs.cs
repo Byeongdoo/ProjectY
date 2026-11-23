@@ -17,6 +17,7 @@ namespace Server.Game
 		public const int ExecuteHpRate = 20050;       // 참수 조건 체력 비율
 		public const int ExecuteMultiplier = 20051;   // 참수 피해 배율
 		public const int TrapLifetime = 20052;        // 덫 유지 시간(초)
+		public const int MonsterBindImmunity = 20055; // 적 특수기: 같은 스킬 결박 재적용 면역(초)
 		public const int ThreatPerDamage = 20036;     // 피해 1당 위협
 		public const int ThreatPerHeal = 20037;       // 회복 1당 위협
 		public const int ThreatSwitchRate = 20038;    // 대상 변경 배율

@@ -24,7 +24,6 @@ namespace Server.Game
 			Projectile = 5, // 고정 방향 직선 투사체, 벽 또는 첫 플레이어 적중 시 종료
 		}
 
-		const int ConfigBindImmunity = 20055;      // 같은 스킬 결박 재적용 면역(초)
 		const int ConfigFirstDelay = 20056;        // 교전 시작 후 첫 특수기 대기(초)
 		const int ConfigFirstDelayPerIndex = 20057;// 팩 스폰 순서당 추가 대기(초)
 		const int ConfigCancelRetry = 20058;       // 취소 후 재시도 대기(초)
@@ -351,8 +350,8 @@ namespace Server.Game
 		}
 
 		// 피해 = 시전자 공격력 × 계수(피해 공식 적용), 그다음 상태이상.
-		// 결박은 같은 스킬 결박이 끝난 뒤 5초(configs 20052) 동안 다시 걸리지 않는다(피해는 적용).
-		// TODO 해독으로 결박이 일찍 풀리면 면역도 그때부터 5초여야 한다. 지금은 원래 끝날 시각 기준이다.
+		// 결박은 같은 스킬 결박이 끝나거나 풀린 뒤 5초(configs 20055) 동안 다시 걸리지 않는다(피해는 적용).
+		// 면역 시작은 결박이 실제로 사라진 순간이다(만료·해독 모두, Player.OnStatusChanged).
 		void HitWithSkill(Table.MonsterSkillsRow skill, Player player)
 		{
 			if (Room == null || player.IsAlive == false || player.Room != Room)
@@ -369,7 +368,7 @@ namespace Server.Game
 			{
 				if (player.IsBindImmune(skill.monsterSkillID, now))
 					return;
-				player.SetBindImmune(skill.monsterSkillID, now + (long)(1000 * (skill.statusTime + Config(ConfigBindImmunity))));
+				player.MarkRootSkill(skill.monsterSkillID);
 			}
 			player.Status.Apply(skill.status, skill.statusTime, this);
 		}
