@@ -13,13 +13,16 @@ namespace Server.Game
 
 		static readonly Random _random = new Random();
 
+		// 치명타·편차 주사위(0 이상 1 미만). 테스트가 결과를 고정할 때 바꾼다. 한 번의 피해 판정은 치명타 → 편차 순으로 두 번 굴린다
+		public static Func<double> Roll { get; set; } = () => _random.NextDouble();
+
 		public static void Damage(GameObject attacker, GameObject target, float coefficient, float extraMultiplier = 1f)
 		{
 			if (attacker == null || target == null || target.IsAlive == false)
 				return;
 
 			float raw = attacker.AttackPower * coefficient * extraMultiplier;
-			bool critical = _random.NextDouble() < attacker.CriticalRate;
+			bool critical = Roll() < attacker.CriticalRate;
 			if (critical)
 				raw *= attacker.CriticalMultiplier;
 			raw *= 1f - Math.Min(target.Defence, CombatConfig.Get(CombatConfig.DefenceCap));
@@ -35,7 +38,7 @@ namespace Server.Game
 				return;
 
 			float raw = healer.AttackPower * coefficient;
-			bool critical = _random.NextDouble() < healer.CriticalRate;
+			bool critical = Roll() < healer.CriticalRate;
 			if (critical)
 				raw *= healer.CriticalMultiplier;
 			raw *= Variance();
@@ -46,7 +49,7 @@ namespace Server.Game
 		static float Variance()
 		{
 			float v = CombatConfig.Get(CombatConfig.DamageVariance);
-			return 1f + (float)(_random.NextDouble() * 2 - 1) * v;
+			return 1f + (float)(Roll() * 2 - 1) * v;
 		}
 	}
 }
