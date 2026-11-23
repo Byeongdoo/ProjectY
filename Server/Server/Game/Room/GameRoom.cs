@@ -47,14 +47,16 @@ namespace Server.Game
 			foreach (DungeonSpawner.PackSpawn pack in DungeonSpawner.Plan(DungeonId, _random))
 			{
 				List<Vector2Int> cells = DungeonSpawner.PickCells(Map, pack.Point, pack.CharacterIds.Count, _random);
-				var members = new List<Monster>();
+				MonsterPack monsterPack = new MonsterPack();
 				for (int i = 0; i < cells.Count; i++)
 				{
 					Monster monster = ObjectManager.Instance.Add<Monster>();
 					monster.InitFromTable(pack.CharacterIds[i], dungeon.mobHpRate);
 					monster.CellPos = cells[i];
-					monster.Pack = members;
-					members.Add(monster);
+					monster.SpawnCell = cells[i];
+					monster.Pack = monsterPack;
+					monster.PackIndex = i;
+					monsterPack.Members.Add(monster);
 					EnterGame(monster);
 					count++;
 				}
@@ -393,6 +395,16 @@ namespace Server.Game
 			player.Info.SpiritId = spiritId;
 			player.PendingRoom = dungeon;
 			player.Session.Send(new S_ChangeScene() { SceneName = dungeon.SceneName });
+		}
+
+		// 그 칸에 서 있는 살아 있는 플레이어들(아군끼리는 한 칸에 겹칠 수 있다). 적 특수기 판정용
+		public List<Player> TargetablePlayersAt(Vector2Int cell)
+		{
+			List<Player> found = new List<Player>();
+			foreach (Player p in _players.Values)
+				if (p.IsAlive && p.CellPos.x == cell.x && p.CellPos.y == cell.y)
+					found.Add(p);
+			return found;
 		}
 
 		public Player FindPlayer(Func<GameObject, bool> condition)

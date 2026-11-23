@@ -56,7 +56,9 @@ class PacketManager
 		_onRecv.Add((ushort)MsgId.SChannel, MakePacket<S_Channel>);
 		_handler.Add((ushort)MsgId.SChannel, PacketHandler.S_ChannelHandler);		
 		_onRecv.Add((ushort)MsgId.SDungeonState, MakePacket<S_DungeonState>);
-		_handler.Add((ushort)MsgId.SDungeonState, PacketHandler.S_DungeonStateHandler);
+		_handler.Add((ushort)MsgId.SDungeonState, PacketHandler.S_DungeonStateHandler);		
+		_onRecv.Add((ushort)MsgId.SSkillWarning, MakePacket<S_SkillWarning>);
+		_handler.Add((ushort)MsgId.SSkillWarning, PacketHandler.S_SkillWarningHandler);
 	}
 
 	public void OnRecvPacket(PacketSession session, ArraySegment<byte> buffer)

@@ -65,17 +65,21 @@ namespace Google.Protobuf.Protocol {
             "ASgFIogBCghTdGF0SW5mbxINCgVsZXZlbBgBIAEoBRIKCgJocBgCIAEoBRIN",
             "CgVtYXhIcBgDIAEoBRIOCgZhdHRhY2sYBCABKAUSDQoFc3BlZWQYBSABKAIS",
             "EAoIdG90YWxFeHAYBiABKAUSDgoGc3Bpcml0GAcgASgFEhEKCW1heFNwaXJp",
-            "dBgIIAEoBSIuCglTa2lsbEluZm8SDwoHc2tpbGxJZBgBIAEoBRIQCgh0YXJn",
-            "ZXRJZBgCIAEoBSqYAwoFTXNnSWQSEAoMU19FTlRFUl9HQU1FEAASEAoMU19M",
-            "RUFWRV9HQU1FEAESCwoHU19TUEFXThACEg0KCVNfREVTUEFXThADEgoKBkNf",
-            "TU9WRRAEEgoKBlNfTU9WRRAFEgsKB0NfU0tJTEwQBhILCgdTX1NLSUxMEAcS",
-            "DwoLU19DSEFOR0VfSFAQCBIJCgVTX0RJRRAJEhAKDENfRU5URVJfR0FNRRAK",
-            "EhMKD0NfRU5URVJfRFVOR0VPThALEhIKDlNfQ0hBTkdFX1NDRU5FEAwSGgoW",
-            "U19FTlRFUl9EVU5HRU9OX1JFSkVDVBANEhMKD1NfQ0hBTkdFX1NQSVJJVBAO",
-            "EhMKD1NfQ0hBTkdFX1NUQVRVUxAPEhEKDVNfQ0hBTkdFX1NUQVQQEBISCg5D",
-            "X0NBTkNFTF9TS0lMTBAREhIKDlNfQ0FOQ0VMX1NLSUxMEBISDAoIU19SRVZJ",
-            "VkUQExITCg9DX0hPTERfSU5URVJBQ1QQFBINCglTX0NIQU5ORUwQFRITCg9T",
-            "X0RVTkdFT05fU1RBVEUQFipRCgtDaGFubmVsS2luZBIQCgxDSEFOTkVMX05P",
+            "dBgIIAEoBSJ8Cg5TX1NraWxsV2FybmluZxIQCghvYmplY3RJZBgBIAEoBRIR",
+            "Cgl3YXJuaW5nSWQYAiABKAUSDwoHc2tpbGxJZBgDIAEoBRISCgpkdXJhdGlv",
+            "bk1zGAQgASgFEiAKBWNlbGxzGAUgAygLMhEuUHJvdG9jb2wuQ2VsbFBvcyIf",
+            "CgdDZWxsUG9zEgkKAXgYASABKAUSCQoBeRgCIAEoBSIuCglTa2lsbEluZm8S",
+            "DwoHc2tpbGxJZBgBIAEoBRIQCgh0YXJnZXRJZBgCIAEoBSqtAwoFTXNnSWQS",
+            "EAoMU19FTlRFUl9HQU1FEAASEAoMU19MRUFWRV9HQU1FEAESCwoHU19TUEFX",
+            "ThACEg0KCVNfREVTUEFXThADEgoKBkNfTU9WRRAEEgoKBlNfTU9WRRAFEgsK",
+            "B0NfU0tJTEwQBhILCgdTX1NLSUxMEAcSDwoLU19DSEFOR0VfSFAQCBIJCgVT",
+            "X0RJRRAJEhAKDENfRU5URVJfR0FNRRAKEhMKD0NfRU5URVJfRFVOR0VPThAL",
+            "EhIKDlNfQ0hBTkdFX1NDRU5FEAwSGgoWU19FTlRFUl9EVU5HRU9OX1JFSkVD",
+            "VBANEhMKD1NfQ0hBTkdFX1NQSVJJVBAOEhMKD1NfQ0hBTkdFX1NUQVRVUxAP",
+            "EhEKDVNfQ0hBTkdFX1NUQVQQEBISCg5DX0NBTkNFTF9TS0lMTBAREhIKDlNf",
+            "Q0FOQ0VMX1NLSUxMEBISDAoIU19SRVZJVkUQExITCg9DX0hPTERfSU5URVJB",
+            "Q1QQFBINCglTX0NIQU5ORUwQFRITCg9TX0RVTkdFT05fU1RBVEUQFhITCg9T",
+            "X1NLSUxMX1dBUk5JTkcQFypRCgtDaGFubmVsS2luZBIQCgxDSEFOTkVMX05P",
             "TkUQABIVChFDSEFOTkVMX0NBTExfU09VTBABEhkKFUNIQU5ORUxfQVJFTkFf",
             "Qk9ORklSRRACKjoKDUNyZWF0dXJlU3RhdGUSCAoESURMRRAAEgoKBk1PVklO",
             "RxABEgkKBVNLSUxMEAISCAoEREVBRBADKmoKB01vdmVEaXISBgoCVVAQABII",
@@ -115,6 +119,8 @@ namespace Google.Protobuf.Protocol {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.Protocol.ObjectInfo), global::Google.Protobuf.Protocol.ObjectInfo.Parser, new[]{ "ObjectId", "Name", "PosInfo", "StatInfo", "SpiritId", "CharacterId", "SkillId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.Protocol.PositionInfo), global::Google.Protobuf.Protocol.PositionInfo.Parser, new[]{ "State", "MoveDir", "PosX", "PosY" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.Protocol.StatInfo), global::Google.Protobuf.Protocol.StatInfo.Parser, new[]{ "Level", "Hp", "MaxHp", "Attack", "Speed", "TotalExp", "Spirit", "MaxSpirit" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.Protocol.S_SkillWarning), global::Google.Protobuf.Protocol.S_SkillWarning.Parser, new[]{ "ObjectId", "WarningId", "SkillId", "DurationMs", "Cells" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.Protocol.CellPos), global::Google.Protobuf.Protocol.CellPos.Parser, new[]{ "X", "Y" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.Protocol.SkillInfo), global::Google.Protobuf.Protocol.SkillInfo.Parser, new[]{ "SkillId", "TargetId" }, null, null, null, null)
           }));
     }
@@ -146,6 +152,7 @@ namespace Google.Protobuf.Protocol {
     [pbr::OriginalName("C_HOLD_INTERACT")] CHoldInteract = 20,
     [pbr::OriginalName("S_CHANNEL")] SChannel = 21,
     [pbr::OriginalName("S_DUNGEON_STATE")] SDungeonState = 22,
+    [pbr::OriginalName("S_SKILL_WARNING")] SSkillWarning = 23,
   }
 
   /// <summary>
@@ -4761,6 +4768,412 @@ namespace Google.Protobuf.Protocol {
 
   }
 
+  /// <summary>
+  /// 적 특수기 예고 칸('망령(적) 시스템' 2-5-1). 시전 시작 때 서버가 위험 칸을 고정해 보낸다.
+  /// 클라는 durationMs 동안 칸을 표시하고, durationMs = 0이면 같은 warningId 표시를 즉시 지운다(취소).
+  /// </summary>
+  public sealed partial class S_SkillWarning : pb::IMessage<S_SkillWarning> {
+    private static readonly pb::MessageParser<S_SkillWarning> _parser = new pb::MessageParser<S_SkillWarning>(() => new S_SkillWarning());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<S_SkillWarning> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Protobuf.Protocol.ProtocolReflection.Descriptor.MessageTypes[26]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public S_SkillWarning() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public S_SkillWarning(S_SkillWarning other) : this() {
+      objectId_ = other.objectId_;
+      warningId_ = other.warningId_;
+      skillId_ = other.skillId_;
+      durationMs_ = other.durationMs_;
+      cells_ = other.cells_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public S_SkillWarning Clone() {
+      return new S_SkillWarning(this);
+    }
+
+    /// <summary>Field number for the "objectId" field.</summary>
+    public const int ObjectIdFieldNumber = 1;
+    private int objectId_;
+    /// <summary>
+    /// 시전자
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int ObjectId {
+      get { return objectId_; }
+      set {
+        objectId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "warningId" field.</summary>
+    public const int WarningIdFieldNumber = 2;
+    private int warningId_;
+    /// <summary>
+    /// 시전마다 고유
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int WarningId {
+      get { return warningId_; }
+      set {
+        warningId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "skillId" field.</summary>
+    public const int SkillIdFieldNumber = 3;
+    private int skillId_;
+    /// <summary>
+    /// monsterSkills.monsterSkillID
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int SkillId {
+      get { return skillId_; }
+      set {
+        skillId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "durationMs" field.</summary>
+    public const int DurationMsFieldNumber = 4;
+    private int durationMs_;
+    /// <summary>
+    /// 예고 시간(ms). 0 = 지움
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int DurationMs {
+      get { return durationMs_; }
+      set {
+        durationMs_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "cells" field.</summary>
+    public const int CellsFieldNumber = 5;
+    private static readonly pb::FieldCodec<global::Google.Protobuf.Protocol.CellPos> _repeated_cells_codec
+        = pb::FieldCodec.ForMessage(42, global::Google.Protobuf.Protocol.CellPos.Parser);
+    private readonly pbc::RepeatedField<global::Google.Protobuf.Protocol.CellPos> cells_ = new pbc::RepeatedField<global::Google.Protobuf.Protocol.CellPos>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Protobuf.Protocol.CellPos> Cells {
+      get { return cells_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as S_SkillWarning);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(S_SkillWarning other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (ObjectId != other.ObjectId) return false;
+      if (WarningId != other.WarningId) return false;
+      if (SkillId != other.SkillId) return false;
+      if (DurationMs != other.DurationMs) return false;
+      if(!cells_.Equals(other.cells_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (ObjectId != 0) hash ^= ObjectId.GetHashCode();
+      if (WarningId != 0) hash ^= WarningId.GetHashCode();
+      if (SkillId != 0) hash ^= SkillId.GetHashCode();
+      if (DurationMs != 0) hash ^= DurationMs.GetHashCode();
+      hash ^= cells_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (ObjectId != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(ObjectId);
+      }
+      if (WarningId != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(WarningId);
+      }
+      if (SkillId != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(SkillId);
+      }
+      if (DurationMs != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(DurationMs);
+      }
+      cells_.WriteTo(output, _repeated_cells_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (ObjectId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(ObjectId);
+      }
+      if (WarningId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(WarningId);
+      }
+      if (SkillId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(SkillId);
+      }
+      if (DurationMs != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(DurationMs);
+      }
+      size += cells_.CalculateSize(_repeated_cells_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(S_SkillWarning other) {
+      if (other == null) {
+        return;
+      }
+      if (other.ObjectId != 0) {
+        ObjectId = other.ObjectId;
+      }
+      if (other.WarningId != 0) {
+        WarningId = other.WarningId;
+      }
+      if (other.SkillId != 0) {
+        SkillId = other.SkillId;
+      }
+      if (other.DurationMs != 0) {
+        DurationMs = other.DurationMs;
+      }
+      cells_.Add(other.cells_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            ObjectId = input.ReadInt32();
+            break;
+          }
+          case 16: {
+            WarningId = input.ReadInt32();
+            break;
+          }
+          case 24: {
+            SkillId = input.ReadInt32();
+            break;
+          }
+          case 32: {
+            DurationMs = input.ReadInt32();
+            break;
+          }
+          case 42: {
+            cells_.AddEntriesFrom(input, _repeated_cells_codec);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class CellPos : pb::IMessage<CellPos> {
+    private static readonly pb::MessageParser<CellPos> _parser = new pb::MessageParser<CellPos>(() => new CellPos());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<CellPos> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Protobuf.Protocol.ProtocolReflection.Descriptor.MessageTypes[27]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CellPos() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CellPos(CellPos other) : this() {
+      x_ = other.x_;
+      y_ = other.y_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CellPos Clone() {
+      return new CellPos(this);
+    }
+
+    /// <summary>Field number for the "x" field.</summary>
+    public const int XFieldNumber = 1;
+    private int x_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int X {
+      get { return x_; }
+      set {
+        x_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "y" field.</summary>
+    public const int YFieldNumber = 2;
+    private int y_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int Y {
+      get { return y_; }
+      set {
+        y_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as CellPos);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(CellPos other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (X != other.X) return false;
+      if (Y != other.Y) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (X != 0) hash ^= X.GetHashCode();
+      if (Y != 0) hash ^= Y.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (X != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(X);
+      }
+      if (Y != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(Y);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (X != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(X);
+      }
+      if (Y != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Y);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(CellPos other) {
+      if (other == null) {
+        return;
+      }
+      if (other.X != 0) {
+        X = other.X;
+      }
+      if (other.Y != 0) {
+        Y = other.Y;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            X = input.ReadInt32();
+            break;
+          }
+          case 16: {
+            Y = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
   public sealed partial class SkillInfo : pb::IMessage<SkillInfo> {
     private static readonly pb::MessageParser<SkillInfo> _parser = new pb::MessageParser<SkillInfo>(() => new SkillInfo());
     private pb::UnknownFieldSet _unknownFields;
@@ -4769,7 +5182,7 @@ namespace Google.Protobuf.Protocol {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Protobuf.Protocol.ProtocolReflection.Descriptor.MessageTypes[26]; }
+      get { return global::Google.Protobuf.Protocol.ProtocolReflection.Descriptor.MessageTypes[28]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

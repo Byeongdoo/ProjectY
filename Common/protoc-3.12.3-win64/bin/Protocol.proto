@@ -28,6 +28,7 @@ enum MsgId {
   C_HOLD_INTERACT = 20;
   S_CHANNEL = 21;
   S_DUNGEON_STATE = 22;
+  S_SKILL_WARNING = 23;
 }
 
 // F 홀드로 하는 일(서버가 주변을 보고 정한다)
@@ -227,6 +228,21 @@ message StatInfo {
   int32 totalExp = 6;
   int32 spirit = 7;    // 신력(본인 것만 의미 있음)
   int32 maxSpirit = 8;
+}
+
+// 적 특수기 예고 칸('망령(적) 시스템' 2-5-1). 시전 시작 때 서버가 위험 칸을 고정해 보낸다.
+// 클라는 durationMs 동안 칸을 표시하고, durationMs = 0이면 같은 warningId 표시를 즉시 지운다(취소).
+message S_SkillWarning {
+  int32 objectId = 1;   // 시전자
+  int32 warningId = 2;  // 시전마다 고유
+  int32 skillId = 3;    // monsterSkills.monsterSkillID
+  int32 durationMs = 4; // 예고 시간(ms). 0 = 지움
+  repeated CellPos cells = 5;
+}
+
+message CellPos {
+  int32 x = 1;
+  int32 y = 2;
 }
 
 message SkillInfo {

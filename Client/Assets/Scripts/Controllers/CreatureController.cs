@@ -147,10 +147,14 @@ public class CreatureController : BaseController
 			_animator.speed = 0f;
 		while (InHitStop)
 			yield return null;
+		// 히트스톱 동안 자세를 멈춰 두는 상태(망령 특수기 예고 자세 등)가 되었으면 멈춘 채로 둔다
 		if (_animator != null)
-			_animator.speed = 1f;
+			_animator.speed = HoldsPose ? 0f : 1f;
 		_coHitStop = null;
 	}
+
+	// 동작을 멈춘 자세로 유지 중인가(히트스톱이 끝나도 다시 재생하지 않는다)
+	protected virtual bool HoldsPose => false;
 
 	// 맞으면 스프라이트를 한 프레임 흰색으로. 캐릭터 위에 같은 스프라이트를 단색 셰이더로 겹쳐 그린다
 	SpriteRenderer _flash;

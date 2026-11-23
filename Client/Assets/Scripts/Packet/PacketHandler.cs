@@ -113,6 +113,12 @@ class PacketHandler
 			cc.CancelSkill();
 	}
 
+	// 적 특수기 예고 칸. 표시만 하고 판정은 서버가 한다.
+	public static void S_SkillWarningHandler(PacketSession session, IMessage packet)
+	{
+		SkillWarningView.Handle(packet as S_SkillWarning);
+	}
+
 	public static void S_ChangeHpHandler(PacketSession session, IMessage packet)
 	{
 		S_ChangeHp changePacket = packet as S_ChangeHp;

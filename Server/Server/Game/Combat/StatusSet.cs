@@ -92,6 +92,13 @@ namespace Server.Game
 				Remove(id);
 		}
 
+		// 모두 풀고 알린다(망령 복귀 등 그 자리에 남아 있는 경우)
+		public void RemoveAll()
+		{
+			foreach (int id in new List<int>(_list.Keys))
+				Remove(id);
+		}
+
 		// 룸을 떠나거나 쓰러질 때. 알리지 않는다(오브젝트가 사라지거나 다시 들어온다)
 		public void Clear()
 		{

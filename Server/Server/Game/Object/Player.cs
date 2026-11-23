@@ -135,6 +135,19 @@ namespace Server.Game
 		public bool IsFainted => Room != null && State == CreatureState.Dead;
 		public long FaintEndTick { get; set; }  // 이때까지 못 일어나면 마지막 불씨에서 부활
 
+		// 적 특수기별 결박 재적용 면역(configs 20055). 특수기 ID → 면역이 끝나는 틱
+		readonly Dictionary<int, long> _bindImmuneUntil = new Dictionary<int, long>();
+
+		public bool IsBindImmune(int skillId, long now)
+		{
+			return _bindImmuneUntil.TryGetValue(skillId, out long until) && until > now;
+		}
+
+		public void SetBindImmune(int skillId, long untilTick)
+		{
+			_bindImmuneUntil[skillId] = untilTick;
+		}
+
 		// F 홀드(혼 부르기·보스방 불씨)
 		public ChannelKind ChannelKind { get; set; } = ChannelKind.ChannelNone;
 		public int ChannelTargetId { get; set; }
