@@ -194,7 +194,7 @@ namespace Server.Game
 			}
 
 			Stat.Hp = Math.Max(Stat.Hp - damage, 0);
-			Room.Broadcast(new S_ChangeHp() { ObjectId = Id, Hp = Stat.Hp, Amount = damage, Critical = critical });
+			Room.Broadcast(new S_ChangeHp() { ObjectId = Id, Hp = Stat.Hp, Amount = damage, Critical = critical, AttackerId = attacker?.Id ?? 0 });
 			OnDamageTaken(attacker, damage);
 
 			if (Stat.Hp <= 0)

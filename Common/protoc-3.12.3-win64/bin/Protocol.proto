@@ -122,6 +122,7 @@ message S_ChangeHp {
   int32 amount = 3;
   bool critical = 4;
   bool heal = 5;
+  int32 attackerId = 6; // 피해를 준 쪽(히트스톱 연출). 0 = 없음(지속 피해 외 출처 불명 등)
 }
 
 // 내 신력. 본인에게만 보낸다
