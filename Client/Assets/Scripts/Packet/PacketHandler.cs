@@ -108,6 +108,12 @@ class PacketHandler
 			cc.CancelSkill();
 	}
 
+	// 적 처치 보상(개인 굴림). 자동 획득: 바로 가방에 담고 알린다
+	public static void S_LootHandler(PacketSession session, IMessage packet)
+	{
+		LootBag.Receive(packet as S_Loot);
+	}
+
 	// 적 특수기 예고 칸. 표시만 하고 판정은 서버가 한다.
 	public static void S_SkillWarningHandler(PacketSession session, IMessage packet)
 	{

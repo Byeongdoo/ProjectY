@@ -220,6 +220,9 @@ namespace Server.Game
 			if (attacker is Player killer)
 				killer.AddSpirit(CombatConfig.Get(CombatConfig.SpiritOnKill));
 
+			// 처치 보상(장비·혼백)은 룸의 플레이어가 각자 굴린다
+			Room.GrantKillRewards(this);
+
 			CancelCast();
 			EndFlight();
 

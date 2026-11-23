@@ -397,6 +397,17 @@ namespace Server.Game
 			player.Session.Send(new S_ChangeScene() { SceneName = dungeon.SceneName });
 		}
 
+		// 적 처치 보상: 룸의 플레이어 전원(혼절 중 포함)이 각자 굴리고, 받은 것은 본인에게만 알린다
+		public void GrantKillRewards(Monster monster)
+		{
+			foreach (Player p in _players.Values)
+			{
+				S_Loot loot = Loot.Roll(monster);
+				if (loot.Items.Count > 0)
+					p.Session.Send(loot);
+			}
+		}
+
 		// 그 칸에 서 있는 살아 있는 플레이어들(아군끼리는 한 칸에 겹칠 수 있다). 적 특수기 판정용
 		public List<Player> TargetablePlayersAt(Vector2Int cell)
 		{
