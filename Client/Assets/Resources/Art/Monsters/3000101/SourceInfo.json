@@ -1,0 +1,19 @@
+{
+  "key": "TwistedMokgui",
+  "name": "뒤틀린 목귀",
+  "characterId": "f2293fbd-f966-458c-8985-06a379771dbc",
+  "gameId": 3000101,
+  "prefabName": "Boss_101",
+  "source": "PixelLab completed character export",
+  "metrics": {
+    "canvasWidth": 192,
+    "canvasHeight": 192,
+    "pixelsPerUnit": 32,
+    "pivotPixels": {
+      "x": 96.0,
+      "y": 0
+    }
+  },
+  "pivotPolicy": "One fixed south ground anchor; animation canvas-centre padding compensation only. No per-frame trimming.",
+  "archiveSha256": "61d2dab2de9cbe3463d77ad144ddd3f946107bed3a1be7cd4c8d67b5d56ad4e8"
+}

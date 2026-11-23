@@ -1,0 +1,3470 @@
+{
+  "version": 1,
+  "pixelsPerUnit": 32,
+  "cellSize": 32,
+  "source": "Existing completed PixelLab resources",
+  "sourcePixelsResized": false,
+  "pixelEdits": false,
+  "packing": "Integer translation only; source canvas and RGBA pixels preserved; blank cells omitted from tile assets",
+  "selection": {
+    "Tavern": "Latest low top-down front version ff740606-918c-4ebf-9612-682ee0a02580",
+    "ResurrectionAltar": "Latest low top-down version 416b50ff-1c21-41cc-b676-abd455b8f5e1"
+  },
+  "excludedOlderVersions": [
+    "4e559e95-12be-49c7-bc14-28a6ca40168b",
+    "f77d9c0e-5fbd-4168-8580-1725730907eb"
+  ],
+  "sheets": [
+    {
+      "category": "Ground",
+      "sheet": "Assets/Resources/Art/Tiles/Samcheondo/Ground/Tile_Samcheondo_Ground.png",
+      "width": 768,
+      "height": 128,
+      "pieces": [
+        {
+          "name": "Tile_Samcheondo_Ground_RiverBank_Wang_13",
+          "x": 32,
+          "y": 0,
+          "width": 32,
+          "height": 32,
+          "paletteX": 1,
+          "paletteY": 0,
+          "sourceId": "51e345a8-25eb-4483-afa9-d776f735a99f",
+          "wangMask": 13,
+          "corners": {
+            "NE": "upper",
+            "NW": "upper",
+            "SE": "upper",
+            "SW": "lower"
+          },
+          "sourceRect": {
+            "x": 0,
+            "y": 0,
+            "width": 32,
+            "height": 32
+          },
+          "rgbaSha256": "a424c4357356e443299928bb43b07f6cd9570058fc78649697b3a43159a451d1"
+        },
+        {
+          "name": "Tile_Samcheondo_Ground_RiverBank_Wang_10",
+          "x": 64,
+          "y": 32,
+          "width": 32,
+          "height": 32,
+          "paletteX": 2,
+          "paletteY": 1,
+          "sourceId": "51e345a8-25eb-4483-afa9-d776f735a99f",
+          "wangMask": 10,
+          "corners": {
+            "NE": "lower",
+            "NW": "upper",
+            "SE": "lower",
+            "SW": "upper"
+          },
+          "sourceRect": {
+            "x": 32,
+            "y": 0,
+            "width": 32,
+            "height": 32
+          },
+          "rgbaSha256": "0f87d52463aa1392c2e672b5a6dc83a514c2b90c27b59c49f3800b2c5a5e2cd6"
+        },
+        {
+          "name": "Tile_Samcheondo_Ground_RiverBank_Wang_04",
+          "x": 0,
+          "y": 64,
+          "width": 32,
+          "height": 32,
+          "paletteX": 0,
+          "paletteY": 2,
+          "sourceId": "51e345a8-25eb-4483-afa9-d776f735a99f",
+          "wangMask": 4,
+          "corners": {
+            "NE": "upper",
+            "NW": "lower",
+            "SE": "lower",
+            "SW": "lower"
+          },
+          "sourceRect": {
+            "x": 64,
+            "y": 0,
+            "width": 32,
+            "height": 32
+          },
+          "rgbaSha256": "04950b6a72e37a5888c688100b02b15b0ae8c031b2f4eebf2415fff95988809a"
+        },
+        {
+          "name": "Tile_Samcheondo_Ground_RiverBank_Wang_12",
+          "x": 0,
+          "y": 0,
+          "width": 32,
+          "height": 32,
+          "paletteX": 0,
+          "paletteY": 0,
+          "sourceId": "51e345a8-25eb-4483-afa9-d776f735a99f",
+          "wangMask": 12,
+          "corners": {
+            "NE": "upper",
+            "NW": "upper",
+            "SE": "lower",
+            "SW": "lower"
+          },
+          "sourceRect": {
+            "x": 96,
+            "y": 0,
+            "width": 32,
+            "height": 32
+          },
+          "rgbaSha256": "b763f9e151c788cfda1f66d988166835185e3800ca08bb3bf22ccf2c32d2b758"
+        },
+        {
+          "name": "Tile_Samcheondo_Ground_RiverBank_Wang_06",
+          "x": 64,
+          "y": 64,
+          "width": 32,
+          "height": 32,
+          "paletteX": 2,
+          "paletteY": 2,
+          "sourceId": "51e345a8-25eb-4483-afa9-d776f735a99f",
+          "wangMask": 6,
+          "corners": {
+            "NE": "upper",
+            "NW": "lower",
+            "SE": "lower",
+            "SW": "upper"
+          },
+          "sourceRect": {
+            "x": 0,
+            "y": 32,
+            "width": 32,
+            "height": 32
+          },
+          "rgbaSha256": "c7ea379f86463bd18c2e020eab6cfbf0365296eef13accd7b765b00f97753f12"
+        },
+        {
+          "name": "Tile_Samcheondo_Ground_RiverBank_Wang_08",
+          "x": 0,
+          "y": 32,
+          "width": 32,
+          "height": 32,
+          "paletteX": 0,
+          "paletteY": 1,
+          "sourceId": "51e345a8-25eb-4483-afa9-d776f735a99f",
+          "wangMask": 8,
+          "corners": {
+            "NE": "lower",
+            "NW": "upper",
+            "SE": "lower",
+            "SW": "lower"
+          },
+          "sourceRect": {
+            "x": 32,
+            "y": 32,
+            "width": 32,
+            "height": 32
+          },
+          "rgbaSha256": "f68c6923c1b79c9a16cbdb167451974439ae5856f52010e0289e818c4bf3cbd6"
+        },
+        {
+          "name": "Tile_Samcheondo_Ground_RiverBank_Wang_00",
+          "x": 0,
+          "y": 96,
+          "width": 32,
+          "height": 32,
+          "paletteX": 0,
+          "paletteY": 3,
+          "sourceId": "51e345a8-25eb-4483-afa9-d776f735a99f",
+          "wangMask": 0,
+          "corners": {
+            "NE": "lower",
+            "NW": "lower",
+            "SE": "lower",
+            "SW": "lower"
+          },
+          "sourceRect": {
+            "x": 64,
+            "y": 32,
+            "width": 32,
+            "height": 32
+          },
+          "rgbaSha256": "f03b764295650363bfe732b33226d61ff0670339823d52c383b7e01a125c8fc5"
+        },
+        {
+          "name": "Tile_Samcheondo_Ground_RiverBank_Wang_01",
+          "x": 32,
+          "y": 96,
+          "width": 32,
+          "height": 32,
+          "paletteX": 1,
+          "paletteY": 3,
+          "sourceId": "51e345a8-25eb-4483-afa9-d776f735a99f",
+          "wangMask": 1,
+          "corners": {
+            "NE": "lower",
+            "NW": "lower",
+            "SE": "upper",
+            "SW": "lower"
+          },
+          "sourceRect": {
+            "x": 96,
+            "y": 32,
+            "width": 32,
+            "height": 32
+          },
+          "rgbaSha256": "fe92a9892c7b5f073aa5408ef77d548567a3d21452b711d13b2224a5b170efc5"
+        },
+        {
+          "name": "Tile_Samcheondo_Ground_RiverBank_Wang_11",
+          "x": 96,
+          "y": 32,
+          "width": 32,
+          "height": 32,
+          "paletteX": 3,
+          "paletteY": 1,
+          "sourceId": "51e345a8-25eb-4483-afa9-d776f735a99f",
+          "wangMask": 11,
+          "corners": {
+            "NE": "lower",
+            "NW": "upper",
+            "SE": "upper",
+            "SW": "upper"
+          },
+          "sourceRect": {
+            "x": 0,
+            "y": 64,
+            "width": 32,
+            "height": 32
+          },
+          "rgbaSha256": "3a72f9f6cb337204626a19a56467c74311239c98cab8f63cb507ecbfa690f2ac"
+        },
+        {
+          "name": "Tile_Samcheondo_Ground_RiverBank_Wang_03",
+          "x": 96,
+          "y": 96,
+          "width": 32,
+          "height": 32,
+          "paletteX": 3,
+          "paletteY": 3,
+          "sourceId": "51e345a8-25eb-4483-afa9-d776f735a99f",
+          "wangMask": 3,
+          "corners": {
+            "NE": "lower",
+            "NW": "lower",
+            "SE": "upper",
+            "SW": "upper"
+          },
+          "sourceRect": {
+            "x": 32,
+            "y": 64,
+            "width": 32,
+            "height": 32
+          },
+          "rgbaSha256": "339ed2e316d3418f7021bf244e0be6aa1e91e66f4e3e190b3d4e3f95df756714"
+        },
+        {
+          "name": "Tile_Samcheondo_Ground_RiverBank_Wang_02",
+          "x": 64,
+          "y": 96,
+          "width": 32,
+          "height": 32,
+          "paletteX": 2,
+          "paletteY": 3,
+          "sourceId": "51e345a8-25eb-4483-afa9-d776f735a99f",
+          "wangMask": 2,
+          "corners": {
+            "NE": "lower",
+            "NW": "lower",
+            "SE": "lower",
+            "SW": "upper"
+          },
+          "sourceRect": {
+            "x": 64,
+            "y": 64,
+            "width": 32,
+            "height": 32
+          },
+          "rgbaSha256": "b4f484279cef4a2aad476218dc666f929a6a4cb144dfbe7f1d5ac85578d6be7e"
+        },
+        {
+          "name": "Tile_Samcheondo_Ground_RiverBank_Wang_05",
+          "x": 32,
+          "y": 64,
+          "width": 32,
+          "height": 32,
+          "paletteX": 1,
+          "paletteY": 2,
+          "sourceId": "51e345a8-25eb-4483-afa9-d776f735a99f",
+          "wangMask": 5,
+          "corners": {
+            "NE": "upper",
+            "NW": "lower",
+            "SE": "upper",
+            "SW": "lower"
+          },
+          "sourceRect": {
+            "x": 96,
+            "y": 64,
+            "width": 32,
+            "height": 32
+          },
+          "rgbaSha256": "3990a199e41661ad6f3f151f64557d97236def254ebc46b3a90d795c5dfd179c"
+        },
+        {
+          "name": "Tile_Samcheondo_Ground_RiverBank_Wang_15",
+          "x": 96,
+          "y": 0,
+          "width": 32,
+          "height": 32,
+          "paletteX": 3,
+          "paletteY": 0,
+          "sourceId": "51e345a8-25eb-4483-afa9-d776f735a99f",
+          "wangMask": 15,
+          "corners": {
+            "NE": "upper",
+            "NW": "upper",
+            "SE": "upper",
+            "SW": "upper"
+          },
+          "sourceRect": {
+            "x": 0,
+            "y": 96,
+            "width": 32,
+            "height": 32
+          },
+          "rgbaSha256": "27e52af6497c35cf3ed2044acbca24aabc2e8abc65cebc5135ffb3cbd1e9a430"
+        },
+        {
+          "name": "Tile_Samcheondo_Ground_RiverBank_Wang_14",
+          "x": 64,
+          "y": 0,
+          "width": 32,
+          "height": 32,
+          "paletteX": 2,
+          "paletteY": 0,
+          "sourceId": "51e345a8-25eb-4483-afa9-d776f735a99f",
+          "wangMask": 14,
+          "corners": {
+            "NE": "upper",
+            "NW": "upper",
+            "SE": "lower",
+            "SW": "upper"
+          },
+          "sourceRect": {
+            "x": 32,
+            "y": 96,
+            "width": 32,
+            "height": 32
+          },
+          "rgbaSha256": "1583dec7ee4cc419d451844abb9638b85107719044adfbb0a1694c179a9063e5"
+        },
+        {
+          "name": "Tile_Samcheondo_Ground_RiverBank_Wang_09",
+          "x": 32,
+          "y": 32,
+          "width": 32,
+          "height": 32,
+          "paletteX": 1,
+          "paletteY": 1,
+          "sourceId": "51e345a8-25eb-4483-afa9-d776f735a99f",
+          "wangMask": 9,
+          "corners": {
+            "NE": "lower",
+            "NW": "upper",
+            "SE": "upper",
+            "SW": "lower"
+          },
+          "sourceRect": {
+            "x": 64,
+            "y": 96,
+            "width": 32,
+            "height": 32
+          },
+          "rgbaSha256": "aa906ffcee611ea573ef5f3c83fe8ba91cb71c28a79212c12f1b08352cf4a50e"
+        },
+        {
+          "name": "Tile_Samcheondo_Ground_RiverBank_Wang_07",
+          "x": 96,
+          "y": 64,
+          "width": 32,
+          "height": 32,
+          "paletteX": 3,
+          "paletteY": 2,
+          "sourceId": "51e345a8-25eb-4483-afa9-d776f735a99f",
+          "wangMask": 7,
+          "corners": {
+            "NE": "upper",
+            "NW": "lower",
+            "SE": "upper",
+            "SW": "upper"
+          },
+          "sourceRect": {
+            "x": 96,
+            "y": 96,
+            "width": 32,
+            "height": 32
+          },
+          "rgbaSha256": "5a57155090b4ef8af671ac8ad96c7c6c98a7058a1a74cee526e2ce46bef63961"
+        },
+        {
+          "name": "Tile_Samcheondo_Ground_Flagstone_Wang_13",
+          "x": 192,
+          "y": 0,
+          "width": 32,
+          "height": 32,
+          "paletteX": 6,
+          "paletteY": 0,
+          "sourceId": "628b0b55-12c5-4280-b3f6-4972f49dac2c",
+          "wangMask": 13,
+          "corners": {
+            "NE": "upper",
+            "NW": "upper",
+            "SE": "upper",
+            "SW": "lower"
+          },
+          "sourceRect": {
+            "x": 0,
+            "y": 0,
+            "width": 32,
+            "height": 32
+          },
+          "rgbaSha256": "fc2a0a0eb85388602819ae81658806d89a7efda1e67432b7234c85647aa161bb"
+        },
+        {
+          "name": "Tile_Samcheondo_Ground_Flagstone_Wang_10",
+          "x": 224,
+          "y": 32,
+          "width": 32,
+          "height": 32,
+          "paletteX": 7,
+          "paletteY": 1,
+          "sourceId": "628b0b55-12c5-4280-b3f6-4972f49dac2c",
+          "wangMask": 10,
+          "corners": {
+            "NE": "lower",
+            "NW": "upper",
+            "SE": "lower",
+            "SW": "upper"
+          },
+          "sourceRect": {
+            "x": 32,
+            "y": 0,
+            "width": 32,
+            "height": 32
+          },
+          "rgbaSha256": "329431bf4d4fe2eac42403820a8679466d16802256b381780d453d621930cdce"
+        },
+        {
+          "name": "Tile_Samcheondo_Ground_Flagstone_Wang_04",
+          "x": 160,
+          "y": 64,
+          "width": 32,
+          "height": 32,
+          "paletteX": 5,
+          "paletteY": 2,
+          "sourceId": "628b0b55-12c5-4280-b3f6-4972f49dac2c",
+          "wangMask": 4,
+          "corners": {
+            "NE": "upper",
+            "NW": "lower",
+            "SE": "lower",
+            "SW": "lower"
+          },
+          "sourceRect": {
+            "x": 64,
+            "y": 0,
+            "width": 32,
+            "height": 32
+          },
+          "rgbaSha256": "f66941282e2a44543102c25d98681eff1f29ad74ae34d3139726dc3cb6ee4328"
+        },
+        {
+          "name": "Tile_Samcheondo_Ground_Flagstone_Wang_12",
+          "x": 160,
+          "y": 0,
+          "width": 32,
+          "height": 32,
+          "paletteX": 5,
+          "paletteY": 0,
+          "sourceId": "628b0b55-12c5-4280-b3f6-4972f49dac2c",
+          "wangMask": 12,
+          "corners": {
+            "NE": "upper",
+            "NW": "upper",
+            "SE": "lower",
+            "SW": "lower"
+          },
+          "sourceRect": {
+            "x": 96,
+            "y": 0,
+            "width": 32,
+            "height": 32
+          },
+          "rgbaSha256": "26d62253fdd11444862bca0872caacee0f81991f53eced927d994a9e2bdb8c5e"
+        },
+        {
+          "name": "Tile_Samcheondo_Ground_Flagstone_Wang_06",
+          "x": 224,
+          "y": 64,
+          "width": 32,
+          "height": 32,
+          "paletteX": 7,
+          "paletteY": 2,
+          "sourceId": "628b0b55-12c5-4280-b3f6-4972f49dac2c",
+          "wangMask": 6,
+          "corners": {
+            "NE": "upper",
+            "NW": "lower",
+            "SE": "lower",
+            "SW": "upper"
+          },
+          "sourceRect": {
+            "x": 0,
+            "y": 32,
+            "width": 32,
+            "height": 32
+          },
+          "rgbaSha256": "3fc1d4fcbc0657e3e98f2951db558b5cb638741eb26ef921fb597b41b80693b5"
+        },
+        {
+          "name": "Tile_Samcheondo_Ground_Flagstone_Wang_08",
+          "x": 160,
+          "y": 32,
+          "width": 32,
+          "height": 32,
+          "paletteX": 5,
+          "paletteY": 1,
+          "sourceId": "628b0b55-12c5-4280-b3f6-4972f49dac2c",
+          "wangMask": 8,
+          "corners": {
+            "NE": "lower",
+            "NW": "upper",
+            "SE": "lower",
+            "SW": "lower"
+          },
+          "sourceRect": {
+            "x": 32,
+            "y": 32,
+            "width": 32,
+            "height": 32
+          },
+          "rgbaSha256": "a63943dcd5919dd47897186752f39379f95cde3e2ba7beb6fd619780dd6c2321"
+        },
+        {
+          "name": "Tile_Samcheondo_Ground_Flagstone_Wang_00",
+          "x": 160,
+          "y": 96,
+          "width": 32,
+          "height": 32,
+          "paletteX": 5,
+          "paletteY": 3,
+          "sourceId": "628b0b55-12c5-4280-b3f6-4972f49dac2c",
+          "wangMask": 0,
+          "corners": {
+            "NE": "lower",
+            "NW": "lower",
+            "SE": "lower",
+            "SW": "lower"
+          },
+          "sourceRect": {
+            "x": 64,
+            "y": 32,
+            "width": 32,
+            "height": 32
+          },
+          "rgbaSha256": "27e52af6497c35cf3ed2044acbca24aabc2e8abc65cebc5135ffb3cbd1e9a430"
+        },
+        {
+          "name": "Tile_Samcheondo_Ground_Flagstone_Wang_01",
+          "x": 192,
+          "y": 96,
+          "width": 32,
+          "height": 32,
+          "paletteX": 6,
+          "paletteY": 3,
+          "sourceId": "628b0b55-12c5-4280-b3f6-4972f49dac2c",
+          "wangMask": 1,
+          "corners": {
+            "NE": "lower",
+            "NW": "lower",
+            "SE": "upper",
+            "SW": "lower"
+          },
+          "sourceRect": {
+            "x": 96,
+            "y": 32,
+            "width": 32,
+            "height": 32
+          },
+          "rgbaSha256": "43c5bcbbd6cb488776fa9f8400e63ea1bab5bedc5ef5e2e6ed89286643abe883"
+        },
+        {
+          "name": "Tile_Samcheondo_Ground_Flagstone_Wang_11",
+          "x": 256,
+          "y": 32,
+          "width": 32,
+          "height": 32,
+          "paletteX": 8,
+          "paletteY": 1,
+          "sourceId": "628b0b55-12c5-4280-b3f6-4972f49dac2c",
+          "wangMask": 11,
+          "corners": {
+            "NE": "lower",
+            "NW": "upper",
+            "SE": "upper",
+            "SW": "upper"
+          },
+          "sourceRect": {
+            "x": 0,
+            "y": 64,
+            "width": 32,
+            "height": 32
+          },
+          "rgbaSha256": "b55fdb40bd66e94bff3be1e5140abde8c0e64d474c0e43c0b1a1f3fc2723b477"
+        },
+        {
+          "name": "Tile_Samcheondo_Ground_Flagstone_Wang_03",
+          "x": 256,
+          "y": 96,
+          "width": 32,
+          "height": 32,
+          "paletteX": 8,
+          "paletteY": 3,
+          "sourceId": "628b0b55-12c5-4280-b3f6-4972f49dac2c",
+          "wangMask": 3,
+          "corners": {
+            "NE": "lower",
+            "NW": "lower",
+            "SE": "upper",
+            "SW": "upper"
+          },
+          "sourceRect": {
+            "x": 32,
+            "y": 64,
+            "width": 32,
+            "height": 32
+          },
+          "rgbaSha256": "b5e02669d11dccaa758a88e621b7cd5de4489d23a94b59f0a5304c3f1996e570"
+        },
+        {
+          "name": "Tile_Samcheondo_Ground_Flagstone_Wang_02",
+          "x": 224,
+          "y": 96,
+          "width": 32,
+          "height": 32,
+          "paletteX": 7,
+          "paletteY": 3,
+          "sourceId": "628b0b55-12c5-4280-b3f6-4972f49dac2c",
+          "wangMask": 2,
+          "corners": {
+            "NE": "lower",
+            "NW": "lower",
+            "SE": "lower",
+            "SW": "upper"
+          },
+          "sourceRect": {
+            "x": 64,
+            "y": 64,
+            "width": 32,
+            "height": 32
+          },
+          "rgbaSha256": "7bb0870560aee21c7ded4cfb341609d051f22eaae429c366c455569865dc2331"
+        },
+        {
+          "name": "Tile_Samcheondo_Ground_Flagstone_Wang_05",
+          "x": 192,
+          "y": 64,
+          "width": 32,
+          "height": 32,
+          "paletteX": 6,
+          "paletteY": 2,
+          "sourceId": "628b0b55-12c5-4280-b3f6-4972f49dac2c",
+          "wangMask": 5,
+          "corners": {
+            "NE": "upper",
+            "NW": "lower",
+            "SE": "upper",
+            "SW": "lower"
+          },
+          "sourceRect": {
+            "x": 96,
+            "y": 64,
+            "width": 32,
+            "height": 32
+          },
+          "rgbaSha256": "ef1357ae73d96439711081ab94f69ae49fcb488d657e87f6860e3b9759a22e9f"
+        },
+        {
+          "name": "Tile_Samcheondo_Ground_Flagstone_Wang_15",
+          "x": 256,
+          "y": 0,
+          "width": 32,
+          "height": 32,
+          "paletteX": 8,
+          "paletteY": 0,
+          "sourceId": "628b0b55-12c5-4280-b3f6-4972f49dac2c",
+          "wangMask": 15,
+          "corners": {
+            "NE": "upper",
+            "NW": "upper",
+            "SE": "upper",
+            "SW": "upper"
+          },
+          "sourceRect": {
+            "x": 0,
+            "y": 96,
+            "width": 32,
+            "height": 32
+          },
+          "rgbaSha256": "414f97b3bea55de43908e1620e36a3bd9787e15f34eb454ce7d491bd2f6dc6f6"
+        },
+        {
+          "name": "Tile_Samcheondo_Ground_Flagstone_Wang_14",
+          "x": 224,
+          "y": 0,
+          "width": 32,
+          "height": 32,
+          "paletteX": 7,
+          "paletteY": 0,
+          "sourceId": "628b0b55-12c5-4280-b3f6-4972f49dac2c",
+          "wangMask": 14,
+          "corners": {
+            "NE": "upper",
+            "NW": "upper",
+            "SE": "lower",
+            "SW": "upper"
+          },
+          "sourceRect": {
+            "x": 32,
+            "y": 96,
+            "width": 32,
+            "height": 32
+          },
+          "rgbaSha256": "19cd24d293b99411484695b738ff18a14cfe10dc5348fea2e72045f3d8cb0479"
+        },
+        {
+          "name": "Tile_Samcheondo_Ground_Flagstone_Wang_09",
+          "x": 192,
+          "y": 32,
+          "width": 32,
+          "height": 32,
+          "paletteX": 6,
+          "paletteY": 1,
+          "sourceId": "628b0b55-12c5-4280-b3f6-4972f49dac2c",
+          "wangMask": 9,
+          "corners": {
+            "NE": "lower",
+            "NW": "upper",
+            "SE": "upper",
+            "SW": "lower"
+          },
+          "sourceRect": {
+            "x": 64,
+            "y": 96,
+            "width": 32,
+            "height": 32
+          },
+          "rgbaSha256": "afca1791c3e553cb11bdb701758af6f0aba5a3ff830964510291148d769e1685"
+        },
+        {
+          "name": "Tile_Samcheondo_Ground_Flagstone_Wang_07",
+          "x": 256,
+          "y": 64,
+          "width": 32,
+          "height": 32,
+          "paletteX": 8,
+          "paletteY": 2,
+          "sourceId": "628b0b55-12c5-4280-b3f6-4972f49dac2c",
+          "wangMask": 7,
+          "corners": {
+            "NE": "upper",
+            "NW": "lower",
+            "SE": "upper",
+            "SW": "upper"
+          },
+          "sourceRect": {
+            "x": 96,
+            "y": 96,
+            "width": 32,
+            "height": 32
+          },
+          "rgbaSha256": "05c5b642b63b084d3883a24d40fdce18ada4dd28910608286976701ba0fb02cc"
+        },
+        {
+          "name": "Tile_Samcheondo_Ground_WaterPier_Wang_13",
+          "x": 352,
+          "y": 0,
+          "width": 32,
+          "height": 32,
+          "paletteX": 11,
+          "paletteY": 0,
+          "sourceId": "83a3a9f6-d70b-4aff-9b0c-104e7902a22f",
+          "wangMask": 13,
+          "corners": {
+            "NE": "upper",
+            "NW": "upper",
+            "SE": "upper",
+            "SW": "lower"
+          },
+          "sourceRect": {
+            "x": 0,
+            "y": 0,
+            "width": 32,
+            "height": 32
+          },
+          "rgbaSha256": "04200a3ba2630856baa608226f6b986b0f91ba15f67934561ef70fc21a268410"
+        },
+        {
+          "name": "Tile_Samcheondo_Ground_WaterPier_Wang_10",
+          "x": 384,
+          "y": 32,
+          "width": 32,
+          "height": 32,
+          "paletteX": 12,
+          "paletteY": 1,
+          "sourceId": "83a3a9f6-d70b-4aff-9b0c-104e7902a22f",
+          "wangMask": 10,
+          "corners": {
+            "NE": "lower",
+            "NW": "upper",
+            "SE": "lower",
+            "SW": "upper"
+          },
+          "sourceRect": {
+            "x": 32,
+            "y": 0,
+            "width": 32,
+            "height": 32
+          },
+          "rgbaSha256": "b1dab842674ef66f39264344762f6540203901afccc0d852cc5baf591d5fc13c"
+        },
+        {
+          "name": "Tile_Samcheondo_Ground_WaterPier_Wang_04",
+          "x": 320,
+          "y": 64,
+          "width": 32,
+          "height": 32,
+          "paletteX": 10,
+          "paletteY": 2,
+          "sourceId": "83a3a9f6-d70b-4aff-9b0c-104e7902a22f",
+          "wangMask": 4,
+          "corners": {
+            "NE": "upper",
+            "NW": "lower",
+            "SE": "lower",
+            "SW": "lower"
+          },
+          "sourceRect": {
+            "x": 64,
+            "y": 0,
+            "width": 32,
+            "height": 32
+          },
+          "rgbaSha256": "39d45f552dec5f0c1c80586f61f77ca8ea5586fd873a56eff3764687b431df86"
+        },
+        {
+          "name": "Tile_Samcheondo_Ground_WaterPier_Wang_12",
+          "x": 320,
+          "y": 0,
+          "width": 32,
+          "height": 32,
+          "paletteX": 10,
+          "paletteY": 0,
+          "sourceId": "83a3a9f6-d70b-4aff-9b0c-104e7902a22f",
+          "wangMask": 12,
+          "corners": {
+            "NE": "upper",
+            "NW": "upper",
+            "SE": "lower",
+            "SW": "lower"
+          },
+          "sourceRect": {
+            "x": 96,
+            "y": 0,
+            "width": 32,
+            "height": 32
+          },
+          "rgbaSha256": "ce93078b013db2b8e7166a6662a117721885cd3f3688843c4ecc22606fb18ab5"
+        },
+        {
+          "name": "Tile_Samcheondo_Ground_WaterPier_Wang_06",
+          "x": 384,
+          "y": 64,
+          "width": 32,
+          "height": 32,
+          "paletteX": 12,
+          "paletteY": 2,
+          "sourceId": "83a3a9f6-d70b-4aff-9b0c-104e7902a22f",
+          "wangMask": 6,
+          "corners": {
+            "NE": "upper",
+            "NW": "lower",
+            "SE": "lower",
+            "SW": "upper"
+          },
+          "sourceRect": {
+            "x": 0,
+            "y": 32,
+            "width": 32,
+            "height": 32
+          },
+          "rgbaSha256": "6b1dc04d24d8482deed08d732203173267d05f4bcb0fec9a418e0249bd4a4cd2"
+        },
+        {
+          "name": "Tile_Samcheondo_Ground_WaterPier_Wang_08",
+          "x": 320,
+          "y": 32,
+          "width": 32,
+          "height": 32,
+          "paletteX": 10,
+          "paletteY": 1,
+          "sourceId": "83a3a9f6-d70b-4aff-9b0c-104e7902a22f",
+          "wangMask": 8,
+          "corners": {
+            "NE": "lower",
+            "NW": "upper",
+            "SE": "lower",
+            "SW": "lower"
+          },
+          "sourceRect": {
+            "x": 32,
+            "y": 32,
+            "width": 32,
+            "height": 32
+          },
+          "rgbaSha256": "33338470cbb5d54f6ad08c2320a7f0f293e0f819af7fcd4f1fa38880a4da6512"
+        },
+        {
+          "name": "Tile_Samcheondo_Ground_WaterPier_Wang_00",
+          "x": 320,
+          "y": 96,
+          "width": 32,
+          "height": 32,
+          "paletteX": 10,
+          "paletteY": 3,
+          "sourceId": "83a3a9f6-d70b-4aff-9b0c-104e7902a22f",
+          "wangMask": 0,
+          "corners": {
+            "NE": "lower",
+            "NW": "lower",
+            "SE": "lower",
+            "SW": "lower"
+          },
+          "sourceRect": {
+            "x": 64,
+            "y": 32,
+            "width": 32,
+            "height": 32
+          },
+          "rgbaSha256": "f03b764295650363bfe732b33226d61ff0670339823d52c383b7e01a125c8fc5"
+        },
+        {
+          "name": "Tile_Samcheondo_Ground_WaterPier_Wang_01",
+          "x": 352,
+          "y": 96,
+          "width": 32,
+          "height": 32,
+          "paletteX": 11,
+          "paletteY": 3,
+          "sourceId": "83a3a9f6-d70b-4aff-9b0c-104e7902a22f",
+          "wangMask": 1,
+          "corners": {
+            "NE": "lower",
+            "NW": "lower",
+            "SE": "upper",
+            "SW": "lower"
+          },
+          "sourceRect": {
+            "x": 96,
+            "y": 32,
+            "width": 32,
+            "height": 32
+          },
+          "rgbaSha256": "d865eadbf4167ed55eae32d92b1f4d8b8876593b80e0b2526bc0a009984b01b6"
+        },
+        {
+          "name": "Tile_Samcheondo_Ground_WaterPier_Wang_11",
+          "x": 416,
+          "y": 32,
+          "width": 32,
+          "height": 32,
+          "paletteX": 13,
+          "paletteY": 1,
+          "sourceId": "83a3a9f6-d70b-4aff-9b0c-104e7902a22f",
+          "wangMask": 11,
+          "corners": {
+            "NE": "lower",
+            "NW": "upper",
+            "SE": "upper",
+            "SW": "upper"
+          },
+          "sourceRect": {
+            "x": 0,
+            "y": 64,
+            "width": 32,
+            "height": 32
+          },
+          "rgbaSha256": "78f5e34045a39233c4a246836d14e3c69f1b50aeeca348f6493c01bc78e44f25"
+        },
+        {
+          "name": "Tile_Samcheondo_Ground_WaterPier_Wang_03",
+          "x": 416,
+          "y": 96,
+          "width": 32,
+          "height": 32,
+          "paletteX": 13,
+          "paletteY": 3,
+          "sourceId": "83a3a9f6-d70b-4aff-9b0c-104e7902a22f",
+          "wangMask": 3,
+          "corners": {
+            "NE": "lower",
+            "NW": "lower",
+            "SE": "upper",
+            "SW": "upper"
+          },
+          "sourceRect": {
+            "x": 32,
+            "y": 64,
+            "width": 32,
+            "height": 32
+          },
+          "rgbaSha256": "2fd29ad472574e12e4fb0a59968dd250a1d092fe785017850ba437660d7e8fc5"
+        },
+        {
+          "name": "Tile_Samcheondo_Ground_WaterPier_Wang_02",
+          "x": 384,
+          "y": 96,
+          "width": 32,
+          "height": 32,
+          "paletteX": 12,
+          "paletteY": 3,
+          "sourceId": "83a3a9f6-d70b-4aff-9b0c-104e7902a22f",
+          "wangMask": 2,
+          "corners": {
+            "NE": "lower",
+            "NW": "lower",
+            "SE": "lower",
+            "SW": "upper"
+          },
+          "sourceRect": {
+            "x": 64,
+            "y": 64,
+            "width": 32,
+            "height": 32
+          },
+          "rgbaSha256": "f4ccac0824adcd9bcf8079e38fca9dfe1a046361c9b864a83f1fc03111e5ac9b"
+        },
+        {
+          "name": "Tile_Samcheondo_Ground_WaterPier_Wang_05",
+          "x": 352,
+          "y": 64,
+          "width": 32,
+          "height": 32,
+          "paletteX": 11,
+          "paletteY": 2,
+          "sourceId": "83a3a9f6-d70b-4aff-9b0c-104e7902a22f",
+          "wangMask": 5,
+          "corners": {
+            "NE": "upper",
+            "NW": "lower",
+            "SE": "upper",
+            "SW": "lower"
+          },
+          "sourceRect": {
+            "x": 96,
+            "y": 64,
+            "width": 32,
+            "height": 32
+          },
+          "rgbaSha256": "1401eafb24d472811a542d3642742a0cb59cace4672068704187f4e84df9b0a5"
+        },
+        {
+          "name": "Tile_Samcheondo_Ground_WaterPier_Wang_15",
+          "x": 416,
+          "y": 0,
+          "width": 32,
+          "height": 32,
+          "paletteX": 13,
+          "paletteY": 0,
+          "sourceId": "83a3a9f6-d70b-4aff-9b0c-104e7902a22f",
+          "wangMask": 15,
+          "corners": {
+            "NE": "upper",
+            "NW": "upper",
+            "SE": "upper",
+            "SW": "upper"
+          },
+          "sourceRect": {
+            "x": 0,
+            "y": 96,
+            "width": 32,
+            "height": 32
+          },
+          "rgbaSha256": "617f764a0ede2ba4a887f936219721e25292a7916355d80df67369ac43f95523"
+        },
+        {
+          "name": "Tile_Samcheondo_Ground_WaterPier_Wang_14",
+          "x": 384,
+          "y": 0,
+          "width": 32,
+          "height": 32,
+          "paletteX": 12,
+          "paletteY": 0,
+          "sourceId": "83a3a9f6-d70b-4aff-9b0c-104e7902a22f",
+          "wangMask": 14,
+          "corners": {
+            "NE": "upper",
+            "NW": "upper",
+            "SE": "lower",
+            "SW": "upper"
+          },
+          "sourceRect": {
+            "x": 32,
+            "y": 96,
+            "width": 32,
+            "height": 32
+          },
+          "rgbaSha256": "ec40c617711603eee74b84163842bcc6772b58785e9d6fb37835fbd9f1f9c5ce"
+        },
+        {
+          "name": "Tile_Samcheondo_Ground_WaterPier_Wang_09",
+          "x": 352,
+          "y": 32,
+          "width": 32,
+          "height": 32,
+          "paletteX": 11,
+          "paletteY": 1,
+          "sourceId": "83a3a9f6-d70b-4aff-9b0c-104e7902a22f",
+          "wangMask": 9,
+          "corners": {
+            "NE": "lower",
+            "NW": "upper",
+            "SE": "upper",
+            "SW": "lower"
+          },
+          "sourceRect": {
+            "x": 64,
+            "y": 96,
+            "width": 32,
+            "height": 32
+          },
+          "rgbaSha256": "4b844f908f1fe6982a28bf918f9ca150c7e446e04502ab40af7d9b089b1fa816"
+        },
+        {
+          "name": "Tile_Samcheondo_Ground_WaterPier_Wang_07",
+          "x": 416,
+          "y": 64,
+          "width": 32,
+          "height": 32,
+          "paletteX": 13,
+          "paletteY": 2,
+          "sourceId": "83a3a9f6-d70b-4aff-9b0c-104e7902a22f",
+          "wangMask": 7,
+          "corners": {
+            "NE": "upper",
+            "NW": "lower",
+            "SE": "upper",
+            "SW": "upper"
+          },
+          "sourceRect": {
+            "x": 96,
+            "y": 96,
+            "width": 32,
+            "height": 32
+          },
+          "rgbaSha256": "c6b21d78ef1a91abd02e191a451859518d43b27c3afba2ba82194efdde938dd9"
+        },
+        {
+          "name": "Tile_Samcheondo_Ground_Meadow_Wang_13",
+          "x": 512,
+          "y": 0,
+          "width": 32,
+          "height": 32,
+          "paletteX": 16,
+          "paletteY": 0,
+          "sourceId": "4b9140b0-5774-4eb0-a804-55ac3c38ce88",
+          "wangMask": 13,
+          "corners": {
+            "NE": "upper",
+            "NW": "upper",
+            "SE": "upper",
+            "SW": "lower"
+          },
+          "sourceRect": {
+            "x": 0,
+            "y": 0,
+            "width": 32,
+            "height": 32
+          },
+          "rgbaSha256": "88f8a673af6291f0fd2c6d2b588548ffc3c929fe71ca199b22fd5d175f99e176"
+        },
+        {
+          "name": "Tile_Samcheondo_Ground_Meadow_Wang_10",
+          "x": 544,
+          "y": 32,
+          "width": 32,
+          "height": 32,
+          "paletteX": 17,
+          "paletteY": 1,
+          "sourceId": "4b9140b0-5774-4eb0-a804-55ac3c38ce88",
+          "wangMask": 10,
+          "corners": {
+            "NE": "lower",
+            "NW": "upper",
+            "SE": "lower",
+            "SW": "upper"
+          },
+          "sourceRect": {
+            "x": 32,
+            "y": 0,
+            "width": 32,
+            "height": 32
+          },
+          "rgbaSha256": "203eb4c863582cf3758285391311faf66a528f0275df6b366b67f3dc563c3cb2"
+        },
+        {
+          "name": "Tile_Samcheondo_Ground_Meadow_Wang_04",
+          "x": 480,
+          "y": 64,
+          "width": 32,
+          "height": 32,
+          "paletteX": 15,
+          "paletteY": 2,
+          "sourceId": "4b9140b0-5774-4eb0-a804-55ac3c38ce88",
+          "wangMask": 4,
+          "corners": {
+            "NE": "upper",
+            "NW": "lower",
+            "SE": "lower",
+            "SW": "lower"
+          },
+          "sourceRect": {
+            "x": 64,
+            "y": 0,
+            "width": 32,
+            "height": 32
+          },
+          "rgbaSha256": "9702c910e0716396892f2951bdc3d1d0d5a77784d560d586eb8b3d64eed7efde"
+        },
+        {
+          "name": "Tile_Samcheondo_Ground_Meadow_Wang_12",
+          "x": 480,
+          "y": 0,
+          "width": 32,
+          "height": 32,
+          "paletteX": 15,
+          "paletteY": 0,
+          "sourceId": "4b9140b0-5774-4eb0-a804-55ac3c38ce88",
+          "wangMask": 12,
+          "corners": {
+            "NE": "upper",
+            "NW": "upper",
+            "SE": "lower",
+            "SW": "lower"
+          },
+          "sourceRect": {
+            "x": 96,
+            "y": 0,
+            "width": 32,
+            "height": 32
+          },
+          "rgbaSha256": "bcbb3d4b9376bb89927485da37d650f55a12645356e735adfbe229fd0dc21a01"
+        },
+        {
+          "name": "Tile_Samcheondo_Ground_Meadow_Wang_06",
+          "x": 544,
+          "y": 64,
+          "width": 32,
+          "height": 32,
+          "paletteX": 17,
+          "paletteY": 2,
+          "sourceId": "4b9140b0-5774-4eb0-a804-55ac3c38ce88",
+          "wangMask": 6,
+          "corners": {
+            "NE": "upper",
+            "NW": "lower",
+            "SE": "lower",
+            "SW": "upper"
+          },
+          "sourceRect": {
+            "x": 0,
+            "y": 32,
+            "width": 32,
+            "height": 32
+          },
+          "rgbaSha256": "19075808681883ce09ea97e8fcac84a4bd789c20f580785686cdaa88484c3c2f"
+        },
+        {
+          "name": "Tile_Samcheondo_Ground_Meadow_Wang_08",
+          "x": 480,
+          "y": 32,
+          "width": 32,
+          "height": 32,
+          "paletteX": 15,
+          "paletteY": 1,
+          "sourceId": "4b9140b0-5774-4eb0-a804-55ac3c38ce88",
+          "wangMask": 8,
+          "corners": {
+            "NE": "lower",
+            "NW": "upper",
+            "SE": "lower",
+            "SW": "lower"
+          },
+          "sourceRect": {
+            "x": 32,
+            "y": 32,
+            "width": 32,
+            "height": 32
+          },
+          "rgbaSha256": "776179b1db25f7f0605829cfb7b36743f7a044e62df5b2c5affdca3879b17661"
+        },
+        {
+          "name": "Tile_Samcheondo_Ground_Meadow_Wang_00",
+          "x": 480,
+          "y": 96,
+          "width": 32,
+          "height": 32,
+          "paletteX": 15,
+          "paletteY": 3,
+          "sourceId": "4b9140b0-5774-4eb0-a804-55ac3c38ce88",
+          "wangMask": 0,
+          "corners": {
+            "NE": "lower",
+            "NW": "lower",
+            "SE": "lower",
+            "SW": "lower"
+          },
+          "sourceRect": {
+            "x": 64,
+            "y": 32,
+            "width": 32,
+            "height": 32
+          },
+          "rgbaSha256": "27e52af6497c35cf3ed2044acbca24aabc2e8abc65cebc5135ffb3cbd1e9a430"
+        },
+        {
+          "name": "Tile_Samcheondo_Ground_Meadow_Wang_01",
+          "x": 512,
+          "y": 96,
+          "width": 32,
+          "height": 32,
+          "paletteX": 16,
+          "paletteY": 3,
+          "sourceId": "4b9140b0-5774-4eb0-a804-55ac3c38ce88",
+          "wangMask": 1,
+          "corners": {
+            "NE": "lower",
+            "NW": "lower",
+            "SE": "upper",
+            "SW": "lower"
+          },
+          "sourceRect": {
+            "x": 96,
+            "y": 32,
+            "width": 32,
+            "height": 32
+          },
+          "rgbaSha256": "41f7d589edc5e61a19133ca6001f62e2cf0e5bd02ed7c7c48fac833705657160"
+        },
+        {
+          "name": "Tile_Samcheondo_Ground_Meadow_Wang_11",
+          "x": 576,
+          "y": 32,
+          "width": 32,
+          "height": 32,
+          "paletteX": 18,
+          "paletteY": 1,
+          "sourceId": "4b9140b0-5774-4eb0-a804-55ac3c38ce88",
+          "wangMask": 11,
+          "corners": {
+            "NE": "lower",
+            "NW": "upper",
+            "SE": "upper",
+            "SW": "upper"
+          },
+          "sourceRect": {
+            "x": 0,
+            "y": 64,
+            "width": 32,
+            "height": 32
+          },
+          "rgbaSha256": "a24509469ac01fa5b426fa2b7248a06f0214e0c2e43296fe05713810dafe0762"
+        },
+        {
+          "name": "Tile_Samcheondo_Ground_Meadow_Wang_03",
+          "x": 576,
+          "y": 96,
+          "width": 32,
+          "height": 32,
+          "paletteX": 18,
+          "paletteY": 3,
+          "sourceId": "4b9140b0-5774-4eb0-a804-55ac3c38ce88",
+          "wangMask": 3,
+          "corners": {
+            "NE": "lower",
+            "NW": "lower",
+            "SE": "upper",
+            "SW": "upper"
+          },
+          "sourceRect": {
+            "x": 32,
+            "y": 64,
+            "width": 32,
+            "height": 32
+          },
+          "rgbaSha256": "2fec630f17db2cb62d000a7502208b0a4d569bcc66be1e348fee5dff1b81f3fe"
+        },
+        {
+          "name": "Tile_Samcheondo_Ground_Meadow_Wang_02",
+          "x": 544,
+          "y": 96,
+          "width": 32,
+          "height": 32,
+          "paletteX": 17,
+          "paletteY": 3,
+          "sourceId": "4b9140b0-5774-4eb0-a804-55ac3c38ce88",
+          "wangMask": 2,
+          "corners": {
+            "NE": "lower",
+            "NW": "lower",
+            "SE": "lower",
+            "SW": "upper"
+          },
+          "sourceRect": {
+            "x": 64,
+            "y": 64,
+            "width": 32,
+            "height": 32
+          },
+          "rgbaSha256": "577413c6f85295efd2ebd72375e43f6a72d377a3ec5fc54866ff4f47baaa7163"
+        },
+        {
+          "name": "Tile_Samcheondo_Ground_Meadow_Wang_05",
+          "x": 512,
+          "y": 64,
+          "width": 32,
+          "height": 32,
+          "paletteX": 16,
+          "paletteY": 2,
+          "sourceId": "4b9140b0-5774-4eb0-a804-55ac3c38ce88",
+          "wangMask": 5,
+          "corners": {
+            "NE": "upper",
+            "NW": "lower",
+            "SE": "upper",
+            "SW": "lower"
+          },
+          "sourceRect": {
+            "x": 96,
+            "y": 64,
+            "width": 32,
+            "height": 32
+          },
+          "rgbaSha256": "70d95f0c2d9650d54a65a756232c9782e0a5d239f55430938a6aec41158c371a"
+        },
+        {
+          "name": "Tile_Samcheondo_Ground_Meadow_Wang_15",
+          "x": 576,
+          "y": 0,
+          "width": 32,
+          "height": 32,
+          "paletteX": 18,
+          "paletteY": 0,
+          "sourceId": "4b9140b0-5774-4eb0-a804-55ac3c38ce88",
+          "wangMask": 15,
+          "corners": {
+            "NE": "upper",
+            "NW": "upper",
+            "SE": "upper",
+            "SW": "upper"
+          },
+          "sourceRect": {
+            "x": 0,
+            "y": 96,
+            "width": 32,
+            "height": 32
+          },
+          "rgbaSha256": "3ee032aed643c8749baac6952d5c1c6f6c2f0ad70ea22ab8cdc11067e1e19dbe"
+        },
+        {
+          "name": "Tile_Samcheondo_Ground_Meadow_Wang_14",
+          "x": 544,
+          "y": 0,
+          "width": 32,
+          "height": 32,
+          "paletteX": 17,
+          "paletteY": 0,
+          "sourceId": "4b9140b0-5774-4eb0-a804-55ac3c38ce88",
+          "wangMask": 14,
+          "corners": {
+            "NE": "upper",
+            "NW": "upper",
+            "SE": "lower",
+            "SW": "upper"
+          },
+          "sourceRect": {
+            "x": 32,
+            "y": 96,
+            "width": 32,
+            "height": 32
+          },
+          "rgbaSha256": "d1a4b5dcea5e8a9214c0e9e5aa319882b0b9cb2e5d296e7cd60a8ef0f2dc93e6"
+        },
+        {
+          "name": "Tile_Samcheondo_Ground_Meadow_Wang_09",
+          "x": 512,
+          "y": 32,
+          "width": 32,
+          "height": 32,
+          "paletteX": 16,
+          "paletteY": 1,
+          "sourceId": "4b9140b0-5774-4eb0-a804-55ac3c38ce88",
+          "wangMask": 9,
+          "corners": {
+            "NE": "lower",
+            "NW": "upper",
+            "SE": "upper",
+            "SW": "lower"
+          },
+          "sourceRect": {
+            "x": 64,
+            "y": 96,
+            "width": 32,
+            "height": 32
+          },
+          "rgbaSha256": "e981ecc64f042dad84c90d346a9fa48e29359368f1e84dff44f201f816dfafa2"
+        },
+        {
+          "name": "Tile_Samcheondo_Ground_Meadow_Wang_07",
+          "x": 576,
+          "y": 64,
+          "width": 32,
+          "height": 32,
+          "paletteX": 18,
+          "paletteY": 2,
+          "sourceId": "4b9140b0-5774-4eb0-a804-55ac3c38ce88",
+          "wangMask": 7,
+          "corners": {
+            "NE": "upper",
+            "NW": "lower",
+            "SE": "upper",
+            "SW": "upper"
+          },
+          "sourceRect": {
+            "x": 96,
+            "y": 96,
+            "width": 32,
+            "height": 32
+          },
+          "rgbaSha256": "9e88fb31cfeaa63f4ea2e4ae82f7cc69f6ab5d1184f0195e0ba19b65007d381d"
+        },
+        {
+          "name": "Tile_Samcheondo_Ground_BankPier_Wang_13",
+          "x": 672,
+          "y": 0,
+          "width": 32,
+          "height": 32,
+          "paletteX": 21,
+          "paletteY": 0,
+          "sourceId": "815e24c0-260e-4265-a5ad-9837febb463a",
+          "wangMask": 13,
+          "corners": {
+            "NE": "upper",
+            "NW": "upper",
+            "SE": "upper",
+            "SW": "lower"
+          },
+          "sourceRect": {
+            "x": 0,
+            "y": 0,
+            "width": 32,
+            "height": 32
+          },
+          "rgbaSha256": "0b5d2d16f5d2c227a87475d9996b83864b4659e7186cdbe82724adf47930d035"
+        },
+        {
+          "name": "Tile_Samcheondo_Ground_BankPier_Wang_10",
+          "x": 704,
+          "y": 32,
+          "width": 32,
+          "height": 32,
+          "paletteX": 22,
+          "paletteY": 1,
+          "sourceId": "815e24c0-260e-4265-a5ad-9837febb463a",
+          "wangMask": 10,
+          "corners": {
+            "NE": "lower",
+            "NW": "upper",
+            "SE": "lower",
+            "SW": "upper"
+          },
+          "sourceRect": {
+            "x": 32,
+            "y": 0,
+            "width": 32,
+            "height": 32
+          },
+          "rgbaSha256": "8c208f6384ad2d82f64632aff7aaf4b0fb1ff9a186ae1196bee640980860faac"
+        },
+        {
+          "name": "Tile_Samcheondo_Ground_BankPier_Wang_04",
+          "x": 640,
+          "y": 64,
+          "width": 32,
+          "height": 32,
+          "paletteX": 20,
+          "paletteY": 2,
+          "sourceId": "815e24c0-260e-4265-a5ad-9837febb463a",
+          "wangMask": 4,
+          "corners": {
+            "NE": "upper",
+            "NW": "lower",
+            "SE": "lower",
+            "SW": "lower"
+          },
+          "sourceRect": {
+            "x": 64,
+            "y": 0,
+            "width": 32,
+            "height": 32
+          },
+          "rgbaSha256": "73d34be768bfe0949ca4fcf262967df70c6761e54e72f60d2120d895e8f06f45"
+        },
+        {
+          "name": "Tile_Samcheondo_Ground_BankPier_Wang_12",
+          "x": 640,
+          "y": 0,
+          "width": 32,
+          "height": 32,
+          "paletteX": 20,
+          "paletteY": 0,
+          "sourceId": "815e24c0-260e-4265-a5ad-9837febb463a",
+          "wangMask": 12,
+          "corners": {
+            "NE": "upper",
+            "NW": "upper",
+            "SE": "lower",
+            "SW": "lower"
+          },
+          "sourceRect": {
+            "x": 96,
+            "y": 0,
+            "width": 32,
+            "height": 32
+          },
+          "rgbaSha256": "c03f467f7aa7c10a915a1c127d6722b09404193f848268ec717aa8c8401021b2"
+        },
+        {
+          "name": "Tile_Samcheondo_Ground_BankPier_Wang_06",
+          "x": 704,
+          "y": 64,
+          "width": 32,
+          "height": 32,
+          "paletteX": 22,
+          "paletteY": 2,
+          "sourceId": "815e24c0-260e-4265-a5ad-9837febb463a",
+          "wangMask": 6,
+          "corners": {
+            "NE": "upper",
+            "NW": "lower",
+            "SE": "lower",
+            "SW": "upper"
+          },
+          "sourceRect": {
+            "x": 0,
+            "y": 32,
+            "width": 32,
+            "height": 32
+          },
+          "rgbaSha256": "4f478f8619adce7e0e19c3e6cceacb3c757c828f2cf720844c69c6f9a4fe1f42"
+        },
+        {
+          "name": "Tile_Samcheondo_Ground_BankPier_Wang_08",
+          "x": 640,
+          "y": 32,
+          "width": 32,
+          "height": 32,
+          "paletteX": 20,
+          "paletteY": 1,
+          "sourceId": "815e24c0-260e-4265-a5ad-9837febb463a",
+          "wangMask": 8,
+          "corners": {
+            "NE": "lower",
+            "NW": "upper",
+            "SE": "lower",
+            "SW": "lower"
+          },
+          "sourceRect": {
+            "x": 32,
+            "y": 32,
+            "width": 32,
+            "height": 32
+          },
+          "rgbaSha256": "cb49a557fddbf2b0c49f1e83e8b9e39c5629a6c8fe4b58c25c3aeda035d55b50"
+        },
+        {
+          "name": "Tile_Samcheondo_Ground_BankPier_Wang_00",
+          "x": 640,
+          "y": 96,
+          "width": 32,
+          "height": 32,
+          "paletteX": 20,
+          "paletteY": 3,
+          "sourceId": "815e24c0-260e-4265-a5ad-9837febb463a",
+          "wangMask": 0,
+          "corners": {
+            "NE": "lower",
+            "NW": "lower",
+            "SE": "lower",
+            "SW": "lower"
+          },
+          "sourceRect": {
+            "x": 64,
+            "y": 32,
+            "width": 32,
+            "height": 32
+          },
+          "rgbaSha256": "27e52af6497c35cf3ed2044acbca24aabc2e8abc65cebc5135ffb3cbd1e9a430"
+        },
+        {
+          "name": "Tile_Samcheondo_Ground_BankPier_Wang_01",
+          "x": 672,
+          "y": 96,
+          "width": 32,
+          "height": 32,
+          "paletteX": 21,
+          "paletteY": 3,
+          "sourceId": "815e24c0-260e-4265-a5ad-9837febb463a",
+          "wangMask": 1,
+          "corners": {
+            "NE": "lower",
+            "NW": "lower",
+            "SE": "upper",
+            "SW": "lower"
+          },
+          "sourceRect": {
+            "x": 96,
+            "y": 32,
+            "width": 32,
+            "height": 32
+          },
+          "rgbaSha256": "d9912de79b6d5d976bf091346b5033eae72018b53ce67109f90600a8402b0a9e"
+        },
+        {
+          "name": "Tile_Samcheondo_Ground_BankPier_Wang_11",
+          "x": 736,
+          "y": 32,
+          "width": 32,
+          "height": 32,
+          "paletteX": 23,
+          "paletteY": 1,
+          "sourceId": "815e24c0-260e-4265-a5ad-9837febb463a",
+          "wangMask": 11,
+          "corners": {
+            "NE": "lower",
+            "NW": "upper",
+            "SE": "upper",
+            "SW": "upper"
+          },
+          "sourceRect": {
+            "x": 0,
+            "y": 64,
+            "width": 32,
+            "height": 32
+          },
+          "rgbaSha256": "f0e89e3c43c540158df50b3e4352f93b8db895070daf3f6ae4b904e608e3f34c"
+        },
+        {
+          "name": "Tile_Samcheondo_Ground_BankPier_Wang_03",
+          "x": 736,
+          "y": 96,
+          "width": 32,
+          "height": 32,
+          "paletteX": 23,
+          "paletteY": 3,
+          "sourceId": "815e24c0-260e-4265-a5ad-9837febb463a",
+          "wangMask": 3,
+          "corners": {
+            "NE": "lower",
+            "NW": "lower",
+            "SE": "upper",
+            "SW": "upper"
+          },
+          "sourceRect": {
+            "x": 32,
+            "y": 64,
+            "width": 32,
+            "height": 32
+          },
+          "rgbaSha256": "10baf04d518f06cf95f3c72655928a1ac54f5cb2623285a38b095b91f28253a6"
+        },
+        {
+          "name": "Tile_Samcheondo_Ground_BankPier_Wang_02",
+          "x": 704,
+          "y": 96,
+          "width": 32,
+          "height": 32,
+          "paletteX": 22,
+          "paletteY": 3,
+          "sourceId": "815e24c0-260e-4265-a5ad-9837febb463a",
+          "wangMask": 2,
+          "corners": {
+            "NE": "lower",
+            "NW": "lower",
+            "SE": "lower",
+            "SW": "upper"
+          },
+          "sourceRect": {
+            "x": 64,
+            "y": 64,
+            "width": 32,
+            "height": 32
+          },
+          "rgbaSha256": "45222030f770b0209f8efa2a1cf10b84e445e88417b52102d28342d2b2eab011"
+        },
+        {
+          "name": "Tile_Samcheondo_Ground_BankPier_Wang_05",
+          "x": 672,
+          "y": 64,
+          "width": 32,
+          "height": 32,
+          "paletteX": 21,
+          "paletteY": 2,
+          "sourceId": "815e24c0-260e-4265-a5ad-9837febb463a",
+          "wangMask": 5,
+          "corners": {
+            "NE": "upper",
+            "NW": "lower",
+            "SE": "upper",
+            "SW": "lower"
+          },
+          "sourceRect": {
+            "x": 96,
+            "y": 64,
+            "width": 32,
+            "height": 32
+          },
+          "rgbaSha256": "ff3770b394c10aa46e84d531c1455010d6128214825f0dd422845d0186a11371"
+        },
+        {
+          "name": "Tile_Samcheondo_Ground_BankPier_Wang_15",
+          "x": 736,
+          "y": 0,
+          "width": 32,
+          "height": 32,
+          "paletteX": 23,
+          "paletteY": 0,
+          "sourceId": "815e24c0-260e-4265-a5ad-9837febb463a",
+          "wangMask": 15,
+          "corners": {
+            "NE": "upper",
+            "NW": "upper",
+            "SE": "upper",
+            "SW": "upper"
+          },
+          "sourceRect": {
+            "x": 0,
+            "y": 96,
+            "width": 32,
+            "height": 32
+          },
+          "rgbaSha256": "617f764a0ede2ba4a887f936219721e25292a7916355d80df67369ac43f95523"
+        },
+        {
+          "name": "Tile_Samcheondo_Ground_BankPier_Wang_14",
+          "x": 704,
+          "y": 0,
+          "width": 32,
+          "height": 32,
+          "paletteX": 22,
+          "paletteY": 0,
+          "sourceId": "815e24c0-260e-4265-a5ad-9837febb463a",
+          "wangMask": 14,
+          "corners": {
+            "NE": "upper",
+            "NW": "upper",
+            "SE": "lower",
+            "SW": "upper"
+          },
+          "sourceRect": {
+            "x": 32,
+            "y": 96,
+            "width": 32,
+            "height": 32
+          },
+          "rgbaSha256": "909ef93a07e83a5ad70df6e72204e4c18abed041f77354ee774f8f819bdcba25"
+        },
+        {
+          "name": "Tile_Samcheondo_Ground_BankPier_Wang_09",
+          "x": 672,
+          "y": 32,
+          "width": 32,
+          "height": 32,
+          "paletteX": 21,
+          "paletteY": 1,
+          "sourceId": "815e24c0-260e-4265-a5ad-9837febb463a",
+          "wangMask": 9,
+          "corners": {
+            "NE": "lower",
+            "NW": "upper",
+            "SE": "upper",
+            "SW": "lower"
+          },
+          "sourceRect": {
+            "x": 64,
+            "y": 96,
+            "width": 32,
+            "height": 32
+          },
+          "rgbaSha256": "f29c1423a5423a9ea5fdd2b85cf24487a440885639168968cbd6d50b9091d0eb"
+        },
+        {
+          "name": "Tile_Samcheondo_Ground_BankPier_Wang_07",
+          "x": 736,
+          "y": 64,
+          "width": 32,
+          "height": 32,
+          "paletteX": 23,
+          "paletteY": 2,
+          "sourceId": "815e24c0-260e-4265-a5ad-9837febb463a",
+          "wangMask": 7,
+          "corners": {
+            "NE": "upper",
+            "NW": "lower",
+            "SE": "upper",
+            "SW": "upper"
+          },
+          "sourceRect": {
+            "x": 96,
+            "y": 96,
+            "width": 32,
+            "height": 32
+          },
+          "rgbaSha256": "d9215e39056b5964e6c6f873160ee40c2744f870ae053849577ba7ea6a0b50f9"
+        }
+      ],
+      "sources": [
+        {
+          "key": "RiverBank",
+          "id": "51e345a8-25eb-4483-afa9-d776f735a99f",
+          "sourceFile": "Downloads/51e345a8-25eb-4483-afa9-d776f735a99f.png",
+          "metadataFile": "Downloads/51e345a8-25eb-4483-afa9-d776f735a99f.json",
+          "maskOrder": "NW<<3 | NE<<2 | SW<<1 | SE",
+          "baseTileIds": {
+            "lower": "9d4cab66-1393-404a-bafe-ab133f0405b9",
+            "upper": "93f56fac-5995-402f-bc4c-3a472df1ea4e"
+          }
+        },
+        {
+          "key": "Flagstone",
+          "id": "628b0b55-12c5-4280-b3f6-4972f49dac2c",
+          "sourceFile": "Downloads/628b0b55-12c5-4280-b3f6-4972f49dac2c.png",
+          "metadataFile": "Downloads/628b0b55-12c5-4280-b3f6-4972f49dac2c.json",
+          "maskOrder": "NW<<3 | NE<<2 | SW<<1 | SE",
+          "baseTileIds": {
+            "lower": "93f56fac-5995-402f-bc4c-3a472df1ea4e",
+            "upper": "5a884f21-1583-4107-a0bd-56cd321d3715"
+          }
+        },
+        {
+          "key": "WaterPier",
+          "id": "83a3a9f6-d70b-4aff-9b0c-104e7902a22f",
+          "sourceFile": "Downloads/83a3a9f6-d70b-4aff-9b0c-104e7902a22f.png",
+          "metadataFile": "Downloads/83a3a9f6-d70b-4aff-9b0c-104e7902a22f.json",
+          "maskOrder": "NW<<3 | NE<<2 | SW<<1 | SE",
+          "baseTileIds": {
+            "lower": "9d4cab66-1393-404a-bafe-ab133f0405b9",
+            "upper": "3edf5f87-7a69-4aec-9e10-c91e186ddf2d"
+          }
+        },
+        {
+          "key": "Meadow",
+          "id": "4b9140b0-5774-4eb0-a804-55ac3c38ce88",
+          "sourceFile": "Downloads/4b9140b0-5774-4eb0-a804-55ac3c38ce88.png",
+          "metadataFile": "Downloads/4b9140b0-5774-4eb0-a804-55ac3c38ce88.json",
+          "maskOrder": "NW<<3 | NE<<2 | SW<<1 | SE",
+          "baseTileIds": {
+            "lower": "93f56fac-5995-402f-bc4c-3a472df1ea4e",
+            "upper": "001ca83d-5065-436e-8484-0b1161803603"
+          }
+        },
+        {
+          "key": "BankPier",
+          "id": "815e24c0-260e-4265-a5ad-9837febb463a",
+          "sourceFile": "Downloads/815e24c0-260e-4265-a5ad-9837febb463a.png",
+          "metadataFile": "Downloads/815e24c0-260e-4265-a5ad-9837febb463a.json",
+          "maskOrder": "NW<<3 | NE<<2 | SW<<1 | SE",
+          "baseTileIds": {
+            "lower": "93f56fac-5995-402f-bc4c-3a472df1ea4e",
+            "upper": "3edf5f87-7a69-4aec-9e10-c91e186ddf2d"
+          }
+        }
+      ],
+      "rgbaSha256": "f7c798c16f86141e641993bfab3f27f2fbee1b091193f905391389cd8f7f2a64"
+    },
+    {
+      "category": "Struct",
+      "sheet": "Assets/Resources/Art/Tiles/Samcheondo/Struct/Tile_Samcheondo_Struct.png",
+      "width": 512,
+      "height": 352,
+      "pieces": [
+        {
+          "name": "Tile_Samcheondo_Struct_Tavern_1_4",
+          "x": 32,
+          "y": 320,
+          "width": 32,
+          "height": 32,
+          "paletteX": 1,
+          "paletteY": -1,
+          "sourceId": "ff740606-918c-4ebf-9612-682ee0a02580",
+          "sourceCell": {
+            "x": 1,
+            "y": 0
+          },
+          "rgbaSha256": "0a673ab633f5e2c7ea13e1f0e81f8937c163499438230677b63834b4611cd0a1"
+        },
+        {
+          "name": "Tile_Samcheondo_Struct_Tavern_2_4",
+          "x": 64,
+          "y": 320,
+          "width": 32,
+          "height": 32,
+          "paletteX": 2,
+          "paletteY": -1,
+          "sourceId": "ff740606-918c-4ebf-9612-682ee0a02580",
+          "sourceCell": {
+            "x": 2,
+            "y": 0
+          },
+          "rgbaSha256": "1458eb5600866e4357bdf91c81534f8f35c41d8b71c298f28466b549705d2e65"
+        },
+        {
+          "name": "Tile_Samcheondo_Struct_Tavern_3_4",
+          "x": 96,
+          "y": 320,
+          "width": 32,
+          "height": 32,
+          "paletteX": 3,
+          "paletteY": -1,
+          "sourceId": "ff740606-918c-4ebf-9612-682ee0a02580",
+          "sourceCell": {
+            "x": 3,
+            "y": 0
+          },
+          "rgbaSha256": "46eb3faab38e3f5c6713df3f852c1ecca499f03ac5ca5e4e526e8398a07e78af"
+        },
+        {
+          "name": "Tile_Samcheondo_Struct_Tavern_4_4",
+          "x": 128,
+          "y": 320,
+          "width": 32,
+          "height": 32,
+          "paletteX": 4,
+          "paletteY": -1,
+          "sourceId": "ff740606-918c-4ebf-9612-682ee0a02580",
+          "sourceCell": {
+            "x": 4,
+            "y": 0
+          },
+          "rgbaSha256": "9daed640142a5111476466cc81e43b8a0ef6881cc9291cc5e51d97fa6c040f8a"
+        },
+        {
+          "name": "Tile_Samcheondo_Struct_Tavern_0_3",
+          "x": 0,
+          "y": 288,
+          "width": 32,
+          "height": 32,
+          "paletteX": 0,
+          "paletteY": -2,
+          "sourceId": "ff740606-918c-4ebf-9612-682ee0a02580",
+          "sourceCell": {
+            "x": 0,
+            "y": 1
+          },
+          "rgbaSha256": "58edca274e684d72318cca0ebd4d02941b43bdecd5c9895b1f99fb9e123de28c"
+        },
+        {
+          "name": "Tile_Samcheondo_Struct_Tavern_1_3",
+          "x": 32,
+          "y": 288,
+          "width": 32,
+          "height": 32,
+          "paletteX": 1,
+          "paletteY": -2,
+          "sourceId": "ff740606-918c-4ebf-9612-682ee0a02580",
+          "sourceCell": {
+            "x": 1,
+            "y": 1
+          },
+          "rgbaSha256": "de170da8690776013fb3372735d31858c33f613f7a2dee0b5d87421353e6c685"
+        },
+        {
+          "name": "Tile_Samcheondo_Struct_Tavern_2_3",
+          "x": 64,
+          "y": 288,
+          "width": 32,
+          "height": 32,
+          "paletteX": 2,
+          "paletteY": -2,
+          "sourceId": "ff740606-918c-4ebf-9612-682ee0a02580",
+          "sourceCell": {
+            "x": 2,
+            "y": 1
+          },
+          "rgbaSha256": "d4a46d89c6df3547aa33b8aa49fcc86a6ed0b0726a028c0efe474010443a381c"
+        },
+        {
+          "name": "Tile_Samcheondo_Struct_Tavern_3_3",
+          "x": 96,
+          "y": 288,
+          "width": 32,
+          "height": 32,
+          "paletteX": 3,
+          "paletteY": -2,
+          "sourceId": "ff740606-918c-4ebf-9612-682ee0a02580",
+          "sourceCell": {
+            "x": 3,
+            "y": 1
+          },
+          "rgbaSha256": "c767ae3659773addefe852b43ac464c632e424014728b0f041b90dac3d878840"
+        },
+        {
+          "name": "Tile_Samcheondo_Struct_Tavern_4_3",
+          "x": 128,
+          "y": 288,
+          "width": 32,
+          "height": 32,
+          "paletteX": 4,
+          "paletteY": -2,
+          "sourceId": "ff740606-918c-4ebf-9612-682ee0a02580",
+          "sourceCell": {
+            "x": 4,
+            "y": 1
+          },
+          "rgbaSha256": "aecd45f843beda62bf28a56ab81336503f9909f2daa773f972aca8d8bf0f78a2"
+        },
+        {
+          "name": "Tile_Samcheondo_Struct_Tavern_5_3",
+          "x": 160,
+          "y": 288,
+          "width": 32,
+          "height": 32,
+          "paletteX": 5,
+          "paletteY": -2,
+          "sourceId": "ff740606-918c-4ebf-9612-682ee0a02580",
+          "sourceCell": {
+            "x": 5,
+            "y": 1
+          },
+          "rgbaSha256": "427641e85581baa579659f3cccd5f1fa61a55b4a92d1bb04d515e1d08684452e"
+        },
+        {
+          "name": "Tile_Samcheondo_Struct_Tavern_0_2",
+          "x": 0,
+          "y": 256,
+          "width": 32,
+          "height": 32,
+          "paletteX": 0,
+          "paletteY": -3,
+          "sourceId": "ff740606-918c-4ebf-9612-682ee0a02580",
+          "sourceCell": {
+            "x": 0,
+            "y": 2
+          },
+          "rgbaSha256": "7d59ece2e6f4f26893385751eabdf1f3a861aeb708e3b8a864c7e8f068956270"
+        },
+        {
+          "name": "Tile_Samcheondo_Struct_Tavern_1_2",
+          "x": 32,
+          "y": 256,
+          "width": 32,
+          "height": 32,
+          "paletteX": 1,
+          "paletteY": -3,
+          "sourceId": "ff740606-918c-4ebf-9612-682ee0a02580",
+          "sourceCell": {
+            "x": 1,
+            "y": 2
+          },
+          "rgbaSha256": "5872312ca6b615d5b3e1782e6cbda7faaa11d0ecb6b6f08e37fc742948f7c8c2"
+        },
+        {
+          "name": "Tile_Samcheondo_Struct_Tavern_2_2",
+          "x": 64,
+          "y": 256,
+          "width": 32,
+          "height": 32,
+          "paletteX": 2,
+          "paletteY": -3,
+          "sourceId": "ff740606-918c-4ebf-9612-682ee0a02580",
+          "sourceCell": {
+            "x": 2,
+            "y": 2
+          },
+          "rgbaSha256": "2d1b3e5696022c92f76f9e140924b5e0b035eeae3981d8d4a40c31ad9b00aaec"
+        },
+        {
+          "name": "Tile_Samcheondo_Struct_Tavern_3_2",
+          "x": 96,
+          "y": 256,
+          "width": 32,
+          "height": 32,
+          "paletteX": 3,
+          "paletteY": -3,
+          "sourceId": "ff740606-918c-4ebf-9612-682ee0a02580",
+          "sourceCell": {
+            "x": 3,
+            "y": 2
+          },
+          "rgbaSha256": "1496007e0195bed8aa6d989b8521000dddc5f46421eb57ab4b19a86b998c020c"
+        },
+        {
+          "name": "Tile_Samcheondo_Struct_Tavern_4_2",
+          "x": 128,
+          "y": 256,
+          "width": 32,
+          "height": 32,
+          "paletteX": 4,
+          "paletteY": -3,
+          "sourceId": "ff740606-918c-4ebf-9612-682ee0a02580",
+          "sourceCell": {
+            "x": 4,
+            "y": 2
+          },
+          "rgbaSha256": "9702c5ba2138dfc3ae6f9c4995ad496a7433da608ab264e1fae39c82d1e94518"
+        },
+        {
+          "name": "Tile_Samcheondo_Struct_Tavern_5_2",
+          "x": 160,
+          "y": 256,
+          "width": 32,
+          "height": 32,
+          "paletteX": 5,
+          "paletteY": -3,
+          "sourceId": "ff740606-918c-4ebf-9612-682ee0a02580",
+          "sourceCell": {
+            "x": 5,
+            "y": 2
+          },
+          "rgbaSha256": "ee98e79e1cc44bd75688836c01a69c4cca0c93e6fa8faec5c561df37cd6e3723"
+        },
+        {
+          "name": "Tile_Samcheondo_Struct_Tavern_0_1",
+          "x": 0,
+          "y": 224,
+          "width": 32,
+          "height": 32,
+          "paletteX": 0,
+          "paletteY": -4,
+          "sourceId": "ff740606-918c-4ebf-9612-682ee0a02580",
+          "sourceCell": {
+            "x": 0,
+            "y": 3
+          },
+          "rgbaSha256": "6f174db63cf47848b7028f243fa848d2f63b5e7c4b06d242d7836c7b468e8e23"
+        },
+        {
+          "name": "Tile_Samcheondo_Struct_Tavern_1_1",
+          "x": 32,
+          "y": 224,
+          "width": 32,
+          "height": 32,
+          "paletteX": 1,
+          "paletteY": -4,
+          "sourceId": "ff740606-918c-4ebf-9612-682ee0a02580",
+          "sourceCell": {
+            "x": 1,
+            "y": 3
+          },
+          "rgbaSha256": "dd1a6339f647567941b036b7adf2a18c44f58d369bff8ebd8156bc6e51e9703a"
+        },
+        {
+          "name": "Tile_Samcheondo_Struct_Tavern_2_1",
+          "x": 64,
+          "y": 224,
+          "width": 32,
+          "height": 32,
+          "paletteX": 2,
+          "paletteY": -4,
+          "sourceId": "ff740606-918c-4ebf-9612-682ee0a02580",
+          "sourceCell": {
+            "x": 2,
+            "y": 3
+          },
+          "rgbaSha256": "30b0aeed4adfbe01ee4d6931f853b35257b2fa113732d1d4ae4164d1c3633504"
+        },
+        {
+          "name": "Tile_Samcheondo_Struct_Tavern_3_1",
+          "x": 96,
+          "y": 224,
+          "width": 32,
+          "height": 32,
+          "paletteX": 3,
+          "paletteY": -4,
+          "sourceId": "ff740606-918c-4ebf-9612-682ee0a02580",
+          "sourceCell": {
+            "x": 3,
+            "y": 3
+          },
+          "rgbaSha256": "cbf07de0e324755fd83dd1da022da3409fe1ce57812e41c0812a26acb6ae57ee"
+        },
+        {
+          "name": "Tile_Samcheondo_Struct_Tavern_4_1",
+          "x": 128,
+          "y": 224,
+          "width": 32,
+          "height": 32,
+          "paletteX": 4,
+          "paletteY": -4,
+          "sourceId": "ff740606-918c-4ebf-9612-682ee0a02580",
+          "sourceCell": {
+            "x": 4,
+            "y": 3
+          },
+          "rgbaSha256": "4ce5a69b664782510f5e42422501916014f2898a6ce8c74811d56d6e69640720"
+        },
+        {
+          "name": "Tile_Samcheondo_Struct_Tavern_5_1",
+          "x": 160,
+          "y": 224,
+          "width": 32,
+          "height": 32,
+          "paletteX": 5,
+          "paletteY": -4,
+          "sourceId": "ff740606-918c-4ebf-9612-682ee0a02580",
+          "sourceCell": {
+            "x": 5,
+            "y": 3
+          },
+          "rgbaSha256": "6e369135bfe259f76db6c0ac9f06db850e7a8a9d89572005b3608fdc1a797632"
+        },
+        {
+          "name": "Tile_Samcheondo_Struct_Tavern_0_0",
+          "x": 0,
+          "y": 192,
+          "width": 32,
+          "height": 32,
+          "paletteX": 0,
+          "paletteY": -5,
+          "sourceId": "ff740606-918c-4ebf-9612-682ee0a02580",
+          "sourceCell": {
+            "x": 0,
+            "y": 4
+          },
+          "rgbaSha256": "7d14cd0e74f39da320db6ad84ea36a796a27bb40cf0ff75a3f394b2f71b8ec5e"
+        },
+        {
+          "name": "Tile_Samcheondo_Struct_Tavern_2_0",
+          "x": 64,
+          "y": 192,
+          "width": 32,
+          "height": 32,
+          "paletteX": 2,
+          "paletteY": -5,
+          "sourceId": "ff740606-918c-4ebf-9612-682ee0a02580",
+          "sourceCell": {
+            "x": 2,
+            "y": 4
+          },
+          "rgbaSha256": "1727d428ff2c7170f10a7db7255597556b24c00cb60615756df55a79c8f5a853"
+        },
+        {
+          "name": "Tile_Samcheondo_Struct_Tavern_3_0",
+          "x": 96,
+          "y": 192,
+          "width": 32,
+          "height": 32,
+          "paletteX": 3,
+          "paletteY": -5,
+          "sourceId": "ff740606-918c-4ebf-9612-682ee0a02580",
+          "sourceCell": {
+            "x": 3,
+            "y": 4
+          },
+          "rgbaSha256": "dd4581e6da368e2bd64b8ac6e2b7fbbbb6d93fffe25ea1e078ae1a9cc8b9f14a"
+        },
+        {
+          "name": "Tile_Samcheondo_Struct_Tavern_5_0",
+          "x": 160,
+          "y": 192,
+          "width": 32,
+          "height": 32,
+          "paletteX": 5,
+          "paletteY": -5,
+          "sourceId": "ff740606-918c-4ebf-9612-682ee0a02580",
+          "sourceCell": {
+            "x": 5,
+            "y": 4
+          },
+          "rgbaSha256": "cb5310318a1002f9606064e6930b14bc147f35094d227eefe660ce2640aa773d"
+        },
+        {
+          "name": "Tile_Samcheondo_Struct_ResurrectionAltar_0_3",
+          "x": 224,
+          "y": 320,
+          "width": 32,
+          "height": 32,
+          "paletteX": 7,
+          "paletteY": -1,
+          "sourceId": "416b50ff-1c21-41cc-b676-abd455b8f5e1",
+          "sourceCell": {
+            "x": 0,
+            "y": 0
+          },
+          "rgbaSha256": "a7b468d0f220786fd86d3e15aef1fcce8ddd46278bffdc92bb6e6739a66721f2"
+        },
+        {
+          "name": "Tile_Samcheondo_Struct_ResurrectionAltar_1_3",
+          "x": 256,
+          "y": 320,
+          "width": 32,
+          "height": 32,
+          "paletteX": 8,
+          "paletteY": -1,
+          "sourceId": "416b50ff-1c21-41cc-b676-abd455b8f5e1",
+          "sourceCell": {
+            "x": 1,
+            "y": 0
+          },
+          "rgbaSha256": "a988a1b3521d14b60ee969eefe9aec1cf5773902773147af2d4f07e59d144382"
+        },
+        {
+          "name": "Tile_Samcheondo_Struct_ResurrectionAltar_2_3",
+          "x": 288,
+          "y": 320,
+          "width": 32,
+          "height": 32,
+          "paletteX": 9,
+          "paletteY": -1,
+          "sourceId": "416b50ff-1c21-41cc-b676-abd455b8f5e1",
+          "sourceCell": {
+            "x": 2,
+            "y": 0
+          },
+          "rgbaSha256": "3847e9f2b6384181a4b8e16079cb05d7afeadb6452c9c76b3c9f314a0dedd7f3"
+        },
+        {
+          "name": "Tile_Samcheondo_Struct_ResurrectionAltar_3_3",
+          "x": 320,
+          "y": 320,
+          "width": 32,
+          "height": 32,
+          "paletteX": 10,
+          "paletteY": -1,
+          "sourceId": "416b50ff-1c21-41cc-b676-abd455b8f5e1",
+          "sourceCell": {
+            "x": 3,
+            "y": 0
+          },
+          "rgbaSha256": "a14ce07ce74b759a178c294b38d11472b936ee3678629988b8d2283713d9abe7"
+        },
+        {
+          "name": "Tile_Samcheondo_Struct_ResurrectionAltar_0_2",
+          "x": 224,
+          "y": 288,
+          "width": 32,
+          "height": 32,
+          "paletteX": 7,
+          "paletteY": -2,
+          "sourceId": "416b50ff-1c21-41cc-b676-abd455b8f5e1",
+          "sourceCell": {
+            "x": 0,
+            "y": 1
+          },
+          "rgbaSha256": "9884ca905db3ad21d118ebf2236a13ddf545319bbb790ff2d86d53d94589a4d6"
+        },
+        {
+          "name": "Tile_Samcheondo_Struct_ResurrectionAltar_1_2",
+          "x": 256,
+          "y": 288,
+          "width": 32,
+          "height": 32,
+          "paletteX": 8,
+          "paletteY": -2,
+          "sourceId": "416b50ff-1c21-41cc-b676-abd455b8f5e1",
+          "sourceCell": {
+            "x": 1,
+            "y": 1
+          },
+          "rgbaSha256": "c443251f32239e59ccc719f9267e13fefaa6b1a19ae53e77a4e809e34ab7f0bd"
+        },
+        {
+          "name": "Tile_Samcheondo_Struct_ResurrectionAltar_2_2",
+          "x": 288,
+          "y": 288,
+          "width": 32,
+          "height": 32,
+          "paletteX": 9,
+          "paletteY": -2,
+          "sourceId": "416b50ff-1c21-41cc-b676-abd455b8f5e1",
+          "sourceCell": {
+            "x": 2,
+            "y": 1
+          },
+          "rgbaSha256": "2403dc6c514c8f325c99ea54d17c3fa71e5c30d707d44b4baed9bd901e4c6169"
+        },
+        {
+          "name": "Tile_Samcheondo_Struct_ResurrectionAltar_3_2",
+          "x": 320,
+          "y": 288,
+          "width": 32,
+          "height": 32,
+          "paletteX": 10,
+          "paletteY": -2,
+          "sourceId": "416b50ff-1c21-41cc-b676-abd455b8f5e1",
+          "sourceCell": {
+            "x": 3,
+            "y": 1
+          },
+          "rgbaSha256": "9311c817e84eb499782040b5d3e69fa9ab5483ad91c2c0256018fddda0fd56af"
+        },
+        {
+          "name": "Tile_Samcheondo_Struct_ResurrectionAltar_0_1",
+          "x": 224,
+          "y": 256,
+          "width": 32,
+          "height": 32,
+          "paletteX": 7,
+          "paletteY": -3,
+          "sourceId": "416b50ff-1c21-41cc-b676-abd455b8f5e1",
+          "sourceCell": {
+            "x": 0,
+            "y": 2
+          },
+          "rgbaSha256": "8947297b8390a7061e9022e91b90a503452ba6a2c03db585e46f0b965f89b902"
+        },
+        {
+          "name": "Tile_Samcheondo_Struct_ResurrectionAltar_1_1",
+          "x": 256,
+          "y": 256,
+          "width": 32,
+          "height": 32,
+          "paletteX": 8,
+          "paletteY": -3,
+          "sourceId": "416b50ff-1c21-41cc-b676-abd455b8f5e1",
+          "sourceCell": {
+            "x": 1,
+            "y": 2
+          },
+          "rgbaSha256": "bbf102fe121ea5485ac6f3afbec6a40129cacccba65ef91a3d66c8e04ebb28cd"
+        },
+        {
+          "name": "Tile_Samcheondo_Struct_ResurrectionAltar_2_1",
+          "x": 288,
+          "y": 256,
+          "width": 32,
+          "height": 32,
+          "paletteX": 9,
+          "paletteY": -3,
+          "sourceId": "416b50ff-1c21-41cc-b676-abd455b8f5e1",
+          "sourceCell": {
+            "x": 2,
+            "y": 2
+          },
+          "rgbaSha256": "dc8bd78632374d597375725c43c642efe2eeed39b7b73f8b296edf6215a6e3b2"
+        },
+        {
+          "name": "Tile_Samcheondo_Struct_ResurrectionAltar_3_1",
+          "x": 320,
+          "y": 256,
+          "width": 32,
+          "height": 32,
+          "paletteX": 10,
+          "paletteY": -3,
+          "sourceId": "416b50ff-1c21-41cc-b676-abd455b8f5e1",
+          "sourceCell": {
+            "x": 3,
+            "y": 2
+          },
+          "rgbaSha256": "74ec9e97e0963d15a906a606b4739715b5a8c4c94a156544259906516aead242"
+        },
+        {
+          "name": "Tile_Samcheondo_Struct_ResurrectionAltar_0_0",
+          "x": 224,
+          "y": 224,
+          "width": 32,
+          "height": 32,
+          "paletteX": 7,
+          "paletteY": -4,
+          "sourceId": "416b50ff-1c21-41cc-b676-abd455b8f5e1",
+          "sourceCell": {
+            "x": 0,
+            "y": 3
+          },
+          "rgbaSha256": "2253b02fc31fe5c654f12c2922b51ec2b9d8480da187719b566e58df13ef8072"
+        },
+        {
+          "name": "Tile_Samcheondo_Struct_ResurrectionAltar_1_0",
+          "x": 256,
+          "y": 224,
+          "width": 32,
+          "height": 32,
+          "paletteX": 8,
+          "paletteY": -4,
+          "sourceId": "416b50ff-1c21-41cc-b676-abd455b8f5e1",
+          "sourceCell": {
+            "x": 1,
+            "y": 3
+          },
+          "rgbaSha256": "bca551c6346afe9ac5fb2e0b0b66cfc206068e87ec5aedda536ef08025365879"
+        },
+        {
+          "name": "Tile_Samcheondo_Struct_ResurrectionAltar_2_0",
+          "x": 288,
+          "y": 224,
+          "width": 32,
+          "height": 32,
+          "paletteX": 9,
+          "paletteY": -4,
+          "sourceId": "416b50ff-1c21-41cc-b676-abd455b8f5e1",
+          "sourceCell": {
+            "x": 2,
+            "y": 3
+          },
+          "rgbaSha256": "a5bafd984b5d8b4649f1ee94aa7a4896abfb0a416bbb2e2e8bdd03c215717b0b"
+        },
+        {
+          "name": "Tile_Samcheondo_Struct_ResurrectionAltar_3_0",
+          "x": 320,
+          "y": 224,
+          "width": 32,
+          "height": 32,
+          "paletteX": 10,
+          "paletteY": -4,
+          "sourceId": "416b50ff-1c21-41cc-b676-abd455b8f5e1",
+          "sourceCell": {
+            "x": 3,
+            "y": 3
+          },
+          "rgbaSha256": "6ca85fd73fbb25875536c12aa39f9a87e1050fb8ad013c282d81c85a61af2d58"
+        },
+        {
+          "name": "Tile_Samcheondo_Struct_FerryBoat_0_1",
+          "x": 384,
+          "y": 320,
+          "width": 32,
+          "height": 32,
+          "paletteX": 12,
+          "paletteY": -1,
+          "sourceId": "15109cfc-d3ce-455e-9575-4f51999c929e",
+          "sourceCell": {
+            "x": 0,
+            "y": 0
+          },
+          "rgbaSha256": "4bb06523f721c38e7dda9cdd61a81d96e26aabf0c3d0c808e513bab9b2970e38"
+        },
+        {
+          "name": "Tile_Samcheondo_Struct_FerryBoat_1_1",
+          "x": 416,
+          "y": 320,
+          "width": 32,
+          "height": 32,
+          "paletteX": 13,
+          "paletteY": -1,
+          "sourceId": "15109cfc-d3ce-455e-9575-4f51999c929e",
+          "sourceCell": {
+            "x": 1,
+            "y": 0
+          },
+          "rgbaSha256": "a6e241ac987b26c915de34dc71697c841c8371e4ecdc605221595a09c025fd05"
+        },
+        {
+          "name": "Tile_Samcheondo_Struct_FerryBoat_2_1",
+          "x": 448,
+          "y": 320,
+          "width": 32,
+          "height": 32,
+          "paletteX": 14,
+          "paletteY": -1,
+          "sourceId": "15109cfc-d3ce-455e-9575-4f51999c929e",
+          "sourceCell": {
+            "x": 2,
+            "y": 0
+          },
+          "rgbaSha256": "f41d8d95af3ab3d53a82052312720a7fecfa526c5e0b3f39c4101bd2891a5fe3"
+        },
+        {
+          "name": "Tile_Samcheondo_Struct_FerryBoat_3_1",
+          "x": 480,
+          "y": 320,
+          "width": 32,
+          "height": 32,
+          "paletteX": 15,
+          "paletteY": -1,
+          "sourceId": "15109cfc-d3ce-455e-9575-4f51999c929e",
+          "sourceCell": {
+            "x": 3,
+            "y": 0
+          },
+          "rgbaSha256": "a99290d3a492069ac28cd768b37280b4b062eaa6e0221b5b326a7ddc22c042bb"
+        },
+        {
+          "name": "Tile_Samcheondo_Struct_FerryBoat_0_0",
+          "x": 384,
+          "y": 288,
+          "width": 32,
+          "height": 32,
+          "paletteX": 12,
+          "paletteY": -2,
+          "sourceId": "15109cfc-d3ce-455e-9575-4f51999c929e",
+          "sourceCell": {
+            "x": 0,
+            "y": 1
+          },
+          "rgbaSha256": "718ed5ff5c257342eca7437d5b5c70192a3dc93a60f71d8105a7d8912df8523b"
+        },
+        {
+          "name": "Tile_Samcheondo_Struct_FerryBoat_1_0",
+          "x": 416,
+          "y": 288,
+          "width": 32,
+          "height": 32,
+          "paletteX": 13,
+          "paletteY": -2,
+          "sourceId": "15109cfc-d3ce-455e-9575-4f51999c929e",
+          "sourceCell": {
+            "x": 1,
+            "y": 1
+          },
+          "rgbaSha256": "fb22f9bf9b07c977d183c2424c4b66283fba586064ac510487da2e579f18de83"
+        },
+        {
+          "name": "Tile_Samcheondo_Struct_FerryBoat_2_0",
+          "x": 448,
+          "y": 288,
+          "width": 32,
+          "height": 32,
+          "paletteX": 14,
+          "paletteY": -2,
+          "sourceId": "15109cfc-d3ce-455e-9575-4f51999c929e",
+          "sourceCell": {
+            "x": 2,
+            "y": 1
+          },
+          "rgbaSha256": "ab2206589991fe10402fe8de6dc9818e2bc99f53ce24809d203ab4a4b585f31f"
+        },
+        {
+          "name": "Tile_Samcheondo_Struct_FerryBoat_3_0",
+          "x": 480,
+          "y": 288,
+          "width": 32,
+          "height": 32,
+          "paletteX": 15,
+          "paletteY": -2,
+          "sourceId": "15109cfc-d3ce-455e-9575-4f51999c929e",
+          "sourceCell": {
+            "x": 3,
+            "y": 1
+          },
+          "rgbaSha256": "39f05a69d5cf933d781a1ef8a7ed0764569edebd4e149e858512fe4990072702"
+        },
+        {
+          "name": "Tile_Samcheondo_Struct_NoticeBoard_0_2",
+          "x": 0,
+          "y": 128,
+          "width": 32,
+          "height": 32,
+          "paletteX": 0,
+          "paletteY": -7,
+          "sourceId": "a9a95146-e505-4442-854e-bfc4023fb3bf",
+          "sourceCell": {
+            "x": 0,
+            "y": 0
+          },
+          "rgbaSha256": "f36eb22b3bac7861443487c87df619cd78754ccf0042c94bd6f1a58849e1da6e"
+        },
+        {
+          "name": "Tile_Samcheondo_Struct_NoticeBoard_1_2",
+          "x": 32,
+          "y": 128,
+          "width": 32,
+          "height": 32,
+          "paletteX": 1,
+          "paletteY": -7,
+          "sourceId": "a9a95146-e505-4442-854e-bfc4023fb3bf",
+          "sourceCell": {
+            "x": 1,
+            "y": 0
+          },
+          "rgbaSha256": "e3e01944dda5f70537a19926d60b07acf9c2f9799f6ff103b8bd825a472d043b"
+        },
+        {
+          "name": "Tile_Samcheondo_Struct_NoticeBoard_0_1",
+          "x": 0,
+          "y": 96,
+          "width": 32,
+          "height": 32,
+          "paletteX": 0,
+          "paletteY": -8,
+          "sourceId": "a9a95146-e505-4442-854e-bfc4023fb3bf",
+          "sourceCell": {
+            "x": 0,
+            "y": 1
+          },
+          "rgbaSha256": "b8d6e5829691393dde0ce2aeab5660eafea9c21d7f98e991958ceafffb89407b"
+        },
+        {
+          "name": "Tile_Samcheondo_Struct_NoticeBoard_1_1",
+          "x": 32,
+          "y": 96,
+          "width": 32,
+          "height": 32,
+          "paletteX": 1,
+          "paletteY": -8,
+          "sourceId": "a9a95146-e505-4442-854e-bfc4023fb3bf",
+          "sourceCell": {
+            "x": 1,
+            "y": 1
+          },
+          "rgbaSha256": "d54d1bd25fb726b2f6b43aae61f300c39f5cb880e634ffbf37324ff14e036498"
+        },
+        {
+          "name": "Tile_Samcheondo_Struct_NoticeBoard_0_0",
+          "x": 0,
+          "y": 64,
+          "width": 32,
+          "height": 32,
+          "paletteX": 0,
+          "paletteY": -9,
+          "sourceId": "a9a95146-e505-4442-854e-bfc4023fb3bf",
+          "sourceCell": {
+            "x": 0,
+            "y": 2
+          },
+          "rgbaSha256": "1678cef45969bf7e76a877864563f70368f1ee60b637843c09fa224f785dd64a"
+        },
+        {
+          "name": "Tile_Samcheondo_Struct_NoticeBoard_1_0",
+          "x": 32,
+          "y": 64,
+          "width": 32,
+          "height": 32,
+          "paletteX": 1,
+          "paletteY": -9,
+          "sourceId": "a9a95146-e505-4442-854e-bfc4023fb3bf",
+          "sourceCell": {
+            "x": 1,
+            "y": 2
+          },
+          "rgbaSha256": "8c5442c582a3c00d7b14b50e2b7310f83674a5ca6e4f82b1e172026c39a569ad"
+        },
+        {
+          "name": "Tile_Samcheondo_Struct_Lantern_0_1",
+          "x": 96,
+          "y": 128,
+          "width": 32,
+          "height": 32,
+          "paletteX": 3,
+          "paletteY": -7,
+          "sourceId": "50f26186-7eb6-4d6f-b739-1f5703a6a14f",
+          "sourceCell": {
+            "x": 0,
+            "y": 0
+          },
+          "rgbaSha256": "f4d8bf4d791b3796a391c4b5998bc7368da3e1553ba7229ea8e9048e7ef780ed"
+        },
+        {
+          "name": "Tile_Samcheondo_Struct_Lantern_0_0",
+          "x": 96,
+          "y": 96,
+          "width": 32,
+          "height": 32,
+          "paletteX": 3,
+          "paletteY": -8,
+          "sourceId": "50f26186-7eb6-4d6f-b739-1f5703a6a14f",
+          "sourceCell": {
+            "x": 0,
+            "y": 1
+          },
+          "rgbaSha256": "0ab68cabe2f1750be3e1270bdc052a7e2cd503b24cb5da65b91bfcd5450d048d"
+        },
+        {
+          "name": "Tile_Samcheondo_Struct_Willow_1_4",
+          "x": 192,
+          "y": 128,
+          "width": 32,
+          "height": 32,
+          "paletteX": 6,
+          "paletteY": -7,
+          "sourceId": "5f6aa4fa-4397-4bf5-ab59-6b11225cbabd",
+          "sourceCell": {
+            "x": 1,
+            "y": 0
+          },
+          "rgbaSha256": "86b6977de135af3304e4b307720ac0271f4029ff4da5882021fccc3b64617fac"
+        },
+        {
+          "name": "Tile_Samcheondo_Struct_Willow_2_4",
+          "x": 224,
+          "y": 128,
+          "width": 32,
+          "height": 32,
+          "paletteX": 7,
+          "paletteY": -7,
+          "sourceId": "5f6aa4fa-4397-4bf5-ab59-6b11225cbabd",
+          "sourceCell": {
+            "x": 2,
+            "y": 0
+          },
+          "rgbaSha256": "c935dde9db0c372271b7b4049075ea721c4f99760fabda0d2f93d57db5465060"
+        },
+        {
+          "name": "Tile_Samcheondo_Struct_Willow_3_4",
+          "x": 256,
+          "y": 128,
+          "width": 32,
+          "height": 32,
+          "paletteX": 8,
+          "paletteY": -7,
+          "sourceId": "5f6aa4fa-4397-4bf5-ab59-6b11225cbabd",
+          "sourceCell": {
+            "x": 3,
+            "y": 0
+          },
+          "rgbaSha256": "fbf1e686c2df6bd996d3f422c55ec9ce5c21e56ddc4a4214459b4f6f3aab415f"
+        },
+        {
+          "name": "Tile_Samcheondo_Struct_Willow_0_3",
+          "x": 160,
+          "y": 96,
+          "width": 32,
+          "height": 32,
+          "paletteX": 5,
+          "paletteY": -8,
+          "sourceId": "5f6aa4fa-4397-4bf5-ab59-6b11225cbabd",
+          "sourceCell": {
+            "x": 0,
+            "y": 1
+          },
+          "rgbaSha256": "d6c5abe61b6562b2e92a51b8e3f0cec149c0bee02c18cb4e43816379ec151008"
+        },
+        {
+          "name": "Tile_Samcheondo_Struct_Willow_1_3",
+          "x": 192,
+          "y": 96,
+          "width": 32,
+          "height": 32,
+          "paletteX": 6,
+          "paletteY": -8,
+          "sourceId": "5f6aa4fa-4397-4bf5-ab59-6b11225cbabd",
+          "sourceCell": {
+            "x": 1,
+            "y": 1
+          },
+          "rgbaSha256": "b4e96a555ce44b6acde3f935f4794090f628eeb92560e7e88e16f8972f47d8a9"
+        },
+        {
+          "name": "Tile_Samcheondo_Struct_Willow_2_3",
+          "x": 224,
+          "y": 96,
+          "width": 32,
+          "height": 32,
+          "paletteX": 7,
+          "paletteY": -8,
+          "sourceId": "5f6aa4fa-4397-4bf5-ab59-6b11225cbabd",
+          "sourceCell": {
+            "x": 2,
+            "y": 1
+          },
+          "rgbaSha256": "e55786780ef733efb656dd33c909c9b649ea00f16b46f88f1c9d3f992ad99f89"
+        },
+        {
+          "name": "Tile_Samcheondo_Struct_Willow_3_3",
+          "x": 256,
+          "y": 96,
+          "width": 32,
+          "height": 32,
+          "paletteX": 8,
+          "paletteY": -8,
+          "sourceId": "5f6aa4fa-4397-4bf5-ab59-6b11225cbabd",
+          "sourceCell": {
+            "x": 3,
+            "y": 1
+          },
+          "rgbaSha256": "f4a39e89ea8cb17a835cd046bb908a1bb1739a6afe1cb4a10a5704bc6953903e"
+        },
+        {
+          "name": "Tile_Samcheondo_Struct_Willow_0_2",
+          "x": 160,
+          "y": 64,
+          "width": 32,
+          "height": 32,
+          "paletteX": 5,
+          "paletteY": -9,
+          "sourceId": "5f6aa4fa-4397-4bf5-ab59-6b11225cbabd",
+          "sourceCell": {
+            "x": 0,
+            "y": 2
+          },
+          "rgbaSha256": "314570cd6940834a8201f40a7737f28e3c38372a9b7abf41fb780565d24e6c1f"
+        },
+        {
+          "name": "Tile_Samcheondo_Struct_Willow_1_2",
+          "x": 192,
+          "y": 64,
+          "width": 32,
+          "height": 32,
+          "paletteX": 6,
+          "paletteY": -9,
+          "sourceId": "5f6aa4fa-4397-4bf5-ab59-6b11225cbabd",
+          "sourceCell": {
+            "x": 1,
+            "y": 2
+          },
+          "rgbaSha256": "d885e6529f6c4729f6c710df14ff49745db741505b34a702e5e6212d6e03ffbc"
+        },
+        {
+          "name": "Tile_Samcheondo_Struct_Willow_2_2",
+          "x": 224,
+          "y": 64,
+          "width": 32,
+          "height": 32,
+          "paletteX": 7,
+          "paletteY": -9,
+          "sourceId": "5f6aa4fa-4397-4bf5-ab59-6b11225cbabd",
+          "sourceCell": {
+            "x": 2,
+            "y": 2
+          },
+          "rgbaSha256": "52cb462adf17677f03d5d361d33170864c9b2d169b85bd60af2e479aec6288a2"
+        },
+        {
+          "name": "Tile_Samcheondo_Struct_Willow_3_2",
+          "x": 256,
+          "y": 64,
+          "width": 32,
+          "height": 32,
+          "paletteX": 8,
+          "paletteY": -9,
+          "sourceId": "5f6aa4fa-4397-4bf5-ab59-6b11225cbabd",
+          "sourceCell": {
+            "x": 3,
+            "y": 2
+          },
+          "rgbaSha256": "b511e14f0ea8cd43bb6e20038f666224812077d98ef8000e4822300da1f2275b"
+        },
+        {
+          "name": "Tile_Samcheondo_Struct_Willow_0_1",
+          "x": 160,
+          "y": 32,
+          "width": 32,
+          "height": 32,
+          "paletteX": 5,
+          "paletteY": -10,
+          "sourceId": "5f6aa4fa-4397-4bf5-ab59-6b11225cbabd",
+          "sourceCell": {
+            "x": 0,
+            "y": 3
+          },
+          "rgbaSha256": "1beabe68c5b7ff10fdccc39441ca7650c979c00c1a23b974392259f9759cbe63"
+        },
+        {
+          "name": "Tile_Samcheondo_Struct_Willow_1_1",
+          "x": 192,
+          "y": 32,
+          "width": 32,
+          "height": 32,
+          "paletteX": 6,
+          "paletteY": -10,
+          "sourceId": "5f6aa4fa-4397-4bf5-ab59-6b11225cbabd",
+          "sourceCell": {
+            "x": 1,
+            "y": 3
+          },
+          "rgbaSha256": "b23bd8fbb0f6696e1885158dc45955437db0cf32e440d97bda5a82ca2440d9d4"
+        },
+        {
+          "name": "Tile_Samcheondo_Struct_Willow_2_1",
+          "x": 224,
+          "y": 32,
+          "width": 32,
+          "height": 32,
+          "paletteX": 7,
+          "paletteY": -10,
+          "sourceId": "5f6aa4fa-4397-4bf5-ab59-6b11225cbabd",
+          "sourceCell": {
+            "x": 2,
+            "y": 3
+          },
+          "rgbaSha256": "cb0cce961f7b24be6ff5dcbb8bdfee85e9870e7e9e48e50506c19cdf5fea03df"
+        },
+        {
+          "name": "Tile_Samcheondo_Struct_Willow_3_1",
+          "x": 256,
+          "y": 32,
+          "width": 32,
+          "height": 32,
+          "paletteX": 8,
+          "paletteY": -10,
+          "sourceId": "5f6aa4fa-4397-4bf5-ab59-6b11225cbabd",
+          "sourceCell": {
+            "x": 3,
+            "y": 3
+          },
+          "rgbaSha256": "0937f23bb0e8045e8655ee1bac9a67a13d1b4ce9f35b3b1e50b604cd7510ac51"
+        },
+        {
+          "name": "Tile_Samcheondo_Struct_Willow_1_0",
+          "x": 192,
+          "y": 0,
+          "width": 32,
+          "height": 32,
+          "paletteX": 6,
+          "paletteY": -11,
+          "sourceId": "5f6aa4fa-4397-4bf5-ab59-6b11225cbabd",
+          "sourceCell": {
+            "x": 1,
+            "y": 4
+          },
+          "rgbaSha256": "3d086da0793f089aa5afa5eac6b40fbf9abe93ad4a0d9aad64f478f19b8a3d30"
+        },
+        {
+          "name": "Tile_Samcheondo_Struct_Willow_2_0",
+          "x": 224,
+          "y": 0,
+          "width": 32,
+          "height": 32,
+          "paletteX": 7,
+          "paletteY": -11,
+          "sourceId": "5f6aa4fa-4397-4bf5-ab59-6b11225cbabd",
+          "sourceCell": {
+            "x": 2,
+            "y": 4
+          },
+          "rgbaSha256": "44776cc6d0d4b505399c8ea29cb53dec186b27051c4b56599d74073ece989359"
+        },
+        {
+          "name": "Tile_Samcheondo_Struct_RiverRocks_0_1",
+          "x": 320,
+          "y": 128,
+          "width": 32,
+          "height": 32,
+          "paletteX": 10,
+          "paletteY": -7,
+          "sourceId": "25ca361c-d333-440c-9985-a3256546d93c",
+          "sourceCell": {
+            "x": 0,
+            "y": 0
+          },
+          "rgbaSha256": "5588c399c218d89aed2be6ac38571b159363a3791b4395d5d6fa20368cc17325"
+        },
+        {
+          "name": "Tile_Samcheondo_Struct_RiverRocks_1_1",
+          "x": 352,
+          "y": 128,
+          "width": 32,
+          "height": 32,
+          "paletteX": 11,
+          "paletteY": -7,
+          "sourceId": "25ca361c-d333-440c-9985-a3256546d93c",
+          "sourceCell": {
+            "x": 1,
+            "y": 0
+          },
+          "rgbaSha256": "3c9266e9272d5f16f8dd9d62f1b5733a85ce04e835035d385b423249d9b1dfe9"
+        },
+        {
+          "name": "Tile_Samcheondo_Struct_RiverRocks_0_0",
+          "x": 320,
+          "y": 96,
+          "width": 32,
+          "height": 32,
+          "paletteX": 10,
+          "paletteY": -8,
+          "sourceId": "25ca361c-d333-440c-9985-a3256546d93c",
+          "sourceCell": {
+            "x": 0,
+            "y": 1
+          },
+          "rgbaSha256": "7f1361d4f728c7defb29d274967b5ed790824df195e906c75c0ce7347913bb42"
+        },
+        {
+          "name": "Tile_Samcheondo_Struct_RiverRocks_1_0",
+          "x": 352,
+          "y": 96,
+          "width": 32,
+          "height": 32,
+          "paletteX": 11,
+          "paletteY": -8,
+          "sourceId": "25ca361c-d333-440c-9985-a3256546d93c",
+          "sourceCell": {
+            "x": 1,
+            "y": 1
+          },
+          "rgbaSha256": "3b7ce9884a49cb129eb419cf171e631566d0e4340132e09dadd2c2cf5b598563"
+        }
+      ],
+      "sources": [
+        {
+          "key": "Tavern",
+          "id": "ff740606-918c-4ebf-9612-682ee0a02580",
+          "sourceFile": "Downloads/ff740606-918c-4ebf-9612-682ee0a02580.png",
+          "atlasTopLeft": {
+            "x": 0,
+            "y": 0
+          },
+          "width": 192,
+          "height": 160,
+          "rgbaSha256": "e17965d733096bdc72925f20e83515f92e17c311201395eea2be920905cb9b15"
+        },
+        {
+          "key": "ResurrectionAltar",
+          "id": "416b50ff-1c21-41cc-b676-abd455b8f5e1",
+          "sourceFile": "Downloads/416b50ff-1c21-41cc-b676-abd455b8f5e1.png",
+          "atlasTopLeft": {
+            "x": 224,
+            "y": 0
+          },
+          "width": 128,
+          "height": 128,
+          "rgbaSha256": "e1503f01ae3d62ac6c3d26aee94ed0a72d2c69ee43e78e7a78ce78e89577bd38"
+        },
+        {
+          "key": "FerryBoat",
+          "id": "15109cfc-d3ce-455e-9575-4f51999c929e",
+          "sourceFile": "Downloads/15109cfc-d3ce-455e-9575-4f51999c929e.png",
+          "atlasTopLeft": {
+            "x": 384,
+            "y": 0
+          },
+          "width": 128,
+          "height": 64,
+          "rgbaSha256": "a6aa4c011f067252498f54dca268b11c56985e7cfcb0ae13b103102f21e4452d"
+        },
+        {
+          "key": "NoticeBoard",
+          "id": "a9a95146-e505-4442-854e-bfc4023fb3bf",
+          "sourceFile": "Downloads/a9a95146-e505-4442-854e-bfc4023fb3bf.png",
+          "atlasTopLeft": {
+            "x": 0,
+            "y": 192
+          },
+          "width": 64,
+          "height": 96,
+          "rgbaSha256": "515f7d8888472cdc058784d096dbe5459a9a4e91d424b30b9bbdcc35c48d9368"
+        },
+        {
+          "key": "Lantern",
+          "id": "50f26186-7eb6-4d6f-b739-1f5703a6a14f",
+          "sourceFile": "Downloads/50f26186-7eb6-4d6f-b739-1f5703a6a14f.png",
+          "atlasTopLeft": {
+            "x": 96,
+            "y": 192
+          },
+          "width": 32,
+          "height": 64,
+          "rgbaSha256": "149323875e34ae001f410386a06f719f33850d7c1fe428fc1532a96586ab7114"
+        },
+        {
+          "key": "Willow",
+          "id": "5f6aa4fa-4397-4bf5-ab59-6b11225cbabd",
+          "sourceFile": "Downloads/5f6aa4fa-4397-4bf5-ab59-6b11225cbabd.png",
+          "atlasTopLeft": {
+            "x": 160,
+            "y": 192
+          },
+          "width": 128,
+          "height": 160,
+          "rgbaSha256": "d3f21f521295a4af95474e836994f25efd65e9701ba6508ea48141a3f8eb11c3"
+        },
+        {
+          "key": "RiverRocks",
+          "id": "25ca361c-d333-440c-9985-a3256546d93c",
+          "sourceFile": "Downloads/25ca361c-d333-440c-9985-a3256546d93c.png",
+          "atlasTopLeft": {
+            "x": 320,
+            "y": 192
+          },
+          "width": 64,
+          "height": 64,
+          "rgbaSha256": "b7c4b83a3d0e55e0a6b7e6ec0f8bf141b0bdb37a1f4ecdfe35b09ebdca65121e"
+        }
+      ],
+      "rgbaSha256": "92607e8044fb4b320c07cfb7b6078d4c33d3e82144e3944379e75c38d75a8d8d"
+    },
+    {
+      "category": "Deco",
+      "sheet": "Assets/Resources/Art/Tiles/Samcheondo/Deco/Tile_Samcheondo_Deco.png",
+      "width": 512,
+      "height": 64,
+      "pieces": [
+        {
+          "name": "Tile_Samcheondo_Deco_Reeds_0_1",
+          "x": 0,
+          "y": 32,
+          "width": 32,
+          "height": 32,
+          "paletteX": 0,
+          "paletteY": -1,
+          "sourceId": "85fb3ab5-2a59-4742-b303-d8b965189062",
+          "sourceCell": {
+            "x": 0,
+            "y": 0
+          },
+          "rgbaSha256": "e2ab8db49b1d46849537124b5eefdf18e039420c3a6d0a3ab6a4127a974acb94"
+        },
+        {
+          "name": "Tile_Samcheondo_Deco_Reeds_1_1",
+          "x": 32,
+          "y": 32,
+          "width": 32,
+          "height": 32,
+          "paletteX": 1,
+          "paletteY": -1,
+          "sourceId": "85fb3ab5-2a59-4742-b303-d8b965189062",
+          "sourceCell": {
+            "x": 1,
+            "y": 0
+          },
+          "rgbaSha256": "fdcad5d2a10cfc94a6bb050522d7ca9e075f17ae48c10aedbf1c93519381243c"
+        },
+        {
+          "name": "Tile_Samcheondo_Deco_Reeds_0_0",
+          "x": 0,
+          "y": 0,
+          "width": 32,
+          "height": 32,
+          "paletteX": 0,
+          "paletteY": -2,
+          "sourceId": "85fb3ab5-2a59-4742-b303-d8b965189062",
+          "sourceCell": {
+            "x": 0,
+            "y": 1
+          },
+          "rgbaSha256": "92ef15d8448cb09e6d4f35b972d32b46986615e67ad712589969d65459ff97c1"
+        },
+        {
+          "name": "Tile_Samcheondo_Deco_Reeds_1_0",
+          "x": 32,
+          "y": 0,
+          "width": 32,
+          "height": 32,
+          "paletteX": 1,
+          "paletteY": -2,
+          "sourceId": "85fb3ab5-2a59-4742-b303-d8b965189062",
+          "sourceCell": {
+            "x": 1,
+            "y": 1
+          },
+          "rgbaSha256": "c9f4b8f887f135d9b29aaf9a638013a0e53f2d2d014e58cd970bdea0dc97d9dc"
+        },
+        {
+          "name": "Tile_Samcheondo_Deco_RiverMist_0_0",
+          "x": 96,
+          "y": 0,
+          "width": 32,
+          "height": 32,
+          "paletteX": 3,
+          "paletteY": -2,
+          "sourceId": "11ae5b1b-9c53-41d8-8795-0038de6a1f9f",
+          "sourceCell": {
+            "x": 0,
+            "y": 1
+          },
+          "rgbaSha256": "2a61783623c743ab51b59f56d4efbc3849b6d9376e29b95f688992861e443e09"
+        },
+        {
+          "name": "Tile_Samcheondo_Deco_RiverMist_1_0",
+          "x": 128,
+          "y": 0,
+          "width": 32,
+          "height": 32,
+          "paletteX": 4,
+          "paletteY": -2,
+          "sourceId": "11ae5b1b-9c53-41d8-8795-0038de6a1f9f",
+          "sourceCell": {
+            "x": 1,
+            "y": 1
+          },
+          "rgbaSha256": "c5316b894c460b7add8017eaec5ecce6bb0d5dc29d9fdf8978249eec25a55068"
+        },
+        {
+          "name": "Tile_Samcheondo_Deco_RiverMist_2_0",
+          "x": 160,
+          "y": 0,
+          "width": 32,
+          "height": 32,
+          "paletteX": 5,
+          "paletteY": -2,
+          "sourceId": "11ae5b1b-9c53-41d8-8795-0038de6a1f9f",
+          "sourceCell": {
+            "x": 2,
+            "y": 1
+          },
+          "rgbaSha256": "77390622ba92fb87a506f5f931971aefa872882a92aa37e7e1b619463d927872"
+        },
+        {
+          "name": "Tile_Samcheondo_Deco_RiverMist_3_0",
+          "x": 192,
+          "y": 0,
+          "width": 32,
+          "height": 32,
+          "paletteX": 6,
+          "paletteY": -2,
+          "sourceId": "11ae5b1b-9c53-41d8-8795-0038de6a1f9f",
+          "sourceCell": {
+            "x": 3,
+            "y": 1
+          },
+          "rgbaSha256": "acd85a3f118f0384e180761ea93a1be9d268f2c433ddd56b5200f38feaf0686d"
+        },
+        {
+          "name": "Tile_Samcheondo_Deco_RiverMist_4_0",
+          "x": 224,
+          "y": 0,
+          "width": 32,
+          "height": 32,
+          "paletteX": 7,
+          "paletteY": -2,
+          "sourceId": "11ae5b1b-9c53-41d8-8795-0038de6a1f9f",
+          "sourceCell": {
+            "x": 4,
+            "y": 1
+          },
+          "rgbaSha256": "f421fedeaf8d9d3bdcc3091309076fc5319e19f1e7e4ce9fc5ccece3d2a6199a"
+        },
+        {
+          "name": "Tile_Samcheondo_Deco_RiverMist_5_0",
+          "x": 256,
+          "y": 0,
+          "width": 32,
+          "height": 32,
+          "paletteX": 8,
+          "paletteY": -2,
+          "sourceId": "11ae5b1b-9c53-41d8-8795-0038de6a1f9f",
+          "sourceCell": {
+            "x": 5,
+            "y": 1
+          },
+          "rgbaSha256": "c807541b698ba796b5f00054ac8c8b70d9130e9ae4edda0250110d14209ed6b3"
+        }
+      ],
+      "sources": [
+        {
+          "key": "Reeds",
+          "id": "85fb3ab5-2a59-4742-b303-d8b965189062",
+          "sourceFile": "Downloads/85fb3ab5-2a59-4742-b303-d8b965189062.png",
+          "atlasTopLeft": {
+            "x": 0,
+            "y": 0
+          },
+          "width": 64,
+          "height": 64,
+          "rgbaSha256": "85b74b46be46f2c0e210a6e5f44ae9439ef6ae8bd61b33a5497898c140632711"
+        },
+        {
+          "key": "RiverMist",
+          "id": "11ae5b1b-9c53-41d8-8795-0038de6a1f9f",
+          "sourceFile": "Downloads/11ae5b1b-9c53-41d8-8795-0038de6a1f9f.png",
+          "atlasTopLeft": {
+            "x": 96,
+            "y": 0
+          },
+          "width": 192,
+          "height": 64,
+          "rgbaSha256": "5c55e40ea2abecb2da6987115a1f23625bb380b3c0ec24958bc2a3d6855ce46d"
+        }
+      ],
+      "rgbaSha256": "01e23cc520f7dab0c3164b983cf96676113eb26f02bd3c7d79919300bb15f0e6"
+    }
+  ]
+}

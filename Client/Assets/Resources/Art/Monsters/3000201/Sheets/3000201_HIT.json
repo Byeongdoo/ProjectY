@@ -1,0 +1,73 @@
+{
+  "animation": "HIT",
+  "sourceAnimation": "HIT",
+  "directions": [
+    "south",
+    "south-east",
+    "east",
+    "north-east",
+    "north",
+    "north-west",
+    "west",
+    "south-west"
+  ],
+  "frameCount": 4,
+  "framesPerSecond": 10,
+  "loop": false,
+  "cellWidth": 104,
+  "cellHeight": 104,
+  "sourcePixelsResized": false,
+  "alignment": "Canvas centres, transparent padding only",
+  "directionalSources": [
+    {
+      "direction": "south",
+      "sourceAnimation": "HIT",
+      "groupId": "fff48acc-77e5-411d-9740-7e42f765f95b"
+    },
+    {
+      "direction": "south-east",
+      "sourceAnimation": "HIT",
+      "groupId": "fff48acc-77e5-411d-9740-7e42f765f95b"
+    },
+    {
+      "direction": "east",
+      "sourceAnimation": "HIT",
+      "groupId": "fff48acc-77e5-411d-9740-7e42f765f95b"
+    },
+    {
+      "direction": "north-east",
+      "sourceAnimation": "HIT",
+      "groupId": "fff48acc-77e5-411d-9740-7e42f765f95b"
+    },
+    {
+      "direction": "north",
+      "sourceAnimation": "HIT",
+      "groupId": "fff48acc-77e5-411d-9740-7e42f765f95b"
+    },
+    {
+      "direction": "north-west",
+      "sourceAnimation": "HIT",
+      "groupId": "fff48acc-77e5-411d-9740-7e42f765f95b"
+    },
+    {
+      "direction": "west",
+      "sourceAnimation": "HIT",
+      "groupId": "fff48acc-77e5-411d-9740-7e42f765f95b"
+    },
+    {
+      "direction": "south-west",
+      "sourceAnimation": "HIT",
+      "groupId": "fff48acc-77e5-411d-9740-7e42f765f95b"
+    }
+  ],
+  "animationClips": [
+    "Animations/HIT_SOUTH.anim",
+    "Animations/HIT_SOUTH_EAST.anim",
+    "Animations/HIT_EAST.anim",
+    "Animations/HIT_NORTH_EAST.anim",
+    "Animations/HIT_NORTH.anim",
+    "Animations/HIT_NORTH_WEST.anim",
+    "Animations/HIT_WEST.anim",
+    "Animations/HIT_SOUTH_WEST.anim"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "animation": "Mokgui_MountainWailRing_8f",
+  "animationGroupId": "097977f1-f5b5-4143-a8c5-59e63c254411",
+  "columns": 8,
+  "rows": 1,
+  "cellWidth": 128,
+  "cellHeight": 128,
+  "frameCount": 8,
+  "sourcePixelsResized": false,
+  "pivot": "cell-center"
+}

@@ -1,0 +1,48 @@
+{
+  "Mokgui_VFX_ThreadBinding.json": {
+    "object": {
+      "id": "b0834b2d-a8ef-43f7-9782-b8c56b015c06",
+      "name": "base",
+      "prompt": "Twisted Mokgui ThreadBinding isolated VFX",
+      "size": {
+        "width": 64,
+        "height": 64
+      },
+      "directions": 1,
+      "view": "low top-down"
+    },
+    "spritesheet": {
+      "path": "Mokgui_VFX_ThreadBinding.png",
+      "cell_size": {
+        "width": 64,
+        "height": 64
+      },
+      "sheet_size": {
+        "width": 512,
+        "height": 128
+      },
+      "columns": 8,
+      "pivot": "cell-center",
+      "rows": [
+        {
+          "row": 0,
+          "type": "rotations",
+          "frame_count": 1,
+          "directions": [
+            "unknown"
+          ]
+        },
+        {
+          "row": 1,
+          "type": "animation",
+          "frame_count": 8,
+          "animation": "Mokgui_ThreadBinding_8f",
+          "animation_group_id": "ff0f85f4-b00c-4693-8e27-890a82315dd0",
+          "direction": "unknown"
+        }
+      ]
+    },
+    "export_version": "1.0",
+    "export_date": "2026-11-23T13:28:51.640586+00:00"
+  }
+}

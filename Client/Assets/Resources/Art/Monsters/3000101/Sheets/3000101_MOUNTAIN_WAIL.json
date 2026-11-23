@@ -1,0 +1,73 @@
+{
+  "animation": "MOUNTAIN_WAIL",
+  "sourceAnimation": "MountainWail",
+  "directions": [
+    "south",
+    "south-east",
+    "east",
+    "north-east",
+    "north",
+    "north-west",
+    "west",
+    "south-west"
+  ],
+  "frameCount": 8,
+  "framesPerSecond": 10,
+  "loop": false,
+  "cellWidth": 256,
+  "cellHeight": 256,
+  "sourcePixelsResized": false,
+  "alignment": "Canvas centres, transparent padding only",
+  "directionalSources": [
+    {
+      "direction": "south",
+      "sourceAnimation": "MountainWail",
+      "groupId": "b8e6bf1a-f0fd-468b-a702-4d34855b49cf"
+    },
+    {
+      "direction": "south-east",
+      "sourceAnimation": "MountainWail",
+      "groupId": "b8e6bf1a-f0fd-468b-a702-4d34855b49cf"
+    },
+    {
+      "direction": "east",
+      "sourceAnimation": "MountainWail",
+      "groupId": "b8e6bf1a-f0fd-468b-a702-4d34855b49cf"
+    },
+    {
+      "direction": "north-east",
+      "sourceAnimation": "MountainWail",
+      "groupId": "b8e6bf1a-f0fd-468b-a702-4d34855b49cf"
+    },
+    {
+      "direction": "north",
+      "sourceAnimation": "MountainWail",
+      "groupId": "b8e6bf1a-f0fd-468b-a702-4d34855b49cf"
+    },
+    {
+      "direction": "north-west",
+      "sourceAnimation": "MountainWail",
+      "groupId": "b8e6bf1a-f0fd-468b-a702-4d34855b49cf"
+    },
+    {
+      "direction": "west",
+      "sourceAnimation": "MountainWail",
+      "groupId": "b8e6bf1a-f0fd-468b-a702-4d34855b49cf"
+    },
+    {
+      "direction": "south-west",
+      "sourceAnimation": "MountainWail",
+      "groupId": "b8e6bf1a-f0fd-468b-a702-4d34855b49cf"
+    }
+  ],
+  "animationClips": [
+    "Animations/MOUNTAIN_WAIL_SOUTH.anim",
+    "Animations/MOUNTAIN_WAIL_SOUTH_EAST.anim",
+    "Animations/MOUNTAIN_WAIL_EAST.anim",
+    "Animations/MOUNTAIN_WAIL_NORTH_EAST.anim",
+    "Animations/MOUNTAIN_WAIL_NORTH.anim",
+    "Animations/MOUNTAIN_WAIL_NORTH_WEST.anim",
+    "Animations/MOUNTAIN_WAIL_WEST.anim",
+    "Animations/MOUNTAIN_WAIL_SOUTH_WEST.anim"
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "Mokgui_VFX_Phase2Aura.json": {
+    "object": {
+      "id": "9c47234c-23bb-43a0-956d-aec6b70ea5dd",
+      "name": "base",
+      "prompt": "Twisted Mokgui Phase2Aura isolated VFX",
+      "size": {
+        "width": 128,
+        "height": 128
+      },
+      "directions": 1,
+      "view": "low top-down"
+    },
+    "spritesheet": {
+      "path": "Mokgui_VFX_Phase2Aura.png",
+      "cell_size": {
+        "width": 128,
+        "height": 128
+      },
+      "sheet_size": {
+        "width": 1024,
+        "height": 256
+      },
+      "columns": 8,
+      "pivot": "cell-center",
+      "rows": [
+        {
+          "row": 0,
+          "type": "rotations",
+          "frame_count": 1,
+          "directions": [
+            "unknown"
+          ]
+        },
+        {
+          "row": 1,
+          "type": "animation",
+          "frame_count": 8,
+          "animation": "Mokgui_Phase2Aura_8f",
+          "animation_group_id": "59fdbb44-6b74-4d60-9a83-f1f6bde2fd2d",
+          "direction": "unknown"
+        }
+      ]
+    },
+    "export_version": "1.0",
+    "export_date": "2026-11-23T13:28:51.982066+00:00"
+  }
+}

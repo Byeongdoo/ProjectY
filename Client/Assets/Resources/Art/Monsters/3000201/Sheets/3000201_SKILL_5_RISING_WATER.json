@@ -1,0 +1,73 @@
+{
+  "animation": "SKILL_5_RISING_WATER",
+  "sourceAnimation": "SKILL_5_RISING_WATER",
+  "directions": [
+    "south",
+    "south-east",
+    "east",
+    "north-east",
+    "north",
+    "north-west",
+    "west",
+    "south-west"
+  ],
+  "frameCount": 8,
+  "framesPerSecond": 10,
+  "loop": false,
+  "cellWidth": 104,
+  "cellHeight": 104,
+  "sourcePixelsResized": false,
+  "alignment": "Canvas centres, transparent padding only",
+  "directionalSources": [
+    {
+      "direction": "south",
+      "sourceAnimation": "SKILL_5_RISING_WATER",
+      "groupId": "5734af10-78f9-4d90-af44-92c41601870d"
+    },
+    {
+      "direction": "south-east",
+      "sourceAnimation": "SKILL_5_RISING_WATER",
+      "groupId": "5734af10-78f9-4d90-af44-92c41601870d"
+    },
+    {
+      "direction": "east",
+      "sourceAnimation": "SKILL_5_RISING_WATER",
+      "groupId": "5734af10-78f9-4d90-af44-92c41601870d"
+    },
+    {
+      "direction": "north-east",
+      "sourceAnimation": "SKILL_5_RISING_WATER",
+      "groupId": "5734af10-78f9-4d90-af44-92c41601870d"
+    },
+    {
+      "direction": "north",
+      "sourceAnimation": "SKILL_5_RISING_WATER",
+      "groupId": "5734af10-78f9-4d90-af44-92c41601870d"
+    },
+    {
+      "direction": "north-west",
+      "sourceAnimation": "SKILL_5_RISING_WATER",
+      "groupId": "5734af10-78f9-4d90-af44-92c41601870d"
+    },
+    {
+      "direction": "west",
+      "sourceAnimation": "SKILL_5_RISING_WATER",
+      "groupId": "5734af10-78f9-4d90-af44-92c41601870d"
+    },
+    {
+      "direction": "south-west",
+      "sourceAnimation": "SKILL_5_RISING_WATER",
+      "groupId": "5734af10-78f9-4d90-af44-92c41601870d"
+    }
+  ],
+  "animationClips": [
+    "Animations/SKILL_5_RISING_WATER_SOUTH.anim",
+    "Animations/SKILL_5_RISING_WATER_SOUTH_EAST.anim",
+    "Animations/SKILL_5_RISING_WATER_EAST.anim",
+    "Animations/SKILL_5_RISING_WATER_NORTH_EAST.anim",
+    "Animations/SKILL_5_RISING_WATER_NORTH.anim",
+    "Animations/SKILL_5_RISING_WATER_NORTH_WEST.anim",
+    "Animations/SKILL_5_RISING_WATER_WEST.anim",
+    "Animations/SKILL_5_RISING_WATER_SOUTH_WEST.anim"
+  ]
+}

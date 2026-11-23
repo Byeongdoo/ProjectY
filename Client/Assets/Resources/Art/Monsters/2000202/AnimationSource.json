@@ -1,0 +1,672 @@
+{
+  "key": "DrownedSoul",
+  "characterId": "7b67f6b2-ace9-4265-b537-835418efcd17",
+  "pixelsPerUnit": 32,
+  "rootMotion": false,
+  "visualApproval": "Existing completed assets imported; technical validation is not new visual approval.",
+  "rejectedGroupsExcluded": [
+    "REJECTED_ATTACK_FIX_EAST",
+    "REJECTED_KNOCKBACK_R1",
+    "REJECTED_SKILL_1_R1",
+    "REJECTED_SKILL_2_R1"
+  ],
+  "clips": [
+    {
+      "animation": "ATTACK",
+      "sourceAnimation": "ATTACK",
+      "directions": [
+        "south",
+        "south-east",
+        "east",
+        "north-east",
+        "north",
+        "north-west",
+        "west",
+        "south-west"
+      ],
+      "frameCount": 8,
+      "framesPerSecond": 10,
+      "loop": false,
+      "cellWidth": 88,
+      "cellHeight": 88,
+      "sourcePixelsResized": false,
+      "alignment": "Canvas centres, transparent padding only",
+      "directionalSources": [
+        {
+          "direction": "south",
+          "sourceAnimation": "ATTACK",
+          "groupId": "b96f7c8e-5f13-4960-8bf6-664fb9a97e22"
+        },
+        {
+          "direction": "south-east",
+          "sourceAnimation": "ATTACK",
+          "groupId": "b96f7c8e-5f13-4960-8bf6-664fb9a97e22"
+        },
+        {
+          "direction": "east",
+          "sourceAnimation": "ATTACK_FIX_EAST_R3",
+          "groupId": "3d17f053-834f-4b03-97f3-b75dc06cfff9"
+        },
+        {
+          "direction": "north-east",
+          "sourceAnimation": "ATTACK",
+          "groupId": "b96f7c8e-5f13-4960-8bf6-664fb9a97e22"
+        },
+        {
+          "direction": "north",
+          "sourceAnimation": "ATTACK",
+          "groupId": "b96f7c8e-5f13-4960-8bf6-664fb9a97e22"
+        },
+        {
+          "direction": "north-west",
+          "sourceAnimation": "ATTACK",
+          "groupId": "b96f7c8e-5f13-4960-8bf6-664fb9a97e22"
+        },
+        {
+          "direction": "west",
+          "sourceAnimation": "ATTACK",
+          "groupId": "b96f7c8e-5f13-4960-8bf6-664fb9a97e22"
+        },
+        {
+          "direction": "south-west",
+          "sourceAnimation": "ATTACK",
+          "groupId": "b96f7c8e-5f13-4960-8bf6-664fb9a97e22"
+        }
+      ],
+      "animationClips": [
+        "Animations/ATTACK_SOUTH.anim",
+        "Animations/ATTACK_SOUTH_EAST.anim",
+        "Animations/ATTACK_EAST.anim",
+        "Animations/ATTACK_NORTH_EAST.anim",
+        "Animations/ATTACK_NORTH.anim",
+        "Animations/ATTACK_NORTH_WEST.anim",
+        "Animations/ATTACK_WEST.anim",
+        "Animations/ATTACK_SOUTH_WEST.anim"
+      ]
+    },
+    {
+      "animation": "DIE",
+      "sourceAnimation": "DIE",
+      "directions": [
+        "south",
+        "south-east",
+        "east",
+        "north-east",
+        "north",
+        "north-west",
+        "west",
+        "south-west"
+      ],
+      "frameCount": 8,
+      "framesPerSecond": 10,
+      "loop": false,
+      "cellWidth": 88,
+      "cellHeight": 88,
+      "sourcePixelsResized": false,
+      "alignment": "Canvas centres, transparent padding only",
+      "directionalSources": [
+        {
+          "direction": "south",
+          "sourceAnimation": "DIE",
+          "groupId": "7c60c265-84a8-42af-9799-bb68ddc378ef"
+        },
+        {
+          "direction": "south-east",
+          "sourceAnimation": "DIE",
+          "groupId": "7c60c265-84a8-42af-9799-bb68ddc378ef"
+        },
+        {
+          "direction": "east",
+          "sourceAnimation": "DIE",
+          "groupId": "7c60c265-84a8-42af-9799-bb68ddc378ef"
+        },
+        {
+          "direction": "north-east",
+          "sourceAnimation": "DIE",
+          "groupId": "7c60c265-84a8-42af-9799-bb68ddc378ef"
+        },
+        {
+          "direction": "north",
+          "sourceAnimation": "DIE",
+          "groupId": "7c60c265-84a8-42af-9799-bb68ddc378ef"
+        },
+        {
+          "direction": "north-west",
+          "sourceAnimation": "DIE",
+          "groupId": "7c60c265-84a8-42af-9799-bb68ddc378ef"
+        },
+        {
+          "direction": "west",
+          "sourceAnimation": "DIE",
+          "groupId": "7c60c265-84a8-42af-9799-bb68ddc378ef"
+        },
+        {
+          "direction": "south-west",
+          "sourceAnimation": "DIE",
+          "groupId": "7c60c265-84a8-42af-9799-bb68ddc378ef"
+        }
+      ],
+      "animationClips": [
+        "Animations/DIE_SOUTH.anim",
+        "Animations/DIE_SOUTH_EAST.anim",
+        "Animations/DIE_EAST.anim",
+        "Animations/DIE_NORTH_EAST.anim",
+        "Animations/DIE_NORTH.anim",
+        "Animations/DIE_NORTH_WEST.anim",
+        "Animations/DIE_WEST.anim",
+        "Animations/DIE_SOUTH_WEST.anim"
+      ]
+    },
+    {
+      "animation": "HIT",
+      "sourceAnimation": "HIT",
+      "directions": [
+        "south",
+        "south-east",
+        "east",
+        "north-east",
+        "north",
+        "north-west",
+        "west",
+        "south-west"
+      ],
+      "frameCount": 4,
+      "framesPerSecond": 10,
+      "loop": false,
+      "cellWidth": 88,
+      "cellHeight": 88,
+      "sourcePixelsResized": false,
+      "alignment": "Canvas centres, transparent padding only",
+      "directionalSources": [
+        {
+          "direction": "south",
+          "sourceAnimation": "HIT",
+          "groupId": "2dbc7998-6e4b-46bc-8519-f647764899e4"
+        },
+        {
+          "direction": "south-east",
+          "sourceAnimation": "HIT",
+          "groupId": "2dbc7998-6e4b-46bc-8519-f647764899e4"
+        },
+        {
+          "direction": "east",
+          "sourceAnimation": "HIT",
+          "groupId": "2dbc7998-6e4b-46bc-8519-f647764899e4"
+        },
+        {
+          "direction": "north-east",
+          "sourceAnimation": "HIT",
+          "groupId": "2dbc7998-6e4b-46bc-8519-f647764899e4"
+        },
+        {
+          "direction": "north",
+          "sourceAnimation": "HIT",
+          "groupId": "2dbc7998-6e4b-46bc-8519-f647764899e4"
+        },
+        {
+          "direction": "north-west",
+          "sourceAnimation": "HIT",
+          "groupId": "2dbc7998-6e4b-46bc-8519-f647764899e4"
+        },
+        {
+          "direction": "west",
+          "sourceAnimation": "HIT",
+          "groupId": "2dbc7998-6e4b-46bc-8519-f647764899e4"
+        },
+        {
+          "direction": "south-west",
+          "sourceAnimation": "HIT",
+          "groupId": "2dbc7998-6e4b-46bc-8519-f647764899e4"
+        }
+      ],
+      "animationClips": [
+        "Animations/HIT_SOUTH.anim",
+        "Animations/HIT_SOUTH_EAST.anim",
+        "Animations/HIT_EAST.anim",
+        "Animations/HIT_NORTH_EAST.anim",
+        "Animations/HIT_NORTH.anim",
+        "Animations/HIT_NORTH_WEST.anim",
+        "Animations/HIT_WEST.anim",
+        "Animations/HIT_SOUTH_WEST.anim"
+      ]
+    },
+    {
+      "animation": "IDLE",
+      "sourceAnimation": "IDLE",
+      "directions": [
+        "south",
+        "south-east",
+        "east",
+        "north-east",
+        "north",
+        "north-west",
+        "west",
+        "south-west"
+      ],
+      "frameCount": 4,
+      "framesPerSecond": 8,
+      "loop": true,
+      "cellWidth": 88,
+      "cellHeight": 88,
+      "sourcePixelsResized": false,
+      "alignment": "Canvas centres, transparent padding only",
+      "directionalSources": [
+        {
+          "direction": "south",
+          "sourceAnimation": "IDLE",
+          "groupId": "02e8b69b-8d5e-4faf-bb3a-9205bac89a97"
+        },
+        {
+          "direction": "south-east",
+          "sourceAnimation": "IDLE",
+          "groupId": "02e8b69b-8d5e-4faf-bb3a-9205bac89a97"
+        },
+        {
+          "direction": "east",
+          "sourceAnimation": "IDLE",
+          "groupId": "02e8b69b-8d5e-4faf-bb3a-9205bac89a97"
+        },
+        {
+          "direction": "north-east",
+          "sourceAnimation": "IDLE",
+          "groupId": "02e8b69b-8d5e-4faf-bb3a-9205bac89a97"
+        },
+        {
+          "direction": "north",
+          "sourceAnimation": "IDLE",
+          "groupId": "02e8b69b-8d5e-4faf-bb3a-9205bac89a97"
+        },
+        {
+          "direction": "north-west",
+          "sourceAnimation": "IDLE",
+          "groupId": "02e8b69b-8d5e-4faf-bb3a-9205bac89a97"
+        },
+        {
+          "direction": "west",
+          "sourceAnimation": "IDLE",
+          "groupId": "02e8b69b-8d5e-4faf-bb3a-9205bac89a97"
+        },
+        {
+          "direction": "south-west",
+          "sourceAnimation": "IDLE",
+          "groupId": "02e8b69b-8d5e-4faf-bb3a-9205bac89a97"
+        }
+      ],
+      "animationClips": [
+        "Animations/IDLE_SOUTH.anim",
+        "Animations/IDLE_SOUTH_EAST.anim",
+        "Animations/IDLE_EAST.anim",
+        "Animations/IDLE_NORTH_EAST.anim",
+        "Animations/IDLE_NORTH.anim",
+        "Animations/IDLE_NORTH_WEST.anim",
+        "Animations/IDLE_WEST.anim",
+        "Animations/IDLE_SOUTH_WEST.anim"
+      ]
+    },
+    {
+      "animation": "KNOCKBACK",
+      "sourceAnimation": "KNOCKBACK",
+      "directions": [
+        "south",
+        "south-east",
+        "east",
+        "north-east",
+        "north",
+        "north-west",
+        "west",
+        "south-west"
+      ],
+      "frameCount": 4,
+      "framesPerSecond": 10,
+      "loop": false,
+      "cellWidth": 88,
+      "cellHeight": 88,
+      "sourcePixelsResized": false,
+      "alignment": "Canvas centres, transparent padding only",
+      "directionalSources": [
+        {
+          "direction": "south",
+          "sourceAnimation": "KNOCKBACK",
+          "groupId": "09be7691-de7a-4b2c-aebe-e5d21aecd886"
+        },
+        {
+          "direction": "south-east",
+          "sourceAnimation": "KNOCKBACK",
+          "groupId": "09be7691-de7a-4b2c-aebe-e5d21aecd886"
+        },
+        {
+          "direction": "east",
+          "sourceAnimation": "KNOCKBACK",
+          "groupId": "09be7691-de7a-4b2c-aebe-e5d21aecd886"
+        },
+        {
+          "direction": "north-east",
+          "sourceAnimation": "KNOCKBACK",
+          "groupId": "09be7691-de7a-4b2c-aebe-e5d21aecd886"
+        },
+        {
+          "direction": "north",
+          "sourceAnimation": "KNOCKBACK",
+          "groupId": "09be7691-de7a-4b2c-aebe-e5d21aecd886"
+        },
+        {
+          "direction": "north-west",
+          "sourceAnimation": "KNOCKBACK",
+          "groupId": "09be7691-de7a-4b2c-aebe-e5d21aecd886"
+        },
+        {
+          "direction": "west",
+          "sourceAnimation": "KNOCKBACK",
+          "groupId": "09be7691-de7a-4b2c-aebe-e5d21aecd886"
+        },
+        {
+          "direction": "south-west",
+          "sourceAnimation": "KNOCKBACK",
+          "groupId": "09be7691-de7a-4b2c-aebe-e5d21aecd886"
+        }
+      ],
+      "animationClips": [
+        "Animations/KNOCKBACK_SOUTH.anim",
+        "Animations/KNOCKBACK_SOUTH_EAST.anim",
+        "Animations/KNOCKBACK_EAST.anim",
+        "Animations/KNOCKBACK_NORTH_EAST.anim",
+        "Animations/KNOCKBACK_NORTH.anim",
+        "Animations/KNOCKBACK_NORTH_WEST.anim",
+        "Animations/KNOCKBACK_WEST.anim",
+        "Animations/KNOCKBACK_SOUTH_WEST.anim"
+      ]
+    },
+    {
+      "animation": "RUN",
+      "sourceAnimation": "RUN",
+      "directions": [
+        "south",
+        "south-east",
+        "east",
+        "north-east",
+        "north",
+        "north-west",
+        "west",
+        "south-west"
+      ],
+      "frameCount": 8,
+      "framesPerSecond": 8,
+      "loop": true,
+      "cellWidth": 88,
+      "cellHeight": 88,
+      "sourcePixelsResized": false,
+      "alignment": "Canvas centres, transparent padding only",
+      "directionalSources": [
+        {
+          "direction": "south",
+          "sourceAnimation": "RUN",
+          "groupId": "381b895b-98fb-45f7-9fb4-a70e31088ff9"
+        },
+        {
+          "direction": "south-east",
+          "sourceAnimation": "RUN",
+          "groupId": "381b895b-98fb-45f7-9fb4-a70e31088ff9"
+        },
+        {
+          "direction": "east",
+          "sourceAnimation": "RUN_FIX_EAST",
+          "groupId": "d2c6e2d6-cef7-4c19-beb8-36697e7d52ee"
+        },
+        {
+          "direction": "north-east",
+          "sourceAnimation": "RUN",
+          "groupId": "381b895b-98fb-45f7-9fb4-a70e31088ff9"
+        },
+        {
+          "direction": "north",
+          "sourceAnimation": "RUN",
+          "groupId": "381b895b-98fb-45f7-9fb4-a70e31088ff9"
+        },
+        {
+          "direction": "north-west",
+          "sourceAnimation": "RUN_FIX_NORTH_WEST",
+          "groupId": "1b3fd781-ddd7-4cf3-b2e9-11fa9f513e0b"
+        },
+        {
+          "direction": "west",
+          "sourceAnimation": "RUN",
+          "groupId": "381b895b-98fb-45f7-9fb4-a70e31088ff9"
+        },
+        {
+          "direction": "south-west",
+          "sourceAnimation": "RUN",
+          "groupId": "381b895b-98fb-45f7-9fb4-a70e31088ff9"
+        }
+      ],
+      "animationClips": [
+        "Animations/RUN_SOUTH.anim",
+        "Animations/RUN_SOUTH_EAST.anim",
+        "Animations/RUN_EAST.anim",
+        "Animations/RUN_NORTH_EAST.anim",
+        "Animations/RUN_NORTH.anim",
+        "Animations/RUN_NORTH_WEST.anim",
+        "Animations/RUN_WEST.anim",
+        "Animations/RUN_SOUTH_WEST.anim"
+      ]
+    },
+    {
+      "animation": "SKILL_1",
+      "sourceAnimation": "SKILL_1",
+      "directions": [
+        "south",
+        "south-east",
+        "east",
+        "north-east",
+        "north",
+        "north-west",
+        "west",
+        "south-west"
+      ],
+      "frameCount": 8,
+      "framesPerSecond": 10,
+      "loop": false,
+      "cellWidth": 88,
+      "cellHeight": 88,
+      "sourcePixelsResized": false,
+      "alignment": "Canvas centres, transparent padding only",
+      "directionalSources": [
+        {
+          "direction": "south",
+          "sourceAnimation": "SKILL_1",
+          "groupId": "5f3c094a-d183-4242-863e-b5bb80157842"
+        },
+        {
+          "direction": "south-east",
+          "sourceAnimation": "SKILL_1",
+          "groupId": "5f3c094a-d183-4242-863e-b5bb80157842"
+        },
+        {
+          "direction": "east",
+          "sourceAnimation": "SKILL_1",
+          "groupId": "5f3c094a-d183-4242-863e-b5bb80157842"
+        },
+        {
+          "direction": "north-east",
+          "sourceAnimation": "SKILL_1",
+          "groupId": "5f3c094a-d183-4242-863e-b5bb80157842"
+        },
+        {
+          "direction": "north",
+          "sourceAnimation": "SKILL_1",
+          "groupId": "5f3c094a-d183-4242-863e-b5bb80157842"
+        },
+        {
+          "direction": "north-west",
+          "sourceAnimation": "SKILL_1",
+          "groupId": "5f3c094a-d183-4242-863e-b5bb80157842"
+        },
+        {
+          "direction": "west",
+          "sourceAnimation": "SKILL_1",
+          "groupId": "5f3c094a-d183-4242-863e-b5bb80157842"
+        },
+        {
+          "direction": "south-west",
+          "sourceAnimation": "SKILL_1",
+          "groupId": "5f3c094a-d183-4242-863e-b5bb80157842"
+        }
+      ],
+      "animationClips": [
+        "Animations/SKILL_1_SOUTH.anim",
+        "Animations/SKILL_1_SOUTH_EAST.anim",
+        "Animations/SKILL_1_EAST.anim",
+        "Animations/SKILL_1_NORTH_EAST.anim",
+        "Animations/SKILL_1_NORTH.anim",
+        "Animations/SKILL_1_NORTH_WEST.anim",
+        "Animations/SKILL_1_WEST.anim",
+        "Animations/SKILL_1_SOUTH_WEST.anim"
+      ]
+    },
+    {
+      "animation": "SKILL_2",
+      "sourceAnimation": "SKILL_2",
+      "directions": [
+        "south",
+        "south-east",
+        "east",
+        "north-east",
+        "north",
+        "north-west",
+        "west",
+        "south-west"
+      ],
+      "frameCount": 8,
+      "framesPerSecond": 10,
+      "loop": false,
+      "cellWidth": 88,
+      "cellHeight": 88,
+      "sourcePixelsResized": false,
+      "alignment": "Canvas centres, transparent padding only",
+      "directionalSources": [
+        {
+          "direction": "south",
+          "sourceAnimation": "SKILL_2",
+          "groupId": "6f7baf4e-4dfc-4bc7-a3b3-baee3594932d"
+        },
+        {
+          "direction": "south-east",
+          "sourceAnimation": "SKILL_2",
+          "groupId": "6f7baf4e-4dfc-4bc7-a3b3-baee3594932d"
+        },
+        {
+          "direction": "east",
+          "sourceAnimation": "SKILL_2",
+          "groupId": "6f7baf4e-4dfc-4bc7-a3b3-baee3594932d"
+        },
+        {
+          "direction": "north-east",
+          "sourceAnimation": "SKILL_2",
+          "groupId": "6f7baf4e-4dfc-4bc7-a3b3-baee3594932d"
+        },
+        {
+          "direction": "north",
+          "sourceAnimation": "SKILL_2",
+          "groupId": "6f7baf4e-4dfc-4bc7-a3b3-baee3594932d"
+        },
+        {
+          "direction": "north-west",
+          "sourceAnimation": "SKILL_2",
+          "groupId": "6f7baf4e-4dfc-4bc7-a3b3-baee3594932d"
+        },
+        {
+          "direction": "west",
+          "sourceAnimation": "SKILL_2",
+          "groupId": "6f7baf4e-4dfc-4bc7-a3b3-baee3594932d"
+        },
+        {
+          "direction": "south-west",
+          "sourceAnimation": "SKILL_2",
+          "groupId": "6f7baf4e-4dfc-4bc7-a3b3-baee3594932d"
+        }
+      ],
+      "animationClips": [
+        "Animations/SKILL_2_SOUTH.anim",
+        "Animations/SKILL_2_SOUTH_EAST.anim",
+        "Animations/SKILL_2_EAST.anim",
+        "Animations/SKILL_2_NORTH_EAST.anim",
+        "Animations/SKILL_2_NORTH.anim",
+        "Animations/SKILL_2_NORTH_WEST.anim",
+        "Animations/SKILL_2_WEST.anim",
+        "Animations/SKILL_2_SOUTH_WEST.anim"
+      ]
+    },
+    {
+      "animation": "STUN",
+      "sourceAnimation": "STUN",
+      "directions": [
+        "south",
+        "south-east",
+        "east",
+        "north-east",
+        "north",
+        "north-west",
+        "west",
+        "south-west"
+      ],
+      "frameCount": 4,
+      "framesPerSecond": 8,
+      "loop": true,
+      "cellWidth": 88,
+      "cellHeight": 88,
+      "sourcePixelsResized": false,
+      "alignment": "Canvas centres, transparent padding only",
+      "directionalSources": [
+        {
+          "direction": "south",
+          "sourceAnimation": "STUN",
+          "groupId": "6e377bac-bcaf-4eff-a019-102c08ddd319"
+        },
+        {
+          "direction": "south-east",
+          "sourceAnimation": "STUN",
+          "groupId": "6e377bac-bcaf-4eff-a019-102c08ddd319"
+        },
+        {
+          "direction": "east",
+          "sourceAnimation": "STUN",
+          "groupId": "6e377bac-bcaf-4eff-a019-102c08ddd319"
+        },
+        {
+          "direction": "north-east",
+          "sourceAnimation": "STUN",
+          "groupId": "6e377bac-bcaf-4eff-a019-102c08ddd319"
+        },
+        {
+          "direction": "north",
+          "sourceAnimation": "STUN",
+          "groupId": "6e377bac-bcaf-4eff-a019-102c08ddd319"
+        },
+        {
+          "direction": "north-west",
+          "sourceAnimation": "STUN",
+          "groupId": "6e377bac-bcaf-4eff-a019-102c08ddd319"
+        },
+        {
+          "direction": "west",
+          "sourceAnimation": "STUN",
+          "groupId": "6e377bac-bcaf-4eff-a019-102c08ddd319"
+        },
+        {
+          "direction": "south-west",
+          "sourceAnimation": "STUN",
+          "groupId": "6e377bac-bcaf-4eff-a019-102c08ddd319"
+        }
+      ],
+      "animationClips": [
+        "Animations/STUN_SOUTH.anim",
+        "Animations/STUN_SOUTH_EAST.anim",
+        "Animations/STUN_EAST.anim",
+        "Animations/STUN_NORTH_EAST.anim",
+        "Animations/STUN_NORTH.anim",
+        "Animations/STUN_NORTH_WEST.anim",
+        "Animations/STUN_WEST.anim",
+        "Animations/STUN_SOUTH_WEST.anim"
+      ]
+    }
+  ]
+}

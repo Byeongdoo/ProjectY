@@ -1,0 +1,48 @@
+{
+  "Mokgui_VFX_WarningGrid.json": {
+    "object": {
+      "id": "466084b1-56fc-4740-b7b6-5436e0cd77d0",
+      "name": "base",
+      "prompt": "Mokgui red grid warning telegraph",
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "directions": 1,
+      "view": "low top-down"
+    },
+    "spritesheet": {
+      "path": "Mokgui_VFX_WarningGrid.png",
+      "cell_size": {
+        "width": 32,
+        "height": 32
+      },
+      "sheet_size": {
+        "width": 256,
+        "height": 64
+      },
+      "columns": 8,
+      "pivot": "cell-center",
+      "rows": [
+        {
+          "row": 0,
+          "type": "rotations",
+          "frame_count": 1,
+          "directions": [
+            "unknown"
+          ]
+        },
+        {
+          "row": 1,
+          "type": "animation",
+          "frame_count": 8,
+          "animation": "Mokgui_WarningGrid_8f",
+          "animation_group_id": "671dcd85-cc73-4090-8b0f-4968ccc96617",
+          "direction": "unknown"
+        }
+      ]
+    },
+    "export_version": "1.0",
+    "export_date": "2026-11-23T13:28:51.609962+00:00"
+  }
+}

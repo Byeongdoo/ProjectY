@@ -1,0 +1,73 @@
+{
+  "animation": "DIE",
+  "sourceAnimation": "Death",
+  "directions": [
+    "south",
+    "south-east",
+    "east",
+    "north-east",
+    "north",
+    "north-west",
+    "west",
+    "south-west"
+  ],
+  "frameCount": 8,
+  "framesPerSecond": 10,
+  "loop": false,
+  "cellWidth": 256,
+  "cellHeight": 256,
+  "sourcePixelsResized": false,
+  "alignment": "Canvas centres, transparent padding only",
+  "directionalSources": [
+    {
+      "direction": "south",
+      "sourceAnimation": "Death",
+      "groupId": "c3a2a4b1-12a5-450c-924e-c3c8ba851d29"
+    },
+    {
+      "direction": "south-east",
+      "sourceAnimation": "Death",
+      "groupId": "c3a2a4b1-12a5-450c-924e-c3c8ba851d29"
+    },
+    {
+      "direction": "east",
+      "sourceAnimation": "Death",
+      "groupId": "c3a2a4b1-12a5-450c-924e-c3c8ba851d29"
+    },
+    {
+      "direction": "north-east",
+      "sourceAnimation": "Death",
+      "groupId": "c3a2a4b1-12a5-450c-924e-c3c8ba851d29"
+    },
+    {
+      "direction": "north",
+      "sourceAnimation": "Death",
+      "groupId": "c3a2a4b1-12a5-450c-924e-c3c8ba851d29"
+    },
+    {
+      "direction": "north-west",
+      "sourceAnimation": "Death",
+      "groupId": "c3a2a4b1-12a5-450c-924e-c3c8ba851d29"
+    },
+    {
+      "direction": "west",
+      "sourceAnimation": "Death",
+      "groupId": "c3a2a4b1-12a5-450c-924e-c3c8ba851d29"
+    },
+    {
+      "direction": "south-west",
+      "sourceAnimation": "Death",
+      "groupId": "c3a2a4b1-12a5-450c-924e-c3c8ba851d29"
+    }
+  ],
+  "animationClips": [
+    "Animations/DIE_SOUTH.anim",
+    "Animations/DIE_SOUTH_EAST.anim",
+    "Animations/DIE_EAST.anim",
+    "Animations/DIE_NORTH_EAST.anim",
+    "Animations/DIE_NORTH.anim",
+    "Animations/DIE_NORTH_WEST.anim",
+    "Animations/DIE_WEST.anim",
+    "Animations/DIE_SOUTH_WEST.anim"
+  ]
+}

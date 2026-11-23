@@ -1,0 +1,48 @@
+{
+  "Mokgui_VFX_ExhaustedAura.json": {
+    "object": {
+      "id": "8e551d6a-c0a4-4c5b-9550-de561c98d6e1",
+      "name": "base",
+      "prompt": "Twisted Mokgui ExhaustedAura isolated VFX",
+      "size": {
+        "width": 64,
+        "height": 64
+      },
+      "directions": 1,
+      "view": "low top-down"
+    },
+    "spritesheet": {
+      "path": "Mokgui_VFX_ExhaustedAura.png",
+      "cell_size": {
+        "width": 64,
+        "height": 64
+      },
+      "sheet_size": {
+        "width": 512,
+        "height": 128
+      },
+      "columns": 8,
+      "pivot": "cell-center",
+      "rows": [
+        {
+          "row": 0,
+          "type": "rotations",
+          "frame_count": 1,
+          "directions": [
+            "unknown"
+          ]
+        },
+        {
+          "row": 1,
+          "type": "animation",
+          "frame_count": 8,
+          "animation": "Mokgui_ExhaustedAura_8f",
+          "animation_group_id": "90aaf657-a8cc-412f-b59f-d2b7e3fdbc99",
+          "direction": "unknown"
+        }
+      ]
+    },
+    "export_version": "1.0",
+    "export_date": "2026-11-23T13:28:51.604611+00:00"
+  }
+}

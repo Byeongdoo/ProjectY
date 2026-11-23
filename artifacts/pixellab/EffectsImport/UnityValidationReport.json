@@ -1,0 +1,90 @@
+{
+  "status": "passed",
+  "unityVersion": "6000.3.5f2",
+  "activeScene": "Assets/Scenes/Single/Village_Gamcheon.unity",
+  "effects": 10,
+  "sampledSourceFrames": 76,
+  "clearKeys": 3,
+  "loopEffects": 7,
+  "sceneUnchanged": true,
+  "rows": [
+    {
+      "name": "Mokgui_WarningGrid",
+      "prefab": "Assets/Resources/Prefabs/Effect/Mokgui/Mokgui_WarningGrid.prefab",
+      "frames": 8,
+      "loop": true,
+      "clearsOnCompletion": false
+    },
+    {
+      "name": "Mokgui_Phase2Aura",
+      "prefab": "Assets/Resources/Prefabs/Effect/Mokgui/Mokgui_Phase2Aura.prefab",
+      "frames": 8,
+      "loop": true,
+      "clearsOnCompletion": false
+    },
+    {
+      "name": "Mokgui_ExhaustedAura",
+      "prefab": "Assets/Resources/Prefabs/Effect/Mokgui/Mokgui_ExhaustedAura.prefab",
+      "frames": 8,
+      "loop": true,
+      "clearsOnCompletion": false
+    },
+    {
+      "name": "Mokgui_MountainWailRing",
+      "prefab": "Assets/Resources/Prefabs/Effect/Mokgui/Mokgui_MountainWailRing.prefab",
+      "frames": 8,
+      "loop": false,
+      "clearsOnCompletion": true
+    },
+    {
+      "name": "Mokgui_ThreadBinding",
+      "prefab": "Assets/Resources/Prefabs/Effect/Mokgui/Mokgui_ThreadBinding.prefab",
+      "frames": 8,
+      "loop": true,
+      "clearsOnCompletion": false
+    },
+    {
+      "name": "Mokgui_RootEruption",
+      "prefab": "Assets/Resources/Prefabs/Effect/Mokgui/Mokgui_RootEruption.prefab",
+      "frames": 8,
+      "loop": false,
+      "clearsOnCompletion": true
+    },
+    {
+      "name": "Mokgui_TankSlamImpact",
+      "prefab": "Assets/Resources/Prefabs/Effect/Mokgui/Mokgui_TankSlamImpact.prefab",
+      "frames": 8,
+      "loop": false,
+      "clearsOnCompletion": true
+    },
+    {
+      "name": "Sansindang_LowMist",
+      "prefab": "Assets/Resources/Prefabs/Effect/Sansindang/Sansindang_LowMist.prefab",
+      "frames": 8,
+      "loop": true,
+      "clearsOnCompletion": false
+    },
+    {
+      "name": "Sansindang_SealPulse",
+      "prefab": "Assets/Resources/Prefabs/Effect/Sansindang/Sansindang_SealPulse.prefab",
+      "frames": 6,
+      "loop": true,
+      "clearsOnCompletion": false
+    },
+    {
+      "name": "Sansindang_SoulFlame",
+      "prefab": "Assets/Resources/Prefabs/Effect/Sansindang/Sansindang_SoulFlame.prefab",
+      "frames": 6,
+      "loop": true,
+      "clearsOnCompletion": false
+    }
+  ],
+  "checks": [
+    "Resources.Load resolves every effect prefab",
+    "Every native frame samples in Unity; full final-frame duration",
+    "Animator START playback, seven loops and three one-shot clears",
+    "32 PPU / Point / no compression / no mipmaps / sRGB / Full Rect / NPOT None / Clamp",
+    "Fixed canvas-centre pivots; scale one; only sprite curves",
+    "Sorting comes from tileLayers; open scene preserved"
+  ]
+}

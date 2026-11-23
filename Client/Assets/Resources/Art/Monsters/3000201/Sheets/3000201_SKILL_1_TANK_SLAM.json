@@ -1,0 +1,73 @@
+{
+  "animation": "SKILL_1_TANK_SLAM",
+  "sourceAnimation": "SKILL_1_TANK_SLAM",
+  "directions": [
+    "south",
+    "south-east",
+    "east",
+    "north-east",
+    "north",
+    "north-west",
+    "west",
+    "south-west"
+  ],
+  "frameCount": 8,
+  "framesPerSecond": 10,
+  "loop": false,
+  "cellWidth": 104,
+  "cellHeight": 104,
+  "sourcePixelsResized": false,
+  "alignment": "Canvas centres, transparent padding only",
+  "directionalSources": [
+    {
+      "direction": "south",
+      "sourceAnimation": "SKILL_1_TANK_SLAM",
+      "groupId": "ad0680ef-8642-43fd-a0bc-e78f38be1291"
+    },
+    {
+      "direction": "south-east",
+      "sourceAnimation": "SKILL_1_TANK_SLAM",
+      "groupId": "ad0680ef-8642-43fd-a0bc-e78f38be1291"
+    },
+    {
+      "direction": "east",
+      "sourceAnimation": "SKILL_1_TANK_SLAM",
+      "groupId": "ad0680ef-8642-43fd-a0bc-e78f38be1291"
+    },
+    {
+      "direction": "north-east",
+      "sourceAnimation": "Refined_SKILL_1_TANK_SLAM_north_east_R3",
+      "groupId": "f8ec61ab-b1bd-44b4-9ed6-0c630f47e43d"
+    },
+    {
+      "direction": "north",
+      "sourceAnimation": "Refined_SKILL_1_TANK_SLAM_north_R3",
+      "groupId": "bad666a7-7ab6-4a85-8bd5-05246f7387e7"
+    },
+    {
+      "direction": "north-west",
+      "sourceAnimation": "Refined_SKILL_1_TANK_SLAM_north_west_R3",
+      "groupId": "c79766a2-c4f4-4779-a632-09f771379abe"
+    },
+    {
+      "direction": "west",
+      "sourceAnimation": "SKILL_1_TANK_SLAM",
+      "groupId": "ad0680ef-8642-43fd-a0bc-e78f38be1291"
+    },
+    {
+      "direction": "south-west",
+      "sourceAnimation": "SKILL_1_TANK_SLAM",
+      "groupId": "ad0680ef-8642-43fd-a0bc-e78f38be1291"
+    }
+  ],
+  "animationClips": [
+    "Animations/SKILL_1_TANK_SLAM_SOUTH.anim",
+    "Animations/SKILL_1_TANK_SLAM_SOUTH_EAST.anim",
+    "Animations/SKILL_1_TANK_SLAM_EAST.anim",
+    "Animations/SKILL_1_TANK_SLAM_NORTH_EAST.anim",
+    "Animations/SKILL_1_TANK_SLAM_NORTH.anim",
+    "Animations/SKILL_1_TANK_SLAM_NORTH_WEST.anim",
+    "Animations/SKILL_1_TANK_SLAM_WEST.anim",
+    "Animations/SKILL_1_TANK_SLAM_SOUTH_WEST.anim"
+  ]
+}

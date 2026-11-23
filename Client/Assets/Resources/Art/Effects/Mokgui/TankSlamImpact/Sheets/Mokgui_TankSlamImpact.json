@@ -1,0 +1,11 @@
+{
+  "animation": "Mokgui_TankSlamImpact_8f",
+  "animationGroupId": "be8a24df-adea-4599-b2fe-276ecdf5fda4",
+  "columns": 8,
+  "rows": 1,
+  "cellWidth": 64,
+  "cellHeight": 64,
+  "frameCount": 8,
+  "sourcePixelsResized": false,
+  "pivot": "cell-center"
+}

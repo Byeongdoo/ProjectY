@@ -1,0 +1,11 @@
+{
+  "animation": "Mokgui_RootEruption_8f",
+  "animationGroupId": "8c5c35bb-5b15-408c-bfa3-a68ba1a1f3da",
+  "columns": 8,
+  "rows": 1,
+  "cellWidth": 64,
+  "cellHeight": 64,
+  "frameCount": 8,
+  "sourcePixelsResized": false,
+  "pivot": "cell-center"
+}

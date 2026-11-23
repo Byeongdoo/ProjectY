@@ -1,0 +1,533 @@
+fileFormatVersion: 2
+guid: 1ffd4954a92bca24dbbdc225ddbb62ea
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3733623624262779248
+    second: Sansindang_LowMist_0
+  - first:
+      213: -9222259708446257212
+    second: Sansindang_LowMist_1
+  - first:
+      213: 2899313240783762001
+    second: Sansindang_LowMist_2
+  - first:
+      213: -4965329383173578627
+    second: Sansindang_LowMist_3
+  - first:
+      213: -2317015442867527263
+    second: Sansindang_LowMist_4
+  - first:
+      213: -6265400264496879285
+    second: Sansindang_LowMist_5
+  - first:
+      213: -3495923116765452642
+    second: Sansindang_LowMist_6
+  - first:
+      213: 8075136332817580679
+    second: Sansindang_LowMist_7
+  - first:
+      213: -7116254489171330644
+    second: Sansindang_LowMist_8
+  - first:
+      213: -3712201806859472643
+    second: Sansindang_LowMist_9
+  - first:
+      213: -2878657778021470424
+    second: Sansindang_LowMist_10
+  - first:
+      213: 7075697128372098212
+    second: Sansindang_LowMist_11
+  - first:
+      213: 743488575261371376
+    second: Sansindang_LowMist_12
+  - first:
+      213: -3818567376124986044
+    second: Sansindang_LowMist_13
+  - first:
+      213: -5802467065741366766
+    second: Sansindang_LowMist_14
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 9
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Sansindang_LowMist_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 10
+        width: 118
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 071803997ee70d330800000000000000
+      internalID: 3733623624262779248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sansindang_LowMist_1
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 10
+        width: 114
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4cfc9a328a3f30080800000000000000
+      internalID: -9222259708446257212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sansindang_LowMist_2
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 21
+        width: 112
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 152b081080e6c3820800000000000000
+      internalID: 2899313240783762001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sansindang_LowMist_3
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 11
+        width: 107
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d702123cb3b971bb0800000000000000
+      internalID: -4965329383173578627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sansindang_LowMist_4
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 23
+        width: 111
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a169c41bbe48dfd0800000000000000
+      internalID: -2317015442867527263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sansindang_LowMist_5
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 11
+        width: 108
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b49660ba7a3dc09a0800000000000000
+      internalID: -6265400264496879285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sansindang_LowMist_6
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 24
+        width: 108
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e966e1f827cfb7fc0800000000000000
+      internalID: -3495923116765452642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sansindang_LowMist_7
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 12
+        width: 106
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7824176f5b5a01070800000000000000
+      internalID: 8075136332817580679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sansindang_LowMist_8
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 24
+        width: 104
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca9f9a1ee3cfd3d90800000000000000
+      internalID: -7116254489171330644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sansindang_LowMist_9
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 13
+        width: 93
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df0f39fef1c9b7cc0800000000000000
+      internalID: -3712201806859472643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sansindang_LowMist_10
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 24
+        width: 101
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82f6d1fa004fc08d0800000000000000
+      internalID: -2878657778021470424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sansindang_LowMist_11
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 14
+        width: 37
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a4ded2bc0de13260800000000000000
+      internalID: 7075697128372098212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sansindang_LowMist_12
+      rect:
+        serializedVersion: 2
+        x: 826
+        y: 12
+        width: 55
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fbe3078be6615a00800000000000000
+      internalID: 743488575261371376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sansindang_LowMist_13
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 23
+        width: 103
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44dbc2bf339b10bc0800000000000000
+      internalID: -3818567376124986044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sansindang_LowMist_14
+      rect:
+        serializedVersion: 2
+        x: 916
+        y: 12
+        width: 91
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21a259d42fe797fa0800000000000000
+      internalID: -5802467065741366766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Sansindang_LowMist_0: 3733623624262779248
+      Sansindang_LowMist_1: -9222259708446257212
+      Sansindang_LowMist_10: -2878657778021470424
+      Sansindang_LowMist_11: 7075697128372098212
+      Sansindang_LowMist_12: 743488575261371376
+      Sansindang_LowMist_13: -3818567376124986044
+      Sansindang_LowMist_14: -5802467065741366766
+      Sansindang_LowMist_2: 2899313240783762001
+      Sansindang_LowMist_3: -4965329383173578627
+      Sansindang_LowMist_4: -2317015442867527263
+      Sansindang_LowMist_5: -6265400264496879285
+      Sansindang_LowMist_6: -3495923116765452642
+      Sansindang_LowMist_7: 8075136332817580679
+      Sansindang_LowMist_8: -7116254489171330644
+      Sansindang_LowMist_9: -3712201806859472643
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

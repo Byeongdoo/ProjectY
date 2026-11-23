@@ -1,0 +1,99 @@
+{
+  "key": "ExhaustedAura",
+  "scope": "Mokgui",
+  "name": "Mokgui_ExhaustedAura",
+  "objectId": "8e551d6a-c0a4-4c5b-9550-de561c98d6e1",
+  "root": "Assets/Resources/Art/Effects/Mokgui/ExhaustedAura",
+  "sourceAnimation": "Mokgui_ExhaustedAura_8f",
+  "animationGroupId": "90aaf657-a8cc-412f-b59f-d2b7e3fdbc99",
+  "frameCount": 8,
+  "framesPerSecond": 8,
+  "loop": true,
+  "timingSource": "Presentation defaults; PixelLab export has no frame durations. Not combat/cast timing.",
+  "clearSpriteOnCompletion": false,
+  "sortingTableLayer": "Animated",
+  "pixelsPerUnit": 32,
+  "pivot": {
+    "x": 0.5,
+    "y": 0.5
+  },
+  "rootMotion": false,
+  "sourcePixelsResized": false,
+  "frames": [
+    "Assets/Resources/Art/Effects/Mokgui/ExhaustedAura/Sprites/frame_000.png",
+    "Assets/Resources/Art/Effects/Mokgui/ExhaustedAura/Sprites/frame_001.png",
+    "Assets/Resources/Art/Effects/Mokgui/ExhaustedAura/Sprites/frame_002.png",
+    "Assets/Resources/Art/Effects/Mokgui/ExhaustedAura/Sprites/frame_003.png",
+    "Assets/Resources/Art/Effects/Mokgui/ExhaustedAura/Sprites/frame_004.png",
+    "Assets/Resources/Art/Effects/Mokgui/ExhaustedAura/Sprites/frame_005.png",
+    "Assets/Resources/Art/Effects/Mokgui/ExhaustedAura/Sprites/frame_006.png",
+    "Assets/Resources/Art/Effects/Mokgui/ExhaustedAura/Sprites/frame_007.png"
+  ],
+  "baseSprite": "Assets/Resources/Art/Effects/Mokgui/ExhaustedAura/Sprites/Base.png",
+  "sheet": "Assets/Resources/Art/Effects/Mokgui/ExhaustedAura/Sheets/Mokgui_ExhaustedAura.png",
+  "clip": "Assets/Resources/Art/Effects/Mokgui/ExhaustedAura/Animations/Mokgui_ExhaustedAura.anim",
+  "controller": "Assets/Resources/Art/Effects/Mokgui/ExhaustedAura/Mokgui_ExhaustedAura.controller",
+  "prefab": "Assets/Resources/Prefabs/Effect/Mokgui/Mokgui_ExhaustedAura.prefab",
+  "resourcePath": "Prefabs/Effect/Mokgui/Mokgui_ExhaustedAura",
+  "lifetimePolicy": "One-shot clears its sprite after the full final frame; owner releases/pools the instance. Loop owner controls stop/release.",
+  "archiveSha256": "7282cc4c7b55a8fc66f09fc8351059e16fe33ce6aa4b4bb0de59513f82a3852d",
+  "sourceFiles": [
+    {
+      "path": "Assets/Resources/Art/Effects/Mokgui/ExhaustedAura/Sprites/frame_000.png",
+      "archivePath": "animations/Ash-gray_wisps_droop_downward_and_pale_cyan_sparks/unknown/frame_000.png",
+      "sha256": "584964074606d93982c1d47a34da3a03665ec0c610776ddf5cd13bbd50e59fa1",
+      "width": 64,
+      "height": 64
+    },
+    {
+      "path": "Assets/Resources/Art/Effects/Mokgui/ExhaustedAura/Sprites/frame_001.png",
+      "archivePath": "animations/Ash-gray_wisps_droop_downward_and_pale_cyan_sparks/unknown/frame_001.png",
+      "sha256": "af66bded0077637a8ccd643fc179259d3c8acbb8838358fc343fe9f9c27815f1",
+      "width": 64,
+      "height": 64
+    },
+    {
+      "path": "Assets/Resources/Art/Effects/Mokgui/ExhaustedAura/Sprites/frame_002.png",
+      "archivePath": "animations/Ash-gray_wisps_droop_downward_and_pale_cyan_sparks/unknown/frame_002.png",
+      "sha256": "19cc7217bdc10a99fa0c9845e7e2ad2d8d1f281dd44864406f5525d8d0e9116b",
+      "width": 64,
+      "height": 64
+    },
+    {
+      "path": "Assets/Resources/Art/Effects/Mokgui/ExhaustedAura/Sprites/frame_003.png",
+      "archivePath": "animations/Ash-gray_wisps_droop_downward_and_pale_cyan_sparks/unknown/frame_003.png",
+      "sha256": "434bfaa3d8f7ed0c0ecd284c8549360553162a09fa2c125c040db9ff3c5a42c0",
+      "width": 64,
+      "height": 64
+    },
+    {
+      "path": "Assets/Resources/Art/Effects/Mokgui/ExhaustedAura/Sprites/frame_004.png",
+      "archivePath": "animations/Ash-gray_wisps_droop_downward_and_pale_cyan_sparks/unknown/frame_004.png",
+      "sha256": "5fd64c207cf3e89d77211bbe30553c19f82c2c7290a411a6e5c8c89dae817585",
+      "width": 64,
+      "height": 64
+    },
+    {
+      "path": "Assets/Resources/Art/Effects/Mokgui/ExhaustedAura/Sprites/frame_005.png",
+      "archivePath": "animations/Ash-gray_wisps_droop_downward_and_pale_cyan_sparks/unknown/frame_005.png",
+      "sha256": "12fbded6c08b3547b000b74f5b335df6a255f61d0a0781a353eeea5f7c4c3e28",
+      "width": 64,
+      "height": 64
+    },
+    {
+      "path": "Assets/Resources/Art/Effects/Mokgui/ExhaustedAura/Sprites/frame_006.png",
+      "archivePath": "animations/Ash-gray_wisps_droop_downward_and_pale_cyan_sparks/unknown/frame_006.png",
+      "sha256": "e710e0269a9645326d3678d41cedacf8dd9a49936fde871e38993d89e9a7d469",
+      "width": 64,
+      "height": 64
+    },
+    {
+      "path": "Assets/Resources/Art/Effects/Mokgui/ExhaustedAura/Sprites/frame_007.png",
+      "archivePath": "animations/Ash-gray_wisps_droop_downward_and_pale_cyan_sparks/unknown/frame_007.png",
+      "sha256": "98a872506f172bd235c05d309bedd5df450436596593de0175844529a55ad700",
+      "width": 64,
+      "height": 64
+    }
+  ],
+  "visualApproval": "Existing assets imported; technical validation is not visual approval."
+}

@@ -1,0 +1,99 @@
+{
+  "key": "TankSlamImpact",
+  "scope": "Mokgui",
+  "name": "Mokgui_TankSlamImpact",
+  "objectId": "4d7525f2-095e-474f-8c4e-b844d85aff57",
+  "root": "Assets/Resources/Art/Effects/Mokgui/TankSlamImpact",
+  "sourceAnimation": "Mokgui_TankSlamImpact_8f",
+  "animationGroupId": "be8a24df-adea-4599-b2fe-276ecdf5fda4",
+  "frameCount": 8,
+  "framesPerSecond": 10,
+  "loop": false,
+  "timingSource": "Presentation defaults; PixelLab export has no frame durations. Not combat/cast timing.",
+  "clearSpriteOnCompletion": true,
+  "sortingTableLayer": "Animated",
+  "pixelsPerUnit": 32,
+  "pivot": {
+    "x": 0.5,
+    "y": 0.5
+  },
+  "rootMotion": false,
+  "sourcePixelsResized": false,
+  "frames": [
+    "Assets/Resources/Art/Effects/Mokgui/TankSlamImpact/Sprites/frame_000.png",
+    "Assets/Resources/Art/Effects/Mokgui/TankSlamImpact/Sprites/frame_001.png",
+    "Assets/Resources/Art/Effects/Mokgui/TankSlamImpact/Sprites/frame_002.png",
+    "Assets/Resources/Art/Effects/Mokgui/TankSlamImpact/Sprites/frame_003.png",
+    "Assets/Resources/Art/Effects/Mokgui/TankSlamImpact/Sprites/frame_004.png",
+    "Assets/Resources/Art/Effects/Mokgui/TankSlamImpact/Sprites/frame_005.png",
+    "Assets/Resources/Art/Effects/Mokgui/TankSlamImpact/Sprites/frame_006.png",
+    "Assets/Resources/Art/Effects/Mokgui/TankSlamImpact/Sprites/frame_007.png"
+  ],
+  "baseSprite": "Assets/Resources/Art/Effects/Mokgui/TankSlamImpact/Sprites/Base.png",
+  "sheet": "Assets/Resources/Art/Effects/Mokgui/TankSlamImpact/Sheets/Mokgui_TankSlamImpact.png",
+  "clip": "Assets/Resources/Art/Effects/Mokgui/TankSlamImpact/Animations/Mokgui_TankSlamImpact.anim",
+  "controller": "Assets/Resources/Art/Effects/Mokgui/TankSlamImpact/Mokgui_TankSlamImpact.controller",
+  "prefab": "Assets/Resources/Prefabs/Effect/Mokgui/Mokgui_TankSlamImpact.prefab",
+  "resourcePath": "Prefabs/Effect/Mokgui/Mokgui_TankSlamImpact",
+  "lifetimePolicy": "One-shot clears its sprite after the full final frame; owner releases/pools the instance. Loop owner controls stop/release.",
+  "archiveSha256": "a1b3b3f69adcfd364db0a673514e3d60d80f8e0ef7a2b903d5a1037d30b5677d",
+  "sourceFiles": [
+    {
+      "path": "Assets/Resources/Art/Effects/Mokgui/TankSlamImpact/Sprites/frame_000.png",
+      "archivePath": "animations/A_single_heavy_impact_burst_bark_splinters_and_wo/unknown/frame_000.png",
+      "sha256": "3f0bef2d4ab20f61c07be63a34f61757bacfd2427f2acc81700fc3dc9ce798b9",
+      "width": 64,
+      "height": 64
+    },
+    {
+      "path": "Assets/Resources/Art/Effects/Mokgui/TankSlamImpact/Sprites/frame_001.png",
+      "archivePath": "animations/A_single_heavy_impact_burst_bark_splinters_and_wo/unknown/frame_001.png",
+      "sha256": "49ee1dffa9db3d690ca48f0e4184bbfd34016f6accb722c6a6d7912fa6656d4d",
+      "width": 64,
+      "height": 64
+    },
+    {
+      "path": "Assets/Resources/Art/Effects/Mokgui/TankSlamImpact/Sprites/frame_002.png",
+      "archivePath": "animations/A_single_heavy_impact_burst_bark_splinters_and_wo/unknown/frame_002.png",
+      "sha256": "ad95137562cfe9a59d7e0b55f12d49914a0f8abd07dadb8f310bed7ed3efd89b",
+      "width": 64,
+      "height": 64
+    },
+    {
+      "path": "Assets/Resources/Art/Effects/Mokgui/TankSlamImpact/Sprites/frame_003.png",
+      "archivePath": "animations/A_single_heavy_impact_burst_bark_splinters_and_wo/unknown/frame_003.png",
+      "sha256": "804f52acc5fbe1b6d2089e4d96307b17612ef7c97fa163bc9d53ed47e085fdb3",
+      "width": 64,
+      "height": 64
+    },
+    {
+      "path": "Assets/Resources/Art/Effects/Mokgui/TankSlamImpact/Sprites/frame_004.png",
+      "archivePath": "animations/A_single_heavy_impact_burst_bark_splinters_and_wo/unknown/frame_004.png",
+      "sha256": "65c2c57e947307bc2f3250619735f7e71449bf4304b497e6d4c5ffdb07dabfbb",
+      "width": 64,
+      "height": 64
+    },
+    {
+      "path": "Assets/Resources/Art/Effects/Mokgui/TankSlamImpact/Sprites/frame_005.png",
+      "archivePath": "animations/A_single_heavy_impact_burst_bark_splinters_and_wo/unknown/frame_005.png",
+      "sha256": "ff34a0c4c2aa6a3a589e647b895142017827c24569acad2f953d27e7f9bdbd05",
+      "width": 64,
+      "height": 64
+    },
+    {
+      "path": "Assets/Resources/Art/Effects/Mokgui/TankSlamImpact/Sprites/frame_006.png",
+      "archivePath": "animations/A_single_heavy_impact_burst_bark_splinters_and_wo/unknown/frame_006.png",
+      "sha256": "6e2b237656b65a7b0481381be66390cb24c6dd0e03bf5d7101c12c1e2b8e8a4d",
+      "width": 64,
+      "height": 64
+    },
+    {
+      "path": "Assets/Resources/Art/Effects/Mokgui/TankSlamImpact/Sprites/frame_007.png",
+      "archivePath": "animations/A_single_heavy_impact_burst_bark_splinters_and_wo/unknown/frame_007.png",
+      "sha256": "a2d752ba6408d53c01c741e5b925bb08cd5e36e82d05621d52f0110280af4029",
+      "width": 64,
+      "height": 64
+    }
+  ],
+  "visualApproval": "Existing assets imported; technical validation is not visual approval."
+}

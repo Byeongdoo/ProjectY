@@ -1,0 +1,99 @@
+{
+  "key": "RootEruption",
+  "scope": "Mokgui",
+  "name": "Mokgui_RootEruption",
+  "objectId": "cac25052-486a-4062-a3ce-bd887e5bf3d0",
+  "root": "Assets/Resources/Art/Effects/Mokgui/RootEruption",
+  "sourceAnimation": "Mokgui_RootEruption_8f",
+  "animationGroupId": "8c5c35bb-5b15-408c-bfa3-a68ba1a1f3da",
+  "frameCount": 8,
+  "framesPerSecond": 10,
+  "loop": false,
+  "timingSource": "Presentation defaults; PixelLab export has no frame durations. Not combat/cast timing.",
+  "clearSpriteOnCompletion": true,
+  "sortingTableLayer": "Animated",
+  "pixelsPerUnit": 32,
+  "pivot": {
+    "x": 0.5,
+    "y": 0.5
+  },
+  "rootMotion": false,
+  "sourcePixelsResized": false,
+  "frames": [
+    "Assets/Resources/Art/Effects/Mokgui/RootEruption/Sprites/frame_000.png",
+    "Assets/Resources/Art/Effects/Mokgui/RootEruption/Sprites/frame_001.png",
+    "Assets/Resources/Art/Effects/Mokgui/RootEruption/Sprites/frame_002.png",
+    "Assets/Resources/Art/Effects/Mokgui/RootEruption/Sprites/frame_003.png",
+    "Assets/Resources/Art/Effects/Mokgui/RootEruption/Sprites/frame_004.png",
+    "Assets/Resources/Art/Effects/Mokgui/RootEruption/Sprites/frame_005.png",
+    "Assets/Resources/Art/Effects/Mokgui/RootEruption/Sprites/frame_006.png",
+    "Assets/Resources/Art/Effects/Mokgui/RootEruption/Sprites/frame_007.png"
+  ],
+  "baseSprite": "Assets/Resources/Art/Effects/Mokgui/RootEruption/Sprites/Base.png",
+  "sheet": "Assets/Resources/Art/Effects/Mokgui/RootEruption/Sheets/Mokgui_RootEruption.png",
+  "clip": "Assets/Resources/Art/Effects/Mokgui/RootEruption/Animations/Mokgui_RootEruption.anim",
+  "controller": "Assets/Resources/Art/Effects/Mokgui/RootEruption/Mokgui_RootEruption.controller",
+  "prefab": "Assets/Resources/Prefabs/Effect/Mokgui/Mokgui_RootEruption.prefab",
+  "resourcePath": "Prefabs/Effect/Mokgui/Mokgui_RootEruption",
+  "lifetimePolicy": "One-shot clears its sprite after the full final frame; owner releases/pools the instance. Loop owner controls stop/release.",
+  "archiveSha256": "19df6609b90966d17221bff258f6948f190b6b053d763fb6013b6570bc78f6dc",
+  "sourceFiles": [
+    {
+      "path": "Assets/Resources/Art/Effects/Mokgui/RootEruption/Sprites/frame_000.png",
+      "archivePath": "animations/Wooden_root_spikes_forcefully_erupt_upward_in_plac/unknown/frame_000.png",
+      "sha256": "4b0a54cf76c34d77dc1dc901bf81e63c857c8760c2dd98106feb456fda954e07",
+      "width": 64,
+      "height": 64
+    },
+    {
+      "path": "Assets/Resources/Art/Effects/Mokgui/RootEruption/Sprites/frame_001.png",
+      "archivePath": "animations/Wooden_root_spikes_forcefully_erupt_upward_in_plac/unknown/frame_001.png",
+      "sha256": "9b1633607dd63017f2e1393b6ab6f79a357cfc35504d21acc4619cc2953a8b28",
+      "width": 64,
+      "height": 64
+    },
+    {
+      "path": "Assets/Resources/Art/Effects/Mokgui/RootEruption/Sprites/frame_002.png",
+      "archivePath": "animations/Wooden_root_spikes_forcefully_erupt_upward_in_plac/unknown/frame_002.png",
+      "sha256": "6ed32c11427bca48cea78b6ac9c00ea83d937b58ff18190997d67c81d44ec875",
+      "width": 64,
+      "height": 64
+    },
+    {
+      "path": "Assets/Resources/Art/Effects/Mokgui/RootEruption/Sprites/frame_003.png",
+      "archivePath": "animations/Wooden_root_spikes_forcefully_erupt_upward_in_plac/unknown/frame_003.png",
+      "sha256": "7998cbbc0ef9be835740fdfd9275afd6039a854e208be75fc0ffc99f9c82ee8c",
+      "width": 64,
+      "height": 64
+    },
+    {
+      "path": "Assets/Resources/Art/Effects/Mokgui/RootEruption/Sprites/frame_004.png",
+      "archivePath": "animations/Wooden_root_spikes_forcefully_erupt_upward_in_plac/unknown/frame_004.png",
+      "sha256": "5fcea18676d15135c20061daaec20c61476cedccfad64f71d4e8177664163d5d",
+      "width": 64,
+      "height": 64
+    },
+    {
+      "path": "Assets/Resources/Art/Effects/Mokgui/RootEruption/Sprites/frame_005.png",
+      "archivePath": "animations/Wooden_root_spikes_forcefully_erupt_upward_in_plac/unknown/frame_005.png",
+      "sha256": "af794d00924ee2aaea13d8ce2b923532c21b41816c177931b0e449cd4b1b03ce",
+      "width": 64,
+      "height": 64
+    },
+    {
+      "path": "Assets/Resources/Art/Effects/Mokgui/RootEruption/Sprites/frame_006.png",
+      "archivePath": "animations/Wooden_root_spikes_forcefully_erupt_upward_in_plac/unknown/frame_006.png",
+      "sha256": "c0d75f31fca0657d09ce7f5dbe570dc63dbd0d696fe18e763f771e2809f9ddd6",
+      "width": 64,
+      "height": 64
+    },
+    {
+      "path": "Assets/Resources/Art/Effects/Mokgui/RootEruption/Sprites/frame_007.png",
+      "archivePath": "animations/Wooden_root_spikes_forcefully_erupt_upward_in_plac/unknown/frame_007.png",
+      "sha256": "a1fd74bbf2454ea800c85d011326c895896ae61a538e07275485fe6aa7771ae7",
+      "width": 64,
+      "height": 64
+    }
+  ],
+  "visualApproval": "Existing assets imported; technical validation is not visual approval."
+}

@@ -1,0 +1,611 @@
+{
+  "effectCount": 10,
+  "frameCount": 76,
+  "sourcePixelsResized": false,
+  "effects": [
+    {
+      "name": "Mokgui_WarningGrid",
+      "frameCount": 8,
+      "pngByteEqualityVerified": true,
+      "sourceFiles": [
+        {
+          "path": "Assets/Resources/Art/Effects/Mokgui/WarningGrid/Sprites/frame_000.png",
+          "archivePath": "animations/The_red_square_border_and_diagonal_red_hatch_marks/unknown/frame_000.png",
+          "sha256": "290e8975f9b2801ce2b507ec1ee2d50dfa993024d2ee6a8911a6c5284aee90c7",
+          "width": 32,
+          "height": 32
+        },
+        {
+          "path": "Assets/Resources/Art/Effects/Mokgui/WarningGrid/Sprites/frame_001.png",
+          "archivePath": "animations/The_red_square_border_and_diagonal_red_hatch_marks/unknown/frame_001.png",
+          "sha256": "443c770317e29e7d739b6ab9029dee43fad0566378eb600c214c49926b236058",
+          "width": 32,
+          "height": 32
+        },
+        {
+          "path": "Assets/Resources/Art/Effects/Mokgui/WarningGrid/Sprites/frame_002.png",
+          "archivePath": "animations/The_red_square_border_and_diagonal_red_hatch_marks/unknown/frame_002.png",
+          "sha256": "8e2f984c1210f173a005df02c626a8d3ad9dc61d5d7620f7ccd8e61f59a916a0",
+          "width": 32,
+          "height": 32
+        },
+        {
+          "path": "Assets/Resources/Art/Effects/Mokgui/WarningGrid/Sprites/frame_003.png",
+          "archivePath": "animations/The_red_square_border_and_diagonal_red_hatch_marks/unknown/frame_003.png",
+          "sha256": "5f0c4f5d3bee613fc454cacede013d01509d61bd03ad6698bc391f26e2c57b17",
+          "width": 32,
+          "height": 32
+        },
+        {
+          "path": "Assets/Resources/Art/Effects/Mokgui/WarningGrid/Sprites/frame_004.png",
+          "archivePath": "animations/The_red_square_border_and_diagonal_red_hatch_marks/unknown/frame_004.png",
+          "sha256": "5f0c4f5d3bee613fc454cacede013d01509d61bd03ad6698bc391f26e2c57b17",
+          "width": 32,
+          "height": 32
+        },
+        {
+          "path": "Assets/Resources/Art/Effects/Mokgui/WarningGrid/Sprites/frame_005.png",
+          "archivePath": "animations/The_red_square_border_and_diagonal_red_hatch_marks/unknown/frame_005.png",
+          "sha256": "8e2f984c1210f173a005df02c626a8d3ad9dc61d5d7620f7ccd8e61f59a916a0",
+          "width": 32,
+          "height": 32
+        },
+        {
+          "path": "Assets/Resources/Art/Effects/Mokgui/WarningGrid/Sprites/frame_006.png",
+          "archivePath": "animations/The_red_square_border_and_diagonal_red_hatch_marks/unknown/frame_006.png",
+          "sha256": "443c770317e29e7d739b6ab9029dee43fad0566378eb600c214c49926b236058",
+          "width": 32,
+          "height": 32
+        },
+        {
+          "path": "Assets/Resources/Art/Effects/Mokgui/WarningGrid/Sprites/frame_007.png",
+          "archivePath": "animations/The_red_square_border_and_diagonal_red_hatch_marks/unknown/frame_007.png",
+          "sha256": "290e8975f9b2801ce2b507ec1ee2d50dfa993024d2ee6a8911a6c5284aee90c7",
+          "width": 32,
+          "height": 32
+        }
+      ]
+    },
+    {
+      "name": "Mokgui_Phase2Aura",
+      "frameCount": 8,
+      "pngByteEqualityVerified": true,
+      "sourceFiles": [
+        {
+          "path": "Assets/Resources/Art/Effects/Mokgui/Phase2Aura/Sprites/frame_000.png",
+          "archivePath": "animations/Thin_crimson_ritual_threads_pulse_with_restrained/unknown/frame_000.png",
+          "sha256": "16ece36f6a63cc23b6a28748a9c4b8ef0c5ea3a3a2fec2f36371de75a01e4644",
+          "width": 128,
+          "height": 128
+        },
+        {
+          "path": "Assets/Resources/Art/Effects/Mokgui/Phase2Aura/Sprites/frame_001.png",
+          "archivePath": "animations/Thin_crimson_ritual_threads_pulse_with_restrained/unknown/frame_001.png",
+          "sha256": "6e7cad3dec3728afa6cddb395a847aac3c0083858f231f66b1bb1c8bf5ef8562",
+          "width": 128,
+          "height": 128
+        },
+        {
+          "path": "Assets/Resources/Art/Effects/Mokgui/Phase2Aura/Sprites/frame_002.png",
+          "archivePath": "animations/Thin_crimson_ritual_threads_pulse_with_restrained/unknown/frame_002.png",
+          "sha256": "1e4876e832bc3d33b74c0ff55207769739f1090bacaffcc2cf9ddc182dae366d",
+          "width": 128,
+          "height": 128
+        },
+        {
+          "path": "Assets/Resources/Art/Effects/Mokgui/Phase2Aura/Sprites/frame_003.png",
+          "archivePath": "animations/Thin_crimson_ritual_threads_pulse_with_restrained/unknown/frame_003.png",
+          "sha256": "1a7f6e79afa6ee33121842618201991cbe79f9d4e76096fd507016e2e496c648",
+          "width": 128,
+          "height": 128
+        },
+        {
+          "path": "Assets/Resources/Art/Effects/Mokgui/Phase2Aura/Sprites/frame_004.png",
+          "archivePath": "animations/Thin_crimson_ritual_threads_pulse_with_restrained/unknown/frame_004.png",
+          "sha256": "1d2fe52fccbb7dff98ee715dd4db425a0a8915dbbc3315c09955be4d2ceef32d",
+          "width": 128,
+          "height": 128
+        },
+        {
+          "path": "Assets/Resources/Art/Effects/Mokgui/Phase2Aura/Sprites/frame_005.png",
+          "archivePath": "animations/Thin_crimson_ritual_threads_pulse_with_restrained/unknown/frame_005.png",
+          "sha256": "7da31bdaf556a02d43a979e6bb71e39f2a1e3663b06f7f825aebf7287918e00e",
+          "width": 128,
+          "height": 128
+        },
+        {
+          "path": "Assets/Resources/Art/Effects/Mokgui/Phase2Aura/Sprites/frame_006.png",
+          "archivePath": "animations/Thin_crimson_ritual_threads_pulse_with_restrained/unknown/frame_006.png",
+          "sha256": "df2e4bbbcd4ffb57a7bd13b0b03dbc8345299516f3086c80c733948484f83e35",
+          "width": 128,
+          "height": 128
+        },
+        {
+          "path": "Assets/Resources/Art/Effects/Mokgui/Phase2Aura/Sprites/frame_007.png",
+          "archivePath": "animations/Thin_crimson_ritual_threads_pulse_with_restrained/unknown/frame_007.png",
+          "sha256": "f028db3a56aa7715e762f70927c64e293148c90d3586d90d8b4e820c71e5e544",
+          "width": 128,
+          "height": 128
+        }
+      ]
+    },
+    {
+      "name": "Mokgui_ExhaustedAura",
+      "frameCount": 8,
+      "pngByteEqualityVerified": true,
+      "sourceFiles": [
+        {
+          "path": "Assets/Resources/Art/Effects/Mokgui/ExhaustedAura/Sprites/frame_000.png",
+          "archivePath": "animations/Ash-gray_wisps_droop_downward_and_pale_cyan_sparks/unknown/frame_000.png",
+          "sha256": "584964074606d93982c1d47a34da3a03665ec0c610776ddf5cd13bbd50e59fa1",
+          "width": 64,
+          "height": 64
+        },
+        {
+          "path": "Assets/Resources/Art/Effects/Mokgui/ExhaustedAura/Sprites/frame_001.png",
+          "archivePath": "animations/Ash-gray_wisps_droop_downward_and_pale_cyan_sparks/unknown/frame_001.png",
+          "sha256": "af66bded0077637a8ccd643fc179259d3c8acbb8838358fc343fe9f9c27815f1",
+          "width": 64,
+          "height": 64
+        },
+        {
+          "path": "Assets/Resources/Art/Effects/Mokgui/ExhaustedAura/Sprites/frame_002.png",
+          "archivePath": "animations/Ash-gray_wisps_droop_downward_and_pale_cyan_sparks/unknown/frame_002.png",
+          "sha256": "19cc7217bdc10a99fa0c9845e7e2ad2d8d1f281dd44864406f5525d8d0e9116b",
+          "width": 64,
+          "height": 64
+        },
+        {
+          "path": "Assets/Resources/Art/Effects/Mokgui/ExhaustedAura/Sprites/frame_003.png",
+          "archivePath": "animations/Ash-gray_wisps_droop_downward_and_pale_cyan_sparks/unknown/frame_003.png",
+          "sha256": "434bfaa3d8f7ed0c0ecd284c8549360553162a09fa2c125c040db9ff3c5a42c0",
+          "width": 64,
+          "height": 64
+        },
+        {
+          "path": "Assets/Resources/Art/Effects/Mokgui/ExhaustedAura/Sprites/frame_004.png",
+          "archivePath": "animations/Ash-gray_wisps_droop_downward_and_pale_cyan_sparks/unknown/frame_004.png",
+          "sha256": "5fd64c207cf3e89d77211bbe30553c19f82c2c7290a411a6e5c8c89dae817585",
+          "width": 64,
+          "height": 64
+        },
+        {
+          "path": "Assets/Resources/Art/Effects/Mokgui/ExhaustedAura/Sprites/frame_005.png",
+          "archivePath": "animations/Ash-gray_wisps_droop_downward_and_pale_cyan_sparks/unknown/frame_005.png",
+          "sha256": "12fbded6c08b3547b000b74f5b335df6a255f61d0a0781a353eeea5f7c4c3e28",
+          "width": 64,
+          "height": 64
+        },
+        {
+          "path": "Assets/Resources/Art/Effects/Mokgui/ExhaustedAura/Sprites/frame_006.png",
+          "archivePath": "animations/Ash-gray_wisps_droop_downward_and_pale_cyan_sparks/unknown/frame_006.png",
+          "sha256": "e710e0269a9645326d3678d41cedacf8dd9a49936fde871e38993d89e9a7d469",
+          "width": 64,
+          "height": 64
+        },
+        {
+          "path": "Assets/Resources/Art/Effects/Mokgui/ExhaustedAura/Sprites/frame_007.png",
+          "archivePath": "animations/Ash-gray_wisps_droop_downward_and_pale_cyan_sparks/unknown/frame_007.png",
+          "sha256": "98a872506f172bd235c05d309bedd5df450436596593de0175844529a55ad700",
+          "width": 64,
+          "height": 64
+        }
+      ]
+    },
+    {
+      "name": "Mokgui_MountainWailRing",
+      "frameCount": 8,
+      "pngByteEqualityVerified": true,
+      "sourceFiles": [
+        {
+          "path": "Assets/Resources/Art/Effects/Mokgui/MountainWailRing/Sprites/frame_000.png",
+          "archivePath": "animations/Concentric_tree-ring_shockwave_arcs_expand_outward/unknown/frame_000.png",
+          "sha256": "5c04a94bffbbab5056c5295d52f194e4a8b96eb84e56704b57667cbbaf789f7a",
+          "width": 128,
+          "height": 128
+        },
+        {
+          "path": "Assets/Resources/Art/Effects/Mokgui/MountainWailRing/Sprites/frame_001.png",
+          "archivePath": "animations/Concentric_tree-ring_shockwave_arcs_expand_outward/unknown/frame_001.png",
+          "sha256": "38cec8be2ec6e646cd2eb2384352c9ccc51f68caf04d81dd1d64a9cf5b30f183",
+          "width": 128,
+          "height": 128
+        },
+        {
+          "path": "Assets/Resources/Art/Effects/Mokgui/MountainWailRing/Sprites/frame_002.png",
+          "archivePath": "animations/Concentric_tree-ring_shockwave_arcs_expand_outward/unknown/frame_002.png",
+          "sha256": "d0eb83a771abe07359db3fe53347650efe66cdfdd2695e3c4167ff941a13e516",
+          "width": 128,
+          "height": 128
+        },
+        {
+          "path": "Assets/Resources/Art/Effects/Mokgui/MountainWailRing/Sprites/frame_003.png",
+          "archivePath": "animations/Concentric_tree-ring_shockwave_arcs_expand_outward/unknown/frame_003.png",
+          "sha256": "4923cc7aac2cc4f3a5962cd9db67ce17a710198aabbf004a61dc394d02c4a68f",
+          "width": 128,
+          "height": 128
+        },
+        {
+          "path": "Assets/Resources/Art/Effects/Mokgui/MountainWailRing/Sprites/frame_004.png",
+          "archivePath": "animations/Concentric_tree-ring_shockwave_arcs_expand_outward/unknown/frame_004.png",
+          "sha256": "8d09f85d254fb59f9deb9fe3295e1a4f4311814ebeaeac5028184ff9a4eb45bd",
+          "width": 128,
+          "height": 128
+        },
+        {
+          "path": "Assets/Resources/Art/Effects/Mokgui/MountainWailRing/Sprites/frame_005.png",
+          "archivePath": "animations/Concentric_tree-ring_shockwave_arcs_expand_outward/unknown/frame_005.png",
+          "sha256": "2cae2a13834414a2c045d9107cdc28ce60319cabe47d0a967a7a155f26255424",
+          "width": 128,
+          "height": 128
+        },
+        {
+          "path": "Assets/Resources/Art/Effects/Mokgui/MountainWailRing/Sprites/frame_006.png",
+          "archivePath": "animations/Concentric_tree-ring_shockwave_arcs_expand_outward/unknown/frame_006.png",
+          "sha256": "8a67563a5fdcabaee1efa6d516c9419854e5b473cda39100a4c3e2bf1b0a8eef",
+          "width": 128,
+          "height": 128
+        },
+        {
+          "path": "Assets/Resources/Art/Effects/Mokgui/MountainWailRing/Sprites/frame_007.png",
+          "archivePath": "animations/Concentric_tree-ring_shockwave_arcs_expand_outward/unknown/frame_007.png",
+          "sha256": "3a711037bc051dd06e7717976a4171ee34ab9db6d9a36b19a914782d98c77e15",
+          "width": 128,
+          "height": 128
+        }
+      ]
+    },
+    {
+      "name": "Mokgui_ThreadBinding",
+      "frameCount": 8,
+      "pngByteEqualityVerified": true,
+      "sourceFiles": [
+        {
+          "path": "Assets/Resources/Art/Effects/Mokgui/ThreadBinding/Sprites/frame_000.png",
+          "archivePath": "animations/Crimson_thread_coils_tighten_and_gently_pulse_arou/unknown/frame_000.png",
+          "sha256": "afeb39854a8d0759bbb946a40c13e37a086ff0b6ee523026f6d77f754e821166",
+          "width": 64,
+          "height": 64
+        },
+        {
+          "path": "Assets/Resources/Art/Effects/Mokgui/ThreadBinding/Sprites/frame_001.png",
+          "archivePath": "animations/Crimson_thread_coils_tighten_and_gently_pulse_arou/unknown/frame_001.png",
+          "sha256": "ca23e36cffd4071683c45585d2af077ade754161c1fd2ad5081a729791e55c5f",
+          "width": 64,
+          "height": 64
+        },
+        {
+          "path": "Assets/Resources/Art/Effects/Mokgui/ThreadBinding/Sprites/frame_002.png",
+          "archivePath": "animations/Crimson_thread_coils_tighten_and_gently_pulse_arou/unknown/frame_002.png",
+          "sha256": "b26f45a758c4f5373ac4f74e3547807b3ea4f507137245b04a7adf16a849af1b",
+          "width": 64,
+          "height": 64
+        },
+        {
+          "path": "Assets/Resources/Art/Effects/Mokgui/ThreadBinding/Sprites/frame_003.png",
+          "archivePath": "animations/Crimson_thread_coils_tighten_and_gently_pulse_arou/unknown/frame_003.png",
+          "sha256": "c62a4570e5d472c0de5f950ab6f945a8e992e578ac95d4bf1de6cd7ee3577250",
+          "width": 64,
+          "height": 64
+        },
+        {
+          "path": "Assets/Resources/Art/Effects/Mokgui/ThreadBinding/Sprites/frame_004.png",
+          "archivePath": "animations/Crimson_thread_coils_tighten_and_gently_pulse_arou/unknown/frame_004.png",
+          "sha256": "26aa612b100acd92d9655f49b3aeb032d701437338b8f330078f9cb7955cf318",
+          "width": 64,
+          "height": 64
+        },
+        {
+          "path": "Assets/Resources/Art/Effects/Mokgui/ThreadBinding/Sprites/frame_005.png",
+          "archivePath": "animations/Crimson_thread_coils_tighten_and_gently_pulse_arou/unknown/frame_005.png",
+          "sha256": "3dd608217d3afc8d2769888a1067e13d7679f03b87533ee94f9f3b0bf9c356d3",
+          "width": 64,
+          "height": 64
+        },
+        {
+          "path": "Assets/Resources/Art/Effects/Mokgui/ThreadBinding/Sprites/frame_006.png",
+          "archivePath": "animations/Crimson_thread_coils_tighten_and_gently_pulse_arou/unknown/frame_006.png",
+          "sha256": "51a09326abc0c8a389a1930369e6566760b0ee56a472c8221d958768ea105dfe",
+          "width": 64,
+          "height": 64
+        },
+        {
+          "path": "Assets/Resources/Art/Effects/Mokgui/ThreadBinding/Sprites/frame_007.png",
+          "archivePath": "animations/Crimson_thread_coils_tighten_and_gently_pulse_arou/unknown/frame_007.png",
+          "sha256": "2c7832afa27b84c68a2c1c1f267643948dc4d947368b1084f03327d5b445cc1a",
+          "width": 64,
+          "height": 64
+        }
+      ]
+    },
+    {
+      "name": "Mokgui_RootEruption",
+      "frameCount": 8,
+      "pngByteEqualityVerified": true,
+      "sourceFiles": [
+        {
+          "path": "Assets/Resources/Art/Effects/Mokgui/RootEruption/Sprites/frame_000.png",
+          "archivePath": "animations/Wooden_root_spikes_forcefully_erupt_upward_in_plac/unknown/frame_000.png",
+          "sha256": "4b0a54cf76c34d77dc1dc901bf81e63c857c8760c2dd98106feb456fda954e07",
+          "width": 64,
+          "height": 64
+        },
+        {
+          "path": "Assets/Resources/Art/Effects/Mokgui/RootEruption/Sprites/frame_001.png",
+          "archivePath": "animations/Wooden_root_spikes_forcefully_erupt_upward_in_plac/unknown/frame_001.png",
+          "sha256": "9b1633607dd63017f2e1393b6ab6f79a357cfc35504d21acc4619cc2953a8b28",
+          "width": 64,
+          "height": 64
+        },
+        {
+          "path": "Assets/Resources/Art/Effects/Mokgui/RootEruption/Sprites/frame_002.png",
+          "archivePath": "animations/Wooden_root_spikes_forcefully_erupt_upward_in_plac/unknown/frame_002.png",
+          "sha256": "6ed32c11427bca48cea78b6ac9c00ea83d937b58ff18190997d67c81d44ec875",
+          "width": 64,
+          "height": 64
+        },
+        {
+          "path": "Assets/Resources/Art/Effects/Mokgui/RootEruption/Sprites/frame_003.png",
+          "archivePath": "animations/Wooden_root_spikes_forcefully_erupt_upward_in_plac/unknown/frame_003.png",
+          "sha256": "7998cbbc0ef9be835740fdfd9275afd6039a854e208be75fc0ffc99f9c82ee8c",
+          "width": 64,
+          "height": 64
+        },
+        {
+          "path": "Assets/Resources/Art/Effects/Mokgui/RootEruption/Sprites/frame_004.png",
+          "archivePath": "animations/Wooden_root_spikes_forcefully_erupt_upward_in_plac/unknown/frame_004.png",
+          "sha256": "5fcea18676d15135c20061daaec20c61476cedccfad64f71d4e8177664163d5d",
+          "width": 64,
+          "height": 64
+        },
+        {
+          "path": "Assets/Resources/Art/Effects/Mokgui/RootEruption/Sprites/frame_005.png",
+          "archivePath": "animations/Wooden_root_spikes_forcefully_erupt_upward_in_plac/unknown/frame_005.png",
+          "sha256": "af794d00924ee2aaea13d8ce2b923532c21b41816c177931b0e449cd4b1b03ce",
+          "width": 64,
+          "height": 64
+        },
+        {
+          "path": "Assets/Resources/Art/Effects/Mokgui/RootEruption/Sprites/frame_006.png",
+          "archivePath": "animations/Wooden_root_spikes_forcefully_erupt_upward_in_plac/unknown/frame_006.png",
+          "sha256": "c0d75f31fca0657d09ce7f5dbe570dc63dbd0d696fe18e763f771e2809f9ddd6",
+          "width": 64,
+          "height": 64
+        },
+        {
+          "path": "Assets/Resources/Art/Effects/Mokgui/RootEruption/Sprites/frame_007.png",
+          "archivePath": "animations/Wooden_root_spikes_forcefully_erupt_upward_in_plac/unknown/frame_007.png",
+          "sha256": "a1fd74bbf2454ea800c85d011326c895896ae61a538e07275485fe6aa7771ae7",
+          "width": 64,
+          "height": 64
+        }
+      ]
+    },
+    {
+      "name": "Mokgui_TankSlamImpact",
+      "frameCount": 8,
+      "pngByteEqualityVerified": true,
+      "sourceFiles": [
+        {
+          "path": "Assets/Resources/Art/Effects/Mokgui/TankSlamImpact/Sprites/frame_000.png",
+          "archivePath": "animations/A_single_heavy_impact_burst_bark_splinters_and_wo/unknown/frame_000.png",
+          "sha256": "3f0bef2d4ab20f61c07be63a34f61757bacfd2427f2acc81700fc3dc9ce798b9",
+          "width": 64,
+          "height": 64
+        },
+        {
+          "path": "Assets/Resources/Art/Effects/Mokgui/TankSlamImpact/Sprites/frame_001.png",
+          "archivePath": "animations/A_single_heavy_impact_burst_bark_splinters_and_wo/unknown/frame_001.png",
+          "sha256": "49ee1dffa9db3d690ca48f0e4184bbfd34016f6accb722c6a6d7912fa6656d4d",
+          "width": 64,
+          "height": 64
+        },
+        {
+          "path": "Assets/Resources/Art/Effects/Mokgui/TankSlamImpact/Sprites/frame_002.png",
+          "archivePath": "animations/A_single_heavy_impact_burst_bark_splinters_and_wo/unknown/frame_002.png",
+          "sha256": "ad95137562cfe9a59d7e0b55f12d49914a0f8abd07dadb8f310bed7ed3efd89b",
+          "width": 64,
+          "height": 64
+        },
+        {
+          "path": "Assets/Resources/Art/Effects/Mokgui/TankSlamImpact/Sprites/frame_003.png",
+          "archivePath": "animations/A_single_heavy_impact_burst_bark_splinters_and_wo/unknown/frame_003.png",
+          "sha256": "804f52acc5fbe1b6d2089e4d96307b17612ef7c97fa163bc9d53ed47e085fdb3",
+          "width": 64,
+          "height": 64
+        },
+        {
+          "path": "Assets/Resources/Art/Effects/Mokgui/TankSlamImpact/Sprites/frame_004.png",
+          "archivePath": "animations/A_single_heavy_impact_burst_bark_splinters_and_wo/unknown/frame_004.png",
+          "sha256": "65c2c57e947307bc2f3250619735f7e71449bf4304b497e6d4c5ffdb07dabfbb",
+          "width": 64,
+          "height": 64
+        },
+        {
+          "path": "Assets/Resources/Art/Effects/Mokgui/TankSlamImpact/Sprites/frame_005.png",
+          "archivePath": "animations/A_single_heavy_impact_burst_bark_splinters_and_wo/unknown/frame_005.png",
+          "sha256": "ff34a0c4c2aa6a3a589e647b895142017827c24569acad2f953d27e7f9bdbd05",
+          "width": 64,
+          "height": 64
+        },
+        {
+          "path": "Assets/Resources/Art/Effects/Mokgui/TankSlamImpact/Sprites/frame_006.png",
+          "archivePath": "animations/A_single_heavy_impact_burst_bark_splinters_and_wo/unknown/frame_006.png",
+          "sha256": "6e2b237656b65a7b0481381be66390cb24c6dd0e03bf5d7101c12c1e2b8e8a4d",
+          "width": 64,
+          "height": 64
+        },
+        {
+          "path": "Assets/Resources/Art/Effects/Mokgui/TankSlamImpact/Sprites/frame_007.png",
+          "archivePath": "animations/A_single_heavy_impact_burst_bark_splinters_and_wo/unknown/frame_007.png",
+          "sha256": "a2d752ba6408d53c01c741e5b925bb08cd5e36e82d05621d52f0110280af4029",
+          "width": 64,
+          "height": 64
+        }
+      ]
+    },
+    {
+      "name": "Sansindang_LowMist",
+      "frameCount": 8,
+      "pngByteEqualityVerified": true,
+      "sourceFiles": [
+        {
+          "path": "Assets/Resources/Art/Effects/Sansindang/LowMist/Sprites/frame_000.png",
+          "archivePath": "animations/Low_blue-gray_mist_wisps_gently_flow_sideways_cur/unknown/frame_000.png",
+          "sha256": "4ee2daafa75aba5a1b981340cffe7b503a316a80f1907e1b842ba4cbb914d36c",
+          "width": 128,
+          "height": 64
+        },
+        {
+          "path": "Assets/Resources/Art/Effects/Sansindang/LowMist/Sprites/frame_001.png",
+          "archivePath": "animations/Low_blue-gray_mist_wisps_gently_flow_sideways_cur/unknown/frame_001.png",
+          "sha256": "df7fa5e77a6ae5c1a35eeb1c5d1b930d5d35bfca6c5fc1017b49d08d9639967c",
+          "width": 128,
+          "height": 64
+        },
+        {
+          "path": "Assets/Resources/Art/Effects/Sansindang/LowMist/Sprites/frame_002.png",
+          "archivePath": "animations/Low_blue-gray_mist_wisps_gently_flow_sideways_cur/unknown/frame_002.png",
+          "sha256": "68ace7ac49935454eab27e04325e6021cdaca11a2bc4a78cd0387929ecd3e76c",
+          "width": 128,
+          "height": 64
+        },
+        {
+          "path": "Assets/Resources/Art/Effects/Sansindang/LowMist/Sprites/frame_003.png",
+          "archivePath": "animations/Low_blue-gray_mist_wisps_gently_flow_sideways_cur/unknown/frame_003.png",
+          "sha256": "80cf887938ea89aecd337aa5147f6ca4c628216f7b67845b87960a18abb00560",
+          "width": 128,
+          "height": 64
+        },
+        {
+          "path": "Assets/Resources/Art/Effects/Sansindang/LowMist/Sprites/frame_004.png",
+          "archivePath": "animations/Low_blue-gray_mist_wisps_gently_flow_sideways_cur/unknown/frame_004.png",
+          "sha256": "03167d1469e4729d84ae7d90f1f19c020840132fb73b2c1e31bea14977fd926f",
+          "width": 128,
+          "height": 64
+        },
+        {
+          "path": "Assets/Resources/Art/Effects/Sansindang/LowMist/Sprites/frame_005.png",
+          "archivePath": "animations/Low_blue-gray_mist_wisps_gently_flow_sideways_cur/unknown/frame_005.png",
+          "sha256": "bbe283d40baf937c762d2dc0573a98cf10d667cb609e405ceec3de33a4a3bf66",
+          "width": 128,
+          "height": 64
+        },
+        {
+          "path": "Assets/Resources/Art/Effects/Sansindang/LowMist/Sprites/frame_006.png",
+          "archivePath": "animations/Low_blue-gray_mist_wisps_gently_flow_sideways_cur/unknown/frame_006.png",
+          "sha256": "7742299ca0647abce0e8e413b91d98c6dd0cefef736a0e8af11cf2bf1cd2af81",
+          "width": 128,
+          "height": 64
+        },
+        {
+          "path": "Assets/Resources/Art/Effects/Sansindang/LowMist/Sprites/frame_007.png",
+          "archivePath": "animations/Low_blue-gray_mist_wisps_gently_flow_sideways_cur/unknown/frame_007.png",
+          "sha256": "c4f69730aa4293b2e01819331eaa952f1a4bf7f86164f24e792c23e68a83adb9",
+          "width": 128,
+          "height": 64
+        }
+      ]
+    },
+    {
+      "name": "Sansindang_SealPulse",
+      "frameCount": 6,
+      "pngByteEqualityVerified": true,
+      "sourceFiles": [
+        {
+          "path": "Assets/Resources/Art/Effects/Sansindang/SealPulse/Sprites/frame_000.png",
+          "archivePath": "animations/Faded_crimson-blue_geometric_ritual_seal_pulses_so/unknown/frame_000.png",
+          "sha256": "a682167d50c3c13f5f0651490009273499422df2237b19e0772cec1ae1c707e1",
+          "width": 64,
+          "height": 64
+        },
+        {
+          "path": "Assets/Resources/Art/Effects/Sansindang/SealPulse/Sprites/frame_001.png",
+          "archivePath": "animations/Faded_crimson-blue_geometric_ritual_seal_pulses_so/unknown/frame_001.png",
+          "sha256": "c21484b1c51f52dc36c7e27b2d8eab5355f060092528db51ec225e8caf1adc43",
+          "width": 64,
+          "height": 64
+        },
+        {
+          "path": "Assets/Resources/Art/Effects/Sansindang/SealPulse/Sprites/frame_002.png",
+          "archivePath": "animations/Faded_crimson-blue_geometric_ritual_seal_pulses_so/unknown/frame_002.png",
+          "sha256": "e68b3c0b6cb3d839fe13254408e2b26a89788f589c572fbae116738316d771db",
+          "width": 64,
+          "height": 64
+        },
+        {
+          "path": "Assets/Resources/Art/Effects/Sansindang/SealPulse/Sprites/frame_003.png",
+          "archivePath": "animations/Faded_crimson-blue_geometric_ritual_seal_pulses_so/unknown/frame_003.png",
+          "sha256": "eaf59d0be254b0e4510cb68696efeb759c9870e6a5902c72e0e2a26b65d35e23",
+          "width": 64,
+          "height": 64
+        },
+        {
+          "path": "Assets/Resources/Art/Effects/Sansindang/SealPulse/Sprites/frame_004.png",
+          "archivePath": "animations/Faded_crimson-blue_geometric_ritual_seal_pulses_so/unknown/frame_004.png",
+          "sha256": "5f4f000ec34bbad473e58baba5f2c73eb98c5d26deaac37fe416a2994c87be19",
+          "width": 64,
+          "height": 64
+        },
+        {
+          "path": "Assets/Resources/Art/Effects/Sansindang/SealPulse/Sprites/frame_005.png",
+          "archivePath": "animations/Faded_crimson-blue_geometric_ritual_seal_pulses_so/unknown/frame_005.png",
+          "sha256": "141d534d829fc0e50d1da947829be6a546f3be1c01a35895d34a9f4b624c150a",
+          "width": 64,
+          "height": 64
+        }
+      ]
+    },
+    {
+      "name": "Sansindang_SoulFlame",
+      "frameCount": 6,
+      "pngByteEqualityVerified": true,
+      "sourceFiles": [
+        {
+          "path": "Assets/Resources/Art/Effects/Sansindang/SoulFlame/Sprites/frame_000.png",
+          "archivePath": "animations/Gentle_cyan_soul_flame_flicker_in_place_soft_wisp/unknown/frame_000.png",
+          "sha256": "2fc496a546c6d944817f9e792a1f783314303b99afb8a4b12f0e02d5fce5aaa3",
+          "width": 32,
+          "height": 48
+        },
+        {
+          "path": "Assets/Resources/Art/Effects/Sansindang/SoulFlame/Sprites/frame_001.png",
+          "archivePath": "animations/Gentle_cyan_soul_flame_flicker_in_place_soft_wisp/unknown/frame_001.png",
+          "sha256": "728204c96637ba37de8a21e4b3f56fe563e35cdf5dcd6a11710d433ec9e0995c",
+          "width": 32,
+          "height": 48
+        },
+        {
+          "path": "Assets/Resources/Art/Effects/Sansindang/SoulFlame/Sprites/frame_002.png",
+          "archivePath": "animations/Gentle_cyan_soul_flame_flicker_in_place_soft_wisp/unknown/frame_002.png",
+          "sha256": "4bb01ccf9191d94103fde9da68f6524ad0e818a7306699b239e3ba6b1da455f6",
+          "width": 32,
+          "height": 48
+        },
+        {
+          "path": "Assets/Resources/Art/Effects/Sansindang/SoulFlame/Sprites/frame_003.png",
+          "archivePath": "animations/Gentle_cyan_soul_flame_flicker_in_place_soft_wisp/unknown/frame_003.png",
+          "sha256": "50ea023a9f27ed8a127e498ca5db5a8bcddb9641721a8c6b0af9b8007f69f3ee",
+          "width": 32,
+          "height": 48
+        },
+        {
+          "path": "Assets/Resources/Art/Effects/Sansindang/SoulFlame/Sprites/frame_004.png",
+          "archivePath": "animations/Gentle_cyan_soul_flame_flicker_in_place_soft_wisp/unknown/frame_004.png",
+          "sha256": "5124360ea3a40d814d6968ef60b234aef80fd0507fbafcdd538d536414052265",
+          "width": 32,
+          "height": 48
+        },
+        {
+          "path": "Assets/Resources/Art/Effects/Sansindang/SoulFlame/Sprites/frame_005.png",
+          "archivePath": "animations/Gentle_cyan_soul_flame_flicker_in_place_soft_wisp/unknown/frame_005.png",
+          "sha256": "7fab3095d8624c72a268c7330a2df8f2e32fdbef0d3a855d1c494843203544f0",
+          "width": 32,
+          "height": 48
+        }
+      ]
+    }
+  ],
+  "status": "unity_validated",
+  "postBuildByteIdenticalFrames": 76
+}

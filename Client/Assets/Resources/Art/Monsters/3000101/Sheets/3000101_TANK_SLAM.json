@@ -1,0 +1,73 @@
+{
+  "animation": "TANK_SLAM",
+  "sourceAnimation": "TankSlam",
+  "directions": [
+    "south",
+    "south-east",
+    "east",
+    "north-east",
+    "north",
+    "north-west",
+    "west",
+    "south-west"
+  ],
+  "frameCount": 8,
+  "framesPerSecond": 10,
+  "loop": false,
+  "cellWidth": 256,
+  "cellHeight": 256,
+  "sourcePixelsResized": false,
+  "alignment": "Canvas centres, transparent padding only",
+  "directionalSources": [
+    {
+      "direction": "south",
+      "sourceAnimation": "TankSlam",
+      "groupId": "359c9f69-bd38-4a47-ac93-2c76e84a9103"
+    },
+    {
+      "direction": "south-east",
+      "sourceAnimation": "TankSlam",
+      "groupId": "359c9f69-bd38-4a47-ac93-2c76e84a9103"
+    },
+    {
+      "direction": "east",
+      "sourceAnimation": "TankSlam",
+      "groupId": "359c9f69-bd38-4a47-ac93-2c76e84a9103"
+    },
+    {
+      "direction": "north-east",
+      "sourceAnimation": "TankSlam",
+      "groupId": "359c9f69-bd38-4a47-ac93-2c76e84a9103"
+    },
+    {
+      "direction": "north",
+      "sourceAnimation": "TankSlam",
+      "groupId": "359c9f69-bd38-4a47-ac93-2c76e84a9103"
+    },
+    {
+      "direction": "north-west",
+      "sourceAnimation": "TankSlam",
+      "groupId": "359c9f69-bd38-4a47-ac93-2c76e84a9103"
+    },
+    {
+      "direction": "west",
+      "sourceAnimation": "TankSlam",
+      "groupId": "359c9f69-bd38-4a47-ac93-2c76e84a9103"
+    },
+    {
+      "direction": "south-west",
+      "sourceAnimation": "TankSlam",
+      "groupId": "359c9f69-bd38-4a47-ac93-2c76e84a9103"
+    }
+  ],
+  "animationClips": [
+    "Animations/TANK_SLAM_SOUTH.anim",
+    "Animations/TANK_SLAM_SOUTH_EAST.anim",
+    "Animations/TANK_SLAM_EAST.anim",
+    "Animations/TANK_SLAM_NORTH_EAST.anim",
+    "Animations/TANK_SLAM_NORTH.anim",
+    "Animations/TANK_SLAM_NORTH_WEST.anim",
+    "Animations/TANK_SLAM_WEST.anim",
+    "Animations/TANK_SLAM_SOUTH_WEST.anim"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "animation": "Mokgui_ExhaustedAura_8f",
+  "animationGroupId": "90aaf657-a8cc-412f-b59f-d2b7e3fdbc99",
+  "columns": 8,
+  "rows": 1,
+  "cellWidth": 64,
+  "cellHeight": 64,
+  "frameCount": 8,
+  "sourcePixelsResized": false,
+  "pivot": "cell-center"
+}

@@ -1,0 +1,48 @@
+{
+  "Sansindang_Deco_soul_flame.json": {
+    "object": {
+      "id": "9b61da40-6462-4d05-88d8-1076df34a42e",
+      "name": "base",
+      "prompt": "Deco_soul_flame Sansindang underworld effect",
+      "size": {
+        "width": 32,
+        "height": 48
+      },
+      "directions": 1,
+      "view": "low top-down"
+    },
+    "spritesheet": {
+      "path": "Sansindang_Deco_soul_flame.png",
+      "cell_size": {
+        "width": 32,
+        "height": 48
+      },
+      "sheet_size": {
+        "width": 192,
+        "height": 96
+      },
+      "columns": 6,
+      "pivot": "cell-center",
+      "rows": [
+        {
+          "row": 0,
+          "type": "rotations",
+          "frame_count": 1,
+          "directions": [
+            "unknown"
+          ]
+        },
+        {
+          "row": 1,
+          "type": "animation",
+          "frame_count": 6,
+          "animation": "soul_flame_6f",
+          "animation_group_id": "73937bd9-8831-4132-b104-cf08894b654f",
+          "direction": "unknown"
+        }
+      ]
+    },
+    "export_version": "1.0",
+    "export_date": "2026-11-23T13:28:55.248088+00:00"
+  }
+}

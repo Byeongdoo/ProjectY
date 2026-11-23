@@ -1,0 +1,11 @@
+{
+  "animation": "low_mist_8f",
+  "animationGroupId": "438a21d9-3b05-41d8-8735-008147e6d4da",
+  "columns": 8,
+  "rows": 1,
+  "cellWidth": 128,
+  "cellHeight": 64,
+  "frameCount": 8,
+  "sourcePixelsResized": false,
+  "pivot": "cell-center"
+}

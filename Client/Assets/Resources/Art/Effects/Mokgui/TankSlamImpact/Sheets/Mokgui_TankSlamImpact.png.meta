@@ -1,0 +1,1963 @@
+fileFormatVersion: 2
+guid: ac41505a1fa5d6b499845afc46e33c30
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -100758759862728986
+    second: Mokgui_TankSlamImpact_0
+  - first:
+      213: 4711198386882219721
+    second: Mokgui_TankSlamImpact_1
+  - first:
+      213: 6139052738267469415
+    second: Mokgui_TankSlamImpact_2
+  - first:
+      213: 4256662555431180582
+    second: Mokgui_TankSlamImpact_3
+  - first:
+      213: 7211765758295302448
+    second: Mokgui_TankSlamImpact_4
+  - first:
+      213: -4977228228609001466
+    second: Mokgui_TankSlamImpact_5
+  - first:
+      213: -8322027738325294139
+    second: Mokgui_TankSlamImpact_6
+  - first:
+      213: -7773135988140137530
+    second: Mokgui_TankSlamImpact_7
+  - first:
+      213: 7633712228300085237
+    second: Mokgui_TankSlamImpact_8
+  - first:
+      213: -564101279690389169
+    second: Mokgui_TankSlamImpact_9
+  - first:
+      213: -7938253195669167506
+    second: Mokgui_TankSlamImpact_10
+  - first:
+      213: -4719324778915541168
+    second: Mokgui_TankSlamImpact_11
+  - first:
+      213: 6380268377125387007
+    second: Mokgui_TankSlamImpact_12
+  - first:
+      213: -7975206820053135480
+    second: Mokgui_TankSlamImpact_13
+  - first:
+      213: -7239845332614599534
+    second: Mokgui_TankSlamImpact_14
+  - first:
+      213: 6729138370229340637
+    second: Mokgui_TankSlamImpact_15
+  - first:
+      213: -4344112313685918716
+    second: Mokgui_TankSlamImpact_16
+  - first:
+      213: 282779175306744399
+    second: Mokgui_TankSlamImpact_17
+  - first:
+      213: 7358157399955318710
+    second: Mokgui_TankSlamImpact_18
+  - first:
+      213: -3989078543670369196
+    second: Mokgui_TankSlamImpact_19
+  - first:
+      213: -4818041136440216323
+    second: Mokgui_TankSlamImpact_20
+  - first:
+      213: 7802316231567634865
+    second: Mokgui_TankSlamImpact_21
+  - first:
+      213: -7226527579557968353
+    second: Mokgui_TankSlamImpact_22
+  - first:
+      213: 4307623455100974442
+    second: Mokgui_TankSlamImpact_23
+  - first:
+      213: 8746373189483716570
+    second: Mokgui_TankSlamImpact_24
+  - first:
+      213: -221487397699741323
+    second: Mokgui_TankSlamImpact_25
+  - first:
+      213: -6141322427503522874
+    second: Mokgui_TankSlamImpact_26
+  - first:
+      213: -4056658750174067465
+    second: Mokgui_TankSlamImpact_27
+  - first:
+      213: -7744529321269381948
+    second: Mokgui_TankSlamImpact_28
+  - first:
+      213: -1432609195799914792
+    second: Mokgui_TankSlamImpact_29
+  - first:
+      213: -4002938673591789552
+    second: Mokgui_TankSlamImpact_30
+  - first:
+      213: 9081053010534964656
+    second: Mokgui_TankSlamImpact_31
+  - first:
+      213: -562924434242197563
+    second: Mokgui_TankSlamImpact_32
+  - first:
+      213: 8243478531231985117
+    second: Mokgui_TankSlamImpact_33
+  - first:
+      213: -3234128984224763326
+    second: Mokgui_TankSlamImpact_34
+  - first:
+      213: 3625477778862574062
+    second: Mokgui_TankSlamImpact_35
+  - first:
+      213: 5629583955355375141
+    second: Mokgui_TankSlamImpact_36
+  - first:
+      213: -5812267762099201016
+    second: Mokgui_TankSlamImpact_37
+  - first:
+      213: 7070250240113939828
+    second: Mokgui_TankSlamImpact_38
+  - first:
+      213: -6362402371337286857
+    second: Mokgui_TankSlamImpact_39
+  - first:
+      213: 1921782527923812450
+    second: Mokgui_TankSlamImpact_40
+  - first:
+      213: -1615520073849590975
+    second: Mokgui_TankSlamImpact_41
+  - first:
+      213: -7104384437800197179
+    second: Mokgui_TankSlamImpact_42
+  - first:
+      213: -2820117679854842270
+    second: Mokgui_TankSlamImpact_43
+  - first:
+      213: -7414824769564642817
+    second: Mokgui_TankSlamImpact_44
+  - first:
+      213: -5456646288646480244
+    second: Mokgui_TankSlamImpact_45
+  - first:
+      213: 3200219570728285245
+    second: Mokgui_TankSlamImpact_46
+  - first:
+      213: 5582153211911237871
+    second: Mokgui_TankSlamImpact_47
+  - first:
+      213: -2009840809205723642
+    second: Mokgui_TankSlamImpact_48
+  - first:
+      213: 6701034870271791836
+    second: Mokgui_TankSlamImpact_49
+  - first:
+      213: -8778244449179498363
+    second: Mokgui_TankSlamImpact_50
+  - first:
+      213: -2224009419601833106
+    second: Mokgui_TankSlamImpact_51
+  - first:
+      213: 5974803487676432416
+    second: Mokgui_TankSlamImpact_52
+  - first:
+      213: 7367762081216921312
+    second: Mokgui_TankSlamImpact_53
+  - first:
+      213: -7604070378901655304
+    second: Mokgui_TankSlamImpact_54
+  - first:
+      213: -7259941249561412468
+    second: Mokgui_TankSlamImpact_55
+  - first:
+      213: 419608904578898180
+    second: Mokgui_TankSlamImpact_56
+  - first:
+      213: -4926355012544121017
+    second: Mokgui_TankSlamImpact_57
+  - first:
+      213: 4855701794486649024
+    second: Mokgui_TankSlamImpact_58
+  - first:
+      213: -9110911717717690452
+    second: Mokgui_TankSlamImpact_59
+  - first:
+      213: -3367804553395131485
+    second: Mokgui_TankSlamImpact_60
+  - first:
+      213: -8555854210740045607
+    second: Mokgui_TankSlamImpact_61
+  - first:
+      213: -6367256884127733898
+    second: Mokgui_TankSlamImpact_62
+  - first:
+      213: -5227367448529968446
+    second: Mokgui_TankSlamImpact_63
+  - first:
+      213: 3638821229016474905
+    second: Mokgui_TankSlamImpact_64
+  - first:
+      213: 7415250411987601162
+    second: Mokgui_TankSlamImpact_65
+  - first:
+      213: -3680726648459467127
+    second: Mokgui_TankSlamImpact_66
+  - first:
+      213: 5224758829456567897
+    second: Mokgui_TankSlamImpact_67
+  - first:
+      213: -1269849664784744809
+    second: Mokgui_TankSlamImpact_68
+  - first:
+      213: 8121556524592133703
+    second: Mokgui_TankSlamImpact_69
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 9
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Mokgui_TankSlamImpact_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 2
+        width: 57
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e68f5611780a9ef0800000000000000
+      internalID: -100758759862728986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_TankSlamImpact_1
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 43
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ce028cc8f9816140800000000000000
+      internalID: 4711198386882219721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_TankSlamImpact_2
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 41
+        width: 6
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76652d970fb423550800000000000000
+      internalID: 6139052738267469415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_TankSlamImpact_3
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 41
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6299e299a04b21b30800000000000000
+      internalID: 4256662555431180582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_TankSlamImpact_4
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 38
+        width: 13
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03164826fb6551460800000000000000
+      internalID: 7211765758295302448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_TankSlamImpact_5
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 3
+        width: 61
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 608b6bbeb455deab0800000000000000
+      internalID: -4977228228609001466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_TankSlamImpact_6
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 46
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c36c2e2dd7328c80800000000000000
+      internalID: -8322027738325294139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_TankSlamImpact_7
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 44
+        width: 6
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c32a1ca006402490800000000000000
+      internalID: -7773135988140137530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_TankSlamImpact_8
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 44
+        width: 30
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f7d16593d460f960800000000000000
+      internalID: 7633712228300085237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_TankSlamImpact_9
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 39
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4906b6ffd8eb28f0800000000000000
+      internalID: -564101279690389169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_TankSlamImpact_10
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 49
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e62a707f6c8a5d190800000000000000
+      internalID: -7938253195669167506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_TankSlamImpact_11
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 46
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05f4a0d1e17918eb0800000000000000
+      internalID: -4719324778915541168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_TankSlamImpact_12
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 40
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffa773ee8444b8850800000000000000
+      internalID: 6380268377125387007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_TankSlamImpact_13
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 45
+        width: 25
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88fc570d6af525190800000000000000
+      internalID: -7975206820053135480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_TankSlamImpact_14
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 52
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29cacb04707e68b90800000000000000
+      internalID: -7239845332614599534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_TankSlamImpact_15
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 10
+        width: 55
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd988f9f1b3b26d50800000000000000
+      internalID: 6729138370229340637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_TankSlamImpact_16
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 47
+        width: 29
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40cb956eddc96b3c0800000000000000
+      internalID: -4344112313685918716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_TankSlamImpact_17
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 33
+        width: 24
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4259066922ace300800000000000000
+      internalID: 282779175306744399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_TankSlamImpact_18
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 48
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b7afb98b2d6d1660800000000000000
+      internalID: 7358157399955318710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_TankSlamImpact_19
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 4
+        width: 52
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45425671332f3a8c0800000000000000
+      internalID: -3989078543670369196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_TankSlamImpact_20
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 33
+        width: 11
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df4f24d0d11e22db0800000000000000
+      internalID: -4818041136440216323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_TankSlamImpact_21
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 29
+        width: 28
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b17adf2645674c60800000000000000
+      internalID: 7802316231567634865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_TankSlamImpact_22
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 6
+        width: 52
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1642e4447736bb90800000000000000
+      internalID: -7226527579557968353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_TankSlamImpact_23
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 41
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a653f6ba5b0c7cb30800000000000000
+      internalID: 4307623455100974442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_TankSlamImpact_24
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 40
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adf5d28531c516970800000000000000
+      internalID: 8746373189483716570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_TankSlamImpact_25
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 28
+        width: 15
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57991e1a26e1decf0800000000000000
+      internalID: -221487397699741323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_TankSlamImpact_26
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 36
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cb43815ac3a5caa0800000000000000
+      internalID: -6141322427503522874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_TankSlamImpact_27
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 35
+        width: 8
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f405ec1c5ad3b7c0800000000000000
+      internalID: -4056658750174067465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_TankSlamImpact_28
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 32
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c434255d97e58490800000000000000
+      internalID: -7744529321269381948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_TankSlamImpact_29
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 33
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d65366d6895e1ce0800000000000000
+      internalID: -1432609195799914792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_TankSlamImpact_30
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 2
+        width: 57
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01853ee1c74b278c0800000000000000
+      internalID: -4002938673591789552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_TankSlamImpact_31
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 39
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bd9d6f7991660e70800000000000000
+      internalID: 9081053010534964656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_TankSlamImpact_32
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 35
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c72b95a5371038f0800000000000000
+      internalID: -562924434242197563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_TankSlamImpact_33
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 36
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddd24af5c08b66270800000000000000
+      internalID: 8243478531231985117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_TankSlamImpact_34
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 3
+        width: 60
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 242fc71f2d01e13d0800000000000000
+      internalID: -3234128984224763326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_TankSlamImpact_35
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 32
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee90d2ec4d8405230800000000000000
+      internalID: 3625477778862574062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_TankSlamImpact_36
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 35
+        width: 17
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5261234d7cc402e40800000000000000
+      internalID: 5629583955355375141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_TankSlamImpact_37
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 32
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80c5f9cd34da65fa0800000000000000
+      internalID: -5812267762099201016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_TankSlamImpact_38
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 37
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4759c1332239e1260800000000000000
+      internalID: 7070250240113939828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_TankSlamImpact_39
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 30
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73b8652b0c434b7a0800000000000000
+      internalID: -6362402371337286857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_TankSlamImpact_40
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 32
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2687370f60b8baa10800000000000000
+      internalID: 1921782527923812450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_TankSlamImpact_41
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 24
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14baeae5d058499e0800000000000000
+      internalID: -1615520073849590975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_TankSlamImpact_42
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 20
+        width: 22
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c32b159ef7286d90800000000000000
+      internalID: -7104384437800197179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_TankSlamImpact_43
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 30
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26e047b69edecd8d0800000000000000
+      internalID: -2820117679854842270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_TankSlamImpact_44
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 24
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff1f4525820491990800000000000000
+      internalID: -7414824769564642817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_TankSlamImpact_45
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 17
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8ed54c6c191644b0800000000000000
+      internalID: -5456646288646480244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_TankSlamImpact_46
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 21
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d34338c7eb6796c20800000000000000
+      internalID: 3200219570728285245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_TankSlamImpact_47
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 13
+        width: 19
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe076cd45cac77d40800000000000000
+      internalID: 5582153211911237871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_TankSlamImpact_48
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 16
+        width: 14
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60e8530ce6c9b14e0800000000000000
+      internalID: -2009840809205723642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_TankSlamImpact_49
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 12
+        width: 23
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd25e0ef5bbdefc50800000000000000
+      internalID: 6701034870271791836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_TankSlamImpact_50
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 5
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5888c1fbe296d2680800000000000000
+      internalID: -8778244449179498363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_TankSlamImpact_51
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 3
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e639287573bb221e0800000000000000
+      internalID: -2224009419601833106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_TankSlamImpact_52
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 3
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02008bdbd14cae250800000000000000
+      internalID: 5974803487676432416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_TankSlamImpact_53
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 2
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0eef688a39c8f3660800000000000000
+      internalID: 7367762081216921312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_TankSlamImpact_54
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 2
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f03f7a474ae87690800000000000000
+      internalID: -7604070378901655304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_TankSlamImpact_55
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 2
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8cbfa9f5e18f3b90800000000000000
+      internalID: -7259941249561412468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_TankSlamImpact_56
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 15
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40914065310c2d500800000000000000
+      internalID: 419608904578898180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_TankSlamImpact_57
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 4
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 747b7df873212abb0800000000000000
+      internalID: -4926355012544121017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_TankSlamImpact_58
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 2
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c08a933e0be26340800000000000000
+      internalID: 4855701794486649024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_TankSlamImpact_59
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 3
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca73e7d701a8f8180800000000000000
+      internalID: -9110911717717690452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_TankSlamImpact_60
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 10
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3aba0f12a972341d0800000000000000
+      internalID: -3367804553395131485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_TankSlamImpact_61
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 8
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d83fca1def734980800000000000000
+      internalID: -8555854210740045607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_TankSlamImpact_62
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 8
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 677e7eb5995f2a7a0800000000000000
+      internalID: -6367256884127733898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_TankSlamImpact_63
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 6
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c26ee75009a477b0800000000000000
+      internalID: -5227367448529968446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_TankSlamImpact_64
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 5
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9156da4e0a0bf7230800000000000000
+      internalID: 3638821229016474905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_TankSlamImpact_65
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 10
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a07071746f248e660800000000000000
+      internalID: 7415250411987601162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_TankSlamImpact_66
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 5
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98662435d9e6becc0800000000000000
+      internalID: -3680726648459467127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_TankSlamImpact_67
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 5
+        width: 19
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95e28d23972128840800000000000000
+      internalID: 5224758829456567897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_TankSlamImpact_68
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 11
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79e3b543576906ee0800000000000000
+      internalID: -1269849664784744809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_TankSlamImpact_69
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 3
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 746f19711a095b070800000000000000
+      internalID: 8121556524592133703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Mokgui_TankSlamImpact_0: -100758759862728986
+      Mokgui_TankSlamImpact_1: 4711198386882219721
+      Mokgui_TankSlamImpact_10: -7938253195669167506
+      Mokgui_TankSlamImpact_11: -4719324778915541168
+      Mokgui_TankSlamImpact_12: 6380268377125387007
+      Mokgui_TankSlamImpact_13: -7975206820053135480
+      Mokgui_TankSlamImpact_14: -7239845332614599534
+      Mokgui_TankSlamImpact_15: 6729138370229340637
+      Mokgui_TankSlamImpact_16: -4344112313685918716
+      Mokgui_TankSlamImpact_17: 282779175306744399
+      Mokgui_TankSlamImpact_18: 7358157399955318710
+      Mokgui_TankSlamImpact_19: -3989078543670369196
+      Mokgui_TankSlamImpact_2: 6139052738267469415
+      Mokgui_TankSlamImpact_20: -4818041136440216323
+      Mokgui_TankSlamImpact_21: 7802316231567634865
+      Mokgui_TankSlamImpact_22: -7226527579557968353
+      Mokgui_TankSlamImpact_23: 4307623455100974442
+      Mokgui_TankSlamImpact_24: 8746373189483716570
+      Mokgui_TankSlamImpact_25: -221487397699741323
+      Mokgui_TankSlamImpact_26: -6141322427503522874
+      Mokgui_TankSlamImpact_27: -4056658750174067465
+      Mokgui_TankSlamImpact_28: -7744529321269381948
+      Mokgui_TankSlamImpact_29: -1432609195799914792
+      Mokgui_TankSlamImpact_3: 4256662555431180582
+      Mokgui_TankSlamImpact_30: -4002938673591789552
+      Mokgui_TankSlamImpact_31: 9081053010534964656
+      Mokgui_TankSlamImpact_32: -562924434242197563
+      Mokgui_TankSlamImpact_33: 8243478531231985117
+      Mokgui_TankSlamImpact_34: -3234128984224763326
+      Mokgui_TankSlamImpact_35: 3625477778862574062
+      Mokgui_TankSlamImpact_36: 5629583955355375141
+      Mokgui_TankSlamImpact_37: -5812267762099201016
+      Mokgui_TankSlamImpact_38: 7070250240113939828
+      Mokgui_TankSlamImpact_39: -6362402371337286857
+      Mokgui_TankSlamImpact_4: 7211765758295302448
+      Mokgui_TankSlamImpact_40: 1921782527923812450
+      Mokgui_TankSlamImpact_41: -1615520073849590975
+      Mokgui_TankSlamImpact_42: -7104384437800197179
+      Mokgui_TankSlamImpact_43: -2820117679854842270
+      Mokgui_TankSlamImpact_44: -7414824769564642817
+      Mokgui_TankSlamImpact_45: -5456646288646480244
+      Mokgui_TankSlamImpact_46: 3200219570728285245
+      Mokgui_TankSlamImpact_47: 5582153211911237871
+      Mokgui_TankSlamImpact_48: -2009840809205723642
+      Mokgui_TankSlamImpact_49: 6701034870271791836
+      Mokgui_TankSlamImpact_5: -4977228228609001466
+      Mokgui_TankSlamImpact_50: -8778244449179498363
+      Mokgui_TankSlamImpact_51: -2224009419601833106
+      Mokgui_TankSlamImpact_52: 5974803487676432416
+      Mokgui_TankSlamImpact_53: 7367762081216921312
+      Mokgui_TankSlamImpact_54: -7604070378901655304
+      Mokgui_TankSlamImpact_55: -7259941249561412468
+      Mokgui_TankSlamImpact_56: 419608904578898180
+      Mokgui_TankSlamImpact_57: -4926355012544121017
+      Mokgui_TankSlamImpact_58: 4855701794486649024
+      Mokgui_TankSlamImpact_59: -9110911717717690452
+      Mokgui_TankSlamImpact_6: -8322027738325294139
+      Mokgui_TankSlamImpact_60: -3367804553395131485
+      Mokgui_TankSlamImpact_61: -8555854210740045607
+      Mokgui_TankSlamImpact_62: -6367256884127733898
+      Mokgui_TankSlamImpact_63: -5227367448529968446
+      Mokgui_TankSlamImpact_64: 3638821229016474905
+      Mokgui_TankSlamImpact_65: 7415250411987601162
+      Mokgui_TankSlamImpact_66: -3680726648459467127
+      Mokgui_TankSlamImpact_67: 5224758829456567897
+      Mokgui_TankSlamImpact_68: -1269849664784744809
+      Mokgui_TankSlamImpact_69: 8121556524592133703
+      Mokgui_TankSlamImpact_7: -7773135988140137530
+      Mokgui_TankSlamImpact_8: 7633712228300085237
+      Mokgui_TankSlamImpact_9: -564101279690389169
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

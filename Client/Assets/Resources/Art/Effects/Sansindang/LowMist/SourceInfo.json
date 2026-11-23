@@ -1,0 +1,99 @@
+{
+  "key": "LowMist",
+  "scope": "Sansindang",
+  "name": "Sansindang_LowMist",
+  "objectId": "8d47db8f-80eb-4184-bffd-4375cfc88458",
+  "root": "Assets/Resources/Art/Effects/Sansindang/LowMist",
+  "sourceAnimation": "low_mist_8f",
+  "animationGroupId": "438a21d9-3b05-41d8-8735-008147e6d4da",
+  "frameCount": 8,
+  "framesPerSecond": 8,
+  "loop": true,
+  "timingSource": "Presentation defaults; PixelLab export has no frame durations. Not combat/cast timing.",
+  "clearSpriteOnCompletion": false,
+  "sortingTableLayer": "Details",
+  "pixelsPerUnit": 32,
+  "pivot": {
+    "x": 0.5,
+    "y": 0.5
+  },
+  "rootMotion": false,
+  "sourcePixelsResized": false,
+  "frames": [
+    "Assets/Resources/Art/Effects/Sansindang/LowMist/Sprites/frame_000.png",
+    "Assets/Resources/Art/Effects/Sansindang/LowMist/Sprites/frame_001.png",
+    "Assets/Resources/Art/Effects/Sansindang/LowMist/Sprites/frame_002.png",
+    "Assets/Resources/Art/Effects/Sansindang/LowMist/Sprites/frame_003.png",
+    "Assets/Resources/Art/Effects/Sansindang/LowMist/Sprites/frame_004.png",
+    "Assets/Resources/Art/Effects/Sansindang/LowMist/Sprites/frame_005.png",
+    "Assets/Resources/Art/Effects/Sansindang/LowMist/Sprites/frame_006.png",
+    "Assets/Resources/Art/Effects/Sansindang/LowMist/Sprites/frame_007.png"
+  ],
+  "baseSprite": "Assets/Resources/Art/Effects/Sansindang/LowMist/Sprites/Base.png",
+  "sheet": "Assets/Resources/Art/Effects/Sansindang/LowMist/Sheets/Sansindang_LowMist.png",
+  "clip": "Assets/Resources/Art/Effects/Sansindang/LowMist/Animations/Sansindang_LowMist.anim",
+  "controller": "Assets/Resources/Art/Effects/Sansindang/LowMist/Sansindang_LowMist.controller",
+  "prefab": "Assets/Resources/Prefabs/Effect/Sansindang/Sansindang_LowMist.prefab",
+  "resourcePath": "Prefabs/Effect/Sansindang/Sansindang_LowMist",
+  "lifetimePolicy": "One-shot clears its sprite after the full final frame; owner releases/pools the instance. Loop owner controls stop/release.",
+  "archiveSha256": "e17dc0b4566c4cee9f6961934b9691fd475bd0aa2ff11c78579bdd38a2650ab7",
+  "sourceFiles": [
+    {
+      "path": "Assets/Resources/Art/Effects/Sansindang/LowMist/Sprites/frame_000.png",
+      "archivePath": "animations/Low_blue-gray_mist_wisps_gently_flow_sideways_cur/unknown/frame_000.png",
+      "sha256": "4ee2daafa75aba5a1b981340cffe7b503a316a80f1907e1b842ba4cbb914d36c",
+      "width": 128,
+      "height": 64
+    },
+    {
+      "path": "Assets/Resources/Art/Effects/Sansindang/LowMist/Sprites/frame_001.png",
+      "archivePath": "animations/Low_blue-gray_mist_wisps_gently_flow_sideways_cur/unknown/frame_001.png",
+      "sha256": "df7fa5e77a6ae5c1a35eeb1c5d1b930d5d35bfca6c5fc1017b49d08d9639967c",
+      "width": 128,
+      "height": 64
+    },
+    {
+      "path": "Assets/Resources/Art/Effects/Sansindang/LowMist/Sprites/frame_002.png",
+      "archivePath": "animations/Low_blue-gray_mist_wisps_gently_flow_sideways_cur/unknown/frame_002.png",
+      "sha256": "68ace7ac49935454eab27e04325e6021cdaca11a2bc4a78cd0387929ecd3e76c",
+      "width": 128,
+      "height": 64
+    },
+    {
+      "path": "Assets/Resources/Art/Effects/Sansindang/LowMist/Sprites/frame_003.png",
+      "archivePath": "animations/Low_blue-gray_mist_wisps_gently_flow_sideways_cur/unknown/frame_003.png",
+      "sha256": "80cf887938ea89aecd337aa5147f6ca4c628216f7b67845b87960a18abb00560",
+      "width": 128,
+      "height": 64
+    },
+    {
+      "path": "Assets/Resources/Art/Effects/Sansindang/LowMist/Sprites/frame_004.png",
+      "archivePath": "animations/Low_blue-gray_mist_wisps_gently_flow_sideways_cur/unknown/frame_004.png",
+      "sha256": "03167d1469e4729d84ae7d90f1f19c020840132fb73b2c1e31bea14977fd926f",
+      "width": 128,
+      "height": 64
+    },
+    {
+      "path": "Assets/Resources/Art/Effects/Sansindang/LowMist/Sprites/frame_005.png",
+      "archivePath": "animations/Low_blue-gray_mist_wisps_gently_flow_sideways_cur/unknown/frame_005.png",
+      "sha256": "bbe283d40baf937c762d2dc0573a98cf10d667cb609e405ceec3de33a4a3bf66",
+      "width": 128,
+      "height": 64
+    },
+    {
+      "path": "Assets/Resources/Art/Effects/Sansindang/LowMist/Sprites/frame_006.png",
+      "archivePath": "animations/Low_blue-gray_mist_wisps_gently_flow_sideways_cur/unknown/frame_006.png",
+      "sha256": "7742299ca0647abce0e8e413b91d98c6dd0cefef736a0e8af11cf2bf1cd2af81",
+      "width": 128,
+      "height": 64
+    },
+    {
+      "path": "Assets/Resources/Art/Effects/Sansindang/LowMist/Sprites/frame_007.png",
+      "archivePath": "animations/Low_blue-gray_mist_wisps_gently_flow_sideways_cur/unknown/frame_007.png",
+      "sha256": "c4f69730aa4293b2e01819331eaa952f1a4bf7f86164f24e792c23e68a83adb9",
+      "width": 128,
+      "height": 64
+    }
+  ],
+  "visualApproval": "Existing assets imported; technical validation is not visual approval."
+}

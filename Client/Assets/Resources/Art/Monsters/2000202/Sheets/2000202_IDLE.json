@@ -1,0 +1,73 @@
+{
+  "animation": "IDLE",
+  "sourceAnimation": "IDLE",
+  "directions": [
+    "south",
+    "south-east",
+    "east",
+    "north-east",
+    "north",
+    "north-west",
+    "west",
+    "south-west"
+  ],
+  "frameCount": 4,
+  "framesPerSecond": 8,
+  "loop": true,
+  "cellWidth": 88,
+  "cellHeight": 88,
+  "sourcePixelsResized": false,
+  "alignment": "Canvas centres, transparent padding only",
+  "directionalSources": [
+    {
+      "direction": "south",
+      "sourceAnimation": "IDLE",
+      "groupId": "02e8b69b-8d5e-4faf-bb3a-9205bac89a97"
+    },
+    {
+      "direction": "south-east",
+      "sourceAnimation": "IDLE",
+      "groupId": "02e8b69b-8d5e-4faf-bb3a-9205bac89a97"
+    },
+    {
+      "direction": "east",
+      "sourceAnimation": "IDLE",
+      "groupId": "02e8b69b-8d5e-4faf-bb3a-9205bac89a97"
+    },
+    {
+      "direction": "north-east",
+      "sourceAnimation": "IDLE",
+      "groupId": "02e8b69b-8d5e-4faf-bb3a-9205bac89a97"
+    },
+    {
+      "direction": "north",
+      "sourceAnimation": "IDLE",
+      "groupId": "02e8b69b-8d5e-4faf-bb3a-9205bac89a97"
+    },
+    {
+      "direction": "north-west",
+      "sourceAnimation": "IDLE",
+      "groupId": "02e8b69b-8d5e-4faf-bb3a-9205bac89a97"
+    },
+    {
+      "direction": "west",
+      "sourceAnimation": "IDLE",
+      "groupId": "02e8b69b-8d5e-4faf-bb3a-9205bac89a97"
+    },
+    {
+      "direction": "south-west",
+      "sourceAnimation": "IDLE",
+      "groupId": "02e8b69b-8d5e-4faf-bb3a-9205bac89a97"
+    }
+  ],
+  "animationClips": [
+    "Animations/IDLE_SOUTH.anim",
+    "Animations/IDLE_SOUTH_EAST.anim",
+    "Animations/IDLE_EAST.anim",
+    "Animations/IDLE_NORTH_EAST.anim",
+    "Animations/IDLE_NORTH.anim",
+    "Animations/IDLE_NORTH_WEST.anim",
+    "Animations/IDLE_WEST.anim",
+    "Animations/IDLE_SOUTH_WEST.anim"
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "key": "WarningGrid",
+  "scope": "Mokgui",
+  "name": "Mokgui_WarningGrid",
+  "objectId": "466084b1-56fc-4740-b7b6-5436e0cd77d0",
+  "root": "Assets/Resources/Art/Effects/Mokgui/WarningGrid",
+  "sourceAnimation": "Mokgui_WarningGrid_8f",
+  "animationGroupId": "671dcd85-cc73-4090-8b0f-4968ccc96617",
+  "frameCount": 8,
+  "framesPerSecond": 8,
+  "loop": true,
+  "timingSource": "Presentation defaults; PixelLab export has no frame durations. Not combat/cast timing.",
+  "clearSpriteOnCompletion": false,
+  "sortingTableLayer": "Details",
+  "pixelsPerUnit": 32,
+  "pivot": {
+    "x": 0.5,
+    "y": 0.5
+  },
+  "rootMotion": false,
+  "sourcePixelsResized": false,
+  "frames": [
+    "Assets/Resources/Art/Effects/Mokgui/WarningGrid/Sprites/frame_000.png",
+    "Assets/Resources/Art/Effects/Mokgui/WarningGrid/Sprites/frame_001.png",
+    "Assets/Resources/Art/Effects/Mokgui/WarningGrid/Sprites/frame_002.png",
+    "Assets/Resources/Art/Effects/Mokgui/WarningGrid/Sprites/frame_003.png",
+    "Assets/Resources/Art/Effects/Mokgui/WarningGrid/Sprites/frame_004.png",
+    "Assets/Resources/Art/Effects/Mokgui/WarningGrid/Sprites/frame_005.png",
+    "Assets/Resources/Art/Effects/Mokgui/WarningGrid/Sprites/frame_006.png",
+    "Assets/Resources/Art/Effects/Mokgui/WarningGrid/Sprites/frame_007.png"
+  ],
+  "baseSprite": "Assets/Resources/Art/Effects/Mokgui/WarningGrid/Sprites/Base.png",
+  "sheet": "Assets/Resources/Art/Effects/Mokgui/WarningGrid/Sheets/Mokgui_WarningGrid.png",
+  "clip": "Assets/Resources/Art/Effects/Mokgui/WarningGrid/Animations/Mokgui_WarningGrid.anim",
+  "controller": "Assets/Resources/Art/Effects/Mokgui/WarningGrid/Mokgui_WarningGrid.controller",
+  "prefab": "Assets/Resources/Prefabs/Effect/Mokgui/Mokgui_WarningGrid.prefab",
+  "resourcePath": "Prefabs/Effect/Mokgui/Mokgui_WarningGrid",
+  "lifetimePolicy": "One-shot clears its sprite after the full final frame; owner releases/pools the instance. Loop owner controls stop/release.",
+  "archiveSha256": "5927835fb5a7ef62a16b67d4f4214a5106636520d2acd75a94f071d9a388d76f",
+  "sourceFiles": [
+    {
+      "path": "Assets/Resources/Art/Effects/Mokgui/WarningGrid/Sprites/frame_000.png",
+      "archivePath": "animations/The_red_square_border_and_diagonal_red_hatch_marks/unknown/frame_000.png",
+      "sha256": "290e8975f9b2801ce2b507ec1ee2d50dfa993024d2ee6a8911a6c5284aee90c7",
+      "width": 32,
+      "height": 32
+    },
+    {
+      "path": "Assets/Resources/Art/Effects/Mokgui/WarningGrid/Sprites/frame_001.png",
+      "archivePath": "animations/The_red_square_border_and_diagonal_red_hatch_marks/unknown/frame_001.png",
+      "sha256": "443c770317e29e7d739b6ab9029dee43fad0566378eb600c214c49926b236058",
+      "width": 32,
+      "height": 32
+    },
+    {
+      "path": "Assets/Resources/Art/Effects/Mokgui/WarningGrid/Sprites/frame_002.png",
+      "archivePath": "animations/The_red_square_border_and_diagonal_red_hatch_marks/unknown/frame_002.png",
+      "sha256": "8e2f984c1210f173a005df02c626a8d3ad9dc61d5d7620f7ccd8e61f59a916a0",
+      "width": 32,
+      "height": 32
+    },
+    {
+      "path": "Assets/Resources/Art/Effects/Mokgui/WarningGrid/Sprites/frame_003.png",
+      "archivePath": "animations/The_red_square_border_and_diagonal_red_hatch_marks/unknown/frame_003.png",
+      "sha256": "5f0c4f5d3bee613fc454cacede013d01509d61bd03ad6698bc391f26e2c57b17",
+      "width": 32,
+      "height": 32
+    },
+    {
+      "path": "Assets/Resources/Art/Effects/Mokgui/WarningGrid/Sprites/frame_004.png",
+      "archivePath": "animations/The_red_square_border_and_diagonal_red_hatch_marks/unknown/frame_004.png",
+      "sha256": "5f0c4f5d3bee613fc454cacede013d01509d61bd03ad6698bc391f26e2c57b17",
+      "width": 32,
+      "height": 32
+    },
+    {
+      "path": "Assets/Resources/Art/Effects/Mokgui/WarningGrid/Sprites/frame_005.png",
+      "archivePath": "animations/The_red_square_border_and_diagonal_red_hatch_marks/unknown/frame_005.png",
+      "sha256": "8e2f984c1210f173a005df02c626a8d3ad9dc61d5d7620f7ccd8e61f59a916a0",
+      "width": 32,
+      "height": 32
+    },
+    {
+      "path": "Assets/Resources/Art/Effects/Mokgui/WarningGrid/Sprites/frame_006.png",
+      "archivePath": "animations/The_red_square_border_and_diagonal_red_hatch_marks/unknown/frame_006.png",
+      "sha256": "443c770317e29e7d739b6ab9029dee43fad0566378eb600c214c49926b236058",
+      "width": 32,
+      "height": 32
+    },
+    {
+      "path": "Assets/Resources/Art/Effects/Mokgui/WarningGrid/Sprites/frame_007.png",
+      "archivePath": "animations/The_red_square_border_and_diagonal_red_hatch_marks/unknown/frame_007.png",
+      "sha256": "290e8975f9b2801ce2b507ec1ee2d50dfa993024d2ee6a8911a6c5284aee90c7",
+      "width": 32,
+      "height": 32
+    }
+  ],
+  "visualApproval": "Existing assets imported; technical validation is not visual approval."
+}

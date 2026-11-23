@@ -1,0 +1,19 @@
+{
+  "key": "WaterFerryman",
+  "name": "수귀 사공",
+  "characterId": "8e93c443-96b1-46c2-b28d-f2293f9d6a8e",
+  "gameId": 3000201,
+  "prefabName": "Boss_201",
+  "source": "PixelLab completed character export",
+  "metrics": {
+    "canvasWidth": 96,
+    "canvasHeight": 96,
+    "pixelsPerUnit": 32,
+    "pivotPixels": {
+      "x": 48.0,
+      "y": 18
+    }
+  },
+  "pivotPolicy": "One fixed south ground anchor; animation canvas-centre padding compensation only. No per-frame trimming.",
+  "archiveSha256": "8d0363ee50943c785bd326e757b878755c889685dc19a60378004b7b3df937d8"
+}

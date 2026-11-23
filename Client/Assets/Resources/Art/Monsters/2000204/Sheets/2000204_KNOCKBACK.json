@@ -1,0 +1,73 @@
+{
+  "animation": "KNOCKBACK",
+  "sourceAnimation": "KNOCKBACK",
+  "directions": [
+    "south",
+    "south-east",
+    "east",
+    "north-east",
+    "north",
+    "north-west",
+    "west",
+    "south-west"
+  ],
+  "frameCount": 4,
+  "framesPerSecond": 10,
+  "loop": false,
+  "cellWidth": 84,
+  "cellHeight": 84,
+  "sourcePixelsResized": false,
+  "alignment": "Canvas centres, transparent padding only",
+  "directionalSources": [
+    {
+      "direction": "south",
+      "sourceAnimation": "KNOCKBACK",
+      "groupId": "498f85f8-e80f-4e71-bfde-66055a154fea"
+    },
+    {
+      "direction": "south-east",
+      "sourceAnimation": "KNOCKBACK_FIX_SOUTH_EAST",
+      "groupId": "1056d81c-998d-4697-98e3-b93bd6f2a4b7"
+    },
+    {
+      "direction": "east",
+      "sourceAnimation": "KNOCKBACK",
+      "groupId": "498f85f8-e80f-4e71-bfde-66055a154fea"
+    },
+    {
+      "direction": "north-east",
+      "sourceAnimation": "KNOCKBACK",
+      "groupId": "498f85f8-e80f-4e71-bfde-66055a154fea"
+    },
+    {
+      "direction": "north",
+      "sourceAnimation": "KNOCKBACK",
+      "groupId": "498f85f8-e80f-4e71-bfde-66055a154fea"
+    },
+    {
+      "direction": "north-west",
+      "sourceAnimation": "KNOCKBACK",
+      "groupId": "498f85f8-e80f-4e71-bfde-66055a154fea"
+    },
+    {
+      "direction": "west",
+      "sourceAnimation": "KNOCKBACK",
+      "groupId": "498f85f8-e80f-4e71-bfde-66055a154fea"
+    },
+    {
+      "direction": "south-west",
+      "sourceAnimation": "KNOCKBACK",
+      "groupId": "498f85f8-e80f-4e71-bfde-66055a154fea"
+    }
+  ],
+  "animationClips": [
+    "Animations/KNOCKBACK_SOUTH.anim",
+    "Animations/KNOCKBACK_SOUTH_EAST.anim",
+    "Animations/KNOCKBACK_EAST.anim",
+    "Animations/KNOCKBACK_NORTH_EAST.anim",
+    "Animations/KNOCKBACK_NORTH.anim",
+    "Animations/KNOCKBACK_NORTH_WEST.anim",
+    "Animations/KNOCKBACK_WEST.anim",
+    "Animations/KNOCKBACK_SOUTH_WEST.anim"
+  ]
+}

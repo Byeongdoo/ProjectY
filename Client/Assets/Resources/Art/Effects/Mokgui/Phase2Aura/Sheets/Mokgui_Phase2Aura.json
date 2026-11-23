@@ -1,0 +1,11 @@
+{
+  "animation": "Mokgui_Phase2Aura_8f",
+  "animationGroupId": "59fdbb44-6b74-4d60-9a83-f1f6bde2fd2d",
+  "columns": 8,
+  "rows": 1,
+  "cellWidth": 128,
+  "cellHeight": 128,
+  "frameCount": 8,
+  "sourcePixelsResized": false,
+  "pivot": "cell-center"
+}

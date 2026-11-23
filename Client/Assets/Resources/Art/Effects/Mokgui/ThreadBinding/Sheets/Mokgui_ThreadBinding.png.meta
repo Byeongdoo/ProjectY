@@ -1,0 +1,715 @@
+fileFormatVersion: 2
+guid: 0bbf43e996e09894a9bd78f59315c95a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -481398330287903193
+    second: Mokgui_ThreadBinding_0
+  - first:
+      213: -7637855475092639675
+    second: Mokgui_ThreadBinding_1
+  - first:
+      213: -6579686427957309306
+    second: Mokgui_ThreadBinding_2
+  - first:
+      213: -7454896238328588028
+    second: Mokgui_ThreadBinding_3
+  - first:
+      213: 7571227828468607588
+    second: Mokgui_ThreadBinding_4
+  - first:
+      213: -5908785124972958113
+    second: Mokgui_ThreadBinding_5
+  - first:
+      213: 5074559180986869421
+    second: Mokgui_ThreadBinding_6
+  - first:
+      213: 1479383401972877972
+    second: Mokgui_ThreadBinding_7
+  - first:
+      213: 8373944839690161822
+    second: Mokgui_ThreadBinding_8
+  - first:
+      213: -2299071469834062815
+    second: Mokgui_ThreadBinding_9
+  - first:
+      213: -7944515137702298727
+    second: Mokgui_ThreadBinding_10
+  - first:
+      213: 3013878777571535611
+    second: Mokgui_ThreadBinding_11
+  - first:
+      213: -8828004559751628378
+    second: Mokgui_ThreadBinding_12
+  - first:
+      213: -1559674696500323022
+    second: Mokgui_ThreadBinding_13
+  - first:
+      213: -8240441889116257839
+    second: Mokgui_ThreadBinding_14
+  - first:
+      213: 4024706176861360248
+    second: Mokgui_ThreadBinding_15
+  - first:
+      213: 3193366774157530713
+    second: Mokgui_ThreadBinding_16
+  - first:
+      213: 2407632299623293266
+    second: Mokgui_ThreadBinding_17
+  - first:
+      213: 8166606912842559192
+    second: Mokgui_ThreadBinding_18
+  - first:
+      213: 7428681631611984274
+    second: Mokgui_ThreadBinding_19
+  - first:
+      213: -8326706029445040914
+    second: Mokgui_ThreadBinding_20
+  - first:
+      213: 5333712624027252954
+    second: Mokgui_ThreadBinding_21
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 9
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Mokgui_ThreadBinding_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 7
+        width: 58
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72e29b7e4cab159f0800000000000000
+      internalID: -481398330287903193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_ThreadBinding_1
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 3
+        width: 18
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 540b45999e2e00690800000000000000
+      internalID: -7637855475092639675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_ThreadBinding_2
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 5
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6805520fd0240b4a0800000000000000
+      internalID: -6579686427957309306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_ThreadBinding_3
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 7
+        width: 57
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40957057e53ea8890800000000000000
+      internalID: -7454896238328588028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_ThreadBinding_4
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 3
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46a6c6d8897621960800000000000000
+      internalID: 7571227828468607588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_ThreadBinding_5
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 6
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5eefd32c37cffda0800000000000000
+      internalID: -5908785124972958113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_ThreadBinding_6
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 7
+        width: 58
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da66b6e50b47c6640800000000000000
+      internalID: 5074559180986869421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_ThreadBinding_7
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 4
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49ac331bd53d78410800000000000000
+      internalID: 1479383401972877972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_ThreadBinding_8
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 6
+        width: 12
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9e8272f67a363470800000000000000
+      internalID: 8373944839690161822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_ThreadBinding_9
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 6
+        width: 58
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1243e4fddae0810e0800000000000000
+      internalID: -2299071469834062815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_ThreadBinding_10
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 5
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99b7a88f2996fb190800000000000000
+      internalID: -7944515137702298727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_ThreadBinding_11
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 5
+        width: 57
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfa6d3da7c273d920800000000000000
+      internalID: 3013878777571535611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_ThreadBinding_12
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 6
+        width: 12
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a9b97c20a0ac7580800000000000000
+      internalID: -8828004559751628378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_ThreadBinding_13
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 7
+        width: 57
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23ddee5802cea5ae0800000000000000
+      internalID: -1559674696500323022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_ThreadBinding_14
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 4
+        width: 13
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d10af6f2c114ad80800000000000000
+      internalID: -8240441889116257839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_ThreadBinding_15
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 4
+        width: 16
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 870542da1f0aad730800000000000000
+      internalID: 4024706176861360248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_ThreadBinding_16
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 7
+        width: 57
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 956d133792e115c20800000000000000
+      internalID: 3193366774157530713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_ThreadBinding_17
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 4
+        width: 15
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 251adc002d0a96120800000000000000
+      internalID: 2407632299623293266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_ThreadBinding_18
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 4
+        width: 19
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8deea3cf7bd955170800000000000000
+      internalID: 8166606912842559192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_ThreadBinding_19
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 7
+        width: 57
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29993b9c59af71760800000000000000
+      internalID: 7428681631611984274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_ThreadBinding_20
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 3
+        width: 19
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee433d5abf8917c80800000000000000
+      internalID: -8326706029445040914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_ThreadBinding_21
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 3
+        width: 18
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad839215f57250a40800000000000000
+      internalID: 5333712624027252954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Mokgui_ThreadBinding_0: -481398330287903193
+      Mokgui_ThreadBinding_1: -7637855475092639675
+      Mokgui_ThreadBinding_10: -7944515137702298727
+      Mokgui_ThreadBinding_11: 3013878777571535611
+      Mokgui_ThreadBinding_12: -8828004559751628378
+      Mokgui_ThreadBinding_13: -1559674696500323022
+      Mokgui_ThreadBinding_14: -8240441889116257839
+      Mokgui_ThreadBinding_15: 4024706176861360248
+      Mokgui_ThreadBinding_16: 3193366774157530713
+      Mokgui_ThreadBinding_17: 2407632299623293266
+      Mokgui_ThreadBinding_18: 8166606912842559192
+      Mokgui_ThreadBinding_19: 7428681631611984274
+      Mokgui_ThreadBinding_2: -6579686427957309306
+      Mokgui_ThreadBinding_20: -8326706029445040914
+      Mokgui_ThreadBinding_21: 5333712624027252954
+      Mokgui_ThreadBinding_3: -7454896238328588028
+      Mokgui_ThreadBinding_4: 7571227828468607588
+      Mokgui_ThreadBinding_5: -5908785124972958113
+      Mokgui_ThreadBinding_6: 5074559180986869421
+      Mokgui_ThreadBinding_7: 1479383401972877972
+      Mokgui_ThreadBinding_8: 8373944839690161822
+      Mokgui_ThreadBinding_9: -2299071469834062815
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

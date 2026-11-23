@@ -1,0 +1,11 @@
+{
+  "animation": "Mokgui_WarningGrid_8f",
+  "animationGroupId": "671dcd85-cc73-4090-8b0f-4968ccc96617",
+  "columns": 8,
+  "rows": 1,
+  "cellWidth": 32,
+  "cellHeight": 32,
+  "frameCount": 8,
+  "sourcePixelsResized": false,
+  "pivot": "cell-center"
+}
