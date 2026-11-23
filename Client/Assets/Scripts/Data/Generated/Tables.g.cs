@@ -644,6 +644,12 @@ namespace Table
         public float moveMul;
         /// <summary>보상 배율</summary>
         public float rewardMul;
+        /// <summary>평타 사거리(칸)</summary>
+        public int basicRange;
+        /// <summary>유지 최소 거리(칸)</summary>
+        public int keepMin;
+        /// <summary>평타 계수</summary>
+        public float basicCoef;
     }
 
     [Serializable]

@@ -7,7 +7,10 @@
       "hpMul": 0.4,
       "defMul": 0.5,
       "moveMul": 1.2,
-      "rewardMul": 1
+      "rewardMul": 1,
+      "basicRange": 1,
+      "keepMin": 0,
+      "basicCoef": 1
     },
     {
       "monsterTypeID": 9002,
@@ -16,7 +19,10 @@
       "hpMul": 1,
       "defMul": 1,
       "moveMul": 1,
-      "rewardMul": 1
+      "rewardMul": 1,
+      "basicRange": 1,
+      "keepMin": 0,
+      "basicCoef": 1
     },
     {
       "monsterTypeID": 9003,
@@ -25,7 +31,10 @@
       "hpMul": 0.7,
       "defMul": 0.8,
       "moveMul": 0.9,
-      "rewardMul": 1.2
+      "rewardMul": 1.2,
+      "basicRange": 9,
+      "keepMin": 6,
+      "basicCoef": 1
     },
     {
       "monsterTypeID": 9004,
@@ -34,7 +43,10 @@
       "hpMul": 2.8,
       "defMul": 1.5,
       "moveMul": 0.95,
-      "rewardMul": 2.5
+      "rewardMul": 2.5,
+      "basicRange": 1,
+      "keepMin": 0,
+      "basicCoef": 1
     },
     {
       "monsterTypeID": 9005,
@@ -43,7 +55,10 @@
       "hpMul": 5,
       "defMul": 1.8,
       "moveMul": 0.85,
-      "rewardMul": 4
+      "rewardMul": 4,
+      "basicRange": 1,
+      "keepMin": 0,
+      "basicCoef": 1
     }
   ]
 }

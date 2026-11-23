@@ -121,6 +121,31 @@ namespace Server.Game
 			return IsWall(new Vector2Int(dest.x, from.y)) && IsWall(new Vector2Int(from.x, dest.y));
 		}
 
+		// 시야 판정: from → to 칸 중심을 잇는 직선(브레젠험)이 벽 칸을 지나지 않으면 보인다.
+		// 양 끝 칸은 보지 않고, 대각선으로 넘어가는 지점은 이동과 같은 모서리 규칙을 쓴다. 캐릭터(플레이어·적)는 시야를 가리지 않는다.
+		public bool HasLineOfSight(Vector2Int from, Vector2Int to)
+		{
+			int x = from.x, y = from.y;
+			int dx = Math.Abs(to.x - from.x), dy = Math.Abs(to.y - from.y);
+			int sx = Math.Sign(to.x - from.x), sy = Math.Sign(to.y - from.y);
+			int err = dx - dy;
+
+			while (x != to.x || y != to.y)
+			{
+				Vector2Int prev = new Vector2Int(x, y);
+				int e2 = 2 * err;
+				if (e2 > -dy) { err -= dy; x += sx; }
+				if (e2 < dx) { err += dx; y += sy; }
+
+				Vector2Int cell = new Vector2Int(x, y);
+				if (IsCornerBlocked(prev, cell))
+					return false;
+				if ((x != to.x || y != to.y) && IsWall(cell))
+					return false;
+			}
+			return true;
+		}
+
 		// 한 칸 이동(8방향)이 유효한지 판정한다
 		public bool CanMove(Vector2Int from, Vector2Int dest, bool checkObjects = true)
 		{

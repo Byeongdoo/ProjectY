@@ -38,19 +38,21 @@ namespace Server.Game
 		public Vector2Int SpawnCell { get; set; }
 
 		const int ConfigDiagonalTimeScale = 20030; // 대각선 1칸 소요 시간 배율
-		const int ConfigBasicRange = 20031;        // 평타 기본 사거리(칸)
 		const int ConfigBasicInterval = 20032;     // 평타 간격(초, 공격 속도 1.0 기준)
 		const int ConfigThreatPerDamage = 20036;   // 피해 1당 위협
 		const int ConfigThreatSwitchRate = 20038;  // 대상 변경 배율
 
-		// 망령 평타 계수. 테이블 컬럼이 없어 플레이어 평타 규칙을 그대로 쓴다(2026-11-23 사용자 결정: 계수 1.0).
-		const float BasicCoef = 1f;
-
-		// 레거시 SkillData의 근접 평타 ID. 클라 MonsterController가 이 ID로 공격 동작을 보여 준다.
+		// 레거시 SkillData의 근접 평타 ID. 클라 MonsterController가 이 ID로 공격 동작을 보여 준다(원거리 귀신도 같은 동작).
 		const int BasicMeleeSkillId = 1;
 
 		int _searchCellDist = 10;
 		int _leashCellDist = 20;
+
+		// 분류별 평타·거리 규칙(monsterTypes). 근접 분류 = 사거리 1·유지 거리 0.
+		// 귀신 = 사거리 9칸 즉발 단일 대상, 위협 1위가 유지 최소 거리(6칸)보다 가까우면 물러선다('망령(적) 시스템' 2-5).
+		int _basicRange = 1;
+		int _keepMin = 0;
+		float _basicCoef = 1f;
 
 		// 테이블 망령으로 초기화한다('망령(적) 시스템' 2-4).
 		//   개체 스탯 = characterLevel(group = characterID), 던전 체력 = 개체 체력 × dungeons.mobHpRate
@@ -73,6 +75,11 @@ namespace Server.Game
 			AttackSpeed = stat.attackSpeed > 0 ? stat.attackSpeed : 1f;
 			_searchCellDist = info.scanRange;
 			_leashCellDist = info.leashRange;
+
+			Table.MonsterTypesRow type = Table.TableManager.MonsterTypes.Get(info.monsterType);
+			_basicRange = Math.Max(1, type.basicRange);
+			_keepMin = type.keepMin;
+			_basicCoef = type.basicCoef;
 		}
 
 		static float Config(int id)
@@ -249,8 +256,15 @@ namespace Server.Game
 				return;
 
 			Vector2Int toTarget = _target.CellPos - CellPos;
-			int range = (int)Math.Round(Config(ConfigBasicRange));
-			bool inRange = toTarget.cellDist <= range && Room.Map.IsCornerBlocked(CellPos, _target.CellPos) == false;
+
+			// 유지 최소 거리보다 가까우면 물러선다. 물러날 칸이 없으면 제자리에서 공격한다.
+			if (toTarget.cellDist < _keepMin && TryRetreat(_target.CellPos))
+				return;
+
+			// 근접은 벽 모서리 너머를 치지 못하고(이동과 같은 모서리 규칙), 원거리는 시야가 트여야 친다.
+			// 시야가 막혔으면 공격하지 않고 다가간다.
+			bool inRange = toTarget.cellDist <= _basicRange
+				&& Room.Map.HasLineOfSight(CellPos, _target.CellPos);
 
 			if (inRange)
 			{
@@ -273,7 +287,7 @@ namespace Server.Game
 			StepToward(_target.CellPos);
 		}
 
-		// 망령 평타: 인접 칸(대각선 포함)의 대상을 친다. 간격 = configs 20032 ÷ 공격 속도, 계수 1.0.
+		// 평타: 사거리(monsterTypes.basicRange) 안의 위협 1위에게 즉발 피해. 간격 = configs 20032 ÷ 공격 속도, 계수 = monsterTypes.basicCoef.
 		void BasicAttack()
 		{
 			S_Skill skill = new S_Skill() { Info = new SkillInfo() };
@@ -281,11 +295,52 @@ namespace Server.Game
 			skill.Info.SkillId = BasicMeleeSkillId;
 			Room.Broadcast(skill);
 
-			Combat.Hit(this, _target, BasicCoef);
+			Combat.Hit(this, _target, _basicCoef);
 		}
 
-		// dest 쪽으로 한 칸. 다른 망령은 돌아가고(checkObjects), 길이 없으면 망령을 무시한 길로 다가가 막히면 기다린다.
-		// 대각선 한 칸은 configs 20030 배율만큼 다음 이동까지 더 기다린다(클라 보간과 같은 배율).
+		// from에서 멀어지는 이웃 칸으로 한 칸 물러선다. 복귀 거리 밖·시야가 끊기는 칸으로는 물러나지 않는다.
+		// 가장 멀어지는 칸(칸 거리 → 실제 거리 순)을 고른다. 반환: 물러섰는지
+		bool TryRetreat(Vector2Int from)
+		{
+			int currentDist = (from - CellPos).cellDist;
+			Vector2Int best = CellPos;
+			int bestDist = currentDist;
+			int bestSqr = (from - CellPos).sqrMagnitude;
+
+			for (int dy = -1; dy <= 1; dy++)
+			{
+				for (int dx = -1; dx <= 1; dx++)
+				{
+					if (dx == 0 && dy == 0)
+						continue;
+					Vector2Int next = new Vector2Int(CellPos.x + dx, CellPos.y + dy);
+					if (Room.Map.CanGo(next, true, blockPlayers: true) == false || Room.Map.IsCornerBlocked(CellPos, next))
+						continue;
+					if ((next - SpawnCell).cellDist > _leashCellDist)
+						continue;
+					// 시야가 끊기는 칸으로는 물러나지 않는다(물러났다가 다시 다가오는 반복 방지)
+					if (Room.Map.HasLineOfSight(next, from) == false)
+						continue;
+
+					int dist = (from - next).cellDist;
+					int sqr = (from - next).sqrMagnitude;
+					if (dist > bestDist || (dist == bestDist && dist > currentDist && sqr > bestSqr))
+					{
+						best = next;
+						bestDist = dist;
+						bestSqr = sqr;
+					}
+				}
+			}
+
+			if (bestDist <= currentDist)
+				return false;
+
+			MoveOneCell(best);
+			return true;
+		}
+
+		// dest 쪽으로 한 칸. 다른 적은 돌아가고(checkObjects), 길이 없으면 적을 무시한 길로 다가가 막히면 기다린다.
 		enum StepResult { Moved, Blocked, NoPath }
 
 		StepResult StepToward(Vector2Int dest)
@@ -311,6 +366,15 @@ namespace Server.Game
 				return StepResult.Blocked;
 			}
 
+			MoveOneCell(next);
+			return StepResult.Moved;
+		}
+
+		// 비어 있는 이웃 칸 next로 한 칸 옮긴다(호출 쪽에서 막힘을 확인한다).
+		// 대각선 한 칸은 configs 20030 배율만큼 다음 이동까지 더 기다린다(클라 보간과 같은 배율).
+		void MoveOneCell(Vector2Int next)
+		{
+			Vector2Int step = next - CellPos;
 			int moveTick = (int)(1000 / Speed);
 			if (step.x != 0 && step.y != 0)
 				moveTick = (int)(moveTick * Config(ConfigDiagonalTimeScale));
@@ -320,7 +384,6 @@ namespace Server.Game
 			Dir = GetDirFromVec(step);
 			Room.Map.ApplyMove(this, next);
 			BroadcastMove();
-			return StepResult.Moved;
 		}
 
 		// 복귀: 위협을 비우고 배치 칸으로 걸어서 돌아간다. 돌아가는 동안은 맞지 않고 탐지하지 않는다.
