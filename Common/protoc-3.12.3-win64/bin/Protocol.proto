@@ -29,6 +29,19 @@ enum MsgId {
   S_CHANNEL = 21;
   S_DUNGEON_STATE = 22;
   S_SKILL_WARNING = 23;
+  C_DEBUG_COMMAND = 24;
+}
+
+// 개발·테스트용 명령(서버 config.json의 debugCommands가 true일 때만 받는다). 실제 콘텐츠에 쓰지 않는다
+enum DebugCommand {
+  DEBUG_NONE = 0;
+  DEBUG_SPAWN_DUMMY = 1;    // 바라보는 앞 칸에 허수아비
+  DEBUG_CLEAR_DUMMIES = 2;  // 이 룸의 허수아비를 모두 없앤다
+  DEBUG_REFILL = 3;         // 내 체력·신력을 채우고 쿨타임·공용 재사용 대기를 초기화
+}
+
+message C_DebugCommand {
+  DebugCommand command = 1;
 }
 
 // F 홀드로 하는 일(서버가 주변을 보고 정한다)
@@ -210,6 +223,7 @@ message ObjectInfo {
   int32 spiritId = 5; // 저승 던전에서 빙의한 원혼(spirits.spiritID). 0 = 무당 본모습(삼천도)
   int32 characterId = 6; // 몬스터: characterInfos.characterID(프리팹·스탯 기준). 0 = 레거시 임시 몬스터
   int32 skillId = 7;     // 설치물(FIELD): 만든 스킬(spiritSkills.skillID)
+  bool trainingDummy = 8; // 몬스터: 개발·테스트용 허수아비(공격하지 않고 쓰러지지 않는다)
 }
 
 message PositionInfo {

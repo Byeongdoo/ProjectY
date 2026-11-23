@@ -51,6 +51,8 @@ public class MyPlayerController : PlayerController
 			// 전투 키는 서 있을 때뿐 아니라 걷는 중·동작 중에도 받아 둔다(선행 입력)
 			if (SpiritSelectPanel.IsOpen == false && selectingThisFrame == false)
 				UpdateCombatInput();
+
+			UpdateDebugInput();
 		}
 
 		switch (State)
@@ -197,6 +199,25 @@ public class MyPlayerController : PlayerController
 		// Space 홀드: 평타 반복
 		if (Input.GetKey(KeyCode.Space))
 			TryFire(BufferedBasic);
+	}
+
+	// 개발·테스트 키(에디터·개발 빌드만). 서버 config.json debugCommands가 꺼져 있으면 서버가 무시한다.
+	//   F9 = 앞 칸에 허수아비, F10 = 허수아비 모두 정리, F11 = 체력·신력 채우고 쿨타임 초기화
+	void UpdateDebugInput()
+	{
+		if (Application.isEditor == false && Debug.isDebugBuild == false)
+			return;
+
+		DebugCommand command = DebugCommand.DebugNone;
+		if (Input.GetKeyDown(KeyCode.F9)) command = DebugCommand.DebugSpawnDummy;
+		else if (Input.GetKeyDown(KeyCode.F10)) command = DebugCommand.DebugClearDummies;
+		else if (Input.GetKeyDown(KeyCode.F11)) command = DebugCommand.DebugRefill;
+		if (command == DebugCommand.DebugNone)
+			return;
+
+		Managers.Network.Send(new C_DebugCommand() { Command = command });
+		if (command == DebugCommand.DebugRefill)
+			MyCombat.ClearCooldowns();
 	}
 
 	void Buffer(int slot, float window)

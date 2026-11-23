@@ -9,6 +9,9 @@ namespace Server.Data
 	public class ServerConfig
 	{
 		public string dataPath;
+
+		// 개발·테스트 명령(C_DebugCommand: 허수아비 소환·정리, 체력·신력·쿨타임 초기화)을 받을지. 배포 서버에서는 false
+		public bool debugCommands;
 	}
 
 	public class ConfigManager

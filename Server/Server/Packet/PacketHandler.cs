@@ -113,4 +113,20 @@ class PacketHandler
 
 		room.Push(room.HandleHoldInteract, player, holdPacket);
 	}
+
+	public static void C_DebugCommandHandler(PacketSession session, IMessage packet)
+	{
+		C_DebugCommand debugPacket = packet as C_DebugCommand;
+		ClientSession clientSession = session as ClientSession;
+
+		Player player = clientSession.MyPlayer;
+		if (player == null)
+			return;
+
+		GameRoom room = player.Room;
+		if (room == null)
+			return;
+
+		room.Push(room.HandleDebugCommand, player, debugPacket);
+	}
 }

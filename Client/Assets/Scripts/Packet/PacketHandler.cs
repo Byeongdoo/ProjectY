@@ -134,7 +134,13 @@ class PacketHandler
 			if (changePacket.Amount > 0)
 				CombatHud.ShowNumber(cc, changePacket.Amount, changePacket.Critical, changePacket.Heal);
 			if (changePacket.Amount > 0 && changePacket.Heal == false)
+			{
 				OnHit(cc, changePacket.AttackerId, changePacket.Critical);
+				// 허수아비 피해 측정
+				TrainingDummyMeter meter = cc.GetComponent<TrainingDummyMeter>();
+				if (meter != null)
+					meter.Add(changePacket.Amount);
+			}
 		}
 	}
 

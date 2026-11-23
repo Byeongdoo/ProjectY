@@ -34,7 +34,9 @@ class PacketManager
 		_onRecv.Add((ushort)MsgId.CCancelSkill, MakePacket<C_CancelSkill>);
 		_handler.Add((ushort)MsgId.CCancelSkill, PacketHandler.C_CancelSkillHandler);		
 		_onRecv.Add((ushort)MsgId.CHoldInteract, MakePacket<C_HoldInteract>);
-		_handler.Add((ushort)MsgId.CHoldInteract, PacketHandler.C_HoldInteractHandler);
+		_handler.Add((ushort)MsgId.CHoldInteract, PacketHandler.C_HoldInteractHandler);		
+		_onRecv.Add((ushort)MsgId.CDebugCommand, MakePacket<C_DebugCommand>);
+		_handler.Add((ushort)MsgId.CDebugCommand, PacketHandler.C_DebugCommandHandler);
 	}
 
 	public void OnRecvPacket(PacketSession session, ArraySegment<byte> buffer)

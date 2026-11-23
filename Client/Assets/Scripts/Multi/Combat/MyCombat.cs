@@ -75,6 +75,15 @@ public static class MyCombat
 		CastSkillId = 0;
 	}
 
+	// 개발·테스트 명령(DEBUG_REFILL)과 함께. 서버도 같은 것을 초기화한다
+	public static void ClearCooldowns()
+	{
+		_cooldownEnd.Clear();
+		_gcdEnd = 0f;
+		_nextBasicTime = 0f;
+		_basicSentAt = -1f;
+	}
+
 	// 시전이 끝나면 그때부터 쿨타임(서버도 효과가 날 때 쓴다)
 	public static void Update()
 	{
