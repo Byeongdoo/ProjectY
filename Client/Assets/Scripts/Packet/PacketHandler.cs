@@ -73,7 +73,11 @@ class PacketHandler
 		if (bc == null)
 			return;
 
+		// 혼절에서 부활한 파티원은 부활 칸으로 바로 옮긴다(걸어가는 보간 없이)
+		bool revived = bc.PosInfo.State == CreatureState.Dead && movePacket.PosInfo.State != CreatureState.Dead;
 		bc.PosInfo = movePacket.PosInfo;
+		if (revived)
+			bc.SyncPos();
 	}
 
 	public static void S_SkillHandler(PacketSession session, IMessage packet)

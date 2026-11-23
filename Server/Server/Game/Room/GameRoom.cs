@@ -50,6 +50,7 @@ namespace Server.Game
 					Monster monster = ObjectManager.Instance.Add<Monster>();
 					monster.InitFromTable(pack.CharacterIds[i], dungeon.mobHpRate);
 					monster.CellPos = cells[i];
+					monster.SpawnCell = cells[i];
 					monster.Pack = members;
 					members.Add(monster);
 					EnterGame(monster);
@@ -396,8 +397,9 @@ namespace Server.Game
 							MoveDir dir = GameObject.RotateDir(info.PosInfo.MoveDir, step);
 							GameObject target = Map.Find(player.GetFrontCellPos(dir));
 							// 삼천도·저승 모두 PvP가 없으므로 망령(몬스터)만 맞는다
+							// 피해 = 공격력 × 평타 계수(spirits.basicCoef)에 피해 공식 적용('캐릭터 조작 및 전투' 2-7)
 							if (target != null && target.ObjectType == GameObjectType.Monster)
-								target.OnDamaged(player, skillData.damage + player.Stat.Attack);
+								Combat.Hit(player, target, player.BasicCoef);
 						}
 					}
 					break;
@@ -431,6 +433,37 @@ namespace Server.Game
 
 			if (player.State == CreatureState.Skill)
 				player.State = CreatureState.Idle;
+		}
+
+		const int ConfigFaintDuration = 20039; // 혼절 유지 시간(초)
+		const int ConfigReviveHpRate = 20041;  // 부활 시 체력 비율
+
+		// 혼절 30초 뒤 부활 예약. 혼 부르기·불씨·전멸은 다음 단계라, 지금은 던전 입장 영역에서 체력 50%로 일어난다.
+		public void ScheduleFaintRevive(Player player, int faintSerial)
+		{
+			int ms = (int)(1000 * Table.TableManager.Configs.Get(ConfigFaintDuration).value[0]);
+			PushAfter(ms, ReviveFainted, player, faintSerial);
+		}
+
+		void ReviveFainted(Player player, int faintSerial)
+		{
+			if (player.Room != this || player.State != CreatureState.Dead || player.FaintSerial != faintSerial)
+				return;
+
+			float rate = Table.TableManager.Configs.Get(ConfigReviveHpRate).value[0];
+			player.Hp = Math.Max(1, (int)Math.Round(player.Stat.MaxHp * rate));
+			player.State = CreatureState.Idle;
+			player.Dir = MoveDir.Down;
+			Map.ApplyMove(player, PickSpawnCell());
+
+			Broadcast(new S_ChangeHp() { ObjectId = player.Id, Hp = player.Hp });
+			Broadcast(new S_Move() { ObjectId = player.Id, PosInfo = player.PosInfo });
+		}
+
+		// 망령이 노릴 수 있는 플레이어인지(같은 룸, 혼절 아님)
+		public bool IsTargetable(Player player)
+		{
+			return player != null && player.Room == this && player.State != CreatureState.Dead;
 		}
 
 		public Player FindPlayer(Func<GameObject, bool> condition)

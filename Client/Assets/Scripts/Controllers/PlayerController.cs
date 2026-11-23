@@ -68,7 +68,9 @@ public class PlayerController : CreatureController
 		_rangedSkill = false;
 		State = CreatureState.Skill;
 		yield return new WaitForSeconds(0.5f);
-		State = CreatureState.Idle;
+		// 그사이 혼절했으면(S_Die) 일어서지 않는다
+		if (State == CreatureState.Skill)
+			State = CreatureState.Idle;
 		_coSkill = null;
 		CheckUpdatedFlag();
 	}
@@ -79,7 +81,9 @@ public class PlayerController : CreatureController
 		_rangedSkill = true;
 		State = CreatureState.Skill;
 		yield return new WaitForSeconds(0.3f);
-		State = CreatureState.Idle;
+		// 그사이 혼절했으면(S_Die) 일어서지 않는다
+		if (State == CreatureState.Skill)
+			State = CreatureState.Idle;
 		_coSkill = null;
 		CheckUpdatedFlag();
 	}

@@ -22,14 +22,9 @@ namespace Server.Game
 
 		const int HeroCharacterId = 1000001; // characterLevel 주인공 그룹(클라 이승·멀티 빌더와 같은 값)
 
-		// 패킷(StatInfo)에 없는 전투 스탯. 서버 판정에만 쓴다.
-		public float Defence { get; private set; }
-		public float Critical { get; private set; }
-		public float CriticalAttack { get; private set; }
-		public float AttackSpeed { get; private set; } = 1f;
+		// 패킷(StatInfo)에 없는 전투 스탯. 서버 판정에만 쓴다. 방어율·치명타·공격 속도·받는 피해 배율은 GameObject에 있다.
 		public int BasicRange { get; private set; } = 1;
 		public float BasicCoef { get; private set; } = 1f;
-		public float DamageTakenRate { get; private set; } = 1f;
 		public float ThreatRate { get; private set; } = 1f;
 		public float SpiritRegenRate { get; private set; } = 1f;
 
@@ -66,16 +61,40 @@ namespace Server.Game
 			AttackSpeed = attackSpeed;
 		}
 
-		// 받는 피해 배율은 피해 판정 결과(방어율 상한 뒤)에 곱한다('원혼(직업) 시스템' 2-4).
-		// TODO 방어율·치명타·위협·신력은 전투 판정('캐릭터 조작 및 전투')을 서버에 옮길 때 위 값으로 적용한다.
+		// 받는 피해 배율(DamageTakenRate)은 Combat.CalcDamage가 방어율 상한 뒤에 곱한다.
+		// TODO 신력(평타 적중·처치 회복)은 신력 시스템을 서버에 옮길 때 적용한다.
 		public override void OnDamaged(GameObject attacker, int damage)
 		{
-			base.OnDamaged(attacker, (int)Math.Round(damage * DamageTakenRate));
+			// 혼절한 플레이어는 더 맞지 않는다
+			if (State == CreatureState.Dead)
+				return;
+			base.OnDamaged(attacker, damage);
 		}
+
+		// 혼절 재부활 예약을 구분하는 번호. 부활·퇴장 뒤 남은 예약이 엉뚱하게 실행되지 않게 한다.
+		public int FaintSerial { get; private set; }
 
 		public override void OnDead(GameObject attacker)
 		{
-			base.OnDead(attacker);
+			if (Room == null)
+				return;
+
+			// 저승 던전: 체력 0 → 혼절('캐릭터 조작 및 전투' 2-11). 그 외 공간은 전투가 없다(레거시 처리 유지).
+			if (Room.Kind != RoomKind.Dungeon)
+			{
+				base.OnDead(attacker);
+				return;
+			}
+
+			FaintSerial++;
+			State = CreatureState.Dead;
+
+			S_Die diePacket = new S_Die();
+			diePacket.ObjectId = Id;
+			diePacket.AttackerId = attacker.Id;
+			Room.Broadcast(diePacket);
+
+			Room.ScheduleFaintRevive(this, FaintSerial);
 		}
 	}
 }

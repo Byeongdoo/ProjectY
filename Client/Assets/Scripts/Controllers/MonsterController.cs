@@ -39,11 +39,27 @@ public class MonsterController : CreatureController
 		//Managers.Resource.Destroy(gameObject);
 	}
 
+	// 서버가 평타를 칠 때마다 S_Skill(1)을 보낸다. 공격 동작을 한 번 처음부터 보여 주고 대기 모습으로 돌아간다.
 	public override void UseSkill(int skillId)
 	{
-		if (skillId == 1)
-		{
-			State = CreatureState.Skill;
-		}
+		if (skillId != 1 || State == CreatureState.Dead)
+			return;
+
+		if (_coSkill != null)
+			StopCoroutine(_coSkill);
+		State = CreatureState.Skill;
+		if (_animator != null)
+			_animator.Play(_animator.GetCurrentAnimatorStateInfo(0).fullPathHash, 0, 0f);
+		_coSkill = StartCoroutine(CoSkill());
+	}
+
+	IEnumerator CoSkill()
+	{
+		yield return null; // Play는 다음 프레임에 반영된다
+		float length = _animator != null ? _animator.GetCurrentAnimatorStateInfo(0).length : 0f;
+		yield return new WaitForSeconds(length);
+		if (State == CreatureState.Skill)
+			State = CreatureState.Idle;
+		_coSkill = null;
 	}
 }

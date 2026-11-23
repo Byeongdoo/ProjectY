@@ -20,6 +20,13 @@ namespace Server.Game
 		public PositionInfo PosInfo { get; private set; } = new PositionInfo();
 		public StatInfo Stat { get; private set; } = new StatInfo();
 
+		// 패킷(StatInfo)에 없는 전투 스탯. 서버 판정(Combat)에만 쓴다. 플레이어·망령이 각자 테이블에서 채운다.
+		public float Defence { get; protected set; }
+		public float Critical { get; protected set; }
+		public float CriticalAttack { get; protected set; }
+		public float AttackSpeed { get; protected set; } = 1f;
+		public float DamageTakenRate { get; protected set; } = 1f;
+
 		public float Speed
 		{
 			get { return Stat.Speed; }

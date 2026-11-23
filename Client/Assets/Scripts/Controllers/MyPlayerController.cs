@@ -69,7 +69,9 @@ public class MyPlayerController : PlayerController
 	{
 		Vector3Int server = new Vector3Int(serverPos.PosX, serverPos.PosY, 0);
 		Vector3Int diff = server - CellPos;
-		if (Mathf.Max(Mathf.Abs(diff.x), Mathf.Abs(diff.y)) <= tolerance)
+		// 혼절에서 부활하면(서버 상태가 Dead가 아님) 거리와 상관없이 서버 위치로 옮긴다
+		bool revived = State == CreatureState.Dead && serverPos.State != CreatureState.Dead;
+		if (revived == false && Mathf.Max(Mathf.Abs(diff.x), Mathf.Abs(diff.y)) <= tolerance)
 			return;
 
 		CellPos = server;

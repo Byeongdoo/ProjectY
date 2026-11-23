@@ -34,10 +34,12 @@ namespace Server.Game
 			}
 			else
 			{
+				// 쏜 플레이어의 공격력 × 평타 계수로 피해 공식 적용. PvP가 없으므로 망령만 맞는다.
 				GameObject target = Room.Map.Find(destPos);
-				if (target != null)
+				if (target != null && target.ObjectType == GameObjectType.Monster)
 				{
-					target.OnDamaged(this, Data.damage + Owner.Stat.Attack);
+					float coef = Owner is Player p ? p.BasicCoef : 1f;
+					Combat.Hit(Owner, target, coef);
 				}
 
 				// 소멸
