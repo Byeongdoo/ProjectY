@@ -19,6 +19,8 @@ enum MsgId {
   C_ENTER_DUNGEON = 11;
   S_CHANGE_SCENE = 12;
   S_ENTER_DUNGEON_REJECT = 13;
+  S_CHANGE_STATUS = 14;
+  S_SKILL_WARNING = 15;
 }
 
 enum CreatureState {
@@ -95,6 +97,28 @@ message S_Die {
   int32 attackerId = 2;
 }
 
+// 상태이상 적용·갱신·해제(statusEffects.statusID). remainMs = 남은 시간(ms), 0이면 해제.
+// 효과 판정은 서버가 하고, 클라는 표시·이동 속도·입력 제한(예측)에 쓴다
+message S_ChangeStatus {
+  int32 objectId = 1;
+  StatusInfo status = 2;
+}
+
+// 적 특수기 예고 칸('망령(적) 시스템' 2-5-1). 시전 시작 때 서버가 위험 칸을 고정해 보낸다.
+// 클라는 durationMs 동안 칸을 표시하고, durationMs = 0이면 같은 warningId 표시를 즉시 지운다(취소).
+message S_SkillWarning {
+  int32 objectId = 1;   // 시전자
+  int32 warningId = 2;  // 시전마다 고유
+  int32 skillId = 3;    // monsterSkills.monsterSkillID
+  int32 durationMs = 4; // 예고 시간(ms). 0 = 지움
+  repeated CellPos cells = 5;
+}
+
+message CellPos {
+  int32 x = 1;
+  int32 y = 2;
+}
+
 // 씬 로딩을 마친 클라가 서버가 배정해 둔 룸(삼천도 채널·던전)에 들어가겠다고 알린다
 message C_EnterGame {
   string name = 1;
@@ -123,6 +147,13 @@ message ObjectInfo {
   StatInfo statInfo = 4;
   int32 spiritId = 5; // 저승 던전에서 빙의한 원혼(spirits.spiritID). 0 = 무당 본모습(삼천도)
   int32 characterId = 6; // 몬스터: characterInfos.characterID(프리팹·스탯 기준). 0 = 레거시 임시 몬스터
+  repeated StatusInfo statuses = 7; // 입장·스폰 시점에 걸려 있는 상태이상
+}
+
+message StatusInfo {
+  int32 statusId = 1; // statusEffects.statusID
+  int32 remainMs = 2; // 남은 시간(ms). 0 = 해제
+  int32 stack = 3;
 }
 
 message PositionInfo {

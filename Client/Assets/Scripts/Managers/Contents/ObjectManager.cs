@@ -86,6 +86,7 @@ public class ObjectManager
 				MyPlayer.Id = info.ObjectId;
 				MyPlayer.PosInfo = info.PosInfo;
 				MyPlayer.Stat = info.StatInfo;
+				MyPlayer.SetStatuses(info.Statuses);
 				MyPlayer.SyncPos();
 			}
 			else
@@ -98,6 +99,7 @@ public class ObjectManager
 				pc.Id = info.ObjectId;
 				pc.PosInfo = info.PosInfo;
 				pc.Stat = info.StatInfo;
+				pc.SetStatuses(info.Statuses);
 				pc.SyncPos();
 			}
 		}
@@ -117,6 +119,7 @@ public class ObjectManager
 			mc.Id = info.ObjectId;
 			mc.PosInfo = info.PosInfo;
 			mc.Stat = info.StatInfo;
+			mc.SetStatuses(info.Statuses);
 			mc.SyncPos();
 		}
 		else if (objectType == GameObjectType.Projectile)

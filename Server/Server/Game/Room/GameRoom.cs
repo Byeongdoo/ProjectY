@@ -81,6 +81,10 @@ namespace Server.Game
 		// 누군가 주기적으로 호출해줘야 한다
 		public void Update()
 		{
+			// 상태이상 만료. 만료 처리가 컬렉션을 바꾸지 않으므로 순회 중에 불러도 된다.
+			foreach (Player player in _players.Values)
+				player.Statuses.Update();
+
 			foreach (Monster monster in _monsters.Values)
 			{
 				monster.Update();
@@ -115,6 +119,7 @@ namespace Server.Game
 				if (Kind == RoomKind.Lobby)
 					player.Info.SpiritId = 0;
 				player.ApplyStats();
+				player.Statuses.Clear(notify: false);
 
 				player.CellPos = PickSpawnCell();
 				player.State = CreatureState.Idle;
@@ -131,11 +136,17 @@ namespace Server.Game
 					foreach (Player p in _players.Values)
 					{
 						if (player != p)
+						{
+							p.Statuses.FillInfo(p.Info);
 							spawnPacket.Objects.Add(p.Info);
+						}
 					}
 
 					foreach (Monster m in _monsters.Values)
+					{
+						m.Statuses.FillInfo(m.Info);
 						spawnPacket.Objects.Add(m.Info);
+					}
 
 					foreach (Projectile p in _projectiles.Values)
 						spawnPacket.Objects.Add(p.Info);
@@ -184,6 +195,7 @@ namespace Server.Game
 					return;
 
 				Map.ApplyLeave(player);
+				player.Statuses.Clear(notify: false);
 				player.Room = null;
 
 				// 본인한테 정보 전송
@@ -242,6 +254,18 @@ namespace Server.Game
 			// 클라이언트는 스킬 종료 시 Idle 상태의 C_Move 로 서버 상태를 되돌리므로 Skill 상태에서의 요청은 허용한다
 			if (info.PosInfo.State == CreatureState.Dead)
 				return;
+
+			// 상태이상: 기절은 방향 전환도 못 하고, 결박·버팀은 제자리 방향 전환만 된다
+			Vector2Int requested = new Vector2Int(movePosInfo.PosX, movePosInfo.PosY);
+			bool wantsMove = requested.x != info.PosInfo.PosX || requested.y != info.PosInfo.PosY;
+			if (player.Statuses.CanTurn == false || (wantsMove && player.Statuses.CanMove == false))
+			{
+				S_Move correction = new S_Move();
+				correction.ObjectId = info.ObjectId;
+				correction.PosInfo = player.PosInfo;
+				player.Session.Send(correction);
+				return;
+			}
 
 			// 다른 좌표로 이동할 경우의 검증. 클라는 응답을 기다리지 않고 예측 이동(이동 중 대각선 전환·되돌아가기 포함)하므로
 			// 서버 칸과 정확히 한 칸 차이가 아니어도 허용 오차(configs 20049) 안이고 목표 칸이 비어 있으면 받아들인다.
@@ -354,6 +378,10 @@ namespace Server.Game
 			if (info.PosInfo.State != CreatureState.Idle)
 				return;
 
+			// 기절 중에는 공격·스킬 불가(결박은 공격 가능)
+			if (player.Statuses.CanAct == false)
+				return;
+
 			if (skillPacket.Info == null)
 				return;
 
@@ -369,7 +397,7 @@ namespace Server.Game
 				return;
 
 			// 쿨타임 체크. 지금 스킬은 Space 평타 자리의 레거시 스킬이라 공격 속도(원혼 배율 포함)로 간격을 나눈다.
-			int cooldownMs = (int)(1000 * skillData.cooldown / player.AttackSpeed);
+			int cooldownMs = (int)(1000 * skillData.cooldown / player.CurrentAttackSpeed);
 			long now = Environment.TickCount64;
 			if (player.NextSkillTick > now)
 				return;

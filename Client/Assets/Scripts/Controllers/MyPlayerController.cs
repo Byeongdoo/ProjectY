@@ -71,7 +71,9 @@ public class MyPlayerController : PlayerController
 		Vector3Int diff = server - CellPos;
 		// 혼절에서 부활하면(서버 상태가 Dead가 아님) 거리와 상관없이 서버 위치로 옮긴다
 		bool revived = State == CreatureState.Dead && serverPos.State != CreatureState.Dead;
-		if (revived == false && Mathf.Max(Mathf.Abs(diff.x), Mathf.Abs(diff.y)) <= tolerance)
+		// 결박·기절 등으로 움직일 수 없으면 서버 칸이 정답이다(상태이상 패킷보다 먼저 한 칸 내디딘 경우)
+		bool pinned = StatusCanMove == false && diff != Vector3Int.zero;
+		if (revived == false && pinned == false && Mathf.Max(Mathf.Abs(diff.x), Mathf.Abs(diff.y)) <= tolerance)
 			return;
 
 		CellPos = server;
@@ -117,7 +119,7 @@ public class MyPlayerController : PlayerController
 		if (MultiScene.CombatEnabled == false)
 			return;
 
-		if (_coSkillCooltime == null && Input.GetKey(KeyCode.Space))
+		if (_coSkillCooltime == null && StatusCanAct && Input.GetKey(KeyCode.Space))
 		{
 			Debug.Log("Skill !");
 
@@ -150,6 +152,9 @@ public class MyPlayerController : PlayerController
 		if (Input.GetKey(KeyCode.RightArrow)) x += 1;
 		if (SpiritSelectPanel.IsOpen)
 			x = y = 0;
+		// 기절: 이동·방향 전환 모두 불가(서버도 막는다)
+		if (StatusCanTurn == false)
+			x = y = 0;
 
 		_inputX = x;
 		_inputY = y;
@@ -165,12 +170,13 @@ public class MyPlayerController : PlayerController
 			Dir = GetDirFromVec(new Vector3Int(x, y, 0));
 
 		// Shift+방향키는 이동 없이 방향만 바꾼다 (평타가 바라보는 방향으로만 나가므로)
-		_moveKeyPressed = !_turnOnly;
+		// 결박·버팀 중에는 방향키가 방향 전환만 한다
+		_moveKeyPressed = !_turnOnly && StatusCanMove;
 	}
 
 	protected override void MoveToNextPos()
 	{
-		if (_turnOnly || SpiritSelectPanel.IsOpen)
+		if (_turnOnly || SpiritSelectPanel.IsOpen || StatusCanMove == false)
 		{
 			_inputBuffer.Clear();
 		}

@@ -87,6 +87,9 @@
   "monsterTypes": {
     "stringKeys": ["name"]
   },
+  "monsterSkills": {
+    "refs": { "character": "characterInfos", "status": "statusEffects" }
+  },
   "drops": {
     "refs": { "monsterType": "monsterTypes", "dropGroup": "dropGroups" }
   },

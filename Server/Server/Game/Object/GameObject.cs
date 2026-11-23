@@ -27,6 +27,13 @@ namespace Server.Game
 		public float AttackSpeed { get; protected set; } = 1f;
 		public float DamageTakenRate { get; protected set; } = 1f;
 
+		// 걸린 상태이상. 이동·공격 가능 여부와 공격력·속도·받는 피해 배율에 반영한다.
+		public StatusSet Statuses { get; }
+
+		// 상태이상까지 반영한 값
+		public float CurrentMoveSpeed { get { return Speed * Statuses.MoveSpeedRate; } }
+		public float CurrentAttackSpeed { get { return AttackSpeed * Statuses.AttackSpeedRate; } }
+
 		public float Speed
 		{
 			get { return Stat.Speed; }
@@ -55,6 +62,7 @@ namespace Server.Game
 		{
 			Info.PosInfo = PosInfo;
 			Info.StatInfo = Stat;
+			Statuses = new StatusSet(this);
 		}
 
 		public virtual void Update()

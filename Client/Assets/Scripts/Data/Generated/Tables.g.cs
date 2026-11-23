@@ -663,6 +663,57 @@ namespace Table
         public MonsterTypesTable(IEnumerable<MonsterTypesRow> rows) : base("monsterTypes", rows, r => r.monsterTypeID) { }
     }
 
+    // ===== monsterSkills =====
+    [Serializable]
+    public class MonsterSkillsRow
+    {
+        /// <summary>고유 아이디</summary>
+        public int monsterSkillID;
+        /// <summary>개체</summary>
+        public int character;
+        /// <summary>슬롯</summary>
+        public int slot;
+        /// <summary>제작 키</summary>
+        public string skillKey = "";
+        /// <summary>형태</summary>
+        public int shape;
+        /// <summary>최소 거리(칸)</summary>
+        public int minRange;
+        /// <summary>사거리(칸)</summary>
+        public int range;
+        /// <summary>반경(칸)</summary>
+        public int radius;
+        /// <summary>예고 시간</summary>
+        public float castTime;
+        /// <summary>쿨타임</summary>
+        public float coolTime;
+        /// <summary>피해 계수</summary>
+        public float coefficient;
+        /// <summary>최대 대상 수</summary>
+        public int maxTarget;
+        /// <summary>상태이상</summary>
+        public int status;
+        /// <summary>상태이상 시간</summary>
+        public float statusTime;
+        /// <summary>투사체 속도(칸/초)</summary>
+        public float projectileSpeed;
+        /// <summary>돌진 시간</summary>
+        public float dashTime;
+        /// <summary>회수 시간</summary>
+        public float recoveryTime;
+    }
+
+    [Serializable]
+    public class MonsterSkillsFile
+    {
+        public List<MonsterSkillsRow> rows = new List<MonsterSkillsRow>();
+    }
+
+    public sealed class MonsterSkillsTable : RowTable<int, MonsterSkillsRow>
+    {
+        public MonsterSkillsTable(IEnumerable<MonsterSkillsRow> rows) : base("monsterSkills", rows, r => r.monsterSkillID) { }
+    }
+
     // ===== statusEffects =====
     [Serializable]
     public class StatusEffectsRow
@@ -675,6 +726,8 @@ namespace Table
         public float value;
         /// <summary>최대 중첩</summary>
         public int maxStack;
+        /// <summary>해로운 효과(1=해로움)</summary>
+        public int harmful;
     }
 
     [Serializable]
@@ -1251,6 +1304,7 @@ namespace Table
         public static SpiritsTable Spirits { get; private set; }
         public static SpiritSkillsTable SpiritSkills { get; private set; }
         public static MonsterTypesTable MonsterTypes { get; private set; }
+        public static MonsterSkillsTable MonsterSkills { get; private set; }
         public static StatusEffectsTable StatusEffects { get; private set; }
         public static DropsTable Drops { get; private set; }
         public static SpawnGroupsTable SpawnGroups { get; private set; }
@@ -1292,6 +1346,7 @@ namespace Table
             Spirits = Load<SpiritsFile, SpiritsTable>(reader, "Spirits", f => new SpiritsTable(f.rows));
             SpiritSkills = Load<SpiritSkillsFile, SpiritSkillsTable>(reader, "SpiritSkills", f => new SpiritSkillsTable(f.rows));
             MonsterTypes = Load<MonsterTypesFile, MonsterTypesTable>(reader, "MonsterTypes", f => new MonsterTypesTable(f.rows));
+            MonsterSkills = Load<MonsterSkillsFile, MonsterSkillsTable>(reader, "MonsterSkills", f => new MonsterSkillsTable(f.rows));
             StatusEffects = Load<StatusEffectsFile, StatusEffectsTable>(reader, "StatusEffects", f => new StatusEffectsTable(f.rows));
             Drops = Load<DropsFile, DropsTable>(reader, "Drops", f => new DropsTable(f.rows));
             SpawnGroups = Load<SpawnGroupsFile, SpawnGroupsTable>(reader, "SpawnGroups", f => new SpawnGroupsTable(f.rows));

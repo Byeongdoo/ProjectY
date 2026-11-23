@@ -42,7 +42,11 @@ class PacketManager
 		_onRecv.Add((ushort)MsgId.SChangeScene, MakePacket<S_ChangeScene>);
 		_handler.Add((ushort)MsgId.SChangeScene, PacketHandler.S_ChangeSceneHandler);		
 		_onRecv.Add((ushort)MsgId.SEnterDungeonReject, MakePacket<S_EnterDungeonReject>);
-		_handler.Add((ushort)MsgId.SEnterDungeonReject, PacketHandler.S_EnterDungeonRejectHandler);
+		_handler.Add((ushort)MsgId.SEnterDungeonReject, PacketHandler.S_EnterDungeonRejectHandler);		
+		_onRecv.Add((ushort)MsgId.SChangeStatus, MakePacket<S_ChangeStatus>);
+		_handler.Add((ushort)MsgId.SChangeStatus, PacketHandler.S_ChangeStatusHandler);		
+		_onRecv.Add((ushort)MsgId.SSkillWarning, MakePacket<S_SkillWarning>);
+		_handler.Add((ushort)MsgId.SSkillWarning, PacketHandler.S_SkillWarningHandler);
 	}
 
 	public void OnRecvPacket(PacketSession session, ArraySegment<byte> buffer)

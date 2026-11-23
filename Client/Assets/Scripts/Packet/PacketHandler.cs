@@ -95,6 +95,26 @@ class PacketHandler
 		}
 	}
 
+	// 상태이상 적용·갱신·해제. 판정은 서버가 하고 클라는 표시·이동 속도·입력 제한에 쓴다.
+	public static void S_ChangeStatusHandler(PacketSession session, IMessage packet)
+	{
+		S_ChangeStatus statusPacket = packet as S_ChangeStatus;
+
+		GameObject go = Managers.Object.FindById(statusPacket.ObjectId);
+		if (go == null)
+			return;
+
+		CreatureController cc = go.GetComponent<CreatureController>();
+		if (cc != null && statusPacket.Status != null)
+			cc.SetStatus(statusPacket.Status);
+	}
+
+	// 적 특수기 예고 칸. 표시만 하고 판정은 서버가 한다.
+	public static void S_SkillWarningHandler(PacketSession session, IMessage packet)
+	{
+		SkillWarningView.Handle(packet as S_SkillWarning);
+	}
+
 	public static void S_ChangeHpHandler(PacketSession session, IMessage packet)
 	{
 		S_ChangeHp changePacket = packet as S_ChangeHp;

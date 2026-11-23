@@ -212,6 +212,19 @@ namespace Server.Game
 			if (Room == null || State == CreatureState.Dead)
 				return;
 
+			Statuses.Update();
+
+			// 기절: 아무 행동도 하지 않는다(복귀 중에는 상태이상을 지웠으므로 해당 없음)
+			if (_returning == false && Statuses.CanAct == false)
+			{
+				if (State != CreatureState.Idle)
+				{
+					State = CreatureState.Idle;
+					BroadcastMove();
+				}
+				return;
+			}
+
 			if (_returning)
 				UpdateReturn();
 			else if (Engaged)
@@ -258,7 +271,7 @@ namespace Server.Game
 			Vector2Int toTarget = _target.CellPos - CellPos;
 
 			// 유지 최소 거리보다 가까우면 물러선다. 물러날 칸이 없으면 제자리에서 공격한다.
-			if (toTarget.cellDist < _keepMin && TryRetreat(_target.CellPos))
+			if (toTarget.cellDist < _keepMin && Statuses.CanMove && TryRetreat(_target.CellPos))
 				return;
 
 			// 근접은 벽 모서리 너머를 치지 못하고(이동과 같은 모서리 규칙), 원거리는 시야가 트여야 친다.
@@ -279,7 +292,7 @@ namespace Server.Game
 
 				if (_nextAttackTick > now)
 					return;
-				_nextAttackTick = now + (long)(1000 * Config(ConfigBasicInterval) / AttackSpeed);
+				_nextAttackTick = now + (long)(1000 * Config(ConfigBasicInterval) / CurrentAttackSpeed);
 				BasicAttack();
 				return;
 			}
@@ -345,6 +358,19 @@ namespace Server.Game
 
 		StepResult StepToward(Vector2Int dest)
 		{
+			// 결박·버팀: 움직이지 않고 그쪽을 바라보며 기다린다
+			if (Statuses.CanMove == false)
+			{
+				MoveDir lookDir = GetDirFromVec(dest - CellPos);
+				if (State != CreatureState.Idle || Dir != lookDir)
+				{
+					State = CreatureState.Idle;
+					Dir = lookDir;
+					BroadcastMove();
+				}
+				return StepResult.Blocked;
+			}
+
 			List<Vector2Int> path = Room.Map.FindPath(CellPos, dest, checkObjects: true);
 			if (path.Count < 2)
 				path = Room.Map.FindPath(CellPos, dest, checkObjects: false);
@@ -375,7 +401,7 @@ namespace Server.Game
 		void MoveOneCell(Vector2Int next)
 		{
 			Vector2Int step = next - CellPos;
-			int moveTick = (int)(1000 / Speed);
+			int moveTick = (int)(1000 / CurrentMoveSpeed);
 			if (step.x != 0 && step.y != 0)
 				moveTick = (int)(moveTick * Config(ConfigDiagonalTimeScale));
 			_nextMoveTick = Environment.TickCount64 + moveTick;
@@ -390,6 +416,7 @@ namespace Server.Game
 		void StartReturn()
 		{
 			_returning = true;
+			Statuses.Clear();
 			_threat.Clear();
 			_target = null;
 		}

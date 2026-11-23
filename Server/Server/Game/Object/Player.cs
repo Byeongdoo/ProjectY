@@ -88,6 +88,7 @@ namespace Server.Game
 
 			FaintSerial++;
 			State = CreatureState.Dead;
+			Statuses.Clear();
 
 			S_Die diePacket = new S_Die();
 			diePacket.ObjectId = Id;

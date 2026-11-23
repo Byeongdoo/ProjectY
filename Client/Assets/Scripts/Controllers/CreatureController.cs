@@ -88,6 +88,83 @@ public class CreatureController : BaseController
 		_sprite.flipX = false;
 	}
 
+	#region 상태이상
+
+	// statusEffects.statusID (서버 StatusId와 같은 값, 데이터 키)
+	public const int StatusBind = 8001;    // 결박 — 이동 불가
+	public const int StatusSlow = 8004;    // 둔화 — 이동·공격 속도 감소
+	public const int StatusStun = 8005;    // 기절 — 이동·공격·방향 전환 불가
+	public const int StatusHaste = 8007;   // 신속 — 이동 속도 증가
+	public const int StatusBrace = 8009;   // 버팀 — 이동 불가
+
+	// statusID → 끝나는 시각(Time.time). 서버가 해제를 보내지만, 패킷이 늦어도 표시가 남지 않게 시간으로도 지운다.
+	readonly Dictionary<int, float> _statusEnd = new Dictionary<int, float>();
+
+	public void SetStatuses(IEnumerable<StatusInfo> statuses)
+	{
+		_statusEnd.Clear();
+		foreach (StatusInfo s in statuses)
+			SetStatus(s);
+	}
+
+	public void SetStatus(StatusInfo status)
+	{
+		if (status.RemainMs <= 0)
+			_statusEnd.Remove(status.StatusId);
+		else
+			_statusEnd[status.StatusId] = Time.time + status.RemainMs / 1000f;
+	}
+
+	public bool HasStatus(int statusId)
+	{
+		return _statusEnd.TryGetValue(statusId, out float end) && end > Time.time;
+	}
+
+	public bool StatusCanMove { get { return !HasStatus(StatusBind) && !HasStatus(StatusStun) && !HasStatus(StatusBrace); } }
+	public bool StatusCanAct { get { return !HasStatus(StatusStun); } }
+	public bool StatusCanTurn { get { return !HasStatus(StatusStun); } }
+
+	// 서버 StatusSet과 같은 규칙: 증가는 × (1 + 값), 감소는 × (1 − 값), 여러 효과는 곱한다
+	public override float MoveSpeed
+	{
+		get { return Speed * StatusRate(StatusSlow, -1) * StatusRate(StatusHaste, +1); }
+	}
+
+	float StatusRate(int statusId, int sign)
+	{
+		if (HasStatus(statusId) == false || Table.TableManager.StatusEffects.TryGet(statusId, out Table.StatusEffectsRow row) == false)
+			return 1f;
+		return Mathf.Max(0f, 1f + sign * row.value);
+	}
+
+	// 임시 표시: 체력 막대 위에 상태이상 이름(해로움 = 붉은색, 이로움 = 금색). 문양·HUD 아이콘 리소스가 오면 교체한다.
+	static GUIStyle s_statusStyle;
+
+	void OnGUI()
+	{
+		if (_statusEnd.Count == 0 || Camera.main == null)
+			return;
+
+		Vector3 screen = Camera.main.WorldToScreenPoint(transform.position + new Vector3(0, _hpBarHeight + 0.35f, 0));
+		if (screen.z < 0)
+			return;
+
+		if (s_statusStyle == null)
+			s_statusStyle = new GUIStyle(GUI.skin.label) { alignment = TextAnchor.MiddleCenter, fontSize = 12, fontStyle = FontStyle.Bold };
+
+		float y = Screen.height - screen.y;
+		foreach (KeyValuePair<int, float> kv in _statusEnd)
+		{
+			if (kv.Value <= Time.time || Table.TableManager.StatusEffects.TryGet(kv.Key, out Table.StatusEffectsRow row) == false)
+				continue;
+			s_statusStyle.normal.textColor = row.harmful != 0 ? new Color(1f, 0.45f, 0.4f) : new Color(1f, 0.85f, 0.3f);
+			GUI.Label(new Rect(screen.x - 60, y - 10, 120, 20), Localization.Get(row.name), s_statusStyle);
+			y -= 14;
+		}
+	}
+
+	#endregion
+
 	public virtual void OnDamaged()
 	{
 
@@ -96,6 +173,7 @@ public class CreatureController : BaseController
 	public virtual void OnDead()
 	{
 		State = CreatureState.Dead;
+		_statusEnd.Clear();
 
 		// 쓰러짐 이펙트 리소스(Prefabs/Effect/DieEffect)는 새 리소스가 나올 때까지 비어 있다. 없으면 건너뛴다.
 		if (Resources.Load<GameObject>("Prefabs/Effect/DieEffect") == null)
