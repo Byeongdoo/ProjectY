@@ -54,7 +54,7 @@ public class SpiritSelectPanel : MonoBehaviour
 		foreach (SpiritsRow row in TableManager.Spirits.Rows)
 		{
 			_spirits.Add(row);
-			GameObject prefab = Resources.Load<GameObject>(ObjectManager.SpiritPrefabPath(row, mine: false));
+			GameObject prefab = Resources.Load<GameObject>(ObjectManager.SpiritPrefabPath(row));
 			_icons.Add(prefab != null ? prefab.GetComponent<SpriteRenderer>().sprite : null);
 		}
 	}

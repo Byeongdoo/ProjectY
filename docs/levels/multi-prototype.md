@@ -7,8 +7,8 @@
 1. `Tools > ProjectY > Levels > Gamcheon > Setup Scene` — 감천 신단에 `IseungAltar`가 붙는다. `Protagonist.controller`도 여기서 만든다.
 2. `Tools > ProjectY > Levels > Build Multi Prototype` ([MultiPrototypeBuilder.cs](../../Client/Assets/Editor/MultiLevels/MultiPrototypeBuilder.cs))
    - 씬: `Assets/Scenes/Multi/Samcheondo.unity`, `Dungeon_87101.unity` (Build Settings 등록)
-   - 프리팹: `Resources/Prefabs/Creature/MudangMyPlayer`, `MudangPlayer` (주인공 8방향 스프라이트) — 삼천도용
-   - 원혼 프리팹: `Resources/Prefabs/Creature/Spirit/PC_Spirit_01~05`(`_My` = 내 캐릭터) — 던전용. 이름은 `spirits.prefabName`, 생성은 `Tools > ProjectY > Build Spirit Player Prefabs`
+   - 프리팹: `Resources/Prefabs/Creature/MudangPlayer` (주인공 8방향 스프라이트, 외형 + `CreatureVisual`만. 컨트롤러는 생성 시 `ObjectManager`가 붙임) — 삼천도용
+   - 원혼 프리팹: `Resources/Prefabs/Creature/Spirit/PC_Spirit_01~05`(원혼당 1개, 외형 + `CreatureVisual`만. 컨트롤러는 생성 시 `ObjectManager`가 `MyPlayerController`/`PlayerController`로 붙임) — 던전용. 이름은 `spirits.prefabName`, 생성은 `Tools > ProjectY > Build Spirit Player Prefabs`
    - 서버 맵: `Common/MapData/<씬>.txt`(충돌) + `<씬>.markers.json`(입장 영역·시설 칸)
 3. 서버 재시작. 서버는 시작할 때 `Samcheondo.txt`가 없으면 종료한다.
 

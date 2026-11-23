@@ -10,21 +10,30 @@ public class ObjectManager
 	Dictionary<int, GameObject> _objects = new Dictionary<int, GameObject>();
 
 	// 무당 본모습(주인공 스프라이트, 삼천도). 프리팹은 멀티 씬 빌더(Tools > ProjectY > Levels > Build Multi Prototype)가 만든다.
-	const string MyPlayerPrefab = "Creature/MudangMyPlayer";
-	const string PlayerPrefab = "Creature/MudangPlayer";
+	// 원혼과 같이 외형만 담은 프리팹 1개이고, 컨트롤러는 생성할 때 붙인다(InstantiatePlayer).
+	const string MudangPlayerPrefab = "Creature/MudangPlayer";
 
 	// 저승 던전에서는 나루터에서 고른 원혼(ObjectInfo.SpiritId)의 캐릭터로 나온다.
 	// 프리팹 이름은 spirits.prefabName, 생성은 Tools > ProjectY > Build Spirit Player Prefabs.
-	public static string SpiritPrefabPath(Table.SpiritsRow row, bool mine)
+	// 원혼 프리팹은 원혼당 1개(외형 + CreatureVisual)이고, 컨트롤러는 생성할 때 붙인다(InstantiatePlayer).
+	public static string SpiritPrefabPath(Table.SpiritsRow row)
 	{
-		return $"Prefabs/Creature/Spirit/{row.prefabName}{(mine ? "_My" : "")}";
+		return $"Prefabs/Creature/Spirit/{row.prefabName}";
 	}
 
-	static string PlayerPrefabFor(int spiritId, bool mine)
+	static string PlayerPrefabFor(int spiritId)
 	{
 		if (spiritId != 0 && Table.TableManager.Spirits.TryGet(spiritId, out Table.SpiritsRow row))
-			return SpiritPrefabPath(row, mine).Substring("Prefabs/".Length);
-		return mine ? MyPlayerPrefab : PlayerPrefab;
+			return SpiritPrefabPath(row).Substring("Prefabs/".Length);
+		return MudangPlayerPrefab;
+	}
+
+	// 플레이어 프리팹(무당·원혼)은 외형만 담는다. 내 캐릭터면 MyPlayerController, 다른 플레이어면 PlayerController를 붙인다.
+	// Init은 Start에서 돌므로 여기서 붙여도 같은 프레임 안에 초기화된다.
+	static T InstantiatePlayer<T>(int spiritId) where T : PlayerController
+	{
+		GameObject go = Managers.Resource.Instantiate(PlayerPrefabFor(spiritId));
+		return go.AddComponent<T>();
 	}
 
 	// 망령은 characterInfos.prefabName 프리팹(Prefabs/Creature/Monster, 생성은 Tools > ProjectY > Build Monster Prefabs).
@@ -78,11 +87,11 @@ public class ObjectManager
 		{
 			if (myPlayer)
 			{
-				GameObject go = Managers.Resource.Instantiate(PlayerPrefabFor(info.SpiritId, mine: true));
+				MyPlayer = InstantiatePlayer<MyPlayerController>(info.SpiritId);
+				GameObject go = MyPlayer.gameObject;
 				go.name = info.Name;
 				_objects.Add(info.ObjectId, go);
 
-				MyPlayer = go.GetComponent<MyPlayerController>();
 				MyPlayer.Id = info.ObjectId;
 				MyPlayer.PosInfo = info.PosInfo;
 				MyPlayer.Stat = info.StatInfo;
@@ -90,11 +99,11 @@ public class ObjectManager
 			}
 			else
 			{
-				GameObject go = Managers.Resource.Instantiate(PlayerPrefabFor(info.SpiritId, mine: false));
+				PlayerController pc = InstantiatePlayer<PlayerController>(info.SpiritId);
+				GameObject go = pc.gameObject;
 				go.name = info.Name;
 				_objects.Add(info.ObjectId, go);
 
-				PlayerController pc = go.GetComponent<PlayerController>();
 				pc.Id = info.ObjectId;
 				pc.PosInfo = info.PosInfo;
 				pc.Stat = info.StatInfo;

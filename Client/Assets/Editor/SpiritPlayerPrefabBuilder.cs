@@ -9,8 +9,8 @@ using UnityEngine;
 
 // 원혼 5종(SpiritsV2)을 저승 던전에서 플레이어 캐릭터로 쓰는 프리팹으로 만든다.
 //   - SpiritsV2/<키>/<키>.controller : 11동작 × 8방향 클립을 상태 이름 = 클립 이름(IDLE_SOUTH …)으로 담는다. 전환은 PlayerController가 Play로 한다.
-//   - Resources/Prefabs/Creature/Spirit/<prefabName>.prefab     : 다른 플레이어용(PlayerController)
-//   - Resources/Prefabs/Creature/Spirit/<prefabName>_My.prefab  : 내 캐릭터용(MyPlayerController)
+//   - Resources/Prefabs/Creature/Spirit/<prefabName>.prefab : 외형(SpriteRenderer·Animator) + 표시 설정(CreatureVisual)만 담는다.
+//     컨트롤러는 생성 시 ObjectManager가 붙인다(내 캐릭터 MyPlayerController / 다른 플레이어 PlayerController).
 // 프리팹 이름은 spirits.prefabName(테이블)이 원본이다. 아래 표는 원혼 ID ↔ 아트 폴더 연결만 정한다.
 public static class SpiritPlayerPrefabBuilder
 {
@@ -45,22 +45,19 @@ public static class SpiritPlayerPrefabBuilder
             if (!sprite) throw new Exception($"원혼 정면 스프라이트 누락: {root}/Sprites/Rotations/south.png");
             float hpBarHeight = OpaqueTop(sprite);
 
-            foreach (bool mine in new[] { false, true })
-            {
-                string name = mine ? row.prefabName + "_My" : row.prefabName;
-                var go = new GameObject(name, typeof(SpriteRenderer), typeof(Animator));
-                var sr = go.GetComponent<SpriteRenderer>();
-                sr.sprite = sprite; sr.sortingOrder = order; sr.spriteSortPoint = SpriteSortPoint.Pivot;
-                go.GetComponent<Animator>().runtimeAnimatorController = ctrl;
-                PlayerController pc = mine ? go.AddComponent<MyPlayerController>() : go.AddComponent<PlayerController>();
-                var so = new SerializedObject(pc);
-                so.FindProperty("_eightDirClips").boolValue = true;
-                so.FindProperty("_hpBarHeight").floatValue = hpBarHeight;
-                so.ApplyModifiedPropertiesWithoutUndo();
-                PrefabUtility.SaveAsPrefabAsset(go, $"{PrefabDir}/{name}.prefab");
-                UnityEngine.Object.DestroyImmediate(go);
-            }
-            Debug.Log($"[SpiritPlayerPrefabBuilder] {spiritId} {key} → {row.prefabName}(_My), 체력 막대 높이 {hpBarHeight:0.###}");
+            var go = new GameObject(row.prefabName, typeof(SpriteRenderer), typeof(Animator), typeof(CreatureVisual));
+            var sr = go.GetComponent<SpriteRenderer>();
+            sr.sprite = sprite; sr.sortingOrder = order; sr.spriteSortPoint = SpriteSortPoint.Pivot;
+            go.GetComponent<Animator>().runtimeAnimatorController = ctrl;
+            var visual = go.GetComponent<CreatureVisual>();
+            visual.eightDirClips = true;
+            visual.hpBarHeight = hpBarHeight;
+            PrefabUtility.SaveAsPrefabAsset(go, $"{PrefabDir}/{row.prefabName}.prefab");
+            UnityEngine.Object.DestroyImmediate(go);
+
+            // 예전 구조(내 캐릭터용 _My 프리팹)가 남아 있으면 지운다
+            AssetDatabase.DeleteAsset($"{PrefabDir}/{row.prefabName}_My.prefab");
+            Debug.Log($"[SpiritPlayerPrefabBuilder] {spiritId} {key} → {row.prefabName}, 체력 막대 높이 {hpBarHeight:0.###}");
         }
         AssetDatabase.SaveAssets();
     }

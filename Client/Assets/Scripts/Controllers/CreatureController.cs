@@ -47,6 +47,14 @@ public class CreatureController : BaseController
 
 	protected override void Init()
 	{
+		// 외형 전용 프리팹(원혼)은 컨트롤러를 생성 시 붙이므로 표시 설정을 CreatureVisual에서 가져온다
+		CreatureVisual visual = GetComponent<CreatureVisual>();
+		if (visual != null)
+		{
+			_hpBarHeight = visual.hpBarHeight;
+			_eightDirClips = visual.eightDirClips;
+		}
+
 		base.Init();
 		// 삼천도처럼 전투가 없는 곳에서는 체력 막대를 띄우지 않는다
 		if (MultiScene.CombatEnabled)
