@@ -974,6 +974,10 @@ namespace Table
         public float exhaustTime;
         /// <summary>이름 표시</summary>
         public int showName;
+        /// <summary>형태</summary>
+        public int shape;
+        /// <summary>반경(칸)</summary>
+        public int radius;
     }
 
     [Serializable]

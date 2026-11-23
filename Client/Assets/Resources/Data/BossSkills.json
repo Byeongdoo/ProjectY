@@ -15,7 +15,9 @@
       "status": 0,
       "statusTime": 0,
       "exhaustTime": 0,
-      "showName": 0
+      "showName": 0,
+      "shape": 7,
+      "radius": 0
     },
     {
       "bossSkillID": 300010112,
@@ -32,7 +34,9 @@
       "status": 0,
       "statusTime": 0,
       "exhaustTime": 0,
-      "showName": 0
+      "showName": 0,
+      "shape": 4,
+      "radius": 1
     },
     {
       "bossSkillID": 300010113,
@@ -49,7 +53,9 @@
       "status": 8001,
       "statusTime": 4,
       "exhaustTime": 0,
-      "showName": 0
+      "showName": 0,
+      "shape": 7,
+      "radius": 0
     },
     {
       "bossSkillID": 300010121,
@@ -66,7 +72,9 @@
       "status": 0,
       "statusTime": 0,
       "exhaustTime": 0,
-      "showName": 0
+      "showName": 0,
+      "shape": 6,
+      "radius": 4
     },
     {
       "bossSkillID": 300010122,
@@ -83,7 +91,9 @@
       "status": 8001,
       "statusTime": 3,
       "exhaustTime": 0,
-      "showName": 1
+      "showName": 1,
+      "shape": 7,
+      "radius": 0
     },
     {
       "bossSkillID": 300010123,
@@ -100,7 +110,9 @@
       "status": 0,
       "statusTime": 0,
       "exhaustTime": 6,
-      "showName": 0
+      "showName": 0,
+      "shape": 2,
+      "radius": 4
     },
     {
       "bossSkillID": 300020111,
@@ -117,7 +129,9 @@
       "status": 0,
       "statusTime": 0,
       "exhaustTime": 0,
-      "showName": 0
+      "showName": 0,
+      "shape": 0,
+      "radius": 0
     },
     {
       "bossSkillID": 300020112,
@@ -134,7 +148,9 @@
       "status": 8001,
       "statusTime": 2,
       "exhaustTime": 0,
-      "showName": 0
+      "showName": 0,
+      "shape": 0,
+      "radius": 0
     },
     {
       "bossSkillID": 300020113,
@@ -151,7 +167,9 @@
       "status": 8004,
       "statusTime": 3,
       "exhaustTime": 0,
-      "showName": 0
+      "showName": 0,
+      "shape": 0,
+      "radius": 0
     },
     {
       "bossSkillID": 300020121,
@@ -168,7 +186,9 @@
       "status": 0,
       "statusTime": 0,
       "exhaustTime": 4,
-      "showName": 0
+      "showName": 0,
+      "shape": 0,
+      "radius": 0
     },
     {
       "bossSkillID": 300020122,
@@ -185,7 +205,9 @@
       "status": 0,
       "statusTime": 0,
       "exhaustTime": 0,
-      "showName": 1
+      "showName": 1,
+      "shape": 0,
+      "radius": 0
     },
     {
       "bossSkillID": 300020123,
@@ -202,7 +224,9 @@
       "status": 0,
       "statusTime": 0,
       "exhaustTime": 0,
-      "showName": 0
+      "showName": 0,
+      "shape": 0,
+      "radius": 0
     },
     {
       "bossSkillID": 300030111,
@@ -219,7 +243,9 @@
       "status": 8003,
       "statusTime": 6,
       "exhaustTime": 0,
-      "showName": 0
+      "showName": 0,
+      "shape": 0,
+      "radius": 0
     },
     {
       "bossSkillID": 300030112,
@@ -236,7 +262,9 @@
       "status": 0,
       "statusTime": 0,
       "exhaustTime": 0,
-      "showName": 1
+      "showName": 1,
+      "shape": 0,
+      "radius": 0
     },
     {
       "bossSkillID": 300030113,
@@ -253,7 +281,9 @@
       "status": 0,
       "statusTime": 0,
       "exhaustTime": 0,
-      "showName": 0
+      "showName": 0,
+      "shape": 0,
+      "radius": 0
     },
     {
       "bossSkillID": 300030121,
@@ -270,7 +300,9 @@
       "status": 8003,
       "statusTime": 6,
       "exhaustTime": 0,
-      "showName": 0
+      "showName": 0,
+      "shape": 0,
+      "radius": 0
     },
     {
       "bossSkillID": 300030122,
@@ -287,7 +319,9 @@
       "status": 0,
       "statusTime": 0,
       "exhaustTime": 0,
-      "showName": 0
+      "showName": 0,
+      "shape": 0,
+      "radius": 0
     },
     {
       "bossSkillID": 300030123,
@@ -304,7 +338,9 @@
       "status": 0,
       "statusTime": 0,
       "exhaustTime": 0,
-      "showName": 0
+      "showName": 0,
+      "shape": 0,
+      "radius": 0
     },
     {
       "bossSkillID": 300040111,
@@ -321,7 +357,9 @@
       "status": 0,
       "statusTime": 0,
       "exhaustTime": 0,
-      "showName": 0
+      "showName": 0,
+      "shape": 0,
+      "radius": 0
     },
     {
       "bossSkillID": 300040112,
@@ -338,7 +376,9 @@
       "status": 0,
       "statusTime": 0,
       "exhaustTime": 0,
-      "showName": 0
+      "showName": 0,
+      "shape": 0,
+      "radius": 0
     },
     {
       "bossSkillID": 300040113,
@@ -355,7 +395,9 @@
       "status": 8002,
       "statusTime": 5,
       "exhaustTime": 0,
-      "showName": 0
+      "showName": 0,
+      "shape": 0,
+      "radius": 0
     },
     {
       "bossSkillID": 300040114,
@@ -372,7 +414,9 @@
       "status": 8004,
       "statusTime": 4,
       "exhaustTime": 0,
-      "showName": 0
+      "showName": 0,
+      "shape": 0,
+      "radius": 0
     },
     {
       "bossSkillID": 300040211,
@@ -389,7 +433,9 @@
       "status": 0,
       "statusTime": 0,
       "exhaustTime": 0,
-      "showName": 0
+      "showName": 0,
+      "shape": 0,
+      "radius": 0
     },
     {
       "bossSkillID": 300040212,
@@ -406,7 +452,9 @@
       "status": 0,
       "statusTime": 0,
       "exhaustTime": 0,
-      "showName": 0
+      "showName": 0,
+      "shape": 0,
+      "radius": 0
     },
     {
       "bossSkillID": 300040213,
@@ -423,7 +471,9 @@
       "status": 8001,
       "statusTime": 3,
       "exhaustTime": 0,
-      "showName": 1
+      "showName": 1,
+      "shape": 0,
+      "radius": 0
     },
     {
       "bossSkillID": 300040221,
@@ -440,7 +490,9 @@
       "status": 8004,
       "statusTime": 5,
       "exhaustTime": 0,
-      "showName": 0
+      "showName": 0,
+      "shape": 0,
+      "radius": 0
     },
     {
       "bossSkillID": 300040222,
@@ -457,7 +509,9 @@
       "status": 0,
       "statusTime": 0,
       "exhaustTime": 0,
-      "showName": 0
+      "showName": 0,
+      "shape": 0,
+      "radius": 0
     },
     {
       "bossSkillID": 300040223,
@@ -474,7 +528,9 @@
       "status": 0,
       "statusTime": 0,
       "exhaustTime": 6,
-      "showName": 1
+      "showName": 1,
+      "shape": 0,
+      "radius": 0
     },
     {
       "bossSkillID": 300050111,
@@ -491,7 +547,9 @@
       "status": 0,
       "statusTime": 0,
       "exhaustTime": 0,
-      "showName": 0
+      "showName": 0,
+      "shape": 0,
+      "radius": 0
     },
     {
       "bossSkillID": 300050112,
@@ -508,7 +566,9 @@
       "status": 0,
       "statusTime": 0,
       "exhaustTime": 0,
-      "showName": 0
+      "showName": 0,
+      "shape": 0,
+      "radius": 0
     },
     {
       "bossSkillID": 300050113,
@@ -525,7 +585,9 @@
       "status": 8002,
       "statusTime": 5,
       "exhaustTime": 0,
-      "showName": 0
+      "showName": 0,
+      "shape": 0,
+      "radius": 0
     },
     {
       "bossSkillID": 300050114,
@@ -542,7 +604,9 @@
       "status": 8004,
       "statusTime": 4,
       "exhaustTime": 0,
-      "showName": 0
+      "showName": 0,
+      "shape": 0,
+      "radius": 0
     },
     {
       "bossSkillID": 300050121,
@@ -559,7 +623,9 @@
       "status": 0,
       "statusTime": 0,
       "exhaustTime": 0,
-      "showName": 0
+      "showName": 0,
+      "shape": 0,
+      "radius": 0
     },
     {
       "bossSkillID": 300050122,
@@ -576,7 +642,9 @@
       "status": 0,
       "statusTime": 0,
       "exhaustTime": 0,
-      "showName": 1
+      "showName": 1,
+      "shape": 0,
+      "radius": 0
     },
     {
       "bossSkillID": 300050123,
@@ -593,7 +661,9 @@
       "status": 8003,
       "statusTime": 6,
       "exhaustTime": 0,
-      "showName": 0
+      "showName": 0,
+      "shape": 0,
+      "radius": 0
     },
     {
       "bossSkillID": 300050131,
@@ -610,7 +680,9 @@
       "status": 0,
       "statusTime": 0,
       "exhaustTime": 0,
-      "showName": 0
+      "showName": 0,
+      "shape": 0,
+      "radius": 0
     },
     {
       "bossSkillID": 300050132,
@@ -627,7 +699,9 @@
       "status": 0,
       "statusTime": 0,
       "exhaustTime": 0,
-      "showName": 1
+      "showName": 1,
+      "shape": 0,
+      "radius": 0
     },
     {
       "bossSkillID": 300050133,
@@ -644,7 +718,9 @@
       "status": 0,
       "statusTime": 0,
       "exhaustTime": 0,
-      "showName": 0
+      "showName": 0,
+      "shape": 0,
+      "radius": 0
     },
     {
       "bossSkillID": 300050134,
@@ -661,7 +737,9 @@
       "status": 0,
       "statusTime": 0,
       "exhaustTime": 6,
-      "showName": 1
+      "showName": 1,
+      "shape": 0,
+      "radius": 0
     }
   ]
 }

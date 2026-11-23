@@ -30,6 +30,7 @@ enum MsgId {
   S_DUNGEON_STATE = 22;
   S_SKILL_WARNING = 23;
   C_DEBUG_COMMAND = 24;
+  S_LOOT = 25;
 }
 
 // 개발·테스트용 명령(서버 config.json의 debugCommands가 true일 때만 받는다). 실제 콘텐츠에 쓰지 않는다
@@ -253,6 +254,18 @@ message S_SkillWarning {
   int32 skillId = 3;    // monsterSkills.monsterSkillID
   int32 durationMs = 4; // 예고 시간(ms). 0 = 지움
   repeated CellPos cells = 5;
+}
+
+// 적 처치 보상(개인 굴림, '망령(적) 시스템' 2-8·'장비 아이템 시스템' 2-8). 받는 플레이어 본인에게만 보낸다.
+// 장비는 drops·dropGroups로 굴린 items.itemID, 혼백은 itemID 9500. 클라는 받는 즉시 가방에 넣는다(자동 획득)
+message S_Loot {
+  int32 sourceId = 1; // 처치된 적 오브젝트
+  repeated ItemCount items = 2;
+}
+
+message ItemCount {
+  int32 itemId = 1; // items.itemID
+  int32 count = 2;
 }
 
 message CellPos {

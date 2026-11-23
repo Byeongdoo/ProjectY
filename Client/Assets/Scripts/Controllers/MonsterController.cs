@@ -53,7 +53,7 @@ public class MonsterController : CreatureController
 			return;
 
 		ReleaseCastPose();
-		_skillAction = skillId == 0 ? "ATTACK_" : $"SKILL_{skillId % 10}_";
+		_skillAction = skillId == 0 ? "ATTACK_" : SpecialAction(skillId);
 		State = CreatureState.Skill;
 		UpdateAnimation(); // 연속 공격이면 상태가 그대로여도 클립을 처음부터 다시 튼다
 
@@ -82,10 +82,26 @@ public class MonsterController : CreatureController
 			_coSkill = null;
 		}
 		_castPose = true;
-		_skillAction = $"SKILL_{skillId % 10}_";
+		_skillAction = SpecialAction(skillId);
 		State = CreatureState.Skill;
 		UpdateAnimation();
 		_animator.speed = 0f;
+	}
+
+	// 특수기 동작 클립 접두어.
+	//   보스(bossSkills): 패턴으로 고른다 — 탱커 강타 TANK_SLAM, 탈진이 붙는 대형 패턴 MOUNTAIN_WAIL,
+	//   산개·디버프 THREAD_DEBUFF_CAST, 그 밖의 장판 ROOT_AREA_CAST(뒤틀린 목귀 리소스 기준. 클립이 없으면 서 있는 모습)
+	//   일반 적(monsterSkills = characterID×10 + 슬롯): SKILL_1/SKILL_2
+	static string SpecialAction(int skillId)
+	{
+		if (Table.TableManager.BossSkills.TryGet(skillId, out Table.BossSkillsRow boss))
+		{
+			if (boss.pattern == 1) return "TANK_SLAM_";
+			if (boss.exhaustTime > 0) return "MOUNTAIN_WAIL_";
+			if (boss.pattern == 3 || boss.pattern == 7) return "THREAD_DEBUFF_CAST_";
+			return "ROOT_AREA_CAST_";
+		}
+		return $"SKILL_{skillId % 10}_";
 	}
 
 	// 예고 취소(durationMs = 0)

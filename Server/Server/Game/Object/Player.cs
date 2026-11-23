@@ -143,17 +143,32 @@ namespace Server.Game
 		public bool IsFainted => Room != null && State == CreatureState.Dead;
 		public long FaintEndTick { get; set; }  // 이때까지 못 일어나면 마지막 불씨에서 부활
 
-		// 적 특수기별 결박 재적용 면역(configs 20055). 특수기 ID → 면역이 끝나는 틱
+		// 적 특수기별 결박 재적용 면역(configs 20055, '망령(적) 시스템' 2-5-1). 특수기 ID → 면역이 끝나는 틱.
+		// 결박이 끝나거나(만료) 풀린(해독) 순간부터 5초. 피해는 면역과 상관없이 들어간다.
 		readonly Dictionary<int, long> _bindImmuneUntil = new Dictionary<int, long>();
+		int _rootSkillId; // 지금 걸린 결박을 건 적 특수기(없으면 0)
 
 		public bool IsBindImmune(int skillId, long now)
 		{
 			return _bindImmuneUntil.TryGetValue(skillId, out long until) && until > now;
 		}
 
-		public void SetBindImmune(int skillId, long untilTick)
+		// 적 특수기가 결박을 걸 때 부른다. 결박이 사라지면 그 스킬의 면역이 시작된다
+		public void MarkRootSkill(int skillId)
 		{
-			_bindImmuneUntil[skillId] = untilTick;
+			_rootSkillId = skillId;
+		}
+
+		public override void OnStatusChanged(int statusId)
+		{
+			base.OnStatusChanged(statusId);
+
+			if (statusId == StatusId.Root && Status.Has(StatusId.Root) == false && _rootSkillId != 0)
+			{
+				long now = Environment.TickCount64;
+				_bindImmuneUntil[_rootSkillId] = now + (long)(1000 * CombatConfig.Get(CombatConfig.MonsterBindImmunity));
+				_rootSkillId = 0;
+			}
 		}
 
 		// F 홀드(혼 부르기·보스방 불씨)
@@ -174,6 +189,7 @@ namespace Server.Game
 
 		public void ResetCombatState()
 		{
+			_rootSkillId = 0; // 혼절·룸 이동으로 결박이 지워진 경우(면역 없이 끝)
 			NextBasicTick = 0;
 			GlobalCooldownTick = 0;
 			_cooldowns.Clear();
