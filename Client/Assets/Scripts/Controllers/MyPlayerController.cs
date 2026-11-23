@@ -202,7 +202,8 @@ public class MyPlayerController : PlayerController
 	}
 
 	// 개발·테스트 키(에디터·개발 빌드만). 서버 config.json debugCommands가 꺼져 있으면 서버가 무시한다.
-	//   F9 = 앞 칸에 허수아비, F10 = 허수아비 모두 정리, F11 = 체력·신력 채우고 쿨타임 초기화
+	//   F9 = 앞 칸에 허수아비, F10 = 허수아비 모두 정리, F11 = 체력·신력 채우고 쿨타임 초기화,
+	//   F12 = 테이블 다시 읽기(클라·서버) + 이 던전 한 판 새로 시작 — xlsx 수정 → 변환기 실행 → F12
 	void UpdateDebugInput()
 	{
 		if (Application.isEditor == false && Debug.isDebugBuild == false)
@@ -212,12 +213,35 @@ public class MyPlayerController : PlayerController
 		if (Input.GetKeyDown(KeyCode.F9)) command = DebugCommand.DebugSpawnDummy;
 		else if (Input.GetKeyDown(KeyCode.F10)) command = DebugCommand.DebugClearDummies;
 		else if (Input.GetKeyDown(KeyCode.F11)) command = DebugCommand.DebugRefill;
+		else if (Input.GetKeyDown(KeyCode.F12)) command = DebugCommand.DebugReload;
 		if (command == DebugCommand.DebugNone)
 			return;
 
+		if (command == DebugCommand.DebugReload && ReloadClientTables() == false)
+			return; // 클라가 새 JSON을 못 읽으면 서버도 바꾸지 않는다(양쪽 수치가 어긋나지 않게)
+
 		Managers.Network.Send(new C_DebugCommand() { Command = command });
-		if (command == DebugCommand.DebugRefill)
+		if (command == DebugCommand.DebugRefill || command == DebugCommand.DebugReload)
 			MyCombat.ClearCooldowns();
+	}
+
+	// 변환기가 Unity 밖에서 쓴 JSON을 다시 가져와(에디터) 클라 테이블을 새로 읽는다
+	static bool ReloadClientTables()
+	{
+#if UNITY_EDITOR
+		UnityEditor.AssetDatabase.ImportAsset("Assets/Resources/Data", UnityEditor.ImportAssetOptions.ImportRecursive | UnityEditor.ImportAssetOptions.ForceUpdate);
+#endif
+		try
+		{
+			Table.TableManager.LoadAll(new ResourcesTableReader());
+			Debug.Log("[Debug] 클라 테이블 다시 읽음");
+			return true;
+		}
+		catch (System.Exception e)
+		{
+			Debug.LogError($"[Debug] 클라 테이블 다시 읽기 실패: {e.Message}");
+			return false;
+		}
 	}
 
 	void Buffer(int slot, float window)

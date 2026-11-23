@@ -38,6 +38,7 @@ enum DebugCommand {
   DEBUG_SPAWN_DUMMY = 1;    // 바라보는 앞 칸에 허수아비
   DEBUG_CLEAR_DUMMIES = 2;  // 이 룸의 허수아비를 모두 없앤다
   DEBUG_REFILL = 3;         // 내 체력·신력을 채우고 쿨타임·공용 재사용 대기를 초기화
+  DEBUG_RELOAD = 4;         // 서버가 테이블 JSON을 다시 읽고, 이 던전의 한 판(망령 배치·등불·불씨)을 새로 시작
 }
 
 message C_DebugCommand {

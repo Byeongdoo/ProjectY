@@ -39,6 +39,7 @@ namespace ServerTests
 		public const int BossMokgui = 3000101;       // 뒤틀린 목귀(보스)
 
 		static bool s_loaded;
+		protected static string DataPath { get; private set; }
 		static readonly object s_lock = new object();
 
 		protected readonly GameRoom Room;
@@ -64,10 +65,11 @@ namespace ServerTests
 				if (s_loaded)
 					return;
 				string root = FindRepoRoot();
-				Table.TableManager.LoadAll(new FileTableReader(Path.Combine(root, "Client", "Assets", "Resources", "Data")));
-				// 디버그 명령(허수아비) 판정은 서버 설정을 본다
+				DataPath = Path.Combine(root, "Client", "Assets", "Resources", "Data");
+				Table.TableManager.LoadAll(new FileTableReader(DataPath));
+				// 디버그 명령(허수아비·테이블 다시 읽기)은 서버 설정을 본다
 				typeof(ConfigManager).GetProperty(nameof(ConfigManager.Config))!
-					.SetValue(null, new ServerConfig() { dataPath = "", debugCommands = true });
+					.SetValue(null, new ServerConfig() { dataPath = DataPath, debugCommands = true });
 				// 던전 실패 귀환이 삼천도 룸을 쓴다
 				if (RoomManager.Instance.Lobby == null)
 					RoomManager.Instance.CreateLobby();

@@ -188,8 +188,9 @@ class PacketHandler
 
 		GameObject go = Managers.Object.FindById(statPacket.ObjectId);
 		BaseController bc = go != null ? go.GetComponent<BaseController>() : null;
+		// 이동 속도(신속·둔화)와 테이블 다시 읽기(F12) 뒤의 체력·최대 체력 등
 		if (bc != null && statPacket.StatInfo != null)
-			bc.Speed = statPacket.StatInfo.Speed;
+			bc.Stat = statPacket.StatInfo;
 	}
 
 	public static void S_DieHandler(PacketSession session, IMessage packet)

@@ -81,19 +81,19 @@ namespace Google.Protobuf.Protocol {
             "QU5HRV9TVEFUEBASEgoOQ19DQU5DRUxfU0tJTEwQERISCg5TX0NBTkNFTF9T",
             "S0lMTBASEgwKCFNfUkVWSVZFEBMSEwoPQ19IT0xEX0lOVEVSQUNUEBQSDQoJ",
             "U19DSEFOTkVMEBUSEwoPU19EVU5HRU9OX1NUQVRFEBYSEwoPU19TS0lMTF9X",
-            "QVJOSU5HEBcSEwoPQ19ERUJVR19DT01NQU5EEBgqYAoMRGVidWdDb21tYW5k",
+            "QVJOSU5HEBcSEwoPQ19ERUJVR19DT01NQU5EEBgqcgoMRGVidWdDb21tYW5k",
             "Eg4KCkRFQlVHX05PTkUQABIVChFERUJVR19TUEFXTl9EVU1NWRABEhcKE0RF",
-            "QlVHX0NMRUFSX0RVTU1JRVMQAhIQCgxERUJVR19SRUZJTEwQAypRCgtDaGFu",
-            "bmVsS2luZBIQCgxDSEFOTkVMX05PTkUQABIVChFDSEFOTkVMX0NBTExfU09V",
-            "TBABEhkKFUNIQU5ORUxfQVJFTkFfQk9ORklSRRACKjoKDUNyZWF0dXJlU3Rh",
-            "dGUSCAoESURMRRAAEgoKBk1PVklORxABEgkKBVNLSUxMEAISCAoEREVBRBAD",
-            "KmoKB01vdmVEaXISBgoCVVAQABIICgRET1dOEAESCAoETEVGVBACEgkKBVJJ",
-            "R0hUEAMSCwoHVVBfTEVGVBAEEgwKCFVQX1JJR0hUEAUSDQoJRE9XTl9MRUZU",
-            "EAYSDgoKRE9XTl9SSUdIVBAHKk4KDkdhbWVPYmplY3RUeXBlEggKBE5PTkUQ",
-            "ABIKCgZQTEFZRVIQARILCgdNT05TVEVSEAISDgoKUFJPSkVDVElMRRADEgkK",
-            "BUZJRUxEEAQqQQoJU2tpbGxUeXBlEg4KClNLSUxMX05PTkUQABIOCgpTS0lM",
-            "TF9BVVRPEAESFAoQU0tJTExfUFJPSkVDVElMRRACQhuqAhhHb29nbGUuUHJv",
-            "dG9idWYuUHJvdG9jb2xiBnByb3RvMw=="));
+            "QlVHX0NMRUFSX0RVTU1JRVMQAhIQCgxERUJVR19SRUZJTEwQAxIQCgxERUJV",
+            "R19SRUxPQUQQBCpRCgtDaGFubmVsS2luZBIQCgxDSEFOTkVMX05PTkUQABIV",
+            "ChFDSEFOTkVMX0NBTExfU09VTBABEhkKFUNIQU5ORUxfQVJFTkFfQk9ORklS",
+            "RRACKjoKDUNyZWF0dXJlU3RhdGUSCAoESURMRRAAEgoKBk1PVklORxABEgkK",
+            "BVNLSUxMEAISCAoEREVBRBADKmoKB01vdmVEaXISBgoCVVAQABIICgRET1dO",
+            "EAESCAoETEVGVBACEgkKBVJJR0hUEAMSCwoHVVBfTEVGVBAEEgwKCFVQX1JJ",
+            "R0hUEAUSDQoJRE9XTl9MRUZUEAYSDgoKRE9XTl9SSUdIVBAHKk4KDkdhbWVP",
+            "YmplY3RUeXBlEggKBE5PTkUQABIKCgZQTEFZRVIQARILCgdNT05TVEVSEAIS",
+            "DgoKUFJPSkVDVElMRRADEgkKBUZJRUxEEAQqQQoJU2tpbGxUeXBlEg4KClNL",
+            "SUxMX05PTkUQABIOCgpTS0lMTF9BVVRPEAESFAoQU0tJTExfUFJPSkVDVElM",
+            "RRACQhuqAhhHb29nbGUuUHJvdG9idWYuUHJvdG9jb2xiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Protobuf.Protocol.MsgId), typeof(global::Google.Protobuf.Protocol.DebugCommand), typeof(global::Google.Protobuf.Protocol.ChannelKind), typeof(global::Google.Protobuf.Protocol.CreatureState), typeof(global::Google.Protobuf.Protocol.MoveDir), typeof(global::Google.Protobuf.Protocol.GameObjectType), typeof(global::Google.Protobuf.Protocol.SkillType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -178,6 +178,10 @@ namespace Google.Protobuf.Protocol {
     /// 내 체력·신력을 채우고 쿨타임·공용 재사용 대기를 초기화
     /// </summary>
     [pbr::OriginalName("DEBUG_REFILL")] DebugRefill = 3,
+    /// <summary>
+    /// 서버가 테이블 JSON을 다시 읽고, 이 던전의 한 판(망령 배치·등불·불씨)을 새로 시작
+    /// </summary>
+    [pbr::OriginalName("DEBUG_RELOAD")] DebugReload = 4,
   }
 
   /// <summary>

@@ -1,3 +1,4 @@
+using System.Reflection;
 using Google.Protobuf.Protocol;
 using Server.Game;
 using Xunit;
@@ -150,6 +151,50 @@ namespace ServerTests
 				.Invoke(Room, new object[] { 0.3f });
 
 			Assert.Equal(before, p.Stat.Hp);
+		}
+
+		[Fact]
+		public void 디버그_다시_읽기는_한_판을_새로_시작한다()
+		{
+			Player p = AddPlayer(SpiritMelee, Center);
+			Player fainted = AddPlayer(SpiritTank, At(1, 0));
+			TrainingDummy dummy = AddDummy(At(3, 0));
+			Faint(fainted, null);
+			p.Stat.Hp = 1;
+			p.Status.Apply(StatusId.Root, 30f, null);
+
+			Room.HandleDebugCommand(p, new C_DebugCommand() { Command = DebugCommand.DebugReload });
+
+			Assert.Null(dummy.Room); // 예전 허수아비는 빠지고
+			FieldInfo monsters = typeof(GameRoom).GetField("_monsters", BindingFlags.Instance | BindingFlags.NonPublic)!;
+			var all = ((Dictionary<int, Monster>)monsters.GetValue(Room)!).Values.ToList();
+			Assert.Contains(all, m => m is TrainingDummy d && d.CellPos.x == At(3, 0).x && d.CellPos.y == Center.y); // 같은 칸에 다시
+			Assert.Contains(all, m => m is not TrainingDummy);                                                     // 망령 다시 배치
+			Assert.Equal(p.Stat.MaxHp, p.Stat.Hp);
+			Assert.False(p.Status.Has(StatusId.Root));
+			Assert.Equal(CreatureState.Idle, fainted.State);
+			Assert.Equal((int)Cfg(CombatConfig.Lanterns), SessionOf(p).Of<S_DungeonState>().Last().Lanterns);
+		}
+
+		[Fact]
+		public void 다시_읽기에_실패하면_테이블도_판도_그대로()
+		{
+			Player p = AddPlayer(SpiritMelee, Center);
+			TrainingDummy dummy = AddDummy(At(2, 0));
+			var configsBefore = Table.TableManager.Configs;
+			string saved = Server.Data.ConfigManager.Config.dataPath;
+			Server.Data.ConfigManager.Config.dataPath = Path.Combine(DataPath, "does-not-exist");
+			try
+			{
+				Room.HandleDebugCommand(p, new C_DebugCommand() { Command = DebugCommand.DebugReload });
+			}
+			finally
+			{
+				Server.Data.ConfigManager.Config.dataPath = saved;
+			}
+
+			Assert.Same(configsBefore, Table.TableManager.Configs);
+			Assert.Same(Room, dummy.Room);
 		}
 
 		[Fact]
