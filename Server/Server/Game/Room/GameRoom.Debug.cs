@@ -30,6 +30,21 @@ namespace Server.Game
 			}
 		}
 
+		const int ConfigTestMonsterAttackRate = 99004; // 테스트용 망령 공격력 배율(1 = 실제 밸런스)
+		const int ConfigTestMonsterHpRate = 99005;     // 테스트용 망령 체력 배율(1 = 실제 밸런스)
+
+		// 혼자·낮은 레벨로 PC 전투를 시험할 수 있게 던전 망령을 약하게 한다. 특수기 피해도 공격력 기준이라 같이 줄어든다
+		void ApplyTestMonsterScale(Monster monster)
+		{
+			float attackRate = CombatConfig.Get(ConfigTestMonsterAttackRate);
+			float hpRate = CombatConfig.Get(ConfigTestMonsterHpRate);
+			if (attackRate == 1f && hpRate == 1f)
+				return;
+			monster.Stat.Attack = Math.Max(1, (int)Math.Round(monster.Stat.Attack * attackRate));
+			monster.Stat.MaxHp = Math.Max(1, (int)Math.Round(monster.Stat.MaxHp * hpRate));
+			monster.Stat.Hp = monster.Stat.MaxHp;
+		}
+
 		// 바라보는 앞 칸(막혔으면 가장 가까운 빈 칸)에 허수아비
 		void SpawnDummy(Player player)
 		{

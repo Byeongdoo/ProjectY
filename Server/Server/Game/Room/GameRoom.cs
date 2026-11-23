@@ -52,6 +52,7 @@ namespace Server.Game
 				{
 					Monster monster = ObjectManager.Instance.Add<Monster>();
 					monster.InitFromTable(pack.CharacterIds[i], dungeon.mobHpRate);
+					ApplyTestMonsterScale(monster);
 					monster.CellPos = cells[i];
 					monster.SpawnCell = cells[i];
 					monster.Pack = monsterPack;
