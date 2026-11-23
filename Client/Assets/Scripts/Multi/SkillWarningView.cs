@@ -20,6 +20,17 @@ public class SkillWarningView : MonoBehaviour
 
 	public static void Handle(S_SkillWarning packet)
 	{
+		// 시전자는 예고 동안 준비 자세를 유지한다(지우면 자세도 푼다)
+		GameObject caster = Managers.Object.FindById(packet.ObjectId);
+		MonsterController mc = caster != null ? caster.GetComponent<MonsterController>() : null;
+		if (mc != null)
+		{
+			if (packet.DurationMs > 0)
+				mc.BeginCastPose(packet.SkillId);
+			else
+				mc.EndCastPose();
+		}
+
 		if (s_active.TryGetValue(packet.WarningId, out SkillWarningView old))
 		{
 			s_active.Remove(packet.WarningId);

@@ -71,6 +71,19 @@ namespace Server.Game
 			base.OnDamaged(attacker, damage);
 		}
 
+		// 적 특수기별 결박 재적용 면역(configs 20052). 특수기 ID → 면역이 끝나는 틱.
+		readonly Dictionary<int, long> _bindImmuneUntil = new Dictionary<int, long>();
+
+		public bool IsBindImmune(int skillId, long now)
+		{
+			return _bindImmuneUntil.TryGetValue(skillId, out long until) && until > now;
+		}
+
+		public void SetBindImmune(int skillId, long untilTick)
+		{
+			_bindImmuneUntil[skillId] = untilTick;
+		}
+
 		// 혼절 재부활 예약을 구분하는 번호. 부활·퇴장 뒤 남은 예약이 엉뚱하게 실행되지 않게 한다.
 		public int FaintSerial { get; private set; }
 

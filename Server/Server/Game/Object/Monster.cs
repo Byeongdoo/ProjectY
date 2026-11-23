@@ -8,8 +8,8 @@ namespace Server.Game
 	// 망령(적). 서버 권위로 탐지·추격·평타·복귀를 한다('망령(적) 시스템' 2-5).
 	//   대기 → (탐지/피격) → 추격 → 공격 → (복귀 거리 초과/대상 없음) → 복귀 → 대기
 	//   대상은 위협 1위('캐릭터 조작 및 전투' 2-9). 팩 하나가 반응하면 팩 전체가 함께 반응한다.
-	// 개체별 특수기(2-5-1)는 monsterSkills 테이블이 생긴 뒤 붙인다.
-	public class Monster : GameObject
+	// 개체별 특수기(2-5-1)는 Monster.Skill.cs.
+	public partial class Monster : GameObject
 	{
 		public Monster()
 		{
@@ -32,7 +32,10 @@ namespace Server.Game
 		}
 
 		// 같은 팩(spawnGroups 1회분). 한 체가 탐지·피격되면 팩 전체가 반응한다('망령(적) 시스템' 2-5).
-		public List<Monster> Pack { get; set; }
+		public MonsterPack Pack { get; set; }
+
+		// 팩 안 스폰 순서(0부터). 특수기 첫 사용을 분산한다.
+		public int PackIndex { get; set; }
 
 		// 배치된 칸. 복귀 거리는 이 칸에서 잰다.
 		public Vector2Int SpawnCell { get; set; }
@@ -80,6 +83,8 @@ namespace Server.Game
 			_basicRange = Math.Max(1, type.basicRange);
 			_keepMin = type.keepMin;
 			_basicCoef = type.basicCoef;
+
+			LoadSkills();
 		}
 
 		static float Config(int id)
@@ -109,6 +114,8 @@ namespace Server.Game
 				return;
 
 			bool wasEngaged = Engaged;
+			if (wasEngaged == false)
+				_engagedAtTick = Environment.TickCount64;
 			AddThreat(player, 0);
 			if (_target == null)
 				_target = player;
@@ -124,7 +131,7 @@ namespace Server.Game
 		{
 			if (Pack == null)
 				return;
-			foreach (Monster m in Pack)
+			foreach (Monster m in Pack.Members)
 			{
 				if (m == this || m.Room != Room)
 					continue;
@@ -199,6 +206,8 @@ namespace Server.Game
 			diePacket.AttackerId = attacker.Id;
 			Room.Broadcast(diePacket);
 
+			CancelCast();
+			EndFlight();
 			State = CreatureState.Dead;
 			_threat.Clear();
 			_target = null;
@@ -214,9 +223,15 @@ namespace Server.Game
 
 			Statuses.Update();
 
-			// 기절: 아무 행동도 하지 않는다(복귀 중에는 상태이상을 지웠으므로 해당 없음)
+			// 이미 날아간 투사체는 시전자 상태와 상관없이 끝까지 간다
+			UpdateFlight();
+			if (Room == null)
+				return;
+
+			// 기절: 아무 행동도 하지 않고 시전 중인 특수기를 취소한다(복귀 중에는 상태이상을 지웠으므로 해당 없음)
 			if (_returning == false && Statuses.CanAct == false)
 			{
+				CancelCast();
 				if (State != CreatureState.Idle)
 				{
 					State = CreatureState.Idle;
@@ -266,6 +281,10 @@ namespace Server.Game
 			long now = Environment.TickCount64;
 			// 한 칸 이동이 끝나기 전에는 다음 행동을 하지 않는다(클라 보간과 같은 시간)
 			if (_nextMoveTick > now)
+				return;
+
+			// 특수기: 예고 중·회수 중이거나 이번 틱에 시전을 시작했으면 평타·이동을 하지 않는다(특수기는 평타를 대체)
+			if (UpdateSpecial(now))
 				return;
 
 			Vector2Int toTarget = _target.CellPos - CellPos;
@@ -415,6 +434,7 @@ namespace Server.Game
 		// 복귀: 위협을 비우고 배치 칸으로 걸어서 돌아간다. 돌아가는 동안은 맞지 않고 탐지하지 않는다.
 		void StartReturn()
 		{
+			CancelCast();
 			_returning = true;
 			Statuses.Clear();
 			_threat.Clear();
