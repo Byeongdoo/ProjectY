@@ -5,8 +5,8 @@ using System.Linq;
 
 namespace Server.Game
 {
-	// 망령(적). 서버 권위로 탐지·추격·평타·복귀를 한다('망령(적) 시스템' 2-5).
-	//   대기 → (탐지/피격) → 추격 → 공격 → (복귀 거리 초과/대상 없음) → 복귀 → 대기
+	// 망령(적). 서버 권위로 탐지·추격·평타·특수기·복귀를 한다('망령(적) 시스템' 2-5).
+	//   대기 → (탐지/피격) → 추격 → 공격 → (복귀 거리 초과/교전 상대 없음) → 복귀 → 대기
 	//   대상은 위협 1위('캐릭터 조작 및 전투' 2-9). 팩 하나가 반응하면 팩 전체가 함께 반응한다.
 	// 개체별 특수기(2-5-1)는 Monster.Skill.cs.
 	public partial class Monster : GameObject
@@ -31,7 +31,7 @@ namespace Server.Game
 			set { Info.CharacterId = value; }
 		}
 
-		// 같은 팩(spawnGroups 1회분). 한 체가 탐지·피격되면 팩 전체가 반응한다('망령(적) 시스템' 2-5).
+		// 같은 팩(spawnGroups 1회분). 한 체가 탐지·피격되면 팩 전체가 반응한다('망령(적) 시스템' 2-5). 특수기 동시 시전 제한도 맡는다.
 		public MonsterPack Pack { get; set; }
 
 		// 팩 안 스폰 순서(0부터). 특수기 첫 사용을 분산한다.
@@ -41,12 +41,6 @@ namespace Server.Game
 		public Vector2Int SpawnCell { get; set; }
 
 		const int ConfigDiagonalTimeScale = 20030; // 대각선 1칸 소요 시간 배율
-		const int ConfigBasicInterval = 20032;     // 평타 간격(초, 공격 속도 1.0 기준)
-		const int ConfigThreatPerDamage = 20036;   // 피해 1당 위협
-		const int ConfigThreatSwitchRate = 20038;  // 대상 변경 배율
-
-		// 레거시 SkillData의 근접 평타 ID. 클라 MonsterController가 이 ID로 공격 동작을 보여 준다(원거리 귀신도 같은 동작).
-		const int BasicMeleeSkillId = 1;
 
 		int _searchCellDist = 10;
 		int _leashCellDist = 20;
@@ -72,126 +66,147 @@ namespace Server.Game
 			Stat.MaxHp = (int)Math.Round(stat.maxHP * mobHpRate);
 			Stat.Hp = Stat.MaxHp;
 			Stat.Speed = stat.moveSpeed;
-			Defence = stat.defence;
-			Critical = stat.critical;
-			CriticalAttack = stat.criticalAttack;
-			AttackSpeed = stat.attackSpeed > 0 ? stat.attackSpeed : 1f;
+			_moveSpeed = stat.moveSpeed;
+			_defence = stat.defence;
+			_critical = stat.critical;
+			_criticalAttack = stat.criticalAttack;
+			_attackSpeed = stat.attackSpeed;
+			_isBoss = info.type == (int)CharacterType.Boss;
 			_searchCellDist = info.scanRange;
 			_leashCellDist = info.leashRange;
 
-			Table.MonsterTypesRow type = Table.TableManager.MonsterTypes.Get(info.monsterType);
-			_basicRange = Math.Max(1, type.basicRange);
-			_keepMin = type.keepMin;
-			_basicCoef = type.basicCoef;
+			if (Table.TableManager.MonsterTypes.TryGet(info.monsterType, out Table.MonsterTypesRow type))
+			{
+				_basicRange = Math.Max(1, type.basicRange);
+				_keepMin = type.keepMin;
+				_basicCoef = type.basicCoef;
+			}
 
 			LoadSkills();
 		}
 
-		static float Config(int id)
-		{
-			return Table.TableManager.Configs.Get(id).value[0];
-		}
+		float _moveSpeed = 5f, _defence, _critical, _criticalAttack = 1.5f, _attackSpeed = 1f;
+		bool _isBoss;
+		public override bool IsBoss => _isBoss;
+		public override float Defence => _defence;
+		public override float CriticalRate => _critical;
+		public override float CriticalMultiplier => _criticalAttack;
+		protected override float BaseAttackSpeed => _attackSpeed;
+		protected override float BaseMoveSpeed => _moveSpeed;
 
 		#region 위협
 
-		// 플레이어 ID → 위협. 탐지·팩 연동으로 들어온 플레이어는 0으로 올린다.
-		readonly Dictionary<int, float> _threat = new Dictionary<int, float>();
+		// ---- 위협 ('캐릭터 조작 및 전투' 2-9) ----
+		// 피해 1 = 위협 configs 20036, 회복 1 = 20037(교전 중인 망령 전부에게), × 원혼 위협 배율(무명장수 ×3).
+		// 대상은 위협 1위. 새 후보가 현재 대상의 configs 20038배 이상일 때만 바꾼다(핑퐁 방지).
+		// 표에 오른 플레이어 = 이 망령과 교전 중. 탐지·팩 연동은 위협 0으로 올린다.
+		readonly Dictionary<Player, float> _threat = new Dictionary<Player, float>();
 		Player _target;
 		bool _returning;
 
-		bool Engaged { get { return _threat.Count > 0; } }
+		public bool IsEngaged => _threat.Count > 0;
+		public bool IsEngagedWith(Player player) => _threat.ContainsKey(player);
 
-		void AddThreat(Player player, float amount)
+		public void AddThreat(Player player, float amount)
 		{
-			_threat.TryGetValue(player.Id, out float current);
-			_threat[player.Id] = current + amount;
-		}
-
-		// 교전 시작(탐지·피격·팩 연동). 이미 교전 중이면 위협 표에 올리기만 한다.
-		void Engage(Player player, bool alertPack)
-		{
-			if (_returning || State == CreatureState.Dead || Room == null || Room.IsTargetable(player) == false)
+			// 복귀 중에는 교전하지 않는다
+			if (_returning || player == null || player.IsAlive == false || player.Room != Room)
 				return;
-
-			bool wasEngaged = Engaged;
-			if (wasEngaged == false)
+			if (IsEngaged == false)
 				_engagedAtTick = Environment.TickCount64;
-			AddThreat(player, 0);
+			_threat.TryGetValue(player, out float current);
+			_threat[player] = current + amount * player.ThreatRate;
 			if (_target == null)
 				_target = player;
-			if (wasEngaged == false && State == CreatureState.Idle)
+			if (State == CreatureState.Idle)
 				State = CreatureState.Moving;
-
-			if (alertPack && wasEngaged == false)
-				AlertPack(player);
 		}
 
-		// 팩 전체가 같은 플레이어를 위협 표에 올린다.
-		void AlertPack(Player player)
+		public void RemoveThreat(Player player)
+		{
+			_threat.Remove(player);
+			if (_target == player)
+				_target = null;
+		}
+
+		// 전멸 재시작 등. 교전을 끝낸다. 배치 칸에서 떨어져 있으면 다음 틱에 복귀한다
+		public void ClearThreat()
+		{
+			CancelCast();
+			_threat.Clear();
+			_target = null;
+			if (State != CreatureState.Dead && State != CreatureState.Idle)
+			{
+				State = CreatureState.Idle;
+				BroadcastMove();
+			}
+		}
+
+		void RefreshTarget()
+		{
+			List<Player> gone = null;
+			foreach (Player p in _threat.Keys)
+				if (p.IsAlive == false || p.Room != Room)
+					(gone ??= new List<Player>()).Add(p);
+			if (gone != null)
+				foreach (Player p in gone)
+					RemoveThreat(p);
+
+			if (_threat.Count == 0)
+			{
+				_target = null;
+				return;
+			}
+
+			Player top = null;
+			float topThreat = float.MinValue;
+			foreach (KeyValuePair<Player, float> kv in _threat)
+				if (kv.Value > topThreat)
+				{
+					top = kv.Key;
+					topThreat = kv.Value;
+				}
+
+			if (_target == null || _threat.ContainsKey(_target) == false)
+				_target = top;
+			else if (top != _target && topThreat >= _threat[_target] * CombatConfig.Get(CombatConfig.ThreatSwitchRate))
+				_target = top;
+		}
+
+		// 팩 안의 한 체가 탐지·피격되면 팩 전체가 그 플레이어와 교전한다('망령(적) 시스템' 2-5)
+		void AlertPack(Player target)
 		{
 			if (Pack == null)
 				return;
 			foreach (Monster m in Pack.Members)
 			{
-				if (m == this || m.Room != Room)
+				if (m == this || m.Room != Room || m.State == CreatureState.Dead)
 					continue;
-				m.Engage(player, alertPack: false);
+				if (m.IsEngagedWith(target) == false)
+					m.AddThreat(target, 0f);
 			}
-		}
-
-		// 위협 1위를 대상으로 삼는다. 현재 대상보다 1.1배(configs 20038) 이상 높아야 바꾼다(핑퐁 방지).
-		void SelectTarget()
-		{
-			// 나간 플레이어·혼절한 플레이어는 위협 표에서 뺀다
-			List<int> removed = null;
-			foreach (int playerId in _threat.Keys)
-			{
-				Player p = Room.FindPlayer(o => o.Id == playerId);
-				if (Room.IsTargetable(p) == false)
-					(removed ??= new List<int>()).Add(playerId);
-			}
-			if (removed != null)
-				foreach (int id in removed)
-					_threat.Remove(id);
-
-			if (_target != null && _threat.ContainsKey(_target.Id) == false)
-				_target = null;
-
-			Player best = null;
-			float bestThreat = float.MinValue;
-			foreach (KeyValuePair<int, float> kv in _threat)
-			{
-				if (kv.Value > bestThreat)
-				{
-					best = Room.FindPlayer(o => o.Id == kv.Key);
-					bestThreat = kv.Value;
-				}
-			}
-
-			if (best == null || best == _target)
-				return;
-			if (_target == null || bestThreat >= _threat[_target.Id] * Config(ConfigThreatSwitchRate))
-				_target = best;
 		}
 
 		#endregion
 
-		public override void OnDamaged(GameObject attacker, int damage)
+		// 복귀 중에는 맞지 않는다
+		public override void OnDamaged(GameObject attacker, int damage, bool critical, bool redirected = false)
 		{
-			// 복귀 중에는 맞지 않는다
-			if (_returning || Room == null || State == CreatureState.Dead)
+			if (_returning)
 				return;
+			base.OnDamaged(attacker, damage, critical, redirected);
+		}
 
-			int before = Hp;
-			base.OnDamaged(attacker, damage);
-			if (Room == null || State == CreatureState.Dead)
-				return;
-
-			// 피해 1 = 위협 1(configs 20036) × 원혼 위협 배율(spirits.threatRate). 탐지 범위 밖에서 맞아도 반응한다.
+		protected override void OnDamageTaken(GameObject attacker, int damage)
+		{
+			// 탐지 범위 밖에서 맞아도 반응한다
 			if (attacker is Player p)
 			{
-				Engage(p, alertPack: true);
-				AddThreat(p, (before - Hp) * Config(ConfigThreatPerDamage) * p.ThreatRate);
+				p.LastCombatTick = Environment.TickCount64;
+				bool first = IsEngagedWith(p) == false;
+				AddThreat(p, damage * CombatConfig.Get(CombatConfig.ThreatPerDamage));
+				if (first)
+					AlertPack(p);
 			}
 		}
 
@@ -201,13 +216,19 @@ namespace Server.Game
 			if (Room == null)
 				return;
 
+			// 막타 친 플레이어만 신력을 번다('캐릭터 조작 및 전투' 2-8)
+			if (attacker is Player killer)
+				killer.AddSpirit(CombatConfig.Get(CombatConfig.SpiritOnKill));
+
+			CancelCast();
+			EndFlight();
+
 			S_Die diePacket = new S_Die();
 			diePacket.ObjectId = Id;
 			diePacket.AttackerId = attacker.Id;
 			Room.Broadcast(diePacket);
 
-			CancelCast();
-			EndFlight();
+			Status.Clear();
 			State = CreatureState.Dead;
 			_threat.Clear();
 			_target = null;
@@ -218,31 +239,39 @@ namespace Server.Game
 		// FSM
 		public override void Update()
 		{
+			Status.Update();
 			if (Room == null || State == CreatureState.Dead)
 				return;
-
-			Statuses.Update();
 
 			// 이미 날아간 투사체는 시전자 상태와 상관없이 끝까지 간다
 			UpdateFlight();
 			if (Room == null)
 				return;
 
-			// 기절: 아무 행동도 하지 않고 시전 중인 특수기를 취소한다(복귀 중에는 상태이상을 지웠으므로 해당 없음)
-			if (_returning == false && Statuses.CanAct == false)
+			// 기절: 아무것도 하지 않고 시전 중인 특수기를 취소한다
+			if (Status.Has(StatusId.Stun))
 			{
 				CancelCast();
-				if (State != CreatureState.Idle)
-				{
-					State = CreatureState.Idle;
-					BroadcastMove();
-				}
 				return;
 			}
 
 			if (_returning)
+			{
 				UpdateReturn();
-			else if (Engaged)
+				return;
+			}
+
+			// 대상 = 위협 1위. 도발 중이면 건 플레이어만 노린다(위협 무시, '스킬 시스템' 2-5)
+			RefreshTarget();
+			StatusInstance taunt = Status.Get(StatusId.Taunt);
+			if (taunt != null && taunt.Source is Player taunter && taunter.IsAlive && taunter.Room == Room)
+			{
+				if (IsEngagedWith(taunter) == false)
+					AddThreat(taunter, 0f);
+				_target = taunter;
+			}
+
+			if (IsEngaged)
 				UpdateCombat();
 			else
 				UpdateIdle();
@@ -251,19 +280,30 @@ namespace Server.Game
 		long _nextSearchTick = 0;
 		void UpdateIdle()
 		{
+			// 교전이 끝났는데 배치 칸 밖이면 돌아간다(추격 포기·전멸 재시작 뒤)
+			if (CellPos.x != SpawnCell.x || CellPos.y != SpawnCell.y)
+			{
+				StartReturn();
+				return;
+			}
+
 			long now = Environment.TickCount64;
 			if (_nextSearchTick > now)
 				return;
 			_nextSearchTick = now + 1000;
 
-			Player target = Room.FindPlayer(o =>
+			Player target = Room.FindPlayer(p =>
 			{
-				Player p = o as Player;
-				return Room.IsTargetable(p) && (p.CellPos - CellPos).cellDist <= _searchCellDist;
-			});
+				Vector2Int dir = p.CellPos - CellPos;
+				return p.IsAlive && dir.cellDist <= _searchCellDist;
+			}) as Player;
 
-			if (target != null)
-				Engage(target, alertPack: true);
+			if (target == null)
+				return;
+
+			AddThreat(target, 0f);
+			_target = target;
+			AlertPack(target);
 		}
 
 		long _nextMoveTick = 0;
@@ -271,7 +311,7 @@ namespace Server.Game
 
 		void UpdateCombat()
 		{
-			SelectTarget();
+			// 배치 칸에서 복귀 거리(leashRange)보다 멀어지면 교전을 끝내고 돌아간다
 			if (_target == null || (CellPos - SpawnCell).cellDist > _leashCellDist)
 			{
 				StartReturn();
@@ -290,7 +330,7 @@ namespace Server.Game
 			Vector2Int toTarget = _target.CellPos - CellPos;
 
 			// 유지 최소 거리보다 가까우면 물러선다. 물러날 칸이 없으면 제자리에서 공격한다.
-			if (toTarget.cellDist < _keepMin && Statuses.CanMove && TryRetreat(_target.CellPos))
+			if (toTarget.cellDist < _keepMin && CanMove && TryRetreat(_target.CellPos))
 				return;
 
 			// 근접은 벽 모서리 너머를 치지 못하고(이동과 같은 모서리 규칙), 원거리는 시야가 트여야 친다.
@@ -311,23 +351,24 @@ namespace Server.Game
 
 				if (_nextAttackTick > now)
 					return;
-				_nextAttackTick = now + (long)(1000 * Config(ConfigBasicInterval) / CurrentAttackSpeed);
+				_nextAttackTick = now + (long)(1000 * CombatConfig.Get(CombatConfig.BasicInterval) / Math.Max(0.05f, AttackSpeed));
 				BasicAttack();
 				return;
 			}
 
-			StepToward(_target.CellPos);
+			// 대상에게 갈 길이 없으면 그 플레이어와의 교전을 끝낸다. 남은 상대가 없으면 다음 틱에 복귀한다
+			if (StepToward(_target.CellPos) == StepResult.NoPath)
+				RemoveThreat(_target);
 		}
 
 		// 평타: 사거리(monsterTypes.basicRange) 안의 위협 1위에게 즉발 피해. 간격 = configs 20032 ÷ 공격 속도, 계수 = monsterTypes.basicCoef.
 		void BasicAttack()
 		{
-			S_Skill skill = new S_Skill() { Info = new SkillInfo() };
+			S_Skill skill = new S_Skill() { Info = new SkillInfo() { SkillId = Combat.BasicSkillId, TargetId = _target.Id } };
 			skill.ObjectId = Id;
-			skill.Info.SkillId = BasicMeleeSkillId;
 			Room.Broadcast(skill);
 
-			Combat.Hit(this, _target, _basicCoef);
+			Combat.Damage(this, _target, _basicCoef);
 		}
 
 		// from에서 멀어지는 이웃 칸으로 한 칸 물러선다. 복귀 거리 밖·시야가 끊기는 칸으로는 물러나지 않는다.
@@ -378,7 +419,7 @@ namespace Server.Game
 		StepResult StepToward(Vector2Int dest)
 		{
 			// 결박·버팀: 움직이지 않고 그쪽을 바라보며 기다린다
-			if (Statuses.CanMove == false)
+			if (CanMove == false)
 			{
 				MoveDir lookDir = GetDirFromVec(dest - CellPos);
 				if (State != CreatureState.Idle || Dir != lookDir)
@@ -417,12 +458,13 @@ namespace Server.Game
 
 		// 비어 있는 이웃 칸 next로 한 칸 옮긴다(호출 쪽에서 막힘을 확인한다).
 		// 대각선 한 칸은 configs 20030 배율만큼 다음 이동까지 더 기다린다(클라 보간과 같은 배율).
+		// 이동 속도(Stat.Speed)에는 신속·둔화가 이미 반영돼 있다(GameObject.RefreshMoveSpeed).
 		void MoveOneCell(Vector2Int next)
 		{
 			Vector2Int step = next - CellPos;
-			int moveTick = (int)(1000 / CurrentMoveSpeed);
+			int moveTick = (int)(1000 / Math.Max(0.1f, Speed));
 			if (step.x != 0 && step.y != 0)
-				moveTick = (int)(moveTick * Config(ConfigDiagonalTimeScale));
+				moveTick = (int)(moveTick * Table.TableManager.Configs.Get(ConfigDiagonalTimeScale).value[0]);
 			_nextMoveTick = Environment.TickCount64 + moveTick;
 
 			State = CreatureState.Moving;
@@ -431,12 +473,12 @@ namespace Server.Game
 			BroadcastMove();
 		}
 
-		// 복귀: 위협을 비우고 배치 칸으로 걸어서 돌아간다. 돌아가는 동안은 맞지 않고 탐지하지 않는다.
+		// 복귀: 위협·상태이상을 비우고 배치 칸으로 걸어서 돌아간다. 돌아가는 동안은 맞지 않고 탐지하지 않는다.
 		void StartReturn()
 		{
 			CancelCast();
 			_returning = true;
-			Statuses.Clear();
+			Status.RemoveAll();
 			_threat.Clear();
 			_target = null;
 		}
@@ -468,8 +510,10 @@ namespace Server.Game
 		void FinishReturn()
 		{
 			_returning = false;
+			int healed = Stat.MaxHp - Hp;
 			Hp = Stat.MaxHp;
-			Room.Broadcast(new S_ChangeHp() { ObjectId = Id, Hp = Hp });
+			if (healed > 0)
+				Room.Broadcast(new S_ChangeHp() { ObjectId = Id, Hp = Hp, Amount = healed, Heal = true });
 
 			State = CreatureState.Idle;
 			BroadcastMove();

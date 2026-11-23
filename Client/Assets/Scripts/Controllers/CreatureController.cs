@@ -47,6 +47,14 @@ public class CreatureController : BaseController
 
 	protected override void Init()
 	{
+		// 외형 전용 프리팹(원혼)은 컨트롤러를 생성 시 붙이므로 표시 설정을 CreatureVisual에서 가져온다
+		CreatureVisual visual = GetComponent<CreatureVisual>();
+		if (visual != null)
+		{
+			_hpBarHeight = visual.hpBarHeight;
+			_eightDirClips = visual.eightDirClips;
+		}
+
 		base.Init();
 		// 삼천도처럼 전투가 없는 곳에서는 체력 막대를 띄우지 않는다
 		if (MultiScene.CombatEnabled)
@@ -72,98 +80,41 @@ public class CreatureController : BaseController
 		}
 	}
 
+	// 스킬 상태에서 틀 동작(ATTACK_ = 평타, SKILL_1_ ~ SKILL_4_ = 원혼 스킬 슬롯)
+	protected string _skillAction = "ATTACK_";
+
 	// 원혼·망령 프리팹은 ATTACK·DIE 클립이 있다. 무당 프리팹처럼 없는 동작이면 서 있는 모습으로 둔다.
 	protected void PlayEightDirClip()
 	{
 		string action;
-		if (State == CreatureState.Moving) action = "RUN_";
-		else if (State == CreatureState.Skill) action = "ATTACK_";
-		else if (State == CreatureState.Dead) action = "DIE_";
+		if (State == CreatureState.Dead) action = "DIE_";
+		else if (HasStatus(StatusStun)) action = "STUN_";
+		else if (State == CreatureState.Moving) action = "RUN_";
+		else if (State == CreatureState.Skill) action = _skillAction;
 		else action = "IDLE_";
 
 		string clip = action + EightDirSuffix(Dir);
 		if (_animator.HasState(0, Animator.StringToHash(clip)) == false)
 			clip = "IDLE_" + EightDirSuffix(Dir);
-		_animator.Play(clip);
+		// 공격·스킬은 같은 클립이 이어져도 처음부터 다시 튼다(연속 평타)
+		if (State == CreatureState.Skill)
+			_animator.Play(clip, 0, 0f);
+		else
+			_animator.Play(clip);
 		_sprite.flipX = false;
 	}
 
-	#region 상태이상
-
-	// statusEffects.statusID (서버 StatusId와 같은 값, 데이터 키)
-	public const int StatusBind = 8001;    // 결박 — 이동 불가
-	public const int StatusSlow = 8004;    // 둔화 — 이동·공격 속도 감소
-	public const int StatusStun = 8005;    // 기절 — 이동·공격·방향 전환 불가
-	public const int StatusHaste = 8007;   // 신속 — 이동 속도 증가
-	public const int StatusBrace = 8009;   // 버팀 — 이동 불가
-
-	// statusID → 끝나는 시각(Time.time). 서버가 해제를 보내지만, 패킷이 늦어도 표시가 남지 않게 시간으로도 지운다.
-	readonly Dictionary<int, float> _statusEnd = new Dictionary<int, float>();
-
-	public void SetStatuses(IEnumerable<StatusInfo> statuses)
+	// 지금 방향의 동작 클립 길이(초). 클립이 없으면 fallback
+	protected float EightDirClipLength(string action, float fallback)
 	{
-		_statusEnd.Clear();
-		foreach (StatusInfo s in statuses)
-			SetStatus(s);
+		if (_animator == null || _animator.runtimeAnimatorController == null)
+			return fallback;
+		string name = action + EightDirSuffix(Dir);
+		foreach (AnimationClip c in _animator.runtimeAnimatorController.animationClips)
+			if (c.name == name)
+				return c.length;
+		return fallback;
 	}
-
-	public void SetStatus(StatusInfo status)
-	{
-		if (status.RemainMs <= 0)
-			_statusEnd.Remove(status.StatusId);
-		else
-			_statusEnd[status.StatusId] = Time.time + status.RemainMs / 1000f;
-	}
-
-	public bool HasStatus(int statusId)
-	{
-		return _statusEnd.TryGetValue(statusId, out float end) && end > Time.time;
-	}
-
-	public bool StatusCanMove { get { return !HasStatus(StatusBind) && !HasStatus(StatusStun) && !HasStatus(StatusBrace); } }
-	public bool StatusCanAct { get { return !HasStatus(StatusStun); } }
-	public bool StatusCanTurn { get { return !HasStatus(StatusStun); } }
-
-	// 서버 StatusSet과 같은 규칙: 증가는 × (1 + 값), 감소는 × (1 − 값), 여러 효과는 곱한다
-	public override float MoveSpeed
-	{
-		get { return Speed * StatusRate(StatusSlow, -1) * StatusRate(StatusHaste, +1); }
-	}
-
-	float StatusRate(int statusId, int sign)
-	{
-		if (HasStatus(statusId) == false || Table.TableManager.StatusEffects.TryGet(statusId, out Table.StatusEffectsRow row) == false)
-			return 1f;
-		return Mathf.Max(0f, 1f + sign * row.value);
-	}
-
-	// 임시 표시: 체력 막대 위에 상태이상 이름(해로움 = 붉은색, 이로움 = 금색). 문양·HUD 아이콘 리소스가 오면 교체한다.
-	static GUIStyle s_statusStyle;
-
-	void OnGUI()
-	{
-		if (_statusEnd.Count == 0 || Camera.main == null)
-			return;
-
-		Vector3 screen = Camera.main.WorldToScreenPoint(transform.position + new Vector3(0, _hpBarHeight + 0.35f, 0));
-		if (screen.z < 0)
-			return;
-
-		if (s_statusStyle == null)
-			s_statusStyle = new GUIStyle(GUI.skin.label) { alignment = TextAnchor.MiddleCenter, fontSize = 12, fontStyle = FontStyle.Bold };
-
-		float y = Screen.height - screen.y;
-		foreach (KeyValuePair<int, float> kv in _statusEnd)
-		{
-			if (kv.Value <= Time.time || Table.TableManager.StatusEffects.TryGet(kv.Key, out Table.StatusEffectsRow row) == false)
-				continue;
-			s_statusStyle.normal.textColor = row.harmful != 0 ? new Color(1f, 0.45f, 0.4f) : new Color(1f, 0.85f, 0.3f);
-			GUI.Label(new Rect(screen.x - 60, y - 10, 120, 20), Localization.Get(row.name), s_statusStyle);
-			y -= 14;
-		}
-	}
-
-	#endregion
 
 	public virtual void OnDamaged()
 	{
@@ -173,7 +124,6 @@ public class CreatureController : BaseController
 	public virtual void OnDead()
 	{
 		State = CreatureState.Dead;
-		_statusEnd.Clear();
 
 		// 쓰러짐 이펙트 리소스(Prefabs/Effect/DieEffect)는 새 리소스가 나올 때까지 비어 있다. 없으면 건너뛴다.
 		if (Resources.Load<GameObject>("Prefabs/Effect/DieEffect") == null)
@@ -184,8 +134,55 @@ public class CreatureController : BaseController
 		GameObject.Destroy(effect, 0.5f);
 	}
 
-	public virtual void UseSkill(int skillId)
+	// 서버가 받아들인 평타(skillId 0)·원혼 스킬. castTime > 0이면 시전 시작
+	public virtual void UseSkill(int skillId, int targetId, float castTime)
 	{
 
 	}
+
+	// 시전 취소(S_CancelSkill)
+	public virtual void CancelSkill()
+	{
+
+	}
+
+	// ---- 상태이상 (S_ChangeStatus). 표시와 내 입력 제한에만 쓴다. 효과는 서버가 판정한다 ----
+
+	public const int StatusRoot = 8001;   // 결박: 이동 불가
+	public const int StatusStun = 8005;   // 기절: 이동·공격·스킬 불가
+	public const int StatusFervor = 8008; // 신명: 신력 소모 감소
+	public const int StatusBrace = 8009;  // 버팀: 이동 불가
+	public const int StatusFrenzy = 8011; // 광기: 공격 속도 증가
+	public const int StatusSlow = 8004;   // 둔화: 이동·공격 속도 감소
+
+	readonly Dictionary<int, (float endTime, int stack)> _statuses = new Dictionary<int, (float, int)>();
+
+	public IReadOnlyDictionary<int, (float endTime, int stack)> Statuses => _statuses;
+
+	public bool HasStatus(int statusId)
+	{
+		return _statuses.TryGetValue(statusId, out var s) && s.endTime > Time.time;
+	}
+
+	// 효과 값 × 중첩(statusEffects.value). 없으면 0
+	public float StatusValue(int statusId)
+	{
+		if (HasStatus(statusId) == false)
+			return 0f;
+		return Table.TableManager.StatusEffects.Get(statusId).value * _statuses[statusId].stack;
+	}
+
+	public void SetStatus(int statusId, float duration, int stack)
+	{
+		bool stunBefore = HasStatus(StatusStun);
+		if (duration <= 0f)
+			_statuses.Remove(statusId);
+		else
+			_statuses[statusId] = (Time.time + duration, stack);
+		if (stunBefore != HasStatus(StatusStun))
+			UpdateAnimation();
+	}
+
+	// 이동 불가 상태(기절·결박·버팀)
+	public bool IsMoveLocked => HasStatus(StatusStun) || HasStatus(StatusRoot) || HasStatus(StatusBrace);
 }

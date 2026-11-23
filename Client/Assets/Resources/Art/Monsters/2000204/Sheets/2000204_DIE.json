@@ -1,0 +1,73 @@
+{
+  "animation": "DIE",
+  "sourceAnimation": "DIE",
+  "directions": [
+    "south",
+    "south-east",
+    "east",
+    "north-east",
+    "north",
+    "north-west",
+    "west",
+    "south-west"
+  ],
+  "frameCount": 8,
+  "framesPerSecond": 10,
+  "loop": false,
+  "cellWidth": 84,
+  "cellHeight": 84,
+  "sourcePixelsResized": false,
+  "alignment": "Canvas centres, transparent padding only",
+  "directionalSources": [
+    {
+      "direction": "south",
+      "sourceAnimation": "DIE",
+      "groupId": "a1de7825-1b95-4525-8351-2303d2490c90"
+    },
+    {
+      "direction": "south-east",
+      "sourceAnimation": "DIE",
+      "groupId": "a1de7825-1b95-4525-8351-2303d2490c90"
+    },
+    {
+      "direction": "east",
+      "sourceAnimation": "DIE",
+      "groupId": "a1de7825-1b95-4525-8351-2303d2490c90"
+    },
+    {
+      "direction": "north-east",
+      "sourceAnimation": "DIE",
+      "groupId": "a1de7825-1b95-4525-8351-2303d2490c90"
+    },
+    {
+      "direction": "north",
+      "sourceAnimation": "DIE",
+      "groupId": "a1de7825-1b95-4525-8351-2303d2490c90"
+    },
+    {
+      "direction": "north-west",
+      "sourceAnimation": "DIE",
+      "groupId": "a1de7825-1b95-4525-8351-2303d2490c90"
+    },
+    {
+      "direction": "west",
+      "sourceAnimation": "DIE",
+      "groupId": "a1de7825-1b95-4525-8351-2303d2490c90"
+    },
+    {
+      "direction": "south-west",
+      "sourceAnimation": "DIE",
+      "groupId": "a1de7825-1b95-4525-8351-2303d2490c90"
+    }
+  ],
+  "animationClips": [
+    "Animations/DIE_SOUTH.anim",
+    "Animations/DIE_SOUTH_EAST.anim",
+    "Animations/DIE_EAST.anim",
+    "Animations/DIE_NORTH_EAST.anim",
+    "Animations/DIE_NORTH.anim",
+    "Animations/DIE_NORTH_WEST.anim",
+    "Animations/DIE_WEST.anim",
+    "Animations/DIE_SOUTH_WEST.anim"
+  ]
+}

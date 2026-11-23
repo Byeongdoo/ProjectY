@@ -1,0 +1,48 @@
+{
+  "Mokgui_VFX_MountainWailRing.json": {
+    "object": {
+      "id": "4d2a556c-5da0-4e47-b99c-b96327ef189f",
+      "name": "base",
+      "prompt": "Twisted Mokgui MountainWailRing isolated VFX",
+      "size": {
+        "width": 128,
+        "height": 128
+      },
+      "directions": 1,
+      "view": "low top-down"
+    },
+    "spritesheet": {
+      "path": "Mokgui_VFX_MountainWailRing.png",
+      "cell_size": {
+        "width": 128,
+        "height": 128
+      },
+      "sheet_size": {
+        "width": 1024,
+        "height": 256
+      },
+      "columns": 8,
+      "pivot": "cell-center",
+      "rows": [
+        {
+          "row": 0,
+          "type": "rotations",
+          "frame_count": 1,
+          "directions": [
+            "unknown"
+          ]
+        },
+        {
+          "row": 1,
+          "type": "animation",
+          "frame_count": 8,
+          "animation": "Mokgui_MountainWailRing_8f",
+          "animation_group_id": "097977f1-f5b5-4143-a8c5-59e63c254411",
+          "direction": "unknown"
+        }
+      ]
+    },
+    "export_version": "1.0",
+    "export_date": "2026-11-23T13:28:52.098630+00:00"
+  }
+}

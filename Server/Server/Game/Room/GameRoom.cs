@@ -1,19 +1,20 @@
-﻿using Google.Protobuf;
+using Google.Protobuf;
 using Google.Protobuf.Protocol;
 using Server.Data;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Server.Game
 {
-	public class GameRoom : JobSerializer
+	public partial class GameRoom : JobSerializer
 	{
 		public int RoomId { get; set; }
 
 		Dictionary<int, Player> _players = new Dictionary<int, Player>();
 		Dictionary<int, Monster> _monsters = new Dictionary<int, Monster>();
-		Dictionary<int, Projectile> _projectiles = new Dictionary<int, Projectile>();
+		Dictionary<int, Field> _fields = new Dictionary<int, Field>();
 
 		public Map Map { get; private set; } = new Map();
 
@@ -30,6 +31,8 @@ namespace Server.Game
 			SceneName = sceneName;
 			DungeonId = dungeonId;
 			Map.LoadMap(sceneName);
+			if (kind == RoomKind.Dungeon)
+				ResetDungeonRun();
 		}
 
 		// 던전 룸을 만들 때 한 번 망령 팩을 배치한다(DungeonSpawner). 지금은 던전별 공용 룸이라 쓰러진 망령은 서버를 다시 켜야 돌아온다.
@@ -79,21 +82,39 @@ namespace Server.Game
 			return free[_random.Next(free.Count)];
 		}
 
+		long _lastUpdateTick;
+
 		// 누군가 주기적으로 호출해줘야 한다
 		public void Update()
 		{
-			// 상태이상 만료. 만료 처리가 컬렉션을 바꾸지 않으므로 순회 중에 불러도 된다.
-			foreach (Player player in _players.Values)
-				player.Statuses.Update();
+			long now = Environment.TickCount64;
+			float deltaSec = _lastUpdateTick == 0 ? 0f : (now - _lastUpdateTick) / 1000f;
+			_lastUpdateTick = now;
 
-			foreach (Monster monster in _monsters.Values)
+			// 상태이상 만료·지속 피해, 신력 자연 회복(전투가 있는 던전만).
+			// 지속 피해로 쓰러지면 룸을 나갔다 들어오므로(목록이 바뀜) 복사본을 돈다
+			foreach (Player player in _players.Values.ToList())
 			{
-				monster.Update();
+				if (player.Room != this)
+					continue;
+				player.Status.Update();
+				if (Kind == RoomKind.Dungeon)
+					player.RegenSpirit(deltaSec);
 			}
 
-			foreach (Projectile projectile in _projectiles.Values)
+			// 혼절 시간 초과 부활, 구간 불씨, 비전투 회복
+			UpdateDungeon(deltaSec);
+
+			foreach (Monster monster in _monsters.Values.ToList())
 			{
-				projectile.Update();
+				if (monster.Room == this)
+					monster.Update();
+			}
+
+			foreach (Field field in _fields.Values.ToList())
+			{
+				if (field.Room == this)
+					field.Update();
 			}
 
 			Flush();
@@ -120,7 +141,6 @@ namespace Server.Game
 				if (Kind == RoomKind.Lobby)
 					player.Info.SpiritId = 0;
 				player.ApplyStats();
-				player.Statuses.Clear(notify: false);
 
 				player.CellPos = PickSpawnCell();
 				player.State = CreatureState.Idle;
@@ -137,22 +157,19 @@ namespace Server.Game
 					foreach (Player p in _players.Values)
 					{
 						if (player != p)
-						{
-							p.Statuses.FillInfo(p.Info);
 							spawnPacket.Objects.Add(p.Info);
-						}
 					}
 
 					foreach (Monster m in _monsters.Values)
-					{
-						m.Statuses.FillInfo(m.Info);
 						spawnPacket.Objects.Add(m.Info);
-					}
 
-					foreach (Projectile p in _projectiles.Values)
-						spawnPacket.Objects.Add(p.Info);
+					foreach (Field f in _fields.Values)
+						spawnPacket.Objects.Add(f.Info);
 
 					player.Session.Send(spawnPacket);
+
+					if (Kind == RoomKind.Dungeon)
+						player.Session.Send(DungeonState());
 				}
 			}
 			else if (type == GameObjectType.Monster)
@@ -163,13 +180,14 @@ namespace Server.Game
 
 				Map.ApplyMove(monster, new Vector2Int(monster.CellPos.x, monster.CellPos.y));
 			}
-			else if (type == GameObjectType.Projectile)
+			else if (type == GameObjectType.Field)
 			{
-				Projectile projectile = gameObject as Projectile;
-				_projectiles.Add(gameObject.Id, projectile);
-				projectile.Room = this;
+				// 설치물은 칸을 막지 않는다
+				Field field = gameObject as Field;
+				_fields.Add(gameObject.Id, field);
+				field.Room = this;
 			}
-			
+
 			// 타인한테 정보 전송
 			{
 				S_Spawn spawnPacket = new S_Spawn();
@@ -192,12 +210,25 @@ namespace Server.Game
 				ReleaseSpirit(objectId);
 
 				Player player = null;
+				if (_players.TryGetValue(objectId, out player))
+					CancelChannel(player);
 				if (_players.Remove(objectId, out player) == false)
 					return;
 
 				Map.ApplyLeave(player);
-				player.Statuses.Clear(notify: false);
 				player.Room = null;
+				player.Status.Clear();
+				player.ResetCombatState();
+				_atBonfire.Remove(objectId);
+
+				// 던전: 모두 나가면 한 판을 초기화하고, 남은 사람이 전부 혼절해 있으면 전멸
+				if (Kind == RoomKind.Dungeon)
+				{
+					if (_players.Count == 0)
+						ResetDungeonRun();
+					else
+						CheckWipe();
+				}
 
 				// 본인한테 정보 전송
 				{
@@ -214,13 +245,12 @@ namespace Server.Game
 				Map.ApplyLeave(monster);
 				monster.Room = null;
 			}
-			else if (type == GameObjectType.Projectile)
+			else if (type == GameObjectType.Field)
 			{
-				Projectile projectile = null;
-				if (_projectiles.Remove(objectId, out projectile) == false)
+				if (_fields.Remove(objectId, out Field field) == false)
 					return;
 
-				projectile.Room = null;
+				field.Room = null;
 			}
 
 			// 타인한테 정보 전송
@@ -256,23 +286,24 @@ namespace Server.Game
 			if (info.PosInfo.State == CreatureState.Dead)
 				return;
 
-			// 상태이상: 기절은 방향 전환도 못 하고, 결박·버팀은 제자리 방향 전환만 된다
-			Vector2Int requested = new Vector2Int(movePosInfo.PosX, movePosInfo.PosY);
-			bool wantsMove = requested.x != info.PosInfo.PosX || requested.y != info.PosInfo.PosY;
-			if (player.Statuses.CanTurn == false || (wantsMove && player.Statuses.CanMove == false))
-			{
-				S_Move correction = new S_Move();
-				correction.ObjectId = info.ObjectId;
-				correction.PosInfo = player.PosInfo;
-				player.Session.Send(correction);
-				return;
-			}
-
 			// 다른 좌표로 이동할 경우의 검증. 클라는 응답을 기다리지 않고 예측 이동(이동 중 대각선 전환·되돌아가기 포함)하므로
 			// 서버 칸과 정확히 한 칸 차이가 아니어도 허용 오차(configs 20049) 안이고 목표 칸이 비어 있으면 받아들인다.
 			// 받아들일 수 없으면 서버 위치를 그 플레이어에게 보내 교정한다.
 			Vector2Int dest = new Vector2Int(movePosInfo.PosX, movePosInfo.PosY);
-			if (dest.x != info.PosInfo.PosX || dest.y != info.PosInfo.PosY)
+			bool positionChange = dest.x != info.PosInfo.PosX || dest.y != info.PosInfo.PosY;
+
+			// 기절·결박·버팀·시전 중에는 칸을 옮길 수 없다. 기절이면 방향도 못 바꾼다
+			if (positionChange ? player.CanMove == false : player.CanAct == false)
+			{
+				player.Session.Send(new S_Move() { ObjectId = info.ObjectId, PosInfo = player.PosInfo, Forced = true });
+				return;
+			}
+
+			// 움직이면 F 홀드(혼 부르기·보스방 불씨)가 끊긴다
+			if (positionChange)
+				CancelChannel(player);
+
+			if (positionChange)
 			{
 				int dist = (dest - player.CellPos).cellDist;
 				int tolerance = (int)Math.Round(Table.TableManager.Configs.Get(ConfigMoveTolerance).value[0]);
@@ -366,141 +397,12 @@ namespace Server.Game
 			player.Session.Send(new S_ChangeScene() { SceneName = dungeon.SceneName });
 		}
 
-		public void HandleSkill(Player player, C_Skill skillPacket)
-		{
-			if (player == null)
-				return;
-
-			// 삼천도는 전투가 없다('삼천도(로비) 시스템' 2-4)
-			if (Kind == RoomKind.Lobby)
-				return;
-
-			ObjectInfo info = player.Info;
-			if (info.PosInfo.State != CreatureState.Idle)
-				return;
-
-			// 기절 중에는 공격·스킬 불가(결박은 공격 가능)
-			if (player.Statuses.CanAct == false)
-				return;
-
-			if (skillPacket.Info == null)
-				return;
-
-			// 원혼에 빙의했으면 평타 형태(근접/원거리)는 클라 요청이 아니라 spirits 테이블로 서버가 정한다
-			int skillId = skillPacket.Info.SkillId;
-			Table.SpiritsRow spirit = null;
-			if (info.SpiritId != 0 && Table.TableManager.Spirits.TryGet(info.SpiritId, out spirit))
-				skillId = spirit.basicRange <= 1 ? BasicMeleeSkillId : BasicRangedSkillId;
-
-			// 존재하는 스킬인지 먼저 확인한다 (없는 스킬로 상태만 바뀌는 것을 방지)
-			Data.Skill skillData = null;
-			if (DataManager.SkillDict.TryGetValue(skillId, out skillData) == false)
-				return;
-
-			// 쿨타임 체크. 지금 스킬은 Space 평타 자리의 레거시 스킬이라 공격 속도(원혼 배율 포함)로 간격을 나눈다.
-			int cooldownMs = (int)(1000 * skillData.cooldown / player.CurrentAttackSpeed);
-			long now = Environment.TickCount64;
-			if (player.NextSkillTick > now)
-				return;
-			player.NextSkillTick = now + cooldownMs;
-
-			info.PosInfo.State = CreatureState.Skill;
-			S_Skill skill = new S_Skill() { Info = new SkillInfo() };
-			skill.ObjectId = info.ObjectId;
-			skill.Info.SkillId = skillId;
-			Broadcast(skill);
-
-			// 클라이언트의 Idle 복귀 패킷이 오지 않더라도 쿨타임 후에는 Skill 상태에 갇히지 않게 한다
-			PushAfter(cooldownMs, ResetSkillState, player);
-
-			switch (skillData.skillType)
-			{
-				case SkillType.SkillAuto:
-					{
-						// 근접 평타: 바라보는 앞 칸을 가운데로 좌우 45도씩 넓힌다.
-						// 폭 1 = 앞 칸만(무명장수), 폭 3 = 왼쪽 앞·앞·오른쪽 앞(망나니). 폭은 spirits.basicWidth
-						int width = spirit != null ? Math.Max(1, spirit.basicWidth) : 1;
-						int half = (width - 1) / 2;
-						for (int step = -half; step <= half; step++)
-						{
-							MoveDir dir = GameObject.RotateDir(info.PosInfo.MoveDir, step);
-							GameObject target = Map.Find(player.GetFrontCellPos(dir));
-							// 삼천도·저승 모두 PvP가 없으므로 망령(몬스터)만 맞는다
-							// 피해 = 공격력 × 평타 계수(spirits.basicCoef)에 피해 공식 적용('캐릭터 조작 및 전투' 2-7)
-							if (target != null && target.ObjectType == GameObjectType.Monster)
-								Combat.Hit(player, target, player.BasicCoef);
-						}
-					}
-					break;
-				case SkillType.SkillProjectile:
-					{
-						Arrow arrow = ObjectManager.Instance.Add<Arrow>();
-						if (arrow == null)
-							return;
-
-						arrow.Owner = player;
-						arrow.Data = skillData;
-						arrow.PosInfo.State = CreatureState.Moving;
-						arrow.PosInfo.MoveDir = player.PosInfo.MoveDir;
-						arrow.PosInfo.PosX = player.PosInfo.PosX;
-						arrow.PosInfo.PosY = player.PosInfo.PosY;
-						arrow.Speed = skillData.projectile.speed;
-						Push(EnterGame, arrow);
-					}
-					break;
-			}
-		}
-
-		// 레거시 SkillData.json의 평타 스킬(1 = 근접, 2 = 화살). 원혼 평타 데이터가 spiritSkills로 옮겨지면 교체한다
-		public const int BasicMeleeSkillId = 1;
-		public const int BasicRangedSkillId = 2;
-
-		void ResetSkillState(Player player)
-		{
-			if (player.Room != this)
-				return;
-
-			if (player.State == CreatureState.Skill)
-				player.State = CreatureState.Idle;
-		}
-
-		const int ConfigFaintDuration = 20039; // 혼절 유지 시간(초)
-		const int ConfigReviveHpRate = 20041;  // 부활 시 체력 비율
-
-		// 혼절 30초 뒤 부활 예약. 혼 부르기·불씨·전멸은 다음 단계라, 지금은 던전 입장 영역에서 체력 50%로 일어난다.
-		public void ScheduleFaintRevive(Player player, int faintSerial)
-		{
-			int ms = (int)(1000 * Table.TableManager.Configs.Get(ConfigFaintDuration).value[0]);
-			PushAfter(ms, ReviveFainted, player, faintSerial);
-		}
-
-		void ReviveFainted(Player player, int faintSerial)
-		{
-			if (player.Room != this || player.State != CreatureState.Dead || player.FaintSerial != faintSerial)
-				return;
-
-			float rate = Table.TableManager.Configs.Get(ConfigReviveHpRate).value[0];
-			player.Hp = Math.Max(1, (int)Math.Round(player.Stat.MaxHp * rate));
-			player.State = CreatureState.Idle;
-			player.Dir = MoveDir.Down;
-			Map.ApplyMove(player, PickSpawnCell());
-
-			Broadcast(new S_ChangeHp() { ObjectId = player.Id, Hp = player.Hp });
-			Broadcast(new S_Move() { ObjectId = player.Id, PosInfo = player.PosInfo });
-		}
-
-		// 망령이 노릴 수 있는 플레이어인지(같은 룸, 혼절 아님)
-		public bool IsTargetable(Player player)
-		{
-			return player != null && player.Room == this && player.State != CreatureState.Dead;
-		}
-
-		// 그 칸에 서 있는 노릴 수 있는 플레이어들(아군끼리는 한 칸에 겹칠 수 있다)
+		// 그 칸에 서 있는 살아 있는 플레이어들(아군끼리는 한 칸에 겹칠 수 있다). 적 특수기 판정용
 		public List<Player> TargetablePlayersAt(Vector2Int cell)
 		{
 			List<Player> found = new List<Player>();
 			foreach (Player p in _players.Values)
-				if (IsTargetable(p) && p.CellPos.x == cell.x && p.CellPos.y == cell.y)
+				if (p.IsAlive && p.CellPos.x == cell.x && p.CellPos.y == cell.y)
 					found.Add(p);
 			return found;
 		}

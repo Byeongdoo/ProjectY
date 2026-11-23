@@ -1,0 +1,73 @@
+{
+  "animation": "SKILL_4_BOAT_CHARGE",
+  "sourceAnimation": "SKILL_4_BOAT_CHARGE",
+  "directions": [
+    "south",
+    "south-east",
+    "east",
+    "north-east",
+    "north",
+    "north-west",
+    "west",
+    "south-west"
+  ],
+  "frameCount": 8,
+  "framesPerSecond": 10,
+  "loop": false,
+  "cellWidth": 104,
+  "cellHeight": 104,
+  "sourcePixelsResized": false,
+  "alignment": "Canvas centres, transparent padding only",
+  "directionalSources": [
+    {
+      "direction": "south",
+      "sourceAnimation": "SKILL_4_BOAT_CHARGE",
+      "groupId": "26986f02-4513-46ca-a95c-8f207e91f725"
+    },
+    {
+      "direction": "south-east",
+      "sourceAnimation": "SKILL_4_BOAT_CHARGE",
+      "groupId": "26986f02-4513-46ca-a95c-8f207e91f725"
+    },
+    {
+      "direction": "east",
+      "sourceAnimation": "Refined_SKILL_4_BOAT_CHARGE_east_R3",
+      "groupId": "c6d35b70-53a8-4cf6-a0e8-71a36d61b15b"
+    },
+    {
+      "direction": "north-east",
+      "sourceAnimation": "Refined_SKILL_4_BOAT_CHARGE_north_east_R3",
+      "groupId": "aeb24069-200d-4447-9b7c-1301cacd75dc"
+    },
+    {
+      "direction": "north",
+      "sourceAnimation": "Refined_SKILL_4_BOAT_CHARGE_north_R3",
+      "groupId": "27ce91f4-142a-4a7f-b01f-9a3eb2b7afd3"
+    },
+    {
+      "direction": "north-west",
+      "sourceAnimation": "Refined_SKILL_4_BOAT_CHARGE_north_west_R3",
+      "groupId": "10b90bc0-ca3d-48cf-a529-827d04a173ba"
+    },
+    {
+      "direction": "west",
+      "sourceAnimation": "Refined_SKILL_4_BOAT_CHARGE_west_R3",
+      "groupId": "732dbd28-d12a-4a37-a4ae-fea951f5541e"
+    },
+    {
+      "direction": "south-west",
+      "sourceAnimation": "Refined_SKILL_4_BOAT_CHARGE_south_west_R3",
+      "groupId": "8aea3c3b-ca62-4df1-8f42-1babe4221264"
+    }
+  ],
+  "animationClips": [
+    "Animations/SKILL_4_BOAT_CHARGE_SOUTH.anim",
+    "Animations/SKILL_4_BOAT_CHARGE_SOUTH_EAST.anim",
+    "Animations/SKILL_4_BOAT_CHARGE_EAST.anim",
+    "Animations/SKILL_4_BOAT_CHARGE_NORTH_EAST.anim",
+    "Animations/SKILL_4_BOAT_CHARGE_NORTH.anim",
+    "Animations/SKILL_4_BOAT_CHARGE_NORTH_WEST.anim",
+    "Animations/SKILL_4_BOAT_CHARGE_WEST.anim",
+    "Animations/SKILL_4_BOAT_CHARGE_SOUTH_WEST.anim"
+  ]
+}

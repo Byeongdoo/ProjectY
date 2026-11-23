@@ -1,0 +1,19 @@
+{
+  "key": "DrownedSoul",
+  "name": "물먹은 망령",
+  "characterId": "7b67f6b2-ace9-4265-b537-835418efcd17",
+  "gameId": 2000202,
+  "prefabName": "Mob_202",
+  "source": "PixelLab completed character export",
+  "metrics": {
+    "canvasWidth": 64,
+    "canvasHeight": 64,
+    "pixelsPerUnit": 32,
+    "pivotPixels": {
+      "x": 32.0,
+      "y": 2
+    }
+  },
+  "pivotPolicy": "One fixed south ground anchor; animation canvas-centre padding compensation only. No per-frame trimming.",
+  "archiveSha256": "83aa2601e7cfe634a17848151afe1b478bbfa4e070ea991687939a2595b8cc7d"
+}

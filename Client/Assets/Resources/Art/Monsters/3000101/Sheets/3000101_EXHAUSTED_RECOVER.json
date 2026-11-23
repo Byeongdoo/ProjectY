@@ -1,0 +1,73 @@
+{
+  "animation": "EXHAUSTED_RECOVER",
+  "sourceAnimation": "ExhaustedRecover",
+  "directions": [
+    "south",
+    "south-east",
+    "east",
+    "north-east",
+    "north",
+    "north-west",
+    "west",
+    "south-west"
+  ],
+  "frameCount": 8,
+  "framesPerSecond": 10,
+  "loop": false,
+  "cellWidth": 256,
+  "cellHeight": 256,
+  "sourcePixelsResized": false,
+  "alignment": "Canvas centres, transparent padding only",
+  "directionalSources": [
+    {
+      "direction": "south",
+      "sourceAnimation": "ExhaustedRecover",
+      "groupId": "9e9b45ed-8eb2-4058-b1c5-a0fbd4e9c528"
+    },
+    {
+      "direction": "south-east",
+      "sourceAnimation": "ExhaustedRecover",
+      "groupId": "9e9b45ed-8eb2-4058-b1c5-a0fbd4e9c528"
+    },
+    {
+      "direction": "east",
+      "sourceAnimation": "ExhaustedRecover",
+      "groupId": "9e9b45ed-8eb2-4058-b1c5-a0fbd4e9c528"
+    },
+    {
+      "direction": "north-east",
+      "sourceAnimation": "ExhaustedRecover",
+      "groupId": "9e9b45ed-8eb2-4058-b1c5-a0fbd4e9c528"
+    },
+    {
+      "direction": "north",
+      "sourceAnimation": "ExhaustedRecover",
+      "groupId": "9e9b45ed-8eb2-4058-b1c5-a0fbd4e9c528"
+    },
+    {
+      "direction": "north-west",
+      "sourceAnimation": "ExhaustedRecover",
+      "groupId": "9e9b45ed-8eb2-4058-b1c5-a0fbd4e9c528"
+    },
+    {
+      "direction": "west",
+      "sourceAnimation": "ExhaustedRecover",
+      "groupId": "9e9b45ed-8eb2-4058-b1c5-a0fbd4e9c528"
+    },
+    {
+      "direction": "south-west",
+      "sourceAnimation": "ExhaustedRecover",
+      "groupId": "9e9b45ed-8eb2-4058-b1c5-a0fbd4e9c528"
+    }
+  ],
+  "animationClips": [
+    "Animations/EXHAUSTED_RECOVER_SOUTH.anim",
+    "Animations/EXHAUSTED_RECOVER_SOUTH_EAST.anim",
+    "Animations/EXHAUSTED_RECOVER_EAST.anim",
+    "Animations/EXHAUSTED_RECOVER_NORTH_EAST.anim",
+    "Animations/EXHAUSTED_RECOVER_NORTH.anim",
+    "Animations/EXHAUSTED_RECOVER_NORTH_WEST.anim",
+    "Animations/EXHAUSTED_RECOVER_WEST.anim",
+    "Animations/EXHAUSTED_RECOVER_SOUTH_WEST.anim"
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "Mokgui_VFX_TankSlamImpact.json": {
+    "object": {
+      "id": "4d7525f2-095e-474f-8c4e-b844d85aff57",
+      "name": "base",
+      "prompt": "Twisted Mokgui TankSlamImpact isolated VFX",
+      "size": {
+        "width": 64,
+        "height": 64
+      },
+      "directions": 1,
+      "view": "low top-down"
+    },
+    "spritesheet": {
+      "path": "Mokgui_VFX_TankSlamImpact.png",
+      "cell_size": {
+        "width": 64,
+        "height": 64
+      },
+      "sheet_size": {
+        "width": 512,
+        "height": 128
+      },
+      "columns": 8,
+      "pivot": "cell-center",
+      "rows": [
+        {
+          "row": 0,
+          "type": "rotations",
+          "frame_count": 1,
+          "directions": [
+            "unknown"
+          ]
+        },
+        {
+          "row": 1,
+          "type": "animation",
+          "frame_count": 8,
+          "animation": "Mokgui_TankSlamImpact_8f",
+          "animation_group_id": "be8a24df-adea-4599-b2fe-276ecdf5fda4",
+          "direction": "unknown"
+        }
+      ]
+    },
+    "export_version": "1.0",
+    "export_date": "2026-11-23T13:28:54.445561+00:00"
+  }
+}

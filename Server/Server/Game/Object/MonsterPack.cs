@@ -5,8 +5,8 @@ namespace Server.Game
 	// 한 번에 스폰된 적 무리(spawnGroups 1회분). 팩 연동과 특수기 동시 시전 제한을 함께 맡는다('망령(적) 시스템' 2-5, 2-5-1).
 	public class MonsterPack
 	{
-		const int ConfigSpecialLimit = 20050;    // 팩 동시 시전 수
-		const int ConfigSpecialInterval = 20051; // 다음 특수기 최소 시작 간격(초)
+		const int ConfigSpecialLimit = 20053;    // 팩 동시 시전 수
+		const int ConfigSpecialInterval = 20054; // 다음 특수기 최소 시작 간격(초)
 
 		public List<Monster> Members { get; } = new List<Monster>();
 

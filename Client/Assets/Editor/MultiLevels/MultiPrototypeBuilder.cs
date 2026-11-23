@@ -13,7 +13,7 @@ using UnityEngine.Tilemaps;
 
 // 멀티 프로토타입 씬(삼천도 + 산신당 저승길)과 무당 플레이어 프리팹을 만들고, 서버용 맵 데이터를 내보낸다.
 //   - Assets/Scenes/Multi/Samcheondo.unity, Dungeon_87101.unity
-//   - Resources/Prefabs/Creature/MudangMyPlayer.prefab, MudangPlayer.prefab
+//   - Resources/Prefabs/Creature/MudangPlayer.prefab (외형만, 컨트롤러는 생성 시 부착)
 //   - ../Common/MapData/<씬>.txt(충돌) + <씬>.markers.json(입장 영역·시설 칸) — 서버 GameRoom이 읽는다
 // 배치는 이 파일의 좌표가 원본이다(감천 빌더와 같은 방식). 씬을 손으로 고치면 다시 돌릴 때 덮어쓴다.
 // 아트가 없어 전부 단색 플레이스홀더다(docs/levels/multi-prototype.md의 리소스 요청 목록).
@@ -339,20 +339,18 @@ public static class MultiPrototypeBuilder
         int order = cfg.Layers["Props"].sortOrder;
         Directory.CreateDirectory(PrefabDir);
 
-        foreach (bool mine in new[] { true, false })
-        {
-            string name = mine ? "MudangMyPlayer" : "MudangPlayer";
-            var go = new GameObject(name, typeof(SpriteRenderer), typeof(Animator));
-            var sr = go.GetComponent<SpriteRenderer>(); sr.sprite = sprite; sr.sortingOrder = order; sr.spriteSortPoint = SpriteSortPoint.Pivot;
-            go.GetComponent<Animator>().runtimeAnimatorController = ctrl;
-            PlayerController pc = mine ? go.AddComponent<MyPlayerController>() : go.AddComponent<PlayerController>();
-            var so = new SerializedObject(pc);
-            so.FindProperty("_eightDirClips").boolValue = true;
-            so.FindProperty("_hpBarHeight").floatValue = sprite.bounds.max.y; // 발밑 피벗 기준 머리 위
-            so.ApplyModifiedPropertiesWithoutUndo();
-            PrefabUtility.SaveAsPrefabAsset(go, $"{PrefabDir}/{name}.prefab");
-            UnityEngine.Object.DestroyImmediate(go);
-        }
+        // 외형 + 표시 설정(CreatureVisual)만 담는다. 컨트롤러는 생성 시 ObjectManager가 붙인다.
+        var go = new GameObject("MudangPlayer", typeof(SpriteRenderer), typeof(Animator), typeof(CreatureVisual));
+        var sr = go.GetComponent<SpriteRenderer>(); sr.sprite = sprite; sr.sortingOrder = order; sr.spriteSortPoint = SpriteSortPoint.Pivot;
+        go.GetComponent<Animator>().runtimeAnimatorController = ctrl;
+        var visual = go.GetComponent<CreatureVisual>();
+        visual.eightDirClips = true;
+        visual.hpBarHeight = sprite.bounds.max.y; // 발밑 피벗 기준 머리 위
+        PrefabUtility.SaveAsPrefabAsset(go, $"{PrefabDir}/MudangPlayer.prefab");
+        UnityEngine.Object.DestroyImmediate(go);
+
+        // 예전 구조(내 캐릭터용 MudangMyPlayer 프리팹)가 남아 있으면 지운다
+        AssetDatabase.DeleteAsset($"{PrefabDir}/MudangMyPlayer.prefab");
     }
 
     // ================= 서버 맵 데이터 =================

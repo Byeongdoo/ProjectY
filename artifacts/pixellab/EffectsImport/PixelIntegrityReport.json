@@ -1,0 +1,7 @@
+{
+  "status": "passed",
+  "byteIdenticalSourceFrames": 76,
+  "sourceBaseImages": 10,
+  "pixelIdenticalSheets": 10,
+  "sourcePixelsResized": false
+}

@@ -49,6 +49,22 @@ namespace Server.Game
 			return packs;
 		}
 
+		public const int ObjTypeBonfire = 12;       // 구간 불씨
+		public const int ObjTypeArenaBonfire = 15;  // 보스방 불씨
+
+		// 그 던전 맵의 levelObjects 중 objType인 지점들(서버 좌표)
+		public static List<Vector2Int> Points(int dungeonId, int objType)
+		{
+			var points = new List<Vector2Int>();
+			LevelMapsRow map = TableManager.LevelMaps.Rows.FirstOrDefault(m => m.kind == MapKindDungeon && m.refID == dungeonId);
+			if (map == null)
+				return points;
+			foreach (LevelObjectsRow obj in TableManager.LevelObjects.Rows)
+				if (obj.mapID == map.mapID && obj.objType == objType)
+					points.Add(new Vector2Int(obj.x, map.height - 1 - obj.y));
+			return points;
+		}
+
 		// 팩 지점에서 가까운 빈 칸부터 채운다(체비셰프 거리 순, 같은 거리면 무작위).
 		public static List<Vector2Int> PickCells(Map map, Vector2Int point, int count, Random random)
 		{

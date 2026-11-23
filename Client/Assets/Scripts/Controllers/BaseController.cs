@@ -18,9 +18,13 @@ public class BaseController : MonoBehaviour
 			if (_stat.Equals(value))
 				return;
 
+			_stat.Level = value.Level;
+			_stat.Attack = value.Attack;
 			_stat.Hp = value.Hp;
 			_stat.MaxHp = value.MaxHp;
 			_stat.Speed = value.Speed;
+			_stat.Spirit = value.Spirit;
+			_stat.MaxSpirit = value.MaxSpirit;
 		}
 	}
 
@@ -29,9 +33,6 @@ public class BaseController : MonoBehaviour
 		get { return Stat.Speed; }
 		set { Stat.Speed = value; }
 	}
-
-	// 실제 이동 속도(칸/초). 상태이상(둔화·신속)은 CreatureController가 반영한다.
-	public virtual float MoveSpeed { get { return Speed; } }
 
 	public virtual int Hp
 	{
@@ -247,7 +248,7 @@ public class BaseController : MonoBehaviour
 		// 대각선도 1칸이라 축별 최대 거리(체비셰프) 기준으로 진행한다.
 		// 대각선 구간은 configs 20030 배율만큼 시간을 더 써서 화면상 속도를 직선과 맞춘다(서버 몬스터 이동 간격과 같은 배율)
 		bool diagonal = Mathf.Abs(moveDir.x) > 0.001f && Mathf.Abs(moveDir.y) > 0.001f;
-		float step = (diagonal ? MoveSpeed / DiagonalTimeScale : MoveSpeed) * Time.deltaTime;
+		float step = (diagonal ? Speed / DiagonalTimeScale : Speed) * Time.deltaTime;
 		float dist = Mathf.Max(Mathf.Abs(moveDir.x), Mathf.Abs(moveDir.y));
 		if (dist < step)
 		{

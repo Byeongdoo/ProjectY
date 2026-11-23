@@ -137,3 +137,50 @@ Client/Assets/Resources/Art/
 - 무명장수 88클립·608프레임과 정면/8방향 기준 이미지를 큰 은색 도신으로 수정했다. 북쪽/북동 공격은 전방 자세로, 북서는 PixelLab 레이어 동작으로 수정했다. 공격 8방향 Trail도 재연결했다. 기록: rtifacts/pixellab/MumyeongJangsuSwordRevision/RevisionReport.md.
 - 무명장수 기준 PNG는 **96×96 투명 캔버스**, 피벗 **(48,18)**, 32 PPU다. 기존 64×64 몸체의 픽셀 밀도와 발 기준점을 유지한다. 동작별 피벗은 x=width/2, y=18+(height-96)/2이며 원래 (32,2) 기준과 동일하다. 일부 프레임은 검 끝 여백을 위해 128×128이며 확대/축소하지 않는다. 시트의 최대 셀과 개별 PNG 크기를 구분한다.
 - 기준 이미지 발 위치는 PixelLab 정수 이동으로 보정했다. 65프레임의 여백·검 끝 보정에서 본체 내부 픽셀 변경 0, 최종 608프레임 가장자리 접촉 0을 확인했다. 기본 클립 GUID·FPS·루프와 기존 씬은 유지했다.
+
+### 1챕터 보스·2챕터 망령 임포트 (2026-11-23)
+
+사용자 요청으로 PixelLab에 제작된 아래 6종을 `Resources/Art/Monsters/<characterID>/`에 가져왔다. 신규 생성 요청은 하지 않았다. 테이블의 ID·표시 이름·prefabName을 사용하며, 기존 몬스터 프리팹과 같은 구성으로 `Resources/Prefabs/Creature/Monster/`에 연결했다.
+
+| 챕터 | 망령 | characterID | 프리팹 | 방향별 클립 | 동작 프레임 |
+|---|---|---|---|---:|---:|
+| 1 | 뒤틀린 목귀 | 3000101 | Boss_101 | 104 | 832 |
+| 2 | 갯벌 잡귀 | 2000201 | Mob_201 | 72 | 448 |
+| 2 | 물먹은 망령 | 2000202 | Mob_202 | 72 | 448 |
+| 2 | 뱃노래 귀신 | 2000203 | Mob_203 | 72 | 448 |
+| 2 | 그물 악귀(정예) | 2000204 | Mob_204 | 72 | 448 |
+| 2 | 수귀 사공 | 3000201 | Boss_201 | 112 | 768 |
+
+- 총 63동작 × 8방향 = **504클립·3,392프레임**. `Sprites/Rotations`, 동작별 원본 PNG, `Sheets` 시트·레이아웃, `Animations`, Animator Controller와 출처 JSON을 제공한다. 이동·기본 공격·사망의 상태 이름은 기존 클라이언트의 `IDLE/RUN/ATTACK/DIE_<방향>`과 맞췄다. 목귀의 원본 `Walk/Death`는 `RUN/DIE`로 매핑하고, 보스 패턴·페이즈·탈진 동작은 별도 이름으로 보존했다.
+- `REJECTED_*`는 Unity에 넣지 않았다. 방향별 `*_FIX_*`, 최신 `Refined_*_R3` 및 뱃노래 귀신의 `POSE_HOLD_NW_R4`를 해당 기본 동작에 반영했다. 35개 방향 수정본의 원래 이름·그룹 ID는 각 `AnimationSource.json`의 `directionalSources`에 기록했다.
+- 원본 PNG 바이트는 변경하지 않았다. 32 PPU, Point, 무압축, Mipmap Off, sRGB, Full Rect, NPOT None, Clamp를 사용한다. 각 캐릭터의 고정 발 기준점은 `SourceInfo.json`에 기록하며, 커진 동작 캔버스의 중앙 여백만 피벗에 보정한다. FPS·루프는 리소스 재생 기본값이며 전투 시전 시간·공격 속도를 정하지 않는다.
+- 목귀 원본 회전 PNG 일부는 192px 캔버스 경계에 닿아 있다. 원본 보존을 위해 임의 보간·확대·외형 수정은 하지 않았다. 생성된 동작 프레임은 경계 접촉 0이다. 기술 검증은 미술 승인과 별개다.
+- 다운로드 ZIP·메타데이터와 프레임 SHA-256 대조 기록: `artifacts/pixellab/MonsterImport/`. Unity 전체 프레임 샘플링과 프리팹·임포트 설정 검사 결과는 `UnityValidationReport.json`에 기록한다. 열린 씬은 변경하지 않는다.
+- 재임포트 도구: `Tools/Art/import_completed_monsters.py`(Pillow 필요). 기존 다운로드만 사용하며 생성·과금 요청은 하지 않는다. `--repair`는 PNG를 유지하면서 임포트 메타데이터와 최종 GUID 기준 클립 참조를 재연결한다. 실행 후 Unity Refresh 및 검증이 필요하다. 기존 `Tools > ProjectY > Build Monster Prefabs` 메뉴로도 프리팹을 다시 만들 수 있다.
+
+### 삼천도 타일 시트·팔레트 임포트 (2026-11-23)
+
+- 사용자 요청으로 기존 PixelLab 삼천도 리소스를 Gamcheon의 Ground/Struct/Deco 구성에 맞춰 `Resources/Art/Tiles/Samcheondo/`에 가져왔다. `Tile_Samcheondo_Ground.png`(768×128, 80타일), `Tile_Samcheondo_Struct.png`(512×352, 79타일), `Tile_Samcheondo_Deco.png`(512×64, 10타일)와 각 `Tiles/`의 Tile 애셋을 제공한다.
+- Ground는 강물↔강가 흙, 흙↔돌바닥, 강물↔잔교, 흙↔잔디, 흙↔잔교의 5개 Wang 세트다. 원본 metadata의 `bounding_box`로 잘라 각 블록에 코너 마스크 0~15 순서로 놓았다. 마스크는 `NW<<3 | NE<<2 | SW<<1 | SE`이며 블록 사이 한 칸을 비웠다.
+- Struct는 주막·부활 신단·나룻배·명부 게시판·등불·버드나무·강가 바위, Deco는 갈대·낮은 물안개다. 주막과 신단은 나중에 제작된 low top-down 버전을 사용했다. 원본 PNG의 픽셀·캔버스를 확대·축소·보간하지 않고 정수 위치에 복사했다. 원본 오브젝트 경계를 알기 때문에 자동 덩어리 검출 대신 32px 격자로 묶어 자르고 완전히 투명한 칸만 제외한다.
+- 모두 32 PPU, Point, 무압축, Mipmap Off, sRGB, Full Rect, NPOT None, Clamp다. 큰 오브젝트는 팔레트에서 칸 묶음을 선택해 한 번에 칠한다. 충돌은 기존 Collision 레이어 방식으로 따로 지정하며 Tile 자체 collider는 None이다.
+- 팔레트 3개는 `Assets/Editor/Art/Palettes/Samcheondo/Palette_Samcheondo_<Ground|Struct|Deco>.prefab`이다. 시트 재조립은 `Tools/Art/import_samcheondo_tiles.py`(Pillow 필요), Unity 등록·검사는 `Tools > ProjectY > Levels > Samcheondo > Build Tile Palettes` / `Verify Tile Palettes`다. 재실행 시 시트·타일·팔레트 GUID와 스프라이트 fileID를 유지한다.
+- 출처·시트 좌표는 `SourceInfo.json`, 원본 다운로드·PixelLab 응답·픽셀 검사·Unity 검사·재생성 참조 유지 검사 결과는 `artifacts/pixellab/SamcheondoTiles/`에 보관한다. 이번 작업은 타일 애셋·팔레트 등록이며 기존 씬의 맵 배치와 충돌 데이터는 변경하지 않는다.
+
+### PixelLab 이펙트 리소스 임포트 (2026-11-23)
+
+사용자 요청으로 이미 제작된 목귀 전투 VFX 7종과 산신당 환경 효과 3종을 가져왔다. 총 **10종·76개 원본 애니메이션 프레임**, 10개 클립·컨트롤러·프리팹이다. 원본 PNG의 바이트와 투명도를 유지하며 신규 생성 요청은 하지 않았다.
+
+| 그룹 | 이펙트 키 | 원본 프레임 | 재생 |
+|---|---|---:|---|
+| Mokgui | WarningGrid, Phase2Aura, ExhaustedAura, ThreadBinding | 각 8 | 반복 |
+| Mokgui | MountainWailRing, RootEruption, TankSlamImpact | 각 8 | 1회 |
+| Sansindang | LowMist | 8 | 반복 |
+| Sansindang | SealPulse, SoulFlame | 각 6 | 반복 |
+
+- 아트는 `Resources/Art/Effects/<Mokgui|Sansindang>/<키>/`의 `Sprites`, `Sheets`, `Animations`, `<그룹>_<키>.controller`, `SourceInfo.json`이다. 프리팹은 `Resources/Prefabs/Effect/<그룹>/<그룹>_<키>.prefab`이며 `SpriteRenderer + Animator`, 기본 상태 `START`로 바로 재생한다. `PixelLabEffects.json`의 `resourcePath`를 `Resources.Load<GameObject>`에 넘겨 로드할 수 있다.
+- 32 PPU, Point, 무압축, Mipmap Off, sRGB, Full Rect, NPOT None, Clamp, 중앙 피벗, Transform scale 1이다. 캔버스 기준점을 유지하며 프레임별 trim·확대·축소는 하지 않는다. 경고 격자·절규 파동·안개·봉인 문양은 `tileLayers.Details`, 나머지는 `tileLayers.Animated`의 sorting order를 사용한다.
+- PixelLab 내보내기에 프레임 시간이 없어 반복은 8fps, 단발은 10fps의 리소스 재생 기본값을 기록했다. 전투 시전 시간·스킬 수치는 정하지 않는다. Unity는 마지막 스프라이트 키에도 한 프레임 길이를 더한다. 반복 클립은 원본 키만 사용하고, 단발 3종은 마지막 원본 프레임을 온전히 표시한 뒤 Sprite를 null로 바꾸는 종료 키를 추가했다. 원본 이미지 자체는 수정하지 않았다.
+- 프리팹은 시각 리소스다. 스킬 이벤트에서 생성·부착하고, 반복 중지와 인스턴스 반환/삭제를 관리하는 부분은 호출 측에서 연결한다. 이펙트 판정용 collider, 피해 판정, 사망 이펙트 별칭은 추가하지 않았다.
+- 재임포트는 `Tools/Art/import_pixellab_effects.py`(Pillow 필요) 후 `Tools > ProjectY > Effects > Build PixelLab Effects`를 실행한다. `Verify PixelLab Effects`는 모든 프레임과 Animator 시작·반복·종료, Resources 로드, 정렬·피벗·임포트 설정을 검사한다. 재실행 시 PNG·클립·컨트롤러·프리팹 GUID와 Sprite fileID를 유지한다.
+- 다운로드 ZIP·PixelLab 응답·원본 대조·Unity 재생·GUID 유지 검사 결과는 `artifacts/pixellab/EffectsImport/`에 보관한다. 현재 검증은 76개 원본 프레임, 반복 7종, 종료 시 숨김 3종을 통과했으며 기존 열린 씬을 변경하지 않았다.

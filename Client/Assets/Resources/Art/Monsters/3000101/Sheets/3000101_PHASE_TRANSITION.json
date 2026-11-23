@@ -1,0 +1,73 @@
+{
+  "animation": "PHASE_TRANSITION",
+  "sourceAnimation": "PhaseTransition",
+  "directions": [
+    "south",
+    "south-east",
+    "east",
+    "north-east",
+    "north",
+    "north-west",
+    "west",
+    "south-west"
+  ],
+  "frameCount": 8,
+  "framesPerSecond": 10,
+  "loop": false,
+  "cellWidth": 256,
+  "cellHeight": 256,
+  "sourcePixelsResized": false,
+  "alignment": "Canvas centres, transparent padding only",
+  "directionalSources": [
+    {
+      "direction": "south",
+      "sourceAnimation": "PhaseTransition",
+      "groupId": "e0d2b0f0-f27f-43dd-87c7-025c99458029"
+    },
+    {
+      "direction": "south-east",
+      "sourceAnimation": "PhaseTransition",
+      "groupId": "e0d2b0f0-f27f-43dd-87c7-025c99458029"
+    },
+    {
+      "direction": "east",
+      "sourceAnimation": "PhaseTransition",
+      "groupId": "e0d2b0f0-f27f-43dd-87c7-025c99458029"
+    },
+    {
+      "direction": "north-east",
+      "sourceAnimation": "PhaseTransition",
+      "groupId": "e0d2b0f0-f27f-43dd-87c7-025c99458029"
+    },
+    {
+      "direction": "north",
+      "sourceAnimation": "PhaseTransition",
+      "groupId": "e0d2b0f0-f27f-43dd-87c7-025c99458029"
+    },
+    {
+      "direction": "north-west",
+      "sourceAnimation": "PhaseTransition",
+      "groupId": "e0d2b0f0-f27f-43dd-87c7-025c99458029"
+    },
+    {
+      "direction": "west",
+      "sourceAnimation": "PhaseTransition",
+      "groupId": "e0d2b0f0-f27f-43dd-87c7-025c99458029"
+    },
+    {
+      "direction": "south-west",
+      "sourceAnimation": "PhaseTransition",
+      "groupId": "e0d2b0f0-f27f-43dd-87c7-025c99458029"
+    }
+  ],
+  "animationClips": [
+    "Animations/PHASE_TRANSITION_SOUTH.anim",
+    "Animations/PHASE_TRANSITION_SOUTH_EAST.anim",
+    "Animations/PHASE_TRANSITION_EAST.anim",
+    "Animations/PHASE_TRANSITION_NORTH_EAST.anim",
+    "Animations/PHASE_TRANSITION_NORTH.anim",
+    "Animations/PHASE_TRANSITION_NORTH_WEST.anim",
+    "Animations/PHASE_TRANSITION_WEST.anim",
+    "Animations/PHASE_TRANSITION_SOUTH_WEST.anim"
+  ]
+}

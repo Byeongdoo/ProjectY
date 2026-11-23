@@ -1,0 +1,99 @@
+{
+  "key": "Phase2Aura",
+  "scope": "Mokgui",
+  "name": "Mokgui_Phase2Aura",
+  "objectId": "9c47234c-23bb-43a0-956d-aec6b70ea5dd",
+  "root": "Assets/Resources/Art/Effects/Mokgui/Phase2Aura",
+  "sourceAnimation": "Mokgui_Phase2Aura_8f",
+  "animationGroupId": "59fdbb44-6b74-4d60-9a83-f1f6bde2fd2d",
+  "frameCount": 8,
+  "framesPerSecond": 8,
+  "loop": true,
+  "timingSource": "Presentation defaults; PixelLab export has no frame durations. Not combat/cast timing.",
+  "clearSpriteOnCompletion": false,
+  "sortingTableLayer": "Animated",
+  "pixelsPerUnit": 32,
+  "pivot": {
+    "x": 0.5,
+    "y": 0.5
+  },
+  "rootMotion": false,
+  "sourcePixelsResized": false,
+  "frames": [
+    "Assets/Resources/Art/Effects/Mokgui/Phase2Aura/Sprites/frame_000.png",
+    "Assets/Resources/Art/Effects/Mokgui/Phase2Aura/Sprites/frame_001.png",
+    "Assets/Resources/Art/Effects/Mokgui/Phase2Aura/Sprites/frame_002.png",
+    "Assets/Resources/Art/Effects/Mokgui/Phase2Aura/Sprites/frame_003.png",
+    "Assets/Resources/Art/Effects/Mokgui/Phase2Aura/Sprites/frame_004.png",
+    "Assets/Resources/Art/Effects/Mokgui/Phase2Aura/Sprites/frame_005.png",
+    "Assets/Resources/Art/Effects/Mokgui/Phase2Aura/Sprites/frame_006.png",
+    "Assets/Resources/Art/Effects/Mokgui/Phase2Aura/Sprites/frame_007.png"
+  ],
+  "baseSprite": "Assets/Resources/Art/Effects/Mokgui/Phase2Aura/Sprites/Base.png",
+  "sheet": "Assets/Resources/Art/Effects/Mokgui/Phase2Aura/Sheets/Mokgui_Phase2Aura.png",
+  "clip": "Assets/Resources/Art/Effects/Mokgui/Phase2Aura/Animations/Mokgui_Phase2Aura.anim",
+  "controller": "Assets/Resources/Art/Effects/Mokgui/Phase2Aura/Mokgui_Phase2Aura.controller",
+  "prefab": "Assets/Resources/Prefabs/Effect/Mokgui/Mokgui_Phase2Aura.prefab",
+  "resourcePath": "Prefabs/Effect/Mokgui/Mokgui_Phase2Aura",
+  "lifetimePolicy": "One-shot clears its sprite after the full final frame; owner releases/pools the instance. Loop owner controls stop/release.",
+  "archiveSha256": "daf6bf24f778b0f506f7f50a9085bcd828f5cdfff35aa589aa2b06d5b7fefd9d",
+  "sourceFiles": [
+    {
+      "path": "Assets/Resources/Art/Effects/Mokgui/Phase2Aura/Sprites/frame_000.png",
+      "archivePath": "animations/Thin_crimson_ritual_threads_pulse_with_restrained/unknown/frame_000.png",
+      "sha256": "16ece36f6a63cc23b6a28748a9c4b8ef0c5ea3a3a2fec2f36371de75a01e4644",
+      "width": 128,
+      "height": 128
+    },
+    {
+      "path": "Assets/Resources/Art/Effects/Mokgui/Phase2Aura/Sprites/frame_001.png",
+      "archivePath": "animations/Thin_crimson_ritual_threads_pulse_with_restrained/unknown/frame_001.png",
+      "sha256": "6e7cad3dec3728afa6cddb395a847aac3c0083858f231f66b1bb1c8bf5ef8562",
+      "width": 128,
+      "height": 128
+    },
+    {
+      "path": "Assets/Resources/Art/Effects/Mokgui/Phase2Aura/Sprites/frame_002.png",
+      "archivePath": "animations/Thin_crimson_ritual_threads_pulse_with_restrained/unknown/frame_002.png",
+      "sha256": "1e4876e832bc3d33b74c0ff55207769739f1090bacaffcc2cf9ddc182dae366d",
+      "width": 128,
+      "height": 128
+    },
+    {
+      "path": "Assets/Resources/Art/Effects/Mokgui/Phase2Aura/Sprites/frame_003.png",
+      "archivePath": "animations/Thin_crimson_ritual_threads_pulse_with_restrained/unknown/frame_003.png",
+      "sha256": "1a7f6e79afa6ee33121842618201991cbe79f9d4e76096fd507016e2e496c648",
+      "width": 128,
+      "height": 128
+    },
+    {
+      "path": "Assets/Resources/Art/Effects/Mokgui/Phase2Aura/Sprites/frame_004.png",
+      "archivePath": "animations/Thin_crimson_ritual_threads_pulse_with_restrained/unknown/frame_004.png",
+      "sha256": "1d2fe52fccbb7dff98ee715dd4db425a0a8915dbbc3315c09955be4d2ceef32d",
+      "width": 128,
+      "height": 128
+    },
+    {
+      "path": "Assets/Resources/Art/Effects/Mokgui/Phase2Aura/Sprites/frame_005.png",
+      "archivePath": "animations/Thin_crimson_ritual_threads_pulse_with_restrained/unknown/frame_005.png",
+      "sha256": "7da31bdaf556a02d43a979e6bb71e39f2a1e3663b06f7f825aebf7287918e00e",
+      "width": 128,
+      "height": 128
+    },
+    {
+      "path": "Assets/Resources/Art/Effects/Mokgui/Phase2Aura/Sprites/frame_006.png",
+      "archivePath": "animations/Thin_crimson_ritual_threads_pulse_with_restrained/unknown/frame_006.png",
+      "sha256": "df2e4bbbcd4ffb57a7bd13b0b03dbc8345299516f3086c80c733948484f83e35",
+      "width": 128,
+      "height": 128
+    },
+    {
+      "path": "Assets/Resources/Art/Effects/Mokgui/Phase2Aura/Sprites/frame_007.png",
+      "archivePath": "animations/Thin_crimson_ritual_threads_pulse_with_restrained/unknown/frame_007.png",
+      "sha256": "f028db3a56aa7715e762f70927c64e293148c90d3586d90d8b4e820c71e5e544",
+      "width": 128,
+      "height": 128
+    }
+  ],
+  "visualApproval": "Existing assets imported; technical validation is not visual approval."
+}

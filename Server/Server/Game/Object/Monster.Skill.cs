@@ -9,9 +9,9 @@ namespace Server.Game
 	//   선택: 조건을 만족한 스킬 중 Skill1 우선, 없으면 Skill2, 둘 다 안 되면 기본 AI(평타·이동).
 	//   시작: 대상 = 위협 1위. 시전자 위치·방향·대상 칸·위험 칸을 고정하고 예고(S_SkillWarning). 예고 중 이동·평타·다른 스킬 금지.
 	//   발동: 예고가 끝나는 순간 위험 칸 안의 플레이어만 맞는다. 재사용 대기는 발동 순간부터, 발동 후 회수 시간 동안 행동하지 않는다.
-	//   취소: 기절·사망·복귀. 예고를 지우고 피해·상태 미적용, 그 스킬은 재시도 대기(configs 20055) 뒤 다시 시도. 일반 피격은 시전을 끊지 않는다.
-	//   팩 제한: 팩 전체에서 동시에 1개(configs 20050), 다음 시작은 이전 시작 후 3초(20051)이면서 이전 판정·투사체 종료 이후.
-	//   첫 사용: 교전 시작 후 3초(20053) + 팩 안 스폰 순서 × 0.5초(20054).
+	//   취소: 기절·사망·복귀. 예고를 지우고 피해·상태 미적용, 그 스킬은 재시도 대기(configs 20058) 뒤 다시 시도. 일반 피격은 시전을 끊지 않는다.
+	//   팩 제한: 팩 전체에서 동시에 1개(configs 20053), 다음 시작은 이전 시작 후 3초(20054)이면서 이전 판정·투사체 종료 이후.
+	//   첫 사용: 교전 시작 후 3초(20056) + 팩 안 스폰 순서 × 0.5초(20057).
 	public partial class Monster
 	{
 		// monsterSkills.shape (시트 '#형태' 메모와 같은 값)
@@ -24,10 +24,12 @@ namespace Server.Game
 			Projectile = 5, // 고정 방향 직선 투사체, 벽 또는 첫 플레이어 적중 시 종료
 		}
 
-		const int ConfigBindImmunity = 20052;      // 같은 스킬 결박 재적용 면역(초)
-		const int ConfigFirstDelay = 20053;        // 교전 시작 후 첫 특수기 대기(초)
-		const int ConfigFirstDelayPerIndex = 20054;// 팩 스폰 순서당 추가 대기(초)
-		const int ConfigCancelRetry = 20055;       // 취소 후 재시도 대기(초)
+		const int ConfigBindImmunity = 20055;      // 같은 스킬 결박 재적용 면역(초)
+		const int ConfigFirstDelay = 20056;        // 교전 시작 후 첫 특수기 대기(초)
+		const int ConfigFirstDelayPerIndex = 20057;// 팩 스폰 순서당 추가 대기(초)
+		const int ConfigCancelRetry = 20058;       // 취소 후 재시도 대기(초)
+
+		static float Config(int id) => CombatConfig.Get(id);
 
 		static int s_nextWarningId = 0;
 
@@ -233,7 +235,7 @@ namespace Server.Game
 			_skillReadyTick[skill.monsterSkillID] = now + (long)(1000 * skill.coolTime);
 
 			// 발동 동작(클라는 슬롯으로 SKILL_1/SKILL_2 클립을 고른다)
-			Room.Broadcast(new S_Skill() { ObjectId = Id, Info = new SkillInfo() { SkillId = skill.monsterSkillID } });
+			Room.Broadcast(new S_Skill() { ObjectId = Id, Info = new SkillInfo() { SkillId = skill.monsterSkillID, TargetId = _target != null ? _target.Id : 0 } });
 
 			long busyMs = 0;
 			switch ((SkillShape)skill.shape)
@@ -353,23 +355,23 @@ namespace Server.Game
 		// TODO 해독으로 결박이 일찍 풀리면 면역도 그때부터 5초여야 한다. 지금은 원래 끝날 시각 기준이다.
 		void HitWithSkill(Table.MonsterSkillsRow skill, Player player)
 		{
-			if (Room == null || Room.IsTargetable(player) == false)
+			if (Room == null || player.IsAlive == false || player.Room != Room)
 				return;
 
 			if (skill.coefficient > 0)
-				Combat.Hit(this, player, skill.coefficient);
+				Combat.Damage(this, player, skill.coefficient);
 
-			if (skill.status == 0 || skill.statusTime <= 0 || Room.IsTargetable(player) == false)
+			if (skill.status == 0 || skill.statusTime <= 0 || player.IsAlive == false)
 				return;
 
 			long now = Environment.TickCount64;
-			if (skill.status == StatusId.Bind)
+			if (skill.status == StatusId.Root)
 			{
 				if (player.IsBindImmune(skill.monsterSkillID, now))
 					return;
 				player.SetBindImmune(skill.monsterSkillID, now + (long)(1000 * (skill.statusTime + Config(ConfigBindImmunity))));
 			}
-			player.Statuses.Apply(skill.status, skill.statusTime);
+			player.Status.Apply(skill.status, skill.statusTime, this);
 		}
 	}
 }

@@ -62,10 +62,11 @@ class PacketHandler
 			return;
 
 		// 내 캐릭터는 클라가 예측해 움직인다. 서버 위치와 허용 오차(configs 20049)보다 멀어졌을 때만 맞춘다.
-		if (Managers.Object.MyPlayer.Id == movePacket.ObjectId)
+		// 스킬이 옮긴 위치(forced)는 바로 맞춘다.
+		if (Managers.Object.MyPlayer != null && Managers.Object.MyPlayer.Id == movePacket.ObjectId)
 		{
 			int tolerance = Mathf.RoundToInt(Table.TableManager.Configs.Get(20049).value[0]);
-			Managers.Object.MyPlayer.OnServerPosition(movePacket.PosInfo, tolerance);
+			Managers.Object.MyPlayer.OnServerPosition(movePacket.PosInfo, tolerance, movePacket.Forced);
 			return;
 		}
 
@@ -73,11 +74,9 @@ class PacketHandler
 		if (bc == null)
 			return;
 
-		// 혼절에서 부활한 파티원은 부활 칸으로 바로 옮긴다(걸어가는 보간 없이)
-		bool revived = bc.PosInfo.State == CreatureState.Dead && movePacket.PosInfo.State != CreatureState.Dead;
 		bc.PosInfo = movePacket.PosInfo;
-		if (revived)
-			bc.SyncPos();
+		if (movePacket.Forced)
+			bc.SyncPos(); // 밀려남·돌진은 미끄러지지 않고 그 칸으로
 	}
 
 	public static void S_SkillHandler(PacketSession session, IMessage packet)
@@ -88,25 +87,25 @@ class PacketHandler
 		if (go == null)
 			return;
 
+		if (Managers.Object.MyPlayer != null && Managers.Object.MyPlayer.Id == skillPacket.ObjectId)
+			MyCombat.OnMySkill(skillPacket.Info.SkillId, skillPacket.CastTime);
+
 		CreatureController cc = go.GetComponent<CreatureController>();
 		if (cc != null)
-		{
-			cc.UseSkill(skillPacket.Info.SkillId);
-		}
+			cc.UseSkill(skillPacket.Info.SkillId, skillPacket.Info.TargetId, skillPacket.CastTime);
 	}
 
-	// 상태이상 적용·갱신·해제. 판정은 서버가 하고 클라는 표시·이동 속도·입력 제한에 쓴다.
-	public static void S_ChangeStatusHandler(PacketSession session, IMessage packet)
+	public static void S_CancelSkillHandler(PacketSession session, IMessage packet)
 	{
-		S_ChangeStatus statusPacket = packet as S_ChangeStatus;
+		S_CancelSkill cancelPacket = packet as S_CancelSkill;
 
-		GameObject go = Managers.Object.FindById(statusPacket.ObjectId);
-		if (go == null)
-			return;
+		if (Managers.Object.MyPlayer != null && Managers.Object.MyPlayer.Id == cancelPacket.ObjectId)
+			MyCombat.OnMyCancel();
 
-		CreatureController cc = go.GetComponent<CreatureController>();
-		if (cc != null && statusPacket.Status != null)
-			cc.SetStatus(statusPacket.Status);
+		GameObject go = Managers.Object.FindById(cancelPacket.ObjectId);
+		CreatureController cc = go != null ? go.GetComponent<CreatureController>() : null;
+		if (cc != null)
+			cc.CancelSkill();
 	}
 
 	// 적 특수기 예고 칸. 표시만 하고 판정은 서버가 한다.
@@ -127,7 +126,38 @@ class PacketHandler
 		if (cc != null)
 		{
 			cc.Hp = changePacket.Hp;
+			if (changePacket.Amount > 0)
+				CombatHud.ShowNumber(cc, changePacket.Amount, changePacket.Critical, changePacket.Heal);
 		}
+	}
+
+	// 내 신력(본인에게만 온다)
+	public static void S_ChangeSpiritHandler(PacketSession session, IMessage packet)
+	{
+		S_ChangeSpirit spiritPacket = packet as S_ChangeSpirit;
+		MyCombat.Spirit = spiritPacket.Spirit;
+		MyCombat.MaxSpirit = spiritPacket.MaxSpirit;
+	}
+
+	public static void S_ChangeStatusHandler(PacketSession session, IMessage packet)
+	{
+		S_ChangeStatus statusPacket = packet as S_ChangeStatus;
+
+		GameObject go = Managers.Object.FindById(statusPacket.ObjectId);
+		CreatureController cc = go != null ? go.GetComponent<CreatureController>() : null;
+		if (cc != null)
+			cc.SetStatus(statusPacket.StatusId, statusPacket.Duration, statusPacket.Stack);
+	}
+
+	// 상태이상으로 바뀐 이동 속도 등
+	public static void S_ChangeStatHandler(PacketSession session, IMessage packet)
+	{
+		S_ChangeStat statPacket = packet as S_ChangeStat;
+
+		GameObject go = Managers.Object.FindById(statPacket.ObjectId);
+		BaseController bc = go != null ? go.GetComponent<BaseController>() : null;
+		if (bc != null && statPacket.StatInfo != null)
+			bc.Speed = statPacket.StatInfo.Speed;
 	}
 
 	public static void S_DieHandler(PacketSession session, IMessage packet)
@@ -138,12 +168,54 @@ class PacketHandler
 		if (go == null)
 			return;
 
+		// 저승 던전의 플레이어는 혼절(그 자리에 쓰러져 있다가 일어난다)
+		if (diePacket.FaintTime > 0f && go.GetComponent<PlayerController>() is PlayerController pc)
+		{
+			if (Managers.Object.MyPlayer != null && pc.Id == Managers.Object.MyPlayer.Id)
+			{
+				TargetSelect.End();
+				MyCombat.OnMyCancel();
+			}
+			pc.OnFainted(diePacket.FaintTime);
+			return;
+		}
+
 		CreatureController cc = go.GetComponent<CreatureController>();
 		if (cc != null)
 		{
 			cc.Hp = 0;
 			cc.OnDead();
 		}
+	}
+
+	public static void S_ReviveHandler(PacketSession session, IMessage packet)
+	{
+		S_Revive revivePacket = packet as S_Revive;
+
+		GameObject go = Managers.Object.FindById(revivePacket.ObjectId);
+		PlayerController pc = go != null ? go.GetComponent<PlayerController>() : null;
+		if (pc != null)
+			pc.OnRevived(revivePacket.Hp, revivePacket.PosInfo);
+	}
+
+	// F 홀드 시작·끝(혼 부르기·보스방 불씨)
+	public static void S_ChannelHandler(PacketSession session, IMessage packet)
+	{
+		S_Channel channelPacket = packet as S_Channel;
+
+		GameObject go = Managers.Object.FindById(channelPacket.ObjectId);
+		PlayerController pc = go != null ? go.GetComponent<PlayerController>() : null;
+		if (pc != null)
+			pc.SetChannel(channelPacket.Kind, channelPacket.Duration);
+	}
+
+	public static void S_DungeonStateHandler(PacketSession session, IMessage packet)
+	{
+		S_DungeonState statePacket = packet as S_DungeonState;
+		MyCombat.Lanterns = statePacket.Lanterns;
+		MyCombat.MaxLanterns = statePacket.MaxLanterns;
+		MyCombat.ArenaBonfireUses = statePacket.ArenaBonfireUses;
+		MyCombat.MaxArenaBonfireUses = statePacket.MaxArenaBonfireUses;
 	}
 }
 

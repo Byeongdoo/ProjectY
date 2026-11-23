@@ -1,0 +1,73 @@
+{
+  "animation": "STUN",
+  "sourceAnimation": "STUN",
+  "directions": [
+    "south",
+    "south-east",
+    "east",
+    "north-east",
+    "north",
+    "north-west",
+    "west",
+    "south-west"
+  ],
+  "frameCount": 4,
+  "framesPerSecond": 8,
+  "loop": true,
+  "cellWidth": 88,
+  "cellHeight": 88,
+  "sourcePixelsResized": false,
+  "alignment": "Canvas centres, transparent padding only",
+  "directionalSources": [
+    {
+      "direction": "south",
+      "sourceAnimation": "STUN",
+      "groupId": "17b5dab6-95bd-4625-bdc8-1841b0bc02c9"
+    },
+    {
+      "direction": "south-east",
+      "sourceAnimation": "STUN",
+      "groupId": "17b5dab6-95bd-4625-bdc8-1841b0bc02c9"
+    },
+    {
+      "direction": "east",
+      "sourceAnimation": "STUN",
+      "groupId": "17b5dab6-95bd-4625-bdc8-1841b0bc02c9"
+    },
+    {
+      "direction": "north-east",
+      "sourceAnimation": "STUN",
+      "groupId": "17b5dab6-95bd-4625-bdc8-1841b0bc02c9"
+    },
+    {
+      "direction": "north",
+      "sourceAnimation": "STUN",
+      "groupId": "17b5dab6-95bd-4625-bdc8-1841b0bc02c9"
+    },
+    {
+      "direction": "north-west",
+      "sourceAnimation": "POSE_HOLD_NW_R4",
+      "groupId": "ae105faf-0853-4e98-8a80-e8fc6eaf4104"
+    },
+    {
+      "direction": "west",
+      "sourceAnimation": "STUN",
+      "groupId": "17b5dab6-95bd-4625-bdc8-1841b0bc02c9"
+    },
+    {
+      "direction": "south-west",
+      "sourceAnimation": "STUN",
+      "groupId": "17b5dab6-95bd-4625-bdc8-1841b0bc02c9"
+    }
+  ],
+  "animationClips": [
+    "Animations/STUN_SOUTH.anim",
+    "Animations/STUN_SOUTH_EAST.anim",
+    "Animations/STUN_EAST.anim",
+    "Animations/STUN_NORTH_EAST.anim",
+    "Animations/STUN_NORTH.anim",
+    "Animations/STUN_NORTH_WEST.anim",
+    "Animations/STUN_WEST.anim",
+    "Animations/STUN_SOUTH_WEST.anim"
+  ]
+}

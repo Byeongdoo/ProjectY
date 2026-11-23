@@ -124,8 +124,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 454982626913129283}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55e86d03b5ee90343aeb5c705c87e670, type: 3}
+  m_Script: {fileID: 11500000, guid: 7c3e1a9d4b2f4e6a8d5c0b1f2e3a4c5d, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerController
-  _hpBarHeight: 1.90625
-  _eightDirClips: 1
+  m_EditorClassIdentifier: Assembly-CSharp::CreatureVisual
+  hpBarHeight: 1.90625
+  eightDirClips: 1

@@ -19,8 +19,23 @@ enum MsgId {
   C_ENTER_DUNGEON = 11;
   S_CHANGE_SCENE = 12;
   S_ENTER_DUNGEON_REJECT = 13;
-  S_CHANGE_STATUS = 14;
-  S_SKILL_WARNING = 15;
+  S_CHANGE_SPIRIT = 14;
+  S_CHANGE_STATUS = 15;
+  S_CHANGE_STAT = 16;
+  C_CANCEL_SKILL = 17;
+  S_CANCEL_SKILL = 18;
+  S_REVIVE = 19;
+  C_HOLD_INTERACT = 20;
+  S_CHANNEL = 21;
+  S_DUNGEON_STATE = 22;
+  S_SKILL_WARNING = 23;
+}
+
+// F 홀드로 하는 일(서버가 주변을 보고 정한다)
+enum ChannelKind {
+  CHANNEL_NONE = 0;
+  CHANNEL_CALL_SOUL = 1;      // 혼 부르기: 옆 칸의 혼절한 파티원을 일으킨다
+  CHANNEL_ARENA_BONFIRE = 2;  // 보스방 불씨: 파티 전원 체력 전량 회복
 }
 
 enum CreatureState {
@@ -45,7 +60,8 @@ enum GameObjectType {
   NONE = 0;
   PLAYER = 1;
   MONSTER = 2;
-  PROJECTILE = 3;
+  PROJECTILE = 3; // 레거시 화살. 원혼 평타는 서버가 즉시 판정하므로 지금은 쓰지 않는다
+  FIELD = 4;      // 칸에 깔리는 설치물(착호갑사 덫 등). ObjectInfo.skillId가 만든 스킬
 }
 
 enum SkillType {
@@ -76,47 +92,92 @@ message C_Move {
 message S_Move {
   int32 objectId = 1;
   PositionInfo posInfo = 2;
+  bool forced = 3; // 스킬이 옮긴 위치(밀치기·돌진·물러서기). 내 캐릭터도 예측 위치 대신 이 위치로 바로 맞춘다
 }
 
+// 평타(skillId 0) 또는 원혼 스킬(spiritSkills.skillID) 요청. 단일 대상 스킬이면 targetId에 대상
 message C_Skill {
   SkillInfo info = 1;
 }
 
+// 서버가 받아들인 평타·스킬. castTime > 0이면 시전 시작(효과는 시전이 끝날 때)
 message S_Skill {
   int32 objectId = 1;
   SkillInfo info = 2;
+  float castTime = 3;
 }
 
+// 시전 취소(Esc). 신력·쿨타임은 쓰지 않는다
+message C_CancelSkill {
+}
+
+// 시전이 끝나기 전에 취소됐다(본인 취소, 대상이 사라짐 등). 연출을 멈춘다
+message S_CancelSkill {
+  int32 objectId = 1;
+}
+
+// amount > 0이면 피해·회복 숫자를 띄운다(heal = 회복). 0이면 체력만 맞춘다(부활 등)
 message S_ChangeHp {
   int32 objectId = 1;
   int32 hp = 2;
+  int32 amount = 3;
+  bool critical = 4;
+  bool heal = 5;
 }
 
+// 내 신력. 본인에게만 보낸다
+message S_ChangeSpirit {
+  int32 spirit = 1;
+  int32 maxSpirit = 2;
+}
+
+// 상태이상 시작·갱신(duration = 남은 초) 또는 해제(duration 0). statusEffects.statusID
+message S_ChangeStatus {
+  int32 objectId = 1;
+  int32 statusId = 2;
+  float duration = 3;
+  int32 stack = 4;
+}
+
+// 상태이상 등으로 바뀐 스탯(이동 속도 등)
+message S_ChangeStat {
+  int32 objectId = 1;
+  StatInfo statInfo = 2;
+}
+
+// 쓰러짐. 저승 던전의 플레이어는 혼절이다(faintTime = 불씨에서 저절로 일어날 때까지 남은 초). 망령은 0
 message S_Die {
   int32 objectId = 1;
   int32 attackerId = 2;
+  float faintTime = 3;
 }
 
-// 상태이상 적용·갱신·해제(statusEffects.statusID). remainMs = 남은 시간(ms), 0이면 해제.
-// 효과 판정은 서버가 하고, 클라는 표시·이동 속도·입력 제한(예측)에 쓴다
-message S_ChangeStatus {
+// 혼절에서 일어났다(혼 부르기·회혼술·불씨·전멸 재시작). posInfo = 일어난 칸
+message S_Revive {
   int32 objectId = 1;
-  StatusInfo status = 2;
+  int32 hp = 2;
+  PositionInfo posInfo = 3;
 }
 
-// 적 특수기 예고 칸('망령(적) 시스템' 2-5-1). 시전 시작 때 서버가 위험 칸을 고정해 보낸다.
-// 클라는 durationMs 동안 칸을 표시하고, durationMs = 0이면 같은 warningId 표시를 즉시 지운다(취소).
-message S_SkillWarning {
-  int32 objectId = 1;   // 시전자
-  int32 warningId = 2;  // 시전마다 고유
-  int32 skillId = 3;    // monsterSkills.monsterSkillID
-  int32 durationMs = 4; // 예고 시간(ms). 0 = 지움
-  repeated CellPos cells = 5;
+// F를 누르기 시작(holding true)·뗌(false). 무엇을 할지는 서버가 주변(혼절한 파티원·보스방 불씨)을 보고 정한다
+message C_HoldInteract {
+  bool holding = 1;
 }
 
-message CellPos {
-  int32 x = 1;
-  int32 y = 2;
+// F 홀드 시작(duration = 걸리는 초)·끝남(duration 0, 완료 또는 끊김)
+message S_Channel {
+  int32 objectId = 1;
+  ChannelKind kind = 2;
+  int32 targetId = 3;
+  float duration = 4;
+}
+
+// 던전 진행 상태(입장·변경 시). 혼백 등불 남은 수, 보스방 불씨 남은 횟수
+message S_DungeonState {
+  int32 lanterns = 1;
+  int32 maxLanterns = 2;
+  int32 arenaBonfireUses = 3;
+  int32 maxArenaBonfireUses = 4;
 }
 
 // 씬 로딩을 마친 클라가 서버가 배정해 둔 룸(삼천도 채널·던전)에 들어가겠다고 알린다
@@ -147,13 +208,7 @@ message ObjectInfo {
   StatInfo statInfo = 4;
   int32 spiritId = 5; // 저승 던전에서 빙의한 원혼(spirits.spiritID). 0 = 무당 본모습(삼천도)
   int32 characterId = 6; // 몬스터: characterInfos.characterID(프리팹·스탯 기준). 0 = 레거시 임시 몬스터
-  repeated StatusInfo statuses = 7; // 입장·스폰 시점에 걸려 있는 상태이상
-}
-
-message StatusInfo {
-  int32 statusId = 1; // statusEffects.statusID
-  int32 remainMs = 2; // 남은 시간(ms). 0 = 해제
-  int32 stack = 3;
+  int32 skillId = 7;     // 설치물(FIELD): 만든 스킬(spiritSkills.skillID)
 }
 
 message PositionInfo {
@@ -170,8 +225,26 @@ message StatInfo {
   int32 attack = 4;
   float speed = 5;
   int32 totalExp = 6;
+  int32 spirit = 7;    // 신력(본인 것만 의미 있음)
+  int32 maxSpirit = 8;
+}
+
+// 적 특수기 예고 칸('망령(적) 시스템' 2-5-1). 시전 시작 때 서버가 위험 칸을 고정해 보낸다.
+// 클라는 durationMs 동안 칸을 표시하고, durationMs = 0이면 같은 warningId 표시를 즉시 지운다(취소).
+message S_SkillWarning {
+  int32 objectId = 1;   // 시전자
+  int32 warningId = 2;  // 시전마다 고유
+  int32 skillId = 3;    // monsterSkills.monsterSkillID
+  int32 durationMs = 4; // 예고 시간(ms). 0 = 지움
+  repeated CellPos cells = 5;
+}
+
+message CellPos {
+  int32 x = 1;
+  int32 y = 2;
 }
 
 message SkillInfo {
-  int32 skillId = 1;
+  int32 skillId = 1;  // 0 = 평타, 그 외 spiritSkills.skillID
+  int32 targetId = 2; // 단일 대상 스킬의 대상(적·아군). 평타는 원거리일 때 맞은 대상(연출용)
 }

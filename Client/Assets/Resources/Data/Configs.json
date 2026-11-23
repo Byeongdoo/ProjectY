@@ -723,35 +723,53 @@
     {
       "configID": 20050,
       "value": [
-        1
+        0.3
       ]
     },
     {
       "configID": 20051,
       "value": [
-        3
+        2
       ]
     },
     {
       "configID": 20052,
       "value": [
-        5
+        20
       ]
     },
     {
       "configID": 20053,
       "value": [
-        3
+        1
       ]
     },
     {
       "configID": 20054,
       "value": [
-        0.5
+        3
       ]
     },
     {
       "configID": 20055,
+      "value": [
+        5
+      ]
+    },
+    {
+      "configID": 20056,
+      "value": [
+        3
+      ]
+    },
+    {
+      "configID": 20057,
+      "value": [
+        0.5
+      ]
+    },
+    {
+      "configID": 20058,
       "value": [
         3
       ]

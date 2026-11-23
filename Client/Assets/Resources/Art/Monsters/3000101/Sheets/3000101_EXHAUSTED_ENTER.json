@@ -1,0 +1,73 @@
+{
+  "animation": "EXHAUSTED_ENTER",
+  "sourceAnimation": "ExhaustedEnter",
+  "directions": [
+    "south",
+    "south-east",
+    "east",
+    "north-east",
+    "north",
+    "north-west",
+    "west",
+    "south-west"
+  ],
+  "frameCount": 8,
+  "framesPerSecond": 10,
+  "loop": false,
+  "cellWidth": 256,
+  "cellHeight": 256,
+  "sourcePixelsResized": false,
+  "alignment": "Canvas centres, transparent padding only",
+  "directionalSources": [
+    {
+      "direction": "south",
+      "sourceAnimation": "ExhaustedEnter",
+      "groupId": "be124fad-26bf-4365-909c-59046ea30584"
+    },
+    {
+      "direction": "south-east",
+      "sourceAnimation": "ExhaustedEnter",
+      "groupId": "be124fad-26bf-4365-909c-59046ea30584"
+    },
+    {
+      "direction": "east",
+      "sourceAnimation": "ExhaustedEnter",
+      "groupId": "be124fad-26bf-4365-909c-59046ea30584"
+    },
+    {
+      "direction": "north-east",
+      "sourceAnimation": "ExhaustedEnter",
+      "groupId": "be124fad-26bf-4365-909c-59046ea30584"
+    },
+    {
+      "direction": "north",
+      "sourceAnimation": "ExhaustedEnter",
+      "groupId": "be124fad-26bf-4365-909c-59046ea30584"
+    },
+    {
+      "direction": "north-west",
+      "sourceAnimation": "ExhaustedEnter",
+      "groupId": "be124fad-26bf-4365-909c-59046ea30584"
+    },
+    {
+      "direction": "west",
+      "sourceAnimation": "ExhaustedEnter",
+      "groupId": "be124fad-26bf-4365-909c-59046ea30584"
+    },
+    {
+      "direction": "south-west",
+      "sourceAnimation": "ExhaustedEnter",
+      "groupId": "be124fad-26bf-4365-909c-59046ea30584"
+    }
+  ],
+  "animationClips": [
+    "Animations/EXHAUSTED_ENTER_SOUTH.anim",
+    "Animations/EXHAUSTED_ENTER_SOUTH_EAST.anim",
+    "Animations/EXHAUSTED_ENTER_EAST.anim",
+    "Animations/EXHAUSTED_ENTER_NORTH_EAST.anim",
+    "Animations/EXHAUSTED_ENTER_NORTH.anim",
+    "Animations/EXHAUSTED_ENTER_NORTH_WEST.anim",
+    "Animations/EXHAUSTED_ENTER_WEST.anim",
+    "Animations/EXHAUSTED_ENTER_SOUTH_WEST.anim"
+  ]
+}

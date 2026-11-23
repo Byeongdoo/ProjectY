@@ -43,8 +43,20 @@ class PacketManager
 		_handler.Add((ushort)MsgId.SChangeScene, PacketHandler.S_ChangeSceneHandler);		
 		_onRecv.Add((ushort)MsgId.SEnterDungeonReject, MakePacket<S_EnterDungeonReject>);
 		_handler.Add((ushort)MsgId.SEnterDungeonReject, PacketHandler.S_EnterDungeonRejectHandler);		
+		_onRecv.Add((ushort)MsgId.SChangeSpirit, MakePacket<S_ChangeSpirit>);
+		_handler.Add((ushort)MsgId.SChangeSpirit, PacketHandler.S_ChangeSpiritHandler);		
 		_onRecv.Add((ushort)MsgId.SChangeStatus, MakePacket<S_ChangeStatus>);
 		_handler.Add((ushort)MsgId.SChangeStatus, PacketHandler.S_ChangeStatusHandler);		
+		_onRecv.Add((ushort)MsgId.SChangeStat, MakePacket<S_ChangeStat>);
+		_handler.Add((ushort)MsgId.SChangeStat, PacketHandler.S_ChangeStatHandler);		
+		_onRecv.Add((ushort)MsgId.SCancelSkill, MakePacket<S_CancelSkill>);
+		_handler.Add((ushort)MsgId.SCancelSkill, PacketHandler.S_CancelSkillHandler);		
+		_onRecv.Add((ushort)MsgId.SRevive, MakePacket<S_Revive>);
+		_handler.Add((ushort)MsgId.SRevive, PacketHandler.S_ReviveHandler);		
+		_onRecv.Add((ushort)MsgId.SChannel, MakePacket<S_Channel>);
+		_handler.Add((ushort)MsgId.SChannel, PacketHandler.S_ChannelHandler);		
+		_onRecv.Add((ushort)MsgId.SDungeonState, MakePacket<S_DungeonState>);
+		_handler.Add((ushort)MsgId.SDungeonState, PacketHandler.S_DungeonStateHandler);		
 		_onRecv.Add((ushort)MsgId.SSkillWarning, MakePacket<S_SkillWarning>);
 		_handler.Add((ushort)MsgId.SSkillWarning, PacketHandler.S_SkillWarningHandler);
 	}

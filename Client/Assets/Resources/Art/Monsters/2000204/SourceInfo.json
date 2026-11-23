@@ -1,0 +1,19 @@
+{
+  "key": "NetFiend",
+  "name": "그물 악귀",
+  "characterId": "6187fb59-19e9-4be7-a12a-ecc09adae88f",
+  "gameId": 2000204,
+  "prefabName": "Mob_204",
+  "source": "PixelLab completed character export",
+  "metrics": {
+    "canvasWidth": 64,
+    "canvasHeight": 64,
+    "pixelsPerUnit": 32,
+    "pivotPixels": {
+      "x": 32.0,
+      "y": 4
+    }
+  },
+  "pivotPolicy": "One fixed south ground anchor; animation canvas-centre padding compensation only. No per-frame trimming.",
+  "archiveSha256": "efc6320894ac6fb69fad4554b89c8daf71a51ef9d615c120a7fc459a20053324"
+}

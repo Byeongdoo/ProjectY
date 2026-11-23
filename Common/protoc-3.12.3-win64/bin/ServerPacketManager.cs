@@ -30,7 +30,11 @@ class PacketManager
 		_onRecv.Add((ushort)MsgId.CEnterGame, MakePacket<C_EnterGame>);
 		_handler.Add((ushort)MsgId.CEnterGame, PacketHandler.C_EnterGameHandler);		
 		_onRecv.Add((ushort)MsgId.CEnterDungeon, MakePacket<C_EnterDungeon>);
-		_handler.Add((ushort)MsgId.CEnterDungeon, PacketHandler.C_EnterDungeonHandler);
+		_handler.Add((ushort)MsgId.CEnterDungeon, PacketHandler.C_EnterDungeonHandler);		
+		_onRecv.Add((ushort)MsgId.CCancelSkill, MakePacket<C_CancelSkill>);
+		_handler.Add((ushort)MsgId.CCancelSkill, PacketHandler.C_CancelSkillHandler);		
+		_onRecv.Add((ushort)MsgId.CHoldInteract, MakePacket<C_HoldInteract>);
+		_handler.Add((ushort)MsgId.CHoldInteract, PacketHandler.C_HoldInteractHandler);
 	}
 
 	public void OnRecvPacket(PacketSession session, ArraySegment<byte> buffer)

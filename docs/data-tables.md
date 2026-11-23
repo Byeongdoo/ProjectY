@@ -54,7 +54,7 @@
 - 최상위는 `{ "<camelCase 복수형>": [ {행}, ... ] }` 래퍼 구조로, 기존 `ILoader<Key, Value>` + Newtonsoft 로더가 `MakeDict()`로 `Dictionary<int, T>`를 만든다.
 - 필드명은 2행 영문 키, 값은 **실제 타입**(숫자는 숫자)으로 출력한다.
 
-> ⚠️ 기존 `StatData.json`, `SkillData.json`은 **레거시이며 정리 대상(확정)**이다. 서버·클라 `DataManager`가 아직 이 파일을 읽으므로, 새 로더로 교체한 뒤에 삭제한다. 모든 값이 문자열(`"level": "1"`)이고 현재 xlsx와 대응하는 시트가 없다(`StatData`↔`characterLevel`, `SkillData`↔`skills`/`spiritSkills`는 구조가 다르다). 새 변환기가 만드는 JSON으로 서버·클라 로더를 교체할 때 같이 정리한다.
+> 레거시 `StatData.json`·`SkillData.json`과 이를 읽던 `DataManager.StatDict/SkillDict`는 원혼 전투 구현(2026-11-23) 때 삭제했다. 스탯은 `characterLevel`·`spirits`, 스킬은 `spiritSkills`·`statusEffects`·`configs`(전투 상수)에서 읽는다.
 
 ## 변환기
 

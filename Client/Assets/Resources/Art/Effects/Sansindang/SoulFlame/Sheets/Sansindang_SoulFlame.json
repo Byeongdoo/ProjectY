@@ -1,0 +1,11 @@
+{
+  "animation": "soul_flame_6f",
+  "animationGroupId": "73937bd9-8831-4132-b104-cf08894b654f",
+  "columns": 6,
+  "rows": 1,
+  "cellWidth": 32,
+  "cellHeight": 48,
+  "frameCount": 6,
+  "sourcePixelsResized": false,
+  "pivot": "cell-center"
+}

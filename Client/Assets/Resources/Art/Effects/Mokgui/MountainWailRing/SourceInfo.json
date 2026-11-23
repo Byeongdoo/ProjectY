@@ -1,0 +1,99 @@
+{
+  "key": "MountainWailRing",
+  "scope": "Mokgui",
+  "name": "Mokgui_MountainWailRing",
+  "objectId": "4d2a556c-5da0-4e47-b99c-b96327ef189f",
+  "root": "Assets/Resources/Art/Effects/Mokgui/MountainWailRing",
+  "sourceAnimation": "Mokgui_MountainWailRing_8f",
+  "animationGroupId": "097977f1-f5b5-4143-a8c5-59e63c254411",
+  "frameCount": 8,
+  "framesPerSecond": 10,
+  "loop": false,
+  "timingSource": "Presentation defaults; PixelLab export has no frame durations. Not combat/cast timing.",
+  "clearSpriteOnCompletion": true,
+  "sortingTableLayer": "Details",
+  "pixelsPerUnit": 32,
+  "pivot": {
+    "x": 0.5,
+    "y": 0.5
+  },
+  "rootMotion": false,
+  "sourcePixelsResized": false,
+  "frames": [
+    "Assets/Resources/Art/Effects/Mokgui/MountainWailRing/Sprites/frame_000.png",
+    "Assets/Resources/Art/Effects/Mokgui/MountainWailRing/Sprites/frame_001.png",
+    "Assets/Resources/Art/Effects/Mokgui/MountainWailRing/Sprites/frame_002.png",
+    "Assets/Resources/Art/Effects/Mokgui/MountainWailRing/Sprites/frame_003.png",
+    "Assets/Resources/Art/Effects/Mokgui/MountainWailRing/Sprites/frame_004.png",
+    "Assets/Resources/Art/Effects/Mokgui/MountainWailRing/Sprites/frame_005.png",
+    "Assets/Resources/Art/Effects/Mokgui/MountainWailRing/Sprites/frame_006.png",
+    "Assets/Resources/Art/Effects/Mokgui/MountainWailRing/Sprites/frame_007.png"
+  ],
+  "baseSprite": "Assets/Resources/Art/Effects/Mokgui/MountainWailRing/Sprites/Base.png",
+  "sheet": "Assets/Resources/Art/Effects/Mokgui/MountainWailRing/Sheets/Mokgui_MountainWailRing.png",
+  "clip": "Assets/Resources/Art/Effects/Mokgui/MountainWailRing/Animations/Mokgui_MountainWailRing.anim",
+  "controller": "Assets/Resources/Art/Effects/Mokgui/MountainWailRing/Mokgui_MountainWailRing.controller",
+  "prefab": "Assets/Resources/Prefabs/Effect/Mokgui/Mokgui_MountainWailRing.prefab",
+  "resourcePath": "Prefabs/Effect/Mokgui/Mokgui_MountainWailRing",
+  "lifetimePolicy": "One-shot clears its sprite after the full final frame; owner releases/pools the instance. Loop owner controls stop/release.",
+  "archiveSha256": "3a4e83225401bcc77690ee0b35a0e5263571c383ff2bfb14baf98929b750f450",
+  "sourceFiles": [
+    {
+      "path": "Assets/Resources/Art/Effects/Mokgui/MountainWailRing/Sprites/frame_000.png",
+      "archivePath": "animations/Concentric_tree-ring_shockwave_arcs_expand_outward/unknown/frame_000.png",
+      "sha256": "5c04a94bffbbab5056c5295d52f194e4a8b96eb84e56704b57667cbbaf789f7a",
+      "width": 128,
+      "height": 128
+    },
+    {
+      "path": "Assets/Resources/Art/Effects/Mokgui/MountainWailRing/Sprites/frame_001.png",
+      "archivePath": "animations/Concentric_tree-ring_shockwave_arcs_expand_outward/unknown/frame_001.png",
+      "sha256": "38cec8be2ec6e646cd2eb2384352c9ccc51f68caf04d81dd1d64a9cf5b30f183",
+      "width": 128,
+      "height": 128
+    },
+    {
+      "path": "Assets/Resources/Art/Effects/Mokgui/MountainWailRing/Sprites/frame_002.png",
+      "archivePath": "animations/Concentric_tree-ring_shockwave_arcs_expand_outward/unknown/frame_002.png",
+      "sha256": "d0eb83a771abe07359db3fe53347650efe66cdfdd2695e3c4167ff941a13e516",
+      "width": 128,
+      "height": 128
+    },
+    {
+      "path": "Assets/Resources/Art/Effects/Mokgui/MountainWailRing/Sprites/frame_003.png",
+      "archivePath": "animations/Concentric_tree-ring_shockwave_arcs_expand_outward/unknown/frame_003.png",
+      "sha256": "4923cc7aac2cc4f3a5962cd9db67ce17a710198aabbf004a61dc394d02c4a68f",
+      "width": 128,
+      "height": 128
+    },
+    {
+      "path": "Assets/Resources/Art/Effects/Mokgui/MountainWailRing/Sprites/frame_004.png",
+      "archivePath": "animations/Concentric_tree-ring_shockwave_arcs_expand_outward/unknown/frame_004.png",
+      "sha256": "8d09f85d254fb59f9deb9fe3295e1a4f4311814ebeaeac5028184ff9a4eb45bd",
+      "width": 128,
+      "height": 128
+    },
+    {
+      "path": "Assets/Resources/Art/Effects/Mokgui/MountainWailRing/Sprites/frame_005.png",
+      "archivePath": "animations/Concentric_tree-ring_shockwave_arcs_expand_outward/unknown/frame_005.png",
+      "sha256": "2cae2a13834414a2c045d9107cdc28ce60319cabe47d0a967a7a155f26255424",
+      "width": 128,
+      "height": 128
+    },
+    {
+      "path": "Assets/Resources/Art/Effects/Mokgui/MountainWailRing/Sprites/frame_006.png",
+      "archivePath": "animations/Concentric_tree-ring_shockwave_arcs_expand_outward/unknown/frame_006.png",
+      "sha256": "8a67563a5fdcabaee1efa6d516c9419854e5b473cda39100a4c3e2bf1b0a8eef",
+      "width": 128,
+      "height": 128
+    },
+    {
+      "path": "Assets/Resources/Art/Effects/Mokgui/MountainWailRing/Sprites/frame_007.png",
+      "archivePath": "animations/Concentric_tree-ring_shockwave_arcs_expand_outward/unknown/frame_007.png",
+      "sha256": "3a711037bc051dd06e7717976a4171ee34ab9db6d9a36b19a914782d98c77e15",
+      "width": 128,
+      "height": 128
+    }
+  ],
+  "visualApproval": "Existing assets imported; technical validation is not visual approval."
+}

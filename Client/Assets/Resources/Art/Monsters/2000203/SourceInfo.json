@@ -1,0 +1,19 @@
+{
+  "key": "BoatSongGhost",
+  "name": "뱃노래 귀신",
+  "characterId": "efd6d1d1-c6ed-433c-ae44-b89f51a5b2a2",
+  "gameId": 2000203,
+  "prefabName": "Mob_203",
+  "source": "PixelLab completed character export",
+  "metrics": {
+    "canvasWidth": 64,
+    "canvasHeight": 64,
+    "pixelsPerUnit": 32,
+    "pivotPixels": {
+      "x": 32.0,
+      "y": 1
+    }
+  },
+  "pivotPolicy": "One fixed south ground anchor; animation canvas-centre padding compensation only. No per-frame trimming.",
+  "archiveSha256": "dad36bb157b375e73ba1ae3a27d2fade7dbab060f8a2bf5f9619a94934f3a1db"
+}

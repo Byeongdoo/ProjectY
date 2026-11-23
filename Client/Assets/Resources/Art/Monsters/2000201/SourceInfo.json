@@ -1,0 +1,19 @@
+{
+  "key": "MudWretch",
+  "name": "갯벌 잡귀",
+  "characterId": "a47d65ff-c87f-4254-97e2-2bad336e7496",
+  "gameId": 2000201,
+  "prefabName": "Mob_201",
+  "source": "PixelLab completed character export",
+  "metrics": {
+    "canvasWidth": 64,
+    "canvasHeight": 64,
+    "pixelsPerUnit": 32,
+    "pivotPixels": {
+      "x": 32.0,
+      "y": 5
+    }
+  },
+  "pivotPolicy": "One fixed south ground anchor; animation canvas-centre padding compensation only. No per-frame trimming.",
+  "archiveSha256": "8fb2039aec7ae5193819804438a5e53a6f31f82e853b1a872bda1709c055fd5d"
+}

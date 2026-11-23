@@ -82,4 +82,35 @@ class PacketHandler
 
 		room.Push(room.HandleSkill, player, skillPacket);
 	}
+
+	public static void C_CancelSkillHandler(PacketSession session, IMessage packet)
+	{
+		ClientSession clientSession = session as ClientSession;
+
+		Player player = clientSession.MyPlayer;
+		if (player == null)
+			return;
+
+		GameRoom room = player.Room;
+		if (room == null)
+			return;
+
+		room.Push(room.HandleCancelSkill, player);
+	}
+
+	public static void C_HoldInteractHandler(PacketSession session, IMessage packet)
+	{
+		C_HoldInteract holdPacket = packet as C_HoldInteract;
+		ClientSession clientSession = session as ClientSession;
+
+		Player player = clientSession.MyPlayer;
+		if (player == null)
+			return;
+
+		GameRoom room = player.Room;
+		if (room == null)
+			return;
+
+		room.Push(room.HandleHoldInteract, player, holdPacket);
+	}
 }

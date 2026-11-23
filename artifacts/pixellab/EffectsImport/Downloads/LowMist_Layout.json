@@ -1,0 +1,48 @@
+{
+  "Sansindang_Deco_LowMist.json": {
+    "object": {
+      "id": "8d47db8f-80eb-4184-bffd-4375cfc88458",
+      "name": "base",
+      "prompt": "Blue gray low ground mist overlay",
+      "size": {
+        "width": 128,
+        "height": 64
+      },
+      "directions": 1,
+      "view": "low top-down"
+    },
+    "spritesheet": {
+      "path": "Sansindang_Deco_LowMist.png",
+      "cell_size": {
+        "width": 128,
+        "height": 64
+      },
+      "sheet_size": {
+        "width": 1024,
+        "height": 128
+      },
+      "columns": 8,
+      "pivot": "cell-center",
+      "rows": [
+        {
+          "row": 0,
+          "type": "rotations",
+          "frame_count": 1,
+          "directions": [
+            "unknown"
+          ]
+        },
+        {
+          "row": 1,
+          "type": "animation",
+          "frame_count": 8,
+          "animation": "low_mist_8f",
+          "animation_group_id": "438a21d9-3b05-41d8-8735-008147e6d4da",
+          "direction": "unknown"
+        }
+      ]
+    },
+    "export_version": "1.0",
+    "export_date": "2026-11-23T13:28:54.650220+00:00"
+  }
+}

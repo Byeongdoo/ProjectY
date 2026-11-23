@@ -1,0 +1,73 @@
+{
+  "animation": "ATTACK",
+  "sourceAnimation": "ATTACK",
+  "directions": [
+    "south",
+    "south-east",
+    "east",
+    "north-east",
+    "north",
+    "north-west",
+    "west",
+    "south-west"
+  ],
+  "frameCount": 8,
+  "framesPerSecond": 10,
+  "loop": false,
+  "cellWidth": 88,
+  "cellHeight": 88,
+  "sourcePixelsResized": false,
+  "alignment": "Canvas centres, transparent padding only",
+  "directionalSources": [
+    {
+      "direction": "south",
+      "sourceAnimation": "ATTACK",
+      "groupId": "0ec27f48-70b5-4f33-ae28-2f445e7e8032"
+    },
+    {
+      "direction": "south-east",
+      "sourceAnimation": "ATTACK",
+      "groupId": "0ec27f48-70b5-4f33-ae28-2f445e7e8032"
+    },
+    {
+      "direction": "east",
+      "sourceAnimation": "ATTACK",
+      "groupId": "0ec27f48-70b5-4f33-ae28-2f445e7e8032"
+    },
+    {
+      "direction": "north-east",
+      "sourceAnimation": "ATTACK",
+      "groupId": "0ec27f48-70b5-4f33-ae28-2f445e7e8032"
+    },
+    {
+      "direction": "north",
+      "sourceAnimation": "ATTACK",
+      "groupId": "0ec27f48-70b5-4f33-ae28-2f445e7e8032"
+    },
+    {
+      "direction": "north-west",
+      "sourceAnimation": "ATTACK",
+      "groupId": "0ec27f48-70b5-4f33-ae28-2f445e7e8032"
+    },
+    {
+      "direction": "west",
+      "sourceAnimation": "ATTACK",
+      "groupId": "0ec27f48-70b5-4f33-ae28-2f445e7e8032"
+    },
+    {
+      "direction": "south-west",
+      "sourceAnimation": "ATTACK",
+      "groupId": "0ec27f48-70b5-4f33-ae28-2f445e7e8032"
+    }
+  ],
+  "animationClips": [
+    "Animations/ATTACK_SOUTH.anim",
+    "Animations/ATTACK_SOUTH_EAST.anim",
+    "Animations/ATTACK_EAST.anim",
+    "Animations/ATTACK_NORTH_EAST.anim",
+    "Animations/ATTACK_NORTH.anim",
+    "Animations/ATTACK_NORTH_WEST.anim",
+    "Animations/ATTACK_WEST.anim",
+    "Animations/ATTACK_SOUTH_WEST.anim"
+  ]
+}

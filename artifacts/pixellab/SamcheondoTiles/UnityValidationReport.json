@@ -1,0 +1,38 @@
+{
+  "status": "passed",
+  "unityVersion": "6000.3.5f2",
+  "activeScene": "Assets/Scenes/Single/Village_Gamcheon.unity",
+  "tileCount": 169,
+  "pixelsPerUnit": 32,
+  "sceneUnchanged": true,
+  "sheets": [
+    {
+      "category": "Ground",
+      "palette": "Assets/Editor/Art/Palettes/Samcheondo/Palette_Samcheondo_Ground.prefab",
+      "tiles": 80,
+      "width": 768,
+      "height": 128
+    },
+    {
+      "category": "Struct",
+      "palette": "Assets/Editor/Art/Palettes/Samcheondo/Palette_Samcheondo_Struct.prefab",
+      "tiles": 79,
+      "width": 512,
+      "height": 352
+    },
+    {
+      "category": "Deco",
+      "palette": "Assets/Editor/Art/Palettes/Samcheondo/Palette_Samcheondo_Deco.prefab",
+      "tiles": 10,
+      "width": 512,
+      "height": 64
+    }
+  ],
+  "checks": [
+    "Native sheet dimensions; 32px sprites and 32 PPU",
+    "Point / no compression / no mipmaps / sRGB / Full Rect / NPOT None / Clamp",
+    "Every tile resolves its sprite; no tile collision",
+    "All grouped palette cells resolve the matching tile",
+    "Three registered GridPalette assets; existing scene preserved"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "animation": "Mokgui_ThreadBinding_8f",
+  "animationGroupId": "ff0f85f4-b00c-4693-8e27-890a82315dd0",
+  "columns": 8,
+  "rows": 1,
+  "cellWidth": 64,
+  "cellHeight": 64,
+  "frameCount": 8,
+  "sourcePixelsResized": false,
+  "pivot": "cell-center"
+}

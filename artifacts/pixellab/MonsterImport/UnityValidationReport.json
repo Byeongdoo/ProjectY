@@ -1,0 +1,54 @@
+{
+  "status": "passed",
+  "unityVersion": "6000.3.5f2",
+  "sampledClips": 504,
+  "sampledFrames": 3392,
+  "textures": 3509,
+  "sceneUnchanged": true,
+  "characters": [
+    {
+      "gameId": 3000101,
+      "prefab": "Assets/Resources/Prefabs/Creature/Monster/Boss_101.prefab",
+      "clips": 104,
+      "frames": 832
+    },
+    {
+      "gameId": 2000201,
+      "prefab": "Assets/Resources/Prefabs/Creature/Monster/Mob_201.prefab",
+      "clips": 72,
+      "frames": 448
+    },
+    {
+      "gameId": 2000202,
+      "prefab": "Assets/Resources/Prefabs/Creature/Monster/Mob_202.prefab",
+      "clips": 72,
+      "frames": 448
+    },
+    {
+      "gameId": 2000203,
+      "prefab": "Assets/Resources/Prefabs/Creature/Monster/Mob_203.prefab",
+      "clips": 72,
+      "frames": 448
+    },
+    {
+      "gameId": 2000204,
+      "prefab": "Assets/Resources/Prefabs/Creature/Monster/Mob_204.prefab",
+      "clips": 72,
+      "frames": 448
+    },
+    {
+      "gameId": 3000201,
+      "prefab": "Assets/Resources/Prefabs/Creature/Monster/Boss_201.prefab",
+      "clips": 112,
+      "frames": 768
+    }
+  ],
+  "checks": [
+    "All prefab/controller references",
+    "Every frame sampled in Unity",
+    "8 directions and expected timing/loop modes",
+    "Only sprite curves; no root motion",
+    "Fixed native ground anchors",
+    "32 PPU / Point / uncompressed / no mipmaps / sRGB / Full Rect / NPOT None / Clamp"
+  ]
+}

@@ -22,7 +22,6 @@ namespace Server
 		static void Main(string[] args)
 		{
 			ConfigManager.LoadConfig();
-			DataManager.LoadData();
 
 			// 마스터 테이블 로딩. 실패하면 어느 파일이 문제인지 출력하고 즉시 종료한다.
 			try

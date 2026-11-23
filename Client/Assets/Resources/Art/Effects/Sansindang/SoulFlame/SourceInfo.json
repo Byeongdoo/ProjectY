@@ -1,0 +1,83 @@
+{
+  "key": "SoulFlame",
+  "scope": "Sansindang",
+  "name": "Sansindang_SoulFlame",
+  "objectId": "9b61da40-6462-4d05-88d8-1076df34a42e",
+  "root": "Assets/Resources/Art/Effects/Sansindang/SoulFlame",
+  "sourceAnimation": "soul_flame_6f",
+  "animationGroupId": "73937bd9-8831-4132-b104-cf08894b654f",
+  "frameCount": 6,
+  "framesPerSecond": 8,
+  "loop": true,
+  "timingSource": "Presentation defaults; PixelLab export has no frame durations. Not combat/cast timing.",
+  "clearSpriteOnCompletion": false,
+  "sortingTableLayer": "Animated",
+  "pixelsPerUnit": 32,
+  "pivot": {
+    "x": 0.5,
+    "y": 0.5
+  },
+  "rootMotion": false,
+  "sourcePixelsResized": false,
+  "frames": [
+    "Assets/Resources/Art/Effects/Sansindang/SoulFlame/Sprites/frame_000.png",
+    "Assets/Resources/Art/Effects/Sansindang/SoulFlame/Sprites/frame_001.png",
+    "Assets/Resources/Art/Effects/Sansindang/SoulFlame/Sprites/frame_002.png",
+    "Assets/Resources/Art/Effects/Sansindang/SoulFlame/Sprites/frame_003.png",
+    "Assets/Resources/Art/Effects/Sansindang/SoulFlame/Sprites/frame_004.png",
+    "Assets/Resources/Art/Effects/Sansindang/SoulFlame/Sprites/frame_005.png"
+  ],
+  "baseSprite": "Assets/Resources/Art/Effects/Sansindang/SoulFlame/Sprites/Base.png",
+  "sheet": "Assets/Resources/Art/Effects/Sansindang/SoulFlame/Sheets/Sansindang_SoulFlame.png",
+  "clip": "Assets/Resources/Art/Effects/Sansindang/SoulFlame/Animations/Sansindang_SoulFlame.anim",
+  "controller": "Assets/Resources/Art/Effects/Sansindang/SoulFlame/Sansindang_SoulFlame.controller",
+  "prefab": "Assets/Resources/Prefabs/Effect/Sansindang/Sansindang_SoulFlame.prefab",
+  "resourcePath": "Prefabs/Effect/Sansindang/Sansindang_SoulFlame",
+  "lifetimePolicy": "One-shot clears its sprite after the full final frame; owner releases/pools the instance. Loop owner controls stop/release.",
+  "archiveSha256": "ba4fed96549a1091288ab876f0fd5f9205d8917711151148f7df630fbfee0725",
+  "sourceFiles": [
+    {
+      "path": "Assets/Resources/Art/Effects/Sansindang/SoulFlame/Sprites/frame_000.png",
+      "archivePath": "animations/Gentle_cyan_soul_flame_flicker_in_place_soft_wisp/unknown/frame_000.png",
+      "sha256": "2fc496a546c6d944817f9e792a1f783314303b99afb8a4b12f0e02d5fce5aaa3",
+      "width": 32,
+      "height": 48
+    },
+    {
+      "path": "Assets/Resources/Art/Effects/Sansindang/SoulFlame/Sprites/frame_001.png",
+      "archivePath": "animations/Gentle_cyan_soul_flame_flicker_in_place_soft_wisp/unknown/frame_001.png",
+      "sha256": "728204c96637ba37de8a21e4b3f56fe563e35cdf5dcd6a11710d433ec9e0995c",
+      "width": 32,
+      "height": 48
+    },
+    {
+      "path": "Assets/Resources/Art/Effects/Sansindang/SoulFlame/Sprites/frame_002.png",
+      "archivePath": "animations/Gentle_cyan_soul_flame_flicker_in_place_soft_wisp/unknown/frame_002.png",
+      "sha256": "4bb01ccf9191d94103fde9da68f6524ad0e818a7306699b239e3ba6b1da455f6",
+      "width": 32,
+      "height": 48
+    },
+    {
+      "path": "Assets/Resources/Art/Effects/Sansindang/SoulFlame/Sprites/frame_003.png",
+      "archivePath": "animations/Gentle_cyan_soul_flame_flicker_in_place_soft_wisp/unknown/frame_003.png",
+      "sha256": "50ea023a9f27ed8a127e498ca5db5a8bcddb9641721a8c6b0af9b8007f69f3ee",
+      "width": 32,
+      "height": 48
+    },
+    {
+      "path": "Assets/Resources/Art/Effects/Sansindang/SoulFlame/Sprites/frame_004.png",
+      "archivePath": "animations/Gentle_cyan_soul_flame_flicker_in_place_soft_wisp/unknown/frame_004.png",
+      "sha256": "5124360ea3a40d814d6968ef60b234aef80fd0507fbafcdd538d536414052265",
+      "width": 32,
+      "height": 48
+    },
+    {
+      "path": "Assets/Resources/Art/Effects/Sansindang/SoulFlame/Sprites/frame_005.png",
+      "archivePath": "animations/Gentle_cyan_soul_flame_flicker_in_place_soft_wisp/unknown/frame_005.png",
+      "sha256": "7fab3095d8624c72a268c7330a2df8f2e32fdbef0d3a855d1c494843203544f0",
+      "width": 32,
+      "height": 48
+    }
+  ],
+  "visualApproval": "Existing assets imported; technical validation is not visual approval."
+}

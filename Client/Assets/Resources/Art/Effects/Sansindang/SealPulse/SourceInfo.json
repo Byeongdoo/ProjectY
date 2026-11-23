@@ -1,0 +1,83 @@
+{
+  "key": "SealPulse",
+  "scope": "Sansindang",
+  "name": "Sansindang_SealPulse",
+  "objectId": "b9de51c4-e589-4662-a41d-13ed856d4fa1",
+  "root": "Assets/Resources/Art/Effects/Sansindang/SealPulse",
+  "sourceAnimation": "seal_pulse_6f",
+  "animationGroupId": "019c01fd-3498-4017-a825-189f6e760cf8",
+  "frameCount": 6,
+  "framesPerSecond": 8,
+  "loop": true,
+  "timingSource": "Presentation defaults; PixelLab export has no frame durations. Not combat/cast timing.",
+  "clearSpriteOnCompletion": false,
+  "sortingTableLayer": "Details",
+  "pixelsPerUnit": 32,
+  "pivot": {
+    "x": 0.5,
+    "y": 0.5
+  },
+  "rootMotion": false,
+  "sourcePixelsResized": false,
+  "frames": [
+    "Assets/Resources/Art/Effects/Sansindang/SealPulse/Sprites/frame_000.png",
+    "Assets/Resources/Art/Effects/Sansindang/SealPulse/Sprites/frame_001.png",
+    "Assets/Resources/Art/Effects/Sansindang/SealPulse/Sprites/frame_002.png",
+    "Assets/Resources/Art/Effects/Sansindang/SealPulse/Sprites/frame_003.png",
+    "Assets/Resources/Art/Effects/Sansindang/SealPulse/Sprites/frame_004.png",
+    "Assets/Resources/Art/Effects/Sansindang/SealPulse/Sprites/frame_005.png"
+  ],
+  "baseSprite": "Assets/Resources/Art/Effects/Sansindang/SealPulse/Sprites/Base.png",
+  "sheet": "Assets/Resources/Art/Effects/Sansindang/SealPulse/Sheets/Sansindang_SealPulse.png",
+  "clip": "Assets/Resources/Art/Effects/Sansindang/SealPulse/Animations/Sansindang_SealPulse.anim",
+  "controller": "Assets/Resources/Art/Effects/Sansindang/SealPulse/Sansindang_SealPulse.controller",
+  "prefab": "Assets/Resources/Prefabs/Effect/Sansindang/Sansindang_SealPulse.prefab",
+  "resourcePath": "Prefabs/Effect/Sansindang/Sansindang_SealPulse",
+  "lifetimePolicy": "One-shot clears its sprite after the full final frame; owner releases/pools the instance. Loop owner controls stop/release.",
+  "archiveSha256": "458082653bf702fd8df76d82f4371d23a72e80b72a714120abe1bcb88ded1db0",
+  "sourceFiles": [
+    {
+      "path": "Assets/Resources/Art/Effects/Sansindang/SealPulse/Sprites/frame_000.png",
+      "archivePath": "animations/Faded_crimson-blue_geometric_ritual_seal_pulses_so/unknown/frame_000.png",
+      "sha256": "a682167d50c3c13f5f0651490009273499422df2237b19e0772cec1ae1c707e1",
+      "width": 64,
+      "height": 64
+    },
+    {
+      "path": "Assets/Resources/Art/Effects/Sansindang/SealPulse/Sprites/frame_001.png",
+      "archivePath": "animations/Faded_crimson-blue_geometric_ritual_seal_pulses_so/unknown/frame_001.png",
+      "sha256": "c21484b1c51f52dc36c7e27b2d8eab5355f060092528db51ec225e8caf1adc43",
+      "width": 64,
+      "height": 64
+    },
+    {
+      "path": "Assets/Resources/Art/Effects/Sansindang/SealPulse/Sprites/frame_002.png",
+      "archivePath": "animations/Faded_crimson-blue_geometric_ritual_seal_pulses_so/unknown/frame_002.png",
+      "sha256": "e68b3c0b6cb3d839fe13254408e2b26a89788f589c572fbae116738316d771db",
+      "width": 64,
+      "height": 64
+    },
+    {
+      "path": "Assets/Resources/Art/Effects/Sansindang/SealPulse/Sprites/frame_003.png",
+      "archivePath": "animations/Faded_crimson-blue_geometric_ritual_seal_pulses_so/unknown/frame_003.png",
+      "sha256": "eaf59d0be254b0e4510cb68696efeb759c9870e6a5902c72e0e2a26b65d35e23",
+      "width": 64,
+      "height": 64
+    },
+    {
+      "path": "Assets/Resources/Art/Effects/Sansindang/SealPulse/Sprites/frame_004.png",
+      "archivePath": "animations/Faded_crimson-blue_geometric_ritual_seal_pulses_so/unknown/frame_004.png",
+      "sha256": "5f4f000ec34bbad473e58baba5f2c73eb98c5d26deaac37fe416a2994c87be19",
+      "width": 64,
+      "height": 64
+    },
+    {
+      "path": "Assets/Resources/Art/Effects/Sansindang/SealPulse/Sprites/frame_005.png",
+      "archivePath": "animations/Faded_crimson-blue_geometric_ritual_seal_pulses_so/unknown/frame_005.png",
+      "sha256": "141d534d829fc0e50d1da947829be6a546f3be1c01a35895d34a9f4b624c150a",
+      "width": 64,
+      "height": 64
+    }
+  ],
+  "visualApproval": "Existing assets imported; technical validation is not visual approval."
+}

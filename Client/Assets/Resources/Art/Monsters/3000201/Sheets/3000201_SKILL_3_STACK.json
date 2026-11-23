@@ -1,0 +1,73 @@
+{
+  "animation": "SKILL_3_STACK",
+  "sourceAnimation": "SKILL_3_STACK",
+  "directions": [
+    "south",
+    "south-east",
+    "east",
+    "north-east",
+    "north",
+    "north-west",
+    "west",
+    "south-west"
+  ],
+  "frameCount": 8,
+  "framesPerSecond": 10,
+  "loop": false,
+  "cellWidth": 104,
+  "cellHeight": 104,
+  "sourcePixelsResized": false,
+  "alignment": "Canvas centres, transparent padding only",
+  "directionalSources": [
+    {
+      "direction": "south",
+      "sourceAnimation": "SKILL_3_STACK",
+      "groupId": "cc5d7cc5-c7e0-4fef-9a2d-4c372a75e2c8"
+    },
+    {
+      "direction": "south-east",
+      "sourceAnimation": "SKILL_3_STACK",
+      "groupId": "cc5d7cc5-c7e0-4fef-9a2d-4c372a75e2c8"
+    },
+    {
+      "direction": "east",
+      "sourceAnimation": "SKILL_3_STACK",
+      "groupId": "cc5d7cc5-c7e0-4fef-9a2d-4c372a75e2c8"
+    },
+    {
+      "direction": "north-east",
+      "sourceAnimation": "SKILL_3_STACK",
+      "groupId": "cc5d7cc5-c7e0-4fef-9a2d-4c372a75e2c8"
+    },
+    {
+      "direction": "north",
+      "sourceAnimation": "SKILL_3_STACK",
+      "groupId": "cc5d7cc5-c7e0-4fef-9a2d-4c372a75e2c8"
+    },
+    {
+      "direction": "north-west",
+      "sourceAnimation": "SKILL_3_STACK_FIX_NORTH_WEST",
+      "groupId": "c33c0b62-d6bd-4c63-a6a1-8cd564d51150"
+    },
+    {
+      "direction": "west",
+      "sourceAnimation": "SKILL_3_STACK",
+      "groupId": "cc5d7cc5-c7e0-4fef-9a2d-4c372a75e2c8"
+    },
+    {
+      "direction": "south-west",
+      "sourceAnimation": "SKILL_3_STACK",
+      "groupId": "cc5d7cc5-c7e0-4fef-9a2d-4c372a75e2c8"
+    }
+  ],
+  "animationClips": [
+    "Animations/SKILL_3_STACK_SOUTH.anim",
+    "Animations/SKILL_3_STACK_SOUTH_EAST.anim",
+    "Animations/SKILL_3_STACK_EAST.anim",
+    "Animations/SKILL_3_STACK_NORTH_EAST.anim",
+    "Animations/SKILL_3_STACK_NORTH.anim",
+    "Animations/SKILL_3_STACK_NORTH_WEST.anim",
+    "Animations/SKILL_3_STACK_WEST.anim",
+    "Animations/SKILL_3_STACK_SOUTH_WEST.anim"
+  ]
+}

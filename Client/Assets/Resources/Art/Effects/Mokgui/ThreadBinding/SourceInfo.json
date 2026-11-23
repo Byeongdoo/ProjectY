@@ -1,0 +1,99 @@
+{
+  "key": "ThreadBinding",
+  "scope": "Mokgui",
+  "name": "Mokgui_ThreadBinding",
+  "objectId": "b0834b2d-a8ef-43f7-9782-b8c56b015c06",
+  "root": "Assets/Resources/Art/Effects/Mokgui/ThreadBinding",
+  "sourceAnimation": "Mokgui_ThreadBinding_8f",
+  "animationGroupId": "ff0f85f4-b00c-4693-8e27-890a82315dd0",
+  "frameCount": 8,
+  "framesPerSecond": 8,
+  "loop": true,
+  "timingSource": "Presentation defaults; PixelLab export has no frame durations. Not combat/cast timing.",
+  "clearSpriteOnCompletion": false,
+  "sortingTableLayer": "Animated",
+  "pixelsPerUnit": 32,
+  "pivot": {
+    "x": 0.5,
+    "y": 0.5
+  },
+  "rootMotion": false,
+  "sourcePixelsResized": false,
+  "frames": [
+    "Assets/Resources/Art/Effects/Mokgui/ThreadBinding/Sprites/frame_000.png",
+    "Assets/Resources/Art/Effects/Mokgui/ThreadBinding/Sprites/frame_001.png",
+    "Assets/Resources/Art/Effects/Mokgui/ThreadBinding/Sprites/frame_002.png",
+    "Assets/Resources/Art/Effects/Mokgui/ThreadBinding/Sprites/frame_003.png",
+    "Assets/Resources/Art/Effects/Mokgui/ThreadBinding/Sprites/frame_004.png",
+    "Assets/Resources/Art/Effects/Mokgui/ThreadBinding/Sprites/frame_005.png",
+    "Assets/Resources/Art/Effects/Mokgui/ThreadBinding/Sprites/frame_006.png",
+    "Assets/Resources/Art/Effects/Mokgui/ThreadBinding/Sprites/frame_007.png"
+  ],
+  "baseSprite": "Assets/Resources/Art/Effects/Mokgui/ThreadBinding/Sprites/Base.png",
+  "sheet": "Assets/Resources/Art/Effects/Mokgui/ThreadBinding/Sheets/Mokgui_ThreadBinding.png",
+  "clip": "Assets/Resources/Art/Effects/Mokgui/ThreadBinding/Animations/Mokgui_ThreadBinding.anim",
+  "controller": "Assets/Resources/Art/Effects/Mokgui/ThreadBinding/Mokgui_ThreadBinding.controller",
+  "prefab": "Assets/Resources/Prefabs/Effect/Mokgui/Mokgui_ThreadBinding.prefab",
+  "resourcePath": "Prefabs/Effect/Mokgui/Mokgui_ThreadBinding",
+  "lifetimePolicy": "One-shot clears its sprite after the full final frame; owner releases/pools the instance. Loop owner controls stop/release.",
+  "archiveSha256": "dd4062dba2077b723fcd4c5d6282fb9d41318d2b1e03a7b280663626f303d5b3",
+  "sourceFiles": [
+    {
+      "path": "Assets/Resources/Art/Effects/Mokgui/ThreadBinding/Sprites/frame_000.png",
+      "archivePath": "animations/Crimson_thread_coils_tighten_and_gently_pulse_arou/unknown/frame_000.png",
+      "sha256": "afeb39854a8d0759bbb946a40c13e37a086ff0b6ee523026f6d77f754e821166",
+      "width": 64,
+      "height": 64
+    },
+    {
+      "path": "Assets/Resources/Art/Effects/Mokgui/ThreadBinding/Sprites/frame_001.png",
+      "archivePath": "animations/Crimson_thread_coils_tighten_and_gently_pulse_arou/unknown/frame_001.png",
+      "sha256": "ca23e36cffd4071683c45585d2af077ade754161c1fd2ad5081a729791e55c5f",
+      "width": 64,
+      "height": 64
+    },
+    {
+      "path": "Assets/Resources/Art/Effects/Mokgui/ThreadBinding/Sprites/frame_002.png",
+      "archivePath": "animations/Crimson_thread_coils_tighten_and_gently_pulse_arou/unknown/frame_002.png",
+      "sha256": "b26f45a758c4f5373ac4f74e3547807b3ea4f507137245b04a7adf16a849af1b",
+      "width": 64,
+      "height": 64
+    },
+    {
+      "path": "Assets/Resources/Art/Effects/Mokgui/ThreadBinding/Sprites/frame_003.png",
+      "archivePath": "animations/Crimson_thread_coils_tighten_and_gently_pulse_arou/unknown/frame_003.png",
+      "sha256": "c62a4570e5d472c0de5f950ab6f945a8e992e578ac95d4bf1de6cd7ee3577250",
+      "width": 64,
+      "height": 64
+    },
+    {
+      "path": "Assets/Resources/Art/Effects/Mokgui/ThreadBinding/Sprites/frame_004.png",
+      "archivePath": "animations/Crimson_thread_coils_tighten_and_gently_pulse_arou/unknown/frame_004.png",
+      "sha256": "26aa612b100acd92d9655f49b3aeb032d701437338b8f330078f9cb7955cf318",
+      "width": 64,
+      "height": 64
+    },
+    {
+      "path": "Assets/Resources/Art/Effects/Mokgui/ThreadBinding/Sprites/frame_005.png",
+      "archivePath": "animations/Crimson_thread_coils_tighten_and_gently_pulse_arou/unknown/frame_005.png",
+      "sha256": "3dd608217d3afc8d2769888a1067e13d7679f03b87533ee94f9f3b0bf9c356d3",
+      "width": 64,
+      "height": 64
+    },
+    {
+      "path": "Assets/Resources/Art/Effects/Mokgui/ThreadBinding/Sprites/frame_006.png",
+      "archivePath": "animations/Crimson_thread_coils_tighten_and_gently_pulse_arou/unknown/frame_006.png",
+      "sha256": "51a09326abc0c8a389a1930369e6566760b0ee56a472c8221d958768ea105dfe",
+      "width": 64,
+      "height": 64
+    },
+    {
+      "path": "Assets/Resources/Art/Effects/Mokgui/ThreadBinding/Sprites/frame_007.png",
+      "archivePath": "animations/Crimson_thread_coils_tighten_and_gently_pulse_arou/unknown/frame_007.png",
+      "sha256": "2c7832afa27b84c68a2c1c1f267643948dc4d947368b1084f03327d5b445cc1a",
+      "width": 64,
+      "height": 64
+    }
+  ],
+  "visualApproval": "Existing assets imported; technical validation is not visual approval."
+}

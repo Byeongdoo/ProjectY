@@ -1,0 +1,48 @@
+{
+  "Sansindang_Deco_SealPulse.json": {
+    "object": {
+      "id": "b9de51c4-e589-4662-a41d-13ed856d4fa1",
+      "name": "base",
+      "prompt": "Faded ritual seal ground decal",
+      "size": {
+        "width": 64,
+        "height": 64
+      },
+      "directions": 1,
+      "view": "low top-down"
+    },
+    "spritesheet": {
+      "path": "Sansindang_Deco_SealPulse.png",
+      "cell_size": {
+        "width": 64,
+        "height": 64
+      },
+      "sheet_size": {
+        "width": 384,
+        "height": 128
+      },
+      "columns": 6,
+      "pivot": "cell-center",
+      "rows": [
+        {
+          "row": 0,
+          "type": "rotations",
+          "frame_count": 1,
+          "directions": [
+            "unknown"
+          ]
+        },
+        {
+          "row": 1,
+          "type": "animation",
+          "frame_count": 6,
+          "animation": "seal_pulse_6f",
+          "animation_group_id": "019c01fd-3498-4017-a825-189f6e760cf8",
+          "direction": "unknown"
+        }
+      ]
+    },
+    "export_version": "1.0",
+    "export_date": "2026-11-23T13:28:55.415383+00:00"
+  }
+}

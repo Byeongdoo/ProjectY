@@ -1,0 +1,294 @@
+[
+  {
+    "key": "WarningGrid",
+    "frameCount": 8,
+    "sizes": [
+      [
+        32,
+        32
+      ]
+    ],
+    "alphaPixels": [
+      325,
+      325,
+      325,
+      325,
+      325,
+      325,
+      325,
+      325
+    ],
+    "whiteOpaquePixels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "key": "Phase2Aura",
+    "frameCount": 8,
+    "sizes": [
+      [
+        128,
+        128
+      ]
+    ],
+    "alphaPixels": [
+      2724,
+      2509,
+      2468,
+      2218,
+      2288,
+      2423,
+      2652,
+      2666
+    ],
+    "whiteOpaquePixels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "key": "ExhaustedAura",
+    "frameCount": 8,
+    "sizes": [
+      [
+        64,
+        64
+      ]
+    ],
+    "alphaPixels": [
+      327,
+      264,
+      187,
+      76,
+      22,
+      7,
+      59,
+      345
+    ],
+    "whiteOpaquePixels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "key": "MountainWailRing",
+    "frameCount": 8,
+    "sizes": [
+      [
+        128,
+        128
+      ]
+    ],
+    "alphaPixels": [
+      2626,
+      2423,
+      2382,
+      2131,
+      1673,
+      1168,
+      426,
+      249
+    ],
+    "whiteOpaquePixels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "key": "ThreadBinding",
+    "frameCount": 8,
+    "sizes": [
+      [
+        64,
+        64
+      ]
+    ],
+    "alphaPixels": [
+      789,
+      753,
+      783,
+      745,
+      763,
+      756,
+      789,
+      806
+    ],
+    "whiteOpaquePixels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "key": "RootEruption",
+    "frameCount": 8,
+    "sizes": [
+      [
+        64,
+        64
+      ]
+    ],
+    "alphaPixels": [
+      1189,
+      1122,
+      1093,
+      1013,
+      921,
+      771,
+      469,
+      291
+    ],
+    "whiteOpaquePixels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "key": "TankSlamImpact",
+    "frameCount": 8,
+    "sizes": [
+      [
+        64,
+        64
+      ]
+    ],
+    "alphaPixels": [
+      1093,
+      985,
+      904,
+      826,
+      703,
+      664,
+      695,
+      656
+    ],
+    "whiteOpaquePixels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "key": "LowMist",
+    "frameCount": 8,
+    "sizes": [
+      [
+        128,
+        64
+      ]
+    ],
+    "alphaPixels": [
+      2036,
+      1980,
+      1958,
+      1837,
+      1744,
+      1700,
+      1664,
+      1568
+    ],
+    "whiteOpaquePixels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "key": "SealPulse",
+    "frameCount": 6,
+    "sizes": [
+      [
+        64,
+        64
+      ]
+    ],
+    "alphaPixels": [
+      635,
+      631,
+      628,
+      647,
+      627,
+      636
+    ],
+    "whiteOpaquePixels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "key": "SoulFlame",
+    "frameCount": 6,
+    "sizes": [
+      [
+        32,
+        48
+      ]
+    ],
+    "alphaPixels": [
+      225,
+      229,
+      222,
+      227,
+      219,
+      215
+    ],
+    "whiteOpaquePixels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+]

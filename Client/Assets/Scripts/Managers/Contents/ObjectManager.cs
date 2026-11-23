@@ -10,21 +10,30 @@ public class ObjectManager
 	Dictionary<int, GameObject> _objects = new Dictionary<int, GameObject>();
 
 	// 무당 본모습(주인공 스프라이트, 삼천도). 프리팹은 멀티 씬 빌더(Tools > ProjectY > Levels > Build Multi Prototype)가 만든다.
-	const string MyPlayerPrefab = "Creature/MudangMyPlayer";
-	const string PlayerPrefab = "Creature/MudangPlayer";
+	// 원혼과 같이 외형만 담은 프리팹 1개이고, 컨트롤러는 생성할 때 붙인다(InstantiatePlayer).
+	const string MudangPlayerPrefab = "Creature/MudangPlayer";
 
 	// 저승 던전에서는 나루터에서 고른 원혼(ObjectInfo.SpiritId)의 캐릭터로 나온다.
 	// 프리팹 이름은 spirits.prefabName, 생성은 Tools > ProjectY > Build Spirit Player Prefabs.
-	public static string SpiritPrefabPath(Table.SpiritsRow row, bool mine)
+	// 원혼 프리팹은 원혼당 1개(외형 + CreatureVisual)이고, 컨트롤러는 생성할 때 붙인다(InstantiatePlayer).
+	public static string SpiritPrefabPath(Table.SpiritsRow row)
 	{
-		return $"Prefabs/Creature/Spirit/{row.prefabName}{(mine ? "_My" : "")}";
+		return $"Prefabs/Creature/Spirit/{row.prefabName}";
 	}
 
-	static string PlayerPrefabFor(int spiritId, bool mine)
+	static string PlayerPrefabFor(int spiritId)
 	{
 		if (spiritId != 0 && Table.TableManager.Spirits.TryGet(spiritId, out Table.SpiritsRow row))
-			return SpiritPrefabPath(row, mine).Substring("Prefabs/".Length);
-		return mine ? MyPlayerPrefab : PlayerPrefab;
+			return SpiritPrefabPath(row).Substring("Prefabs/".Length);
+		return MudangPlayerPrefab;
+	}
+
+	// 플레이어 프리팹(무당·원혼)은 외형만 담는다. 내 캐릭터면 MyPlayerController, 다른 플레이어면 PlayerController를 붙인다.
+	// Init은 Start에서 돌므로 여기서 붙여도 같은 프레임 안에 초기화된다.
+	static T InstantiatePlayer<T>(int spiritId) where T : PlayerController
+	{
+		GameObject go = Managers.Resource.Instantiate(PlayerPrefabFor(spiritId));
+		return go.AddComponent<T>();
 	}
 
 	// 망령은 characterInfos.prefabName 프리팹(Prefabs/Creature/Monster, 생성은 Tools > ProjectY > Build Monster Prefabs).
@@ -40,9 +49,6 @@ public class ObjectManager
 		return null;
 	}
 
-	// 투사체 표시 프리팹. 새 리소스가 나올 때까지 비어 있을 수 있다.
-	const string ProjectilePrefab = "Creature/Arrow";
-
 	const int ConfigAlliesOverlap = 90005; // 아군끼리 같은 칸 겹침 허용(1=허용)
 
 	// 내 캐릭터가 그 칸으로 들어가지 못하게 막는 대상. 아군 겹침을 허용하면 다른 플레이어는 막지 않는다.
@@ -52,8 +58,8 @@ public class ObjectManager
 		foreach (KeyValuePair<int, GameObject> kv in _objects)
 		{
 			GameObjectType type = GetObjectTypeById(kv.Key);
-			if (type == GameObjectType.Projectile)
-				continue;
+			if (type == GameObjectType.Field)
+				continue; // 설치물(덫)은 칸을 막지 않는다
 			if (alliesOverlap && type == GameObjectType.Player)
 				continue;
 
@@ -78,28 +84,30 @@ public class ObjectManager
 		{
 			if (myPlayer)
 			{
-				GameObject go = Managers.Resource.Instantiate(PlayerPrefabFor(info.SpiritId, mine: true));
+				MyPlayer = InstantiatePlayer<MyPlayerController>(info.SpiritId);
+				GameObject go = MyPlayer.gameObject;
 				go.name = info.Name;
 				_objects.Add(info.ObjectId, go);
 
-				MyPlayer = go.GetComponent<MyPlayerController>();
 				MyPlayer.Id = info.ObjectId;
+				MyPlayer.SpiritId = info.SpiritId;
 				MyPlayer.PosInfo = info.PosInfo;
 				MyPlayer.Stat = info.StatInfo;
-				MyPlayer.SetStatuses(info.Statuses);
 				MyPlayer.SyncPos();
+				MyCombat.Reset(info.StatInfo.Spirit, info.StatInfo.MaxSpirit);
+				TargetSelect.End();
 			}
 			else
 			{
-				GameObject go = Managers.Resource.Instantiate(PlayerPrefabFor(info.SpiritId, mine: false));
+				PlayerController pc = InstantiatePlayer<PlayerController>(info.SpiritId);
+				GameObject go = pc.gameObject;
 				go.name = info.Name;
 				_objects.Add(info.ObjectId, go);
 
-				PlayerController pc = go.GetComponent<PlayerController>();
 				pc.Id = info.ObjectId;
+				pc.SpiritId = info.SpiritId;
 				pc.PosInfo = info.PosInfo;
 				pc.Stat = info.StatInfo;
-				pc.SetStatuses(info.Statuses);
 				pc.SyncPos();
 			}
 		}
@@ -119,22 +127,47 @@ public class ObjectManager
 			mc.Id = info.ObjectId;
 			mc.PosInfo = info.PosInfo;
 			mc.Stat = info.StatInfo;
-			mc.SetStatuses(info.Statuses);
 			mc.SyncPos();
 		}
-		else if (objectType == GameObjectType.Projectile)
+		else if (objectType == GameObjectType.Field)
 		{
-			if (Resources.Load<GameObject>($"Prefabs/{ProjectilePrefab}") == null)
-				return; // 투사체 리소스 없음: 서버 판정은 그대로, 클라 표시만 생략
-			GameObject go = Managers.Resource.Instantiate(ProjectilePrefab);
-			go.name = "Arrow";
+			// 설치물(덫). 리소스가 나올 때까지 CombatHud가 칸 표시로 대신 그린다
+			GameObject go = new GameObject($"Field_{info.SkillId}");
+			FieldController fc = go.AddComponent<FieldController>();
+			fc.Id = info.ObjectId;
+			fc.SkillId = info.SkillId;
+			fc.CellPos = new Vector3Int(info.PosInfo.PosX, info.PosInfo.PosY, 0);
+			go.transform.position = Managers.Map.CurrentGrid.CellToWorld(fc.CellPos) + new Vector3(0.5f, 0.5f);
 			_objects.Add(info.ObjectId, go);
-
-			ArrowController ac = go.GetComponent<ArrowController>();
-			ac.PosInfo = info.PosInfo;
-			ac.Stat = info.StatInfo;
-			ac.SyncPos();
 		}
+	}
+
+	// 칸 거리(체비셰프) range 안의 살아 있는(fainted면 혼절한) 플레이어·망령. 대상 선택 후보
+	public List<CreatureController> FindCreatures(GameObjectType type, Vector3Int center, int range, bool fainted = false)
+	{
+		List<CreatureController> list = new List<CreatureController>();
+		foreach (KeyValuePair<int, GameObject> kv in _objects)
+		{
+			if (GetObjectTypeById(kv.Key) != type)
+				continue;
+			CreatureController cc = kv.Value.GetComponent<CreatureController>();
+			if (cc == null)
+				continue;
+			bool down = cc.State == CreatureState.Dead || cc.Hp <= 0;
+			if (down != fainted)
+				continue;
+			Vector3Int d = cc.CellPos - center;
+			if (Mathf.Max(Mathf.Abs(d.x), Mathf.Abs(d.y)) <= range)
+				list.Add(cc);
+		}
+		return list;
+	}
+
+	public IEnumerable<FieldController> Fields()
+	{
+		foreach (KeyValuePair<int, GameObject> kv in _objects)
+			if (GetObjectTypeById(kv.Key) == GameObjectType.Field)
+				yield return kv.Value.GetComponent<FieldController>();
 	}
 
 	public void Remove(int id)

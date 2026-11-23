@@ -1,0 +1,73 @@
+{
+  "animation": "THREAD_DEBUFF_CAST",
+  "sourceAnimation": "ThreadDebuffCast",
+  "directions": [
+    "south",
+    "south-east",
+    "east",
+    "north-east",
+    "north",
+    "north-west",
+    "west",
+    "south-west"
+  ],
+  "frameCount": 8,
+  "framesPerSecond": 10,
+  "loop": false,
+  "cellWidth": 256,
+  "cellHeight": 256,
+  "sourcePixelsResized": false,
+  "alignment": "Canvas centres, transparent padding only",
+  "directionalSources": [
+    {
+      "direction": "south",
+      "sourceAnimation": "ThreadDebuffCast",
+      "groupId": "5dd238e2-82f2-4cf1-aa9c-a1b9d6a87723"
+    },
+    {
+      "direction": "south-east",
+      "sourceAnimation": "ThreadDebuffCast",
+      "groupId": "5dd238e2-82f2-4cf1-aa9c-a1b9d6a87723"
+    },
+    {
+      "direction": "east",
+      "sourceAnimation": "ThreadDebuffCast",
+      "groupId": "5dd238e2-82f2-4cf1-aa9c-a1b9d6a87723"
+    },
+    {
+      "direction": "north-east",
+      "sourceAnimation": "ThreadDebuffCast",
+      "groupId": "5dd238e2-82f2-4cf1-aa9c-a1b9d6a87723"
+    },
+    {
+      "direction": "north",
+      "sourceAnimation": "ThreadDebuffCast",
+      "groupId": "5dd238e2-82f2-4cf1-aa9c-a1b9d6a87723"
+    },
+    {
+      "direction": "north-west",
+      "sourceAnimation": "ThreadDebuffCast",
+      "groupId": "5dd238e2-82f2-4cf1-aa9c-a1b9d6a87723"
+    },
+    {
+      "direction": "west",
+      "sourceAnimation": "ThreadDebuffCast",
+      "groupId": "5dd238e2-82f2-4cf1-aa9c-a1b9d6a87723"
+    },
+    {
+      "direction": "south-west",
+      "sourceAnimation": "ThreadDebuffCast",
+      "groupId": "5dd238e2-82f2-4cf1-aa9c-a1b9d6a87723"
+    }
+  ],
+  "animationClips": [
+    "Animations/THREAD_DEBUFF_CAST_SOUTH.anim",
+    "Animations/THREAD_DEBUFF_CAST_SOUTH_EAST.anim",
+    "Animations/THREAD_DEBUFF_CAST_EAST.anim",
+    "Animations/THREAD_DEBUFF_CAST_NORTH_EAST.anim",
+    "Animations/THREAD_DEBUFF_CAST_NORTH.anim",
+    "Animations/THREAD_DEBUFF_CAST_NORTH_WEST.anim",
+    "Animations/THREAD_DEBUFF_CAST_WEST.anim",
+    "Animations/THREAD_DEBUFF_CAST_SOUTH_WEST.anim"
+  ]
+}

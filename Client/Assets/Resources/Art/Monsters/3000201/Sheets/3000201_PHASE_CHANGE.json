@@ -1,0 +1,73 @@
+{
+  "animation": "PHASE_CHANGE",
+  "sourceAnimation": "PHASE_CHANGE",
+  "directions": [
+    "south",
+    "south-east",
+    "east",
+    "north-east",
+    "north",
+    "north-west",
+    "west",
+    "south-west"
+  ],
+  "frameCount": 8,
+  "framesPerSecond": 10,
+  "loop": false,
+  "cellWidth": 104,
+  "cellHeight": 104,
+  "sourcePixelsResized": false,
+  "alignment": "Canvas centres, transparent padding only",
+  "directionalSources": [
+    {
+      "direction": "south",
+      "sourceAnimation": "PHASE_CHANGE",
+      "groupId": "a6f133cd-d659-4583-901e-e7a8fe5cab24"
+    },
+    {
+      "direction": "south-east",
+      "sourceAnimation": "PHASE_CHANGE",
+      "groupId": "a6f133cd-d659-4583-901e-e7a8fe5cab24"
+    },
+    {
+      "direction": "east",
+      "sourceAnimation": "PHASE_CHANGE",
+      "groupId": "a6f133cd-d659-4583-901e-e7a8fe5cab24"
+    },
+    {
+      "direction": "north-east",
+      "sourceAnimation": "PHASE_CHANGE",
+      "groupId": "a6f133cd-d659-4583-901e-e7a8fe5cab24"
+    },
+    {
+      "direction": "north",
+      "sourceAnimation": "Refined_PHASE_CHANGE_north_R3",
+      "groupId": "64b54d0f-b93f-4aa0-a674-af3d538b3410"
+    },
+    {
+      "direction": "north-west",
+      "sourceAnimation": "Refined_PHASE_CHANGE_north_west_R3",
+      "groupId": "096204fc-e9e8-4b1c-b875-60afacf57c3d"
+    },
+    {
+      "direction": "west",
+      "sourceAnimation": "PHASE_CHANGE",
+      "groupId": "a6f133cd-d659-4583-901e-e7a8fe5cab24"
+    },
+    {
+      "direction": "south-west",
+      "sourceAnimation": "PHASE_CHANGE",
+      "groupId": "a6f133cd-d659-4583-901e-e7a8fe5cab24"
+    }
+  ],
+  "animationClips": [
+    "Animations/PHASE_CHANGE_SOUTH.anim",
+    "Animations/PHASE_CHANGE_SOUTH_EAST.anim",
+    "Animations/PHASE_CHANGE_EAST.anim",
+    "Animations/PHASE_CHANGE_NORTH_EAST.anim",
+    "Animations/PHASE_CHANGE_NORTH.anim",
+    "Animations/PHASE_CHANGE_NORTH_WEST.anim",
+    "Animations/PHASE_CHANGE_WEST.anim",
+    "Animations/PHASE_CHANGE_SOUTH_WEST.anim"
+  ]
+}

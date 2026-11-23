@@ -1,0 +1,4069 @@
+fileFormatVersion: 2
+guid: 67127f3dbe5bd2342b0e0c501d0b77ff
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1889452353277525677
+    second: Mokgui_MountainWailRing_0
+  - first:
+      213: 3818252067969507181
+    second: Mokgui_MountainWailRing_1
+  - first:
+      213: 2622245578306993908
+    second: Mokgui_MountainWailRing_2
+  - first:
+      213: -3514785643719771066
+    second: Mokgui_MountainWailRing_3
+  - first:
+      213: -6021509293543097933
+    second: Mokgui_MountainWailRing_4
+  - first:
+      213: 8630400590862499839
+    second: Mokgui_MountainWailRing_5
+  - first:
+      213: -1449149202392677692
+    second: Mokgui_MountainWailRing_6
+  - first:
+      213: -3690182179750875180
+    second: Mokgui_MountainWailRing_7
+  - first:
+      213: 5368743155762305036
+    second: Mokgui_MountainWailRing_8
+  - first:
+      213: 1756346543922561347
+    second: Mokgui_MountainWailRing_9
+  - first:
+      213: -6776992149432812674
+    second: Mokgui_MountainWailRing_10
+  - first:
+      213: -6845756647015541075
+    second: Mokgui_MountainWailRing_11
+  - first:
+      213: 943273041659866285
+    second: Mokgui_MountainWailRing_12
+  - first:
+      213: 1755096492781350073
+    second: Mokgui_MountainWailRing_13
+  - first:
+      213: -451283927665402510
+    second: Mokgui_MountainWailRing_14
+  - first:
+      213: 8352165416680259106
+    second: Mokgui_MountainWailRing_15
+  - first:
+      213: 1369014809680953553
+    second: Mokgui_MountainWailRing_16
+  - first:
+      213: -7031307418360155482
+    second: Mokgui_MountainWailRing_17
+  - first:
+      213: -6076866794585590262
+    second: Mokgui_MountainWailRing_18
+  - first:
+      213: 3610236363553390352
+    second: Mokgui_MountainWailRing_19
+  - first:
+      213: 7754010965398083207
+    second: Mokgui_MountainWailRing_20
+  - first:
+      213: 7206596761897468336
+    second: Mokgui_MountainWailRing_21
+  - first:
+      213: 5882724260324403086
+    second: Mokgui_MountainWailRing_22
+  - first:
+      213: 7581987600568591300
+    second: Mokgui_MountainWailRing_23
+  - first:
+      213: -4029103403476969316
+    second: Mokgui_MountainWailRing_24
+  - first:
+      213: -7545390027900254762
+    second: Mokgui_MountainWailRing_25
+  - first:
+      213: 9010319000925854938
+    second: Mokgui_MountainWailRing_26
+  - first:
+      213: 1730528491611758523
+    second: Mokgui_MountainWailRing_27
+  - first:
+      213: 3810522363274846034
+    second: Mokgui_MountainWailRing_28
+  - first:
+      213: -8741174669096954362
+    second: Mokgui_MountainWailRing_29
+  - first:
+      213: 1584175459408939352
+    second: Mokgui_MountainWailRing_30
+  - first:
+      213: -2717491137127948945
+    second: Mokgui_MountainWailRing_31
+  - first:
+      213: -2006898115376491129
+    second: Mokgui_MountainWailRing_32
+  - first:
+      213: 1595453872011902116
+    second: Mokgui_MountainWailRing_33
+  - first:
+      213: -9170382354229432236
+    second: Mokgui_MountainWailRing_34
+  - first:
+      213: 1108723146213384871
+    second: Mokgui_MountainWailRing_35
+  - first:
+      213: 6429223832905912071
+    second: Mokgui_MountainWailRing_36
+  - first:
+      213: -2010579992721567988
+    second: Mokgui_MountainWailRing_37
+  - first:
+      213: 864195085023203371
+    second: Mokgui_MountainWailRing_38
+  - first:
+      213: -2014471688872926382
+    second: Mokgui_MountainWailRing_39
+  - first:
+      213: -575637011992684691
+    second: Mokgui_MountainWailRing_40
+  - first:
+      213: -2764490174468716777
+    second: Mokgui_MountainWailRing_41
+  - first:
+      213: -2711452275492905678
+    second: Mokgui_MountainWailRing_42
+  - first:
+      213: -1292529778283241157
+    second: Mokgui_MountainWailRing_43
+  - first:
+      213: -5320631926813814808
+    second: Mokgui_MountainWailRing_44
+  - first:
+      213: 1565685087360202672
+    second: Mokgui_MountainWailRing_45
+  - first:
+      213: -351537235935285010
+    second: Mokgui_MountainWailRing_46
+  - first:
+      213: 6569722281557532345
+    second: Mokgui_MountainWailRing_47
+  - first:
+      213: -4301345252107157268
+    second: Mokgui_MountainWailRing_48
+  - first:
+      213: 4451888483979781476
+    second: Mokgui_MountainWailRing_49
+  - first:
+      213: 4105272701726624408
+    second: Mokgui_MountainWailRing_50
+  - first:
+      213: 1476123676193049846
+    second: Mokgui_MountainWailRing_51
+  - first:
+      213: 1010299991859466097
+    second: Mokgui_MountainWailRing_52
+  - first:
+      213: -1763993154377825577
+    second: Mokgui_MountainWailRing_53
+  - first:
+      213: -7513681054454624294
+    second: Mokgui_MountainWailRing_54
+  - first:
+      213: 458623472993876982
+    second: Mokgui_MountainWailRing_55
+  - first:
+      213: 6689868017670962716
+    second: Mokgui_MountainWailRing_56
+  - first:
+      213: -1402689714119341371
+    second: Mokgui_MountainWailRing_57
+  - first:
+      213: -8892145274567338062
+    second: Mokgui_MountainWailRing_58
+  - first:
+      213: -3490909490116744877
+    second: Mokgui_MountainWailRing_59
+  - first:
+      213: -3153608140902883592
+    second: Mokgui_MountainWailRing_60
+  - first:
+      213: -2466768665911728840
+    second: Mokgui_MountainWailRing_61
+  - first:
+      213: 1682395907744412873
+    second: Mokgui_MountainWailRing_62
+  - first:
+      213: 844501818768313400
+    second: Mokgui_MountainWailRing_63
+  - first:
+      213: -6704688358903803725
+    second: Mokgui_MountainWailRing_64
+  - first:
+      213: 7400512727492837518
+    second: Mokgui_MountainWailRing_65
+  - first:
+      213: 8763296244702880551
+    second: Mokgui_MountainWailRing_66
+  - first:
+      213: -529927964171085325
+    second: Mokgui_MountainWailRing_67
+  - first:
+      213: -7634002579166874712
+    second: Mokgui_MountainWailRing_68
+  - first:
+      213: 1058762779958710144
+    second: Mokgui_MountainWailRing_69
+  - first:
+      213: -6950204580420858919
+    second: Mokgui_MountainWailRing_70
+  - first:
+      213: 2705748782642207681
+    second: Mokgui_MountainWailRing_71
+  - first:
+      213: -8810282316648099754
+    second: Mokgui_MountainWailRing_72
+  - first:
+      213: 4167033835805570124
+    second: Mokgui_MountainWailRing_73
+  - first:
+      213: -112205854633570035
+    second: Mokgui_MountainWailRing_74
+  - first:
+      213: 7298401748062142600
+    second: Mokgui_MountainWailRing_75
+  - first:
+      213: -3834302188425925320
+    second: Mokgui_MountainWailRing_76
+  - first:
+      213: -5341578052479841075
+    second: Mokgui_MountainWailRing_77
+  - first:
+      213: -2723755985122697269
+    second: Mokgui_MountainWailRing_78
+  - first:
+      213: 6597733185917215313
+    second: Mokgui_MountainWailRing_79
+  - first:
+      213: -6790176638437601994
+    second: Mokgui_MountainWailRing_80
+  - first:
+      213: 5798549868628427301
+    second: Mokgui_MountainWailRing_81
+  - first:
+      213: -1982039179158617189
+    second: Mokgui_MountainWailRing_82
+  - first:
+      213: 8508858998625420962
+    second: Mokgui_MountainWailRing_83
+  - first:
+      213: 3014249597733840214
+    second: Mokgui_MountainWailRing_84
+  - first:
+      213: -4915703507784371452
+    second: Mokgui_MountainWailRing_85
+  - first:
+      213: 504029492012138848
+    second: Mokgui_MountainWailRing_86
+  - first:
+      213: -4997424594277103829
+    second: Mokgui_MountainWailRing_87
+  - first:
+      213: -3173258972258685753
+    second: Mokgui_MountainWailRing_88
+  - first:
+      213: 3503600156140196604
+    second: Mokgui_MountainWailRing_89
+  - first:
+      213: -429902368814473475
+    second: Mokgui_MountainWailRing_90
+  - first:
+      213: -6887641536344445278
+    second: Mokgui_MountainWailRing_91
+  - first:
+      213: 5086422449291797872
+    second: Mokgui_MountainWailRing_92
+  - first:
+      213: 6412169382131621989
+    second: Mokgui_MountainWailRing_93
+  - first:
+      213: 7732098123491453845
+    second: Mokgui_MountainWailRing_94
+  - first:
+      213: 6996411868305900879
+    second: Mokgui_MountainWailRing_95
+  - first:
+      213: 2747273072231803091
+    second: Mokgui_MountainWailRing_96
+  - first:
+      213: 865184224704909043
+    second: Mokgui_MountainWailRing_97
+  - first:
+      213: -9113990045031938306
+    second: Mokgui_MountainWailRing_98
+  - first:
+      213: 5790102633262018148
+    second: Mokgui_MountainWailRing_99
+  - first:
+      213: -21250079115863429
+    second: Mokgui_MountainWailRing_100
+  - first:
+      213: 5953355586592784474
+    second: Mokgui_MountainWailRing_101
+  - first:
+      213: -6833381010987682422
+    second: Mokgui_MountainWailRing_102
+  - first:
+      213: -1482705412383084542
+    second: Mokgui_MountainWailRing_103
+  - first:
+      213: 8071385951236449786
+    second: Mokgui_MountainWailRing_104
+  - first:
+      213: 7435903235292725711
+    second: Mokgui_MountainWailRing_105
+  - first:
+      213: -7647901660548068009
+    second: Mokgui_MountainWailRing_106
+  - first:
+      213: 6029137259530081396
+    second: Mokgui_MountainWailRing_107
+  - first:
+      213: -6767931366718790877
+    second: Mokgui_MountainWailRing_108
+  - first:
+      213: -4006950135773520865
+    second: Mokgui_MountainWailRing_109
+  - first:
+      213: -5734025878633218928
+    second: Mokgui_MountainWailRing_110
+  - first:
+      213: 4353128722135960238
+    second: Mokgui_MountainWailRing_111
+  - first:
+      213: -1970406412632876260
+    second: Mokgui_MountainWailRing_112
+  - first:
+      213: -6202120830866841642
+    second: Mokgui_MountainWailRing_113
+  - first:
+      213: 9188188917098568096
+    second: Mokgui_MountainWailRing_114
+  - first:
+      213: -8234323604401923944
+    second: Mokgui_MountainWailRing_115
+  - first:
+      213: 7940038700838971995
+    second: Mokgui_MountainWailRing_116
+  - first:
+      213: 1400243375562368380
+    second: Mokgui_MountainWailRing_117
+  - first:
+      213: 3996078549010558864
+    second: Mokgui_MountainWailRing_118
+  - first:
+      213: 8473908068881125916
+    second: Mokgui_MountainWailRing_119
+  - first:
+      213: -8922917414865722855
+    second: Mokgui_MountainWailRing_120
+  - first:
+      213: 4327352204093697555
+    second: Mokgui_MountainWailRing_121
+  - first:
+      213: -1620109505719031152
+    second: Mokgui_MountainWailRing_122
+  - first:
+      213: 7724730333217461944
+    second: Mokgui_MountainWailRing_123
+  - first:
+      213: 6296969388373506966
+    second: Mokgui_MountainWailRing_124
+  - first:
+      213: -1261569759615457421
+    second: Mokgui_MountainWailRing_125
+  - first:
+      213: 3261073417663569000
+    second: Mokgui_MountainWailRing_126
+  - first:
+      213: 6928370117097545148
+    second: Mokgui_MountainWailRing_127
+  - first:
+      213: -8017001695260515892
+    second: Mokgui_MountainWailRing_128
+  - first:
+      213: -8971455230728909904
+    second: Mokgui_MountainWailRing_129
+  - first:
+      213: -7328273878033864129
+    second: Mokgui_MountainWailRing_130
+  - first:
+      213: 6186761022687762550
+    second: Mokgui_MountainWailRing_131
+  - first:
+      213: 1717123341915636753
+    second: Mokgui_MountainWailRing_132
+  - first:
+      213: -5832226777216331692
+    second: Mokgui_MountainWailRing_133
+  - first:
+      213: -4259226412123236339
+    second: Mokgui_MountainWailRing_134
+  - first:
+      213: -2917672078793958758
+    second: Mokgui_MountainWailRing_135
+  - first:
+      213: -6087355482432561821
+    second: Mokgui_MountainWailRing_136
+  - first:
+      213: -6234636652083719136
+    second: Mokgui_MountainWailRing_137
+  - first:
+      213: -2182075924040691105
+    second: Mokgui_MountainWailRing_138
+  - first:
+      213: -5543904914017339769
+    second: Mokgui_MountainWailRing_139
+  - first:
+      213: -5144339078722632501
+    second: Mokgui_MountainWailRing_140
+  - first:
+      213: -2491141930236971969
+    second: Mokgui_MountainWailRing_141
+  - first:
+      213: -8585125022470865366
+    second: Mokgui_MountainWailRing_142
+  - first:
+      213: -2040783014559458470
+    second: Mokgui_MountainWailRing_143
+  - first:
+      213: 2393025500056686759
+    second: Mokgui_MountainWailRing_144
+  - first:
+      213: 461512611431629414
+    second: Mokgui_MountainWailRing_145
+  - first:
+      213: 9149186720850638901
+    second: Mokgui_MountainWailRing_146
+  - first:
+      213: 5278386808333399801
+    second: Mokgui_MountainWailRing_147
+  - first:
+      213: 3297967387396860154
+    second: Mokgui_MountainWailRing_148
+  - first:
+      213: -939656548873014028
+    second: Mokgui_MountainWailRing_149
+  - first:
+      213: 6398993331934176563
+    second: Mokgui_MountainWailRing_150
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 9
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_0
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 55
+        width: 47
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: daef12197eea83a10800000000000000
+      internalID: 1889452353277525677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_1
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 68
+        width: 48
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6f193e96082df430800000000000000
+      internalID: 3818252067969507181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_2
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 111
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4feb3d0d576146420800000000000000
+      internalID: 2622245578306993908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_3
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 51
+        width: 42
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64cb0744419f83fc0800000000000000
+      internalID: -3514785643719771066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_4
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 73
+        width: 49
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b976aa633d4f6ca0800000000000000
+      internalID: -6021509293543097933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_5
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 113
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fff3eaf8c9755c770800000000000000
+      internalID: 8630400590862499839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_6
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 111
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c208d47a7693ebe0800000000000000
+      internalID: -1449149202392677692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_7
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 113
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4dfe873ebd6d9ccc0800000000000000
+      internalID: -3690182179750875180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_8
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 110
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c089581947b918a40800000000000000
+      internalID: 5368743155762305036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_9
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 92
+        width: 53
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3414dfc40ebcf5810800000000000000
+      internalID: 1756346543922561347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_10
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 90
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7b327fcb8943f1a0800000000000000
+      internalID: -6776992149432812674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_11
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 113
+        width: 11
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da69ed3999cfef0a0800000000000000
+      internalID: -6845756647015541075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_12
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 112
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: daca65e65dd271d00800000000000000
+      internalID: 943273041659866285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_13
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 92
+        width: 23
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bc24c616fa5b5810800000000000000
+      internalID: 1755096492781350073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_14
+      rect:
+        serializedVersion: 2
+        x: 822
+        y: 92
+        width: 49
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27d19a6a8a7bcb9f0800000000000000
+      internalID: -451283927665402510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_15
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 103
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22e778ed13ad8e370800000000000000
+      internalID: 8352165416680259106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_16
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 55
+        width: 32
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d0484f47b7bff210800000000000000
+      internalID: 1369014809680953553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_17
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 84
+        width: 55
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a2f21e0827cb6e90800000000000000
+      internalID: -7031307418360155482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_18
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 106
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a06fb51d8d1aaaba0800000000000000
+      internalID: -6076866794585590262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_19
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 95
+        width: 29
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01f3cc448d22a1230800000000000000
+      internalID: 3610236363553390352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_20
+      rect:
+        serializedVersion: 2
+        x: 667
+        y: 102
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7865909f3e7cb9b60800000000000000
+      internalID: 7754010965398083207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_21
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 95
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b10160a299f20460800000000000000
+      internalID: 7206596761897468336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_22
+      rect:
+        serializedVersion: 2
+        x: 697
+        y: 102
+        width: 27
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e876538fb82a3a150800000000000000
+      internalID: 5882724260324403086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_23
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 90
+        width: 11
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c3ae473d81a83960800000000000000
+      internalID: 7581987600568591300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_24
+      rect:
+        serializedVersion: 2
+        x: 944
+        y: 87
+        width: 54
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9810783dcfb518c0800000000000000
+      internalID: -4029103403476969316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_25
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 90
+        width: 30
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d50b3f2fb3694790800000000000000
+      internalID: -7545390027900254762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_26
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 87
+        width: 29
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adc532384651b0d70800000000000000
+      internalID: 9010319000925854938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_27
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 86
+        width: 24
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbf16309e72140810800000000000000
+      internalID: 1730528491611758523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_28
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 48
+        width: 25
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25fddaf76e1b1e430800000000000000
+      internalID: 3810522363274846034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_29
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 82
+        width: 23
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60655d083fb11b680800000000000000
+      internalID: -8741174669096954362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_30
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 90
+        width: 19
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85906ffdf2f1cf510800000000000000
+      internalID: 1584175459408939352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_31
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 64
+        width: 17
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6d573b6538894ad0800000000000000
+      internalID: -2717491137127948945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_32
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 82
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 785559c0cc01624e0800000000000000
+      internalID: -2006898115376491129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_33
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 42
+        width: 15
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ac7ac0f7d0342610800000000000000
+      internalID: 1595453872011902116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_34
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 80
+        width: 15
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 450f4a9e5d14cb080800000000000000
+      internalID: -9170382354229432236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_35
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 90
+        width: 13
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a26d44c3d9f26f00800000000000000
+      internalID: 1108723146213384871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_36
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 86
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70f05d53301393950800000000000000
+      internalID: 6429223832905912071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_37
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 86
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0fc25d262cf814e0800000000000000
+      internalID: -2010579992721567988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_38
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 88
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b205273e9dc3efb00800000000000000
+      internalID: 864195085023203371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_39
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 92
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 253e5ae0ca82b04e0800000000000000
+      internalID: -2014471688872926382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_40
+      rect:
+        serializedVersion: 2
+        x: 729
+        y: 62
+        width: 23
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d67db9cff2de208f0800000000000000
+      internalID: -575637011992684691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_41
+      rect:
+        serializedVersion: 2
+        x: 733
+        y: 93
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7170cbd45de82a9d0800000000000000
+      internalID: -2764490174468716777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_42
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 77
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23d12d5758cfe5ad0800000000000000
+      internalID: -2711452275492905678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_43
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 57
+        width: 14
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3120d7c303001ee0800000000000000
+      internalID: -1292529778283241157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_44
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 81
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ef09a5d3715926b0800000000000000
+      internalID: -5320631926813814808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_45
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 53
+        width: 13
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b73b36aa4e6ab510800000000000000
+      internalID: 1565685087360202672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_46
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 77
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee031c61fb61f1bf0800000000000000
+      internalID: -351537235935285010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_47
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 47
+        width: 10
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9be94317b975c2b50800000000000000
+      internalID: 6569722281557532345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_48
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 65
+        width: 12
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce007df584d8e44c0800000000000000
+      internalID: -4301345252107157268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_49
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 74
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46564433df848cd30800000000000000
+      internalID: 4451888483979781476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_50
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 55
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89a068485cbd8f830800000000000000
+      internalID: 4105272701726624408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_51
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 73
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fcc704a9ae3c7410800000000000000
+      internalID: 1476123676193049846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_52
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 72
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17f0d536d7e450e00800000000000000
+      internalID: 1010299991859466097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_53
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 79
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d2c61772990587e0800000000000000
+      internalID: -1763993154377825577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_54
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 76
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adf46a1e3ea0ab790800000000000000
+      internalID: -7513681054454624294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_55
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 47
+        width: 19
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fbb4796e9b5d5600800000000000000
+      internalID: 458623472993876982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_56
+      rect:
+        serializedVersion: 2
+        x: 653
+        y: 66
+        width: 7
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1e3683848f27dc50800000000000000
+      internalID: 6689868017670962716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_57
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 67
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ca82d30325a88ce0800000000000000
+      internalID: -1402689714119341371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_58
+      rect:
+        serializedVersion: 2
+        x: 717
+        y: 76
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b7de324cf0c89480800000000000000
+      internalID: -8892145274567338062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_59
+      rect:
+        serializedVersion: 2
+        x: 811
+        y: 13
+        width: 66
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3592d8a705ccd8fc0800000000000000
+      internalID: -3490909490116744877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_60
+      rect:
+        serializedVersion: 2
+        x: 844
+        y: 83
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fe14b8ba122c34d0800000000000000
+      internalID: -3153608140902883592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_61
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 79
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8356445c7f644cdd0800000000000000
+      internalID: -2466768665911728840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_62
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 62
+        width: 6
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c43da41a22195710800000000000000
+      internalID: 1682395907744412873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_63
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 43
+        width: 15
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83c4bd70ee548bb00800000000000000
+      internalID: 844501818768313400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_64
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 63
+        width: 7
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b097d5e57924f2a0800000000000000
+      internalID: -6704688358903803725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_65
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 59
+        width: 6
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e80c7f5bd17e3b660800000000000000
+      internalID: 7400512727492837518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_66
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 48
+        width: 8
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 723a70f218b7d9970800000000000000
+      internalID: 8763296244702880551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_67
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 50
+        width: 8
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f95903035155a8f0800000000000000
+      internalID: -529927964171085325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_68
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 45
+        width: 13
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a3b756d9139e0690800000000000000
+      internalID: -7634002579166874712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_69
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 56
+        width: 7
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08f08d8832b71be00800000000000000
+      internalID: 1058762779958710144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_70
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 26
+        width: 25
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9dbc8b302c9eb8f90800000000000000
+      internalID: -6950204580420858919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_71
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 41
+        width: 16
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cb95d0ae20cc8520800000000000000
+      internalID: 2705748782642207681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_72
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 72
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 650d84179e69bb580800000000000000
+      internalID: -8810282316648099754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_73
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 64
+        width: 13
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c44793e123744d930800000000000000
+      internalID: 4167033835805570124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_74
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 54
+        width: 16
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d01d8d4ae5d517ef0800000000000000
+      internalID: -112205854633570035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_75
+      rect:
+        serializedVersion: 2
+        x: 980
+        y: 45
+        width: 31
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8808555a8b1294560800000000000000
+      internalID: 7298401748062142600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_76
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 43
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83dae518972d9cac0800000000000000
+      internalID: -3834302188425925320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_77
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 26
+        width: 24
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcc8ae9ef07eed5b0800000000000000
+      internalID: -5341578052479841075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_78
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 28
+        width: 34
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcfdae3dc56433ad0800000000000000
+      internalID: -2723755985122697269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_79
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 43
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 152e665506bdf8b50800000000000000
+      internalID: 6597733185917215313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_80
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 10
+        width: 53
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63d45cfb25274c1a0800000000000000
+      internalID: -6790176638437601994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_81
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 42
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5224cfb2266987050800000000000000
+      internalID: 5798549868628427301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_82
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 41
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b93085b2ed16e74e0800000000000000
+      internalID: -1982039179158617189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_83
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 46
+        width: 11
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a644f86d2a851670800000000000000
+      internalID: 8508858998625420962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_84
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 12
+        width: 38
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6552a49f904c4d920800000000000000
+      internalID: 3014249597733840214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_85
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 45
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 403fe5544b9e7cbb0800000000000000
+      internalID: -4915703507784371452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_86
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 38
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06144bb072caef600800000000000000
+      internalID: 504029492012138848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_87
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 14
+        width: 34
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b27005a1fc495aab0800000000000000
+      internalID: -4997424594277103829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_88
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 19
+        width: 17
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cc233207c156f3d0800000000000000
+      internalID: -3173258972258685753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_89
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 36
+        width: 13
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf25db577c94f9030800000000000000
+      internalID: 3503600156140196604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_90
+      rect:
+        serializedVersion: 2
+        x: 661
+        y: 36
+        width: 28
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfed6b2c21ea80af0800000000000000
+      internalID: -429902368814473475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_91
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 40
+        width: 7
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2aea6f5d38e2a60a0800000000000000
+      internalID: -6887641536344445278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_92
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 43
+        width: 9
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0752c93c44a969640800000000000000
+      internalID: 5086422449291797872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_93
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 38
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5606795741a9cf850800000000000000
+      internalID: 6412169382131621989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_94
+      rect:
+        serializedVersion: 2
+        x: 747
+        y: 40
+        width: 6
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59b2c23e64eed4b60800000000000000
+      internalID: 7732098123491453845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_95
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 38
+        width: 11
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4543b0968f381160800000000000000
+      internalID: 6996411868305900879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_96
+      rect:
+        serializedVersion: 2
+        x: 877
+        y: 52
+        width: 6
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d86f53bd46402620800000000000000
+      internalID: 2747273072231803091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_97
+      rect:
+        serializedVersion: 2
+        x: 906
+        y: 36
+        width: 27
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fececae770c10c00800000000000000
+      internalID: 865184224704909043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_98
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 36
+        width: 15
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef6cc6f875a948180800000000000000
+      internalID: -9113990045031938306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_99
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 19
+        width: 27
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46ee2aceaa39a5050800000000000000
+      internalID: 5790102633262018148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_100
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 33
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7a99d66a2184bff0800000000000000
+      internalID: -21250079115863429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_101
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 40
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5043702d519e9250800000000000000
+      internalID: 5953355586592784474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_102
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 23
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a85fd21ec24fa21a0800000000000000
+      internalID: -6833381010987682422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_103
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 28
+        width: 34
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2007b5c784f5c6be0800000000000000
+      internalID: -1482705412383084542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_104
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 36
+        width: 16
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af5e68432c2530070800000000000000
+      internalID: 8071385951236449786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_105
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 19
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc10dcb6892a13760800000000000000
+      internalID: 7435903235292725711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_106
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 36
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75d89e5c5f13dd590800000000000000
+      internalID: -7647901660548068009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_107
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 21
+        width: 26
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 474dc50d46ccba350800000000000000
+      internalID: 6029137259530081396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_108
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 27
+        width: 34
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 323a08ea74a7312a0800000000000000
+      internalID: -6767931366718790877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_109
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 37
+        width: 13
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1c148cc4147468c0800000000000000
+      internalID: -4006950135773520865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_110
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 21
+        width: 23
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09c7b23f7d5ac60b0800000000000000
+      internalID: -5734025878633218928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_111
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 33
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eaac678428b696c30800000000000000
+      internalID: 4353128722135960238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_112
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 39
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1b9ddfaec5b7a4e0800000000000000
+      internalID: -1970406412632876260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_113
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 37
+        width: 19
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6df912ee6f3ade9a0800000000000000
+      internalID: -6202120830866841642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_114
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 38
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a957d49321038f70800000000000000
+      internalID: 9188188917098568096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_115
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 16
+        width: 19
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89852022f4ec9bd80800000000000000
+      internalID: -8234323604401923944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_116
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 34
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5a6c5a512fa03e60800000000000000
+      internalID: 7940038700838971995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_117
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 37
+        width: 14
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c752d776ee9ae6310800000000000000
+      internalID: 1400243375562368380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_118
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 40
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09f2558a44ce47730800000000000000
+      internalID: 3996078549010558864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_119
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 31
+        width: 14
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c12d9f0fd7e599570800000000000000
+      internalID: 8473908068881125916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_120
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 31
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91228c603ed6b2480800000000000000
+      internalID: -8922917414865722855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_121
+      rect:
+        serializedVersion: 2
+        x: 693
+        y: 35
+        width: 12
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31e220ff6e7dd0c30800000000000000
+      internalID: 4327352204093697555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_122
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 34
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09a226efcf63489e0800000000000000
+      internalID: -1620109505719031152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_123
+      rect:
+        serializedVersion: 2
+        x: 951
+        y: 12
+        width: 39
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b69c198f41c33b60800000000000000
+      internalID: 7724730333217461944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_124
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 24
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69bf283cb44536750800000000000000
+      internalID: 6296969388373506966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_125
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 19
+        width: 27
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 377eebadcf00e7ee0800000000000000
+      internalID: -1261569759615457421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_126
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 11
+        width: 29
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86c5e46def8a14d20800000000000000
+      internalID: 3261073417663569000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_127
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 30
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbdd706d9e3862060800000000000000
+      internalID: 6928370117097545148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_128
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 18
+        width: 28
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc1ea4e1f63edb090800000000000000
+      internalID: -8017001695260515892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_129
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 26
+        width: 22
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bb451e100dfe7380800000000000000
+      internalID: -8971455230728909904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_130
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 24
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3a640b1cbdbc4a90800000000000000
+      internalID: -7328273878033864129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_131
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 28
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 678598b0f5acbd550800000000000000
+      internalID: 6186761022687762550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_132
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 26
+        width: 25
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 114c96ee49274d710800000000000000
+      internalID: 1717123341915636753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_133
+      rect:
+        serializedVersion: 2
+        x: 709
+        y: 21
+        width: 30
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 450df7685a4cf0fa0800000000000000
+      internalID: -5832226777216331692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_134
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 11
+        width: 24
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d08de6ff42034e4c0800000000000000
+      internalID: -4259226412123236339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_135
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 20
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9a196ce3b85287d0800000000000000
+      internalID: -2917672078793958758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_136
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 22
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36d9410e07e558ba0800000000000000
+      internalID: -6087355482432561821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_137
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 10
+        width: 39
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0245be85ffe1a79a0800000000000000
+      internalID: -6234636652083719136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_138
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 20
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f525f9a1285b7b1e0800000000000000
+      internalID: -2182075924040691105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_139
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 11
+        width: 31
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78634738ad71013b0800000000000000
+      internalID: -5543904914017339769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_140
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 19
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc4c3902dd2ab98b0800000000000000
+      internalID: -5144339078722632501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_141
+      rect:
+        serializedVersion: 2
+        x: 573
+        y: 10
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f34f423fc9fad6dd0800000000000000
+      internalID: -2491141930236971969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_142
+      rect:
+        serializedVersion: 2
+        x: 706
+        y: 12
+        width: 21
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2e7e4b27428bd880800000000000000
+      internalID: -8585125022470865366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_143
+      rect:
+        serializedVersion: 2
+        x: 849
+        y: 21
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5b588929aeada3e0800000000000000
+      internalID: -2040783014559458470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_144
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 23
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a09455730cb53120800000000000000
+      internalID: 2393025500056686759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_145
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 10
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 662cebf564f976600800000000000000
+      internalID: 461512611431629414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_146
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 11
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 538f50029d078fe70800000000000000
+      internalID: 9149186720850638901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_147
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 11
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f6f1d906d8904940800000000000000
+      internalID: 5278386808333399801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_148
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 13
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af8ec9e8ddbb4cd20800000000000000
+      internalID: 3297967387396860154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_149
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 13
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f4fd89e85ba5f2f0800000000000000
+      internalID: -939656548873014028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_MountainWailRing_150
+      rect:
+        serializedVersion: 2
+        x: 683
+        y: 13
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 335a706388acdc850800000000000000
+      internalID: 6398993331934176563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Mokgui_MountainWailRing_0: 1889452353277525677
+      Mokgui_MountainWailRing_1: 3818252067969507181
+      Mokgui_MountainWailRing_10: -6776992149432812674
+      Mokgui_MountainWailRing_100: -21250079115863429
+      Mokgui_MountainWailRing_101: 5953355586592784474
+      Mokgui_MountainWailRing_102: -6833381010987682422
+      Mokgui_MountainWailRing_103: -1482705412383084542
+      Mokgui_MountainWailRing_104: 8071385951236449786
+      Mokgui_MountainWailRing_105: 7435903235292725711
+      Mokgui_MountainWailRing_106: -7647901660548068009
+      Mokgui_MountainWailRing_107: 6029137259530081396
+      Mokgui_MountainWailRing_108: -6767931366718790877
+      Mokgui_MountainWailRing_109: -4006950135773520865
+      Mokgui_MountainWailRing_11: -6845756647015541075
+      Mokgui_MountainWailRing_110: -5734025878633218928
+      Mokgui_MountainWailRing_111: 4353128722135960238
+      Mokgui_MountainWailRing_112: -1970406412632876260
+      Mokgui_MountainWailRing_113: -6202120830866841642
+      Mokgui_MountainWailRing_114: 9188188917098568096
+      Mokgui_MountainWailRing_115: -8234323604401923944
+      Mokgui_MountainWailRing_116: 7940038700838971995
+      Mokgui_MountainWailRing_117: 1400243375562368380
+      Mokgui_MountainWailRing_118: 3996078549010558864
+      Mokgui_MountainWailRing_119: 8473908068881125916
+      Mokgui_MountainWailRing_12: 943273041659866285
+      Mokgui_MountainWailRing_120: -8922917414865722855
+      Mokgui_MountainWailRing_121: 4327352204093697555
+      Mokgui_MountainWailRing_122: -1620109505719031152
+      Mokgui_MountainWailRing_123: 7724730333217461944
+      Mokgui_MountainWailRing_124: 6296969388373506966
+      Mokgui_MountainWailRing_125: -1261569759615457421
+      Mokgui_MountainWailRing_126: 3261073417663569000
+      Mokgui_MountainWailRing_127: 6928370117097545148
+      Mokgui_MountainWailRing_128: -8017001695260515892
+      Mokgui_MountainWailRing_129: -8971455230728909904
+      Mokgui_MountainWailRing_13: 1755096492781350073
+      Mokgui_MountainWailRing_130: -7328273878033864129
+      Mokgui_MountainWailRing_131: 6186761022687762550
+      Mokgui_MountainWailRing_132: 1717123341915636753
+      Mokgui_MountainWailRing_133: -5832226777216331692
+      Mokgui_MountainWailRing_134: -4259226412123236339
+      Mokgui_MountainWailRing_135: -2917672078793958758
+      Mokgui_MountainWailRing_136: -6087355482432561821
+      Mokgui_MountainWailRing_137: -6234636652083719136
+      Mokgui_MountainWailRing_138: -2182075924040691105
+      Mokgui_MountainWailRing_139: -5543904914017339769
+      Mokgui_MountainWailRing_14: -451283927665402510
+      Mokgui_MountainWailRing_140: -5144339078722632501
+      Mokgui_MountainWailRing_141: -2491141930236971969
+      Mokgui_MountainWailRing_142: -8585125022470865366
+      Mokgui_MountainWailRing_143: -2040783014559458470
+      Mokgui_MountainWailRing_144: 2393025500056686759
+      Mokgui_MountainWailRing_145: 461512611431629414
+      Mokgui_MountainWailRing_146: 9149186720850638901
+      Mokgui_MountainWailRing_147: 5278386808333399801
+      Mokgui_MountainWailRing_148: 3297967387396860154
+      Mokgui_MountainWailRing_149: -939656548873014028
+      Mokgui_MountainWailRing_15: 8352165416680259106
+      Mokgui_MountainWailRing_150: 6398993331934176563
+      Mokgui_MountainWailRing_16: 1369014809680953553
+      Mokgui_MountainWailRing_17: -7031307418360155482
+      Mokgui_MountainWailRing_18: -6076866794585590262
+      Mokgui_MountainWailRing_19: 3610236363553390352
+      Mokgui_MountainWailRing_2: 2622245578306993908
+      Mokgui_MountainWailRing_20: 7754010965398083207
+      Mokgui_MountainWailRing_21: 7206596761897468336
+      Mokgui_MountainWailRing_22: 5882724260324403086
+      Mokgui_MountainWailRing_23: 7581987600568591300
+      Mokgui_MountainWailRing_24: -4029103403476969316
+      Mokgui_MountainWailRing_25: -7545390027900254762
+      Mokgui_MountainWailRing_26: 9010319000925854938
+      Mokgui_MountainWailRing_27: 1730528491611758523
+      Mokgui_MountainWailRing_28: 3810522363274846034
+      Mokgui_MountainWailRing_29: -8741174669096954362
+      Mokgui_MountainWailRing_3: -3514785643719771066
+      Mokgui_MountainWailRing_30: 1584175459408939352
+      Mokgui_MountainWailRing_31: -2717491137127948945
+      Mokgui_MountainWailRing_32: -2006898115376491129
+      Mokgui_MountainWailRing_33: 1595453872011902116
+      Mokgui_MountainWailRing_34: -9170382354229432236
+      Mokgui_MountainWailRing_35: 1108723146213384871
+      Mokgui_MountainWailRing_36: 6429223832905912071
+      Mokgui_MountainWailRing_37: -2010579992721567988
+      Mokgui_MountainWailRing_38: 864195085023203371
+      Mokgui_MountainWailRing_39: -2014471688872926382
+      Mokgui_MountainWailRing_4: -6021509293543097933
+      Mokgui_MountainWailRing_40: -575637011992684691
+      Mokgui_MountainWailRing_41: -2764490174468716777
+      Mokgui_MountainWailRing_42: -2711452275492905678
+      Mokgui_MountainWailRing_43: -1292529778283241157
+      Mokgui_MountainWailRing_44: -5320631926813814808
+      Mokgui_MountainWailRing_45: 1565685087360202672
+      Mokgui_MountainWailRing_46: -351537235935285010
+      Mokgui_MountainWailRing_47: 6569722281557532345
+      Mokgui_MountainWailRing_48: -4301345252107157268
+      Mokgui_MountainWailRing_49: 4451888483979781476
+      Mokgui_MountainWailRing_5: 8630400590862499839
+      Mokgui_MountainWailRing_50: 4105272701726624408
+      Mokgui_MountainWailRing_51: 1476123676193049846
+      Mokgui_MountainWailRing_52: 1010299991859466097
+      Mokgui_MountainWailRing_53: -1763993154377825577
+      Mokgui_MountainWailRing_54: -7513681054454624294
+      Mokgui_MountainWailRing_55: 458623472993876982
+      Mokgui_MountainWailRing_56: 6689868017670962716
+      Mokgui_MountainWailRing_57: -1402689714119341371
+      Mokgui_MountainWailRing_58: -8892145274567338062
+      Mokgui_MountainWailRing_59: -3490909490116744877
+      Mokgui_MountainWailRing_6: -1449149202392677692
+      Mokgui_MountainWailRing_60: -3153608140902883592
+      Mokgui_MountainWailRing_61: -2466768665911728840
+      Mokgui_MountainWailRing_62: 1682395907744412873
+      Mokgui_MountainWailRing_63: 844501818768313400
+      Mokgui_MountainWailRing_64: -6704688358903803725
+      Mokgui_MountainWailRing_65: 7400512727492837518
+      Mokgui_MountainWailRing_66: 8763296244702880551
+      Mokgui_MountainWailRing_67: -529927964171085325
+      Mokgui_MountainWailRing_68: -7634002579166874712
+      Mokgui_MountainWailRing_69: 1058762779958710144
+      Mokgui_MountainWailRing_7: -3690182179750875180
+      Mokgui_MountainWailRing_70: -6950204580420858919
+      Mokgui_MountainWailRing_71: 2705748782642207681
+      Mokgui_MountainWailRing_72: -8810282316648099754
+      Mokgui_MountainWailRing_73: 4167033835805570124
+      Mokgui_MountainWailRing_74: -112205854633570035
+      Mokgui_MountainWailRing_75: 7298401748062142600
+      Mokgui_MountainWailRing_76: -3834302188425925320
+      Mokgui_MountainWailRing_77: -5341578052479841075
+      Mokgui_MountainWailRing_78: -2723755985122697269
+      Mokgui_MountainWailRing_79: 6597733185917215313
+      Mokgui_MountainWailRing_8: 5368743155762305036
+      Mokgui_MountainWailRing_80: -6790176638437601994
+      Mokgui_MountainWailRing_81: 5798549868628427301
+      Mokgui_MountainWailRing_82: -1982039179158617189
+      Mokgui_MountainWailRing_83: 8508858998625420962
+      Mokgui_MountainWailRing_84: 3014249597733840214
+      Mokgui_MountainWailRing_85: -4915703507784371452
+      Mokgui_MountainWailRing_86: 504029492012138848
+      Mokgui_MountainWailRing_87: -4997424594277103829
+      Mokgui_MountainWailRing_88: -3173258972258685753
+      Mokgui_MountainWailRing_89: 3503600156140196604
+      Mokgui_MountainWailRing_9: 1756346543922561347
+      Mokgui_MountainWailRing_90: -429902368814473475
+      Mokgui_MountainWailRing_91: -6887641536344445278
+      Mokgui_MountainWailRing_92: 5086422449291797872
+      Mokgui_MountainWailRing_93: 6412169382131621989
+      Mokgui_MountainWailRing_94: 7732098123491453845
+      Mokgui_MountainWailRing_95: 6996411868305900879
+      Mokgui_MountainWailRing_96: 2747273072231803091
+      Mokgui_MountainWailRing_97: 865184224704909043
+      Mokgui_MountainWailRing_98: -9113990045031938306
+      Mokgui_MountainWailRing_99: 5790102633262018148
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

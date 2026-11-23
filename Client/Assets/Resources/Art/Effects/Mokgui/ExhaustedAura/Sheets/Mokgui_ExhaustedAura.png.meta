@@ -1,0 +1,689 @@
+fileFormatVersion: 2
+guid: 57f6bb13900df214cae73ce3b342f446
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2520575454938438132
+    second: Mokgui_ExhaustedAura_0
+  - first:
+      213: 3187801330757505117
+    second: Mokgui_ExhaustedAura_1
+  - first:
+      213: 2364227272758824679
+    second: Mokgui_ExhaustedAura_2
+  - first:
+      213: -5173308595531592178
+    second: Mokgui_ExhaustedAura_3
+  - first:
+      213: -5519251063166164846
+    second: Mokgui_ExhaustedAura_4
+  - first:
+      213: 7416767910349580172
+    second: Mokgui_ExhaustedAura_5
+  - first:
+      213: -4770694970342548875
+    second: Mokgui_ExhaustedAura_6
+  - first:
+      213: -2738741788350964323
+    second: Mokgui_ExhaustedAura_7
+  - first:
+      213: 1537498152531214049
+    second: Mokgui_ExhaustedAura_8
+  - first:
+      213: 7090834596653715995
+    second: Mokgui_ExhaustedAura_9
+  - first:
+      213: 4056428317233905959
+    second: Mokgui_ExhaustedAura_10
+  - first:
+      213: 3481185237598868259
+    second: Mokgui_ExhaustedAura_11
+  - first:
+      213: 8309710940513590442
+    second: Mokgui_ExhaustedAura_12
+  - first:
+      213: 4008369257983271434
+    second: Mokgui_ExhaustedAura_13
+  - first:
+      213: 7112722153912463811
+    second: Mokgui_ExhaustedAura_14
+  - first:
+      213: -7506498356933924590
+    second: Mokgui_ExhaustedAura_15
+  - first:
+      213: -8133169196934531393
+    second: Mokgui_ExhaustedAura_16
+  - first:
+      213: -5165658586161742116
+    second: Mokgui_ExhaustedAura_17
+  - first:
+      213: 1289535290280774402
+    second: Mokgui_ExhaustedAura_18
+  - first:
+      213: 8365038000386117555
+    second: Mokgui_ExhaustedAura_19
+  - first:
+      213: 2043493797752799913
+    second: Mokgui_ExhaustedAura_20
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 9
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Mokgui_ExhaustedAura_0
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 35
+        width: 27
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f99c2d8502eaf220800000000000000
+      internalID: 2520575454938438132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_ExhaustedAura_1
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 34
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d50915eab685d3c20800000000000000
+      internalID: 3187801330757505117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_ExhaustedAura_2
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 35
+        width: 11
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ee8419ad2c6fc020800000000000000
+      internalID: 2364227272758824679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_ExhaustedAura_3
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 40
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0e4dd1ed37b438b0800000000000000
+      internalID: -5173308595531592178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_ExhaustedAura_4
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 12
+        width: 39
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 290a8c9766ea763b0800000000000000
+      internalID: -5519251063166164846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_ExhaustedAura_5
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 11
+        width: 72
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8727e56e17ade660800000000000000
+      internalID: 7416767910349580172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_ExhaustedAura_6
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 17
+        width: 72
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57a5df063361bcdb0800000000000000
+      internalID: -4770694970342548875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_ExhaustedAura_7
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 48
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9d92dd9ad80ef9d0800000000000000
+      internalID: -2738741788350964323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_ExhaustedAura_8
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 44
+        width: 14
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ee31787c6a465510800000000000000
+      internalID: 1537498152531214049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_ExhaustedAura_9
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 7
+        width: 17
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b12589e2f74b76260800000000000000
+      internalID: 7090834596653715995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_ExhaustedAura_10
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 4
+        width: 17
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 721009900145b4830800000000000000
+      internalID: 4056428317233905959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_ExhaustedAura_11
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 32
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3231a6c8787af4030800000000000000
+      internalID: 3481185237598868259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_ExhaustedAura_12
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 7
+        width: 16
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aac5d7bd216025370800000000000000
+      internalID: 8309710940513590442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_ExhaustedAura_13
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 16
+        width: 15
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0260b65a9690a730800000000000000
+      internalID: 4008369257983271434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_ExhaustedAura_14
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 39
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c1f00a3d1775b260800000000000000
+      internalID: 7112722153912463811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_ExhaustedAura_15
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 7
+        width: 15
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21966e7f38f83d790800000000000000
+      internalID: -7506498356933924590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_ExhaustedAura_16
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 15
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb6719ee4bd212f80800000000000000
+      internalID: -8133169196934531393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_ExhaustedAura_17
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 7
+        width: 16
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdef1ec72e4ef48b0800000000000000
+      internalID: -5165658586161742116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_ExhaustedAura_18
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 19
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20b0486a38955e110800000000000000
+      internalID: 1289535290280774402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_ExhaustedAura_19
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 12
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bf88a1ddb5961470800000000000000
+      internalID: 8365038000386117555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mokgui_ExhaustedAura_20
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 3
+        width: 12
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a205cb38c2fb5c10800000000000000
+      internalID: 2043493797752799913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Mokgui_ExhaustedAura_0: 2520575454938438132
+      Mokgui_ExhaustedAura_1: 3187801330757505117
+      Mokgui_ExhaustedAura_10: 4056428317233905959
+      Mokgui_ExhaustedAura_11: 3481185237598868259
+      Mokgui_ExhaustedAura_12: 8309710940513590442
+      Mokgui_ExhaustedAura_13: 4008369257983271434
+      Mokgui_ExhaustedAura_14: 7112722153912463811
+      Mokgui_ExhaustedAura_15: -7506498356933924590
+      Mokgui_ExhaustedAura_16: -8133169196934531393
+      Mokgui_ExhaustedAura_17: -5165658586161742116
+      Mokgui_ExhaustedAura_18: 1289535290280774402
+      Mokgui_ExhaustedAura_19: 8365038000386117555
+      Mokgui_ExhaustedAura_2: 2364227272758824679
+      Mokgui_ExhaustedAura_20: 2043493797752799913
+      Mokgui_ExhaustedAura_3: -5173308595531592178
+      Mokgui_ExhaustedAura_4: -5519251063166164846
+      Mokgui_ExhaustedAura_5: 7416767910349580172
+      Mokgui_ExhaustedAura_6: -4770694970342548875
+      Mokgui_ExhaustedAura_7: -2738741788350964323
+      Mokgui_ExhaustedAura_8: 1537498152531214049
+      Mokgui_ExhaustedAura_9: 7090834596653715995
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

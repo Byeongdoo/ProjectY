@@ -1,0 +1,11 @@
+{
+  "animation": "seal_pulse_6f",
+  "animationGroupId": "019c01fd-3498-4017-a825-189f6e760cf8",
+  "columns": 6,
+  "rows": 1,
+  "cellWidth": 64,
+  "cellHeight": 64,
+  "frameCount": 6,
+  "sourcePixelsResized": false,
+  "pivot": "cell-center"
+}
