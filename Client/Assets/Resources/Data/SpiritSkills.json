@@ -18,7 +18,8 @@
       "statusIDs": [
         8012
       ],
-      "statusTime": 4
+      "statusTime": 4,
+      "effect": 0
     },
     {
       "skillID": 85012,
@@ -38,7 +39,8 @@
       "statusIDs": [
         8009
       ],
-      "statusTime": 6
+      "statusTime": 6,
+      "effect": 0
     },
     {
       "skillID": 85013,
@@ -58,7 +60,8 @@
       "statusIDs": [
         8005
       ],
-      "statusTime": 1
+      "statusTime": 1,
+      "effect": 0
     },
     {
       "skillID": 85014,
@@ -78,7 +81,8 @@
       "statusIDs": [
         8010
       ],
-      "statusTime": 8
+      "statusTime": 8,
+      "effect": 0
     },
     {
       "skillID": 85021,
@@ -96,7 +100,8 @@
       "maxTarget": 8,
       "knockback": 0,
       "statusIDs": [],
-      "statusTime": 0
+      "statusTime": 0,
+      "effect": 0
     },
     {
       "skillID": 85022,
@@ -114,7 +119,8 @@
       "maxTarget": 1,
       "knockback": 0,
       "statusIDs": [],
-      "statusTime": 0
+      "statusTime": 0,
+      "effect": 1
     },
     {
       "skillID": 85023,
@@ -132,7 +138,8 @@
       "maxTarget": 1,
       "knockback": 0,
       "statusIDs": [],
-      "statusTime": 0
+      "statusTime": 0,
+      "effect": 2
     },
     {
       "skillID": 85024,
@@ -153,7 +160,8 @@
         8011,
         8003
       ],
-      "statusTime": 8
+      "statusTime": 8,
+      "effect": 0
     },
     {
       "skillID": 85031,
@@ -171,7 +179,8 @@
       "maxTarget": 6,
       "knockback": 0,
       "statusIDs": [],
-      "statusTime": 0
+      "statusTime": 0,
+      "effect": 0
     },
     {
       "skillID": 85032,
@@ -189,7 +198,8 @@
       "maxTarget": 1,
       "knockback": 0,
       "statusIDs": [],
-      "statusTime": 0
+      "statusTime": 0,
+      "effect": 0
     },
     {
       "skillID": 85033,
@@ -209,7 +219,8 @@
       "statusIDs": [
         8001
       ],
-      "statusTime": 3
+      "statusTime": 3,
+      "effect": 3
     },
     {
       "skillID": 85034,
@@ -227,7 +238,8 @@
       "maxTarget": 0,
       "knockback": 0,
       "statusIDs": [],
-      "statusTime": 0
+      "statusTime": 0,
+      "effect": 4
     },
     {
       "skillID": 85041,
@@ -247,7 +259,8 @@
       "statusIDs": [
         8006
       ],
-      "statusTime": 10
+      "statusTime": 10,
+      "effect": 0
     },
     {
       "skillID": 85042,
@@ -267,7 +280,8 @@
       "statusIDs": [
         8003
       ],
-      "statusTime": 8
+      "statusTime": 8,
+      "effect": 0
     },
     {
       "skillID": 85043,
@@ -287,7 +301,8 @@
       "statusIDs": [
         8007
       ],
-      "statusTime": 6
+      "statusTime": 6,
+      "effect": 0
     },
     {
       "skillID": 85044,
@@ -307,7 +322,8 @@
       "statusIDs": [
         8008
       ],
-      "statusTime": 6
+      "statusTime": 6,
+      "effect": 0
     },
     {
       "skillID": 85051,
@@ -325,7 +341,8 @@
       "maxTarget": 1,
       "knockback": 0,
       "statusIDs": [],
-      "statusTime": 0
+      "statusTime": 0,
+      "effect": 0
     },
     {
       "skillID": 85052,
@@ -343,7 +360,8 @@
       "maxTarget": 4,
       "knockback": 0,
       "statusIDs": [],
-      "statusTime": 0
+      "statusTime": 0,
+      "effect": 0
     },
     {
       "skillID": 85053,
@@ -361,7 +379,8 @@
       "maxTarget": 1,
       "knockback": 0,
       "statusIDs": [],
-      "statusTime": 0
+      "statusTime": 0,
+      "effect": 5
     },
     {
       "skillID": 85054,
@@ -379,7 +398,8 @@
       "maxTarget": 1,
       "knockback": 0,
       "statusIDs": [],
-      "statusTime": 0
+      "statusTime": 0,
+      "effect": 6
     }
   ]
 }

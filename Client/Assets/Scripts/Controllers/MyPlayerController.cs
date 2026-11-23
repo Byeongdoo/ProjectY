@@ -23,10 +23,24 @@ public class MyPlayerController : PlayerController
 	{
 		base.Init();
 		_upgradeWindow = Table.TableManager.Configs.Get(ConfigDiagonalUpgradeWindow).value[0];
+		if (MultiScene.CombatEnabled)
+			CombatHud.Ensure();
 	}
+
+	// 대상 선택 중·시전 중·이동 불가 상태이상(기절·결박·버팀)이면 방향키로 움직이지 않는다
+	bool MoveBlocked => TargetSelect.Active || MyCombat.IsCasting || IsMoveLocked;
 
 	protected override void UpdateController()
 	{
+		MyCombat.Update();
+		if (MultiScene.CombatEnabled)
+		{
+			TargetSelect.Update();
+			// 시전 중 Esc = 시전 취소(신력·쿨타임 소모 없음)
+			if (MyCombat.IsCasting && TargetSelect.Active == false && Input.GetKeyDown(KeyCode.Escape))
+				Managers.Network.Send(new C_CancelSkill());
+		}
+
 		switch (State)
 		{
 			case CreatureState.Idle:
@@ -65,13 +79,16 @@ public class MyPlayerController : PlayerController
 	}
 
 	// 서버가 보낸 내 위치. 예측 위치와 허용 오차(configs 20049)보다 멀어졌을 때만 서버 위치로 맞춘다.
-	public void OnServerPosition(PositionInfo serverPos, int tolerance)
+	// forced(밀치기·돌진·물러서기·이동 거절)면 오차와 상관없이 서버 위치·방향으로 바로 맞춘다.
+	public void OnServerPosition(PositionInfo serverPos, int tolerance, bool forced = false)
 	{
 		Vector3Int server = new Vector3Int(serverPos.PosX, serverPos.PosY, 0);
 		Vector3Int diff = server - CellPos;
-		if (Mathf.Max(Mathf.Abs(diff.x), Mathf.Abs(diff.y)) <= tolerance)
+		if (forced == false && Mathf.Max(Mathf.Abs(diff.x), Mathf.Abs(diff.y)) <= tolerance)
 			return;
 
+		if (forced)
+			Dir = serverPos.MoveDir;
 		CellPos = server;
 		_fromCell = server;
 		_inputBuffer.Clear();
@@ -115,25 +132,44 @@ public class MyPlayerController : PlayerController
 		if (MultiScene.CombatEnabled == false)
 			return;
 
-		if (_coSkillCooltime == null && Input.GetKey(KeyCode.Space))
-		{
-			Debug.Log("Skill !");
-
-			// 평타 요청. 원혼별 근접(앞 칸·3칸 베기)/원거리(화살) 형태는 서버가 spirits 테이블로 정해
-			// S_Skill의 스킬 ID로 알려 주고, 연출은 그 ID를 따른다. 여기 ID는 원혼이 없을 때의 기본값이다.
-			C_Skill skill = new C_Skill() { Info = new SkillInfo() };
-			skill.Info.SkillId = 2;
-			Managers.Network.Send(skill);
-
-			_coSkillCooltime = StartCoroutine("CoInputCooltime", 0.2f);
-		}
+		UpdateCombatInput();
 	}
 
-	Coroutine _coSkillCooltime;
-	IEnumerator CoInputCooltime(float time)
+	static readonly KeyCode[] SkillKeys = { KeyCode.Alpha1, KeyCode.Alpha2, KeyCode.Alpha3, KeyCode.Alpha4 };
+	const int TargetInstant = 0, TargetEnemy = 1, TargetAlly = 2;
+
+	// 전투 입력('캐릭터 조작 및 전투' 2-2). 판정은 서버가 하고, 여기서는 쓸 수 없는 요청만 미리 거른다.
+	void UpdateCombatInput()
 	{
-		yield return new WaitForSeconds(time);
-		_coSkillCooltime = null;
+		if (TargetSelect.Active || MyCombat.IsCasting || HasStatus(StatusStun))
+			return;
+
+		// Tab: 가까운 적부터 현재 대상 순환
+		if (Input.GetKeyDown(KeyCode.Tab))
+			TargetSelect.CycleEnemyTarget();
+
+		// 1~4: 원혼 스킬. 단일 대상이면 대상 선택 상태로, 즉시·방향이면 바로 요청
+		for (int i = 0; i < SkillKeys.Length; i++)
+		{
+			if (Input.GetKeyDown(SkillKeys[i]) == false)
+				continue;
+			Table.SpiritSkillsRow skill = MyCombat.SkillInSlot(i + 1);
+			if (skill == null || MyCombat.CanUse(skill) == false)
+				return;
+
+			if (skill.targetType == TargetEnemy || skill.targetType == TargetAlly)
+				TargetSelect.Begin(skill, SkillKeys[i]);
+			else
+				Managers.Network.Send(new C_Skill() { Info = new SkillInfo() { SkillId = skill.skillID } });
+			return;
+		}
+
+		// Space(홀드 반복): 평타. 근접 폭·원거리 사거리는 서버가 spirits 테이블로 정한다
+		if (Input.GetKey(KeyCode.Space) && MyCombat.CanSendBasic())
+		{
+			Managers.Network.Send(new C_Skill() { Info = new SkillInfo() { SkillId = 0 } });
+			MyCombat.OnBasicSent();
+		}
 	}
 
 	// 키보드 입력
@@ -146,7 +182,8 @@ public class MyPlayerController : PlayerController
 		if (Input.GetKey(KeyCode.DownArrow)) y -= 1;
 		if (Input.GetKey(KeyCode.LeftArrow)) x -= 1;
 		if (Input.GetKey(KeyCode.RightArrow)) x += 1;
-		if (SpiritSelectPanel.IsOpen)
+		// 원혼 선택 화면·대상 선택 중에는 방향키를 그쪽이 쓴다
+		if (SpiritSelectPanel.IsOpen || TargetSelect.Active)
 			x = y = 0;
 
 		_inputX = x;
@@ -159,16 +196,17 @@ public class MyPlayerController : PlayerController
 		}
 
 		// 바라보는 방향은 칸 경계에서만 바꾼다(이동 중에는 진행 방향 유지, 이승과 같은 반응). 다음 칸 방향은 MoveToNextPos가 정한다.
-		if (State == CreatureState.Idle)
+		// 결박·버팀 중에도 돌아설 수는 있다. 기절·시전 중에는 돌아서지 않는다
+		if (State == CreatureState.Idle && HasStatus(StatusStun) == false && MyCombat.IsCasting == false)
 			Dir = GetDirFromVec(new Vector3Int(x, y, 0));
 
 		// Shift+방향키는 이동 없이 방향만 바꾼다 (평타가 바라보는 방향으로만 나가므로)
-		_moveKeyPressed = !_turnOnly;
+		_moveKeyPressed = !_turnOnly && !MoveBlocked;
 	}
 
 	protected override void MoveToNextPos()
 	{
-		if (_turnOnly || SpiritSelectPanel.IsOpen)
+		if (_turnOnly || SpiritSelectPanel.IsOpen || MoveBlocked)
 		{
 			_inputBuffer.Clear();
 		}

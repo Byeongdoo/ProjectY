@@ -62,10 +62,11 @@ class PacketHandler
 			return;
 
 		// 내 캐릭터는 클라가 예측해 움직인다. 서버 위치와 허용 오차(configs 20049)보다 멀어졌을 때만 맞춘다.
-		if (Managers.Object.MyPlayer.Id == movePacket.ObjectId)
+		// 스킬이 옮긴 위치(forced)는 바로 맞춘다.
+		if (Managers.Object.MyPlayer != null && Managers.Object.MyPlayer.Id == movePacket.ObjectId)
 		{
 			int tolerance = Mathf.RoundToInt(Table.TableManager.Configs.Get(20049).value[0]);
-			Managers.Object.MyPlayer.OnServerPosition(movePacket.PosInfo, tolerance);
+			Managers.Object.MyPlayer.OnServerPosition(movePacket.PosInfo, tolerance, movePacket.Forced);
 			return;
 		}
 
@@ -74,6 +75,8 @@ class PacketHandler
 			return;
 
 		bc.PosInfo = movePacket.PosInfo;
+		if (movePacket.Forced)
+			bc.SyncPos(); // 밀려남·돌진은 미끄러지지 않고 그 칸으로
 	}
 
 	public static void S_SkillHandler(PacketSession session, IMessage packet)
@@ -84,11 +87,25 @@ class PacketHandler
 		if (go == null)
 			return;
 
+		if (Managers.Object.MyPlayer != null && Managers.Object.MyPlayer.Id == skillPacket.ObjectId)
+			MyCombat.OnMySkill(skillPacket.Info.SkillId, skillPacket.CastTime);
+
 		CreatureController cc = go.GetComponent<CreatureController>();
 		if (cc != null)
-		{
-			cc.UseSkill(skillPacket.Info.SkillId);
-		}
+			cc.UseSkill(skillPacket.Info.SkillId, skillPacket.Info.TargetId, skillPacket.CastTime);
+	}
+
+	public static void S_CancelSkillHandler(PacketSession session, IMessage packet)
+	{
+		S_CancelSkill cancelPacket = packet as S_CancelSkill;
+
+		if (Managers.Object.MyPlayer != null && Managers.Object.MyPlayer.Id == cancelPacket.ObjectId)
+			MyCombat.OnMyCancel();
+
+		GameObject go = Managers.Object.FindById(cancelPacket.ObjectId);
+		CreatureController cc = go != null ? go.GetComponent<CreatureController>() : null;
+		if (cc != null)
+			cc.CancelSkill();
 	}
 
 	public static void S_ChangeHpHandler(PacketSession session, IMessage packet)
@@ -103,7 +120,38 @@ class PacketHandler
 		if (cc != null)
 		{
 			cc.Hp = changePacket.Hp;
+			if (changePacket.Amount > 0)
+				CombatHud.ShowNumber(cc, changePacket.Amount, changePacket.Critical, changePacket.Heal);
 		}
+	}
+
+	// 내 신력(본인에게만 온다)
+	public static void S_ChangeSpiritHandler(PacketSession session, IMessage packet)
+	{
+		S_ChangeSpirit spiritPacket = packet as S_ChangeSpirit;
+		MyCombat.Spirit = spiritPacket.Spirit;
+		MyCombat.MaxSpirit = spiritPacket.MaxSpirit;
+	}
+
+	public static void S_ChangeStatusHandler(PacketSession session, IMessage packet)
+	{
+		S_ChangeStatus statusPacket = packet as S_ChangeStatus;
+
+		GameObject go = Managers.Object.FindById(statusPacket.ObjectId);
+		CreatureController cc = go != null ? go.GetComponent<CreatureController>() : null;
+		if (cc != null)
+			cc.SetStatus(statusPacket.StatusId, statusPacket.Duration, statusPacket.Stack);
+	}
+
+	// 상태이상으로 바뀐 이동 속도 등
+	public static void S_ChangeStatHandler(PacketSession session, IMessage packet)
+	{
+		S_ChangeStat statPacket = packet as S_ChangeStat;
+
+		GameObject go = Managers.Object.FindById(statPacket.ObjectId);
+		BaseController bc = go != null ? go.GetComponent<BaseController>() : null;
+		if (bc != null && statPacket.StatInfo != null)
+			bc.Speed = statPacket.StatInfo.Speed;
 	}
 
 	public static void S_DieHandler(PacketSession session, IMessage packet)

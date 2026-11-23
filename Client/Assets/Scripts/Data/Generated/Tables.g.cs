@@ -613,6 +613,8 @@ namespace Table
         public List<int> statusIDs = new List<int>();
         /// <summary>지속 시간</summary>
         public float statusTime;
+        /// <summary>특수 효과</summary>
+        public int effect;
     }
 
     [Serializable]
@@ -669,6 +671,8 @@ namespace Table
         public float value;
         /// <summary>최대 중첩</summary>
         public int maxStack;
+        /// <summary>구분</summary>
+        public int kind;
     }
 
     [Serializable]

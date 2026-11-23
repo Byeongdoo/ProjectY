@@ -49,9 +49,6 @@ public class ObjectManager
 		return null;
 	}
 
-	// 투사체 표시 프리팹. 새 리소스가 나올 때까지 비어 있을 수 있다.
-	const string ProjectilePrefab = "Creature/Arrow";
-
 	const int ConfigAlliesOverlap = 90005; // 아군끼리 같은 칸 겹침 허용(1=허용)
 
 	// 내 캐릭터가 그 칸으로 들어가지 못하게 막는 대상. 아군 겹침을 허용하면 다른 플레이어는 막지 않는다.
@@ -61,8 +58,8 @@ public class ObjectManager
 		foreach (KeyValuePair<int, GameObject> kv in _objects)
 		{
 			GameObjectType type = GetObjectTypeById(kv.Key);
-			if (type == GameObjectType.Projectile)
-				continue;
+			if (type == GameObjectType.Field)
+				continue; // 설치물(덫)은 칸을 막지 않는다
 			if (alliesOverlap && type == GameObjectType.Player)
 				continue;
 
@@ -93,9 +90,12 @@ public class ObjectManager
 				_objects.Add(info.ObjectId, go);
 
 				MyPlayer.Id = info.ObjectId;
+				MyPlayer.SpiritId = info.SpiritId;
 				MyPlayer.PosInfo = info.PosInfo;
 				MyPlayer.Stat = info.StatInfo;
 				MyPlayer.SyncPos();
+				MyCombat.Reset(info.StatInfo.Spirit, info.StatInfo.MaxSpirit);
+				TargetSelect.End();
 			}
 			else
 			{
@@ -105,6 +105,7 @@ public class ObjectManager
 				_objects.Add(info.ObjectId, go);
 
 				pc.Id = info.ObjectId;
+				pc.SpiritId = info.SpiritId;
 				pc.PosInfo = info.PosInfo;
 				pc.Stat = info.StatInfo;
 				pc.SyncPos();
@@ -128,19 +129,42 @@ public class ObjectManager
 			mc.Stat = info.StatInfo;
 			mc.SyncPos();
 		}
-		else if (objectType == GameObjectType.Projectile)
+		else if (objectType == GameObjectType.Field)
 		{
-			if (Resources.Load<GameObject>($"Prefabs/{ProjectilePrefab}") == null)
-				return; // 투사체 리소스 없음: 서버 판정은 그대로, 클라 표시만 생략
-			GameObject go = Managers.Resource.Instantiate(ProjectilePrefab);
-			go.name = "Arrow";
+			// 설치물(덫). 리소스가 나올 때까지 CombatHud가 칸 표시로 대신 그린다
+			GameObject go = new GameObject($"Field_{info.SkillId}");
+			FieldController fc = go.AddComponent<FieldController>();
+			fc.Id = info.ObjectId;
+			fc.SkillId = info.SkillId;
+			fc.CellPos = new Vector3Int(info.PosInfo.PosX, info.PosInfo.PosY, 0);
+			go.transform.position = Managers.Map.CurrentGrid.CellToWorld(fc.CellPos) + new Vector3(0.5f, 0.5f);
 			_objects.Add(info.ObjectId, go);
-
-			ArrowController ac = go.GetComponent<ArrowController>();
-			ac.PosInfo = info.PosInfo;
-			ac.Stat = info.StatInfo;
-			ac.SyncPos();
 		}
+	}
+
+	// 칸 거리(체비셰프) range 안의 살아 있는 플레이어·망령. 대상 선택 후보
+	public List<CreatureController> FindCreatures(GameObjectType type, Vector3Int center, int range)
+	{
+		List<CreatureController> list = new List<CreatureController>();
+		foreach (KeyValuePair<int, GameObject> kv in _objects)
+		{
+			if (GetObjectTypeById(kv.Key) != type)
+				continue;
+			CreatureController cc = kv.Value.GetComponent<CreatureController>();
+			if (cc == null || cc.State == CreatureState.Dead || cc.Hp <= 0)
+				continue;
+			Vector3Int d = cc.CellPos - center;
+			if (Mathf.Max(Mathf.Abs(d.x), Mathf.Abs(d.y)) <= range)
+				list.Add(cc);
+		}
+		return list;
+	}
+
+	public IEnumerable<FieldController> Fields()
+	{
+		foreach (KeyValuePair<int, GameObject> kv in _objects)
+			if (GetObjectTypeById(kv.Key) == GameObjectType.Field)
+				yield return kv.Value.GetComponent<FieldController>();
 	}
 
 	public void Remove(int id)

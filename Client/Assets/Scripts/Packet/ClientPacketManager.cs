@@ -42,7 +42,15 @@ class PacketManager
 		_onRecv.Add((ushort)MsgId.SChangeScene, MakePacket<S_ChangeScene>);
 		_handler.Add((ushort)MsgId.SChangeScene, PacketHandler.S_ChangeSceneHandler);		
 		_onRecv.Add((ushort)MsgId.SEnterDungeonReject, MakePacket<S_EnterDungeonReject>);
-		_handler.Add((ushort)MsgId.SEnterDungeonReject, PacketHandler.S_EnterDungeonRejectHandler);
+		_handler.Add((ushort)MsgId.SEnterDungeonReject, PacketHandler.S_EnterDungeonRejectHandler);		
+		_onRecv.Add((ushort)MsgId.SChangeSpirit, MakePacket<S_ChangeSpirit>);
+		_handler.Add((ushort)MsgId.SChangeSpirit, PacketHandler.S_ChangeSpiritHandler);		
+		_onRecv.Add((ushort)MsgId.SChangeStatus, MakePacket<S_ChangeStatus>);
+		_handler.Add((ushort)MsgId.SChangeStatus, PacketHandler.S_ChangeStatusHandler);		
+		_onRecv.Add((ushort)MsgId.SChangeStat, MakePacket<S_ChangeStat>);
+		_handler.Add((ushort)MsgId.SChangeStat, PacketHandler.S_ChangeStatHandler);		
+		_onRecv.Add((ushort)MsgId.SCancelSkill, MakePacket<S_CancelSkill>);
+		_handler.Add((ushort)MsgId.SCancelSkill, PacketHandler.S_CancelSkillHandler);
 	}
 
 	public void OnRecvPacket(PacketSession session, ArraySegment<byte> buffer)

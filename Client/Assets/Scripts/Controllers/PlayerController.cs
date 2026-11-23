@@ -9,6 +9,11 @@ public class PlayerController : CreatureController
 	protected Coroutine _coSkill;
 	protected bool _rangedSkill = false;
 
+	// 저승 던전에서 빙의한 원혼(spirits.spiritID). 0 = 무당 본모습
+	public int SpiritId { get; set; }
+
+	const int ConfigBasicInterval = 20032; // 평타 간격(초) — 클립 길이를 모를 때 동작 유지 시간
+
 	protected override void Init()
 	{
 		base.Init();
@@ -45,16 +50,38 @@ public class PlayerController : CreatureController
 		base.UpdateController();
 	}
 
-	public override void UseSkill(int skillId)
+	// 평타(0): ATTACK_ 클립. 원거리 평타면 맞은 대상까지 화살 연출.
+	// 원혼 스킬: SKILL_<슬롯>_ 클립. 시전 시간이 있으면 시전이 끝날 때까지 그 동작을 유지한다.
+	public override void UseSkill(int skillId, int targetId, float castTime)
 	{
-		if (skillId == 1)
+		_rangedSkill = false;
+		if (skillId == 0)
 		{
-			_coSkill = StartCoroutine("CoStartPunch");
+			_skillAction = "ATTACK_";
+			if (targetId != 0)
+			{
+				_rangedSkill = true;
+				CombatHud.ShowShot(transform.position, targetId);
+			}
 		}
-		else if (skillId == 2)
+		else if (Table.TableManager.SpiritSkills.TryGet(skillId, out Table.SpiritSkillsRow row))
 		{
-			_coSkill = StartCoroutine("CoStartShootArrow");
+			_skillAction = $"SKILL_{row.slot}_";
 		}
+
+		if (_coSkill != null)
+			StopCoroutine(_coSkill);
+		_coSkill = StartCoroutine(CoSkill(castTime));
+	}
+
+	public override void CancelSkill()
+	{
+		if (_coSkill != null)
+			StopCoroutine(_coSkill);
+		_coSkill = null;
+		if (State == CreatureState.Skill)
+			State = CreatureState.Idle;
+		CheckUpdatedFlag();
 	}
 
 	protected virtual void CheckUpdatedFlag()
@@ -62,24 +89,14 @@ public class PlayerController : CreatureController
 
 	}
 
-	IEnumerator CoStartPunch()
+	IEnumerator CoSkill(float castTime)
 	{
-		// 대기 시간
-		_rangedSkill = false;
 		State = CreatureState.Skill;
-		yield return new WaitForSeconds(0.5f);
-		State = CreatureState.Idle;
-		_coSkill = null;
-		CheckUpdatedFlag();
-	}
-
-	IEnumerator CoStartShootArrow()
-	{
-		// 대기 시간
-		_rangedSkill = true;
-		State = CreatureState.Skill;
-		yield return new WaitForSeconds(0.3f);
-		State = CreatureState.Idle;
+		UpdateAnimation(); // 이미 스킬 상태여도 새 동작을 처음부터
+		float fallback = Table.TableManager.Configs.Get(ConfigBasicInterval).value[0];
+		yield return new WaitForSeconds(Mathf.Max(castTime, EightDirClipLength(_skillAction, fallback)));
+		if (State == CreatureState.Skill)
+			State = CreatureState.Idle;
 		_coSkill = null;
 		CheckUpdatedFlag();
 	}

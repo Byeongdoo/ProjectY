@@ -46,9 +46,8 @@ namespace Server
 				MyPlayer.Info.PosInfo.PosX = 0;
 				MyPlayer.Info.PosInfo.PosY = 0;
 
-				StatInfo stat = null;
-				DataManager.StatDict.TryGetValue(1, out stat);
-				MyPlayer.Stat.MergeFrom(stat);
+				// 레벨은 로컬 세이브가 생기면 거기서 받는다. 나머지 스탯은 룸에 들어갈 때 Player.ApplyStats가 테이블에서 정한다
+				MyPlayer.Stat.Level = 1;
 
 				MyPlayer.Session = this;
 			}

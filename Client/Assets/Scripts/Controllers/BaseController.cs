@@ -18,9 +18,13 @@ public class BaseController : MonoBehaviour
 			if (_stat.Equals(value))
 				return;
 
+			_stat.Level = value.Level;
+			_stat.Attack = value.Attack;
 			_stat.Hp = value.Hp;
 			_stat.MaxHp = value.MaxHp;
 			_stat.Speed = value.Speed;
+			_stat.Spirit = value.Spirit;
+			_stat.MaxSpirit = value.MaxSpirit;
 		}
 	}
 

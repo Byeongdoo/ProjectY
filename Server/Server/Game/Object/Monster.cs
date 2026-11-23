@@ -48,9 +48,24 @@ namespace Server.Game
 			Stat.MaxHp = (int)Math.Round(stat.maxHP * mobHpRate);
 			Stat.Hp = Stat.MaxHp;
 			Stat.Speed = stat.moveSpeed;
+			_moveSpeed = stat.moveSpeed;
+			_defence = stat.defence;
+			_critical = stat.critical;
+			_criticalAttack = stat.criticalAttack;
+			_attackSpeed = stat.attackSpeed;
+			_isBoss = info.type == (int)CharacterType.Boss;
 			_searchCellDist = info.scanRange;
 			_chaseCellDist = info.leashRange;
 		}
+
+		float _moveSpeed = 5f, _defence, _critical, _criticalAttack = 1.5f, _attackSpeed = 1f;
+		bool _isBoss;
+		public override bool IsBoss => _isBoss;
+		public override float Defence => _defence;
+		public override float CriticalRate => _critical;
+		public override float CriticalMultiplier => _criticalAttack;
+		protected override float BaseAttackSpeed => _attackSpeed;
+		protected override float BaseMoveSpeed => _moveSpeed;
 
 		// 팩 전체가 같은 대상을 노린다. 이미 싸우는 체는 그대로 둔다.
 		void AlertPack(Player target)
@@ -66,9 +81,9 @@ namespace Server.Game
 			}
 		}
 
-		public override void OnDamaged(GameObject attacker, int damage)
+		public override void OnDamaged(GameObject attacker, int damage, bool critical, bool redirected = false)
 		{
-			base.OnDamaged(attacker, damage);
+			base.OnDamaged(attacker, damage, critical, redirected);
 			if (Room == null || State == CreatureState.Dead)
 				return;
 
@@ -88,11 +103,16 @@ namespace Server.Game
 			if (Room == null)
 				return;
 
+			// 막타 친 플레이어만 신력을 번다('캐릭터 조작 및 전투' 2-8)
+			if (attacker is Player killer)
+				killer.AddSpirit(CombatConfig.Get(CombatConfig.SpiritOnKill));
+
 			S_Die diePacket = new S_Die();
 			diePacket.ObjectId = Id;
 			diePacket.AttackerId = attacker.Id;
 			Room.Broadcast(diePacket);
 
+			Status.Clear();
 			State = CreatureState.Dead;
 			Room.LeaveGame(Id);
 			ObjectManager.Instance.Remove(Id);
@@ -101,6 +121,23 @@ namespace Server.Game
 		// FSM (Finite State Machine)
 		public override void Update()
 		{
+			Status.Update();
+			if (Room == null || State == CreatureState.Dead)
+				return;
+
+			// 기절: 아무것도 하지 않는다
+			if (Status.Has(StatusId.Stun))
+				return;
+
+			// 도발: 건 플레이어만 노린다(위협 무시, '스킬 시스템' 2-5)
+			StatusInstance taunt = Status.Get(StatusId.Taunt);
+			if (taunt != null && taunt.Source is Player taunter && taunter.IsAlive && taunter.Room == Room && _target != taunter)
+			{
+				_target = taunter;
+				if (State == CreatureState.Idle)
+					State = CreatureState.Moving;
+			}
+
 			switch (State)
 			{
 				case CreatureState.Idle:
@@ -188,6 +225,10 @@ namespace Server.Game
 				return;
 			}
 
+			// 결박·버팀이면 그 자리에서 기다린다
+			if (CanMove == false)
+				return;
+
 			// 이동. 대각선 한 칸은 configs 20030 배율만큼 다음 이동까지 더 기다린다(클라 보간과 같은 배율, 화면상 속도를 직선과 맞춤)
 			Vector2Int step = path[1] - CellPos;
 			Dir = GetDirFromVec(step);
@@ -207,6 +248,7 @@ namespace Server.Game
 		}
 
 		long _coolTick = 0;
+		const float MonsterBasicCoef = 1f; // 평타 계수 기준값(피해 = 공격력 × 계수). 망령별 계수가 테이블에 생기면 교체
 		protected virtual void UpdateSkill()
 		{
 			if (_coolTick == 0)
@@ -239,20 +281,15 @@ namespace Server.Game
 					BroadcastMove();
 				}
 
-				Skill skillData = null;
-				DataManager.SkillDict.TryGetValue(1, out skillData);
+				// 평타: 공격력 × 계수(1.0), 간격 = 평타 간격(configs 20032) / 공격 속도.
+				// TODO 망령별 공격 계수·패턴은 '망령(적) 시스템' 구현 때 테이블에서 읽는다
+				Combat.Damage(this, _target, MonsterBasicCoef);
 
-				// 데미지 판정
-				_target.OnDamaged(this, skillData.damage + Stat.Attack);
-
-				// 스킬 사용 Broadcast
-				S_Skill skill = new S_Skill() { Info = new SkillInfo() };
+				S_Skill skill = new S_Skill() { Info = new SkillInfo() { SkillId = Combat.BasicSkillId, TargetId = _target.Id } };
 				skill.ObjectId = Id;
-				skill.Info.SkillId = skillData.id;
 				Room.Broadcast(skill);
 
-				// 스킬 쿨타임 적용
-				int coolTick = (int)(1000 * skillData.cooldown);
+				int coolTick = (int)(1000 * CombatConfig.Get(CombatConfig.BasicInterval) / Math.Max(0.05f, AttackSpeed));
 				_coolTick = Environment.TickCount64 + coolTick;
 			}
 

@@ -39,11 +39,11 @@ public class MonsterController : CreatureController
 		//Managers.Resource.Destroy(gameObject);
 	}
 
-	public override void UseSkill(int skillId)
+	// 망령 평타(skillId 0). 상태는 서버의 다음 S_Move가 되돌린다
+	public override void UseSkill(int skillId, int targetId, float castTime)
 	{
-		if (skillId == 1)
-		{
-			State = CreatureState.Skill;
-		}
+		_skillAction = "ATTACK_";
+		State = CreatureState.Skill;
+		UpdateAnimation(); // 연속 공격이면 상태가 그대로여도 클립을 처음부터 다시 튼다
 	}
 }

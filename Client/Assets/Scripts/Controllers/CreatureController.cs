@@ -80,20 +80,40 @@ public class CreatureController : BaseController
 		}
 	}
 
+	// 스킬 상태에서 틀 동작(ATTACK_ = 평타, SKILL_1_ ~ SKILL_4_ = 원혼 스킬 슬롯)
+	protected string _skillAction = "ATTACK_";
+
 	// 원혼·망령 프리팹은 ATTACK·DIE 클립이 있다. 무당 프리팹처럼 없는 동작이면 서 있는 모습으로 둔다.
 	protected void PlayEightDirClip()
 	{
 		string action;
-		if (State == CreatureState.Moving) action = "RUN_";
-		else if (State == CreatureState.Skill) action = "ATTACK_";
-		else if (State == CreatureState.Dead) action = "DIE_";
+		if (State == CreatureState.Dead) action = "DIE_";
+		else if (HasStatus(StatusStun)) action = "STUN_";
+		else if (State == CreatureState.Moving) action = "RUN_";
+		else if (State == CreatureState.Skill) action = _skillAction;
 		else action = "IDLE_";
 
 		string clip = action + EightDirSuffix(Dir);
 		if (_animator.HasState(0, Animator.StringToHash(clip)) == false)
 			clip = "IDLE_" + EightDirSuffix(Dir);
-		_animator.Play(clip);
+		// 공격·스킬은 같은 클립이 이어져도 처음부터 다시 튼다(연속 평타)
+		if (State == CreatureState.Skill)
+			_animator.Play(clip, 0, 0f);
+		else
+			_animator.Play(clip);
 		_sprite.flipX = false;
+	}
+
+	// 지금 방향의 동작 클립 길이(초). 클립이 없으면 fallback
+	protected float EightDirClipLength(string action, float fallback)
+	{
+		if (_animator == null || _animator.runtimeAnimatorController == null)
+			return fallback;
+		string name = action + EightDirSuffix(Dir);
+		foreach (AnimationClip c in _animator.runtimeAnimatorController.animationClips)
+			if (c.name == name)
+				return c.length;
+		return fallback;
 	}
 
 	public virtual void OnDamaged()
@@ -114,8 +134,55 @@ public class CreatureController : BaseController
 		GameObject.Destroy(effect, 0.5f);
 	}
 
-	public virtual void UseSkill(int skillId)
+	// 서버가 받아들인 평타(skillId 0)·원혼 스킬. castTime > 0이면 시전 시작
+	public virtual void UseSkill(int skillId, int targetId, float castTime)
 	{
 
 	}
+
+	// 시전 취소(S_CancelSkill)
+	public virtual void CancelSkill()
+	{
+
+	}
+
+	// ---- 상태이상 (S_ChangeStatus). 표시와 내 입력 제한에만 쓴다. 효과는 서버가 판정한다 ----
+
+	public const int StatusRoot = 8001;   // 결박: 이동 불가
+	public const int StatusStun = 8005;   // 기절: 이동·공격·스킬 불가
+	public const int StatusFervor = 8008; // 신명: 신력 소모 감소
+	public const int StatusBrace = 8009;  // 버팀: 이동 불가
+	public const int StatusFrenzy = 8011; // 광기: 공격 속도 증가
+	public const int StatusSlow = 8004;   // 둔화: 이동·공격 속도 감소
+
+	readonly Dictionary<int, (float endTime, int stack)> _statuses = new Dictionary<int, (float, int)>();
+
+	public IReadOnlyDictionary<int, (float endTime, int stack)> Statuses => _statuses;
+
+	public bool HasStatus(int statusId)
+	{
+		return _statuses.TryGetValue(statusId, out var s) && s.endTime > Time.time;
+	}
+
+	// 효과 값 × 중첩(statusEffects.value). 없으면 0
+	public float StatusValue(int statusId)
+	{
+		if (HasStatus(statusId) == false)
+			return 0f;
+		return Table.TableManager.StatusEffects.Get(statusId).value * _statuses[statusId].stack;
+	}
+
+	public void SetStatus(int statusId, float duration, int stack)
+	{
+		bool stunBefore = HasStatus(StatusStun);
+		if (duration <= 0f)
+			_statuses.Remove(statusId);
+		else
+			_statuses[statusId] = (Time.time + duration, stack);
+		if (stunBefore != HasStatus(StatusStun))
+			UpdateAnimation();
+	}
+
+	// 이동 불가 상태(기절·결박·버팀)
+	public bool IsMoveLocked => HasStatus(StatusStun) || HasStatus(StatusRoot) || HasStatus(StatusBrace);
 }

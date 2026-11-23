@@ -4,79 +4,92 @@
       "statusID": 8001,
       "name": "Status_8001",
       "value": 0,
-      "maxStack": 1
+      "maxStack": 1,
+      "kind": 1
     },
     {
       "statusID": 8002,
       "name": "Status_8002",
       "value": 0.15,
-      "maxStack": 3
+      "maxStack": 3,
+      "kind": 1
     },
     {
       "statusID": 8003,
       "name": "Status_8003",
       "value": 0.2,
-      "maxStack": 1
+      "maxStack": 1,
+      "kind": 1
     },
     {
       "statusID": 8004,
       "name": "Status_8004",
       "value": 0.35,
-      "maxStack": 1
+      "maxStack": 1,
+      "kind": 1
     },
     {
       "statusID": 8005,
       "name": "Status_8005",
       "value": 0,
-      "maxStack": 1
+      "maxStack": 1,
+      "kind": 1
     },
     {
       "statusID": 8006,
       "name": "Status_8006",
       "value": 0.15,
-      "maxStack": 1
+      "maxStack": 1,
+      "kind": 2
     },
     {
       "statusID": 8007,
       "name": "Status_8007",
       "value": 0.3,
-      "maxStack": 1
+      "maxStack": 1,
+      "kind": 2
     },
     {
       "statusID": 8008,
       "name": "Status_8008",
       "value": 0.5,
-      "maxStack": 1
+      "maxStack": 1,
+      "kind": 2
     },
     {
       "statusID": 8009,
       "name": "Status_8009",
       "value": 0.5,
-      "maxStack": 1
+      "maxStack": 1,
+      "kind": 2
     },
     {
       "statusID": 8010,
       "name": "Status_8010",
       "value": 0.3,
-      "maxStack": 1
+      "maxStack": 1,
+      "kind": 2
     },
     {
       "statusID": 8011,
       "name": "Status_8011",
       "value": 0.3,
-      "maxStack": 1
+      "maxStack": 1,
+      "kind": 2
     },
     {
       "statusID": 8012,
       "name": "Status_8012",
       "value": 0,
-      "maxStack": 1
+      "maxStack": 1,
+      "kind": 1
     },
     {
       "statusID": 8013,
       "name": "Status_8013",
       "value": 0.3,
-      "maxStack": 1
+      "maxStack": 1,
+      "kind": 1
     }
   ]
 }

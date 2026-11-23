@@ -44,10 +44,52 @@ namespace Server.Game
 			set { PosInfo.State = value; }
 		}
 
+		public StatusSet Status { get; }
+
 		public GameObject()
 		{
 			Info.PosInfo = PosInfo;
 			Info.StatInfo = Stat;
+			Status = new StatusSet(this);
+		}
+
+		// ---- 전투 스탯 ('캐릭터 조작 및 전투' 2-6). 패킷(StatInfo)에 없는 값은 서버 판정에만 쓴다 ----
+
+		public virtual bool IsBoss => false;
+		public virtual float Defence => 0f;
+		public virtual float CriticalRate => 0f;
+		public virtual float CriticalMultiplier => CombatConfig.Get(CombatConfig.DefaultCritMultiplier);
+		protected virtual float BaseAttackSpeed => 1f;
+		protected virtual float BaseMoveSpeed => Stat.Speed;
+		// 원혼 받는 피해 배율 등 받는 쪽 고유 배율
+		protected virtual float DamageTakenRate => 1f;
+
+		// 강화(공격력 +)
+		public float AttackPower => Stat.Attack * (1f + Status.Value(StatusId.Empower));
+		// 광기(공속 +)·둔화(공속 −)
+		public float AttackSpeed => BaseAttackSpeed * (1f + Status.Value(StatusId.Frenzy)) * (1f - Status.Value(StatusId.Slow));
+
+		public bool IsAlive => Room != null && Stat.Hp > 0 && State != CreatureState.Dead;
+		// 기절이면 아무것도 못 한다
+		public bool CanAct => IsAlive && Status.Has(StatusId.Stun) == false;
+		// 결박·버팀이면 제자리에서 버틴다
+		public virtual bool CanMove => CanAct && Status.Has(StatusId.Root) == false && Status.Has(StatusId.Brace) == false;
+
+		// 상태이상이 바뀌면 이동 속도를 다시 정하고, 바뀌었으면 알린다(신속·둔화)
+		public virtual void OnStatusChanged(int statusId)
+		{
+			if (statusId != StatusId.Haste && statusId != StatusId.Slow)
+				return;
+			RefreshMoveSpeed();
+		}
+
+		protected void RefreshMoveSpeed()
+		{
+			float speed = BaseMoveSpeed * (1f + Status.Value(StatusId.Haste)) * (1f - Status.Value(StatusId.Slow));
+			if (Math.Abs(speed - Stat.Speed) < 0.0001f)
+				return;
+			Stat.Speed = speed;
+			Room?.Broadcast(new S_ChangeStat() { ObjectId = Id, StatInfo = Stat });
 		}
 
 		public virtual void Update()
@@ -129,28 +171,52 @@ namespace Server.Game
 			return MoveDir.Down;
 		}
 
-		public virtual void OnDamaged(GameObject attacker, int damage)
+		// 피해 판정(Combat.Damage)을 마친 피해를 받는다. 받는 쪽 배율은 여기서 곱한다(방어율 상한 뒤).
+		//   × 받는 피해 배율(원혼) × (1 + 취약) × (1 − 버팀), 그다음 수호가 있으면 일부를 시전자가 대신 받는다.
+		// redirected: 수호로 넘어온 피해. 다시 넘기지 않는다
+		public virtual void OnDamaged(GameObject attacker, int damage, bool critical, bool redirected = false)
 		{
-			if (Room == null)
+			if (IsAlive == false)
 				return;
 
-			Stat.Hp = Math.Max(Stat.Hp - damage, 0);
+			float scaled = damage * DamageTakenRate * (1f + Status.Value(StatusId.Vulnerable)) * (1f - Status.Value(StatusId.Brace));
+			damage = Math.Max((int)CombatConfig.Get(CombatConfig.MinDamage), (int)Math.Round(scaled));
 
-			S_ChangeHp changePacket = new S_ChangeHp();
-			changePacket.ObjectId = Id;
-			changePacket.Hp = Stat.Hp;
-			Room.Broadcast(changePacket);
+			StatusInstance guard = redirected ? null : Status.Get(StatusId.Guard);
+			if (guard != null && guard.Source != null && guard.Source != this && guard.Source.IsAlive && guard.Source.Room == Room)
+			{
+				int shared = (int)Math.Round(damage * Status.Value(StatusId.Guard));
+				if (shared > 0)
+				{
+					damage = Math.Max(0, damage - shared);
+					guard.Source.OnDamaged(attacker, shared, critical, redirected: true);
+				}
+			}
+
+			Stat.Hp = Math.Max(Stat.Hp - damage, 0);
+			Room.Broadcast(new S_ChangeHp() { ObjectId = Id, Hp = Stat.Hp, Amount = damage, Critical = critical });
 
 			if (Stat.Hp <= 0)
-			{
 				OnDead(attacker);
-			}
+		}
+
+		// 회복. 최대 체력을 넘는 양은 버린다('캐릭터 조작 및 전투' 2-7)
+		public virtual void OnHealed(GameObject healer, int amount, bool critical)
+		{
+			if (IsAlive == false)
+				return;
+
+			int healed = Math.Min(amount, Stat.MaxHp - Stat.Hp);
+			Stat.Hp += healed;
+			Room.Broadcast(new S_ChangeHp() { ObjectId = Id, Hp = Stat.Hp, Amount = healed, Critical = critical, Heal = true });
 		}
 
 		public virtual void OnDead(GameObject attacker)
 		{
 			if (Room == null)
 				return;
+
+			Status.Clear();
 
 			S_Die diePacket = new S_Die();
 			diePacket.ObjectId = Id;
