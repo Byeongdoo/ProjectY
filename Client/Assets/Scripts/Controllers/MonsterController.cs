@@ -41,6 +41,39 @@ public class MonsterController : CreatureController
 
 	bool _castPose;
 
+	// characterInfos.characterID(보스 판별·보스 이펙트 묶음)
+	public int CharacterId { get; set; }
+
+	public bool IsBoss => Table.TableManager.CharacterInfos.TryGet(CharacterId, out Table.CharacterInfosRow row) && row.type == 3;
+
+	int _bossPhase = 1;
+	GameObject _exhaustAura, _phaseAura;
+
+	// 보스 상태(S_BossState). 페이즈가 오르면 전환 동작(PHASE_TRANSITION)을 한 번 틀고 2페이즈 오라를 켠다
+	public void SetBossPhase(int phase)
+	{
+		bool up = phase > _bossPhase;
+		_bossPhase = phase;
+		_phaseAura = BossVfx.SetAura(this, "Phase2Aura", _phaseAura, phase >= 2);
+		if (up && State != CreatureState.Dead)
+		{
+			ReleaseCastPose();
+			_skillAction = "PHASE_TRANSITION_";
+			State = CreatureState.Skill;
+			UpdateAnimation();
+			if (_coSkill != null)
+				StopCoroutine(_coSkill);
+			_coSkill = StartCoroutine(CoBackToIdle(EightDirClipLength(_skillAction, 0.5f)));
+		}
+	}
+
+	// 탈진(8013)이 걸리면 보스 오라를 켜고, 풀리면 끈다
+	protected override void OnStatusChanged(int statusId)
+	{
+		if (statusId == StatusExhaust)
+			_exhaustAura = BossVfx.SetAura(this, "ExhaustedAura", _exhaustAura, HasStatus(StatusExhaust));
+	}
+
 	// 예고 자세 중에 맞아도 히트스톱이 끝난 뒤 자세가 풀리지 않게 한다
 	protected override bool HoldsPose => _castPose;
 
@@ -56,6 +89,10 @@ public class MonsterController : CreatureController
 		_skillAction = skillId == 0 ? "ATTACK_" : SpecialAction(skillId);
 		State = CreatureState.Skill;
 		UpdateAnimation(); // 연속 공격이면 상태가 그대로여도 클립을 처음부터 다시 튼다
+
+		// 보스 패턴 발동 이펙트: 예고 때 받아 둔 칸·표식 대상으로 보여 준다
+		if (skillId != 0 && Table.TableManager.BossSkills.TryGet(skillId, out Table.BossSkillsRow boss))
+			BossVfx.OnFire(this, boss, SkillWarningView.LastCells(Id), SkillWarningView.LastTargets(Id));
 
 		if (_coSkill != null)
 			StopCoroutine(_coSkill);
@@ -124,6 +161,9 @@ public class MonsterController : CreatureController
 	public override void OnDead()
 	{
 		ReleaseCastPose();
+		_exhaustAura = BossVfx.SetAura(this, "ExhaustedAura", _exhaustAura, false);
+		_phaseAura = BossVfx.SetAura(this, "Phase2Aura", _phaseAura, false);
+		BossHud.Remove(Id);
 		base.OnDead();
 	}
 }

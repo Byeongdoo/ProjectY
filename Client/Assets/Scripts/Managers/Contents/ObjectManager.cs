@@ -126,6 +126,7 @@ public class ObjectManager
 
 			MonsterController mc = go.GetComponent<MonsterController>();
 			mc.Id = info.ObjectId;
+			mc.CharacterId = info.CharacterId;
 			mc.PosInfo = info.PosInfo;
 			mc.Stat = info.StatInfo;
 			mc.SyncPos();

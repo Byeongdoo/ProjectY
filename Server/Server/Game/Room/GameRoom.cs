@@ -169,6 +169,11 @@ namespace Server.Game
 
 					player.Session.Send(spawnPacket);
 
+					// 보스 상태(교전·페이즈). 보스전 도중에 들어온 플레이어도 체력바·페이즈를 맞춘다
+					foreach (Monster m in _monsters.Values)
+						if (m.IsBoss)
+							player.Session.Send(m.MakeBossState());
+
 					if (Kind == RoomKind.Dungeon)
 						player.Session.Send(DungeonState());
 				}

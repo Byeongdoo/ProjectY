@@ -346,6 +346,9 @@ namespace Server.Game
 			};
 			foreach (Vector2Int c in cast.Cells)
 				warning.Cells.Add(new CellPos() { X = c.x, Y = c.y });
+			if (cast.Marked != null)
+				foreach (Player p in cast.Marked)
+					warning.TargetIds.Add(p.Id);
 			Room.Broadcast(warning);
 		}
 

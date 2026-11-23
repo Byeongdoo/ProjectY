@@ -1,3 +1,4 @@
+using Google.Protobuf.Protocol;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,6 +26,29 @@ namespace Server.Game
 		public bool HasArena { get; set; }
 
 		public int Phase => _phase;
+
+		// 마지막으로 알린 교전 상태. 바뀌면 S_BossState를 보낸다
+		bool _engagedNotified;
+
+		public S_BossState MakeBossState()
+		{
+			return new S_BossState() { ObjectId = Id, Engaged = IsEngaged, Phase = _phase };
+		}
+
+		void BroadcastBossState()
+		{
+			if (_isBoss == false || Room == null)
+				return;
+			_engagedNotified = IsEngaged;
+			Room.Broadcast(MakeBossState());
+		}
+
+		// 매 틱: 교전이 시작되거나 끝났으면 알린다(보스 체력바 표시·숨김)
+		void NotifyBossEngageChange()
+		{
+			if (_isBoss && _engagedNotified != IsEngaged)
+				BroadcastBossState();
+		}
 
 		void LoadBossPhases()
 		{
@@ -72,6 +96,7 @@ namespace Server.Game
 				if (s.Phase == _phase)
 					_skillReadyTick[s.Id] = now + (long)(1000 * s.CoolTime);
 			Console.WriteLine($"[보스 {CharacterId}] {_phase}페이즈 (체력 {ratio:P0})");
+			BroadcastBossState();
 		}
 
 		// 전멸 재시작·복귀 완료 때
@@ -81,6 +106,7 @@ namespace Server.Game
 			_nextBossSkillTick = 0;
 			_invulnerableUntilTick = 0;
 			_skillReadyTick.Clear();
+			BroadcastBossState();
 		}
 
 		long BasicIntervalMs()

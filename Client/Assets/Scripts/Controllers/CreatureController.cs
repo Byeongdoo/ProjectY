@@ -285,6 +285,12 @@ public class CreatureController : BaseController
 			_statuses[statusId] = (Time.time + duration, stack);
 		if (stunBefore != HasStatus(StatusStun) || exhaustBefore != HasStatus(StatusExhaust))
 			UpdateAnimation();
+		OnStatusChanged(statusId);
+	}
+
+	// 상태이상이 걸리거나 풀린 직후(보스 탈진 오라 등)
+	protected virtual void OnStatusChanged(int statusId)
+	{
 	}
 
 	// 이동 불가 상태(기절·결박·버팀)

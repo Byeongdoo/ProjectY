@@ -113,6 +113,12 @@ class PacketHandler
 			cc.CancelSkill();
 	}
 
+	// 보스 교전·페이즈. 보스 체력바와 페이즈 전환 연출
+	public static void S_BossStateHandler(PacketSession session, IMessage packet)
+	{
+		BossHud.OnState(packet as S_BossState);
+	}
+
 	// 적 처치 보상(개인 굴림). 자동 획득: 바로 가방에 담고 알린다
 	public static void S_LootHandler(PacketSession session, IMessage packet)
 	{

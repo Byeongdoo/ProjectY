@@ -284,6 +284,9 @@ namespace Server.Game
 				UpdateCombat();
 			else
 				UpdateIdle();
+
+			if (Room != null)
+				NotifyBossEngageChange();
 		}
 
 		long _nextSearchTick = 0;

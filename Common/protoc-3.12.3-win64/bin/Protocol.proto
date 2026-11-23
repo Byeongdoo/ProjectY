@@ -31,6 +31,7 @@ enum MsgId {
   S_SKILL_WARNING = 23;
   C_DEBUG_COMMAND = 24;
   S_LOOT = 25;
+  S_BOSS_STATE = 26;
 }
 
 // 개발·테스트용 명령(서버 config.json의 debugCommands가 true일 때만 받는다). 실제 콘텐츠에 쓰지 않는다
@@ -253,6 +254,15 @@ message S_SkillWarning {
   int32 skillId = 3;    // monsterSkills.monsterSkillID
   int32 durationMs = 4; // 예고 시간(ms). 0 = 지움
   repeated CellPos cells = 5;
+  repeated int32 targetIds = 6; // 표식형(탱커 강타·디버프·산개)의 표식 대상 플레이어. 칸형은 비어 있다
+}
+
+// 보스 상태('인게임 HUD' 2-3·2-8). 교전 시작·종료, 페이즈 전환 때와 룸에 들어올 때 보낸다.
+// 클라는 교전 중이면 상단 보스 체력바·페이즈 눈금을 띄우고, 페이즈가 오르면 전환 연출을 한다
+message S_BossState {
+  int32 objectId = 1;
+  bool engaged = 2;
+  int32 phase = 3; // bossPhases.phase
 }
 
 // 적 처치 보상(개인 굴림, '망령(적) 시스템' 2-8·'장비 아이템 시스템' 2-8). 받는 플레이어 본인에게만 보낸다.

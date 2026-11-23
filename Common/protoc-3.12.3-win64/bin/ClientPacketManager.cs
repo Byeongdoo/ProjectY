@@ -60,7 +60,9 @@ class PacketManager
 		_onRecv.Add((ushort)MsgId.SSkillWarning, MakePacket<S_SkillWarning>);
 		_handler.Add((ushort)MsgId.SSkillWarning, PacketHandler.S_SkillWarningHandler);		
 		_onRecv.Add((ushort)MsgId.SLoot, MakePacket<S_Loot>);
-		_handler.Add((ushort)MsgId.SLoot, PacketHandler.S_LootHandler);
+		_handler.Add((ushort)MsgId.SLoot, PacketHandler.S_LootHandler);		
+		_onRecv.Add((ushort)MsgId.SBossState, MakePacket<S_BossState>);
+		_handler.Add((ushort)MsgId.SBossState, PacketHandler.S_BossStateHandler);
 	}
 
 	public void OnRecvPacket(PacketSession session, ArraySegment<byte> buffer)
