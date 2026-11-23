@@ -775,6 +775,24 @@
       ]
     },
     {
+      "configID": 99001,
+      "value": [
+        100000
+      ]
+    },
+    {
+      "configID": 99002,
+      "value": [
+        0.02
+      ]
+    },
+    {
+      "configID": 99003,
+      "value": [
+        5
+      ]
+    },
+    {
       "configID": 20059,
       "value": [
         2

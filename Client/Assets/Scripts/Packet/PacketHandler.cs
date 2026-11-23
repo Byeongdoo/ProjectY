@@ -76,7 +76,12 @@ class PacketHandler
 
 		bc.PosInfo = movePacket.PosInfo;
 		if (movePacket.Forced)
+		{
 			bc.SyncPos(); // 밀려남·돌진은 미끄러지지 않고 그 칸으로
+			// 망령이 강제로 옮겨졌다면 밀려난 것(방패 밀치기). 플레이어의 강제 이동은 자기 스킬(돌진·물러서기)이다
+			if (bc is MonsterController mc)
+				mc.PlayReaction("KNOCKBACK_");
+		}
 	}
 
 	public static void S_SkillHandler(PacketSession session, IMessage packet)
@@ -134,7 +139,34 @@ class PacketHandler
 			cc.Hp = changePacket.Hp;
 			if (changePacket.Amount > 0)
 				CombatHud.ShowNumber(cc, changePacket.Amount, changePacket.Critical, changePacket.Heal);
+			if (changePacket.Amount > 0 && changePacket.Heal == false)
+			{
+				OnHit(cc, changePacket.AttackerId, changePacket.Critical);
+				// 허수아비 피해 측정
+				TrainingDummyMeter meter = cc.GetComponent<TrainingDummyMeter>();
+				if (meter != null)
+					meter.Add(changePacket.Amount);
+			}
 		}
+	}
+
+	// 타격감('캐릭터 조작 및 전투' 2-10): 맞은 쪽 흰색 플래시·피격 동작, 때린 쪽·맞은 쪽 히트스톱(일반 20009 / 치명타 20010),
+	// 내가 때리거나 맞은 치명타면 화면 흔들림
+	static void OnHit(CreatureController target, int attackerId, bool critical)
+	{
+		float stop = CreatureController.HitStopTime(critical);
+		target.Flash();
+		target.PlayReaction("HIT_");
+		target.HitStop(stop);
+
+		GameObject attackerGo = attackerId != 0 ? Managers.Object.FindById(attackerId) : null;
+		CreatureController attacker = attackerGo != null ? attackerGo.GetComponent<CreatureController>() : null;
+		if (attacker != null)
+			attacker.HitStop(stop);
+
+		MyPlayerController me = Managers.Object.MyPlayer;
+		if (critical && me != null && (target.Id == me.Id || attackerId == me.Id))
+			NetCameraFollow.Shake(NetCameraFollow.CriticalShakeTime, NetCameraFollow.CriticalShakePixels);
 	}
 
 	// 내 신력(본인에게만 온다)

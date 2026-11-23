@@ -239,9 +239,16 @@ public class BaseController : MonoBehaviour
 	{
 	}
 
+	// 히트스톱 중에는 칸 사이 이동 연출도 멈춘다(입력·판정은 멈추지 않는다)
+	protected float _hitStopUntil;
+	public bool InHitStop => Time.time < _hitStopUntil;
+
 	// 스르륵 이동하는 것을 처리
 	protected virtual void UpdateMoving()
 	{
+		if (InHitStop)
+			return;
+
 		Vector3 destPos = Managers.Map.CurrentGrid.CellToWorld(CellPos) + new Vector3(0.5f, 0.5f);
 		Vector3 moveDir = destPos - transform.position;
 

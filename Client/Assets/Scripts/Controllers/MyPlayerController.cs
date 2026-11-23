@@ -35,6 +35,8 @@ public class MyPlayerController : PlayerController
 		MyCombat.Update();
 		if (MultiScene.CombatEnabled)
 		{
+			// 이 프레임에 대상 선택이 키를 먼저 썼으면(같은 스킬 키로 확정 등) 전투 키로 다시 읽지 않는다
+			bool selectingThisFrame = TargetSelect.Active;
 			TargetSelect.Update();
 			// 시전 중 Esc = 시전 취소(신력·쿨타임 소모 없음)
 			if (MyCombat.IsCasting && TargetSelect.Active == false && Input.GetKeyDown(KeyCode.Escape))
@@ -45,6 +47,12 @@ public class MyPlayerController : PlayerController
 				Managers.Network.Send(new C_HoldInteract() { Holding = true });
 			if (Input.GetKeyUp(KeyCode.F))
 				Managers.Network.Send(new C_HoldInteract() { Holding = false });
+
+			// 전투 키는 서 있을 때뿐 아니라 걷는 중·동작 중에도 받아 둔다(선행 입력)
+			if (SpiritSelectPanel.IsOpen == false && selectingThisFrame == false)
+				UpdateCombatInput();
+
+			UpdateDebugInput();
 		}
 
 		switch (State)
@@ -143,48 +151,109 @@ public class MyPlayerController : PlayerController
 			}
 		}
 
-		// 삼천도는 전투가 없다(Space·스킬 비활성). 서버도 로비 룸의 스킬 요청은 버린다.
-		if (MultiScene.CombatEnabled == false)
-			return;
-
-		UpdateCombatInput();
+		// 전투 입력(Space·1~4·Tab)은 UpdateController가 받는다(UpdateCombatInput)
 	}
 
 	static readonly KeyCode[] SkillKeys = { KeyCode.Alpha1, KeyCode.Alpha2, KeyCode.Alpha3, KeyCode.Alpha4 };
 	const int TargetInstant = 0, TargetEnemy = 1, TargetAlly = 2;
+	const int ConfigInputBuffer = 20023; // 스킬 선행 입력 허용 시간(초)
+	const int BufferedBasic = -1;
+
+	// 선행 입력('캐릭터 조작 및 전투' 2-5, configs 20023): 지금 못 쓰는 키(공용 재사용 대기·평타 간격·시전 끝 직전·걷는 중)를
+	// 이 시간 동안 받아 두었다가 쓸 수 있게 되는 순간 낸다. 그 안에 못 쓰면 버린다. 가장 마지막에 누른 키 하나만 기억한다.
+	int _bufferedSlot;     // 0 = 없음, 1~4 = 원혼 스킬 슬롯, BufferedBasic = 평타
+	float _bufferedUntil;
+
+	// 스킬·평타는 칸 사이를 걷는 중에는 내지 않는다(칸에 도착한 뒤 낸다). 공격·스킬 동작 중에는 다음 동작을 낼 수 있다
+	bool CanActNow => State != CreatureState.Moving && State != CreatureState.Dead && MyCombat.IsCasting == false;
 
 	// 전투 입력('캐릭터 조작 및 전투' 2-2). 판정은 서버가 하고, 여기서는 쓸 수 없는 요청만 미리 거른다.
 	void UpdateCombatInput()
 	{
-		if (TargetSelect.Active || MyCombat.IsCasting || HasStatus(StatusStun))
+		if (TargetSelect.Active || IsFainted || HasStatus(StatusStun))
+		{
+			_bufferedSlot = 0;
 			return;
+		}
 
 		// Tab: 가까운 적부터 현재 대상 순환
 		if (Input.GetKeyDown(KeyCode.Tab))
 			TargetSelect.CycleEnemyTarget();
 
-		// 1~4: 원혼 스킬. 단일 대상이면 대상 선택 상태로, 즉시·방향이면 바로 요청
+		float window = Table.TableManager.Configs.Get(ConfigInputBuffer).value[0];
 		for (int i = 0; i < SkillKeys.Length; i++)
-		{
-			if (Input.GetKeyDown(SkillKeys[i]) == false)
-				continue;
-			Table.SpiritSkillsRow skill = MyCombat.SkillInSlot(i + 1);
-			if (skill == null || MyCombat.CanUse(skill) == false)
-				return;
+			if (Input.GetKeyDown(SkillKeys[i]))
+				Buffer(i + 1, window);
+		if (Input.GetKeyDown(KeyCode.Space) && _bufferedSlot == 0)
+			Buffer(BufferedBasic, window);
 
-			if (skill.targetType == TargetEnemy || skill.targetType == TargetAlly)
-				TargetSelect.Begin(skill, SkillKeys[i]);
-			else
-				Managers.Network.Send(new C_Skill() { Info = new SkillInfo() { SkillId = skill.skillID } });
+		if (_bufferedSlot != 0)
+		{
+			if (Time.time > _bufferedUntil)
+				_bufferedSlot = 0;
+			else if (TryFire(_bufferedSlot))
+				_bufferedSlot = 0;
 			return;
 		}
 
-		// Space(홀드 반복): 평타. 근접 폭·원거리 사거리는 서버가 spirits 테이블로 정한다
-		if (Input.GetKey(KeyCode.Space) && MyCombat.CanSendBasic())
+		// Space 홀드: 평타 반복
+		if (Input.GetKey(KeyCode.Space))
+			TryFire(BufferedBasic);
+	}
+
+	// 개발·테스트 키(에디터·개발 빌드만). 서버 config.json debugCommands가 꺼져 있으면 서버가 무시한다.
+	//   F9 = 앞 칸에 허수아비, F10 = 허수아비 모두 정리, F11 = 체력·신력 채우고 쿨타임 초기화
+	void UpdateDebugInput()
+	{
+		if (Application.isEditor == false && Debug.isDebugBuild == false)
+			return;
+
+		DebugCommand command = DebugCommand.DebugNone;
+		if (Input.GetKeyDown(KeyCode.F9)) command = DebugCommand.DebugSpawnDummy;
+		else if (Input.GetKeyDown(KeyCode.F10)) command = DebugCommand.DebugClearDummies;
+		else if (Input.GetKeyDown(KeyCode.F11)) command = DebugCommand.DebugRefill;
+		if (command == DebugCommand.DebugNone)
+			return;
+
+		Managers.Network.Send(new C_DebugCommand() { Command = command });
+		if (command == DebugCommand.DebugRefill)
+			MyCombat.ClearCooldowns();
+	}
+
+	void Buffer(int slot, float window)
+	{
+		_bufferedSlot = slot;
+		_bufferedUntil = Time.time + window;
+	}
+
+	// 지금 낼 수 있으면 내고 true. 아직 못 내면 false(받아 둔 채로 다음 프레임에 다시 본다)
+	bool TryFire(int slot)
+	{
+		if (CanActNow == false)
+			return false;
+
+		// 평타. 근접 폭·원거리 사거리는 서버가 spirits 테이블로 정한다
+		if (slot == BufferedBasic)
 		{
+			if (MyCombat.CanSendBasic() == false)
+				return false;
 			Managers.Network.Send(new C_Skill() { Info = new SkillInfo() { SkillId = 0 } });
 			MyCombat.OnBasicSent();
+			return true;
 		}
+
+		// 원혼 스킬. 단일 대상이면 대상 선택 상태로, 즉시·방향이면 바로 요청
+		Table.SpiritSkillsRow skill = MyCombat.SkillInSlot(slot);
+		if (skill == null)
+			return true; // 빈 슬롯: 버린다
+		if (MyCombat.CanUse(skill) == false)
+			return false;
+
+		if (skill.targetType == TargetEnemy || skill.targetType == TargetAlly)
+			TargetSelect.Begin(skill, SkillKeys[slot - 1]);
+		else
+			Managers.Network.Send(new C_Skill() { Info = new SkillInfo() { SkillId = skill.skillID } });
+		return true;
 	}
 
 	// 키보드 입력

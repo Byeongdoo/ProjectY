@@ -122,6 +122,14 @@ namespace Server.Game
 			_cooldowns[skillId] = readyTick;
 		}
 
+		// 개발·테스트 명령(DEBUG_REFILL)
+		public void ClearCooldowns()
+		{
+			_cooldowns.Clear();
+			GlobalCooldownTick = 0;
+			NextBasicTick = 0;
+		}
+
 		// 시전 중인 스킬(조준 사격·회혼술). 시전 중에는 이동할 수 없다('스킬 시스템' 2-3)
 		public int CastSkillId { get; set; }
 		public int CastTargetId { get; set; }

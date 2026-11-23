@@ -113,13 +113,14 @@ public class ObjectManager
 		}
 		else if (objectType == GameObjectType.Monster)
 		{
-			string prefab = MonsterPrefabFor(info.CharacterId);
-			if (prefab == null)
+			// 개발·테스트용 허수아비는 테이블 프리팹 없이 플레이스홀더로
+			string prefab = info.TrainingDummy ? null : MonsterPrefabFor(info.CharacterId);
+			if (prefab == null && info.TrainingDummy == false)
 			{
 				Debug.LogWarning($"망령 프리팹 없음: characterId {info.CharacterId} (Tools > ProjectY > Build Monster Prefabs)");
 				return;
 			}
-			GameObject go = Managers.Resource.Instantiate(prefab);
+			GameObject go = info.TrainingDummy ? TrainingDummyView.Create(info) : Managers.Resource.Instantiate(prefab);
 			go.name = info.Name;
 			_objects.Add(info.ObjectId, go);
 

@@ -11,6 +11,9 @@ public class PixelCamera
 	readonly int _refHeight;
 	float _screenPxPerUnit;
 
+	// 도트 1픽셀 = 1 / PixelsPerUnit 월드 단위
+	public float PixelsPerUnit => _pixelsPerUnit;
+
 	public PixelCamera(Camera camera)
 	{
 		_camera = camera;

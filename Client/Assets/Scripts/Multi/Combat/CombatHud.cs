@@ -104,6 +104,7 @@ public class CombatHud : MonoBehaviour
 			DrawShots(cam);
 			DrawTargetMarker(cam);
 			DrawChannels(cam, me);
+			DrawDummyMeters(cam);
 			DrawNumbers(cam);
 		}
 
@@ -144,6 +145,24 @@ public class CombatHud : MonoBehaviour
 		Fill(new Rect(0, 0, Screen.width, Screen.height), new Color(0f, 0f, 0f, 0.45f));
 		float left = Mathf.Max(0f, me.FaintEndTime - Time.time);
 		GUI.Label(new Rect(Screen.width / 2f - 60, Screen.height / 2f - 20, 120, 40), Mathf.CeilToInt(left).ToString(), _numberBig);
+	}
+
+	// 허수아비 피해 측정: 합계 | 초당 피해 | 측정 시간(초). 측정이 끝나면(configs 99003초 무타격) 흐리게 남긴다
+	void DrawDummyMeters(Camera cam)
+	{
+		foreach (TrainingDummyMeter meter in TrainingDummyMeter.All)
+		{
+			if (meter == null || meter.Hits == 0)
+				continue;
+			CreatureController cc = meter.GetComponent<CreatureController>();
+			float height = cc != null ? HeadHeight(cc) : 1f;
+			Vector2 p = ToGui(cam, meter.transform.position + Vector3.up * (height + 0.55f));
+			Color prev = GUI.color;
+			GUI.color = meter.Active ? Color.white : new Color(1f, 1f, 1f, 0.5f);
+			string dps = meter.Dps > 0f ? $"{meter.Dps:0}/s" : "-";
+			GUI.Label(new Rect(p.x - 90, p.y - 10, 180, 20), $"{meter.Total} | {dps} | {meter.Elapsed:0.0}s", _center);
+			GUI.color = prev;
+		}
 	}
 
 	// F 홀드 진행(혼 부르기·보스방 불씨) 막대를 그 플레이어 머리 위에

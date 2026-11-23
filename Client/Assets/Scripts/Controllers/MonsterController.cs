@@ -41,6 +41,9 @@ public class MonsterController : CreatureController
 
 	bool _castPose;
 
+	// 예고 자세 중에 맞아도 히트스톱이 끝난 뒤 자세가 풀리지 않게 한다
+	protected override bool HoldsPose => _castPose;
+
 	// 망령 평타(skillId 0)와 특수기(monsterSkills ID = characterID×10 + 슬롯).
 	// 동작을 한 번 처음부터 틀고 대기 모습으로 돌아간다(서버는 제자리에서 칠 때 S_Move를 다시 보내지 않는다).
 	// 특수기는 슬롯에 맞는 SKILL_1/SKILL_2 클립(없으면 서 있는 모습).
