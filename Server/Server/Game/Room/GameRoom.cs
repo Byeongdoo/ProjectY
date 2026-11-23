@@ -52,6 +52,7 @@ namespace Server.Game
 				{
 					Monster monster = ObjectManager.Instance.Add<Monster>();
 					monster.InitFromTable(pack.CharacterIds[i], dungeon.mobHpRate);
+					ApplyTestMonsterScale(monster);
 					monster.CellPos = cells[i];
 					monster.SpawnCell = cells[i];
 					monster.Pack = monsterPack;
@@ -419,6 +420,7 @@ namespace Server.Game
 
 			Monster boss = ObjectManager.Instance.Add<Monster>();
 			boss.InitFromTable(dungeon.boss, 1f); // 보스 체력은 characterLevel 값 그대로(4인 기준 역산, '보스 시스템' 2-8)
+			ApplyTestMonsterScale(boss);          // 테스트용 약화 배율(configs 99004·99005, 1이면 그대로)
 			boss.CellPos = cells[0];
 			boss.SpawnCell = cells[0];
 			var arena = DungeonSpawner.Rects(DungeonId, DungeonSpawner.ObjTypeBossArena)

@@ -22,7 +22,8 @@ namespace Server
 		static readonly System.Collections.Concurrent.ConcurrentDictionary<string, MsgId> _msgIdCache
 			= new System.Collections.Concurrent.ConcurrentDictionary<string, MsgId>();
 
-		public void Send(IMessage packet)
+		// virtual: 서버 테스트가 소켓 없이 보낸 패킷을 받아 보는 데 쓴다(ServerTests FakeSession)
+		public virtual void Send(IMessage packet)
 		{
 			MsgId msgId = _msgIdCache.GetOrAdd(packet.Descriptor.Name,
 				name => (MsgId)Enum.Parse(typeof(MsgId), name.Replace("_", string.Empty)));
