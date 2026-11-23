@@ -19,7 +19,7 @@ namespace Server.Game
 			if (Kind == RoomKind.Lobby)
 				return;
 
-			if (player.CanAct == false || player.IsCasting)
+			if (player.CanAct == false || player.IsCasting || player.IsChanneling)
 				return;
 
 			if (skillPacket.Info.SkillId == Combat.BasicSkillId)
@@ -86,10 +86,6 @@ namespace Server.Game
 			if (spirit.skillIDs.Contains(skillId) == false)
 				return;
 			Table.SpiritSkillsRow skill = Table.TableManager.SpiritSkills.Get(skillId);
-
-			// 혼절이 아직 없어 일으킬 대상이 없다(혼절·부활은 다음 단계)
-			if (skill.effect == (int)SkillEffect.Revive)
-				return;
 
 			long now = Environment.TickCount64;
 			if (player.GlobalCooldownTick > now)
@@ -198,6 +194,11 @@ namespace Server.Game
 				case SkillEffect.Cleanse:
 					target?.Status.RemoveHarmful();
 					break;
+				case SkillEffect.Revive:
+					// 회혼술: 혼절한 아군을 그 자리에서 체력 configs 20041 비율로('스킬 시스템' 2-10)
+					if (target is Player fainted)
+						Revive(fainted, CombatConfig.Get(CombatConfig.ReviveHpRate), false, null);
+					return;
 			}
 
 			float extra = 1f;
@@ -279,7 +280,12 @@ namespace Server.Game
 			else if (skill.targetType == (int)SkillTargetType.Ally && _players.TryGetValue(targetId, out Player p))
 				target = p;
 
-			if (target == null || target.IsAlive == false)
+			if (target == null)
+				return null;
+
+			// 회혼술은 혼절한 아군만, 그 밖의 스킬은 살아 있는 대상만
+			bool wantsFainted = skill.effect == (int)SkillEffect.Revive;
+			if (wantsFainted ? (target is Player p2 && p2.IsFainted) == false : target.IsAlive == false)
 				return null;
 
 			int range = Math.Min(skill.range, (int)CombatConfig.Get(CombatConfig.TargetMaxRange));

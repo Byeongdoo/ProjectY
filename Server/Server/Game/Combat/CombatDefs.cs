@@ -17,6 +17,17 @@ namespace Server.Game
 		public const int ExecuteHpRate = 20050;       // 참수 조건 체력 비율
 		public const int ExecuteMultiplier = 20051;   // 참수 피해 배율
 		public const int TrapLifetime = 20052;        // 덫 유지 시간(초)
+		public const int ThreatPerDamage = 20036;     // 피해 1당 위협
+		public const int ThreatPerHeal = 20037;       // 회복 1당 위협
+		public const int ThreatSwitchRate = 20038;    // 대상 변경 배율
+		public const int FaintTime = 20039;           // 혼절 유지(초). 지나면 마지막 불씨에서 부활
+		public const int CallSoulTime = 20040;        // 혼 부르기 F 홀드(초)
+		public const int ReviveHpRate = 20041;        // 부활 체력 비율(혼 부르기·회혼술·불씨 자동 부활)
+		public const int ArenaBonfireUses = 60001;    // 보스방 불씨 사용 횟수(파티당)
+		public const int BonfireHoldTime = 60002;     // 보스방 불씨 F 홀드(초)
+		public const int Lanterns = 60003;            // 혼백 등불(전멸 허용 횟수)
+		public const int OutOfCombatDelay = 60026;    // 비전투 회복 시작 지연(초)
+		public const int OutOfCombatRegen = 60027;    // 비전투 회복률(최대 체력 대비 초당)
 
 		public static float Get(int configId) => Table.TableManager.Configs.Get(configId).value[0];
 	}

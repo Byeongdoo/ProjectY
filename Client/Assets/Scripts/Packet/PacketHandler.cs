@@ -162,12 +162,54 @@ class PacketHandler
 		if (go == null)
 			return;
 
+		// 저승 던전의 플레이어는 혼절(그 자리에 쓰러져 있다가 일어난다)
+		if (diePacket.FaintTime > 0f && go.GetComponent<PlayerController>() is PlayerController pc)
+		{
+			if (Managers.Object.MyPlayer != null && pc.Id == Managers.Object.MyPlayer.Id)
+			{
+				TargetSelect.End();
+				MyCombat.OnMyCancel();
+			}
+			pc.OnFainted(diePacket.FaintTime);
+			return;
+		}
+
 		CreatureController cc = go.GetComponent<CreatureController>();
 		if (cc != null)
 		{
 			cc.Hp = 0;
 			cc.OnDead();
 		}
+	}
+
+	public static void S_ReviveHandler(PacketSession session, IMessage packet)
+	{
+		S_Revive revivePacket = packet as S_Revive;
+
+		GameObject go = Managers.Object.FindById(revivePacket.ObjectId);
+		PlayerController pc = go != null ? go.GetComponent<PlayerController>() : null;
+		if (pc != null)
+			pc.OnRevived(revivePacket.Hp, revivePacket.PosInfo);
+	}
+
+	// F 홀드 시작·끝(혼 부르기·보스방 불씨)
+	public static void S_ChannelHandler(PacketSession session, IMessage packet)
+	{
+		S_Channel channelPacket = packet as S_Channel;
+
+		GameObject go = Managers.Object.FindById(channelPacket.ObjectId);
+		PlayerController pc = go != null ? go.GetComponent<PlayerController>() : null;
+		if (pc != null)
+			pc.SetChannel(channelPacket.Kind, channelPacket.Duration);
+	}
+
+	public static void S_DungeonStateHandler(PacketSession session, IMessage packet)
+	{
+		S_DungeonState statePacket = packet as S_DungeonState;
+		MyCombat.Lanterns = statePacket.Lanterns;
+		MyCombat.MaxLanterns = statePacket.MaxLanterns;
+		MyCombat.ArenaBonfireUses = statePacket.ArenaBonfireUses;
+		MyCombat.MaxArenaBonfireUses = statePacket.MaxArenaBonfireUses;
 	}
 }
 

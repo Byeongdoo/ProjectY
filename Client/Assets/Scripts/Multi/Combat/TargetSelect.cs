@@ -31,7 +31,7 @@ public static class TargetSelect
 		_skillKey = skillKey;
 		_beganFrame = Time.frameCount;
 		MyPlayerController me = Managers.Object.MyPlayer;
-		if (skill.targetType == TargetAlly)
+		if (skill.targetType == TargetAlly && candidates.Contains(me))
 			CursorId = me.Id;
 		else if (candidates.Exists(c => c.Id == MyCombat.CurrentTargetId))
 			CursorId = MyCombat.CurrentTargetId;
@@ -147,11 +147,16 @@ public static class TargetSelect
 		MyCombat.CurrentTargetId = enemies[(index + 1) % enemies.Count].Id;
 	}
 
+	const int EffectRevive = 6; // spiritSkills.effect — 회혼술: 혼절한 아군만 고른다
+
 	static List<CreatureController> Candidates(SpiritSkillsRow skill)
 	{
 		MyPlayerController me = Managers.Object.MyPlayer;
+		int range = Mathf.RoundToInt(MyCombat.TargetMaxRange);
+		if (skill.effect == EffectRevive)
+			return Managers.Object.FindCreatures(GameObjectType.Player, me.CellPos, range, fainted: true);
 		GameObjectType type = skill.targetType == TargetAlly ? GameObjectType.Player : GameObjectType.Monster;
-		return Managers.Object.FindCreatures(type, me.CellPos, Mathf.RoundToInt(MyCombat.TargetMaxRange));
+		return Managers.Object.FindCreatures(type, me.CellPos, range);
 	}
 
 	// F1 = 자신, F2~F4 = 다른 플레이어(파티 시스템 전에는 같은 던전의 플레이어를 접속 순으로)

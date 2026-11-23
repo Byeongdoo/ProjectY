@@ -142,8 +142,8 @@ public class ObjectManager
 		}
 	}
 
-	// 칸 거리(체비셰프) range 안의 살아 있는 플레이어·망령. 대상 선택 후보
-	public List<CreatureController> FindCreatures(GameObjectType type, Vector3Int center, int range)
+	// 칸 거리(체비셰프) range 안의 살아 있는(fainted면 혼절한) 플레이어·망령. 대상 선택 후보
+	public List<CreatureController> FindCreatures(GameObjectType type, Vector3Int center, int range, bool fainted = false)
 	{
 		List<CreatureController> list = new List<CreatureController>();
 		foreach (KeyValuePair<int, GameObject> kv in _objects)
@@ -151,7 +151,10 @@ public class ObjectManager
 			if (GetObjectTypeById(kv.Key) != type)
 				continue;
 			CreatureController cc = kv.Value.GetComponent<CreatureController>();
-			if (cc == null || cc.State == CreatureState.Dead || cc.Hp <= 0)
+			if (cc == null)
+				continue;
+			bool down = cc.State == CreatureState.Dead || cc.Hp <= 0;
+			if (down != fainted)
 				continue;
 			Vector3Int d = cc.CellPos - center;
 			if (Mathf.Max(Mathf.Abs(d.x), Mathf.Abs(d.y)) <= range)

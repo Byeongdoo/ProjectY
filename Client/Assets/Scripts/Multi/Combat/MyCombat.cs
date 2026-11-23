@@ -20,6 +20,10 @@ public static class MyCombat
 	// 마지막으로 확정한 적(Tab·단일 적 스킬). 다음 단일 적 스킬의 첫 커서
 	public static int CurrentTargetId;
 
+	// 던전 진행(S_DungeonState): 혼백 등불, 보스방 불씨 남은 횟수
+	public static int Lanterns, MaxLanterns;
+	public static int ArenaBonfireUses, MaxArenaBonfireUses;
+
 	static float _gcdEnd;
 	static readonly Dictionary<int, float> _cooldownEnd = new Dictionary<int, float>();
 	static float _nextBasicTime;

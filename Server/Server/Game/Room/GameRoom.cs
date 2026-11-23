@@ -31,6 +31,8 @@ namespace Server.Game
 			SceneName = sceneName;
 			DungeonId = dungeonId;
 			Map.LoadMap(sceneName);
+			if (kind == RoomKind.Dungeon)
+				ResetDungeonRun();
 		}
 
 		// 던전 룸을 만들 때 한 번 망령 팩을 배치한다(DungeonSpawner). 지금은 던전별 공용 룸이라 쓰러진 망령은 서버를 다시 켜야 돌아온다.
@@ -98,6 +100,9 @@ namespace Server.Game
 					player.RegenSpirit(deltaSec);
 			}
 
+			// 혼절 시간 초과 부활, 구간 불씨, 비전투 회복
+			UpdateDungeon(deltaSec);
+
 			foreach (Monster monster in _monsters.Values.ToList())
 			{
 				if (monster.Room == this)
@@ -160,6 +165,9 @@ namespace Server.Game
 						spawnPacket.Objects.Add(f.Info);
 
 					player.Session.Send(spawnPacket);
+
+					if (Kind == RoomKind.Dungeon)
+						player.Session.Send(DungeonState());
 				}
 			}
 			else if (type == GameObjectType.Monster)
@@ -200,14 +208,25 @@ namespace Server.Game
 				ReleaseSpirit(objectId);
 
 				Player player = null;
+				if (_players.TryGetValue(objectId, out player))
+					CancelChannel(player);
 				if (_players.Remove(objectId, out player) == false)
 					return;
 
 				Map.ApplyLeave(player);
 				player.Room = null;
 				player.Status.Clear();
-				player.CastSkillId = 0;
-				player.CastToken++;
+				player.ResetCombatState();
+				_atBonfire.Remove(objectId);
+
+				// 던전: 모두 나가면 한 판을 초기화하고, 남은 사람이 전부 혼절해 있으면 전멸
+				if (Kind == RoomKind.Dungeon)
+				{
+					if (_players.Count == 0)
+						ResetDungeonRun();
+					else
+						CheckWipe();
+				}
 
 				// 본인한테 정보 전송
 				{
@@ -277,6 +296,10 @@ namespace Server.Game
 				player.Session.Send(new S_Move() { ObjectId = info.ObjectId, PosInfo = player.PosInfo, Forced = true });
 				return;
 			}
+
+			// 움직이면 F 홀드(혼 부르기·보스방 불씨)가 끊긴다
+			if (positionChange)
+				CancelChannel(player);
 
 			if (positionChange)
 			{

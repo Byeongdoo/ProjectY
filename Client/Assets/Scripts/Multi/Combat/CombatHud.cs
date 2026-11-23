@@ -97,21 +97,69 @@ public class CombatHud : MonoBehaviour
 		}
 
 		Camera cam = Camera.main;
+		MyPlayerController me = Managers.Object.MyPlayer;
 		if (cam != null)
 		{
 			DrawFields(cam);
 			DrawShots(cam);
 			DrawTargetMarker(cam);
+			DrawChannels(cam, me);
 			DrawNumbers(cam);
 		}
 
-		MyPlayerController me = Managers.Object.MyPlayer;
 		if (me == null)
 			return;
 		DrawBars(me);
 		DrawSlots();
 		DrawCastBar();
 		DrawStatuses(me);
+		DrawDungeonState();
+		DrawFaint(me);
+	}
+
+	// ---- 혼절·던전 진행 ----
+
+	// 우상단: 혼백 등불(주황 = 남음), 그 아래 보스방 불씨(빨강 = 남음)
+	void DrawDungeonState()
+	{
+		DrawPips(10, MyCombat.Lanterns, MyCombat.MaxLanterns, new Color(1f, 0.7f, 0.25f));
+		DrawPips(30, MyCombat.ArenaBonfireUses, MyCombat.MaxArenaBonfireUses, new Color(0.95f, 0.3f, 0.2f));
+	}
+
+	void DrawPips(float y, int count, int max, Color on)
+	{
+		const int Size = 14, Gap = 4;
+		for (int i = 0; i < max; i++)
+		{
+			Rect r = new Rect(Screen.width - 10 - (max - i) * (Size + Gap), y, Size, Size);
+			Fill(r, i < count ? on : new Color(0.3f, 0.3f, 0.3f, 0.8f));
+		}
+	}
+
+	// 내가 혼절해 있으면 화면을 어둡게 하고, 불씨에서 저절로 일어날 때까지 남은 초를 띄운다
+	void DrawFaint(MyPlayerController me)
+	{
+		if (me.IsFainted == false)
+			return;
+		Fill(new Rect(0, 0, Screen.width, Screen.height), new Color(0f, 0f, 0f, 0.45f));
+		float left = Mathf.Max(0f, me.FaintEndTime - Time.time);
+		GUI.Label(new Rect(Screen.width / 2f - 60, Screen.height / 2f - 20, 120, 40), Mathf.CeilToInt(left).ToString(), _numberBig);
+	}
+
+	// F 홀드 진행(혼 부르기·보스방 불씨) 막대를 그 플레이어 머리 위에
+	void DrawChannels(Camera cam, MyPlayerController me)
+	{
+		if (me == null)
+			return;
+		foreach (CreatureController cc in Managers.Object.FindCreatures(Google.Protobuf.Protocol.GameObjectType.Player, me.CellPos, int.MaxValue))
+		{
+			if (cc is PlayerController pc == false || pc.Channel == Google.Protobuf.Protocol.ChannelKind.ChannelNone)
+				continue;
+			float ratio = (Time.time - pc.ChannelStart) / Mathf.Max(0.01f, pc.ChannelEnd - pc.ChannelStart);
+			Vector2 head = ToGui(cam, pc.transform.position + Vector3.up * (HeadHeight(pc) + 0.2f));
+			Color color = pc.Channel == Google.Protobuf.Protocol.ChannelKind.ChannelCallSoul ? new Color(0.6f, 0.85f, 1f) : new Color(1f, 0.55f, 0.2f);
+			DrawBar(new Rect(head.x - 30, head.y - 6, 60, 6), ratio, color, "");
+		}
 	}
 
 	// ---- 화면 하단 ----

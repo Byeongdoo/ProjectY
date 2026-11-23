@@ -12,6 +12,42 @@ public class PlayerController : CreatureController
 	// 저승 던전에서 빙의한 원혼(spirits.spiritID). 0 = 무당 본모습
 	public int SpiritId { get; set; }
 
+	// 혼절(S_Die faintTime). 이 시각에 마지막 불씨에서 저절로 일어난다
+	public float FaintEndTime { get; private set; }
+	public bool IsFainted => State == CreatureState.Dead;
+
+	// F 홀드 진행(S_Channel)
+	public ChannelKind Channel { get; private set; }
+	public float ChannelStart { get; private set; }
+	public float ChannelEnd { get; private set; }
+
+	public void OnFainted(float faintTime)
+	{
+		CancelSkill();
+		foreach (int id in new List<int>(Statuses.Keys))
+			SetStatus(id, 0f, 0);
+		SetChannel(ChannelKind.ChannelNone, 0f);
+		FaintEndTime = Time.time + faintTime;
+		Hp = 0;
+		State = CreatureState.Dead;
+	}
+
+	public virtual void OnRevived(int hp, PositionInfo posInfo)
+	{
+		FaintEndTime = 0f;
+		PosInfo = posInfo;
+		State = CreatureState.Idle;
+		SyncPos();
+		Hp = hp;
+	}
+
+	public void SetChannel(ChannelKind kind, float duration)
+	{
+		Channel = duration > 0f ? kind : ChannelKind.ChannelNone;
+		ChannelStart = Time.time;
+		ChannelEnd = Time.time + duration;
+	}
+
 	const int ConfigBasicInterval = 20032; // 평타 간격(초) — 클립 길이를 모를 때 동작 유지 시간
 
 	protected override void Init()

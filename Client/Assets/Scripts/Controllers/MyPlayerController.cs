@@ -39,6 +39,12 @@ public class MyPlayerController : PlayerController
 			// 시전 중 Esc = 시전 취소(신력·쿨타임 소모 없음)
 			if (MyCombat.IsCasting && TargetSelect.Active == false && Input.GetKeyDown(KeyCode.Escape))
 				Managers.Network.Send(new C_CancelSkill());
+
+			// F 홀드: 옆 칸의 혼절한 파티원 혼 부르기, 보스방 불씨. 무엇을 할지는 서버가 정한다. 떼면(또는 움직이면) 끊긴다
+			if (IsFainted == false && TargetSelect.Active == false && Input.GetKeyDown(KeyCode.F))
+				Managers.Network.Send(new C_HoldInteract() { Holding = true });
+			if (Input.GetKeyUp(KeyCode.F))
+				Managers.Network.Send(new C_HoldInteract() { Holding = false });
 		}
 
 		switch (State)
@@ -76,6 +82,15 @@ public class MyPlayerController : PlayerController
 		Dir = GetDirFromVec(dest - from);
 		CellPos = dest;
 		CheckUpdatedFlag();
+	}
+
+	// 일어났다. 예측 이동 상태를 버리고 서버가 정한 칸에서 시작한다
+	public override void OnRevived(int hp, PositionInfo posInfo)
+	{
+		base.OnRevived(hp, posInfo);
+		_fromCell = CellPos;
+		_inputBuffer.Clear();
+		_updated = false;
 	}
 
 	// 서버가 보낸 내 위치. 예측 위치와 허용 오차(configs 20049)보다 멀어졌을 때만 서버 위치로 맞춘다.

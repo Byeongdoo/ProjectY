@@ -130,7 +130,28 @@ namespace Server.Game
 
 		public override bool CanMove => base.CanMove && IsCasting == false;
 
-		void ResetCombatState()
+		// ---- 혼절 ('캐릭터 조작 및 전투' 2-11). 저승 던전에서 체력 0 → State Dead로 그 자리에 쓰러져 있다 ----
+
+		public bool IsFainted => Room != null && State == CreatureState.Dead;
+		public long FaintEndTick { get; set; }  // 이때까지 못 일어나면 마지막 불씨에서 부활
+
+		// F 홀드(혼 부르기·보스방 불씨)
+		public ChannelKind ChannelKind { get; set; } = ChannelKind.ChannelNone;
+		public int ChannelTargetId { get; set; }
+		public int ChannelToken { get; set; }
+		public bool IsChanneling => ChannelKind != ChannelKind.ChannelNone;
+
+		// 비전투 회복: 마지막으로 교전한 시각과 아직 반영하지 않은 회복량
+		public long LastCombatTick { get; set; }
+		public float RegenCarry { get; set; }
+		public long NextRegenSendTick { get; set; }
+
+		protected override void OnDamageTaken(GameObject attacker, int damage)
+		{
+			LastCombatTick = Environment.TickCount64;
+		}
+
+		public void ResetCombatState()
 		{
 			NextBasicTick = 0;
 			GlobalCooldownTick = 0;
@@ -138,10 +159,21 @@ namespace Server.Game
 			CastSkillId = 0;
 			CastTargetId = 0;
 			CastToken++;
+			ChannelKind = ChannelKind.ChannelNone;
+			ChannelTargetId = 0;
+			ChannelToken++;
+			FaintEndTick = 0;
+			RegenCarry = 0f;
 		}
 
+		// 저승 던전에서는 혼절(룸이 처리), 그 밖에서는 기존처럼 그 자리에서 다시 들어온다
 		public override void OnDead(GameObject attacker)
 		{
+			if (Room != null && Room.Kind == RoomKind.Dungeon)
+			{
+				Room.OnPlayerFainted(this, attacker);
+				return;
+			}
 			ResetCombatState();
 			base.OnDead(attacker);
 		}

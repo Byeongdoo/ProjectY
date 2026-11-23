@@ -50,7 +50,13 @@ class PacketManager
 		_onRecv.Add((ushort)MsgId.SChangeStat, MakePacket<S_ChangeStat>);
 		_handler.Add((ushort)MsgId.SChangeStat, PacketHandler.S_ChangeStatHandler);		
 		_onRecv.Add((ushort)MsgId.SCancelSkill, MakePacket<S_CancelSkill>);
-		_handler.Add((ushort)MsgId.SCancelSkill, PacketHandler.S_CancelSkillHandler);
+		_handler.Add((ushort)MsgId.SCancelSkill, PacketHandler.S_CancelSkillHandler);		
+		_onRecv.Add((ushort)MsgId.SRevive, MakePacket<S_Revive>);
+		_handler.Add((ushort)MsgId.SRevive, PacketHandler.S_ReviveHandler);		
+		_onRecv.Add((ushort)MsgId.SChannel, MakePacket<S_Channel>);
+		_handler.Add((ushort)MsgId.SChannel, PacketHandler.S_ChannelHandler);		
+		_onRecv.Add((ushort)MsgId.SDungeonState, MakePacket<S_DungeonState>);
+		_handler.Add((ushort)MsgId.SDungeonState, PacketHandler.S_DungeonStateHandler);
 	}
 
 	public void OnRecvPacket(PacketSession session, ArraySegment<byte> buffer)

@@ -195,9 +195,15 @@ namespace Server.Game
 
 			Stat.Hp = Math.Max(Stat.Hp - damage, 0);
 			Room.Broadcast(new S_ChangeHp() { ObjectId = Id, Hp = Stat.Hp, Amount = damage, Critical = critical });
+			OnDamageTaken(attacker, damage);
 
 			if (Stat.Hp <= 0)
 				OnDead(attacker);
+		}
+
+		// 최종 피해를 받은 직후(쓰러지기 전). 망령 위협·교전 시각 기록 등
+		protected virtual void OnDamageTaken(GameObject attacker, int damage)
+		{
 		}
 
 		// 회복. 최대 체력을 넘는 양은 버린다('캐릭터 조작 및 전투' 2-7)
@@ -209,6 +215,10 @@ namespace Server.Game
 			int healed = Math.Min(amount, Stat.MaxHp - Stat.Hp);
 			Stat.Hp += healed;
 			Room.Broadcast(new S_ChangeHp() { ObjectId = Id, Hp = Stat.Hp, Amount = healed, Critical = critical, Heal = true });
+
+			// 회복 위협: 실제로 찬 양만큼, 교전 중인 망령 전부에게(사용자 결정 2026-11-23)
+			if (healed > 0 && healer is Player p)
+				Room.AddHealThreat(p, healed);
 		}
 
 		public virtual void OnDead(GameObject attacker)

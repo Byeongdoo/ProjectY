@@ -67,33 +67,99 @@ namespace Server.Game
 		protected override float BaseAttackSpeed => _attackSpeed;
 		protected override float BaseMoveSpeed => _moveSpeed;
 
-		// 팩 전체가 같은 대상을 노린다. 이미 싸우는 체는 그대로 둔다.
+		// ---- 위협 ('캐릭터 조작 및 전투' 2-9) ----
+		// 피해 1 = 위협 configs 20036, 회복 1 = 20037(교전 중인 망령 전부에게), × 원혼 위협 배율(무명장수 ×3).
+		// 대상은 위협 1위. 새 후보가 현재 대상의 configs 20038배 이상일 때만 바꾼다(핑퐁 방지).
+		// 표에 오른 플레이어 = 이 망령과 교전 중. 탐지·팩 연동은 위협 0으로 올린다.
+		readonly Dictionary<Player, float> _threat = new Dictionary<Player, float>();
+
+		public bool IsEngaged => _threat.Count > 0;
+		public bool IsEngagedWith(Player player) => _threat.ContainsKey(player);
+
+		public void AddThreat(Player player, float amount)
+		{
+			if (player == null || player.IsAlive == false || player.Room != Room)
+				return;
+			_threat.TryGetValue(player, out float current);
+			_threat[player] = current + amount * player.ThreatRate;
+			if (State == CreatureState.Idle)
+				State = CreatureState.Moving;
+		}
+
+		public void RemoveThreat(Player player)
+		{
+			_threat.Remove(player);
+			if (_target == player)
+				_target = null;
+		}
+
+		// 전멸 재시작·추격 포기. 교전을 끝내고 그 자리에 선다
+		public void ClearThreat()
+		{
+			_threat.Clear();
+			_target = null;
+			if (State != CreatureState.Dead && State != CreatureState.Idle)
+			{
+				State = CreatureState.Idle;
+				BroadcastMove();
+			}
+		}
+
+		void RefreshTarget()
+		{
+			List<Player> gone = null;
+			foreach (Player p in _threat.Keys)
+				if (p.IsAlive == false || p.Room != Room)
+					(gone ??= new List<Player>()).Add(p);
+			if (gone != null)
+				foreach (Player p in gone)
+					RemoveThreat(p);
+
+			if (_threat.Count == 0)
+			{
+				_target = null;
+				return;
+			}
+
+			Player top = null;
+			float topThreat = float.MinValue;
+			foreach (KeyValuePair<Player, float> kv in _threat)
+				if (kv.Value > topThreat)
+				{
+					top = kv.Key;
+					topThreat = kv.Value;
+				}
+
+			if (_target == null || _threat.ContainsKey(_target) == false)
+				_target = top;
+			else if (top != _target && topThreat >= _threat[_target] * CombatConfig.Get(CombatConfig.ThreatSwitchRate))
+				_target = top;
+		}
+
+		// 팩 안의 한 체가 탐지·피격되면 팩 전체가 그 플레이어와 교전한다('망령(적) 시스템' 2-5)
 		void AlertPack(Player target)
 		{
 			if (Pack == null)
 				return;
 			foreach (Monster m in Pack)
 			{
-				if (m == this || m.Room != Room || m.State != CreatureState.Idle)
+				if (m == this || m.Room != Room || m.State == CreatureState.Dead)
 					continue;
-				m._target = target;
-				m.State = CreatureState.Moving;
+				if (m.IsEngagedWith(target) == false)
+					m.AddThreat(target, 0f);
 			}
 		}
 
-		public override void OnDamaged(GameObject attacker, int damage, bool critical, bool redirected = false)
+		protected override void OnDamageTaken(GameObject attacker, int damage)
 		{
-			base.OnDamaged(attacker, damage, critical, redirected);
-			if (Room == null || State == CreatureState.Dead)
-				return;
-
 			// 탐지 범위 밖에서 맞아도 반응한다
-			if (_target == null && attacker is Player p)
+			if (attacker is Player p)
 			{
-				_target = p;
-				if (State == CreatureState.Idle)
-					State = CreatureState.Moving;
-				AlertPack(p);
+				p.LastCombatTick = Environment.TickCount64;
+				bool first = IsEngagedWith(p) == false;
+				AddThreat(p, damage * CombatConfig.Get(CombatConfig.ThreatPerDamage));
+				if (first)
+					AlertPack(p);
 			}
 		}
 
@@ -129,14 +195,17 @@ namespace Server.Game
 			if (Status.Has(StatusId.Stun))
 				return;
 
-			// 도발: 건 플레이어만 노린다(위협 무시, '스킬 시스템' 2-5)
+			// 대상 = 위협 1위. 도발 중이면 건 플레이어만 노린다(위협 무시, '스킬 시스템' 2-5)
+			RefreshTarget();
 			StatusInstance taunt = Status.Get(StatusId.Taunt);
-			if (taunt != null && taunt.Source is Player taunter && taunter.IsAlive && taunter.Room == Room && _target != taunter)
+			if (taunt != null && taunt.Source is Player taunter && taunter.IsAlive && taunter.Room == Room)
 			{
+				if (IsEngagedWith(taunter) == false)
+					AddThreat(taunter, 0f);
 				_target = taunter;
-				if (State == CreatureState.Idle)
-					State = CreatureState.Moving;
 			}
+			if (_target != null && State == CreatureState.Idle)
+				State = CreatureState.Moving;
 
 			switch (State)
 			{
@@ -169,14 +238,14 @@ namespace Server.Game
 			Player target = Room.FindPlayer(p =>
 			{
 				Vector2Int dir = p.CellPos - CellPos;
-				return dir.cellDist <= _searchCellDist;
+				return p.IsAlive && dir.cellDist <= _searchCellDist;
 			});
 
 			if (target == null)
 				return;
 
+			AddThreat(target, 0f);
 			_target = target;
-			State = CreatureState.Moving;
 			AlertPack(target);
 		}
 
@@ -200,20 +269,16 @@ namespace Server.Game
 
 			Vector2Int dir = _target.CellPos - CellPos;
 			int dist = dir.cellDist;
-			if (dist == 0 || dist > _chaseCellDist)
+			// 복귀 거리(leashRange)를 넘거나 길이 없으면 그 플레이어와의 교전을 끝낸다. 남은 교전 상대가 있으면 다음 틱에 그쪽을 노린다
+			List<Vector2Int> path = dist == 0 || dist > _chaseCellDist ? null : Room.Map.FindPath(CellPos, _target.CellPos, checkObjects: false);
+			if (path == null || path.Count < 2 || path.Count > _chaseCellDist)
 			{
-				_target = null;
-				State = CreatureState.Idle;
-				BroadcastMove();
-				return;
-			}
-
-			List<Vector2Int> path = Room.Map.FindPath(CellPos, _target.CellPos, checkObjects: false);
-			if (path.Count < 2 || path.Count > _chaseCellDist)
-			{
-				_target = null;
-				State = CreatureState.Idle;
-				BroadcastMove();
+				RemoveThreat(_target);
+				if (IsEngaged == false)
+				{
+					State = CreatureState.Idle;
+					BroadcastMove();
+				}
 				return;
 			}
 
@@ -254,7 +319,7 @@ namespace Server.Game
 			if (_coolTick == 0)
 			{
 				// 유효한 타겟인지
-				if (_target == null || _target.Room != Room || _target.Hp == 0)
+				if (_target == null || _target.IsAlive == false || _target.Room != Room)
 				{
 					_target = null;
 					State = CreatureState.Moving;

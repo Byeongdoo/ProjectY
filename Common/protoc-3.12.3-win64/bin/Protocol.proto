@@ -24,6 +24,17 @@ enum MsgId {
   S_CHANGE_STAT = 16;
   C_CANCEL_SKILL = 17;
   S_CANCEL_SKILL = 18;
+  S_REVIVE = 19;
+  C_HOLD_INTERACT = 20;
+  S_CHANNEL = 21;
+  S_DUNGEON_STATE = 22;
+}
+
+// F 홀드로 하는 일(서버가 주변을 보고 정한다)
+enum ChannelKind {
+  CHANNEL_NONE = 0;
+  CHANNEL_CALL_SOUL = 1;      // 혼 부르기: 옆 칸의 혼절한 파티원을 일으킨다
+  CHANNEL_ARENA_BONFIRE = 2;  // 보스방 불씨: 파티 전원 체력 전량 회복
 }
 
 enum CreatureState {
@@ -133,9 +144,39 @@ message S_ChangeStat {
   StatInfo statInfo = 2;
 }
 
+// 쓰러짐. 저승 던전의 플레이어는 혼절이다(faintTime = 불씨에서 저절로 일어날 때까지 남은 초). 망령은 0
 message S_Die {
   int32 objectId = 1;
   int32 attackerId = 2;
+  float faintTime = 3;
+}
+
+// 혼절에서 일어났다(혼 부르기·회혼술·불씨·전멸 재시작). posInfo = 일어난 칸
+message S_Revive {
+  int32 objectId = 1;
+  int32 hp = 2;
+  PositionInfo posInfo = 3;
+}
+
+// F를 누르기 시작(holding true)·뗌(false). 무엇을 할지는 서버가 주변(혼절한 파티원·보스방 불씨)을 보고 정한다
+message C_HoldInteract {
+  bool holding = 1;
+}
+
+// F 홀드 시작(duration = 걸리는 초)·끝남(duration 0, 완료 또는 끊김)
+message S_Channel {
+  int32 objectId = 1;
+  ChannelKind kind = 2;
+  int32 targetId = 3;
+  float duration = 4;
+}
+
+// 던전 진행 상태(입장·변경 시). 혼백 등불 남은 수, 보스방 불씨 남은 횟수
+message S_DungeonState {
+  int32 lanterns = 1;
+  int32 maxLanterns = 2;
+  int32 arenaBonfireUses = 3;
+  int32 maxArenaBonfireUses = 4;
 }
 
 // 씬 로딩을 마친 클라가 서버가 배정해 둔 룸(삼천도 채널·던전)에 들어가겠다고 알린다
