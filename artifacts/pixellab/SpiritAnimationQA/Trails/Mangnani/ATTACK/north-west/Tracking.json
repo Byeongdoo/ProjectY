@@ -4,75 +4,74 @@
     92
   ],
   "union": [
-    11,
     12,
-    75,
+    13,
+    82,
     78
   ],
   "subjectOffset": [
-    21,
+    17,
     19
   ],
   "trackedTips": [
     [
-      62.75,
-      42.75
+      57.5,
+      61.0
     ],
     [
-      71.75,
-      44.5
+      67.0,
+      58.0
     ],
     [
-      24.5,
-      26.75
+      79.0,
+      50.25
     ],
     [
-      12.25,
-      40.5
+      76.75,
+      37.0
     ],
     [
-      15.75,
-      35.75
+      76.75,
+      37.0
     ],
     [
-      19.5,
-      60.5
+      13.0,
+      41.5
     ],
     [
-      18.0,
-      50.5
+      14.0,
+      50.25
     ],
     [
-      21.75,
-      33.5
+      19.0,
+      55.75
     ]
   ],
   "trackingMode": "material edge candidates",
   "candidatePixels": [
-    17,
-    83,
-    110,
-    301,
-    48,
-    34,
-    29,
-    28
+    25,
+    41,
+    66,
+    78,
+    0,
+    95,
+    91,
+    74
   ],
   "activeFrames": [
     2,
     3,
-    4,
     5,
     6
   ],
   "sourceFileHashes": [
-    "65a049aa09d00b7cad64a1e265af2948e01dfcd877e3e423d2779110449ea9f3",
-    "fac1e278a1d8c9cce3298d2240eba6032da42c5aa7a1ca6981befbacb3d71db3",
-    "01f04c3c22146cf9315524070a495e33b701ee5fc985428c97c5f8a974e738ea",
-    "3addaaf7f2361138d3b64a4bbde0fa035b9f7b32f6b2fb05a343e7582dd8cc76",
-    "897cbe2698515df9a80bdc930adc7cbdccc1220f944c24bf812e31bb8b59db45",
-    "850cba247fd9539c5c9f63b6ef059fbd8433165d45d24fc35abd9f924c08a156",
-    "944e96fe1ab4c3f2f67bb3bf9863f19c1208577be87eee075cd399429cd7d63e",
-    "7835d559c868fbf872c2ba060fff968dd8097c1e442451873e8937d1832a0c86"
+    "b893b0b565bf8ba5550d43d118df3a16fad9eb008bfaf4a10e049b71cf7b78e5",
+    "676d99b5745def9ebad797c2a5f87391bb912769663a49dcca03ebcad8646989",
+    "b334b666b9aa9c3681e8dff4a783526d60c3296959a422591cb8b11f345b9da5",
+    "546cb7135f6235f1d7cad459655587b5a04c8a28a5d60c53b8cea95b716a4d2c",
+    "a1daced99d3974994f5fefe00fc3b8f685b858c7118f892ee53b046ab0ddf22f",
+    "72ea82c6ce6723aaabd61cbf964d5a1a9ac83d3c36cafb23b2ec5fe7a0bf4355",
+    "f038c8a772bbdbc6d36e66304a61efa33a357c33fbc8bab47c8092158bd430f5",
+    "269c5a53b2c7dc869e21adda3c75ccf881c268f53b2e14c34a656cfd1e7f9476"
   ]
 }

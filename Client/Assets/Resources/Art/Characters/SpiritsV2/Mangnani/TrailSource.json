@@ -10,37 +10,34 @@
       "key": "Mangnani",
       "motion": "ATTACK",
       "direction": "south",
-      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Mangnani\\ATTACK\\south\\Recipe.json",
+      "recipe": "artifacts\\pixellab\\MangnaniHorizontalAttackRevision\\Trails\\Mangnani\\ATTACK\\south\\Recipe.json",
       "activeFrames": [
-        2,
-        3,
-        4,
         5,
         6
       ],
       "unintendedCharacterPixelChanges": 0,
-      "intentionalTrailOverlapPixels": 0
+      "intentionalTrailOverlapPixels": 0,
+      "sourceGroupId": "3b9f454c-c732-4101-8bfd-aaf79ef152ed"
     },
     {
       "key": "Mangnani",
       "motion": "ATTACK",
       "direction": "south-east",
-      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Mangnani\\ATTACK\\south-east\\Recipe.json",
+      "recipe": "artifacts\\pixellab\\MangnaniHorizontalAttackRevision\\Trails\\Mangnani\\ATTACK\\south-east\\Recipe.json",
       "activeFrames": [
         2,
         3,
-        4,
-        5,
-        6
+        4
       ],
       "unintendedCharacterPixelChanges": 0,
-      "intentionalTrailOverlapPixels": 0
+      "intentionalTrailOverlapPixels": 0,
+      "sourceGroupId": "3b9f454c-c732-4101-8bfd-aaf79ef152ed"
     },
     {
       "key": "Mangnani",
       "motion": "ATTACK",
       "direction": "east",
-      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Mangnani\\ATTACK\\east\\Recipe.json",
+      "recipe": "artifacts\\pixellab\\MangnaniHorizontalAttackRevision\\Trails\\Mangnani\\ATTACK\\east\\Recipe.json",
       "activeFrames": [
         2,
         3,
@@ -49,13 +46,14 @@
         6
       ],
       "unintendedCharacterPixelChanges": 0,
-      "intentionalTrailOverlapPixels": 0
+      "intentionalTrailOverlapPixels": 0,
+      "sourceGroupId": "3b9f454c-c732-4101-8bfd-aaf79ef152ed"
     },
     {
       "key": "Mangnani",
       "motion": "ATTACK",
       "direction": "north-east",
-      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Mangnani\\ATTACK\\north-east\\Recipe.json",
+      "recipe": "artifacts\\pixellab\\MangnaniHorizontalAttackRevision\\Trails\\Mangnani\\ATTACK\\north-east\\Recipe.json",
       "activeFrames": [
         2,
         3,
@@ -64,13 +62,14 @@
         6
       ],
       "unintendedCharacterPixelChanges": 0,
-      "intentionalTrailOverlapPixels": 0
+      "intentionalTrailOverlapPixels": 0,
+      "sourceGroupId": "3b9f454c-c732-4101-8bfd-aaf79ef152ed"
     },
     {
       "key": "Mangnani",
       "motion": "ATTACK",
       "direction": "north",
-      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Mangnani\\ATTACK\\north\\Recipe.json",
+      "recipe": "artifacts\\pixellab\\MangnaniHorizontalAttackRevision\\Trails\\Mangnani\\ATTACK\\north\\Recipe.json",
       "activeFrames": [
         2,
         3,
@@ -79,13 +78,14 @@
         6
       ],
       "unintendedCharacterPixelChanges": 0,
-      "intentionalTrailOverlapPixels": 0
+      "intentionalTrailOverlapPixels": 0,
+      "sourceGroupId": "3b9f454c-c732-4101-8bfd-aaf79ef152ed"
     },
     {
       "key": "Mangnani",
       "motion": "ATTACK",
       "direction": "north-west",
-      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Mangnani\\ATTACK\\north-west\\Recipe.json",
+      "recipe": "artifacts\\pixellab\\MangnaniHorizontalAttackRevision\\Trails\\Mangnani\\ATTACK\\north-west\\Recipe.json",
       "activeFrames": [
         2,
         3,
@@ -94,13 +94,14 @@
         6
       ],
       "unintendedCharacterPixelChanges": 0,
-      "intentionalTrailOverlapPixels": 0
+      "intentionalTrailOverlapPixels": 0,
+      "sourceGroupId": "3b9f454c-c732-4101-8bfd-aaf79ef152ed"
     },
     {
       "key": "Mangnani",
       "motion": "ATTACK",
       "direction": "west",
-      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Mangnani\\ATTACK\\west\\Recipe.json",
+      "recipe": "artifacts\\pixellab\\MangnaniHorizontalAttackRevision\\Trails\\Mangnani\\ATTACK\\west\\Recipe.json",
       "activeFrames": [
         2,
         3,
@@ -109,22 +110,23 @@
         6
       ],
       "unintendedCharacterPixelChanges": 0,
-      "intentionalTrailOverlapPixels": 0
+      "intentionalTrailOverlapPixels": 0,
+      "sourceGroupId": "3b9f454c-c732-4101-8bfd-aaf79ef152ed"
     },
     {
       "key": "Mangnani",
       "motion": "ATTACK",
       "direction": "south-west",
-      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Mangnani\\ATTACK\\south-west\\Recipe.json",
+      "recipe": "artifacts\\pixellab\\MangnaniHorizontalAttackRevision\\Trails\\Mangnani\\ATTACK\\south-west\\Recipe.json",
       "activeFrames": [
         2,
         3,
         4,
-        5,
-        6
+        5
       ],
       "unintendedCharacterPixelChanges": 0,
-      "intentionalTrailOverlapPixels": 0
+      "intentionalTrailOverlapPixels": 0,
+      "sourceGroupId": "3b9f454c-c732-4101-8bfd-aaf79ef152ed"
     },
     {
       "key": "Mangnani",
@@ -494,5 +496,6 @@
       "unintendedCharacterPixelChanges": 0,
       "intentionalTrailOverlapPixels": 0
     }
-  ]
+  ],
+  "attackSourceGroupId": "3b9f454c-c732-4101-8bfd-aaf79ef152ed"
 }

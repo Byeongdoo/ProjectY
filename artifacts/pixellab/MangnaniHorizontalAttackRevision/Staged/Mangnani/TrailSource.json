@@ -1,0 +1,501 @@
+{
+  "source": "PixelLab VFX workbench",
+  "originalSourceFramesPreserved": true,
+  "unintendedPixelChangesOutsideTrail": 0,
+  "pixelsPerUnit": 32,
+  "bakedFrameRoot": "SpritesWithTrail",
+  "separateLayerRoot": "TrailLayers",
+  "directionalClips": [
+    {
+      "key": "Mangnani",
+      "motion": "ATTACK",
+      "direction": "south",
+      "recipe": "artifacts\\pixellab\\MangnaniHorizontalAttackRevision\\Trails\\Mangnani\\ATTACK\\south\\Recipe.json",
+      "activeFrames": [
+        5,
+        6
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 0,
+      "sourceGroupId": "3b9f454c-c732-4101-8bfd-aaf79ef152ed"
+    },
+    {
+      "key": "Mangnani",
+      "motion": "ATTACK",
+      "direction": "south-east",
+      "recipe": "artifacts\\pixellab\\MangnaniHorizontalAttackRevision\\Trails\\Mangnani\\ATTACK\\south-east\\Recipe.json",
+      "activeFrames": [
+        2,
+        3,
+        4
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 0,
+      "sourceGroupId": "3b9f454c-c732-4101-8bfd-aaf79ef152ed"
+    },
+    {
+      "key": "Mangnani",
+      "motion": "ATTACK",
+      "direction": "east",
+      "recipe": "artifacts\\pixellab\\MangnaniHorizontalAttackRevision\\Trails\\Mangnani\\ATTACK\\east\\Recipe.json",
+      "activeFrames": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 0,
+      "sourceGroupId": "3b9f454c-c732-4101-8bfd-aaf79ef152ed"
+    },
+    {
+      "key": "Mangnani",
+      "motion": "ATTACK",
+      "direction": "north-east",
+      "recipe": "artifacts\\pixellab\\MangnaniHorizontalAttackRevision\\Trails\\Mangnani\\ATTACK\\north-east\\Recipe.json",
+      "activeFrames": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 0,
+      "sourceGroupId": "3b9f454c-c732-4101-8bfd-aaf79ef152ed"
+    },
+    {
+      "key": "Mangnani",
+      "motion": "ATTACK",
+      "direction": "north",
+      "recipe": "artifacts\\pixellab\\MangnaniHorizontalAttackRevision\\Trails\\Mangnani\\ATTACK\\north\\Recipe.json",
+      "activeFrames": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 0,
+      "sourceGroupId": "3b9f454c-c732-4101-8bfd-aaf79ef152ed"
+    },
+    {
+      "key": "Mangnani",
+      "motion": "ATTACK",
+      "direction": "north-west",
+      "recipe": "artifacts\\pixellab\\MangnaniHorizontalAttackRevision\\Trails\\Mangnani\\ATTACK\\north-west\\Recipe.json",
+      "activeFrames": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 0,
+      "sourceGroupId": "3b9f454c-c732-4101-8bfd-aaf79ef152ed"
+    },
+    {
+      "key": "Mangnani",
+      "motion": "ATTACK",
+      "direction": "west",
+      "recipe": "artifacts\\pixellab\\MangnaniHorizontalAttackRevision\\Trails\\Mangnani\\ATTACK\\west\\Recipe.json",
+      "activeFrames": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 0,
+      "sourceGroupId": "3b9f454c-c732-4101-8bfd-aaf79ef152ed"
+    },
+    {
+      "key": "Mangnani",
+      "motion": "ATTACK",
+      "direction": "south-west",
+      "recipe": "artifacts\\pixellab\\MangnaniHorizontalAttackRevision\\Trails\\Mangnani\\ATTACK\\south-west\\Recipe.json",
+      "activeFrames": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 0,
+      "sourceGroupId": "3b9f454c-c732-4101-8bfd-aaf79ef152ed"
+    },
+    {
+      "key": "Mangnani",
+      "motion": "SKILL_1",
+      "direction": "south",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Mangnani\\SKILL_1\\south\\Recipe.json",
+      "activeFrames": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 0
+    },
+    {
+      "key": "Mangnani",
+      "motion": "SKILL_1",
+      "direction": "south-east",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Mangnani\\SKILL_1\\south-east\\Recipe.json",
+      "activeFrames": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 0
+    },
+    {
+      "key": "Mangnani",
+      "motion": "SKILL_1",
+      "direction": "east",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Mangnani\\SKILL_1\\east\\Recipe.json",
+      "activeFrames": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 0
+    },
+    {
+      "key": "Mangnani",
+      "motion": "SKILL_1",
+      "direction": "north-east",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Mangnani\\SKILL_1\\north-east\\Recipe.json",
+      "activeFrames": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 0
+    },
+    {
+      "key": "Mangnani",
+      "motion": "SKILL_1",
+      "direction": "north",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Mangnani\\SKILL_1\\north\\Recipe.json",
+      "activeFrames": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 0
+    },
+    {
+      "key": "Mangnani",
+      "motion": "SKILL_1",
+      "direction": "north-west",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Mangnani\\SKILL_1\\north-west\\Recipe.json",
+      "activeFrames": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 0
+    },
+    {
+      "key": "Mangnani",
+      "motion": "SKILL_1",
+      "direction": "west",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Mangnani\\SKILL_1\\west\\Recipe.json",
+      "activeFrames": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 0
+    },
+    {
+      "key": "Mangnani",
+      "motion": "SKILL_1",
+      "direction": "south-west",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Mangnani\\SKILL_1\\south-west\\Recipe.json",
+      "activeFrames": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 0
+    },
+    {
+      "key": "Mangnani",
+      "motion": "SKILL_2",
+      "direction": "south",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Mangnani\\SKILL_2\\south\\Recipe.json",
+      "activeFrames": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 0
+    },
+    {
+      "key": "Mangnani",
+      "motion": "SKILL_2",
+      "direction": "south-east",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Mangnani\\SKILL_2\\south-east\\Recipe.json",
+      "activeFrames": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 0
+    },
+    {
+      "key": "Mangnani",
+      "motion": "SKILL_2",
+      "direction": "east",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Mangnani\\SKILL_2\\east\\Recipe.json",
+      "activeFrames": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 0
+    },
+    {
+      "key": "Mangnani",
+      "motion": "SKILL_2",
+      "direction": "north-east",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Mangnani\\SKILL_2\\north-east\\Recipe.json",
+      "activeFrames": [
+        7,
+        8,
+        9,
+        10
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 0
+    },
+    {
+      "key": "Mangnani",
+      "motion": "SKILL_2",
+      "direction": "north",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Mangnani\\SKILL_2\\north\\Recipe.json",
+      "activeFrames": [
+        4,
+        5,
+        7,
+        8,
+        9,
+        10
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 0
+    },
+    {
+      "key": "Mangnani",
+      "motion": "SKILL_2",
+      "direction": "north-west",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Mangnani\\SKILL_2\\north-west\\Recipe.json",
+      "activeFrames": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 0
+    },
+    {
+      "key": "Mangnani",
+      "motion": "SKILL_2",
+      "direction": "west",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Mangnani\\SKILL_2\\west\\Recipe.json",
+      "activeFrames": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 0
+    },
+    {
+      "key": "Mangnani",
+      "motion": "SKILL_2",
+      "direction": "south-west",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Mangnani\\SKILL_2\\south-west\\Recipe.json",
+      "activeFrames": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 0
+    },
+    {
+      "key": "Mangnani",
+      "motion": "SKILL_3",
+      "direction": "south",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Mangnani\\SKILL_3\\south\\Recipe.json",
+      "activeFrames": [
+        2,
+        3,
+        4
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 0
+    },
+    {
+      "key": "Mangnani",
+      "motion": "SKILL_3",
+      "direction": "south-east",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Mangnani\\SKILL_3\\south-east\\Recipe.json",
+      "activeFrames": [
+        2,
+        3,
+        4
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 0
+    },
+    {
+      "key": "Mangnani",
+      "motion": "SKILL_3",
+      "direction": "east",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Mangnani\\SKILL_3\\east\\Recipe.json",
+      "activeFrames": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 0
+    },
+    {
+      "key": "Mangnani",
+      "motion": "SKILL_3",
+      "direction": "north-east",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Mangnani\\SKILL_3\\north-east\\Recipe.json",
+      "activeFrames": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 0
+    },
+    {
+      "key": "Mangnani",
+      "motion": "SKILL_3",
+      "direction": "north",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Mangnani\\SKILL_3\\north\\Recipe.json",
+      "activeFrames": [
+        2,
+        3,
+        4
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 0
+    },
+    {
+      "key": "Mangnani",
+      "motion": "SKILL_3",
+      "direction": "north-west",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Mangnani\\SKILL_3\\north-west\\Recipe.json",
+      "activeFrames": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 0
+    },
+    {
+      "key": "Mangnani",
+      "motion": "SKILL_3",
+      "direction": "west",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Mangnani\\SKILL_3\\west\\Recipe.json",
+      "activeFrames": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 0
+    },
+    {
+      "key": "Mangnani",
+      "motion": "SKILL_3",
+      "direction": "south-west",
+      "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Mangnani\\SKILL_3\\south-west\\Recipe.json",
+      "activeFrames": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "unintendedCharacterPixelChanges": 0,
+      "intentionalTrailOverlapPixels": 0
+    }
+  ],
+  "attackSourceGroupId": "3b9f454c-c732-4101-8bfd-aaf79ef152ed"
+}

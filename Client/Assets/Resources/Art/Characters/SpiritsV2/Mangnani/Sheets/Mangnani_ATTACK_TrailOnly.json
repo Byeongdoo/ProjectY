@@ -17,7 +17,7 @@
   "cellHeight": 128,
   "sourcePixelsResized": false,
   "alignment": "PixelLab canvas centres; no per-frame trimming",
-  "groupId": "73e77318-5fcf-4c5f-9be6-c98cef647309",
+  "groupId": "3b9f454c-c732-4101-8bfd-aaf79ef152ed",
   "animationClips": [
     "Animations/ATTACK_SOUTH.anim",
     "Animations/ATTACK_SOUTH_EAST.anim",
@@ -31,6 +31,8 @@
   "nativeClipFrameRoot": "SpritesWithTrail",
   "sourceFrameRoot": "Sprites",
   "trailLayerRoot": "TrailLayers",
+  "revision": "ATTACK_HORIZONTAL_3TILE",
+  "sourceAnimationName": "ATTACK_HORIZONTAL_3TILE",
   "frameRoot": "TrailLayers",
   "nativePixelsResized": false
 }

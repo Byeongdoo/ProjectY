@@ -1,0 +1,77 @@
+{
+  "sourceSize": [
+    92,
+    92
+  ],
+  "union": [
+    13,
+    13,
+    79,
+    78
+  ],
+  "subjectOffset": [
+    18,
+    19
+  ],
+  "trackedTips": [
+    [
+      24.25,
+      70.25
+    ],
+    [
+      19.5,
+      62.5
+    ],
+    [
+      14.25,
+      44.75
+    ],
+    [
+      19.5,
+      31.5
+    ],
+    [
+      19.5,
+      28.5
+    ],
+    [
+      59.25,
+      61.5
+    ],
+    [
+      76.5,
+      47.5
+    ],
+    [
+      64.0,
+      34.25
+    ]
+  ],
+  "trackingMode": "material edge candidates",
+  "candidatePixels": [
+    44,
+    44,
+    44,
+    36,
+    45,
+    13,
+    46,
+    21
+  ],
+  "activeFrames": [
+    2,
+    3,
+    5,
+    6
+  ],
+  "sourceFileHashes": [
+    "fff9fdf51d80a69a221cb89b06d889ec3f4b8b7aa8cd6b0fa49aaec2bb2d0513",
+    "5170fccbe92427076778786076507225291f8cbd60db3ac91f3ac76d19554512",
+    "051a7e71b55293e5260b0f5a5b7ad15abcf4e0c4752b4dd6091b45a5d6fd0327",
+    "f6bc5d7990c60147f0d272b16f73a060c44a2cc5470169f6ee18e2b7e2bc1db8",
+    "9247dc9d3ca02bb9dc9c3dd04054e40000143544f29e33aa5bdff1c778189e06",
+    "befbaed2c5c1e885087c949fd6af844268e693b2396ca17a456c9ff45a1e7343",
+    "afcd05450cbe331554b9a394dd28064a355aac897e7948073a909ba32e6de894",
+    "3580c0f4d4fd4bc52ee1f0a49d30c8203ccb836e50089184a392124edee60409"
+  ]
+}

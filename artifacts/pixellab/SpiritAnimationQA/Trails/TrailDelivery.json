@@ -130,14 +130,13 @@
       "direction": "south",
       "recipe": "artifacts\\pixellab\\SpiritAnimationQA\\Trails\\Mangnani\\ATTACK\\south\\Recipe.json",
       "activeFrames": [
-        2,
-        3,
-        4,
         5,
         6
       ],
       "unintendedCharacterPixelChanges": 0,
-      "intentionalTrailOverlapPixels": 0
+      "intentionalTrailOverlapPixels": 0,
+      "spriteRef": "character:478ad62f-9651-46ca-a174-7b869382d4fd:south:3b9f454c-c732-4101-8bfd-aaf79ef152ed",
+      "sourceGroupId": "3b9f454c-c732-4101-8bfd-aaf79ef152ed"
     },
     {
       "key": "Mangnani",
@@ -147,12 +146,12 @@
       "activeFrames": [
         2,
         3,
-        4,
-        5,
-        6
+        4
       ],
       "unintendedCharacterPixelChanges": 0,
-      "intentionalTrailOverlapPixels": 0
+      "intentionalTrailOverlapPixels": 0,
+      "spriteRef": "character:478ad62f-9651-46ca-a174-7b869382d4fd:south-east:3b9f454c-c732-4101-8bfd-aaf79ef152ed",
+      "sourceGroupId": "3b9f454c-c732-4101-8bfd-aaf79ef152ed"
     },
     {
       "key": "Mangnani",
@@ -167,7 +166,9 @@
         6
       ],
       "unintendedCharacterPixelChanges": 0,
-      "intentionalTrailOverlapPixels": 0
+      "intentionalTrailOverlapPixels": 0,
+      "spriteRef": "character:478ad62f-9651-46ca-a174-7b869382d4fd:east:3b9f454c-c732-4101-8bfd-aaf79ef152ed",
+      "sourceGroupId": "3b9f454c-c732-4101-8bfd-aaf79ef152ed"
     },
     {
       "key": "Mangnani",
@@ -182,7 +183,9 @@
         6
       ],
       "unintendedCharacterPixelChanges": 0,
-      "intentionalTrailOverlapPixels": 0
+      "intentionalTrailOverlapPixels": 0,
+      "spriteRef": "character:478ad62f-9651-46ca-a174-7b869382d4fd:north-east:3b9f454c-c732-4101-8bfd-aaf79ef152ed",
+      "sourceGroupId": "3b9f454c-c732-4101-8bfd-aaf79ef152ed"
     },
     {
       "key": "Mangnani",
@@ -197,7 +200,9 @@
         6
       ],
       "unintendedCharacterPixelChanges": 0,
-      "intentionalTrailOverlapPixels": 0
+      "intentionalTrailOverlapPixels": 0,
+      "spriteRef": "character:478ad62f-9651-46ca-a174-7b869382d4fd:north:3b9f454c-c732-4101-8bfd-aaf79ef152ed",
+      "sourceGroupId": "3b9f454c-c732-4101-8bfd-aaf79ef152ed"
     },
     {
       "key": "Mangnani",
@@ -212,7 +217,9 @@
         6
       ],
       "unintendedCharacterPixelChanges": 0,
-      "intentionalTrailOverlapPixels": 0
+      "intentionalTrailOverlapPixels": 0,
+      "spriteRef": "character:478ad62f-9651-46ca-a174-7b869382d4fd:north-west:3b9f454c-c732-4101-8bfd-aaf79ef152ed",
+      "sourceGroupId": "3b9f454c-c732-4101-8bfd-aaf79ef152ed"
     },
     {
       "key": "Mangnani",
@@ -227,7 +234,9 @@
         6
       ],
       "unintendedCharacterPixelChanges": 0,
-      "intentionalTrailOverlapPixels": 0
+      "intentionalTrailOverlapPixels": 0,
+      "spriteRef": "character:478ad62f-9651-46ca-a174-7b869382d4fd:west:3b9f454c-c732-4101-8bfd-aaf79ef152ed",
+      "sourceGroupId": "3b9f454c-c732-4101-8bfd-aaf79ef152ed"
     },
     {
       "key": "Mangnani",
@@ -238,11 +247,12 @@
         2,
         3,
         4,
-        5,
-        6
+        5
       ],
       "unintendedCharacterPixelChanges": 0,
-      "intentionalTrailOverlapPixels": 0
+      "intentionalTrailOverlapPixels": 0,
+      "spriteRef": "character:478ad62f-9651-46ca-a174-7b869382d4fd:south-west:3b9f454c-c732-4101-8bfd-aaf79ef152ed",
+      "sourceGroupId": "3b9f454c-c732-4101-8bfd-aaf79ef152ed"
     },
     {
       "key": "Mangnani",

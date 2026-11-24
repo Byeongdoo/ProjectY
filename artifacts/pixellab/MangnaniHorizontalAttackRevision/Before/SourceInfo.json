@@ -1,0 +1,33 @@
+{
+  "key": "Mangnani",
+  "name": "망나니",
+  "revision": "UserReferenceV2",
+  "phase": "Front concept only, pending visual approval",
+  "model": "PixelLab create_image_pro",
+  "date": "2026-11-22",
+  "jobId": "3c2a6489-973b-4713-bad3-ffe168791bc3",
+  "galleryAssetId": "8ce25a11-8916-56c4-965a-54324f7b380d",
+  "candidateIndex": 0,
+  "candidateCount": 16,
+  "downloadUrl": "https://api.pixellab.ai/mcp/images/3c2a6489-973b-4713-bad3-ffe168791bc3/download?index=0",
+  "designDescription": "A wild rugged male Korean executioner, flowing messy dark hair tied high with crimson ties, fierce expressive face, exposed muscular arms, ragged ivory fur-edged cloth and dark crimson sleeveless vest, torn layered red-black battle wrap and rope belt, ankle bindings and rough sandals. Holds an enormous broad straight single-edged Korean EXECUTION CLEAVER, wide silver blade with dark-red patina markings, black and gold guard and red tassel. Strong angular wild silhouette. Match the rugged red-and-ivory reference, not a neat small sword fighter.",
+  "selectionReason": "거친 머리·드러난 팔·붉은 넓은 칼이 함께 보이는 후보",
+  "referenceManifest": "artifacts/pixellab/SpiritConceptStudyV2/SourceManifest.json",
+  "userReference": "artifacts/pixellab/SpiritConceptStudyV2/References/UserReference.png",
+  "metrics": {
+    "key": "Mangnani",
+    "spritePath": "Assets/Resources/Art/Characters/SpiritsV2/Mangnani/Mangnani_Front.png",
+    "canvasWidth": 64,
+    "canvasHeight": 64,
+    "visibleWidth": 44,
+    "visibleHeight": 63,
+    "alphaX": 9,
+    "alphaY": 0,
+    "pivotPixels": {
+      "x": 32.0,
+      "y": 0.0
+    },
+    "pixelsPerUnit": 32
+  },
+  "referencePolicy": "This exact selected PNG, including candidate index and actual equipment placement, defines this revision. Preserve asymmetric equipment; do not substitute another candidate or mirror it."
+}

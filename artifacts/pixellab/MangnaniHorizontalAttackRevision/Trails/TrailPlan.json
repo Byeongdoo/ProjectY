@@ -1,0 +1,61 @@
+{
+  "entries": [
+    {
+      "key": "Mangnani",
+      "motion": "ATTACK",
+      "direction": "south",
+      "recipe": "artifacts\\pixellab\\MangnaniHorizontalAttackRevision\\Trails\\Mangnani\\ATTACK\\south\\Recipe.json",
+      "spriteRef": "character:478ad62f-9651-46ca-a174-7b869382d4fd:south:3b9f454c-c732-4101-8bfd-aaf79ef152ed"
+    },
+    {
+      "key": "Mangnani",
+      "motion": "ATTACK",
+      "direction": "south-east",
+      "recipe": "artifacts\\pixellab\\MangnaniHorizontalAttackRevision\\Trails\\Mangnani\\ATTACK\\south-east\\Recipe.json",
+      "spriteRef": "character:478ad62f-9651-46ca-a174-7b869382d4fd:south-east:3b9f454c-c732-4101-8bfd-aaf79ef152ed"
+    },
+    {
+      "key": "Mangnani",
+      "motion": "ATTACK",
+      "direction": "east",
+      "recipe": "artifacts\\pixellab\\MangnaniHorizontalAttackRevision\\Trails\\Mangnani\\ATTACK\\east\\Recipe.json",
+      "spriteRef": "character:478ad62f-9651-46ca-a174-7b869382d4fd:east:3b9f454c-c732-4101-8bfd-aaf79ef152ed"
+    },
+    {
+      "key": "Mangnani",
+      "motion": "ATTACK",
+      "direction": "north-east",
+      "recipe": "artifacts\\pixellab\\MangnaniHorizontalAttackRevision\\Trails\\Mangnani\\ATTACK\\north-east\\Recipe.json",
+      "spriteRef": "character:478ad62f-9651-46ca-a174-7b869382d4fd:north-east:3b9f454c-c732-4101-8bfd-aaf79ef152ed"
+    },
+    {
+      "key": "Mangnani",
+      "motion": "ATTACK",
+      "direction": "north",
+      "recipe": "artifacts\\pixellab\\MangnaniHorizontalAttackRevision\\Trails\\Mangnani\\ATTACK\\north\\Recipe.json",
+      "spriteRef": "character:478ad62f-9651-46ca-a174-7b869382d4fd:north:3b9f454c-c732-4101-8bfd-aaf79ef152ed"
+    },
+    {
+      "key": "Mangnani",
+      "motion": "ATTACK",
+      "direction": "north-west",
+      "recipe": "artifacts\\pixellab\\MangnaniHorizontalAttackRevision\\Trails\\Mangnani\\ATTACK\\north-west\\Recipe.json",
+      "spriteRef": "character:478ad62f-9651-46ca-a174-7b869382d4fd:north-west:3b9f454c-c732-4101-8bfd-aaf79ef152ed"
+    },
+    {
+      "key": "Mangnani",
+      "motion": "ATTACK",
+      "direction": "west",
+      "recipe": "artifacts\\pixellab\\MangnaniHorizontalAttackRevision\\Trails\\Mangnani\\ATTACK\\west\\Recipe.json",
+      "spriteRef": "character:478ad62f-9651-46ca-a174-7b869382d4fd:west:3b9f454c-c732-4101-8bfd-aaf79ef152ed"
+    },
+    {
+      "key": "Mangnani",
+      "motion": "ATTACK",
+      "direction": "south-west",
+      "recipe": "artifacts\\pixellab\\MangnaniHorizontalAttackRevision\\Trails\\Mangnani\\ATTACK\\south-west\\Recipe.json",
+      "spriteRef": "character:478ad62f-9651-46ca-a174-7b869382d4fd:south-west:3b9f454c-c732-4101-8bfd-aaf79ef152ed"
+    }
+  ],
+  "count": 8
+}
